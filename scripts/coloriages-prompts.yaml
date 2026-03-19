@@ -204,7 +204,7 @@ categories:
         en_title: "Big Truck"
         fr_tags: ["camion", "vehicule", "grand", "route"]
         en_tags: ["truck", "vehicle", "big", "road"]
-        prompt: "A big friendly cartoon truck with a large cab and cargo area, side view, simple style."
+        prompt: "A big cartoon delivery truck with a large cab and cargo trailer, side view."
 
       - fr_slug: vehicules-avion
         en_slug: vehicles-airplane
@@ -228,7 +228,7 @@ categories:
         en_title: "Little Train"
         fr_tags: ["train", "rail", "voyage", "locomotive"]
         en_tags: ["train", "rail", "travel", "locomotive"]
-        prompt: "A cute cartoon steam locomotive with smoke puffs, side view, simple cartoon style."
+        prompt: "A cheerful cartoon locomotive engine on a railway track, side view."
 
       - fr_slug: vehicules-fusee
         en_slug: vehicles-rocket
@@ -236,7 +236,7 @@ categories:
         en_title: "Space Rocket"
         fr_tags: ["fusee", "espace", "astronaute", "cool"]
         en_tags: ["rocket", "space", "astronaut", "cool"]
-        prompt: "A cute cartoon rocket ship with fins and a porthole, launching upward, simple cartoon style."
+        prompt: "A cartoon rocket ship with fins and a round window, pointing upward."
 
       - fr_slug: vehicules-helicoptere
         en_slug: vehicles-helicopter
@@ -268,7 +268,7 @@ categories:
         en_title: "Farm Tractor"
         fr_tags: ["tracteur", "ferme", "vehicule", "grand"]
         en_tags: ["tractor", "farm", "vehicle", "big"]
-        prompt: "A friendly cartoon farm tractor with large rear wheels and a cab, side view, simple style."
+        prompt: "A cartoon farm tractor with big rear wheels and small front wheels, side view."
 
       - fr_slug: vehicules-sous-marin
         en_slug: vehicles-submarine
@@ -308,7 +308,7 @@ categories:
         en_title: "Emergency Ambulance"
         fr_tags: ["ambulance", "soin", "urgence", "vehicule"]
         en_tags: ["ambulance", "care", "emergency", "vehicle"]
-        prompt: "A cartoon ambulance with a red cross, flashing light on top, side view, simple cartoon style."
+        prompt: "A cartoon ambulance van with a red cross on the side and a light bar on the roof."
 
   nature:
     subjects:
@@ -1891,3 +1891,45 @@ categories:
         fr_tags: ["carte", "tresor", "adulte", "aventure"]
         en_tags: ["map", "treasure", "adult", "adventure"]
         prompt: "An ornate treasure map with islands, dotted paths, sea monsters, compass rose, and X marks the spot."
+
+  drole:
+    subjects:
+      - fr_slug: drole-singe-voiture
+        en_slug: funny-monkey-car
+        fr_title: "Singe pilote de course"
+        en_title: "Monkey Race Car Driver"
+        fr_tags: ["singe", "voiture", "drole", "course"]
+        en_tags: ["monkey", "car", "funny", "race"]
+        prompt: "A monkey in sunglasses driving a race car, grinning and waving from the window."
+
+      - fr_slug: drole-chat-astronaute
+        en_slug: funny-cat-astronaut
+        fr_title: "Chat astronaute"
+        en_title: "Cat Astronaut"
+        fr_tags: ["chat", "espace", "drole", "astronaute"]
+        en_tags: ["cat", "space", "funny", "astronaut"]
+        prompt: "A cat wearing a space suit and helmet, floating near the moon with stars around."
+
+      - fr_slug: drole-dinosaure-skateboard
+        en_slug: funny-dinosaur-skateboard
+        fr_title: "Dinosaure skateur"
+        en_title: "Skateboarding Dinosaur"
+        fr_tags: ["dinosaure", "skateboard", "drole", "sport"]
+        en_tags: ["dinosaur", "skateboard", "funny", "sport"]
+        prompt: "A T-Rex balanced on a skateboard with tiny arms raised happily in the air."
+
+      - fr_slug: drole-grenouille-chevalier
+        en_slug: funny-frog-knight
+        fr_title: "Grenouille chevalier"
+        en_title: "Frog Knight"
+        fr_tags: ["grenouille", "chevalier", "drole", "epee"]
+        en_tags: ["frog", "knight", "funny", "sword"]
+        prompt: "A frog in knight armor holding a sword and a round shield, standing proudly."
+
+      - fr_slug: drole-pingouin-chef
+        en_slug: funny-penguin-chef
+        fr_title: "Pingouin cuisinier"
+        en_title: "Penguin Chef"
+        fr_tags: ["pingouin", "chef", "drole", "cuisine"]
+        en_tags: ["penguin", "chef", "funny", "cooking"]
+        prompt: "A penguin wearing a chef hat and apron, holding a wooden spoon with a big smile."

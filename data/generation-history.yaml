@@ -1,0 +1,184 @@
+# Generation history — tracks all generated coloring pages to avoid duplicates.
+# Content Creator: append new entries after each verified generation run.
+# Format: date, slug (fr_slug), category, prompt summary, status
+
+- date: "2026-03-19"
+  slug: "animaux-cheval"
+  category: "animaux"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "animaux-dauphin"
+  category: "animaux"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "animaux-dinosaure"
+  category: "animaux"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "animaux-girafe"
+  category: "animaux"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "animaux-grenouille"
+  category: "animaux"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "animaux-hibou"
+  category: "animaux"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "animaux-lapin"
+  category: "animaux"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "animaux-oiseau"
+  category: "animaux"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "animaux-ours"
+  category: "animaux"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "animaux-pingouin"
+  category: "animaux"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "animaux-poisson"
+  category: "animaux"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "animaux-renard"
+  category: "animaux"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "animaux-singe"
+  category: "animaux"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "animaux-tigre"
+  category: "animaux"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "animaux-tortue"
+  category: "animaux"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "dinosaures-triceratops"
+  category: "dinosaures"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "mandalas-geometrique"
+  category: "mandalas"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "nature-arbre"
+  category: "nature"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "nature-fleur"
+  category: "nature"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "nature-soleil"
+  category: "nature"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "vehicules-avion"
+  category: "vehicules"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "vehicules-bateau"
+  category: "vehicules"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "vehicules-bus"
+  category: "vehicules"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "vehicules-camion-pompier"
+  category: "vehicules"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "vehicules-helicoptere"
+  category: "vehicules"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "vehicules-moto"
+  category: "vehicules"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "vehicules-pelleteuse"
+  category: "vehicules"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "vehicules-sous-marin"
+  category: "vehicules"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "vehicules-velo"
+  category: "vehicules"
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "vehicules-voiture"
+  category: "vehicules"
+  status: "published"
+
+# Failed QA — deleted, need regeneration:
+- date: "2026-03-19"
+  slug: "vehicules-camion"
+  category: "vehicules"
+  status: "published"
+  prompt: "A big cartoon delivery truck with a large cab and cargo trailer, side view."
+
+- date: "2026-03-19"
+  slug: "vehicules-ambulance"
+  category: "vehicules"
+  status: "failed-qa"
+  reason: "SVG code as text + grayscale photo"
+
+- date: "2026-03-19"
+  slug: "vehicules-fusee"
+  category: "vehicules"
+  status: "failed-qa"
+  reason: "photo of real person instead of line art"
+
+- date: "2026-03-19"
+  slug: "vehicules-tracteur"
+  category: "vehicules"
+  status: "failed-qa"
+  reason: "photo of real person instead of line art"
+
+- date: "2026-03-19"
+  slug: "vehicules-train"
+  category: "vehicules"
+  status: "failed-qa"
+  reason: "URL watermark + copyright risk (Thomas the Tank Engine)"
