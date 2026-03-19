@@ -35,12 +35,12 @@ export type Category = (typeof categories)[number];
 
 const translations: Record<string, Record<Locale, string>> = {
   'site.title': {
-    fr: 'Coloriages Gratuits à Imprimer',
-    en: 'Free Printable Coloring Pages',
+    fr: 'Colotopia — Coloriages Gratuits à Imprimer',
+    en: 'Colotopia — Free Printable Coloring Pages',
   },
   'site.description': {
-    fr: 'Des centaines de coloriages gratuits à imprimer pour les enfants et les adultes. Animaux, véhicules, mandalas, mosaïques et plus encore !',
-    en: 'Hundreds of free printable coloring pages for kids and adults. Animals, vehicles, mandalas, mosaics and more!',
+    fr: 'Colotopia : des centaines de coloriages gratuits à imprimer pour les enfants et les adultes. Animaux, véhicules, mandalas, mosaïques et plus encore !',
+    en: 'Colotopia: hundreds of free printable coloring pages for kids and adults. Animals, vehicles, mandalas, mosaics and more!',
   },
   'nav.home': { fr: 'Accueil', en: 'Home' },
   'nav.categories': { fr: 'Catégories', en: 'Categories' },

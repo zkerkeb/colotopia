@@ -16,7 +16,7 @@ const { coloring } = Astro.props;
 const { title, image, alt, category, tags, slug, seoTitle, seoDescription } = coloring.data;
 
 const locale = 'fr' as const;
-const siteUrl = Astro.site?.href.replace(/\/$/, '') ?? 'https://coloriages.example.com';
+const siteUrl = Astro.site?.href.replace(/\/$/, '') ?? 'https://colotopia.com';
 const canonicalUrl = `${siteUrl}/fr/coloriage/${slug}`;
 const altUrl = `${siteUrl}/en/coloring/${slug}`;
 

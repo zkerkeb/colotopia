@@ -1,8 +1,8 @@
 {
-  "name": "coloriages",
+  "name": "colotopia",
   "version": "1.0.0",
   "type": "module",
-  "description": "Site bilingue FR/EN de coloriages a imprimer pour enfants",
+  "description": "Colotopia — site bilingue FR/EN de coloriages gratuits à imprimer",
   "scripts": {
     "optimize-images": "node scripts/optimize-images.mjs",
     "dev": "node scripts/optimize-images.mjs && astro dev",
