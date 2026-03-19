@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "total": 1,
+    "success": 1,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-19T08:23:16.881258+00:00",
+      "backend": "gemini",
+      "fr_slug": "mandalas-geometrique",
+      "en_slug": "mandalas-geometric",
+      "prompt": "A perfectly symmetrical geometric mandala with concentric circles, triangles, and hexagons radiating from center. Adult coloring page style. Intricate detailed black line art on pure white background. No shading, no gradients, no color fill. Complex patterns with fine lines suitable for adult stress relief and mindfulness coloring. High detail, elegant design. Printable quality. No text, no words, no letters, no watermark. Coloring book page for adults. Clean black outlines on pure white background. No shading, no color fill, no gradients. Intricate detailed patterns with fine lines. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mandalas-geometrique.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/mandalas-geometrique.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mandalas-geometric.yaml"
+      ],
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "summary": {
+    "total": 5,
+    "success": 0,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-19T08:07:32.793272+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-voiture",
+      "en_slug": "vehicles-car",
+      "prompt": "A cute cartoon race car with big wheels and a spoiler, side view, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-voiture.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/predict_requests_per_model_per_day_paid_tier_1, limit: 70, model: imagen-4.0-generate', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/predict_requests_per_model_per_day_paid_tier_1', 'quotaId': 'PredictRequestsPerDayPerProjectPerModelPaidTier1', 'quotaDimensions': {'location': 'global', 'model': 'imagen-4.0-generate'}, 'quotaValue': '70'}]}]}}"
+    },
+    {
+      "timestamp": "2026-03-19T08:07:34.960333+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-camion",
+      "en_slug": "vehicles-truck",
+      "prompt": "A big friendly cartoon truck with a large cab and cargo area, side view, simple style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-camion.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/predict_requests_per_model_per_day_paid_tier_1, limit: 70, model: imagen-4.0-generate', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/predict_requests_per_model_per_day_paid_tier_1', 'quotaId': 'PredictRequestsPerDayPerProjectPerModelPaidTier1', 'quotaDimensions': {'location': 'global', 'model': 'imagen-4.0-generate'}, 'quotaValue': '70'}]}]}}"
+    },
+    {
+      "timestamp": "2026-03-19T08:07:37.012529+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-avion",
+      "en_slug": "vehicles-airplane",
+      "prompt": "A cute cartoon airplane with round windows, wings, and a propeller, side view, simple style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-avion.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/predict_requests_per_model_per_day_paid_tier_1, limit: 70, model: imagen-4.0-generate', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/predict_requests_per_model_per_day_paid_tier_1', 'quotaId': 'PredictRequestsPerDayPerProjectPerModelPaidTier1', 'quotaDimensions': {'location': 'global', 'model': 'imagen-4.0-generate'}, 'quotaValue': '70'}]}]}}"
+    },
+    {
+      "timestamp": "2026-03-19T08:07:39.073607+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-bateau",
+      "en_slug": "vehicles-boat",
+      "prompt": "A cute cartoon sailboat with a large sail and a hull, side view on calm water, simple style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-bateau.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/predict_requests_per_model_per_day_paid_tier_1, limit: 70, model: imagen-4.0-generate', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/predict_requests_per_model_per_day_paid_tier_1', 'quotaId': 'PredictRequestsPerDayPerProjectPerModelPaidTier1', 'quotaDimensions': {'location': 'global', 'model': 'imagen-4.0-generate'}, 'quotaValue': '70'}]}]}}"
+    },
+    {
+      "timestamp": "2026-03-19T08:07:41.133645+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-train",
+      "en_slug": "vehicles-train",
+      "prompt": "A cute cartoon steam locomotive with smoke puffs, side view, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-train.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/predict_requests_per_model_per_day_paid_tier_1, limit: 70, model: imagen-4.0-generate', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/predict_requests_per_model_per_day_paid_tier_1', 'quotaId': 'PredictRequestsPerDayPerProjectPerModelPaidTier1', 'quotaDimensions': {'location': 'global', 'model': 'imagen-4.0-generate'}, 'quotaValue': '70'}]}]}}"
+    }
+  ]
+}

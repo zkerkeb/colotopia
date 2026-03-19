@@ -1,0 +1,129 @@
+{
+  "summary": {
+    "total": 10,
+    "success": 5,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-19T07:05:26.738006+00:00",
+      "backend": "dalle3",
+      "fr_slug": "animaux-chat",
+      "en_slug": "animals-cat",
+      "prompt": "A cute sitting cat with big eyes and a fluffy tail, front view, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-8 to color. Cute and friendly style. Printable quality. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-chat-dalle3.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T07:05:51.595584+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-chat",
+      "en_slug": "animals-cat",
+      "prompt": "A cute sitting cat with big eyes and a fluffy tail, front view, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-8 to color. Cute and friendly style. Printable quality. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-chat-gemini.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/imagen-3.0-generate-002 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+    },
+    {
+      "timestamp": "2026-03-19T07:06:04.701366+00:00",
+      "backend": "dalle3",
+      "fr_slug": "animaux-chien",
+      "en_slug": "animals-dog",
+      "prompt": "A happy sitting dog with floppy ears and a wagging tail, front view, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-8 to color. Cute and friendly style. Printable quality. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-chien-dalle3.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T07:06:24.300381+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-chien",
+      "en_slug": "animals-dog",
+      "prompt": "A happy sitting dog with floppy ears and a wagging tail, front view, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-8 to color. Cute and friendly style. Printable quality. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-chien-gemini.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/imagen-3.0-generate-002 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+    },
+    {
+      "timestamp": "2026-03-19T07:06:37.371757+00:00",
+      "backend": "dalle3",
+      "fr_slug": "animaux-lion",
+      "en_slug": "animals-lion",
+      "prompt": "A friendly lion with a big fluffy mane, sitting and smiling, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-8 to color. Cute and friendly style. Printable quality. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-lion-dalle3.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T07:07:06.296745+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-lion",
+      "en_slug": "animals-lion",
+      "prompt": "A friendly lion with a big fluffy mane, sitting and smiling, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-8 to color. Cute and friendly style. Printable quality. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-lion-gemini.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/imagen-3.0-generate-002 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+    },
+    {
+      "timestamp": "2026-03-19T07:07:19.365457+00:00",
+      "backend": "dalle3",
+      "fr_slug": "animaux-elephant",
+      "en_slug": "animals-elephant",
+      "prompt": "A cute baby elephant with big ears and a raised trunk, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-8 to color. Cute and friendly style. Printable quality. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-elephant-dalle3.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T07:07:37.465487+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-elephant",
+      "en_slug": "animals-elephant",
+      "prompt": "A cute baby elephant with big ears and a raised trunk, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-8 to color. Cute and friendly style. Printable quality. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-elephant-gemini.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/imagen-3.0-generate-002 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+    },
+    {
+      "timestamp": "2026-03-19T07:07:50.540328+00:00",
+      "backend": "dalle3",
+      "fr_slug": "animaux-papillon",
+      "en_slug": "animals-butterfly",
+      "prompt": "A beautiful butterfly with symmetrical wings covered in simple patterns, top-down view. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-8 to color. Cute and friendly style. Printable quality. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-papillon-dalle3.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T07:08:10.233545+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-papillon",
+      "en_slug": "animals-butterfly",
+      "prompt": "A beautiful butterfly with symmetrical wings covered in simple patterns, top-down view. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-8 to color. Cute and friendly style. Printable quality. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-papillon-gemini.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/imagen-3.0-generate-002 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+    }
+  ]
+}

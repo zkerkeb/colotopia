@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "total": 1,
+    "success": 1,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-19T08:23:00.891207+00:00",
+      "backend": "gemini",
+      "fr_slug": "dinosaures-triceratops",
+      "en_slug": "dinosaurs-triceratops",
+      "prompt": "A friendly cartoon triceratops with three horns and a neck frill, standing, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-triceratops.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/dinosaures-triceratops.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/dinosaurs-triceratops.yaml"
+      ],
+      "error": null
+    }
+  ]
+}

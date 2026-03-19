@@ -1,0 +1,252 @@
+{
+  "summary": {
+    "total": 20,
+    "success": 20,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-19T08:32:34.969939+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-chat",
+      "en_slug": "animals-cat",
+      "prompt": "A cute sitting cat with big eyes and a fluffy tail, front view, simple cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-chat.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:32:36.974600+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-chien",
+      "en_slug": "animals-dog",
+      "prompt": "A happy sitting dog with floppy ears and a wagging tail, front view, simple cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-chien.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:32:38.977838+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-lion",
+      "en_slug": "animals-lion",
+      "prompt": "A friendly lion with a big fluffy mane, sitting and smiling, simple cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-lion.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:32:40.982753+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-elephant",
+      "en_slug": "animals-elephant",
+      "prompt": "A cute baby elephant with big ears and a raised trunk, simple cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-elephant.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:32:42.988019+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-papillon",
+      "en_slug": "animals-butterfly",
+      "prompt": "A beautiful butterfly with symmetrical wings covered in simple patterns, top-down view. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-papillon.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:32:44.993262+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-poisson",
+      "en_slug": "animals-fish",
+      "prompt": "A cute tropical fish with fins and scales, side view, simple cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-poisson.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:32:46.998499+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-oiseau",
+      "en_slug": "animals-bird",
+      "prompt": "A cute small bird perched on a branch with wings slightly open, simple cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-oiseau.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:32:49.003541+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-lapin",
+      "en_slug": "animals-rabbit",
+      "prompt": "A cute fluffy rabbit with long ears, sitting upright, simple cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-lapin.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-lapin.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/animals-rabbit.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:32:59.028157+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-cheval",
+      "en_slug": "animals-horse",
+      "prompt": "A friendly horse with a flowing mane, standing proudly, side view, simple cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-cheval.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:33:01.033445+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-dinosaure",
+      "en_slug": "animals-dinosaur",
+      "prompt": "A friendly cute dinosaur (T-Rex style) standing upright with tiny arms, cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-dinosaure.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:33:03.038458+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-tigre",
+      "en_slug": "animals-tiger",
+      "prompt": "A friendly cartoon tiger with stripes, sitting, front view, simple cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-tigre.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:33:05.039245+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-girafe",
+      "en_slug": "animals-giraffe",
+      "prompt": "A cute giraffe with a long neck, spots on its body, standing, simple cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-girafe.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:33:07.040454+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-singe",
+      "en_slug": "animals-monkey",
+      "prompt": "A playful monkey hanging from a branch with a banana, cute cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-singe.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:33:09.044385+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-ours",
+      "en_slug": "animals-bear",
+      "prompt": "A round friendly bear sitting with paws together, big eyes, simple cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-ours.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:33:11.046926+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-grenouille",
+      "en_slug": "animals-frog",
+      "prompt": "A cute frog sitting on a lily pad with big eyes and a wide smile, cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-grenouille.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:33:13.050268+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-tortue",
+      "en_slug": "animals-turtle",
+      "prompt": "A cute turtle with a patterned shell walking slowly, side view, simple cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-tortue.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:33:15.055459+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-dauphin",
+      "en_slug": "animals-dolphin",
+      "prompt": "A playful dolphin jumping out of waves, smiling, side view, simple cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-dauphin.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:33:17.058683+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-renard",
+      "en_slug": "animals-fox",
+      "prompt": "A cute fox with a bushy tail, sitting, front view, simple cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-renard.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:33:19.063872+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-hibou",
+      "en_slug": "animals-owl",
+      "prompt": "A cute round owl perched on a branch with big eyes and patterned feathers, cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-hibou.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:33:21.069127+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-pingouin",
+      "en_slug": "animals-penguin",
+      "prompt": "A cute penguin standing upright with wings spread slightly, front view, cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-pingouin.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    }
+  ]
+}

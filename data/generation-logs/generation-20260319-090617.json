@@ -1,0 +1,81 @@
+{
+  "summary": {
+    "total": 5,
+    "success": 5,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-19T09:05:20.507068+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-chat",
+      "en_slug": "animals-cat",
+      "prompt": "A cute sitting cat with big eyes and a fluffy tail, front view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-chat.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:05:22.510730+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-chien",
+      "en_slug": "animals-dog",
+      "prompt": "A happy sitting dog with floppy ears and a wagging tail, front view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-chien.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-chien.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/animals-dog.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:05:36.125022+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-lion",
+      "en_slug": "animals-lion",
+      "prompt": "A friendly lion with a big fluffy mane, sitting and smiling, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-lion.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-lion.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/animals-lion.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:05:50.971642+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-elephant",
+      "en_slug": "animals-elephant",
+      "prompt": "A cute baby elephant with big ears and a raised trunk, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-elephant.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-elephant.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/animals-elephant.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:06:04.120626+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-papillon",
+      "en_slug": "animals-butterfly",
+      "prompt": "A beautiful butterfly with symmetrical wings covered in simple patterns, top-down view. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-papillon.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-papillon.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/animals-butterfly.yaml"
+      ],
+      "error": null
+    }
+  ]
+}

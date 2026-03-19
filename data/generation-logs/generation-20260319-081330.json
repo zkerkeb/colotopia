@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "total": 1,
+    "success": 1,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-19T08:13:30.543001+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-chat",
+      "en_slug": "animals-cat",
+      "prompt": "A cute sitting cat with big eyes and a fluffy tail, front view, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-chat.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    }
+  ]
+}

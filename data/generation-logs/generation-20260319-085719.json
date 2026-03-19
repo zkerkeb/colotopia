@@ -1,0 +1,69 @@
+{
+  "summary": {
+    "total": 5,
+    "success": 0,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-19T08:57:10.162107+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-chat",
+      "en_slug": "animals-cat",
+      "prompt": "A cute sitting cat with big eyes and a fluffy tail, front view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-chat.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-.... You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}"
+    },
+    {
+      "timestamp": "2026-03-19T08:57:12.502065+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-chien",
+      "en_slug": "animals-dog",
+      "prompt": "A happy sitting dog with floppy ears and a wagging tail, front view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-chien.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-.... You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}"
+    },
+    {
+      "timestamp": "2026-03-19T08:57:14.663036+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-lion",
+      "en_slug": "animals-lion",
+      "prompt": "A friendly lion with a big fluffy mane, sitting and smiling, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-lion.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-.... You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}"
+    },
+    {
+      "timestamp": "2026-03-19T08:57:16.810156+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-elephant",
+      "en_slug": "animals-elephant",
+      "prompt": "A cute baby elephant with big ears and a raised trunk, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-elephant.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-.... You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}"
+    },
+    {
+      "timestamp": "2026-03-19T08:57:19.046050+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-papillon",
+      "en_slug": "animals-butterfly",
+      "prompt": "A beautiful butterfly with symmetrical wings covered in simple patterns, top-down view. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-papillon.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-.... You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}"
+    }
+  ]
+}

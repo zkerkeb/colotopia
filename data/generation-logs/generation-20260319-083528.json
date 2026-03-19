@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "total": 1,
+    "success": 1,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-19T08:35:28.586243+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-voiture",
+      "en_slug": "vehicles-car",
+      "prompt": "A cute cartoon race car with big wheels and a spoiler, side view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-voiture.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    }
+  ]
+}

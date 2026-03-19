@@ -1,0 +1,3396 @@
+{
+  "summary": {
+    "total": 233,
+    "success": 233,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-19T09:06:38.688859+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-chat",
+      "en_slug": "animals-cat",
+      "prompt": "A cute sitting cat with big eyes and a fluffy tail, front view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-chat.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:06:40.694070+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-chien",
+      "en_slug": "animals-dog",
+      "prompt": "A happy sitting dog with floppy ears and a wagging tail, front view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-chien.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:06:42.694562+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-lion",
+      "en_slug": "animals-lion",
+      "prompt": "A friendly lion with a big fluffy mane, sitting and smiling, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-lion.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:06:44.699756+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-elephant",
+      "en_slug": "animals-elephant",
+      "prompt": "A cute baby elephant with big ears and a raised trunk, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-elephant.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:06:46.704773+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-papillon",
+      "en_slug": "animals-butterfly",
+      "prompt": "A beautiful butterfly with symmetrical wings covered in simple patterns, top-down view. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-papillon.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:06:48.709268+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-poisson",
+      "en_slug": "animals-fish",
+      "prompt": "A cute tropical fish with fins and scales, side view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-poisson.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:06:50.713072+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-oiseau",
+      "en_slug": "animals-bird",
+      "prompt": "A cute small bird perched on a branch with wings slightly open, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-oiseau.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:06:52.717128+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-lapin",
+      "en_slug": "animals-rabbit",
+      "prompt": "A cute fluffy rabbit with long ears, sitting upright, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-lapin.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:06:54.721202+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-cheval",
+      "en_slug": "animals-horse",
+      "prompt": "A friendly horse with a flowing mane, standing proudly, side view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-cheval.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:06:56.723403+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-dinosaure",
+      "en_slug": "animals-dinosaur",
+      "prompt": "A friendly cute dinosaur (T-Rex style) standing upright with tiny arms, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-dinosaure.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:06:58.725032+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-tigre",
+      "en_slug": "animals-tiger",
+      "prompt": "A friendly cartoon tiger with stripes, sitting, front view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-tigre.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:07:00.727330+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-girafe",
+      "en_slug": "animals-giraffe",
+      "prompt": "A cute giraffe with a long neck, spots on its body, standing, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-girafe.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:07:02.732570+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-singe",
+      "en_slug": "animals-monkey",
+      "prompt": "A playful monkey hanging from a branch with a banana, cute cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-singe.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:07:04.737764+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-ours",
+      "en_slug": "animals-bear",
+      "prompt": "A round friendly bear sitting with paws together, big eyes, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-ours.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:07:06.742073+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-grenouille",
+      "en_slug": "animals-frog",
+      "prompt": "A cute frog sitting on a lily pad with big eyes and a wide smile, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-grenouille.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:07:08.743503+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-tortue",
+      "en_slug": "animals-turtle",
+      "prompt": "A cute turtle with a patterned shell walking slowly, side view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-tortue.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:07:10.744031+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-dauphin",
+      "en_slug": "animals-dolphin",
+      "prompt": "A playful dolphin jumping out of waves, smiling, side view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-dauphin.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:07:12.744715+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-renard",
+      "en_slug": "animals-fox",
+      "prompt": "A cute fox with a bushy tail, sitting, front view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-renard.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:07:14.747023+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-hibou",
+      "en_slug": "animals-owl",
+      "prompt": "A cute round owl perched on a branch with big eyes and patterned feathers, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-hibou.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:07:16.748611+00:00",
+      "backend": "openai",
+      "fr_slug": "animaux-pingouin",
+      "en_slug": "animals-penguin",
+      "prompt": "A cute penguin standing upright with wings spread slightly, front view, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-pingouin.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:07:18.750452+00:00",
+      "backend": "openai",
+      "fr_slug": "vehicules-voiture",
+      "en_slug": "vehicles-car",
+      "prompt": "A cute cartoon race car with big wheels and a spoiler, side view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-voiture.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:07:20.755326+00:00",
+      "backend": "openai",
+      "fr_slug": "vehicules-camion",
+      "en_slug": "vehicles-truck",
+      "prompt": "A big cartoon delivery truck with a large cab and cargo trailer, side view. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-camion.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:07:22.760483+00:00",
+      "backend": "openai",
+      "fr_slug": "vehicules-avion",
+      "en_slug": "vehicles-airplane",
+      "prompt": "A cute cartoon airplane with round windows, wings, and a propeller, side view, simple style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-avion.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:07:24.762200+00:00",
+      "backend": "openai",
+      "fr_slug": "vehicules-bateau",
+      "en_slug": "vehicles-boat",
+      "prompt": "A cute cartoon sailboat with a large sail and a hull, side view on calm water, simple style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-bateau.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:07:26.765487+00:00",
+      "backend": "openai",
+      "fr_slug": "vehicules-train",
+      "en_slug": "vehicles-train",
+      "prompt": "A cheerful cartoon locomotive engine on a railway track, side view. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-train.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vehicules-train.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/vehicles-train.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:07:42.313925+00:00",
+      "backend": "openai",
+      "fr_slug": "vehicules-fusee",
+      "en_slug": "vehicles-rocket",
+      "prompt": "A cartoon rocket ship with fins and a round window, pointing upward. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-fusee.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vehicules-fusee.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/vehicles-rocket.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:07:56.109229+00:00",
+      "backend": "openai",
+      "fr_slug": "vehicules-helicoptere",
+      "en_slug": "vehicles-helicopter",
+      "prompt": "A cute cartoon helicopter with rotor blades and a round cockpit, side view, simple style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-helicoptere.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:07:58.114430+00:00",
+      "backend": "openai",
+      "fr_slug": "vehicules-moto",
+      "en_slug": "vehicles-motorcycle",
+      "prompt": "A cartoon motorcycle with large wheels, handlebars, and a seat, side view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-moto.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:08:00.119543+00:00",
+      "backend": "openai",
+      "fr_slug": "vehicules-bus",
+      "en_slug": "vehicles-bus",
+      "prompt": "A cute cartoon school bus with round windows and a happy face on the front, side view, simple style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-bus.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:08:02.124749+00:00",
+      "backend": "openai",
+      "fr_slug": "vehicules-tracteur",
+      "en_slug": "vehicles-tractor",
+      "prompt": "A cartoon farm tractor with big rear wheels and small front wheels, side view. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-tracteur.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vehicules-tracteur.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/vehicles-tractor.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:08:18.799749+00:00",
+      "backend": "openai",
+      "fr_slug": "vehicules-sous-marin",
+      "en_slug": "vehicles-submarine",
+      "prompt": "A cute cartoon submarine with a periscope and porthole windows, side view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-sous-marin.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:08:20.803916+00:00",
+      "backend": "openai",
+      "fr_slug": "vehicules-velo",
+      "en_slug": "vehicles-bicycle",
+      "prompt": "A cute cartoon bicycle with big wheels, handlebars, and a seat, side view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-velo.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:08:22.805228+00:00",
+      "backend": "openai",
+      "fr_slug": "vehicules-camion-pompier",
+      "en_slug": "vehicles-fire-truck",
+      "prompt": "A cartoon fire truck with a ladder, hose, and flashing light on top, side view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-camion-pompier.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:08:24.810450+00:00",
+      "backend": "openai",
+      "fr_slug": "vehicules-pelleteuse",
+      "en_slug": "vehicles-excavator",
+      "prompt": "A cartoon excavator with a digging arm and bucket, on a construction site, side view, simple style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-pelleteuse.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:08:26.815577+00:00",
+      "backend": "openai",
+      "fr_slug": "vehicules-ambulance",
+      "en_slug": "vehicles-ambulance",
+      "prompt": "A cartoon ambulance van with a red cross on the side and a light bar on the roof. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-ambulance.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vehicules-ambulance.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/vehicles-ambulance.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:08:40.540180+00:00",
+      "backend": "openai",
+      "fr_slug": "nature-arbre",
+      "en_slug": "nature-tree",
+      "prompt": "A big round tree with a thick trunk and leafy canopy, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nature-arbre.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:08:42.545315+00:00",
+      "backend": "openai",
+      "fr_slug": "nature-fleur",
+      "en_slug": "nature-flower",
+      "prompt": "A cute cartoon sunflower with large petals and a round center, front view, simple style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nature-fleur.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:08:44.547471+00:00",
+      "backend": "openai",
+      "fr_slug": "nature-soleil",
+      "en_slug": "nature-sun",
+      "prompt": "A smiling cartoon sun with rays all around, simple face with eyes and smile, simple style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nature-soleil.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:08:46.552659+00:00",
+      "backend": "openai",
+      "fr_slug": "nature-lune",
+      "en_slug": "nature-moon",
+      "prompt": "A crescent moon with a smiling face and stars around it, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nature-lune.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nature-lune.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/nature-moon.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:09:00.734154+00:00",
+      "backend": "openai",
+      "fr_slug": "nature-etoile",
+      "en_slug": "nature-star",
+      "prompt": "A large five-pointed star with a smiling face and sparkle details, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nature-etoile.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nature-etoile.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/nature-star.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:09:13.963756+00:00",
+      "backend": "openai",
+      "fr_slug": "nature-montagne",
+      "en_slug": "nature-mountain",
+      "prompt": "A majestic mountain with a snow-capped peak and pine trees at the base, simple landscape style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nature-montagne.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nature-montagne.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/nature-mountain.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:09:26.778857+00:00",
+      "backend": "openai",
+      "fr_slug": "nature-ocean",
+      "en_slug": "nature-ocean",
+      "prompt": "Ocean waves with a sun above the horizon, a dolphin jumping, simple cartoon landscape style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nature-ocean.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nature-ocean.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/nature-ocean.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:19:12.588038+00:00",
+      "backend": "openai",
+      "fr_slug": "nature-arc-en-ciel",
+      "en_slug": "nature-rainbow",
+      "prompt": "A big rainbow arching over clouds with a smiling sun peeking out, simple cartoon landscape style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nature-arc-en-ciel.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nature-arc-en-ciel.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/nature-rainbow.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:19:24.857084+00:00",
+      "backend": "openai",
+      "fr_slug": "nature-foret",
+      "en_slug": "nature-forest",
+      "prompt": "A magical forest scene with tall trees, mushrooms and a path, simple cartoon landscape style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nature-foret.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nature-foret.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/nature-forest.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:19:43.690018+00:00",
+      "backend": "openai",
+      "fr_slug": "nature-plage",
+      "en_slug": "nature-beach",
+      "prompt": "A beach scene with waves, a sandcastle, a sun umbrella, and seashells, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nature-plage.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nature-plage.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/nature-beach.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:19:59.414661+00:00",
+      "backend": "openai",
+      "fr_slug": "nature-volcan",
+      "en_slug": "nature-volcano",
+      "prompt": "A cartoon volcano erupting with lava and smoke puffs, simple cartoon style, no danger. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nature-volcan.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nature-volcan.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/nature-volcano.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:20:13.347457+00:00",
+      "backend": "openai",
+      "fr_slug": "nature-champignon",
+      "en_slug": "nature-mushroom",
+      "prompt": "A cute cartoon mushroom with spots and a round cap, surrounded by small flowers, simple style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nature-champignon.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nature-champignon.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/nature-mushroom.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:20:26.039013+00:00",
+      "backend": "openai",
+      "fr_slug": "nature-cascade",
+      "en_slug": "nature-waterfall",
+      "prompt": "A peaceful waterfall flowing down rocks into a pond with lily pads, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nature-cascade.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nature-cascade.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/nature-waterfall.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:20:40.572062+00:00",
+      "backend": "openai",
+      "fr_slug": "nature-desert",
+      "en_slug": "nature-desert",
+      "prompt": "A cartoon desert scene with a tall cactus, sand dunes, and a bright sun, simple landscape style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nature-desert.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nature-desert.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/nature-desert.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:20:54.445942+00:00",
+      "backend": "openai",
+      "fr_slug": "nature-nuage",
+      "en_slug": "nature-cloud",
+      "prompt": "A group of fluffy clouds in the sky with a smiling sun, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nature-nuage.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nature-nuage.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/nature-cloud.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:21:07.958707+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-a",
+      "en_slug": "alphabet-a",
+      "prompt": "The capital letter A decorated with an apple motif, cute and simple cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-a.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-a.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-a.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:21:21.419907+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-b",
+      "en_slug": "alphabet-b",
+      "prompt": "The capital letter B decorated with a butterfly motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-b.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-b.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-b.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:21:35.910804+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-c",
+      "en_slug": "alphabet-c",
+      "prompt": "The capital letter C decorated with a cat motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-c.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-c.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-c.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:21:48.971657+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-d",
+      "en_slug": "alphabet-d",
+      "prompt": "The capital letter D decorated with a dolphin motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-d.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-d.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-d.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:22:07.924018+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-e",
+      "en_slug": "alphabet-e",
+      "prompt": "The capital letter E decorated with an elephant motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-e.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-e.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-e.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:22:22.141303+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-f",
+      "en_slug": "alphabet-f",
+      "prompt": "The capital letter F decorated with a fish motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-f.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-f.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-f.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:22:38.462027+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-g",
+      "en_slug": "alphabet-g",
+      "prompt": "The capital letter G decorated with a giraffe motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-g.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-g.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-g.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:22:51.377605+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-h",
+      "en_slug": "alphabet-h",
+      "prompt": "The capital letter H decorated with a hedgehog motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-h.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-h.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-h.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:23:05.624188+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-i",
+      "en_slug": "alphabet-i",
+      "prompt": "The capital letter I decorated with an igloo and an ice cream motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-i.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-i.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-i.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:23:19.527455+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-j",
+      "en_slug": "alphabet-j",
+      "prompt": "The capital letter J decorated with a jungle and jaguar motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-j.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-j.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-j.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:23:34.162969+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-k",
+      "en_slug": "alphabet-k",
+      "prompt": "The capital letter K decorated with a kangaroo motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-k.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-k.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-k.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:23:48.188338+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-l",
+      "en_slug": "alphabet-l",
+      "prompt": "The capital letter L decorated with a lion motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-l.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-l.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-l.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:24:03.206896+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-m",
+      "en_slug": "alphabet-m",
+      "prompt": "The capital letter M decorated with a monkey motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-m.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-m.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-m.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:24:20.616769+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-n",
+      "en_slug": "alphabet-n",
+      "prompt": "The capital letter N decorated with a nest and bird motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-n.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-n.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-n.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:24:34.535079+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-o",
+      "en_slug": "alphabet-o",
+      "prompt": "The capital letter O decorated with an octopus motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-o.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-o.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-o.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:24:48.300241+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-p",
+      "en_slug": "alphabet-p",
+      "prompt": "The capital letter P decorated with a penguin motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-p.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-p.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-p.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:25:03.845438+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-q",
+      "en_slug": "alphabet-q",
+      "prompt": "The capital letter Q decorated with a queen bee motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-q.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-q.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-q.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:25:18.366876+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-r",
+      "en_slug": "alphabet-r",
+      "prompt": "The capital letter R decorated with a rabbit and rainbow motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-r.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-r.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-r.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:25:33.137879+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-s",
+      "en_slug": "alphabet-s",
+      "prompt": "The capital letter S decorated with a snake motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-s.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-s.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-s.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:25:48.799227+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-t",
+      "en_slug": "alphabet-t",
+      "prompt": "The capital letter T decorated with a turtle motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-t.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-t.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-t.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:26:04.357841+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-u",
+      "en_slug": "alphabet-u",
+      "prompt": "The capital letter U decorated with a unicorn motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-u.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-u.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-u.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:26:18.808704+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-v",
+      "en_slug": "alphabet-v",
+      "prompt": "The capital letter V decorated with a violet flower and butterfly motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-v.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-v.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-v.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:26:34.329679+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-w",
+      "en_slug": "alphabet-w",
+      "prompt": "The capital letter W decorated with a wolf and woods motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-w.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-w.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-w.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:26:50.638680+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-x",
+      "en_slug": "alphabet-x",
+      "prompt": "The capital letter X decorated with a xylophone motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-x.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-x.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-x.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:27:06.341181+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-y",
+      "en_slug": "alphabet-y",
+      "prompt": "The capital letter Y decorated with a yak and yoyo motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-y.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-y.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-y.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:27:19.456849+00:00",
+      "backend": "openai",
+      "fr_slug": "alphabet-z",
+      "en_slug": "alphabet-z",
+      "prompt": "The capital letter Z decorated with a zebra motif, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/alphabet-z.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/alphabet-z.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/alphabet-z.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:27:34.494434+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-triceratops",
+      "en_slug": "dinosaurs-triceratops",
+      "prompt": "A friendly cartoon triceratops with three horns and a neck frill, standing, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-triceratops.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:27:36.494892+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-brachiosaurus",
+      "en_slug": "dinosaurs-brachiosaurus",
+      "prompt": "A cute long-necked brachiosaurus eating leaves from a tall tree, side view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-brachiosaurus.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/dinosaures-brachiosaurus.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/dinosaurs-brachiosaurus.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:27:49.551290+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-stegosaurus",
+      "en_slug": "dinosaurs-stegosaurus",
+      "prompt": "A cute stegosaurus with diamond-shaped plates along its back, side view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-stegosaurus.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/dinosaures-stegosaurus.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/dinosaurs-stegosaurus.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:28:02.587025+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-pterodactyle",
+      "en_slug": "dinosaurs-pterodactyl",
+      "prompt": "A cartoon pterodactyl with spread wings flying through the sky, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-pterodactyle.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/dinosaures-pterodactyle.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/dinosaurs-pterodactyl.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:28:16.984848+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-ankylosaurus",
+      "en_slug": "dinosaurs-ankylosaurus",
+      "prompt": "A cute armored ankylosaurus with a club tail and bumpy back, side view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-ankylosaurus.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/dinosaures-ankylosaurus.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/dinosaurs-ankylosaurus.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:28:30.779624+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-velociraptor",
+      "en_slug": "dinosaurs-velociraptor",
+      "prompt": "A friendly cartoon velociraptor running with tiny arms and feathers, side view, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-velociraptor.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/dinosaures-velociraptor.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/dinosaurs-velociraptor.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:28:46.850126+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-diplodocus",
+      "en_slug": "dinosaurs-diplodocus",
+      "prompt": "A cute diplodocus with an extremely long neck and tail, side view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-diplodocus.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/dinosaures-diplodocus.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/dinosaurs-diplodocus.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:28:59.698696+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-spinosaurus",
+      "en_slug": "dinosaurs-spinosaurus",
+      "prompt": "A friendly cartoon spinosaurus with a large sail fin on its back, standing by water, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-spinosaurus.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/dinosaures-spinosaurus.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/dinosaurs-spinosaurus.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:29:13.243159+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-t-rex",
+      "en_slug": "dinosaurs-t-rex",
+      "prompt": "A friendly T-Rex standing upright with tiny arms and a big smile, front view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-t-rex.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/dinosaures-t-rex.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/dinosaurs-t-rex.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:29:28.048116+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-iguanodon",
+      "en_slug": "dinosaurs-iguanodon",
+      "prompt": "A cute iguanodon with thumb spikes, walking on two legs, eating a leaf, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-iguanodon.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/dinosaures-iguanodon.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/dinosaurs-iguanodon.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:29:43.110969+00:00",
+      "backend": "openai",
+      "fr_slug": "princesses-chevaliers-princesse",
+      "en_slug": "princesses-knights-princess",
+      "prompt": "A beautiful princess in a flowing dress with a crown, standing gracefully, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/princesses-chevaliers-princesse.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/princesses-chevaliers-princesse.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/princesses-knights-princess.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:29:55.247454+00:00",
+      "backend": "openai",
+      "fr_slug": "princesses-chevaliers-chevalier",
+      "en_slug": "princesses-knights-knight",
+      "prompt": "A brave cartoon knight in shining armor holding a shield and sword, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/princesses-chevaliers-chevalier.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/princesses-chevaliers-chevalier.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/princesses-knights-knight.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:30:09.170875+00:00",
+      "backend": "openai",
+      "fr_slug": "princesses-chevaliers-dragon",
+      "en_slug": "princesses-knights-dragon",
+      "prompt": "A friendly cute dragon with wings, breathing a small harmless flame, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/princesses-chevaliers-dragon.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/princesses-chevaliers-dragon.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/princesses-knights-dragon.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:30:21.862298+00:00",
+      "backend": "openai",
+      "fr_slug": "princesses-chevaliers-chateau",
+      "en_slug": "princesses-knights-castle",
+      "prompt": "A fairy tale castle with towers, flags, and a drawbridge, simple cartoon landscape style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/princesses-chevaliers-chateau.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/princesses-chevaliers-chateau.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/princesses-knights-castle.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:30:35.914885+00:00",
+      "backend": "openai",
+      "fr_slug": "princesses-chevaliers-fee",
+      "en_slug": "princesses-knights-fairy",
+      "prompt": "A cute fairy with butterfly wings and a magic wand with sparkles, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/princesses-chevaliers-fee.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/princesses-chevaliers-fee.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/princesses-knights-fairy.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:30:49.725518+00:00",
+      "backend": "openai",
+      "fr_slug": "princesses-chevaliers-licorne",
+      "en_slug": "princesses-knights-unicorn",
+      "prompt": "A beautiful unicorn with a flowing mane and a sparkly horn, prancing, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/princesses-chevaliers-licorne.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/princesses-chevaliers-licorne.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/princesses-knights-unicorn.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:31:04.579994+00:00",
+      "backend": "openai",
+      "fr_slug": "princesses-chevaliers-prince",
+      "en_slug": "princesses-knights-prince",
+      "prompt": "A young prince in royal clothing with a crown and cape, smiling, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/princesses-chevaliers-prince.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/princesses-chevaliers-prince.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/princesses-knights-prince.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:31:18.052666+00:00",
+      "backend": "openai",
+      "fr_slug": "princesses-chevaliers-sirene",
+      "en_slug": "princesses-knights-mermaid",
+      "prompt": "A beautiful mermaid with a fish tail swimming underwater with fish and corals, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/princesses-chevaliers-sirene.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/princesses-chevaliers-sirene.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/princesses-knights-mermaid.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:31:31.236035+00:00",
+      "backend": "openai",
+      "fr_slug": "princesses-chevaliers-sorciere",
+      "en_slug": "princesses-knights-witch",
+      "prompt": "A friendly cartoon witch with a pointy hat, on a broomstick, with a cute cat, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/princesses-chevaliers-sorciere.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/princesses-chevaliers-sorciere.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/princesses-knights-witch.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:31:46.754971+00:00",
+      "backend": "openai",
+      "fr_slug": "princesses-chevaliers-geant",
+      "en_slug": "princesses-knights-giant",
+      "prompt": "A friendly giant sitting on a hilltop next to a tiny castle, smiling, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/princesses-chevaliers-geant.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/princesses-chevaliers-geant.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/princesses-knights-giant.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:32:01.623807+00:00",
+      "backend": "openai",
+      "fr_slug": "metiers-pompier",
+      "en_slug": "jobs-firefighter",
+      "prompt": "A friendly cartoon firefighter in uniform with a helmet and hose, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/metiers-pompier.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/metiers-pompier.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/jobs-firefighter.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:32:15.024959+00:00",
+      "backend": "openai",
+      "fr_slug": "metiers-medecin",
+      "en_slug": "jobs-doctor",
+      "prompt": "A friendly cartoon doctor in a white coat with a stethoscope, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/metiers-medecin.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/metiers-medecin.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/jobs-doctor.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:32:28.644693+00:00",
+      "backend": "openai",
+      "fr_slug": "metiers-cuisinier",
+      "en_slug": "jobs-chef",
+      "prompt": "A cartoon chef in a tall white hat holding a ladle and a pot, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/metiers-cuisinier.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/metiers-cuisinier.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/jobs-chef.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:32:42.538051+00:00",
+      "backend": "openai",
+      "fr_slug": "metiers-policier",
+      "en_slug": "jobs-police-officer",
+      "prompt": "A friendly cartoon police officer in uniform with a badge, waving, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/metiers-policier.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/metiers-policier.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/jobs-police-officer.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:32:55.514547+00:00",
+      "backend": "openai",
+      "fr_slug": "metiers-astronaute",
+      "en_slug": "jobs-astronaut",
+      "prompt": "A cartoon astronaut in a spacesuit with a helmet, floating in space with stars, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/metiers-astronaute.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/metiers-astronaute.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/jobs-astronaut.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:33:09.329338+00:00",
+      "backend": "openai",
+      "fr_slug": "metiers-pilote",
+      "en_slug": "jobs-pilot",
+      "prompt": "A friendly cartoon pilot in uniform with a cap, holding a plane model, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/metiers-pilote.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/metiers-pilote.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/jobs-pilot.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:33:22.821257+00:00",
+      "backend": "openai",
+      "fr_slug": "metiers-jardinier",
+      "en_slug": "jobs-gardener",
+      "prompt": "A cartoon gardener with a watering can, surrounded by flowers and plants, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/metiers-jardinier.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/metiers-jardinier.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/jobs-gardener.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:33:38.919264+00:00",
+      "backend": "openai",
+      "fr_slug": "metiers-professeur",
+      "en_slug": "jobs-teacher",
+      "prompt": "A friendly cartoon teacher at a blackboard with chalk and books, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/metiers-professeur.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/metiers-professeur.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/jobs-teacher.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:33:51.671978+00:00",
+      "backend": "openai",
+      "fr_slug": "metiers-architecte",
+      "en_slug": "jobs-architect",
+      "prompt": "A cartoon architect holding a blueprint with buildings in the background, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/metiers-architecte.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/metiers-architecte.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/jobs-architect.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:34:07.266439+00:00",
+      "backend": "openai",
+      "fr_slug": "metiers-veterinaire",
+      "en_slug": "jobs-veterinarian",
+      "prompt": "A friendly cartoon vet in a lab coat holding a puppy with a bandage, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/metiers-veterinaire.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/metiers-veterinaire.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/jobs-veterinarian.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:34:20.309348+00:00",
+      "backend": "openai",
+      "fr_slug": "sport-football",
+      "en_slug": "sport-soccer",
+      "prompt": "A cartoon child kicking a soccer ball with a goal in the background, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/sport-football.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/sport-football.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/sport-soccer.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:34:33.978723+00:00",
+      "backend": "openai",
+      "fr_slug": "sport-basketball",
+      "en_slug": "sport-basketball",
+      "prompt": "A cartoon child jumping to shoot a basketball into a hoop, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/sport-basketball.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/sport-basketball.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/sport-basketball.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:34:47.884820+00:00",
+      "backend": "openai",
+      "fr_slug": "sport-tennis",
+      "en_slug": "sport-tennis",
+      "prompt": "A cartoon child swinging a tennis racket to hit a ball over a net, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/sport-tennis.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/sport-tennis.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/sport-tennis.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:35:02.320258+00:00",
+      "backend": "openai",
+      "fr_slug": "sport-natation",
+      "en_slug": "sport-swimming",
+      "prompt": "A cartoon child swimming freestyle in a pool with splashing water, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/sport-natation.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/sport-natation.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/sport-swimming.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:35:16.015502+00:00",
+      "backend": "openai",
+      "fr_slug": "sport-velo",
+      "en_slug": "sport-cycling",
+      "prompt": "A cartoon child riding a bicycle with a helmet on a path, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/sport-velo.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/sport-velo.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/sport-cycling.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:35:30.788758+00:00",
+      "backend": "openai",
+      "fr_slug": "sport-ski",
+      "en_slug": "sport-skiing",
+      "prompt": "A cartoon child skiing down a snowy slope with poles, wearing a helmet, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/sport-ski.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/sport-ski.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/sport-skiing.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:35:43.672210+00:00",
+      "backend": "openai",
+      "fr_slug": "sport-gym",
+      "en_slug": "sport-gymnastics",
+      "prompt": "A cartoon child doing a cartwheel on a gymnastics mat, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/sport-gym.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/sport-gym.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/sport-gymnastics.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:35:58.448194+00:00",
+      "backend": "openai",
+      "fr_slug": "sport-course",
+      "en_slug": "sport-running",
+      "prompt": "A cartoon child running fast on a track with a finish line ribbon, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/sport-course.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/sport-course.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/sport-running.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:36:12.044486+00:00",
+      "backend": "openai",
+      "fr_slug": "sport-yoga",
+      "en_slug": "sport-yoga",
+      "prompt": "A cartoon child doing a simple tree pose yoga position on a mat, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/sport-yoga.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/sport-yoga.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/sport-yoga.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:36:25.600640+00:00",
+      "backend": "openai",
+      "fr_slug": "sport-surf",
+      "en_slug": "sport-surfing",
+      "prompt": "A cartoon child surfing on a big wave on a surfboard, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/sport-surf.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/sport-surf.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/sport-surfing.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:36:38.864399+00:00",
+      "backend": "openai",
+      "fr_slug": "saisons-printemps-fleurs",
+      "en_slug": "seasons-spring-flowers",
+      "prompt": "A garden bursting with spring flowers including tulips and daisies with butterflies, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/saisons-printemps-fleurs.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/saisons-printemps-fleurs.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/seasons-spring-flowers.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:36:51.441685+00:00",
+      "backend": "openai",
+      "fr_slug": "saisons-printemps-papillons",
+      "en_slug": "seasons-spring-butterflies",
+      "prompt": "Several cute butterflies flying among spring flowers and a blue sky, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/saisons-printemps-papillons.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/saisons-printemps-papillons.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/seasons-spring-butterflies.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:37:08.887421+00:00",
+      "backend": "openai",
+      "fr_slug": "saisons-printemps-pluie",
+      "en_slug": "seasons-spring-rain",
+      "prompt": "A cartoon child with a big umbrella walking in spring rain with puddles, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/saisons-printemps-pluie.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/saisons-printemps-pluie.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/seasons-spring-rain.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:37:23.915601+00:00",
+      "backend": "openai",
+      "fr_slug": "saisons-printemps-arc-en-ciel",
+      "en_slug": "seasons-spring-rainbow",
+      "prompt": "A rainbow over a spring meadow with flowers and a smiling sun peeking through clouds, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/saisons-printemps-arc-en-ciel.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/saisons-printemps-arc-en-ciel.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/seasons-spring-rainbow.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:37:36.780114+00:00",
+      "backend": "openai",
+      "fr_slug": "saisons-printemps-bebe-animaux",
+      "en_slug": "seasons-spring-baby-animals",
+      "prompt": "Cute baby animals including a lamb, chick, and bunny in a spring field, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/saisons-printemps-bebe-animaux.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/saisons-printemps-bebe-animaux.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/seasons-spring-baby-animals.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:37:51.405595+00:00",
+      "backend": "openai",
+      "fr_slug": "saisons-ete-plage",
+      "en_slug": "seasons-summer-beach",
+      "prompt": "A beach summer scene with a sandcastle, beach ball, umbrella and waves, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/saisons-ete-plage.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/saisons-ete-plage.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/seasons-summer-beach.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:38:04.964233+00:00",
+      "backend": "openai",
+      "fr_slug": "saisons-ete-soleil",
+      "en_slug": "seasons-summer-sun",
+      "prompt": "A bright summer sun shining over a meadow with sunflowers and a clear sky, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/saisons-ete-soleil.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/saisons-ete-soleil.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/seasons-summer-sun.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:38:20.464944+00:00",
+      "backend": "openai",
+      "fr_slug": "saisons-ete-glace",
+      "en_slug": "seasons-summer-ice-cream",
+      "prompt": "A cute child holding a big ice cream cone with multiple scoops in summer sunshine, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/saisons-ete-glace.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/saisons-ete-glace.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/seasons-summer-ice-cream.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:38:34.074194+00:00",
+      "backend": "openai",
+      "fr_slug": "saisons-ete-piscine",
+      "en_slug": "seasons-summer-pool",
+      "prompt": "Children splashing and playing in a backyard pool with inflatables, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/saisons-ete-piscine.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/saisons-ete-piscine.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/seasons-summer-pool.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:38:48.348963+00:00",
+      "backend": "openai",
+      "fr_slug": "saisons-ete-pique-nique",
+      "en_slug": "seasons-summer-picnic",
+      "prompt": "A summer picnic scene with a blanket, basket of food, fruits, and butterflies, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/saisons-ete-pique-nique.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/saisons-ete-pique-nique.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/seasons-summer-picnic.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:39:04.043171+00:00",
+      "backend": "openai",
+      "fr_slug": "saisons-automne-feuilles",
+      "en_slug": "seasons-autumn-leaves",
+      "prompt": "A tree with falling autumn leaves in various shapes, a child catching leaves, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/saisons-automne-feuilles.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/saisons-automne-feuilles.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/seasons-autumn-leaves.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:39:18.796953+00:00",
+      "backend": "openai",
+      "fr_slug": "saisons-automne-citrouille",
+      "en_slug": "seasons-autumn-pumpkin",
+      "prompt": "Three cute pumpkins of different sizes with carved faces, leaves around them, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/saisons-automne-citrouille.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/saisons-automne-citrouille.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/seasons-autumn-pumpkin.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:39:33.431726+00:00",
+      "backend": "openai",
+      "fr_slug": "saisons-automne-champignons",
+      "en_slug": "seasons-autumn-mushrooms",
+      "prompt": "Cute mushrooms with spots growing in an autumn forest floor with fallen leaves, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/saisons-automne-champignons.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/saisons-automne-champignons.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/seasons-autumn-mushrooms.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:39:48.521588+00:00",
+      "backend": "openai",
+      "fr_slug": "saisons-automne-herisson",
+      "en_slug": "seasons-autumn-hedgehog",
+      "prompt": "A cute hedgehog carrying autumn leaves on its spines, surrounded by fallen leaves, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/saisons-automne-herisson.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/saisons-automne-herisson.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/seasons-autumn-hedgehog.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:40:02.684345+00:00",
+      "backend": "openai",
+      "fr_slug": "saisons-automne-ecureuil",
+      "en_slug": "seasons-autumn-squirrel",
+      "prompt": "A cute squirrel collecting acorns among autumn leaves and a big oak tree, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/saisons-automne-ecureuil.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/saisons-automne-ecureuil.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/seasons-autumn-squirrel.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:40:16.982938+00:00",
+      "backend": "openai",
+      "fr_slug": "saisons-hiver-neige",
+      "en_slug": "seasons-winter-snow",
+      "prompt": "A winter scene with houses covered in snow, snowflakes falling, trees with snow, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/saisons-hiver-neige.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/saisons-hiver-neige.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/seasons-winter-snow.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:40:32.112134+00:00",
+      "backend": "openai",
+      "fr_slug": "saisons-hiver-bonhomme-neige",
+      "en_slug": "seasons-winter-snowman",
+      "prompt": "A cheerful snowman with a scarf, carrot nose, and hat, surrounded by snowflakes, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/saisons-hiver-bonhomme-neige.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/saisons-hiver-bonhomme-neige.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/seasons-winter-snowman.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:40:46.487293+00:00",
+      "backend": "openai",
+      "fr_slug": "saisons-hiver-patinage",
+      "en_slug": "seasons-winter-ice-skating",
+      "prompt": "A cartoon child ice skating on a frozen pond with a scarf, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/saisons-hiver-patinage.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/saisons-hiver-patinage.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/seasons-winter-ice-skating.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:41:01.598613+00:00",
+      "backend": "openai",
+      "fr_slug": "saisons-hiver-ski",
+      "en_slug": "seasons-winter-skiing",
+      "prompt": "A cartoon child skiing down a snowy mountain slope with pine trees and a lodge, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/saisons-hiver-ski.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/saisons-hiver-ski.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/seasons-winter-skiing.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:41:19.248691+00:00",
+      "backend": "openai",
+      "fr_slug": "saisons-hiver-chalet",
+      "en_slug": "seasons-winter-chalet",
+      "prompt": "A cozy chalet covered in snow with smoke from the chimney, pine trees around, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/saisons-hiver-chalet.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/saisons-hiver-chalet.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/seasons-winter-chalet.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:41:33.287838+00:00",
+      "backend": "openai",
+      "fr_slug": "fetes-noel-sapin",
+      "en_slug": "holidays-christmas-tree",
+      "prompt": "A beautiful Christmas tree decorated with stars, ornaments, and a star on top, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fetes-noel-sapin.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fetes-noel-sapin.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/holidays-christmas-tree.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:41:48.273343+00:00",
+      "backend": "openai",
+      "fr_slug": "fetes-noel-pere-noel",
+      "en_slug": "holidays-christmas-santa",
+      "prompt": "A jolly Santa Claus with a big belly, red suit, and bag of gifts, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fetes-noel-pere-noel.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fetes-noel-pere-noel.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/holidays-christmas-santa.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:42:02.435516+00:00",
+      "backend": "openai",
+      "fr_slug": "fetes-noel-renne",
+      "en_slug": "holidays-christmas-reindeer",
+      "prompt": "A cute cartoon reindeer with antlers, a red nose (Rudolph), pulling a sled, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fetes-noel-renne.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fetes-noel-renne.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/holidays-christmas-reindeer.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:42:18.790103+00:00",
+      "backend": "openai",
+      "fr_slug": "fetes-noel-bonhomme-pain-epice",
+      "en_slug": "holidays-christmas-gingerbread",
+      "prompt": "A smiling gingerbread man with icing decorations and buttons, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fetes-noel-bonhomme-pain-epice.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fetes-noel-bonhomme-pain-epice.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/holidays-christmas-gingerbread.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:42:31.798128+00:00",
+      "backend": "openai",
+      "fr_slug": "fetes-noel-flocon",
+      "en_slug": "holidays-christmas-snowflake",
+      "prompt": "Beautiful symmetrical snowflakes with intricate patterns, simple cartoon coloring page style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fetes-noel-flocon.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fetes-noel-flocon.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/holidays-christmas-snowflake.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:42:48.461349+00:00",
+      "backend": "openai",
+      "fr_slug": "fetes-paques-lapin",
+      "en_slug": "holidays-easter-bunny",
+      "prompt": "A cute Easter bunny carrying a basket of decorated eggs, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fetes-paques-lapin.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fetes-paques-lapin.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/holidays-easter-bunny.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:43:04.312270+00:00",
+      "backend": "openai",
+      "fr_slug": "fetes-paques-oeuf",
+      "en_slug": "holidays-easter-egg",
+      "prompt": "Decorated Easter eggs with patterns of flowers, dots, and zigzags, ready to color, simple style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fetes-paques-oeuf.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fetes-paques-oeuf.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/holidays-easter-egg.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:43:19.084818+00:00",
+      "backend": "openai",
+      "fr_slug": "fetes-paques-poussin",
+      "en_slug": "holidays-easter-chick",
+      "prompt": "A cute baby chick hatching out of an Easter egg with a spring flower, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fetes-paques-poussin.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fetes-paques-poussin.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/holidays-easter-chick.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:43:32.790261+00:00",
+      "backend": "openai",
+      "fr_slug": "fetes-paques-panier",
+      "en_slug": "holidays-easter-basket",
+      "prompt": "A wicker Easter basket filled with decorated eggs and spring flowers, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fetes-paques-panier.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fetes-paques-panier.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/holidays-easter-basket.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:43:49.365369+00:00",
+      "backend": "openai",
+      "fr_slug": "fetes-paques-agneau",
+      "en_slug": "holidays-easter-lamb",
+      "prompt": "A cute fluffy baby lamb with a spring flower ribbon around its neck, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fetes-paques-agneau.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fetes-paques-agneau.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/holidays-easter-lamb.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:44:04.220303+00:00",
+      "backend": "openai",
+      "fr_slug": "fetes-halloween-citrouille",
+      "en_slug": "holidays-halloween-pumpkin",
+      "prompt": "A carved Halloween pumpkin with a scary but friendly face, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fetes-halloween-citrouille.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fetes-halloween-citrouille.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/holidays-halloween-pumpkin.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:44:20.610654+00:00",
+      "backend": "openai",
+      "fr_slug": "fetes-halloween-sorciere",
+      "en_slug": "holidays-halloween-witch",
+      "prompt": "A cartoon witch flying on a broomstick with a black cat, moon in background, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fetes-halloween-sorciere.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fetes-halloween-sorciere.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/holidays-halloween-witch.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:44:35.830814+00:00",
+      "backend": "openai",
+      "fr_slug": "fetes-halloween-fantome",
+      "en_slug": "holidays-halloween-ghost",
+      "prompt": "A cute friendly ghost with a surprised face, surrounded by stars and bats, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fetes-halloween-fantome.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fetes-halloween-fantome.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/holidays-halloween-ghost.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:44:49.790319+00:00",
+      "backend": "openai",
+      "fr_slug": "fetes-halloween-chauve-souris",
+      "en_slug": "holidays-halloween-bat",
+      "prompt": "Cute cartoon bats flying around a haunted house under a full moon, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fetes-halloween-chauve-souris.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fetes-halloween-chauve-souris.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/holidays-halloween-bat.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:45:03.425056+00:00",
+      "backend": "openai",
+      "fr_slug": "fetes-halloween-squelette",
+      "en_slug": "holidays-halloween-skeleton",
+      "prompt": "A friendly cartoon skeleton in a fun dancing pose, simple bold outlines, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fetes-halloween-squelette.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fetes-halloween-squelette.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/holidays-halloween-skeleton.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:45:19.007236+00:00",
+      "backend": "openai",
+      "fr_slug": "fetes-carnaval-masque",
+      "en_slug": "holidays-carnival-mask",
+      "prompt": "An ornate carnival mask decorated with feathers and swirls, ready to color, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fetes-carnaval-masque.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fetes-carnaval-masque.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/holidays-carnival-mask.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:45:32.159908+00:00",
+      "backend": "openai",
+      "fr_slug": "fetes-carnaval-arlequin",
+      "en_slug": "holidays-carnival-harlequin",
+      "prompt": "A cartoon harlequin in a diamond-pattern suit with a jester hat, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fetes-carnaval-arlequin.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fetes-carnaval-arlequin.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/holidays-carnival-harlequin.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:45:47.654438+00:00",
+      "backend": "openai",
+      "fr_slug": "fetes-carnaval-confettis",
+      "en_slug": "holidays-carnival-confetti",
+      "prompt": "Children celebrating carnival throwing confetti and streamers, wearing costumes, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fetes-carnaval-confettis.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fetes-carnaval-confettis.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/holidays-carnival-confetti.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:46:03.404598+00:00",
+      "backend": "openai",
+      "fr_slug": "fetes-carnaval-char",
+      "en_slug": "holidays-carnival-float",
+      "prompt": "A colorful carnival parade float decorated with flowers and stars, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fetes-carnaval-char.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fetes-carnaval-char.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/holidays-carnival-float.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:46:18.064273+00:00",
+      "backend": "openai",
+      "fr_slug": "fetes-carnaval-costume",
+      "en_slug": "holidays-carnival-costume",
+      "prompt": "A cartoon child dressed as a carnival king with a crown and colorful costume, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fetes-carnaval-costume.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fetes-carnaval-costume.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/holidays-carnival-costume.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:46:34.640101+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-volant",
+      "en_slug": "superheroes-flying",
+      "prompt": "A superhero with a flowing cape flying through the sky with arms outstretched, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-volant.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/super-heros-volant.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/superheroes-flying.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:46:47.497172+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-heroine-forte",
+      "en_slug": "superheroes-strong-heroine",
+      "prompt": "A strong superheroine with fists raised and a determined smile, wearing a mask and cape, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-heroine-forte.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/super-heros-heroine-forte.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/superheroes-strong-heroine.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:47:01.385417+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-masque",
+      "en_slug": "superheroes-masked",
+      "prompt": "A masked superhero standing on a rooftop with a billowing cape, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-masque.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/super-heros-masque.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/superheroes-masked.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:47:14.181139+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-robot",
+      "en_slug": "superheroes-robot",
+      "prompt": "A friendly robot superhero with jet boots and glowing eyes, standing heroically, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-robot.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/super-heros-robot.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/superheroes-robot.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:47:29.261043+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-animal",
+      "en_slug": "superheroes-animal",
+      "prompt": "A cartoon dog wearing a superhero cape and mask, flying through clouds, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-animal.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/super-heros-animal.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/superheroes-animal.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:47:44.406618+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-nature",
+      "en_slug": "superheroes-nature",
+      "prompt": "A superhero surrounded by growing vines and flowers, with leaf-shaped cape, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-nature.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/super-heros-nature.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/superheroes-nature.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:47:57.788694+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-vitesse",
+      "en_slug": "superheroes-speed",
+      "prompt": "A superhero running at super speed with motion lines behind, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-vitesse.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/super-heros-vitesse.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/superheroes-speed.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:48:13.076332+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-invisible",
+      "en_slug": "superheroes-invisible",
+      "prompt": "A superhero partially fading invisible with sparkle effects around the body, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-invisible.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/super-heros-invisible.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/superheroes-invisible.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:48:26.515682+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-equipe",
+      "en_slug": "superheroes-team",
+      "prompt": "A team of three diverse cartoon superheroes standing together in heroic poses, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-equipe.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/super-heros-equipe.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/superheroes-team.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:48:42.329067+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-entrainement",
+      "en_slug": "superheroes-training",
+      "prompt": "A young cartoon superhero training by lifting a boulder, with a determined smile, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-entrainement.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/super-heros-entrainement.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/superheroes-training.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:48:58.023657+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-aquatique",
+      "en_slug": "superheroes-aquatic",
+      "prompt": "A superhero swimming underwater with fish and coral around, wearing an aquatic suit, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-aquatique.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/super-heros-aquatique.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/superheroes-aquatic.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:49:15.019292+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-espace",
+      "en_slug": "superheroes-space",
+      "prompt": "A superhero flying through space among stars and planets, with a cosmic cape, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-espace.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/super-heros-espace.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/superheroes-space.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:49:29.720442+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-heroine-volante",
+      "en_slug": "superheroes-flying-heroine",
+      "prompt": "A superheroine soaring through clouds with flowing hair and a cape, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-heroine-volante.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/super-heros-heroine-volante.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/superheroes-flying-heroine.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:49:44.975392+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-feu",
+      "en_slug": "superheroes-fire",
+      "prompt": "A superhero with harmless cartoon flames around the hands, standing heroically, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-feu.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/super-heros-feu.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/superheroes-fire.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:49:57.979108+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-glace",
+      "en_slug": "superheroes-ice",
+      "prompt": "A superhero creating ice crystals and snowflakes with outstretched hands, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-glace.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/super-heros-glace.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/superheroes-ice.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:50:12.944180+00:00",
+      "backend": "openai",
+      "fr_slug": "espace-planete-terre",
+      "en_slug": "space-planet-earth",
+      "prompt": "Planet Earth seen from space with continents and clouds visible, surrounded by stars, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/espace-planete-terre.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/espace-planete-terre.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/space-planet-earth.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:50:27.506754+00:00",
+      "backend": "openai",
+      "fr_slug": "espace-systeme-solaire",
+      "en_slug": "space-solar-system",
+      "prompt": "The solar system with the sun and all planets in a line, each with distinct features, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/espace-systeme-solaire.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/espace-systeme-solaire.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/space-solar-system.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:50:42.353632+00:00",
+      "backend": "openai",
+      "fr_slug": "espace-fusee",
+      "en_slug": "space-rocket",
+      "prompt": "A rocket ship blasting off into space with flame exhaust and stars around, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/espace-fusee.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/espace-fusee.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/space-rocket.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:50:56.298550+00:00",
+      "backend": "openai",
+      "fr_slug": "espace-astronaute-lune",
+      "en_slug": "space-astronaut-moon",
+      "prompt": "A cartoon astronaut standing on the moon surface with Earth visible in the background, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/espace-astronaute-lune.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/espace-astronaute-lune.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/space-astronaut-moon.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:51:10.437257+00:00",
+      "backend": "openai",
+      "fr_slug": "espace-station-spatiale",
+      "en_slug": "space-station",
+      "prompt": "A space station orbiting Earth with solar panels extended and stars around, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/espace-station-spatiale.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/espace-station-spatiale.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/space-station.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:51:24.241387+00:00",
+      "backend": "openai",
+      "fr_slug": "espace-mars",
+      "en_slug": "space-mars",
+      "prompt": "The planet Mars with craters and a small rover on its surface, stars in background, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/espace-mars.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/espace-mars.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/space-mars.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:51:38.297742+00:00",
+      "backend": "openai",
+      "fr_slug": "espace-saturne",
+      "en_slug": "space-saturn",
+      "prompt": "The planet Saturn with its beautiful rings, surrounded by tiny moons and stars, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/espace-saturne.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/espace-saturne.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/space-saturn.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:51:50.589055+00:00",
+      "backend": "openai",
+      "fr_slug": "espace-etoiles",
+      "en_slug": "space-stars",
+      "prompt": "A night sky filled with stars connected by dotted lines forming constellations, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/espace-etoiles.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/espace-etoiles.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/space-stars.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:52:04.086743+00:00",
+      "backend": "openai",
+      "fr_slug": "espace-galaxie",
+      "en_slug": "space-galaxy",
+      "prompt": "A beautiful spiral galaxy with swirling arms of stars and cosmic dust, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/espace-galaxie.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/espace-galaxie.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/space-galaxy.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:52:19.160467+00:00",
+      "backend": "openai",
+      "fr_slug": "espace-alien",
+      "en_slug": "space-alien",
+      "prompt": "A cute friendly alien with big eyes waving hello next to a small flying saucer, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/espace-alien.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/espace-alien.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/space-alien.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:52:33.775513+00:00",
+      "backend": "openai",
+      "fr_slug": "espace-robot-spatial",
+      "en_slug": "space-robot",
+      "prompt": "A friendly robot exploring a planet surface with antennas and treads, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/espace-robot-spatial.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/espace-robot-spatial.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/space-robot.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:52:48.256736+00:00",
+      "backend": "openai",
+      "fr_slug": "espace-navette",
+      "en_slug": "space-shuttle",
+      "prompt": "A space shuttle flying through space with its cargo bay open and Earth below, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/espace-navette.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/espace-navette.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/space-shuttle.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:53:02.993008+00:00",
+      "backend": "openai",
+      "fr_slug": "espace-comete",
+      "en_slug": "space-comet",
+      "prompt": "A bright comet with a glowing tail streaking across a starry sky, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/espace-comete.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/espace-comete.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/space-comet.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:53:17.369529+00:00",
+      "backend": "openai",
+      "fr_slug": "espace-telescope",
+      "en_slug": "space-telescope",
+      "prompt": "A large telescope on a hilltop pointing at a starry night sky with planets visible, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/espace-telescope.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/espace-telescope.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/space-telescope.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:53:31.874583+00:00",
+      "backend": "openai",
+      "fr_slug": "espace-rover-lunaire",
+      "en_slug": "space-moon-rover",
+      "prompt": "A cartoon moon rover with big wheels and antennas driving on the lunar surface, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/espace-rover-lunaire.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/espace-rover-lunaire.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/space-moon-rover.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:53:47.400964+00:00",
+      "backend": "openai",
+      "fr_slug": "mandalas-geometrique",
+      "en_slug": "mandalas-geometric",
+      "prompt": "A perfectly symmetrical geometric mandala with concentric circles, triangles, and hexagons radiating from center. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mandalas-geometrique.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:53:49.402480+00:00",
+      "backend": "openai",
+      "fr_slug": "mandalas-floral",
+      "en_slug": "mandalas-floral",
+      "prompt": "A circular mandala made of intricate flower petals, leaves, and vines radiating from the center. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mandalas-floral.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/mandalas-floral.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mandalas-floral.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:54:02.716707+00:00",
+      "backend": "openai",
+      "fr_slug": "mandalas-animal",
+      "en_slug": "mandalas-animal",
+      "prompt": "A mandala with an elephant face at center surrounded by decorative paisley and floral patterns. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mandalas-animal.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/mandalas-animal.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mandalas-animal.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:54:17.896462+00:00",
+      "backend": "openai",
+      "fr_slug": "mandalas-etoile",
+      "en_slug": "mandalas-star",
+      "prompt": "A star-shaped mandala with eight points, each filled with intricate geometric patterns and dots. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mandalas-etoile.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/mandalas-etoile.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mandalas-star.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:54:30.950203+00:00",
+      "backend": "openai",
+      "fr_slug": "mandalas-celtique",
+      "en_slug": "mandalas-celtic",
+      "prompt": "A circular mandala with interlocking Celtic knot patterns and spirals in a symmetrical arrangement. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mandalas-celtique.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/mandalas-celtique.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mandalas-celtic.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:54:47.158896+00:00",
+      "backend": "openai",
+      "fr_slug": "mandalas-rosace",
+      "en_slug": "mandalas-rosette",
+      "prompt": "A cathedral rose window mandala with intricate petal sections and geometric tracery patterns. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mandalas-rosace.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/mandalas-rosace.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mandalas-rosette.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:55:04.534856+00:00",
+      "backend": "openai",
+      "fr_slug": "mandalas-paisley",
+      "en_slug": "mandalas-paisley",
+      "prompt": "A mandala filled with ornate paisley teardrop shapes, swirls, and fine dot patterns. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mandalas-paisley.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/mandalas-paisley.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mandalas-paisley.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:55:19.998821+00:00",
+      "backend": "openai",
+      "fr_slug": "mandalas-lotus",
+      "en_slug": "mandalas-lotus",
+      "prompt": "A mandala centered on a lotus flower with layered petals and decorative water ripple patterns. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mandalas-lotus.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/mandalas-lotus.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mandalas-lotus.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:55:34.440256+00:00",
+      "backend": "openai",
+      "fr_slug": "mandalas-tribal",
+      "en_slug": "mandalas-tribal",
+      "prompt": "A bold mandala with tribal-inspired patterns including zigzags, arrows, and thick geometric bands. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mandalas-tribal.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/mandalas-tribal.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mandalas-tribal.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:55:52.842850+00:00",
+      "backend": "openai",
+      "fr_slug": "mandalas-papillon",
+      "en_slug": "mandalas-butterfly",
+      "prompt": "A mandala featuring butterfly wing patterns with intricate veining and symmetrical eye spots. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mandalas-papillon.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/mandalas-papillon.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mandalas-butterfly.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:56:07.785195+00:00",
+      "backend": "openai",
+      "fr_slug": "mandalas-ocean",
+      "en_slug": "mandalas-ocean",
+      "prompt": "A mandala with ocean-themed patterns including waves, seashells, starfish and coral arranged symmetrically. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mandalas-ocean.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/mandalas-ocean.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mandalas-ocean.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:56:22.129130+00:00",
+      "backend": "openai",
+      "fr_slug": "mandalas-soleil",
+      "en_slug": "mandalas-sun",
+      "prompt": "A sun mandala with radiating flame-like rays, each filled with fine line patterns and tiny circles. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mandalas-soleil.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/mandalas-soleil.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mandalas-sun.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:56:35.777237+00:00",
+      "backend": "openai",
+      "fr_slug": "mosaiques-romaine",
+      "en_slug": "mosaics-roman",
+      "prompt": "A Roman-style mosaic floor pattern with a central medallion surrounded by geometric borders and meander patterns. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mosaiques-romaine.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/mosaiques-romaine.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mosaics-roman.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:56:49.907671+00:00",
+      "backend": "openai",
+      "fr_slug": "mosaiques-islamique",
+      "en_slug": "mosaics-islamic",
+      "prompt": "An Islamic geometric mosaic with interlocking star and polygon patterns creating an infinite tiling effect. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mosaiques-islamique.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/mosaiques-islamique.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mosaics-islamic.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:57:03.921228+00:00",
+      "backend": "openai",
+      "fr_slug": "mosaiques-tessellation",
+      "en_slug": "mosaics-tessellation",
+      "prompt": "An Escher-inspired tessellation pattern with interlocking geometric shapes filling the entire page. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mosaiques-tessellation.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/mosaiques-tessellation.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mosaics-tessellation.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:57:17.885529+00:00",
+      "backend": "openai",
+      "fr_slug": "mosaiques-vitrail",
+      "en_slug": "mosaics-stained-glass",
+      "prompt": "A stained glass window design with irregular curved sections and a floral center motif, bold leading lines. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mosaiques-vitrail.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/mosaiques-vitrail.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mosaics-stained-glass.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:57:31.668308+00:00",
+      "backend": "openai",
+      "fr_slug": "mosaiques-byzantine",
+      "en_slug": "mosaics-byzantine",
+      "prompt": "A Byzantine-style mosaic with a peacock surrounded by ornate scrollwork and small tesserae patterns. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mosaiques-byzantine.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/mosaiques-byzantine.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mosaics-byzantine.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:57:48.419401+00:00",
+      "backend": "openai",
+      "fr_slug": "mosaiques-marocaine",
+      "en_slug": "mosaics-moroccan",
+      "prompt": "A Moroccan zellige tile pattern with eight-pointed stars and interlocking geometric shapes. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mosaiques-marocaine.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/mosaiques-marocaine.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mosaics-moroccan.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:58:04.840658+00:00",
+      "backend": "openai",
+      "fr_slug": "mosaiques-art-nouveau",
+      "en_slug": "mosaics-art-nouveau",
+      "prompt": "An Art Nouveau mosaic with flowing organic curves, stylized flowers, and whiplash line patterns. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mosaiques-art-nouveau.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/mosaiques-art-nouveau.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mosaics-art-nouveau.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:58:18.696344+00:00",
+      "backend": "openai",
+      "fr_slug": "mosaiques-hexagonale",
+      "en_slug": "mosaics-hexagonal",
+      "prompt": "A honeycomb hexagonal mosaic with each hexagon containing a different intricate pattern. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mosaiques-hexagonale.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/mosaiques-hexagonale.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mosaics-hexagonal.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:58:32.718780+00:00",
+      "backend": "openai",
+      "fr_slug": "mosaiques-azulejo",
+      "en_slug": "mosaics-azulejo",
+      "prompt": "A Portuguese azulejo tile pattern with symmetrical floral and scroll motifs in a repeating grid. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mosaiques-azulejo.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/mosaiques-azulejo.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mosaics-azulejo.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:58:51.709779+00:00",
+      "backend": "openai",
+      "fr_slug": "mosaiques-japonaise",
+      "en_slug": "mosaics-japanese",
+      "prompt": "A Japanese asanoha (hemp leaf) geometric pattern with overlapping circles creating star shapes. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/mosaiques-japonaise.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/mosaiques-japonaise.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mosaics-japanese.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:59:07.213709+00:00",
+      "backend": "openai",
+      "fr_slug": "abstrait-geometrique",
+      "en_slug": "abstract-geometric",
+      "prompt": "An abstract composition of overlapping circles, squares, and triangles creating complex intersections. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/abstrait-geometrique.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/abstrait-geometrique.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/abstract-geometric.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:59:20.068996+00:00",
+      "backend": "openai",
+      "fr_slug": "abstrait-organique",
+      "en_slug": "abstract-organic",
+      "prompt": "Flowing organic abstract forms like water currents and wind patterns interweaving across the page. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/abstrait-organique.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/abstrait-organique.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/abstract-organic.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:59:34.057049+00:00",
+      "backend": "openai",
+      "fr_slug": "abstrait-op-art",
+      "en_slug": "abstract-op-art",
+      "prompt": "An op-art pattern with concentric wavy lines creating an optical illusion of movement and depth. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/abstrait-op-art.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/abstrait-op-art.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/abstract-op-art.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T09:59:49.781763+00:00",
+      "backend": "openai",
+      "fr_slug": "abstrait-spirales",
+      "en_slug": "abstract-spirals",
+      "prompt": "Multiple interlocking spirals of different sizes creating a mesmerizing abstract pattern. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/abstrait-spirales.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/abstrait-spirales.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/abstract-spirals.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T10:00:06.375211+00:00",
+      "backend": "openai",
+      "fr_slug": "abstrait-zentangle",
+      "en_slug": "abstract-zentangle",
+      "prompt": "A zentangle-inspired abstract design with sections filled with different repetitive patterns and textures. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/abstrait-zentangle.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/abstrait-zentangle.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/abstract-zentangle.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T10:00:23.166109+00:00",
+      "backend": "openai",
+      "fr_slug": "abstrait-ondulations",
+      "en_slug": "abstract-waves",
+      "prompt": "Abstract wave patterns with parallel curved lines creating a sense of flowing movement across the page. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/abstrait-ondulations.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/abstrait-ondulations.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/abstract-waves.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T10:00:36.631965+00:00",
+      "backend": "openai",
+      "fr_slug": "abstrait-fractale",
+      "en_slug": "abstract-fractal",
+      "prompt": "A fractal-inspired pattern with self-similar shapes repeating at different scales across the design. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/abstrait-fractale.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/abstrait-fractale.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/abstract-fractal.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T10:00:51.887152+00:00",
+      "backend": "openai",
+      "fr_slug": "abstrait-cubiste",
+      "en_slug": "abstract-cubist",
+      "prompt": "A cubist-style abstract composition with fragmented geometric planes and angular intersecting forms. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/abstrait-cubiste.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/abstrait-cubiste.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/abstract-cubist.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T10:01:07.195129+00:00",
+      "backend": "openai",
+      "fr_slug": "abstrait-lignes",
+      "en_slug": "abstract-lines",
+      "prompt": "An abstract design of intersecting straight and curved lines creating enclosed shapes of varying sizes. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/abstrait-lignes.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/abstrait-lignes.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/abstract-lines.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T10:01:21.061114+00:00",
+      "backend": "openai",
+      "fr_slug": "abstrait-concentrique",
+      "en_slug": "abstract-concentric",
+      "prompt": "Multiple groups of concentric circles overlapping each other with varying line weights and spacing. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/abstrait-concentrique.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/abstrait-concentrique.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/abstract-concentric.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T10:01:35.907876+00:00",
+      "backend": "openai",
+      "fr_slug": "cartes-france",
+      "en_slug": "maps-france",
+      "prompt": "An outline map of France with regional borders, major rivers, and decorative compass rose. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/cartes-france.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/cartes-france.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/maps-france.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T10:01:50.340597+00:00",
+      "backend": "openai",
+      "fr_slug": "cartes-etats-unis",
+      "en_slug": "maps-usa",
+      "prompt": "An outline map of the United States with state borders and geographic features like mountains and rivers. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/cartes-etats-unis.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/cartes-etats-unis.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/maps-usa.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T10:02:04.953371+00:00",
+      "backend": "openai",
+      "fr_slug": "cartes-japon",
+      "en_slug": "maps-japan",
+      "prompt": "An outline map of Japan with main islands, prefecture borders, and decorative wave patterns around the coast. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/cartes-japon.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/cartes-japon.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/maps-japan.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T10:02:20.135511+00:00",
+      "backend": "openai",
+      "fr_slug": "cartes-afrique",
+      "en_slug": "maps-africa",
+      "prompt": "An outline map of Africa with country borders, major rivers, and small iconic animal silhouettes in regions. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/cartes-afrique.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/cartes-afrique.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/maps-africa.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T10:02:37.822459+00:00",
+      "backend": "openai",
+      "fr_slug": "cartes-europe",
+      "en_slug": "maps-europe",
+      "prompt": "An outline map of Europe with country borders, coastlines, and small landmark symbols in each country. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/cartes-europe.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/cartes-europe.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/maps-europe.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T10:02:52.671095+00:00",
+      "backend": "openai",
+      "fr_slug": "cartes-monde",
+      "en_slug": "maps-world",
+      "prompt": "A world map with continent outlines, ocean patterns, and a decorative border with compass rose. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/cartes-monde.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/cartes-monde.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/maps-world.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T10:03:07.895271+00:00",
+      "backend": "openai",
+      "fr_slug": "cartes-amerique-sud",
+      "en_slug": "maps-south-america",
+      "prompt": "An outline map of South America with country borders, the Amazon river, and Andes mountain range. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/cartes-amerique-sud.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/cartes-amerique-sud.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/maps-south-america.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T10:03:22.200494+00:00",
+      "backend": "openai",
+      "fr_slug": "cartes-australie",
+      "en_slug": "maps-australia",
+      "prompt": "An outline map of Australia with state borders, Great Barrier Reef, and iconic animal silhouettes. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/cartes-australie.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/cartes-australie.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/maps-australia.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T10:03:36.695619+00:00",
+      "backend": "openai",
+      "fr_slug": "cartes-inde",
+      "en_slug": "maps-india",
+      "prompt": "An outline map of India with state borders, the Ganges river, and decorative paisley border patterns. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/cartes-inde.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/cartes-inde.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/maps-india.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T10:03:52.129744+00:00",
+      "backend": "openai",
+      "fr_slug": "cartes-tresor",
+      "en_slug": "maps-treasure",
+      "prompt": "An ornate treasure map with islands, dotted paths, sea monsters, compass rose, and X marks the spot. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/cartes-tresor.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/cartes-tresor.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/maps-treasure.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T10:04:08.049698+00:00",
+      "backend": "openai",
+      "fr_slug": "drole-singe-voiture",
+      "en_slug": "funny-monkey-car",
+      "prompt": "A monkey in sunglasses driving a race car, grinning and waving from the window. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-singe-voiture.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/drole-singe-voiture.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/funny-monkey-car.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T10:04:23.871449+00:00",
+      "backend": "openai",
+      "fr_slug": "drole-chat-astronaute",
+      "en_slug": "funny-cat-astronaut",
+      "prompt": "A cat wearing a space suit and helmet, floating near the moon with stars around. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-chat-astronaute.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/drole-chat-astronaute.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/funny-cat-astronaut.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T10:04:38.844213+00:00",
+      "backend": "openai",
+      "fr_slug": "drole-dinosaure-skateboard",
+      "en_slug": "funny-dinosaur-skateboard",
+      "prompt": "A T-Rex balanced on a skateboard with tiny arms raised happily in the air. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-dinosaure-skateboard.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/drole-dinosaure-skateboard.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/funny-dinosaur-skateboard.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T10:04:54.963709+00:00",
+      "backend": "openai",
+      "fr_slug": "drole-grenouille-chevalier",
+      "en_slug": "funny-frog-knight",
+      "prompt": "A frog in knight armor holding a sword and a round shield, standing proudly. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-grenouille-chevalier.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/drole-grenouille-chevalier.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/funny-frog-knight.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T10:05:09.016272+00:00",
+      "backend": "openai",
+      "fr_slug": "drole-pingouin-chef",
+      "en_slug": "funny-penguin-chef",
+      "prompt": "A penguin wearing a chef hat and apron, holding a wooden spoon with a big smile. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-pingouin-chef.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/drole-pingouin-chef.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/funny-penguin-chef.yaml"
+      ],
+      "error": null
+    }
+  ]
+}

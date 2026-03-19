@@ -16,6 +16,9 @@ export const kidsCategories = [
   'sport',
   'saisons',
   'fetes',
+  'personnages',
+  'contes',
+  'drole',
 ] as const;
 
 export const adultCategories = [
@@ -59,6 +62,9 @@ const translations: Record<string, Record<Locale, string>> = {
   'category.mosaiques': { fr: 'Mosaïques', en: 'Mosaics' },
   'category.abstrait': { fr: 'Abstrait', en: 'Abstract' },
   'category.cartes': { fr: 'Cartes', en: 'Maps' },
+  'category.personnages': { fr: 'Personnages', en: 'Characters' },
+  'category.contes': { fr: 'Contes', en: 'Fairy Tales' },
+  'category.drole': { fr: 'Drôle', en: 'Funny' },
   'category.paysages': { fr: 'Paysages', en: 'Landscapes' },
   'coloring.download': { fr: 'Télécharger le PDF', en: 'Download PDF' },
   'coloring.print': { fr: 'Imprimer', en: 'Print' },
@@ -97,6 +103,9 @@ const enSlugs: Record<Category, string> = {
   mosaiques: 'mosaics',
   abstrait: 'abstract',
   cartes: 'maps',
+  personnages: 'characters',
+  contes: 'fairy-tales',
+  drole: 'funny',
   paysages: 'landscapes',
 };
 

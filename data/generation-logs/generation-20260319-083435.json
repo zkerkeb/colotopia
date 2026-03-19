@@ -1,0 +1,204 @@
+{
+  "summary": {
+    "total": 15,
+    "success": 15,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-19T08:33:27.952026+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-voiture",
+      "en_slug": "vehicles-car",
+      "prompt": "A cute cartoon race car with big wheels and a spoiler, side view, simple cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-voiture.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:33:29.956274+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-camion",
+      "en_slug": "vehicles-truck",
+      "prompt": "A big friendly cartoon truck with a large cab and cargo area, side view, simple style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-camion.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vehicules-camion.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/vehicles-truck.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:33:39.641385+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-avion",
+      "en_slug": "vehicles-airplane",
+      "prompt": "A cute cartoon airplane with round windows, wings, and a propeller, side view, simple style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-avion.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:33:41.642563+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-bateau",
+      "en_slug": "vehicles-boat",
+      "prompt": "A cute cartoon sailboat with a large sail and a hull, side view on calm water, simple style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-bateau.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:33:43.645422+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-train",
+      "en_slug": "vehicles-train",
+      "prompt": "A cute cartoon steam locomotive with smoke puffs, side view, simple cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-train.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vehicules-train.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/vehicles-train.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:33:59.077169+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-fusee",
+      "en_slug": "vehicles-rocket",
+      "prompt": "A cute cartoon rocket ship with fins and a porthole, launching upward, simple cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-fusee.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vehicules-fusee.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/vehicles-rocket.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:34:05.093161+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-helicoptere",
+      "en_slug": "vehicles-helicopter",
+      "prompt": "A cute cartoon helicopter with rotor blades and a round cockpit, side view, simple style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-helicoptere.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:34:07.098407+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-moto",
+      "en_slug": "vehicles-motorcycle",
+      "prompt": "A cartoon motorcycle with large wheels, handlebars, and a seat, side view, simple cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-moto.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:34:09.102722+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-bus",
+      "en_slug": "vehicles-bus",
+      "prompt": "A cute cartoon school bus with round windows and a happy face on the front, side view, simple style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-bus.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:34:11.107252+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-tracteur",
+      "en_slug": "vehicles-tractor",
+      "prompt": "A friendly cartoon farm tractor with large rear wheels and a cab, side view, simple style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-tracteur.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vehicules-tracteur.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/vehicles-tractor.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:34:21.419114+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-sous-marin",
+      "en_slug": "vehicles-submarine",
+      "prompt": "A cute cartoon submarine with a periscope and porthole windows, side view, simple cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-sous-marin.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:34:23.423914+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-velo",
+      "en_slug": "vehicles-bicycle",
+      "prompt": "A cute cartoon bicycle with big wheels, handlebars, and a seat, side view, simple cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-velo.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:34:25.425500+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-camion-pompier",
+      "en_slug": "vehicles-fire-truck",
+      "prompt": "A cartoon fire truck with a ladder, hose, and flashing light on top, side view, simple cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-camion-pompier.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:34:27.426746+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-pelleteuse",
+      "en_slug": "vehicles-excavator",
+      "prompt": "A cartoon excavator with a digging arm and bucket, on a construction site, side view, simple style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-pelleteuse.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:34:29.427749+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-ambulance",
+      "en_slug": "vehicles-ambulance",
+      "prompt": "A cartoon ambulance with a red cross, flashing light on top, side view, simple cartoon style. Simple children's coloring book page. Thick black outlines only on pure white background. Cute cartoon style, bold shapes, high contrast.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-ambulance.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vehicules-ambulance.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/vehicles-ambulance.yaml"
+      ],
+      "error": null
+    }
+  ]
+}

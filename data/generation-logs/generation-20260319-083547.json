@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "total": 2,
+    "success": 2,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-19T08:35:37.812391+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-voiture",
+      "en_slug": "vehicles-car",
+      "prompt": "A cute cartoon race car with big wheels and a spoiler, side view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-voiture.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:35:39.816721+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-camion",
+      "en_slug": "vehicles-truck",
+      "prompt": "A big friendly cartoon truck with a large cab and cargo area, side view, simple style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-camion.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vehicules-camion.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/vehicles-truck.yaml"
+      ],
+      "error": null
+    }
+  ]
+}

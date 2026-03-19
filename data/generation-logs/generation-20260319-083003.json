@@ -1,0 +1,546 @@
+{
+  "summary": {
+    "total": 39,
+    "success": 38,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-19T08:25:35.336553+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-chat",
+      "en_slug": "animals-cat",
+      "prompt": "A cute sitting cat with big eyes and a fluffy tail, front view, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-chat.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:25:37.341765+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-chien",
+      "en_slug": "animals-dog",
+      "prompt": "A happy sitting dog with floppy ears and a wagging tail, front view, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-chien.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:25:39.342715+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-lion",
+      "en_slug": "animals-lion",
+      "prompt": "A friendly lion with a big fluffy mane, sitting and smiling, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-lion.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:25:41.348003+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-elephant",
+      "en_slug": "animals-elephant",
+      "prompt": "A cute baby elephant with big ears and a raised trunk, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-elephant.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:25:43.349880+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-papillon",
+      "en_slug": "animals-butterfly",
+      "prompt": "A beautiful butterfly with symmetrical wings covered in simple patterns, top-down view. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-papillon.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:25:45.352293+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-poisson",
+      "en_slug": "animals-fish",
+      "prompt": "A cute tropical fish with fins and scales, side view, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-poisson.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:25:47.357253+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-oiseau",
+      "en_slug": "animals-bird",
+      "prompt": "A cute small bird perched on a branch with wings slightly open, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-oiseau.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:25:49.360910+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-lapin",
+      "en_slug": "animals-rabbit",
+      "prompt": "A cute fluffy rabbit with long ears, sitting upright, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-lapin.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:25:51.361349+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-cheval",
+      "en_slug": "animals-horse",
+      "prompt": "A friendly horse with a flowing mane, standing proudly, side view, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-cheval.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:25:53.366050+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-dinosaure",
+      "en_slug": "animals-dinosaur",
+      "prompt": "A friendly cute dinosaur (T-Rex style) standing upright with tiny arms, cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-dinosaure.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-dinosaure.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/animals-dinosaur.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:26:03.339882+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-tigre",
+      "en_slug": "animals-tiger",
+      "prompt": "A friendly cartoon tiger with stripes, sitting, front view, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-tigre.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-tigre.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/animals-tiger.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:26:14.284277+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-girafe",
+      "en_slug": "animals-giraffe",
+      "prompt": "A cute giraffe with a long neck, spots on its body, standing, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-girafe.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-girafe.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/animals-giraffe.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:26:21.480084+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-singe",
+      "en_slug": "animals-monkey",
+      "prompt": "A playful monkey hanging from a branch with a banana, cute cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-singe.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-singe.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/animals-monkey.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:26:33.148265+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-ours",
+      "en_slug": "animals-bear",
+      "prompt": "A round friendly bear sitting with paws together, big eyes, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-ours.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-ours.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/animals-bear.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:26:42.149963+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-grenouille",
+      "en_slug": "animals-frog",
+      "prompt": "A cute frog sitting on a lily pad with big eyes and a wide smile, cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-grenouille.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-grenouille.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/animals-frog.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:26:56.604486+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-tortue",
+      "en_slug": "animals-turtle",
+      "prompt": "A cute turtle with a patterned shell walking slowly, side view, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-tortue.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-tortue.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/animals-turtle.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:27:06.599212+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-dauphin",
+      "en_slug": "animals-dolphin",
+      "prompt": "A playful dolphin jumping out of waves, smiling, side view, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-dauphin.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:27:08.603663+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-renard",
+      "en_slug": "animals-fox",
+      "prompt": "A cute fox with a bushy tail, sitting, front view, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-renard.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-renard.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/animals-fox.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:27:17.338627+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-hibou",
+      "en_slug": "animals-owl",
+      "prompt": "A cute round owl perched on a branch with big eyes and patterned feathers, cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-hibou.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-hibou.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/animals-owl.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:27:27.217680+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-pingouin",
+      "en_slug": "animals-penguin",
+      "prompt": "A cute penguin standing upright with wings spread slightly, front view, cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-pingouin.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-pingouin.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/animals-penguin.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:27:39.256227+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-voiture",
+      "en_slug": "vehicles-car",
+      "prompt": "A cute cartoon race car with big wheels and a spoiler, side view, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-voiture.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:27:41.260321+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-camion",
+      "en_slug": "vehicles-truck",
+      "prompt": "A big friendly cartoon truck with a large cab and cargo area, side view, simple style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-camion.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:27:43.265104+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-avion",
+      "en_slug": "vehicles-airplane",
+      "prompt": "A cute cartoon airplane with round windows, wings, and a propeller, side view, simple style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-avion.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vehicules-avion.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/vehicles-airplane.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:27:52.503480+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-bateau",
+      "en_slug": "vehicles-boat",
+      "prompt": "A cute cartoon sailboat with a large sail and a hull, side view on calm water, simple style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-bateau.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vehicules-bateau.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/vehicles-boat.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:28:06.028971+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-train",
+      "en_slug": "vehicles-train",
+      "prompt": "A cute cartoon steam locomotive with smoke puffs, side view, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-train.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vehicules-train.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/vehicles-train.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:28:15.916954+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-fusee",
+      "en_slug": "vehicles-rocket",
+      "prompt": "A cute cartoon rocket ship with fins and a porthole, launching upward, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-fusee.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vehicules-fusee.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/vehicles-rocket.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:28:23.917026+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-helicoptere",
+      "en_slug": "vehicles-helicopter",
+      "prompt": "A cute cartoon helicopter with rotor blades and a round cockpit, side view, simple style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-helicoptere.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vehicules-helicoptere.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/vehicles-helicopter.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:28:31.318762+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-moto",
+      "en_slug": "vehicles-motorcycle",
+      "prompt": "A cartoon motorcycle with large wheels, handlebars, and a seat, side view, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-moto.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vehicules-moto.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/vehicles-motorcycle.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:28:42.167812+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-bus",
+      "en_slug": "vehicles-bus",
+      "prompt": "A cute cartoon school bus with round windows and a happy face on the front, side view, simple style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-bus.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vehicules-bus.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/vehicles-bus.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:28:57.918900+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-tracteur",
+      "en_slug": "vehicles-tractor",
+      "prompt": "A friendly cartoon farm tractor with large rear wheels and a cab, side view, simple style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-tracteur.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:28:59.923918+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-sous-marin",
+      "en_slug": "vehicles-submarine",
+      "prompt": "A cute cartoon submarine with a periscope and porthole windows, side view, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-sous-marin.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vehicules-sous-marin.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/vehicles-submarine.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:29:06.233348+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-velo",
+      "en_slug": "vehicles-bicycle",
+      "prompt": "A cute cartoon bicycle with big wheels, handlebars, and a seat, side view, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-velo.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vehicules-velo.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/vehicles-bicycle.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:29:15.925450+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-camion-pompier",
+      "en_slug": "vehicles-fire-truck",
+      "prompt": "A cartoon fire truck with a ladder, hose, and flashing light on top, side view, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-camion-pompier.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vehicules-camion-pompier.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/vehicles-fire-truck.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:29:25.320394+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-pelleteuse",
+      "en_slug": "vehicles-excavator",
+      "prompt": "A cartoon excavator with a digging arm and bucket, on a construction site, side view, simple style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-pelleteuse.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vehicules-pelleteuse.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/vehicles-excavator.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:29:35.139210+00:00",
+      "backend": "gemini",
+      "fr_slug": "vehicules-ambulance",
+      "en_slug": "vehicles-ambulance",
+      "prompt": "A cartoon ambulance with a red cross, flashing light on top, side view, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vehicules-ambulance.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vehicules-ambulance.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/vehicles-ambulance.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:29:50.586192+00:00",
+      "backend": "gemini",
+      "fr_slug": "nature-arbre",
+      "en_slug": "nature-tree",
+      "prompt": "A big round tree with a thick trunk and leafy canopy, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nature-arbre.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:29:52.586688+00:00",
+      "backend": "gemini",
+      "fr_slug": "nature-fleur",
+      "en_slug": "nature-flower",
+      "prompt": "A cute cartoon sunflower with large petals and a round center, front view, simple style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nature-fleur.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:29:54.587160+00:00",
+      "backend": "gemini",
+      "fr_slug": "nature-soleil",
+      "en_slug": "nature-sun",
+      "prompt": "A smiling cartoon sun with rays all around, simple face with eyes and smile, simple style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nature-soleil.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nature-soleil.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/nature-sun.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-19T08:30:03.464321+00:00",
+      "backend": "gemini",
+      "fr_slug": "nature-lune",
+      "en_slug": "nature-moon",
+      "prompt": "A crescent moon with a smiling face and stars around it, simple cartoon style. Coloring book page style. Thick clean black outlines on pure white background. No shading, no gradients, no color fill. Simple bold shapes suitable for children ages 3-10 to color. Cute and friendly style. Printable quality. No text, no words, no letters, no watermark. Coloring book page style for children. Thick clean black outlines on a pure white background. No shading, no color fill, no gradients. Simple bold shapes. Cute friendly cartoon style. High contrast, printable quality. No text, no words, no letters, no watermark.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nature-lune.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/predict_requests_per_model, limit: 10, model: imagen-4.0-generate\\nPlease retry in 56.491028867s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/predict_requests_per_model', 'quotaId': 'PredictRequestsPerMinutePerProjectPerModel', 'quotaDimensions': {'location': 'global', 'model': 'imagen-4.0-generate'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '56s'}]}}"
+    }
+  ]
+}

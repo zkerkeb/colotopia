@@ -270,7 +270,7 @@ def process_subject(
     image_slug = fr_slug
     image_path = images_dir / f"{image_slug}.png"
 
-    category = subject.get("category", subject["fr_slug"].split("-")[0])
+    category = subject.get("category", fr_slug.split("-")[0])
     prompt = build_prompt(subject["prompt"], base_suffix, category, adult_suffix)
 
     entry = {
@@ -411,6 +411,7 @@ def run(args):
         print(f"\n=== Category: {cat_name} ({min(count, len(subjects))} subjects) ===")
 
         for subject in subjects[:count]:
+            subject["category"] = cat_name  # Ensure correct category for hyphenated names
             total += 1
             if not args.dry_run and not first_call:
                 print(f"  [wait] Rate limiting ({RATE_LIMIT_SECONDS}s)...")
