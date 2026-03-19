@@ -54,11 +54,22 @@ GEMINI_IMAGEN_MODEL = "imagen-4.0-generate-001"
 # Aspect ratio closest to A4 (1:√2 ≈ 3:4.24); 3:4 is nearest available
 GEMINI_ASPECT_RATIO = "3:4"
 
-LINE_ART_SUFFIX = (
+LINE_ART_SUFFIX_KIDS = (
     "Coloring book page style for children. Thick clean black outlines on a "
     "pure white background. No shading, no color fill, no gradients. Simple "
-    "bold shapes. Cute friendly cartoon style. High contrast, printable quality."
+    "bold shapes. Cute friendly cartoon style. High contrast, printable quality. "
+    "No text, no words, no letters, no watermark."
 )
+
+LINE_ART_SUFFIX_ADULTS = (
+    "Coloring book page for adults. Clean black outlines on pure white background. "
+    "No shading, no color fill, no gradients. Intricate detailed patterns with "
+    "fine lines. High contrast, printable quality. "
+    "No text, no words, no letters, no watermark."
+)
+
+# Adult categories use the detailed adult prompt suffix
+ADULT_CATEGORIES = {"mandalas", "mosaiques", "abstrait", "cartes", "paysages"}
 
 # ---------------------------------------------------------------------------
 # Path helpers (resolved relative to ASTRO_ROOT env var or auto-detected)
@@ -102,8 +113,9 @@ def get_logs_dir(astro_root: Path) -> Path:
 # Image generation backends
 # ---------------------------------------------------------------------------
 
-def build_prompt(subject_prompt: str, base_suffix: str) -> str:
-    return f"{subject_prompt} {base_suffix} {LINE_ART_SUFFIX}"
+def build_prompt(subject_prompt: str, base_suffix: str, category: str = "") -> str:
+    line_art = LINE_ART_SUFFIX_ADULTS if category in ADULT_CATEGORIES else LINE_ART_SUFFIX_KIDS
+    return f"{subject_prompt} {base_suffix} {line_art}"
 
 
 def generate_image_dalle(client, prompt: str) -> bytes:
@@ -172,7 +184,8 @@ def make_content_yaml(subject: dict, locale: str, image_slug: str) -> dict:
 
     # Derive category from fr_slug prefix (e.g. "animaux-chat" → "animaux")
     fr_slug = subject["fr_slug"]
-    category = fr_slug.split("-")[0]
+    category = subject.get("category", fr_slug.split("-")[0])
+    audience = "adultes" if category in ADULT_CATEGORIES else "enfants"
 
     if is_fr:
         alt = f"Coloriage {title.lower()} a imprimer, dessin au trait simple pour enfants"
@@ -193,6 +206,7 @@ def make_content_yaml(subject: dict, locale: str, image_slug: str) -> dict:
         "title": title,
         "slug": slug,
         "category": category,
+        "audience": audience,
         "tags": tags,
         "image": f"/images/coloriages/{image_slug}.png",
         "alt": alt,
@@ -200,6 +214,7 @@ def make_content_yaml(subject: dict, locale: str, image_slug: str) -> dict:
         "seoTitle": seo_title,
         "seoDescription": seo_desc,
         "printable": True,
+        "createdAt": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
     }
 
 
@@ -235,7 +250,8 @@ def process_subject(
     image_slug = fr_slug + image_suffix
     image_path = images_dir / f"{image_slug}.png"
 
-    prompt = build_prompt(subject["prompt"], base_suffix)
+    category = subject.get("category", subject["fr_slug"].split("-")[0])
+    prompt = build_prompt(subject["prompt"], base_suffix, category)
 
     entry = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
@@ -443,8 +459,8 @@ Examples:
     parser.add_argument(
         "--backend",
         choices=["dalle3", "gemini"],
-        default="dalle3",
-        help="Image generation backend: dalle3 (default) or gemini (Imagen 3)",
+        default="gemini",
+        help="Image generation backend: gemini (default, Imagen 4) or dalle3",
     )
     parser.add_argument(
         "--compare",
