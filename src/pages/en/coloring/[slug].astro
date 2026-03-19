@@ -1,14 +1,11 @@
 ---
-import ColoringLayout from '../../../layouts/ColoringLayout.astro';
-import AffiliateWidget from '../../../components/AffiliateWidget.astro';
-import AdSlot from '../../../components/AdSlot.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ColoringPage from '../../../components/ColoringPage.astro';
 import { getCollection } from 'astro:content';
+import type { Category } from '../../../lib/i18n';
 
 export async function getStaticPaths() {
-  const coloriages = await getCollection(
-    'coloriages',
-    ({ data }) => data.locale === 'en'
-  );
+  const coloriages = await getCollection('coloriages', ({ data }) => data.locale === 'en');
   return coloriages.map((c) => ({
     params: { slug: c.data.slug },
     props: { coloring: c },
@@ -16,19 +13,70 @@ export async function getStaticPaths() {
 }
 
 const { coloring } = Astro.props;
-const { title, image, alt, category, tags, seoDescription } = coloring.data;
+const { title, image, alt, category, tags, slug, seoTitle, seoDescription } = coloring.data;
+
+const locale = 'en' as const;
+const siteUrl = Astro.site?.href.replace(/\/$/, '') ?? 'https://coloriages.example.com';
+const canonicalUrl = `${siteUrl}/en/coloring/${slug}`;
+const altUrl = `${siteUrl}/fr/coloriage/${slug}`;
+
+const pageTitle = seoTitle ?? `Free ${title} Coloring Page to Print | Coloring Pages`;
+const pageDescription =
+  seoDescription ??
+  `Download and print this free ${title} coloring page. A4 format, high quality, perfect for kids.`;
+
+const allEn = await getCollection('coloriages', ({ data }) => data.locale === 'en');
+const related = allEn
+  .filter((c) => c.data.category === category)
+  .map((c) => ({ title: c.data.title, slug: c.data.slug, image: c.data.image, alt: c.data.alt }));
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'ImageObject',
+      '@id': `${canonicalUrl}#image`,
+      name: title,
+      description: pageDescription,
+      contentUrl: `${siteUrl}${image}`,
+      thumbnailUrl: `${siteUrl}${image}`,
+      encodingFormat: 'image/jpeg',
+    },
+    {
+      '@type': 'WebPage',
+      '@id': canonicalUrl,
+      name: pageTitle,
+      description: pageDescription,
+      url: canonicalUrl,
+      inLanguage: 'en-US',
+      primaryImageOfPage: { '@id': `${canonicalUrl}#image` },
+    },
+  ],
+};
 ---
 
-<ColoringLayout
-  title={title}
-  description={seoDescription}
-  locale="en"
-  image={image}
-  alt={alt}
-  category={category}
-  tags={tags}
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  locale={locale}
+  canonical={canonicalUrl}
+  ogImage={`${siteUrl}${image}`}
+  structuredData={structuredData}
 >
-</ColoringLayout>
+  <Fragment slot="head">
+    <link rel="alternate" hreflang="en" href={canonicalUrl} />
+    <link rel="alternate" hreflang="fr" href={altUrl} />
+    <link rel="alternate" hreflang="x-default" href={altUrl} />
+  </Fragment>
 
-<AdSlot slot="" format="rectangle" />
-<AffiliateWidget locale="en" />
+  <ColoringPage
+    title={title}
+    image={image}
+    alt={alt}
+    category={category as Category}
+    tags={tags}
+    locale={locale}
+    slug={slug}
+    related={related}
+  />
+</BaseLayout>
