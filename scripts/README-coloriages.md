@@ -1,20 +1,20 @@
 # Image Generation Pipeline — Coloring Pages
 
-Generates black-and-white A4 300dpi line art images for the coloring site using DALL-E 3, and produces the matching Astro content collection YAML files.
+Generates black-and-white A4 300dpi line art images for the coloring site using Google Gemini Imagen 4, and produces the matching Astro content collection YAML files.
 
 ## Setup
 
 ### 1. Install Python dependencies
 
 ```bash
-pip install openai pillow pyyaml
+pip install pillow pyyaml google-genai
 ```
 
 ### 2. Configure environment
 
 ```bash
 cp .env.example .env
-# Edit .env and set OPENAI_API_KEY
+# Edit .env and set GEMINI_API_KEY
 ```
 
 ### 3. Verify setup with a dry run
@@ -57,25 +57,9 @@ For each subject:
 
 Each subject has a custom prompt in `scripts/coloriages-prompts.yaml`. The generation script appends a standard suffix ensuring the output is coloring-book style (thick black outlines, no shading, white background).
 
-## Categories & subjects
-
-| Category  | Subjects                                                               | Count |
-|-----------|------------------------------------------------------------------------|-------|
-| animaux   | chat, chien, lion, elephant, papillon, poisson, oiseau, lapin, cheval, dinosaure | 10 |
-| vehicules | voiture, camion, avion, bateau, train, fusee, helicoptere, moto        | 8  |
-| nature    | arbre, fleur, soleil, lune, etoile, montagne, ocean                    | 7  |
-| alphabet  | A, B, C, D, E (extendable to full A-Z)                                 | 5  |
-
-## Cost estimate
-
-- DALL-E 3 standard quality, 1024×1792: ~$0.04/image
-- 30 images (full batch minus alphabet): ~$1.20
-- Full A-Z alphabet (26 images): ~$1.04
-- Total (~56 images): ~$2.24
-
 ## Rate limiting
 
-The script waits 13 seconds between API calls to stay within DALL-E 3 tier-1 limits (~5 req/min). Existing images are skipped (idempotent). A full 30-image batch takes ~7 minutes.
+The script waits 2 seconds between API calls. Existing images are skipped (idempotent).
 
 ## Adding new subjects
 
@@ -96,10 +80,10 @@ categories:
 
 ## Troubleshooting
 
-**`OPENAI_API_KEY not set`** — copy `.env.example` to `.env` and add your key.
+**`GEMINI_API_KEY not set`** — copy `.env.example` to `.env` and add your key.
 
 **`Cannot find Astro project root`** — set `ASTRO_ROOT=/absolute/path/to/coloriages`.
 
-**`openai package not installed`** — run `pip install openai pillow pyyaml`.
+**`google-genai package not installed`** — run `pip install google-genai`.
 
 **Image quality** — if line art is not clean enough, adjust the prompts in `coloriages-prompts.yaml`. Tip: prefix with "Black and white line art only," for stronger constraint.

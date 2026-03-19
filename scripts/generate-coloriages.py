@@ -5,20 +5,16 @@ Coloring page image generation pipeline.
 Generates A4 300dpi black-and-white line art images and produces the matching
 Astro content collection YAML files.
 
-Supported backends:
-  - dalle3   : OpenAI DALL-E 3 (default). Requires OPENAI_API_KEY.
-  - gemini   : Google Imagen 3 ("Nano Banana" per CEO). Requires GEMINI_API_KEY.
+Backend: Google Gemini Imagen 4. Requires GEMINI_API_KEY.
 
 Usage:
     python3 scripts/generate-coloriages.py --all --dry-run
     python3 scripts/generate-coloriages.py --category animaux
     python3 scripts/generate-coloriages.py --category vehicules --count 3
     python3 scripts/generate-coloriages.py --all --locale fr
-    python3 scripts/generate-coloriages.py --category animaux --count 3 --backend gemini
-    python3 scripts/generate-coloriages.py --category animaux --count 3 --compare  # A/B test both
 
 Requirements:
-    pip install openai pillow pyyaml google-genai
+    pip install pillow pyyaml google-genai
 """
 
 import argparse
@@ -67,15 +63,11 @@ class QuotaExhaustedError(Exception):
 SCRIPT_DIR = Path(__file__).parent
 PROMPTS_FILE = SCRIPT_DIR / "coloriages-prompts.yaml"
 
-# DALL-E 3 generates 1024x1792 (portrait), we upscale to A4 300dpi
-DALLE_SIZE = "1024x1792"
 A4_WIDTH_PX = 2480   # A4 at 300 DPI
 A4_HEIGHT_PX = 3508  # A4 at 300 DPI
 
-# Rate limiting: tier-1 DALL-E 3 = ~5 images/min, so ~13s between calls
-RATE_LIMIT_SECONDS_DALLE = 13
-# Gemini Imagen 3: generous quota, 2s is safe
-RATE_LIMIT_SECONDS_GEMINI = 2
+# Gemini Imagen 4: generous quota, 2s is safe
+RATE_LIMIT_SECONDS = 2
 
 # Gemini Imagen 4 model
 GEMINI_IMAGEN_MODEL = "imagen-4.0-generate-001"
@@ -149,20 +141,6 @@ def build_prompt(subject_prompt: str, base_suffix: str, category: str = "", adul
         style_suffix = base_suffix
         line_art = LINE_ART_SUFFIX_KIDS
     return f"{subject_prompt} {style_suffix} {line_art}"
-
-
-def generate_image_dalle(client, prompt: str) -> bytes:
-    """Call DALL-E 3 and return raw PNG bytes."""
-    import base64
-    response = client.images.generate(
-        model="dall-e-3",
-        prompt=prompt,
-        size=DALLE_SIZE,
-        quality="standard",
-        n=1,
-        response_format="b64_json",
-    )
-    return base64.b64decode(response.data[0].b64_json)
 
 
 def generate_image_gemini(client, prompt: str) -> bytes:
@@ -271,17 +249,12 @@ def process_subject(
     client,
     dry_run: bool,
     log_entries: list,
-    backend: str = "dalle3",
-    image_suffix: str = "",
     adult_suffix: str = "",
 ):
-    """Generate one image (and content YAMLs) for a subject.
-
-    image_suffix: appended to filename stem for A/B comparisons (e.g. "-gemini").
-    """
+    """Generate one image (and content YAMLs) for a subject."""
     fr_slug = subject["fr_slug"]
     en_slug = subject["en_slug"]
-    image_slug = fr_slug + image_suffix
+    image_slug = fr_slug
     image_path = images_dir / f"{image_slug}.png"
 
     category = subject.get("category", subject["fr_slug"].split("-")[0])
@@ -289,7 +262,7 @@ def process_subject(
 
     entry = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
-        "backend": backend,
+        "backend": "gemini",
         "fr_slug": fr_slug,
         "en_slug": en_slug,
         "prompt": prompt,
@@ -307,18 +280,15 @@ def process_subject(
         return True
 
     if dry_run:
-        print(f"  [dry-run] [{backend}] Would generate: {image_slug}.png")
+        print(f"  [dry-run] Would generate: {image_slug}.png")
         print(f"            Prompt: {prompt[:80]}...")
         entry["status"] = "dry_run"
         log_entries.append(entry)
         return True
 
-    print(f"  [gen] [{backend}] {image_slug}.png ...")
+    print(f"  [gen] {image_slug}.png ...")
     try:
-        if backend == "gemini":
-            raw_bytes = generate_image_gemini(client, prompt)
-        else:
-            raw_bytes = generate_image_dalle(client, prompt)
+        raw_bytes = generate_image_gemini(client, prompt)
         png_bytes = upscale_to_a4(raw_bytes)
         image_path.write_bytes(png_bytes)
         print(f"  [ok ] Saved {image_path.stat().st_size // 1024}KB → {image_path}")
@@ -333,16 +303,14 @@ def process_subject(
             raise QuotaExhaustedError(error_str)
         return False
 
-    # Skip content YAMLs for A/B comparison images (they use a suffixed slug)
-    if not image_suffix:
-        for locale in locales:
-            content = make_content_yaml(subject, locale, image_slug)
-            slug = subject["fr_slug"] if locale == "fr" else subject["en_slug"]
-            filename = f"{slug}.yaml"
-            content_dir = get_content_dir(astro_root, locale)
-            yaml_path = write_content_yaml(content, content_dir, filename)
-            print(f"  [ok ] YAML → {yaml_path.relative_to(astro_root)}")
-            entry["content_files"].append(str(yaml_path))
+    for locale in locales:
+        content = make_content_yaml(subject, locale, image_slug)
+        slug = subject["fr_slug"] if locale == "fr" else subject["en_slug"]
+        filename = f"{slug}.yaml"
+        content_dir = get_content_dir(astro_root, locale)
+        yaml_path = write_content_yaml(content, content_dir, filename)
+        print(f"  [ok ] YAML → {yaml_path.relative_to(astro_root)}")
+        entry["content_files"].append(str(yaml_path))
 
     entry["status"] = "success"
     log_entries.append(entry)
@@ -384,69 +352,25 @@ def run(args):
     else:
         locales = [args.locale]
 
-    backend = args.backend
-    compare_mode = getattr(args, "compare", False)
-
-    # Init client(s)
-    dalle_client = None
+    # Init Gemini client
     gemini_client = None
 
     if not args.dry_run:
-        needs_dalle = compare_mode or backend == "dalle3"
-        needs_gemini = compare_mode or backend == "gemini"
-
-        if needs_dalle:
-            try:
-                from openai import OpenAI
-            except ImportError:
-                print("openai package not installed. Run: pip install openai pillow pyyaml", file=sys.stderr)
-                sys.exit(1)
-            api_key = os.environ.get("OPENAI_API_KEY")
-            if not api_key:
-                print("OPENAI_API_KEY env var not set.", file=sys.stderr)
-                sys.exit(1)
-            dalle_client = OpenAI(api_key=api_key)
-
-        if needs_gemini:
-            try:
-                from google import genai as google_genai
-            except ImportError:
-                print("google-genai package not installed. Run: pip install google-genai", file=sys.stderr)
-                sys.exit(1)
-            gemini_api_key = os.environ.get("GEMINI_API_KEY")
-            if not gemini_api_key:
-                print("GEMINI_API_KEY env var not set.", file=sys.stderr)
-                sys.exit(1)
-            gemini_client = google_genai.Client(api_key=gemini_api_key)
+        try:
+            from google import genai as google_genai
+        except ImportError:
+            print("google-genai package not installed. Run: pip install google-genai", file=sys.stderr)
+            sys.exit(1)
+        gemini_api_key = os.environ.get("GEMINI_API_KEY")
+        if not gemini_api_key:
+            print("GEMINI_API_KEY env var not set.", file=sys.stderr)
+            sys.exit(1)
+        gemini_client = google_genai.Client(api_key=gemini_api_key)
 
     log_entries = []
     total = 0
     success = 0
     first_call = True
-
-    def _generate_one(subject, the_backend, the_client, img_suffix=""):
-        nonlocal total, success, first_call
-        total += 1
-        rate_limit = RATE_LIMIT_SECONDS_DALLE if the_backend == "dalle3" else RATE_LIMIT_SECONDS_GEMINI
-        if not args.dry_run and not first_call:
-            print(f"  [wait] Rate limiting ({rate_limit}s)...")
-            time.sleep(rate_limit)
-        first_call = False
-        ok = process_subject(
-            subject=subject,
-            base_suffix=base_suffix,
-            images_dir=images_dir,
-            astro_root=astro_root,
-            locales=locales,
-            client=the_client,
-            dry_run=args.dry_run,
-            log_entries=log_entries,
-            backend=the_backend,
-            image_suffix=img_suffix,
-            adult_suffix=adult_suffix,
-        )
-        if ok:
-            success += 1
 
     quota_hit = False
     for cat_name in selected:
@@ -457,13 +381,25 @@ def run(args):
         print(f"\n=== Category: {cat_name} ({min(count, len(subjects))} subjects) ===")
 
         for subject in subjects[:count]:
+            total += 1
+            if not args.dry_run and not first_call:
+                print(f"  [wait] Rate limiting ({RATE_LIMIT_SECONDS}s)...")
+                time.sleep(RATE_LIMIT_SECONDS)
+            first_call = False
             try:
-                if compare_mode:
-                    _generate_one(subject, "dalle3", dalle_client, img_suffix="-dalle3")
-                    _generate_one(subject, "gemini", gemini_client, img_suffix="-gemini")
-                else:
-                    the_client = gemini_client if backend == "gemini" else dalle_client
-                    _generate_one(subject, backend, the_client)
+                ok = process_subject(
+                    subject=subject,
+                    base_suffix=base_suffix,
+                    images_dir=images_dir,
+                    astro_root=astro_root,
+                    locales=locales,
+                    client=gemini_client,
+                    dry_run=args.dry_run,
+                    log_entries=log_entries,
+                    adult_suffix=adult_suffix,
+                )
+                if ok:
+                    success += 1
             except QuotaExhaustedError:
                 print("\n[STOP] API quota exhausted — stopping batch to avoid wasting calls.", file=sys.stderr)
                 quota_hit = True
@@ -480,21 +416,18 @@ def run(args):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Generate coloring page images via DALL-E 3 or Gemini Imagen 3.",
+        description="Generate coloring page images via Gemini Imagen 4.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
   # Dry run all categories
   python3 generate-coloriages.py --all --dry-run
 
-  # Generate 3 images with DALL-E 3 (default)
+  # Generate 3 images in a category
   python3 generate-coloriages.py --category animaux --count 3
 
-  # Generate with Gemini Imagen 3 ("Nano Banana")
-  python3 generate-coloriages.py --category animaux --count 3 --backend gemini
-
-  # A/B test: generate same prompts with both backends (adds -dalle3 / -gemini suffix)
-  python3 generate-coloriages.py --category animaux --count 5 --compare
+  # Generate all categories
+  python3 generate-coloriages.py --all
 """,
     )
     group = parser.add_mutually_exclusive_group()
@@ -503,17 +436,6 @@ Examples:
     parser.add_argument("--count", type=int, metavar="N", help="Max subjects per category (default: all)")
     parser.add_argument("--locale", choices=["fr", "en", "both"], default="both", help="Generate content YAML for locale(s) (default: both)")
     parser.add_argument("--dry-run", action="store_true", help="Print what would be done without calling the API")
-    parser.add_argument(
-        "--backend",
-        choices=["dalle3", "gemini"],
-        default="gemini",
-        help="Image generation backend: gemini (default, Imagen 4) or dalle3",
-    )
-    parser.add_argument(
-        "--compare",
-        action="store_true",
-        help="A/B test mode: generate every prompt with BOTH backends (saves <slug>-dalle3.png and <slug>-gemini.png)",
-    )
     args = parser.parse_args()
 
     if not args.all and not args.category:

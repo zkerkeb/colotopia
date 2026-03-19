@@ -1,5 +1,5 @@
 # Coloring page prompt templates
-# Used by generate-coloriages.py to generate images via DALL-E 3
+# Used by generate-coloriages.py to generate images via Gemini Imagen 4
 #
 # Structure:
 #   categories:
@@ -11,7 +11,7 @@
 #           en_title: <English display title>
 #           fr_tags: <list of French tags>
 #           en_tags: <list of English tags>
-#           prompt: <DALL-E 3 prompt for image generation>
+#           prompt: <image generation prompt>
 
 base_prompt_suffix: >
   Coloring book page style. Thick clean black outlines on pure white background.
