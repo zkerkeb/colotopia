@@ -40,7 +40,7 @@ const structuredData = {
       description: pageDescription,
       contentUrl: `${siteUrl}${image}`,
       thumbnailUrl: `${siteUrl}${image}`,
-      encodingFormat: 'image/jpeg',
+      encodingFormat: 'image/png',
     },
     {
       '@type': 'WebPage',
@@ -63,12 +63,6 @@ const structuredData = {
   ogImage={`${siteUrl}${image}`}
   structuredData={structuredData}
 >
-  <Fragment slot="head">
-    <link rel="alternate" hreflang="en" href={canonicalUrl} />
-    <link rel="alternate" hreflang="fr" href={altUrl} />
-    <link rel="alternate" hreflang="x-default" href={altUrl} />
-  </Fragment>
-
   <ColoringPage
     title={title}
     image={image}
