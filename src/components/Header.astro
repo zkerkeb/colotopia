@@ -2,6 +2,7 @@
 import type { Locale } from '../lib/i18n';
 import { t, getLocalePath } from '../lib/i18n';
 import CategoryNav from './CategoryNav.astro';
+import SearchBar from './SearchBar.astro';
 
 interface Props {
   locale: Locale;
@@ -17,6 +18,7 @@ const altLabel = locale === 'fr' ? 'EN' : 'FR';
     <a href={getLocalePath(locale)} class="logo">
       🎨 {t('site.title', locale)}
     </a>
+    <SearchBar locale={locale} />
     <nav class="header-nav">
       <a href={getLocalePath(locale)}>{t('nav.home', locale)}</a>
       <a
@@ -42,9 +44,9 @@ const altLabel = locale === 'fr' ? 'EN' : 'FR';
   .header-inner {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0.75rem 1rem;
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
     align-items: center;
   }
 
