@@ -113,9 +113,14 @@ def get_logs_dir(astro_root: Path) -> Path:
 # Image generation backends
 # ---------------------------------------------------------------------------
 
-def build_prompt(subject_prompt: str, base_suffix: str, category: str = "") -> str:
-    line_art = LINE_ART_SUFFIX_ADULTS if category in ADULT_CATEGORIES else LINE_ART_SUFFIX_KIDS
-    return f"{subject_prompt} {base_suffix} {line_art}"
+def build_prompt(subject_prompt: str, base_suffix: str, category: str = "", adult_suffix: str = "") -> str:
+    if category in ADULT_CATEGORIES:
+        style_suffix = adult_suffix if adult_suffix else base_suffix
+        line_art = LINE_ART_SUFFIX_ADULTS
+    else:
+        style_suffix = base_suffix
+        line_art = LINE_ART_SUFFIX_KIDS
+    return f"{subject_prompt} {style_suffix} {line_art}"
 
 
 def generate_image_dalle(client, prompt: str) -> bytes:
@@ -240,6 +245,7 @@ def process_subject(
     log_entries: list,
     backend: str = "dalle3",
     image_suffix: str = "",
+    adult_suffix: str = "",
 ):
     """Generate one image (and content YAMLs) for a subject.
 
@@ -251,7 +257,7 @@ def process_subject(
     image_path = images_dir / f"{image_slug}.png"
 
     category = subject.get("category", subject["fr_slug"].split("-")[0])
-    prompt = build_prompt(subject["prompt"], base_suffix, category)
+    prompt = build_prompt(subject["prompt"], base_suffix, category, adult_suffix)
 
     entry = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
@@ -318,6 +324,7 @@ def run(args):
 
     categories = config["categories"]
     base_suffix = config.get("base_prompt_suffix", "").strip()
+    adult_suffix = config.get("adult_prompt_suffix", "").strip()
 
     astro_root = get_astro_root()
     images_dir = get_images_dir(astro_root)
@@ -404,6 +411,7 @@ def run(args):
             log_entries=log_entries,
             backend=the_backend,
             image_suffix=img_suffix,
+            adult_suffix=adult_suffix,
         )
         if ok:
             success += 1

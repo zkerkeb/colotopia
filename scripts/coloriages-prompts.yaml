@@ -17,6 +17,13 @@ base_prompt_suffix: >
   Coloring book page style. Thick clean black outlines on pure white background.
   No shading, no gradients, no color fill. Simple bold shapes suitable for
   children ages 3-10 to color. Cute and friendly style. Printable quality.
+  No text, no words, no letters, no watermark.
+
+adult_prompt_suffix: >
+  Adult coloring page style. Intricate detailed black line art on pure white background.
+  No shading, no gradients, no color fill. Complex patterns with fine lines suitable
+  for adult stress relief and mindfulness coloring. High detail, elegant design. Printable quality.
+  No text, no words, no letters, no watermark.
 
 categories:
   animaux:
@@ -1294,3 +1301,593 @@ categories:
         fr_tags: ["carnaval", "costume", "roi", "fete"]
         en_tags: ["carnival", "costume", "king", "holiday"]
         prompt: "A cartoon child dressed as a carnival king with a crown and colorful costume, simple cartoon style."
+
+  super-heros:
+    subjects:
+      - fr_slug: super-heros-volant
+        en_slug: superheroes-flying
+        fr_title: "Super-heros volant"
+        en_title: "Flying Superhero"
+        fr_tags: ["super-heros", "voler", "cape", "ciel"]
+        en_tags: ["superhero", "flying", "cape", "sky"]
+        prompt: "A superhero with a flowing cape flying through the sky with arms outstretched, simple cartoon style."
+
+      - fr_slug: super-heros-heroine-forte
+        en_slug: superheroes-strong-heroine
+        fr_title: "Super-heroine forte"
+        en_title: "Strong Superheroine"
+        fr_tags: ["super-heroine", "forte", "puissante", "courageuse"]
+        en_tags: ["superheroine", "strong", "powerful", "brave"]
+        prompt: "A strong superheroine with fists raised and a determined smile, wearing a mask and cape, cartoon style."
+
+      - fr_slug: super-heros-masque
+        en_slug: superheroes-masked
+        fr_title: "Super-heros masque"
+        en_title: "Masked Superhero"
+        fr_tags: ["super-heros", "masque", "mystere", "heros"]
+        en_tags: ["superhero", "masked", "mystery", "hero"]
+        prompt: "A masked superhero standing on a rooftop with a billowing cape, simple cartoon style."
+
+      - fr_slug: super-heros-robot
+        en_slug: superheroes-robot
+        fr_title: "Robot superhero"
+        en_title: "Robot Superhero"
+        fr_tags: ["robot", "super-heros", "technologie", "armure"]
+        en_tags: ["robot", "superhero", "technology", "armor"]
+        prompt: "A friendly robot superhero with jet boots and glowing eyes, standing heroically, cartoon style."
+
+      - fr_slug: super-heros-animal
+        en_slug: superheroes-animal
+        fr_title: "Super-heros animal"
+        en_title: "Animal Superhero"
+        fr_tags: ["super-heros", "animal", "cape", "aventure"]
+        en_tags: ["superhero", "animal", "cape", "adventure"]
+        prompt: "A cartoon dog wearing a superhero cape and mask, flying through clouds, simple cartoon style."
+
+      - fr_slug: super-heros-nature
+        en_slug: superheroes-nature
+        fr_title: "Super-heros de la nature"
+        en_title: "Nature Superhero"
+        fr_tags: ["super-heros", "nature", "plantes", "ecologie"]
+        en_tags: ["superhero", "nature", "plants", "ecology"]
+        prompt: "A superhero surrounded by growing vines and flowers, with leaf-shaped cape, simple cartoon style."
+
+      - fr_slug: super-heros-vitesse
+        en_slug: superheroes-speed
+        fr_title: "Super-heros de la vitesse"
+        en_title: "Speed Superhero"
+        fr_tags: ["super-heros", "vitesse", "rapide", "eclair"]
+        en_tags: ["superhero", "speed", "fast", "lightning"]
+        prompt: "A superhero running at super speed with motion lines behind, simple cartoon style."
+
+      - fr_slug: super-heros-invisible
+        en_slug: superheroes-invisible
+        fr_title: "Super-heros invisible"
+        en_title: "Invisible Superhero"
+        fr_tags: ["super-heros", "invisible", "mystere", "pouvoir"]
+        en_tags: ["superhero", "invisible", "mystery", "power"]
+        prompt: "A superhero partially fading invisible with sparkle effects around the body, simple cartoon style."
+
+      - fr_slug: super-heros-equipe
+        en_slug: superheroes-team
+        fr_title: "Team de super-heros"
+        en_title: "Superhero Team"
+        fr_tags: ["super-heros", "equipe", "amis", "ensemble"]
+        en_tags: ["superhero", "team", "friends", "together"]
+        prompt: "A team of three diverse cartoon superheroes standing together in heroic poses, simple cartoon style."
+
+      - fr_slug: super-heros-entrainement
+        en_slug: superheroes-training
+        fr_title: "Super-heros en entrainement"
+        en_title: "Superhero in Training"
+        fr_tags: ["super-heros", "entrainement", "apprenti", "jeune"]
+        en_tags: ["superhero", "training", "apprentice", "young"]
+        prompt: "A young cartoon superhero training by lifting a boulder, with a determined smile, cartoon style."
+
+      - fr_slug: super-heros-aquatique
+        en_slug: superheroes-aquatic
+        fr_title: "Super-heros aquatique"
+        en_title: "Aquatic Superhero"
+        fr_tags: ["super-heros", "eau", "ocean", "nager"]
+        en_tags: ["superhero", "water", "ocean", "swim"]
+        prompt: "A superhero swimming underwater with fish and coral around, wearing an aquatic suit, cartoon style."
+
+      - fr_slug: super-heros-espace
+        en_slug: superheroes-space
+        fr_title: "Super-heros de l'espace"
+        en_title: "Space Superhero"
+        fr_tags: ["super-heros", "espace", "etoiles", "galaxie"]
+        en_tags: ["superhero", "space", "stars", "galaxy"]
+        prompt: "A superhero flying through space among stars and planets, with a cosmic cape, simple cartoon style."
+
+      - fr_slug: super-heros-heroine-volante
+        en_slug: superheroes-flying-heroine
+        fr_title: "Super-heroine volante"
+        en_title: "Flying Superheroine"
+        fr_tags: ["super-heroine", "voler", "ciel", "puissante"]
+        en_tags: ["superheroine", "flying", "sky", "powerful"]
+        prompt: "A superheroine soaring through clouds with flowing hair and a cape, simple cartoon style."
+
+      - fr_slug: super-heros-feu
+        en_slug: superheroes-fire
+        fr_title: "Super-heros de feu"
+        en_title: "Fire Superhero"
+        fr_tags: ["super-heros", "feu", "flammes", "pouvoir"]
+        en_tags: ["superhero", "fire", "flames", "power"]
+        prompt: "A superhero with harmless cartoon flames around the hands, standing heroically, simple cartoon style."
+
+      - fr_slug: super-heros-glace
+        en_slug: superheroes-ice
+        fr_title: "Super-heros de glace"
+        en_title: "Ice Superhero"
+        fr_tags: ["super-heros", "glace", "froid", "cristal"]
+        en_tags: ["superhero", "ice", "cold", "crystal"]
+        prompt: "A superhero creating ice crystals and snowflakes with outstretched hands, simple cartoon style."
+
+  espace:
+    subjects:
+      - fr_slug: espace-planete-terre
+        en_slug: space-planet-earth
+        fr_title: "Planete Terre"
+        en_title: "Planet Earth"
+        fr_tags: ["espace", "terre", "planete", "monde"]
+        en_tags: ["space", "earth", "planet", "world"]
+        prompt: "Planet Earth seen from space with continents and clouds visible, surrounded by stars, cartoon style."
+
+      - fr_slug: espace-systeme-solaire
+        en_slug: space-solar-system
+        fr_title: "Systeme solaire"
+        en_title: "Solar System"
+        fr_tags: ["espace", "planetes", "soleil", "systeme"]
+        en_tags: ["space", "planets", "sun", "system"]
+        prompt: "The solar system with the sun and all planets in a line, each with distinct features, cartoon style."
+
+      - fr_slug: espace-fusee
+        en_slug: space-rocket
+        fr_title: "Fusee dans l'espace"
+        en_title: "Rocket in Space"
+        fr_tags: ["espace", "fusee", "lancement", "etoiles"]
+        en_tags: ["space", "rocket", "launch", "stars"]
+        prompt: "A rocket ship blasting off into space with flame exhaust and stars around, simple cartoon style."
+
+      - fr_slug: espace-astronaute-lune
+        en_slug: space-astronaut-moon
+        fr_title: "Astronaute sur la lune"
+        en_title: "Astronaut on the Moon"
+        fr_tags: ["espace", "astronaute", "lune", "exploration"]
+        en_tags: ["space", "astronaut", "moon", "exploration"]
+        prompt: "A cartoon astronaut standing on the moon surface with Earth visible in the background, cartoon style."
+
+      - fr_slug: espace-station-spatiale
+        en_slug: space-station
+        fr_title: "Station spatiale"
+        en_title: "Space Station"
+        fr_tags: ["espace", "station", "orbite", "science"]
+        en_tags: ["space", "station", "orbit", "science"]
+        prompt: "A space station orbiting Earth with solar panels extended and stars around, simple cartoon style."
+
+      - fr_slug: espace-mars
+        en_slug: space-mars
+        fr_title: "Mars la planete rouge"
+        en_title: "Mars the Red Planet"
+        fr_tags: ["espace", "mars", "planete", "rouge"]
+        en_tags: ["space", "mars", "planet", "red"]
+        prompt: "The planet Mars with craters and a small rover on its surface, stars in background, cartoon style."
+
+      - fr_slug: espace-saturne
+        en_slug: space-saturn
+        fr_title: "Saturne et ses anneaux"
+        en_title: "Saturn and its Rings"
+        fr_tags: ["espace", "saturne", "anneaux", "planete"]
+        en_tags: ["space", "saturn", "rings", "planet"]
+        prompt: "The planet Saturn with its beautiful rings, surrounded by tiny moons and stars, cartoon style."
+
+      - fr_slug: espace-etoiles
+        en_slug: space-stars
+        fr_title: "Etoiles et constellations"
+        en_title: "Stars and Constellations"
+        fr_tags: ["espace", "etoiles", "constellations", "nuit"]
+        en_tags: ["space", "stars", "constellations", "night"]
+        prompt: "A night sky filled with stars connected by dotted lines forming constellations, simple cartoon style."
+
+      - fr_slug: espace-galaxie
+        en_slug: space-galaxy
+        fr_title: "Galaxie spirale"
+        en_title: "Spiral Galaxy"
+        fr_tags: ["espace", "galaxie", "spirale", "univers"]
+        en_tags: ["space", "galaxy", "spiral", "universe"]
+        prompt: "A beautiful spiral galaxy with swirling arms of stars and cosmic dust, simple cartoon style."
+
+      - fr_slug: espace-alien
+        en_slug: space-alien
+        fr_title: "Alien amical"
+        en_title: "Friendly Alien"
+        fr_tags: ["espace", "alien", "extraterrestre", "ami"]
+        en_tags: ["space", "alien", "extraterrestrial", "friend"]
+        prompt: "A cute friendly alien with big eyes waving hello next to a small flying saucer, cartoon style."
+
+      - fr_slug: espace-robot-spatial
+        en_slug: space-robot
+        fr_title: "Robot spatial"
+        en_title: "Space Robot"
+        fr_tags: ["espace", "robot", "technologie", "exploration"]
+        en_tags: ["space", "robot", "technology", "exploration"]
+        prompt: "A friendly robot exploring a planet surface with antennas and treads, simple cartoon style."
+
+      - fr_slug: espace-navette
+        en_slug: space-shuttle
+        fr_title: "Navette spatiale"
+        en_title: "Space Shuttle"
+        fr_tags: ["espace", "navette", "vol", "mission"]
+        en_tags: ["space", "shuttle", "flight", "mission"]
+        prompt: "A space shuttle flying through space with its cargo bay open and Earth below, simple cartoon style."
+
+      - fr_slug: espace-comete
+        en_slug: space-comet
+        fr_title: "Comete brillante"
+        en_title: "Bright Comet"
+        fr_tags: ["espace", "comete", "queue", "brillant"]
+        en_tags: ["space", "comet", "tail", "bright"]
+        prompt: "A bright comet with a glowing tail streaking across a starry sky, simple cartoon style."
+
+      - fr_slug: espace-telescope
+        en_slug: space-telescope
+        fr_title: "Telescope geant"
+        en_title: "Giant Telescope"
+        fr_tags: ["espace", "telescope", "observer", "science"]
+        en_tags: ["space", "telescope", "observe", "science"]
+        prompt: "A large telescope on a hilltop pointing at a starry night sky with planets visible, cartoon style."
+
+      - fr_slug: espace-rover-lunaire
+        en_slug: space-moon-rover
+        fr_title: "Rover lunaire"
+        en_title: "Moon Rover"
+        fr_tags: ["espace", "rover", "lune", "exploration"]
+        en_tags: ["space", "rover", "moon", "exploration"]
+        prompt: "A cartoon moon rover with big wheels and antennas driving on the lunar surface, simple cartoon style."
+
+  # ---- Adult categories ----
+
+  mandalas:
+    subjects:
+      - fr_slug: mandalas-geometrique
+        en_slug: mandalas-geometric
+        fr_title: "Mandala geometrique"
+        en_title: "Geometric Mandala"
+        fr_tags: ["mandala", "geometrique", "adulte", "zen"]
+        en_tags: ["mandala", "geometric", "adult", "zen"]
+        prompt: "A perfectly symmetrical geometric mandala with concentric circles, triangles, and hexagons radiating from center."
+
+      - fr_slug: mandalas-floral
+        en_slug: mandalas-floral
+        fr_title: "Mandala floral"
+        en_title: "Floral Mandala"
+        fr_tags: ["mandala", "fleur", "adulte", "nature"]
+        en_tags: ["mandala", "flower", "adult", "nature"]
+        prompt: "A circular mandala made of intricate flower petals, leaves, and vines radiating from the center."
+
+      - fr_slug: mandalas-animal
+        en_slug: mandalas-animal
+        fr_title: "Mandala animal"
+        en_title: "Animal Mandala"
+        fr_tags: ["mandala", "animal", "adulte", "nature"]
+        en_tags: ["mandala", "animal", "adult", "nature"]
+        prompt: "A mandala with an elephant face at center surrounded by decorative paisley and floral patterns."
+
+      - fr_slug: mandalas-etoile
+        en_slug: mandalas-star
+        fr_title: "Mandala etoile"
+        en_title: "Star Mandala"
+        fr_tags: ["mandala", "etoile", "adulte", "cosmique"]
+        en_tags: ["mandala", "star", "adult", "cosmic"]
+        prompt: "A star-shaped mandala with eight points, each filled with intricate geometric patterns and dots."
+
+      - fr_slug: mandalas-celtique
+        en_slug: mandalas-celtic
+        fr_title: "Mandala celtique"
+        en_title: "Celtic Mandala"
+        fr_tags: ["mandala", "celtique", "adulte", "noeuds"]
+        en_tags: ["mandala", "celtic", "adult", "knots"]
+        prompt: "A circular mandala with interlocking Celtic knot patterns and spirals in a symmetrical arrangement."
+
+      - fr_slug: mandalas-rosace
+        en_slug: mandalas-rosette
+        fr_title: "Mandala rosace"
+        en_title: "Rosette Mandala"
+        fr_tags: ["mandala", "rosace", "adulte", "cathedrale"]
+        en_tags: ["mandala", "rosette", "adult", "cathedral"]
+        prompt: "A cathedral rose window mandala with intricate petal sections and geometric tracery patterns."
+
+      - fr_slug: mandalas-paisley
+        en_slug: mandalas-paisley
+        fr_title: "Mandala paisley"
+        en_title: "Paisley Mandala"
+        fr_tags: ["mandala", "paisley", "adulte", "oriental"]
+        en_tags: ["mandala", "paisley", "adult", "oriental"]
+        prompt: "A mandala filled with ornate paisley teardrop shapes, swirls, and fine dot patterns."
+
+      - fr_slug: mandalas-lotus
+        en_slug: mandalas-lotus
+        fr_title: "Mandala lotus"
+        en_title: "Lotus Mandala"
+        fr_tags: ["mandala", "lotus", "adulte", "meditation"]
+        en_tags: ["mandala", "lotus", "adult", "meditation"]
+        prompt: "A mandala centered on a lotus flower with layered petals and decorative water ripple patterns."
+
+      - fr_slug: mandalas-tribal
+        en_slug: mandalas-tribal
+        fr_title: "Mandala tribal"
+        en_title: "Tribal Mandala"
+        fr_tags: ["mandala", "tribal", "adulte", "ethnique"]
+        en_tags: ["mandala", "tribal", "adult", "ethnic"]
+        prompt: "A bold mandala with tribal-inspired patterns including zigzags, arrows, and thick geometric bands."
+
+      - fr_slug: mandalas-papillon
+        en_slug: mandalas-butterfly
+        fr_title: "Mandala papillon"
+        en_title: "Butterfly Mandala"
+        fr_tags: ["mandala", "papillon", "adulte", "nature"]
+        en_tags: ["mandala", "butterfly", "adult", "nature"]
+        prompt: "A mandala featuring butterfly wing patterns with intricate veining and symmetrical eye spots."
+
+      - fr_slug: mandalas-ocean
+        en_slug: mandalas-ocean
+        fr_title: "Mandala ocean"
+        en_title: "Ocean Mandala"
+        fr_tags: ["mandala", "ocean", "adulte", "mer"]
+        en_tags: ["mandala", "ocean", "adult", "sea"]
+        prompt: "A mandala with ocean-themed patterns including waves, seashells, starfish and coral arranged symmetrically."
+
+      - fr_slug: mandalas-soleil
+        en_slug: mandalas-sun
+        fr_title: "Mandala soleil"
+        en_title: "Sun Mandala"
+        fr_tags: ["mandala", "soleil", "adulte", "lumiere"]
+        en_tags: ["mandala", "sun", "adult", "light"]
+        prompt: "A sun mandala with radiating flame-like rays, each filled with fine line patterns and tiny circles."
+
+  mosaiques:
+    subjects:
+      - fr_slug: mosaiques-romaine
+        en_slug: mosaics-roman
+        fr_title: "Mosaique romaine"
+        en_title: "Roman Mosaic"
+        fr_tags: ["mosaique", "romain", "adulte", "antique"]
+        en_tags: ["mosaic", "roman", "adult", "antique"]
+        prompt: "A Roman-style mosaic floor pattern with a central medallion surrounded by geometric borders and meander patterns."
+
+      - fr_slug: mosaiques-islamique
+        en_slug: mosaics-islamic
+        fr_title: "Mosaique islamique"
+        en_title: "Islamic Geometric"
+        fr_tags: ["mosaique", "islamique", "adulte", "geometrie"]
+        en_tags: ["mosaic", "islamic", "adult", "geometry"]
+        prompt: "An Islamic geometric mosaic with interlocking star and polygon patterns creating an infinite tiling effect."
+
+      - fr_slug: mosaiques-tessellation
+        en_slug: mosaics-tessellation
+        fr_title: "Tessellation geometrique"
+        en_title: "Geometric Tessellation"
+        fr_tags: ["mosaique", "tessellation", "adulte", "motif"]
+        en_tags: ["mosaic", "tessellation", "adult", "pattern"]
+        prompt: "An Escher-inspired tessellation pattern with interlocking geometric shapes filling the entire page."
+
+      - fr_slug: mosaiques-vitrail
+        en_slug: mosaics-stained-glass
+        fr_title: "Vitrail colore"
+        en_title: "Stained Glass"
+        fr_tags: ["mosaique", "vitrail", "adulte", "cathedrale"]
+        en_tags: ["mosaic", "stained glass", "adult", "cathedral"]
+        prompt: "A stained glass window design with irregular curved sections and a floral center motif, bold leading lines."
+
+      - fr_slug: mosaiques-byzantine
+        en_slug: mosaics-byzantine
+        fr_title: "Mosaique byzantine"
+        en_title: "Byzantine Mosaic"
+        fr_tags: ["mosaique", "byzantin", "adulte", "ornement"]
+        en_tags: ["mosaic", "byzantine", "adult", "ornament"]
+        prompt: "A Byzantine-style mosaic with a peacock surrounded by ornate scrollwork and small tesserae patterns."
+
+      - fr_slug: mosaiques-marocaine
+        en_slug: mosaics-moroccan
+        fr_title: "Zellige marocain"
+        en_title: "Moroccan Zellige"
+        fr_tags: ["mosaique", "marocain", "adulte", "zellige"]
+        en_tags: ["mosaic", "moroccan", "adult", "zellige"]
+        prompt: "A Moroccan zellige tile pattern with eight-pointed stars and interlocking geometric shapes."
+
+      - fr_slug: mosaiques-art-nouveau
+        en_slug: mosaics-art-nouveau
+        fr_title: "Mosaique art nouveau"
+        en_title: "Art Nouveau Mosaic"
+        fr_tags: ["mosaique", "art nouveau", "adulte", "courbes"]
+        en_tags: ["mosaic", "art nouveau", "adult", "curves"]
+        prompt: "An Art Nouveau mosaic with flowing organic curves, stylized flowers, and whiplash line patterns."
+
+      - fr_slug: mosaiques-hexagonale
+        en_slug: mosaics-hexagonal
+        fr_title: "Mosaique hexagonale"
+        en_title: "Hexagonal Mosaic"
+        fr_tags: ["mosaique", "hexagone", "adulte", "geometrie"]
+        en_tags: ["mosaic", "hexagon", "adult", "geometry"]
+        prompt: "A honeycomb hexagonal mosaic with each hexagon containing a different intricate pattern."
+
+      - fr_slug: mosaiques-azulejo
+        en_slug: mosaics-azulejo
+        fr_title: "Azulejo portugais"
+        en_title: "Portuguese Azulejo"
+        fr_tags: ["mosaique", "azulejo", "adulte", "portugal"]
+        en_tags: ["mosaic", "azulejo", "adult", "portugal"]
+        prompt: "A Portuguese azulejo tile pattern with symmetrical floral and scroll motifs in a repeating grid."
+
+      - fr_slug: mosaiques-japonaise
+        en_slug: mosaics-japanese
+        fr_title: "Mosaique japonaise"
+        en_title: "Japanese Mosaic"
+        fr_tags: ["mosaique", "japonais", "adulte", "asanoha"]
+        en_tags: ["mosaic", "japanese", "adult", "asanoha"]
+        prompt: "A Japanese asanoha (hemp leaf) geometric pattern with overlapping circles creating star shapes."
+
+  abstrait:
+    subjects:
+      - fr_slug: abstrait-geometrique
+        en_slug: abstract-geometric
+        fr_title: "Abstraction geometrique"
+        en_title: "Geometric Abstraction"
+        fr_tags: ["abstrait", "geometrique", "adulte", "formes"]
+        en_tags: ["abstract", "geometric", "adult", "shapes"]
+        prompt: "An abstract composition of overlapping circles, squares, and triangles creating complex intersections."
+
+      - fr_slug: abstrait-organique
+        en_slug: abstract-organic
+        fr_title: "Formes organiques"
+        en_title: "Organic Forms"
+        fr_tags: ["abstrait", "organique", "adulte", "courbes"]
+        en_tags: ["abstract", "organic", "adult", "curves"]
+        prompt: "Flowing organic abstract forms like water currents and wind patterns interweaving across the page."
+
+      - fr_slug: abstrait-op-art
+        en_slug: abstract-op-art
+        fr_title: "Op-art optique"
+        en_title: "Op-Art Pattern"
+        fr_tags: ["abstrait", "op-art", "adulte", "illusion"]
+        en_tags: ["abstract", "op-art", "adult", "illusion"]
+        prompt: "An op-art pattern with concentric wavy lines creating an optical illusion of movement and depth."
+
+      - fr_slug: abstrait-spirales
+        en_slug: abstract-spirals
+        fr_title: "Spirales infinies"
+        en_title: "Infinite Spirals"
+        fr_tags: ["abstrait", "spirale", "adulte", "hypnotique"]
+        en_tags: ["abstract", "spiral", "adult", "hypnotic"]
+        prompt: "Multiple interlocking spirals of different sizes creating a mesmerizing abstract pattern."
+
+      - fr_slug: abstrait-zentangle
+        en_slug: abstract-zentangle
+        fr_title: "Zentangle abstrait"
+        en_title: "Abstract Zentangle"
+        fr_tags: ["abstrait", "zentangle", "adulte", "meditation"]
+        en_tags: ["abstract", "zentangle", "adult", "meditation"]
+        prompt: "A zentangle-inspired abstract design with sections filled with different repetitive patterns and textures."
+
+      - fr_slug: abstrait-ondulations
+        en_slug: abstract-waves
+        fr_title: "Ondulations abstraites"
+        en_title: "Abstract Waves"
+        fr_tags: ["abstrait", "vagues", "adulte", "fluide"]
+        en_tags: ["abstract", "waves", "adult", "fluid"]
+        prompt: "Abstract wave patterns with parallel curved lines creating a sense of flowing movement across the page."
+
+      - fr_slug: abstrait-fractale
+        en_slug: abstract-fractal
+        fr_title: "Fractale complexe"
+        en_title: "Complex Fractal"
+        fr_tags: ["abstrait", "fractale", "adulte", "mathematique"]
+        en_tags: ["abstract", "fractal", "adult", "mathematical"]
+        prompt: "A fractal-inspired pattern with self-similar shapes repeating at different scales across the design."
+
+      - fr_slug: abstrait-cubiste
+        en_slug: abstract-cubist
+        fr_title: "Composition cubiste"
+        en_title: "Cubist Composition"
+        fr_tags: ["abstrait", "cubiste", "adulte", "art"]
+        en_tags: ["abstract", "cubist", "adult", "art"]
+        prompt: "A cubist-style abstract composition with fragmented geometric planes and angular intersecting forms."
+
+      - fr_slug: abstrait-lignes
+        en_slug: abstract-lines
+        fr_title: "Lignes entrecroisees"
+        en_title: "Intersecting Lines"
+        fr_tags: ["abstrait", "lignes", "adulte", "graphique"]
+        en_tags: ["abstract", "lines", "adult", "graphic"]
+        prompt: "An abstract design of intersecting straight and curved lines creating enclosed shapes of varying sizes."
+
+      - fr_slug: abstrait-concentrique
+        en_slug: abstract-concentric
+        fr_title: "Cercles concentriques"
+        en_title: "Concentric Circles"
+        fr_tags: ["abstrait", "cercles", "adulte", "harmonie"]
+        en_tags: ["abstract", "circles", "adult", "harmony"]
+        prompt: "Multiple groups of concentric circles overlapping each other with varying line weights and spacing."
+
+  cartes:
+    subjects:
+      - fr_slug: cartes-france
+        en_slug: maps-france
+        fr_title: "Carte de France"
+        en_title: "Map of France"
+        fr_tags: ["carte", "france", "adulte", "regions"]
+        en_tags: ["map", "france", "adult", "regions"]
+        prompt: "An outline map of France with regional borders, major rivers, and decorative compass rose."
+
+      - fr_slug: cartes-etats-unis
+        en_slug: maps-usa
+        fr_title: "Carte des Etats-Unis"
+        en_title: "Map of the USA"
+        fr_tags: ["carte", "usa", "adulte", "etats"]
+        en_tags: ["map", "usa", "adult", "states"]
+        prompt: "An outline map of the United States with state borders and geographic features like mountains and rivers."
+
+      - fr_slug: cartes-japon
+        en_slug: maps-japan
+        fr_title: "Carte du Japon"
+        en_title: "Map of Japan"
+        fr_tags: ["carte", "japon", "adulte", "iles"]
+        en_tags: ["map", "japan", "adult", "islands"]
+        prompt: "An outline map of Japan with main islands, prefecture borders, and decorative wave patterns around the coast."
+
+      - fr_slug: cartes-afrique
+        en_slug: maps-africa
+        fr_title: "Carte de l'Afrique"
+        en_title: "Map of Africa"
+        fr_tags: ["carte", "afrique", "adulte", "continent"]
+        en_tags: ["map", "africa", "adult", "continent"]
+        prompt: "An outline map of Africa with country borders, major rivers, and small iconic animal silhouettes in regions."
+
+      - fr_slug: cartes-europe
+        en_slug: maps-europe
+        fr_title: "Carte de l'Europe"
+        en_title: "Map of Europe"
+        fr_tags: ["carte", "europe", "adulte", "pays"]
+        en_tags: ["map", "europe", "adult", "countries"]
+        prompt: "An outline map of Europe with country borders, coastlines, and small landmark symbols in each country."
+
+      - fr_slug: cartes-monde
+        en_slug: maps-world
+        fr_title: "Carte du monde"
+        en_title: "World Map"
+        fr_tags: ["carte", "monde", "adulte", "continents"]
+        en_tags: ["map", "world", "adult", "continents"]
+        prompt: "A world map with continent outlines, ocean patterns, and a decorative border with compass rose."
+
+      - fr_slug: cartes-amerique-sud
+        en_slug: maps-south-america
+        fr_title: "Carte Amerique du Sud"
+        en_title: "Map of South America"
+        fr_tags: ["carte", "amerique", "adulte", "pays"]
+        en_tags: ["map", "america", "adult", "countries"]
+        prompt: "An outline map of South America with country borders, the Amazon river, and Andes mountain range."
+
+      - fr_slug: cartes-australie
+        en_slug: maps-australia
+        fr_title: "Carte de l'Australie"
+        en_title: "Map of Australia"
+        fr_tags: ["carte", "australie", "adulte", "oceanie"]
+        en_tags: ["map", "australia", "adult", "oceania"]
+        prompt: "An outline map of Australia with state borders, Great Barrier Reef, and iconic animal silhouettes."
+
+      - fr_slug: cartes-inde
+        en_slug: maps-india
+        fr_title: "Carte de l'Inde"
+        en_title: "Map of India"
+        fr_tags: ["carte", "inde", "adulte", "asie"]
+        en_tags: ["map", "india", "adult", "asia"]
+        prompt: "An outline map of India with state borders, the Ganges river, and decorative paisley border patterns."
+
+      - fr_slug: cartes-tresor
+        en_slug: maps-treasure
+        fr_title: "Carte au tresor"
+        en_title: "Treasure Map"
+        fr_tags: ["carte", "tresor", "adulte", "aventure"]
+        en_tags: ["map", "treasure", "adult", "adventure"]
+        prompt: "An ornate treasure map with islands, dotted paths, sea monsters, compass rose, and X marks the spot."
