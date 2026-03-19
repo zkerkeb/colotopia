@@ -5,19 +5,23 @@ Coloring page image generation pipeline.
 Generates A4 300dpi black-and-white line art images and produces the matching
 Astro content collection YAML files.
 
-Backend: Google Gemini Imagen 4. Requires GEMINI_API_KEY.
+Backends:
+  - gemini (default): Google Gemini Imagen 4. Requires GEMINI_API_KEY.
+  - openai: OpenAI gpt-image-1-mini. Requires OPENAI_API_KEY.
 
 Usage:
     python3 scripts/generate-coloriages.py --all --dry-run
     python3 scripts/generate-coloriages.py --category animaux
     python3 scripts/generate-coloriages.py --category vehicules --count 3
     python3 scripts/generate-coloriages.py --all --locale fr
+    python3 scripts/generate-coloriages.py --all --backend openai
 
 Requirements:
-    pip install pillow pyyaml google-genai
+    pip install pillow pyyaml google-genai openai
 """
 
 import argparse
+import base64
 import json
 import os
 import sys
@@ -161,6 +165,18 @@ def generate_image_gemini(client, prompt: str) -> bytes:
     return response.generated_images[0].image.image_bytes
 
 
+def generate_image_openai(client, prompt: str) -> bytes:
+    """Call OpenAI gpt-image-1-mini and return raw PNG bytes."""
+    response = client.images.generate(
+        model="gpt-image-1-mini",
+        prompt=prompt,
+        size="1024x1536",
+        quality="low",
+    )
+    b64_data = response.data[0].b64_json
+    return base64.b64decode(b64_data)
+
+
 def upscale_to_a4(image_bytes: bytes) -> bytes:
     """Convert image bytes to grayscale A4 300dpi PNG via Pillow."""
     from PIL import Image
@@ -246,6 +262,7 @@ def process_subject(
     dry_run: bool,
     log_entries: list,
     adult_suffix: str = "",
+    backend: str = "gemini",
 ):
     """Generate one image (and content YAMLs) for a subject."""
     fr_slug = subject["fr_slug"]
@@ -258,7 +275,7 @@ def process_subject(
 
     entry = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
-        "backend": "gemini",
+        "backend": backend,
         "fr_slug": fr_slug,
         "en_slug": en_slug,
         "prompt": prompt,
@@ -282,9 +299,12 @@ def process_subject(
         log_entries.append(entry)
         return True
 
-    print(f"  [gen] {image_slug}.png ...")
+    print(f"  [gen] {image_slug}.png ({backend}) ...")
     try:
-        raw_bytes = generate_image_gemini(client, prompt)
+        if backend == "openai":
+            raw_bytes = generate_image_openai(client, prompt)
+        else:
+            raw_bytes = generate_image_gemini(client, prompt)
         png_bytes = upscale_to_a4(raw_bytes)
         image_path.write_bytes(png_bytes)
         print(f"  [ok ] Saved {image_path.stat().st_size // 1024}KB → {image_path}")
@@ -295,7 +315,7 @@ def process_subject(
         entry["error"] = error_str
         log_entries.append(entry)
         # Propagate quota errors so the caller can stop early
-        if "RESOURCE_EXHAUSTED" in error_str or "429" in error_str:
+        if "RESOURCE_EXHAUSTED" in error_str or "429" in error_str or "rate_limit" in error_str.lower():
             raise QuotaExhaustedError(error_str)
         return False
 
@@ -325,9 +345,11 @@ def run(args):
     astro_root = get_astro_root()
     images_dir = get_images_dir(astro_root)
     logs_dir = get_logs_dir(astro_root)
+    backend = args.backend
 
     print(f"Astro root : {astro_root}")
     print(f"Images dir : {images_dir}")
+    print(f"Backend    : {backend}")
     print(f"Dry run    : {args.dry_run}")
 
     # Determine which categories to process
@@ -348,20 +370,32 @@ def run(args):
     else:
         locales = [args.locale]
 
-    # Init Gemini client
-    gemini_client = None
+    # Init API client based on backend
+    api_client = None
 
     if not args.dry_run:
-        try:
-            from google import genai as google_genai
-        except ImportError:
-            print("google-genai package not installed. Run: pip install google-genai", file=sys.stderr)
-            sys.exit(1)
-        gemini_api_key = os.environ.get("GEMINI_API_KEY")
-        if not gemini_api_key:
-            print("GEMINI_API_KEY env var not set.", file=sys.stderr)
-            sys.exit(1)
-        gemini_client = google_genai.Client(api_key=gemini_api_key)
+        if backend == "openai":
+            try:
+                from openai import OpenAI
+            except ImportError:
+                print("openai package not installed. Run: pip install openai", file=sys.stderr)
+                sys.exit(1)
+            openai_api_key = os.environ.get("OPENAI_API_KEY")
+            if not openai_api_key:
+                print("OPENAI_API_KEY env var not set.", file=sys.stderr)
+                sys.exit(1)
+            api_client = OpenAI(api_key=openai_api_key)
+        else:
+            try:
+                from google import genai as google_genai
+            except ImportError:
+                print("google-genai package not installed. Run: pip install google-genai", file=sys.stderr)
+                sys.exit(1)
+            gemini_api_key = os.environ.get("GEMINI_API_KEY")
+            if not gemini_api_key:
+                print("GEMINI_API_KEY env var not set.", file=sys.stderr)
+                sys.exit(1)
+            api_client = google_genai.Client(api_key=gemini_api_key)
 
     log_entries = []
     total = 0
@@ -389,10 +423,11 @@ def run(args):
                     images_dir=images_dir,
                     astro_root=astro_root,
                     locales=locales,
-                    client=gemini_client,
+                    client=api_client,
                     dry_run=args.dry_run,
                     log_entries=log_entries,
                     adult_suffix=adult_suffix,
+                    backend=backend,
                 )
                 if ok:
                     success += 1
@@ -412,7 +447,7 @@ def run(args):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Generate coloring page images via Gemini Imagen 4.",
+        description="Generate coloring page images via Gemini Imagen 4 or OpenAI gpt-image-1.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
@@ -424,6 +459,9 @@ Examples:
 
   # Generate all categories
   python3 generate-coloriages.py --all
+
+  # Use OpenAI backend
+  python3 generate-coloriages.py --all --backend openai
 """,
     )
     group = parser.add_mutually_exclusive_group()
@@ -431,6 +469,7 @@ Examples:
     group.add_argument("--category", metavar="NAME", help="Process a single category")
     parser.add_argument("--count", type=int, metavar="N", help="Max subjects per category (default: all)")
     parser.add_argument("--locale", choices=["fr", "en", "both"], default="both", help="Generate content YAML for locale(s) (default: both)")
+    parser.add_argument("--backend", choices=["gemini", "openai"], default="gemini", help="Image generation backend (default: gemini)")
     parser.add_argument("--dry-run", action="store_true", help="Print what would be done without calling the API")
     args = parser.parse_args()
 
