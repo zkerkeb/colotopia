@@ -724,6 +724,46 @@ categories:
         en_tags: ["dinosaur", "iguanodon", "prehistoric", "herbivore"]
         prompt: "A cute iguanodon with thumb spikes, walking on two legs, eating a leaf, simple cartoon style."
 
+      - fr_slug: dinosaures-carnotaurus
+        en_slug: dinosaurs-carnotaurus
+        fr_title: "Carnotaurus cornu"
+        en_title: "Horned Carnotaurus"
+        fr_tags: ["dinosaure", "carnotaurus", "prehistoire", "cornes"]
+        en_tags: ["dinosaur", "carnotaurus", "prehistoric", "horns"]
+        prompt: "A friendly cartoon carnotaurus with small horns above its eyes and tiny arms, standing, simple cartoon style."
+
+      - fr_slug: dinosaures-parasaurolophus
+        en_slug: dinosaurs-parasaurolophus
+        fr_title: "Parasaurolophus a crete"
+        en_title: "Crested Parasaurolophus"
+        fr_tags: ["dinosaure", "parasaurolophus", "prehistoire", "crete"]
+        en_tags: ["dinosaur", "parasaurolophus", "prehistoric", "crest"]
+        prompt: "A cute parasaurolophus with a distinctive curved head crest, walking on two legs, simple cartoon style."
+
+      - fr_slug: dinosaures-pachycephalosaurus
+        en_slug: dinosaurs-pachycephalosaurus
+        fr_title: "Pachycephalosaurus tete dure"
+        en_title: "Hard-headed Pachycephalosaurus"
+        fr_tags: ["dinosaure", "pachycephalosaurus", "prehistoire", "crane"]
+        en_tags: ["dinosaur", "pachycephalosaurus", "prehistoric", "dome"]
+        prompt: "A cute pachycephalosaurus with a thick domed skull, standing upright, simple cartoon style."
+
+      - fr_slug: dinosaures-allosaurus
+        en_slug: dinosaurs-allosaurus
+        fr_title: "Allosaurus chasseur"
+        en_title: "Hunter Allosaurus"
+        fr_tags: ["dinosaure", "allosaurus", "prehistoire", "chasseur"]
+        en_tags: ["dinosaur", "allosaurus", "prehistoric", "hunter"]
+        prompt: "A friendly cartoon allosaurus with large jaws and strong legs, standing, simple cartoon style."
+
+      - fr_slug: dinosaures-protoceratops
+        en_slug: dinosaurs-protoceratops
+        fr_title: "Protoceratops jeune"
+        en_title: "Young Protoceratops"
+        fr_tags: ["dinosaure", "protoceratops", "prehistoire", "bouclier"]
+        en_tags: ["dinosaur", "protoceratops", "prehistoric", "shield"]
+        prompt: "A cute small protoceratops with a neck frill and beak, walking, simple cartoon style."
+
   princesses-chevaliers:
     subjects:
       - fr_slug: princesses-chevaliers-princesse
@@ -1424,6 +1464,46 @@ categories:
         en_tags: ["superhero", "ice", "cold", "crystal"]
         prompt: "A superhero creating ice crystals and snowflakes with outstretched hands, simple cartoon style."
 
+      - fr_slug: super-heros-tonnerre
+        en_slug: superheroes-thunder
+        fr_title: "Super-heros du tonnerre"
+        en_title: "Thunder Superhero"
+        fr_tags: ["super-heros", "tonnerre", "eclair", "puissant"]
+        en_tags: ["superhero", "thunder", "lightning", "powerful"]
+        prompt: "A superhero surrounded by cartoon lightning bolts with arms raised and a dramatic cape, simple cartoon style."
+
+      - fr_slug: super-heros-force
+        en_slug: superheroes-strength
+        fr_title: "Super-heros de la force"
+        en_title: "Strength Superhero"
+        fr_tags: ["super-heros", "force", "muscles", "puissant"]
+        en_tags: ["superhero", "strength", "muscles", "powerful"]
+        prompt: "A superhero flexing enormous cartoon muscles, lifting a boulder overhead, simple cartoon style."
+
+      - fr_slug: super-heros-telepathie
+        en_slug: superheroes-telepathy
+        fr_title: "Super-heros telepate"
+        en_title: "Telepathy Superhero"
+        fr_tags: ["super-heros", "telepathie", "cerveau", "mental"]
+        en_tags: ["superhero", "telepathy", "brain", "mental"]
+        prompt: "A superhero with glowing eyes and spiral waves emanating from the head showing mental powers, simple cartoon style."
+
+      - fr_slug: super-heros-transformation
+        en_slug: superheroes-shapeshifter
+        fr_title: "Super-heros transformiste"
+        en_title: "Shapeshifter Superhero"
+        fr_tags: ["super-heros", "transformation", "metamorphose", "pouvoir"]
+        en_tags: ["superhero", "shapeshifter", "transform", "power"]
+        prompt: "A superhero mid-transformation with parts of the body changing shape into different forms, simple cartoon style."
+
+      - fr_slug: super-heros-ombre
+        en_slug: superheroes-shadow
+        fr_title: "Super-heros de l'ombre"
+        en_title: "Shadow Superhero"
+        fr_tags: ["super-heros", "ombre", "nuit", "mystere"]
+        en_tags: ["superhero", "shadow", "night", "mystery"]
+        prompt: "A mysterious superhero emerging from a dark shadow with a flowing cape and glowing eyes, simple cartoon style."
+
   espace:
     subjects:
       - fr_slug: espace-planete-terre
@@ -1933,3 +2013,259 @@ categories:
         fr_tags: ["pingouin", "chef", "drole", "cuisine"]
         en_tags: ["penguin", "chef", "funny", "cooking"]
         prompt: "A penguin wearing a chef hat and apron, holding a wooden spoon with a big smile."
+
+  personnages:
+    subjects:
+      - fr_slug: personnages-pirate
+        en_slug: characters-pirate
+        fr_title: "Pirate aventurier"
+        en_title: "Adventurous Pirate"
+        fr_tags: ["pirate", "personnage", "aventure", "mer"]
+        en_tags: ["pirate", "character", "adventure", "sea"]
+        prompt: "A cartoon pirate with an eye patch, tricorn hat, and treasure chest, simple cartoon style."
+
+      - fr_slug: personnages-cowboy
+        en_slug: characters-cowboy
+        fr_title: "Cowboy du Far West"
+        en_title: "Wild West Cowboy"
+        fr_tags: ["cowboy", "far west", "cheval", "chapeau"]
+        en_tags: ["cowboy", "wild west", "horse", "hat"]
+        prompt: "A friendly cartoon cowboy with a hat, lasso and boots, standing in a western pose, simple cartoon style."
+
+      - fr_slug: personnages-ninja
+        en_slug: characters-ninja
+        fr_title: "Ninja silencieux"
+        en_title: "Silent Ninja"
+        fr_tags: ["ninja", "personnage", "combat", "discret"]
+        en_tags: ["ninja", "character", "combat", "stealthy"]
+        prompt: "A cartoon ninja in black outfit doing a jumping kick pose, holding a star throwing weapon, simple cartoon style."
+
+      - fr_slug: personnages-magicien
+        en_slug: characters-wizard
+        fr_title: "Magicien mystique"
+        en_title: "Mystical Wizard"
+        fr_tags: ["magicien", "baguette", "chapeau", "magie"]
+        en_tags: ["wizard", "wand", "hat", "magic"]
+        prompt: "A cartoon wizard with a tall pointed hat and long robe, casting a spell with a glowing wand, simple cartoon style."
+
+      - fr_slug: personnages-explorateur
+        en_slug: characters-explorer
+        fr_title: "Explorateur courageux"
+        en_title: "Brave Explorer"
+        fr_tags: ["explorateur", "aventure", "jungle", "casque"]
+        en_tags: ["explorer", "adventure", "jungle", "helmet"]
+        prompt: "A cartoon explorer with a pith helmet, binoculars and backpack, standing in front of jungle, simple cartoon style."
+
+      - fr_slug: personnages-viking
+        en_slug: characters-viking
+        fr_title: "Viking feroce"
+        en_title: "Fierce Viking"
+        fr_tags: ["viking", "casque", "bouclier", "nord"]
+        en_tags: ["viking", "helmet", "shield", "north"]
+        prompt: "A friendly cartoon viking with a horned helmet, round shield and axe, standing proudly, simple cartoon style."
+
+      - fr_slug: personnages-samourai
+        en_slug: characters-samurai
+        fr_title: "Samourai noble"
+        en_title: "Noble Samurai"
+        fr_tags: ["samourai", "japon", "katana", "armure"]
+        en_tags: ["samurai", "japan", "katana", "armor"]
+        prompt: "A cartoon samurai in traditional armor with a katana sword, standing in a warrior pose, simple cartoon style."
+
+      - fr_slug: personnages-sherif
+        en_slug: characters-sheriff
+        fr_title: "Sherif de la ville"
+        en_title: "Town Sheriff"
+        fr_tags: ["sherif", "etoile", "far-west", "loi"]
+        en_tags: ["sheriff", "star", "wild-west", "law"]
+        prompt: "A cartoon sheriff with a star badge, cowboy hat, and a lasso, standing in front of a saloon, simple cartoon style."
+
+      - fr_slug: personnages-roi
+        en_slug: characters-king
+        fr_title: "Roi majestueux"
+        en_title: "Majestic King"
+        fr_tags: ["roi", "couronne", "sceptre", "royaute"]
+        en_tags: ["king", "crown", "scepter", "royalty"]
+        prompt: "A cartoon king in royal robes with a golden crown and scepter, sitting on a throne, simple cartoon style."
+
+      - fr_slug: personnages-reine
+        en_slug: characters-queen
+        fr_title: "Reine elegante"
+        en_title: "Elegant Queen"
+        fr_tags: ["reine", "couronne", "robe", "royaute"]
+        en_tags: ["queen", "crown", "dress", "royalty"]
+        prompt: "A cartoon queen in an elegant gown with a crown and jewels, standing gracefully, simple cartoon style."
+
+      - fr_slug: personnages-pharaon
+        en_slug: characters-pharaoh
+        fr_title: "Pharaon egyptien"
+        en_title: "Egyptian Pharaoh"
+        fr_tags: ["pharaon", "egypte", "pyramide", "couronne"]
+        en_tags: ["pharaoh", "egypt", "pyramid", "crown"]
+        prompt: "A cartoon pharaoh with a tall headdress, striped collar, and staff, in front of pyramids, simple cartoon style."
+
+      - fr_slug: personnages-gladiateur
+        en_slug: characters-gladiator
+        fr_title: "Gladiateur brave"
+        en_title: "Brave Gladiator"
+        fr_tags: ["gladiateur", "rome", "bouclier", "arene"]
+        en_tags: ["gladiator", "rome", "shield", "arena"]
+        prompt: "A cartoon gladiator with a helmet, round shield, and sword, standing in an arena, simple cartoon style."
+
+      - fr_slug: personnages-elfe
+        en_slug: characters-elf
+        fr_title: "Elfe de la foret"
+        en_title: "Forest Elf"
+        fr_tags: ["elfe", "foret", "oreilles", "magie"]
+        en_tags: ["elf", "forest", "ears", "magic"]
+        prompt: "A cute cartoon elf with pointed ears, green outfit, and a bow and arrow, in a magical forest, cartoon style."
+
+      - fr_slug: personnages-nain
+        en_slug: characters-dwarf
+        fr_title: "Nain mineur"
+        en_title: "Miner Dwarf"
+        fr_tags: ["nain", "mine", "barbe", "pioche"]
+        en_tags: ["dwarf", "mine", "beard", "pickaxe"]
+        prompt: "A cute cartoon dwarf with a big beard, helmet, and pickaxe, in front of a mine entrance, simple cartoon style."
+
+      - fr_slug: personnages-detective
+        en_slug: characters-detective
+        fr_title: "Detective curieux"
+        en_title: "Curious Detective"
+        fr_tags: ["detective", "loupe", "chapeau", "enquete"]
+        en_tags: ["detective", "magnifying glass", "hat", "mystery"]
+        prompt: "A cartoon detective with a deerstalker cap and magnifying glass, looking for clues, simple cartoon style."
+
+  contes:
+    subjects:
+      - fr_slug: contes-chateau-magique
+        en_slug: tales-magic-castle
+        fr_title: "Chateau encante"
+        en_title: "Enchanted Castle"
+        fr_tags: ["conte", "chateau", "magie", "tour"]
+        en_tags: ["tale", "castle", "magic", "tower"]
+        prompt: "A fairy tale castle with tall towers, a drawbridge, and magical sparkles all around it, simple cartoon style."
+
+      - fr_slug: contes-dragon-tresor
+        en_slug: tales-dragon-treasure
+        fr_title: "Dragon et tresor"
+        en_title: "Dragon and Treasure"
+        fr_tags: ["conte", "dragon", "tresor", "or"]
+        en_tags: ["tale", "dragon", "treasure", "gold"]
+        prompt: "A cute friendly dragon guarding a pile of treasure chests and gold coins in a cave, simple cartoon style."
+
+      - fr_slug: contes-fee-foret
+        en_slug: tales-forest-fairy
+        fr_title: "Fee de la foret"
+        en_title: "Forest Fairy"
+        fr_tags: ["conte", "fee", "foret", "magie"]
+        en_tags: ["tale", "fairy", "forest", "magic"]
+        prompt: "A tiny fairy with glowing wings sitting on a large mushroom in an enchanted forest, simple cartoon style."
+
+      - fr_slug: contes-chaperon-rouge
+        en_slug: tales-little-red-hood
+        fr_title: "Chaperon Rouge"
+        en_title: "Little Red Hood"
+        fr_tags: ["conte", "chaperon rouge", "loup", "foret"]
+        en_tags: ["tale", "red hood", "wolf", "forest"]
+        prompt: "A cartoon girl in a red hooded cape carrying a basket, walking on a forest path, simple cartoon style."
+
+      - fr_slug: contes-maison-sorciere
+        en_slug: tales-witch-house
+        fr_title: "Maison de la sorciere"
+        en_title: "Witch's Candy House"
+        fr_tags: ["conte", "sorciere", "maison", "bonbons"]
+        en_tags: ["tale", "witch", "house", "candy"]
+        prompt: "A crooked candy witch house in the forest with gingerbread walls, candy decorations, and a cauldron outside."
+
+      - fr_slug: contes-prince-grenouille
+        en_slug: tales-frog-prince
+        fr_title: "Prince grenouille"
+        en_title: "Frog Prince"
+        fr_tags: ["conte", "grenouille", "prince", "couronne"]
+        en_tags: ["tale", "frog", "prince", "crown"]
+        prompt: "A cute cartoon frog wearing a tiny golden crown, sitting on a lily pad near a princess, simple cartoon style."
+
+      - fr_slug: contes-princesse-dragon
+        en_slug: tales-princess-dragon
+        fr_title: "Princesse et son dragon"
+        en_title: "Princess and her Dragon"
+        fr_tags: ["conte", "princesse", "dragon", "amis"]
+        en_tags: ["tale", "princess", "dragon", "friends"]
+        prompt: "A cartoon princess and her friendly dragon companion standing together in front of a castle, simple cartoon style."
+
+      - fr_slug: contes-geant-haricot
+        en_slug: tales-beanstalk-giant
+        fr_title: "Geant du haricot magique"
+        en_title: "Magic Beanstalk Giant"
+        fr_tags: ["conte", "geant", "haricot", "nuage"]
+        en_tags: ["tale", "giant", "beanstalk", "cloud"]
+        prompt: "A cartoon giant at the top of a giant beanstalk among clouds, looking down at tiny houses below, cartoon style."
+
+      - fr_slug: contes-rose-enchantee
+        en_slug: tales-enchanted-rose
+        fr_title: "La rose enchantee"
+        en_title: "The Enchanted Rose"
+        fr_tags: ["conte", "rose", "magie", "cloche"]
+        en_tags: ["tale", "rose", "magic", "bell jar"]
+        prompt: "An enchanted rose under a glass dome with magical sparkles and petals falling around it, simple cartoon style."
+
+      - fr_slug: contes-licorne-arc-en-ciel
+        en_slug: tales-rainbow-unicorn
+        fr_title: "Licorne arc-en-ciel"
+        en_title: "Rainbow Unicorn"
+        fr_tags: ["conte", "licorne", "arc-en-ciel", "magie"]
+        en_tags: ["tale", "unicorn", "rainbow", "magic"]
+        prompt: "A majestic unicorn galloping through rainbow clouds in a magical sky, mane flowing, simple cartoon style."
+
+  # ---- Adult categories ----
+
+  paysages:
+    subjects:
+      - fr_slug: paysages-alpes
+        en_slug: landscapes-alps
+        fr_title: "Alpes enneigees"
+        en_title: "Snowy Alps"
+        fr_tags: ["paysage", "alpes", "montagne", "adulte"]
+        en_tags: ["landscape", "alps", "mountain", "adult"]
+        prompt: "A detailed Alpine mountain landscape with snow-capped peaks, dense pine forests, a wooden chalet, and a lake reflection."
+
+      - fr_slug: paysages-lavande
+        en_slug: landscapes-lavender
+        fr_title: "Champs de lavande"
+        en_title: "Lavender Fields"
+        fr_tags: ["paysage", "lavande", "provence", "adulte"]
+        en_tags: ["landscape", "lavender", "provence", "adult"]
+        prompt: "Rolling Provencal lavender fields with a stone farmhouse, cypress trees, and distant hills under a sunny sky."
+
+      - fr_slug: paysages-cote-bretonne
+        en_slug: landscapes-breton-coast
+        fr_title: "Cote bretonne"
+        en_title: "Breton Coast"
+        fr_tags: ["paysage", "bretagne", "falaises", "adulte"]
+        en_tags: ["landscape", "brittany", "cliffs", "adult"]
+        prompt: "A dramatic Brittany coastline with rocky cliffs, crashing waves, a lighthouse, and seabirds soaring in the sky."
+
+      - fr_slug: paysages-foret-tropicale
+        en_slug: landscapes-tropical-forest
+        fr_title: "Foret tropicale"
+        en_title: "Tropical Forest"
+        fr_tags: ["paysage", "tropical", "foret", "adulte"]
+        en_tags: ["landscape", "tropical", "forest", "adult"]
+        prompt: "A lush tropical rainforest with towering trees, exotic plants, a winding river, and colorful birds perched in branches."
+
+      - fr_slug: paysages-canyon
+        en_slug: landscapes-canyon
+        fr_title: "Canyon majestueux"
+        en_title: "Majestic Canyon"
+        fr_tags: ["paysage", "canyon", "desert", "adulte"]
+        en_tags: ["landscape", "canyon", "desert", "adult"]
+        prompt: "A vast canyon landscape with layered rock formations, a river winding far below, and sparse desert plants on the rim."
+
+      - fr_slug: paysages-mer-voiliers
+        en_slug: landscapes-sailboats-sea
+        fr_title: "Mer et voiliers"
+        en_title: "Sea and Sailboats"
+        fr_tags: ["paysage", "mer", "voilier", "adulte"]
+        en_tags: ["landscape", "sea", "sailboat", "adult"]
+        prompt: "A peaceful seascape with gentle waves, several sailboats on the horizon, a rocky shore, and seagulls in the sky."
