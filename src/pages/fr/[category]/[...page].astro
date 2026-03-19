@@ -94,9 +94,7 @@ const structuredData = {
   />
 
   {page.currentPage === 1 && hasSeoText && (
-    <div class="seo-content">
-      <p>{seoText}</p>
-    </div>
+    <div class="seo-content" set:html={seoText} />
   )}
 </BaseLayout>
 
@@ -153,5 +151,28 @@ const structuredData = {
     color: #6b7280;
     font-size: 0.95rem;
     line-height: 1.75;
+  }
+
+  .seo-content :global(h2) {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #374151;
+    margin: 1.5rem 0 0.75rem;
+  }
+
+  .seo-content :global(h2:first-child) {
+    margin-top: 0;
+  }
+
+  .seo-content :global(a) {
+    color: #6366f1;
+    text-decoration: underline;
+    text-decoration-color: #c7d2fe;
+    text-underline-offset: 2px;
+  }
+
+  .seo-content :global(a:hover) {
+    color: #4f46e5;
+    text-decoration-color: #6366f1;
   }
 </style>
