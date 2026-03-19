@@ -1,0 +1,202 @@
+---
+/**
+ * ColoringPage — main coloring page template component
+ * Assembles: hero image, download/print actions, related pages, ads, affiliate widget
+ */
+import Breadcrumb from './Breadcrumb.astro';
+import PdfDownloadButton from './PdfDownloadButton.astro';
+import RelatedColoriages from './RelatedColoriages.astro';
+import AdSlot from './AdSlot.astro';
+import AffiliateWidget from './AffiliateWidget.astro';
+import type { Locale } from '../lib/i18n';
+import type { Category } from '../lib/i18n';
+
+interface RelatedItem {
+  title: string;
+  slug: string;
+  image: string;
+  alt: string;
+}
+
+interface Props {
+  title: string;
+  image: string;
+  alt: string;
+  category: Category;
+  tags: string[];
+  locale: Locale;
+  slug: string;
+  related?: RelatedItem[];
+}
+
+const {
+  title,
+  image,
+  alt,
+  category,
+  tags,
+  locale,
+  slug,
+  related = [],
+} = Astro.props;
+
+const printLabel = locale === 'fr' ? '🖨️ Imprimer' : '🖨️ Print';
+---
+
+<article class="coloring-page">
+  <!-- Above-fold banner ad -->
+  <AdSlot slot="" format="horizontal" />
+
+  <Breadcrumb locale={locale} category={category} currentPage={title} />
+
+  <h1>{title}</h1>
+
+  <div class="page-layout">
+    <!-- Main content -->
+    <div class="main-content">
+      <div class="coloring-image">
+        <img src={image} alt={alt} width="800" height="1100" loading="eager" />
+      </div>
+
+      <div class="coloring-actions">
+        <PdfDownloadButton image={image} title={title} locale={locale} />
+        <button class="btn btn-secondary" onclick="window.print()">
+          {printLabel}
+        </button>
+      </div>
+
+      {tags.length > 0 && (
+        <div class="coloring-tags">
+          {tags.map((tag) => <span class="tag">{tag}</span>)}
+        </div>
+      )}
+
+      <!-- Below-content ad -->
+      <AdSlot slot="" format="rectangle" />
+
+      <RelatedColoriages locale={locale} items={related} currentSlug={slug} />
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <AdSlot slot="" format="vertical" />
+      <AffiliateWidget locale={locale} />
+    </aside>
+  </div>
+</article>
+
+<style>
+  .coloring-page {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+    line-height: 1.2;
+  }
+
+  .page-layout {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  @media (max-width: 860px) {
+    .page-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+      order: -1;
+    }
+  }
+
+  .coloring-image {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .coloring-image img {
+    max-height: 80vh;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .coloring-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s;
+  }
+
+  .btn-secondary {
+    background: #f3f4f6;
+    color: #374151;
+  }
+
+  .btn-secondary:hover {
+    background: #e5e7eb;
+  }
+
+  .coloring-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tag {
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  @media print {
+    .coloring-actions,
+    .coloring-tags,
+    .sidebar {
+      display: none;
+    }
+
+    .page-layout {
+      display: block;
+    }
+
+    .coloring-image {
+      border: none;
+      padding: 0;
+    }
+  }
+</style>

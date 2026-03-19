@@ -3,16 +3,111 @@ import type { Locale } from '../lib/i18n';
 
 interface Props {
   image: string;
+  title: string;
   locale: Locale;
 }
 
-const { image, locale } = Astro.props;
+const { image, title, locale } = Astro.props;
 const label = locale === 'fr' ? '📥 Télécharger le PDF' : '📥 Download PDF';
+const loadingLabel = locale === 'fr' ? 'Génération...' : 'Generating...';
+const siteUrl = Astro.site?.href ?? 'https://coloriages.example.com';
+const watermarkText = locale === 'fr'
+  ? `Coloriage gratuit • ${siteUrl}`
+  : `Free coloring page • ${siteUrl}`;
 ---
 
-<a href={image} download class="btn btn-primary pdf-download">
+<button
+  id="pdf-download-btn"
+  class="btn btn-primary pdf-download"
+  data-image={image}
+  data-title={title}
+  data-watermark={watermarkText}
+  data-loading-label={loadingLabel}
+>
   {label}
-</a>
+</button>
+
+<script>
+  import jsPDF from 'jspdf';
+
+  const btn = document.getElementById('pdf-download-btn') as HTMLButtonElement | null;
+  if (!btn) throw new Error('PDF button not found');
+
+  const imageUrl = btn.dataset.image!;
+  const title = btn.dataset.title!;
+  const watermark = btn.dataset.watermark!;
+  const loadingLabel = btn.dataset.loadingLabel!;
+  const originalLabel = btn.textContent!.trim();
+
+  btn.addEventListener('click', async () => {
+    btn.disabled = true;
+    btn.textContent = loadingLabel;
+
+    try {
+      // A4 dimensions in mm
+      const A4_W = 210;
+      const A4_H = 297;
+      const MARGIN = 15;
+      const WATERMARK_H = 8;
+
+      const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+
+      // Load image
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+      await new Promise<void>((resolve, reject) => {
+        img.onload = () => resolve();
+        img.onerror = reject;
+        img.src = imageUrl;
+      });
+
+      // Draw image on canvas to get base64
+      const canvas = document.createElement('canvas');
+      canvas.width = img.naturalWidth;
+      canvas.height = img.naturalHeight;
+      const ctx = canvas.getContext('2d')!;
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, 0, 0);
+      const imgData = canvas.toDataURL('image/jpeg', 0.95);
+
+      // Compute image dimensions to fit within printable area (A4 minus margins + watermark space)
+      const maxW = A4_W - MARGIN * 2;
+      const maxH = A4_H - MARGIN * 2 - WATERMARK_H - 4;
+      const ratio = img.naturalWidth / img.naturalHeight;
+      let drawW = maxW;
+      let drawH = drawW / ratio;
+      if (drawH > maxH) {
+        drawH = maxH;
+        drawW = drawH * ratio;
+      }
+
+      // Center horizontally
+      const x = (A4_W - drawW) / 2;
+      const y = MARGIN;
+
+      doc.addImage(imgData, 'JPEG', x, y, drawW, drawH);
+
+      // Watermark at bottom center
+      doc.setFontSize(8);
+      doc.setTextColor(160, 160, 160);
+      const watermarkY = A4_H - MARGIN / 2;
+      doc.text(watermark, A4_W / 2, watermarkY, { align: 'center' });
+
+      // Safe filename
+      const filename = title
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '');
+      doc.save(`${filename}.pdf`);
+    } catch (err) {
+      console.error('PDF generation failed:', err);
+    } finally {
+      btn.disabled = false;
+      btn.textContent = originalLabel;
+    }
+  });
+</script>
 
 <style>
   .btn-primary {
@@ -26,14 +121,18 @@ const label = locale === 'fr' ? '📥 Télécharger le PDF' : '📥 Download PDF
     cursor: pointer;
     border: none;
     text-decoration: none;
-    transition: background 0.2s;
+    transition: background 0.2s, opacity 0.2s;
     background: #2563eb;
     color: white;
   }
 
-  .btn-primary:hover {
+  .btn-primary:hover:not(:disabled) {
     background: #1d4ed8;
-    text-decoration: none;
+  }
+
+  .btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
   }
 
   @media print {

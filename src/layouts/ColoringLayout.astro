@@ -61,7 +61,7 @@ const structuredData = {
       </div>
 
       <div class="coloring-actions">
-        <PdfDownloadButton image={image} locale={locale} />
+        <PdfDownloadButton image={image} title={title} locale={locale} />
         <button class="btn btn-secondary" onclick="window.print()">
           {locale === 'fr' ? '🖨️ Imprimer' : '🖨️ Print'}
         </button>
