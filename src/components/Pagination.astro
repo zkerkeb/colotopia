@@ -1,0 +1,72 @@
+---
+import type { Locale } from '../lib/i18n';
+
+interface Props {
+  prevUrl: string | undefined;
+  nextUrl: string | undefined;
+  currentPage: number;
+  lastPage: number;
+  locale: Locale;
+}
+
+const { prevUrl, nextUrl, currentPage, lastPage, locale } = Astro.props;
+const prevLabel = locale === 'fr' ? '← Précédent' : '← Previous';
+const nextLabel = locale === 'fr' ? 'Suivant →' : 'Next →';
+const pageLabel = locale === 'fr' ? `Page ${currentPage} sur ${lastPage}` : `Page ${currentPage} of ${lastPage}`;
+---
+
+{(prevUrl || nextUrl) && (
+  <nav class="pagination" aria-label={locale === 'fr' ? 'Pagination' : 'Pagination'}>
+    {prevUrl
+      ? <a href={prevUrl} class="pagination-btn">{prevLabel}</a>
+      : <span class="pagination-btn disabled">{prevLabel}</span>
+    }
+    <span class="pagination-info">{pageLabel}</span>
+    {nextUrl
+      ? <a href={nextUrl} class="pagination-btn">{nextLabel}</a>
+      : <span class="pagination-btn disabled">{nextLabel}</span>
+    }
+  </nav>
+)}
+
+<style>
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 3rem 0 1rem;
+  }
+
+  .pagination-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #2563eb;
+    background: #fff;
+    text-decoration: none;
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .pagination-btn:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+    text-decoration: none;
+  }
+
+  .pagination-btn.disabled {
+    color: #9ca3af;
+    border-color: #f3f4f6;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  .pagination-info {
+    color: #6b7280;
+    font-size: 0.9rem;
+  }
+</style>

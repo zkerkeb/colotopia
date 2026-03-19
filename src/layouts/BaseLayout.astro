@@ -11,6 +11,8 @@ interface Props {
   canonical?: string;
   ogImage?: string;
   structuredData?: object;
+  prevUrl?: string;
+  nextUrl?: string;
 }
 
 const {
@@ -20,6 +22,8 @@ const {
   canonical,
   ogImage,
   structuredData,
+  prevUrl,
+  nextUrl,
 } = Astro.props;
 
 const siteTitle = t('site.title', locale);
@@ -38,6 +42,8 @@ const adsenseId = import.meta.env.PUBLIC_ADSENSE_PUBLISHER_ID;
     <meta name="description" content={pageDescription} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     {canonical && <link rel="canonical" href={canonical} />}
+    {prevUrl && <link rel="prev" href={prevUrl} />}
+    {nextUrl && <link rel="next" href={nextUrl} />}
     <link rel="alternate" hreflang={locale} href={Astro.url.href} />
     <link
       rel="alternate"

@@ -2,36 +2,52 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import ColoringCard from '../../../components/ColoringCard.astro';
 import AdSlot from '../../../components/AdSlot.astro';
+import Pagination from '../../../components/Pagination.astro';
 import { getCollection } from 'astro:content';
 import { categories, getCategoryLabel, type Category } from '../../../lib/i18n';
 
-export function getStaticPaths() {
-  return categories.map((cat) => ({ params: { category: cat } }));
+const locale = 'fr';
+
+export async function getStaticPaths({ paginate }: { paginate: Function }) {
+  const results = [];
+  for (const cat of categories) {
+    const coloriages = await getCollection(
+      'coloriages',
+      ({ data }) => data.locale === 'fr' && data.category === cat
+    );
+    const pages = paginate(coloriages, {
+      params: { category: cat },
+      props: { categoryKey: cat },
+      pageSize: 24,
+    });
+    results.push(...pages);
+  }
+  return results;
 }
 
-const locale = 'fr';
-const { category } = Astro.params as { category: Category };
-const label = getCategoryLabel(category, locale);
-
-const coloriages = await getCollection(
-  'coloriages',
-  ({ data }) => data.locale === locale && data.category === category
-);
+const { page, categoryKey } = Astro.props as { page: any; categoryKey: Category };
+const label = getCategoryLabel(categoryKey, locale);
 
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  name: `Coloriages ${label}`,
+  name: page.currentPage === 1
+    ? `Coloriages ${label}`
+    : `Coloriages ${label} — Page ${page.currentPage}`,
   description: `Coloriages ${label} gratuits à imprimer pour les enfants.`,
   url: Astro.url.href,
 };
 ---
 
 <BaseLayout
-  title={`Coloriages ${label}`}
+  title={page.currentPage > 1
+    ? `Coloriages ${label} — Page ${page.currentPage}`
+    : `Coloriages ${label}`}
   description={`Coloriages ${label} gratuits à imprimer.`}
   locale={locale}
   structuredData={structuredData}
+  prevUrl={page.url.prev}
+  nextUrl={page.url.next}
 >
   <h1>Coloriages {label}</h1>
   <p class="category-description">
@@ -41,7 +57,7 @@ const structuredData = {
   <AdSlot adSlot="" format="horizontal" />
 
   <section class="coloring-grid">
-    {coloriages.map((c) => (
+    {page.data.map((c: any) => (
       <ColoringCard
         title={c.data.title}
         slug={c.data.slug}
@@ -52,11 +68,19 @@ const structuredData = {
     ))}
   </section>
 
-  {coloriages.length === 0 && (
+  {page.data.length === 0 && (
     <p class="empty-state">
       Les coloriages {label.toLowerCase()} arrivent bientôt !
     </p>
   )}
+
+  <Pagination
+    prevUrl={page.url.prev}
+    nextUrl={page.url.next}
+    currentPage={page.currentPage}
+    lastPage={page.lastPage}
+    locale={locale}
+  />
 </BaseLayout>
 
 <style>

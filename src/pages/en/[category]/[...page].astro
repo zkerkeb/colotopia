@@ -2,39 +2,53 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import ColoringCard from '../../../components/ColoringCard.astro';
 import AdSlot from '../../../components/AdSlot.astro';
+import Pagination from '../../../components/Pagination.astro';
 import { getCollection } from 'astro:content';
 import { categories, getCategoryLabel, getCategorySlug, type Category } from '../../../lib/i18n';
 
-export function getStaticPaths() {
-  return categories.map((cat) => ({
-    params: { category: getCategorySlug(cat, 'en') },
-    props: { categoryKey: cat },
-  }));
+const locale = 'en';
+
+export async function getStaticPaths({ paginate }: { paginate: Function }) {
+  const results = [];
+  for (const cat of categories) {
+    const catSlug = getCategorySlug(cat, 'en');
+    const coloriages = await getCollection(
+      'coloriages',
+      ({ data }) => data.locale === 'en' && data.category === cat
+    );
+    const pages = paginate(coloriages, {
+      params: { category: catSlug },
+      props: { categoryKey: cat },
+      pageSize: 24,
+    });
+    results.push(...pages);
+  }
+  return results;
 }
 
-const locale = 'en';
-const { categoryKey } = Astro.props as { categoryKey: Category };
+const { page, categoryKey } = Astro.props as { page: any; categoryKey: Category };
 const label = getCategoryLabel(categoryKey, locale);
-
-const coloriages = await getCollection(
-  'coloriages',
-  ({ data }) => data.locale === locale && data.category === categoryKey
-);
 
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  name: `${label} Coloring Pages`,
+  name: page.currentPage === 1
+    ? `${label} Coloring Pages`
+    : `${label} Coloring Pages — Page ${page.currentPage}`,
   description: `Free printable ${label.toLowerCase()} coloring pages for kids.`,
   url: Astro.url.href,
 };
 ---
 
 <BaseLayout
-  title={`${label} Coloring Pages`}
+  title={page.currentPage > 1
+    ? `${label} Coloring Pages — Page ${page.currentPage}`
+    : `${label} Coloring Pages`}
   description={`Free printable ${label.toLowerCase()} coloring pages.`}
   locale={locale}
   structuredData={structuredData}
+  prevUrl={page.url.prev}
+  nextUrl={page.url.next}
 >
   <h1>{label} Coloring Pages</h1>
   <p class="category-description">
@@ -44,7 +58,7 @@ const structuredData = {
   <AdSlot adSlot="" format="horizontal" />
 
   <section class="coloring-grid">
-    {coloriages.map((c) => (
+    {page.data.map((c: any) => (
       <ColoringCard
         title={c.data.title}
         slug={c.data.slug}
@@ -55,11 +69,19 @@ const structuredData = {
     ))}
   </section>
 
-  {coloriages.length === 0 && (
+  {page.data.length === 0 && (
     <p class="empty-state">
       {label} coloring pages coming soon!
     </p>
   )}
+
+  <Pagination
+    prevUrl={page.url.prev}
+    nextUrl={page.url.next}
+    currentPage={page.currentPage}
+    lastPage={page.lastPage}
+    locale={locale}
+  />
 </BaseLayout>
 
 <style>
