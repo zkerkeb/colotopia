@@ -72,10 +72,34 @@ const translations: Record<string, Record<Locale, string>> = {
     fr: 'Tous droits réservés',
     en: 'All rights reserved',
   },
+  'home.hero.subtitle': {
+    fr: 'Des centaines de coloriages originaux pour les enfants. Téléchargez, imprimez et coloriez !',
+    en: 'Hundreds of original coloring pages for kids. Download, print and color!',
+  },
+  'home.empty': {
+    fr: 'Les coloriages arrivent bientôt ! Revenez nous voir.',
+    en: 'Coloring pages coming soon! Check back later.',
+  },
+  'category.description': {
+    fr: 'Découvrez nos coloriages {label} gratuits à imprimer.',
+    en: 'Discover our free printable {label} coloring pages.',
+  },
+  'category.empty': {
+    fr: 'Les coloriages {label} arrivent bientôt !',
+    en: '{label} coloring pages coming soon!',
+  },
 };
 
 export function t(key: string, locale: Locale): string {
   return translations[key]?.[locale] ?? key;
+}
+
+export function ti(key: string, locale: Locale, params: Record<string, string>): string {
+  let result = t(key, locale);
+  for (const [k, v] of Object.entries(params)) {
+    result = result.replace(`{${k}}`, v);
+  }
+  return result;
 }
 
 export function getCategoryLabel(category: Category, locale: Locale): string {

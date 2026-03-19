@@ -10,6 +10,7 @@ import AdSlot from './AdSlot.astro';
 import AffiliateWidget from './AffiliateWidget.astro';
 import type { Locale } from '../lib/i18n';
 import type { Category } from '../lib/i18n';
+import { t, getLocalePath } from '../lib/i18n';
 
 interface RelatedItem {
   title: string;
@@ -40,7 +41,7 @@ const {
   related = [],
 } = Astro.props;
 
-const printLabel = locale === 'fr' ? '🖨️ Imprimer' : '🖨️ Print';
+const printLabel = `🖨️ ${t('coloring.print', locale)}`;
 
 // Derive WebP path from PNG path (original PNG kept for PDF generation)
 // e.g. /images/coloriages/animaux-chat.png → /images/coloriages/animaux-chat.webp
@@ -74,7 +75,9 @@ const imageWebp = image.replace(/\.png$/, '.webp');
 
       {tags.length > 0 && (
         <div class="coloring-tags">
-          {tags.map((tag) => <span class="tag">{tag}</span>)}
+          {tags.map((tag) => (
+            <a class="tag" href={`${getLocalePath(locale)}?q=${encodeURIComponent(tag)}`}>{tag}</a>
+          ))}
         </div>
       )}
 
@@ -176,6 +179,14 @@ const imageWebp = image.replace(/\.png$/, '.webp');
     padding: 0.25rem 0.75rem;
     border-radius: 9999px;
     font-size: 0.8rem;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .tag:hover {
+    background: #dbeafe;
+    color: #1d4ed8;
+    text-decoration: none;
   }
 
   .sidebar {

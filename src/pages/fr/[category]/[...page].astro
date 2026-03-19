@@ -4,7 +4,7 @@ import ColoringCard from '../../../components/ColoringCard.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 import Pagination from '../../../components/Pagination.astro';
 import { getCollection } from 'astro:content';
-import { categories, getCategoryLabel, type Category } from '../../../lib/i18n';
+import { categories, getCategoryLabel, ti, type Category } from '../../../lib/i18n';
 
 const locale = 'fr';
 
@@ -51,7 +51,7 @@ const structuredData = {
 >
   <h1>Coloriages {label}</h1>
   <p class="category-description">
-    Découvrez nos coloriages {label.toLowerCase()} gratuits à imprimer.
+    {ti('category.description', locale, { label: label.toLowerCase() })}
   </p>
 
   <AdSlot adSlot="" format="horizontal" />
@@ -70,7 +70,7 @@ const structuredData = {
 
   {page.data.length === 0 && (
     <p class="empty-state">
-      Les coloriages {label.toLowerCase()} arrivent bientôt !
+      {ti('category.empty', locale, { label: label.toLowerCase() })}
     </p>
   )}
 
