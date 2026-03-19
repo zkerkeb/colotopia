@@ -1,0 +1,185 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { t, getCategoryLabel, getCategorySlug, getLocalePath, type Locale } from '../lib/i18n';
+
+// Detect locale from URL prefix; default to FR
+const url = Astro.url.pathname;
+const locale: Locale = url.startsWith('/en') ? 'en' : 'fr';
+
+const popularCategories = [
+  'animaux',
+  'vehicules',
+  'nature',
+  'dinosaures',
+  'mandalas',
+] as const;
+---
+
+<BaseLayout
+  title={locale === 'fr' ? 'Page introuvable' : 'Page not found'}
+  description={locale === 'fr'
+    ? 'Cette page n\'existe pas. Explorez nos coloriages gratuits à imprimer !'
+    : 'This page doesn\'t exist. Explore our free printable coloring pages!'}
+  locale={locale}
+>
+  <div class="not-found">
+    <div class="hero">
+      <div class="emoji">🎨</div>
+      <h1>
+        {locale === 'fr'
+          ? 'Oups ! Page introuvable'
+          : 'Oops! Page not found'}
+      </h1>
+      <p>
+        {locale === 'fr'
+          ? 'Cette page n\'existe pas ou a été déplacée. Mais ne t\'en fais pas, il y a plein de coloriages à découvrir !'
+          : "This page doesn't exist or has been moved. But don't worry, there are plenty of coloring pages to discover!"}
+      </p>
+      <a href={getLocalePath(locale)} class="home-btn">
+        {locale === 'fr' ? '🏠 Retour à l\'accueil' : '🏠 Back to home'}
+      </a>
+    </div>
+
+    <div class="categories-section">
+      <h2>
+        {locale === 'fr' ? 'Catégories populaires' : 'Popular categories'}
+      </h2>
+      <div class="categories-grid">
+        {popularCategories.map((cat) => (
+          <a
+            href={getLocalePath(locale, `/${getCategorySlug(cat, locale)}`)}
+            class="category-chip"
+          >
+            {getCategoryLabel(cat, locale)}
+          </a>
+        ))}
+        <a href={locale === 'fr' ? '/fr/categories' : '/en/categories'} class="category-chip all">
+          {locale === 'fr' ? 'Toutes les catégories →' : 'All categories →'}
+        </a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 0;
+  }
+
+  .hero {
+    text-align: center;
+    background: linear-gradient(135deg, #fef9c3 0%, #fce7f3 50%, #dbeafe 100%);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .emoji {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.05rem;
+    color: #4b5563;
+    font-weight: 500;
+    line-height: 1.7;
+    margin-bottom: 1.75rem;
+  }
+
+  .home-btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.75rem 1.75rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .home-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+
+  .categories-section {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .categories-section h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+  }
+
+  .categories-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .category-chip {
+    display: inline-block;
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 50px;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #374151;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s, transform 0.15s;
+  }
+
+  .category-chip:hover {
+    border-color: #93c5fd;
+    color: #2563eb;
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+
+  .category-chip.all {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+    color: #2563eb;
+  }
+
+  .category-chip.all:hover {
+    background: #dbeafe;
+    border-color: #93c5fd;
+  }
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    .hero {
+      padding: 2rem 1.25rem;
+    }
+
+    .emoji {
+      font-size: 3rem;
+    }
+  }
+</style>
