@@ -45,7 +45,7 @@ const printLabel = locale === 'fr' ? '🖨️ Imprimer' : '🖨️ Print';
 
 <article class="coloring-page">
   <!-- Above-fold banner ad -->
-  <AdSlot slot="" format="horizontal" />
+  <AdSlot adSlot="" format="horizontal" />
 
   <Breadcrumb locale={locale} category={category} currentPage={title} />
 
@@ -72,14 +72,14 @@ const printLabel = locale === 'fr' ? '🖨️ Imprimer' : '🖨️ Print';
       )}
 
       <!-- Below-content ad -->
-      <AdSlot slot="" format="rectangle" />
+      <AdSlot adSlot="" format="rectangle" />
 
       <RelatedColoriages locale={locale} items={related} currentSlug={slug} />
     </div>
 
     <!-- Sidebar -->
     <aside class="sidebar">
-      <AdSlot slot="" format="vertical" />
+      <AdSlot adSlot="" format="vertical" />
       <AffiliateWidget locale={locale} />
     </aside>
   </div>

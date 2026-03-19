@@ -26,6 +26,7 @@ const siteTitle = t('site.title', locale);
 const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
 const pageDescription = description || t('site.description', locale);
 const altLocale = locale === 'fr' ? 'en' : 'fr';
+const adsenseId = import.meta.env.PUBLIC_ADSENSE_PUBLISHER_ID;
 ---
 
 <!doctype html>
@@ -49,6 +50,9 @@ const altLocale = locale === 'fr' ? 'en' : 'fr';
     {ogImage && <meta property="og:image" content={ogImage} />}
     {structuredData && (
       <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    )}
+    {adsenseId && (
+      <Fragment set:html={`<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}" crossorigin="anonymous"><\/script>`} />
     )}
   </head>
   <body>
