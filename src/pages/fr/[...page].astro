@@ -16,6 +16,7 @@ export async function getStaticPaths({ paginate }: { paginate: Function }) {
 
 const { page } = Astro.props as { page: any };
 const isFirstPage = page.currentPage === 1;
+const canonical = Astro.url.href;
 
 // Nouveaux: 10 most recent by createdAt (only on page 1)
 let nouveaux: typeof page.data = [];
@@ -41,6 +42,7 @@ const structuredData = {
 <BaseLayout
   locale={locale}
   title={page.currentPage > 1 ? `Coloriages Gratuits — Page ${page.currentPage}` : undefined}
+  canonical={canonical}
   structuredData={structuredData}
   prevUrl={page.url.prev}
   nextUrl={page.url.next}

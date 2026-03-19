@@ -17,8 +17,8 @@ const { title, image, alt, category, tags, slug, seoTitle, seoDescription } = co
 
 const locale = 'fr' as const;
 const siteUrl = Astro.site?.href.replace(/\/$/, '') ?? 'https://colotopia.com';
-const canonicalUrl = `${siteUrl}/fr/coloriage/${slug}`;
-const altUrl = `${siteUrl}/en/coloring/${slug}`;
+const canonicalUrl = `${siteUrl}/fr/coloriage/${slug}/`;
+const altUrl = `${siteUrl}/en/coloring/${slug}/`;
 
 const pageTitle = seoTitle ?? `Coloriage ${title} a imprimer gratuitement | Coloriages`;
 const pageDescription =
@@ -61,6 +61,7 @@ const structuredData = {
   locale={locale}
   canonical={canonicalUrl}
   ogImage={`${siteUrl}${image}`}
+  ogType="article"
   structuredData={structuredData}
 >
   <ColoringPage

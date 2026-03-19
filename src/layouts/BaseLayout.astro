@@ -10,6 +10,7 @@ interface Props {
   locale: Locale;
   canonical?: string;
   ogImage?: string;
+  ogType?: string;
   structuredData?: object;
   prevUrl?: string;
   nextUrl?: string;
@@ -21,10 +22,23 @@ const {
   locale,
   canonical,
   ogImage,
+  ogType = 'website',
   structuredData,
   prevUrl,
   nextUrl,
 } = Astro.props;
+
+const siteUrl = Astro.site?.href.replace(/\/$/, '') ?? 'https://colotopia.com';
+const ogUrl = canonical ?? Astro.url.href;
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Colotopia',
+  url: siteUrl,
+  description: 'Coloriages gratuits à imprimer',
+  inLanguage: ['fr', 'en'],
+};
 
 const siteTitle = t('site.title', locale);
 const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
@@ -53,10 +67,14 @@ const adsenseId = import.meta.env.PUBLIC_ADSENSE_PUBLISHER_ID;
       hreflang={altLocale}
       href={Astro.url.href.replace(`/${locale}/`, `/${altLocale}/`)}
     />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={ogUrl} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
     <meta property="og:locale" content={locale === 'fr' ? 'fr_FR' : 'en_US'} />
     {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
     {structuredData && (
       <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     )}

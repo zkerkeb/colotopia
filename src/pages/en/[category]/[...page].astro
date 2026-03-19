@@ -33,6 +33,9 @@ const isAdult = (adultCategories as readonly string[]).includes(categoryKey);
 
 const descriptionKey = isAdult ? 'category.description.adults' : 'category.description';
 const pageDescription = ti(descriptionKey, locale, { label: label.toLowerCase() });
+const seoText = ti(`category.${categoryKey}.seoText`, locale, {});
+const hasSeoText = seoText !== `category.${categoryKey}.seoText`;
+const canonical = Astro.url.href;
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -51,6 +54,7 @@ const structuredData = {
     : `${label} Coloring Pages`}
   description={pageDescription}
   locale={locale}
+  canonical={canonical}
   structuredData={structuredData}
   prevUrl={page.url.prev}
   nextUrl={page.url.next}
@@ -89,6 +93,12 @@ const structuredData = {
     lastPage={page.lastPage}
     locale={locale}
   />
+
+  {page.currentPage === 1 && hasSeoText && (
+    <div class="seo-content">
+      <p>{seoText}</p>
+    </div>
+  )}
 </BaseLayout>
 
 <style>
@@ -134,5 +144,15 @@ const structuredData = {
     color: #9ca3af;
     font-size: 1.1rem;
     padding: 4rem 0;
+  }
+
+  .seo-content {
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    background: #f9fafb;
+    border-radius: 12px;
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.75;
   }
 </style>
