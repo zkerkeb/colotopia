@@ -116,6 +116,19 @@ const translations: Record<string, Record<Locale, string>> = {
     fr: 'Voir les coloriages',
     en: 'View coloring pages',
   },
+  'home.nouveaux.title': {
+    fr: 'Nouveaux Coloriages',
+    en: 'New Coloring Pages',
+  },
+  'home.nouveaux.subtitle': {
+    fr: 'Les derniers ajoutés',
+    en: 'Latest additions',
+  },
+  'home.filter.all': { fr: 'Tous', en: 'All' },
+  'category.description.adults': {
+    fr: 'Découvrez nos coloriages {label} gratuits à imprimer pour adultes.',
+    en: 'Discover our free printable {label} coloring pages for adults.',
+  },
 };
 
 export function t(key: string, locale: Locale): string {

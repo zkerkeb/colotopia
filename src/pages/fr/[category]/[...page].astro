@@ -5,7 +5,7 @@ import AdSlot from '../../../components/AdSlot.astro';
 import Pagination from '../../../components/Pagination.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
 import { getCollection } from 'astro:content';
-import { categories, getCategoryLabel, ti, type Category } from '../../../lib/i18n';
+import { categories, adultCategories, getCategoryLabel, ti, type Category } from '../../../lib/i18n';
 
 const locale = 'fr';
 
@@ -28,6 +28,10 @@ export async function getStaticPaths({ paginate }: { paginate: Function }) {
 
 const { page, categoryKey } = Astro.props as { page: any; categoryKey: Category };
 const label = getCategoryLabel(categoryKey, locale);
+const isAdult = (adultCategories as readonly string[]).includes(categoryKey);
+
+const descriptionKey = isAdult ? 'category.description.adults' : 'category.description';
+const pageDescription = ti(descriptionKey, locale, { label: label.toLowerCase() });
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -35,7 +39,7 @@ const structuredData = {
   name: page.currentPage === 1
     ? `Coloriages ${label}`
     : `Coloriages ${label} — Page ${page.currentPage}`,
-  description: `Coloriages ${label} gratuits à imprimer pour les enfants.`,
+  description: pageDescription,
   url: Astro.url.href,
 };
 ---
@@ -44,17 +48,17 @@ const structuredData = {
   title={page.currentPage > 1
     ? `Coloriages ${label} — Page ${page.currentPage}`
     : `Coloriages ${label}`}
-  description={`Coloriages ${label} gratuits à imprimer.`}
+  description={pageDescription}
   locale={locale}
   structuredData={structuredData}
   prevUrl={page.url.prev}
   nextUrl={page.url.next}
 >
   <Breadcrumb locale={locale} currentPage={`Coloriages ${label}`} />
-  <h1>Coloriages {label}</h1>
-  <p class="category-description">
-    {ti('category.description', locale, { label: label.toLowerCase() })}
-  </p>
+  <div class:list={['category-hero', { 'category-hero--adult': isAdult }]}>
+    <h1>Coloriages {label}</h1>
+    <p class="category-description">{pageDescription}</p>
+  </div>
 
   <AdSlot adSlot="" format="horizontal" />
 
@@ -66,6 +70,7 @@ const structuredData = {
         image={c.data.image}
         alt={c.data.alt}
         locale={locale}
+        audience={c.data.audience}
       />
     ))}
   </section>
@@ -86,14 +91,35 @@ const structuredData = {
 </BaseLayout>
 
 <style>
-  h1 {
+  .category-hero {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #fef9c3 0%, #fce7f3 50%, #dbeafe 100%);
+  }
+
+  .category-hero--adult {
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #3730a3 100%);
+  }
+
+  .category-hero h1 {
     font-size: 2rem;
+    font-weight: 800;
     margin-bottom: 0.5rem;
+    color: #1a1a1a;
+  }
+
+  .category-hero--adult h1 {
+    color: #ffffff;
   }
 
   .category-description {
     color: #6b7280;
-    margin-bottom: 2rem;
+    margin: 0;
+  }
+
+  .category-hero--adult .category-description {
+    color: #c7d2fe;
   }
 
   .coloring-grid {

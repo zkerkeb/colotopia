@@ -14,6 +14,17 @@ export async function getStaticPaths({ paginate }: { paginate: Function }) {
 }
 
 const { page } = Astro.props as { page: any };
+const isFirstPage = page.currentPage === 1;
+
+// Nouveaux: 10 most recent by createdAt (only on page 1)
+let nouveaux: typeof page.data = [];
+if (isFirstPage) {
+  const allColoriages = await getCollection('coloriages', ({ data }) => data.locale === 'en');
+  nouveaux = allColoriages
+    .filter((c: any) => c.data.createdAt)
+    .sort((a: any, b: any) => (b.data.createdAt || '').localeCompare(a.data.createdAt || ''))
+    .slice(0, 10);
+}
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -38,9 +49,36 @@ const structuredData = {
     <p>{t('home.hero.subtitle', locale)}</p>
   </section>
 
+  {isFirstPage && nouveaux.length > 0 && (
+    <section class="nouveaux-section">
+      <div class="section-header">
+        <h2>{t('home.nouveaux.title', locale)}</h2>
+        <span class="section-sub">{t('home.nouveaux.subtitle', locale)}</span>
+      </div>
+      <div class="nouveaux-grid">
+        {nouveaux.map((c: any) => (
+          <ColoringCard
+            title={c.data.title}
+            slug={c.data.slug}
+            image={c.data.image}
+            alt={c.data.alt}
+            locale={locale}
+            audience={c.data.audience}
+          />
+        ))}
+      </div>
+    </section>
+  )}
+
   <AdSlot adSlot="" format="horizontal" />
 
-  <section class="coloring-grid">
+  <div class="audience-filter" role="group" aria-label="Filter by audience">
+    <button class="filter-btn active" data-filter="all">{t('home.filter.all', locale)}</button>
+    <button class="filter-btn" data-filter="enfants">{t('audience.enfants', locale)}</button>
+    <button class="filter-btn" data-filter="adultes">{t('audience.adultes', locale)}</button>
+  </div>
+
+  <section class="coloring-grid" id="main-grid">
     {page.data.map((c: any) => (
       <ColoringCard
         title={c.data.title}
@@ -48,6 +86,7 @@ const structuredData = {
         image={c.data.image}
         alt={c.data.alt}
         locale={locale}
+        audience={c.data.audience}
       />
     ))}
   </section>
@@ -65,10 +104,34 @@ const structuredData = {
   />
 </BaseLayout>
 
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const btns = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+    const grid = document.getElementById('main-grid');
+    if (!grid) return;
+
+    btns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        btns.forEach((b) => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+        btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
+        grid.querySelectorAll<HTMLElement>('[data-audience]').forEach((card) => {
+          if (!filter || filter === 'all') {
+            card.style.display = '';
+          } else {
+            card.style.display = card.dataset.audience === filter ? '' : 'none';
+          }
+        });
+      });
+    });
+  });
+</script>
+
 <style>
   .hero {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     background: linear-gradient(135deg, #fef9c3 0%, #fce7f3 50%, #dbeafe 100%);
     border-radius: 20px;
     padding: 2.5rem 1.5rem;
@@ -93,6 +156,65 @@ const structuredData = {
     .hero h1 {
       font-size: 1.75rem;
     }
+  }
+
+  .nouveaux-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+  }
+
+  .section-sub {
+    font-size: 0.9rem;
+    color: #9ca3af;
+  }
+
+  .nouveaux-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+
+  .audience-filter {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    padding: 0.4rem 1.1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 50px;
+    background: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4b5563;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: inherit;
+  }
+
+  .filter-btn:hover {
+    border-color: #93c5fd;
+    color: #2563eb;
+  }
+
+  .filter-btn.active {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: white;
   }
 
   .coloring-grid {

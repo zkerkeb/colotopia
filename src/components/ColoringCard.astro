@@ -8,9 +8,10 @@ interface Props {
   image: string;
   alt: string;
   locale: Locale;
+  audience?: string;
 }
 
-const { title, slug, image, alt, locale } = Astro.props;
+const { title, slug, image, alt, locale, audience } = Astro.props;
 const href = getLocalePath(locale, `/${getColoringBasePath(locale)}/${slug}`);
 
 // Derive WebP thumbnail path from PNG path
@@ -18,7 +19,7 @@ const href = getLocalePath(locale, `/${getColoringBasePath(locale)}/${slug}`);
 const thumbWebp = image.replace('/images/coloriages/', '/images/coloriages/thumbs/').replace(/\.png$/, '.webp');
 ---
 
-<a href={href} class="coloring-card">
+<a href={href} class="coloring-card" data-audience={audience}>
   <div class="card-image">
     <picture>
       <source type="image/webp" srcset={thumbWebp} />
