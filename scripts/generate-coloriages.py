@@ -75,17 +75,13 @@ GEMINI_IMAGEN_MODEL = "imagen-4.0-generate-001"
 GEMINI_ASPECT_RATIO = "3:4"
 
 LINE_ART_SUFFIX_KIDS = (
-    "Coloring book page style for children. Thick clean black outlines on a "
-    "pure white background. No shading, no color fill, no gradients. Simple "
-    "bold shapes. Cute friendly cartoon style. High contrast, printable quality. "
-    "No text, no words, no letters, no watermark."
+    "Black and white line drawing for kids. Thick bold outlines, pure white "
+    "background, cute cartoon style. No shading, no text."
 )
 
 LINE_ART_SUFFIX_ADULTS = (
-    "Coloring book page for adults. Clean black outlines on pure white background. "
-    "No shading, no color fill, no gradients. Intricate detailed patterns with "
-    "fine lines. High contrast, printable quality. "
-    "No text, no words, no letters, no watermark."
+    "Black and white line drawing. Clean outlines on pure white background. "
+    "Intricate detailed patterns, fine lines. No shading, no text."
 )
 
 # Adult categories use the detailed adult prompt suffix
@@ -134,13 +130,13 @@ def get_logs_dir(astro_root: Path) -> Path:
 # ---------------------------------------------------------------------------
 
 def build_prompt(subject_prompt: str, base_suffix: str, category: str = "", adult_suffix: str = "") -> str:
+    # Use only the code-level constant (not both YAML + code suffix — duplication
+    # causes Gemini to render the prompt text ON the image).
     if category in ADULT_CATEGORIES:
-        style_suffix = adult_suffix if adult_suffix else base_suffix
         line_art = LINE_ART_SUFFIX_ADULTS
     else:
-        style_suffix = base_suffix
         line_art = LINE_ART_SUFFIX_KIDS
-    return f"{subject_prompt} {style_suffix} {line_art}"
+    return f"{subject_prompt} {line_art}"
 
 
 def generate_image_gemini(client, prompt: str) -> bytes:
