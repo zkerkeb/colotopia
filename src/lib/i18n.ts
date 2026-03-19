@@ -100,6 +100,22 @@ const translations: Record<string, Record<Locale, string>> = {
     fr: 'Les coloriages {label} arrivent bientôt !',
     en: '{label} coloring pages coming soon!',
   },
+  'categories.title': {
+    fr: 'Toutes les Catégories',
+    en: 'All Categories',
+  },
+  'categories.description': {
+    fr: 'Parcourez toutes nos catégories de coloriages gratuits à imprimer.',
+    en: 'Browse all our free printable coloring page categories.',
+  },
+  'categories.count': {
+    fr: '{count} coloriages',
+    en: '{count} coloring pages',
+  },
+  'categories.explore': {
+    fr: 'Voir les coloriages',
+    en: 'View coloring pages',
+  },
 };
 
 export function t(key: string, locale: Locale): string {
@@ -162,4 +178,8 @@ export function getPrivacyPath(locale: Locale): string {
 
 export function getTermsPath(locale: Locale): string {
   return getLocalePath(locale, locale === 'fr' ? '/conditions' : '/terms');
+}
+
+export function getCategoriesPath(locale: Locale): string {
+  return getLocalePath(locale, locale === 'fr' ? '/categories' : '/categories');
 }

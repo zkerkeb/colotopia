@@ -1,0 +1,283 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { t, ti, kidsCategories, adultCategories, getCategoryLabel, getCategorySlug, getLocalePath, type Category } from '../../lib/i18n';
+
+const locale = 'en';
+
+const allColoriages = await getCollection('coloriages', ({ data }) => data.locale === 'en');
+
+// Build category data: label, slug, count, and up to 4 preview images
+function buildCategoryData(cats: readonly string[]) {
+  return cats.map((cat) => {
+    const items = allColoriages.filter((c) => c.data.category === cat);
+    const previews = items.slice(0, 4).map((c) => ({
+      image: c.data.image,
+      alt: c.data.alt,
+    }));
+    return {
+      key: cat as Category,
+      label: getCategoryLabel(cat as Category, locale),
+      href: getLocalePath(locale, `/${getCategorySlug(cat as Category, locale)}`),
+      count: items.length,
+      previews,
+    };
+  });
+}
+
+const kidsData = buildCategoryData(kidsCategories);
+const adultsData = buildCategoryData(adultCategories);
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: t('categories.title', locale),
+  description: t('categories.description', locale),
+  url: Astro.url.href,
+};
+---
+
+<BaseLayout
+  title={t('categories.title', locale)}
+  description={t('categories.description', locale)}
+  locale={locale}
+  structuredData={structuredData}
+>
+  <section class="hero">
+    <h1>{t('categories.title', locale)}</h1>
+    <p>{t('categories.description', locale)}</p>
+  </section>
+
+  <div class="tabs" role="tablist">
+    <button class="tab active" role="tab" aria-selected="true" data-tab="kids">
+      {t('audience.enfants', locale)}
+      <span class="tab-count">{kidsData.length}</span>
+    </button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="adults">
+      {t('audience.adultes', locale)}
+      <span class="tab-count">{adultsData.length}</span>
+    </button>
+  </div>
+
+  <section class="category-grid" id="tab-kids" role="tabpanel">
+    {kidsData.map((cat) => (
+      <a href={cat.href} class="category-card">
+        <div class="preview-grid">
+          {cat.previews.map((p) => {
+            const thumbWebp = p.image.replace('/images/coloriages/', '/images/coloriages/thumbs/').replace(/\.png$/, '.webp');
+            return (
+              <picture>
+                <source type="image/webp" srcset={thumbWebp} />
+                <img src={p.image} alt={p.alt} loading="lazy" decoding="async" />
+              </picture>
+            );
+          })}
+          {cat.previews.length < 4 && Array.from({ length: 4 - cat.previews.length }).map(() => (
+            <div class="preview-placeholder" />
+          ))}
+        </div>
+        <div class="category-info">
+          <h2>{cat.label}</h2>
+          <span class="category-count">{ti('categories.count', locale, { count: String(cat.count) })}</span>
+        </div>
+      </a>
+    ))}
+  </section>
+
+  <section class="category-grid hidden" id="tab-adults" role="tabpanel">
+    {adultsData.map((cat) => (
+      <a href={cat.href} class="category-card">
+        <div class="preview-grid">
+          {cat.previews.map((p) => {
+            const thumbWebp = p.image.replace('/images/coloriages/', '/images/coloriages/thumbs/').replace(/\.png$/, '.webp');
+            return (
+              <picture>
+                <source type="image/webp" srcset={thumbWebp} />
+                <img src={p.image} alt={p.alt} loading="lazy" decoding="async" />
+              </picture>
+            );
+          })}
+          {cat.previews.length < 4 && Array.from({ length: 4 - cat.previews.length }).map(() => (
+            <div class="preview-placeholder" />
+          ))}
+        </div>
+        <div class="category-info">
+          <h2>{cat.label}</h2>
+          <span class="category-count">{ti('categories.count', locale, { count: String(cat.count) })}</span>
+        </div>
+      </a>
+    ))}
+  </section>
+</BaseLayout>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const tabs = document.querySelectorAll<HTMLButtonElement>('.tab');
+    const panels = {
+      kids: document.getElementById('tab-kids'),
+      adults: document.getElementById('tab-adults'),
+    };
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.tab as 'kids' | 'adults';
+
+        tabs.forEach((t) => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+
+        Object.entries(panels).forEach(([key, panel]) => {
+          if (panel) {
+            panel.classList.toggle('hidden', key !== target);
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<style>
+  .hero {
+    text-align: center;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #fef9c3 0%, #fce7f3 50%, #dbeafe 100%);
+    border-radius: 20px;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    color: #1a1a1a;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    color: #4b5563;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 500;
+  }
+
+  @media (max-width: 600px) {
+    .hero h1 {
+      font-size: 1.75rem;
+    }
+  }
+
+  .tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+  }
+
+  .tab {
+    padding: 0.625rem 1.5rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 50px;
+    background: white;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4b5563;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: inherit;
+  }
+
+  .tab:hover {
+    border-color: #93c5fd;
+    color: #2563eb;
+  }
+
+  .tab.active {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: white;
+  }
+
+  .tab-count {
+    font-size: 0.8rem;
+    font-weight: 700;
+    background: rgba(0, 0, 0, 0.08);
+    padding: 0.125rem 0.5rem;
+    border-radius: 50px;
+  }
+
+  .tab.active .tab-count {
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .category-grid.hidden {
+    display: none;
+  }
+
+  .category-card {
+    display: block;
+    background: white;
+    border: 2px solid #f3f4f6;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+  }
+
+  .category-card:hover {
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.12);
+    transform: translateY(-3px);
+    border-color: #bfdbfe;
+  }
+
+  .preview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: #f3f4f6;
+    aspect-ratio: 4 / 3;
+  }
+
+  .preview-grid picture {
+    overflow: hidden;
+  }
+
+  .preview-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .preview-placeholder {
+    background: #f9fafb;
+  }
+
+  .category-info {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .category-info h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.25rem;
+  }
+
+  .category-count {
+    font-size: 0.85rem;
+    color: #6b7280;
+  }
+</style>
