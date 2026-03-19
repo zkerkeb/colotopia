@@ -16,7 +16,7 @@
 base_prompt_suffix: >
   Coloring book page style. Thick clean black outlines on pure white background.
   No shading, no gradients, no color fill. Simple bold shapes suitable for
-  children ages 3-8 to color. Cute and friendly style. Printable quality.
+  children ages 3-10 to color. Cute and friendly style. Printable quality.
 
 categories:
   animaux:
@@ -63,7 +63,7 @@ categories:
 
       - fr_slug: animaux-poisson
         en_slug: animals-fish
-        fr_title: "Poisson coloré"
+        fr_title: "Poisson colore"
         en_title: "Colorful Fish"
         fr_tags: ["poisson", "mer", "ocean", "facile"]
         en_tags: ["fish", "sea", "ocean", "easy"]
@@ -100,6 +100,86 @@ categories:
         fr_tags: ["dinosaure", "prehistoire", "cool", "facile"]
         en_tags: ["dinosaur", "prehistoric", "cool", "easy"]
         prompt: "A friendly cute dinosaur (T-Rex style) standing upright with tiny arms, cartoon style."
+
+      - fr_slug: animaux-tigre
+        en_slug: animals-tiger
+        fr_title: "Tigre puissant"
+        en_title: "Powerful Tiger"
+        fr_tags: ["tigre", "animaux", "savane", "rayures"]
+        en_tags: ["tiger", "animals", "savanna", "stripes"]
+        prompt: "A friendly cartoon tiger with stripes, sitting, front view, simple cartoon style."
+
+      - fr_slug: animaux-girafe
+        en_slug: animals-giraffe
+        fr_title: "Girafe elegante"
+        en_title: "Elegant Giraffe"
+        fr_tags: ["girafe", "animaux", "savane", "grand"]
+        en_tags: ["giraffe", "animals", "savanna", "tall"]
+        prompt: "A cute giraffe with a long neck, spots on its body, standing, simple cartoon style."
+
+      - fr_slug: animaux-singe
+        en_slug: animals-monkey
+        fr_title: "Singe rigolo"
+        en_title: "Funny Monkey"
+        fr_tags: ["singe", "animaux", "jungle", "rigolo"]
+        en_tags: ["monkey", "animals", "jungle", "funny"]
+        prompt: "A playful monkey hanging from a branch with a banana, cute cartoon style."
+
+      - fr_slug: animaux-ours
+        en_slug: animals-bear
+        fr_title: "Ours gentil"
+        en_title: "Friendly Bear"
+        fr_tags: ["ours", "animaux", "foret", "doux"]
+        en_tags: ["bear", "animals", "forest", "soft"]
+        prompt: "A round friendly bear sitting with paws together, big eyes, simple cartoon style."
+
+      - fr_slug: animaux-grenouille
+        en_slug: animals-frog
+        fr_title: "Grenouille joyeuse"
+        en_title: "Happy Frog"
+        fr_tags: ["grenouille", "animaux", "mare", "sauteur"]
+        en_tags: ["frog", "animals", "pond", "jumping"]
+        prompt: "A cute frog sitting on a lily pad with big eyes and a wide smile, cartoon style."
+
+      - fr_slug: animaux-tortue
+        en_slug: animals-turtle
+        fr_title: "Tortue lente"
+        en_title: "Slow Turtle"
+        fr_tags: ["tortue", "animaux", "carapace", "calme"]
+        en_tags: ["turtle", "animals", "shell", "calm"]
+        prompt: "A cute turtle with a patterned shell walking slowly, side view, simple cartoon style."
+
+      - fr_slug: animaux-dauphin
+        en_slug: animals-dolphin
+        fr_title: "Dauphin sauteur"
+        en_title: "Jumping Dolphin"
+        fr_tags: ["dauphin", "ocean", "saut", "intelligent"]
+        en_tags: ["dolphin", "ocean", "jump", "smart"]
+        prompt: "A playful dolphin jumping out of waves, smiling, side view, simple cartoon style."
+
+      - fr_slug: animaux-renard
+        en_slug: animals-fox
+        fr_title: "Renard ruse"
+        en_title: "Clever Fox"
+        fr_tags: ["renard", "animaux", "foret", "ruse"]
+        en_tags: ["fox", "animals", "forest", "clever"]
+        prompt: "A cute fox with a bushy tail, sitting, front view, simple cartoon style."
+
+      - fr_slug: animaux-hibou
+        en_slug: animals-owl
+        fr_title: "Hibou sage"
+        en_title: "Wise Owl"
+        fr_tags: ["hibou", "animaux", "nuit", "sage"]
+        en_tags: ["owl", "animals", "night", "wise"]
+        prompt: "A cute round owl perched on a branch with big eyes and patterned feathers, cartoon style."
+
+      - fr_slug: animaux-pingouin
+        en_slug: animals-penguin
+        fr_title: "Pingouin mignon"
+        en_title: "Cute Penguin"
+        fr_tags: ["pingouin", "animaux", "glace", "mignon"]
+        en_tags: ["penguin", "animals", "ice", "cute"]
+        prompt: "A cute penguin standing upright with wings spread slightly, front view, cartoon style."
 
   vehicules:
     subjects:
@@ -145,7 +225,7 @@ categories:
 
       - fr_slug: vehicules-fusee
         en_slug: vehicles-rocket
-        fr_title: "Fusée spatiale"
+        fr_title: "Fusee spatiale"
         en_title: "Space Rocket"
         fr_tags: ["fusee", "espace", "astronaute", "cool"]
         en_tags: ["rocket", "space", "astronaut", "cool"]
@@ -153,7 +233,7 @@ categories:
 
       - fr_slug: vehicules-helicoptere
         en_slug: vehicles-helicopter
-        fr_title: "Hélicoptère"
+        fr_title: "Helicoptere"
         en_title: "Helicopter"
         fr_tags: ["helicoptere", "ciel", "voler", "helices"]
         en_tags: ["helicopter", "sky", "fly", "blades"]
@@ -166,6 +246,62 @@ categories:
         fr_tags: ["moto", "vehicule", "cool", "route"]
         en_tags: ["motorcycle", "vehicle", "cool", "road"]
         prompt: "A cartoon motorcycle with large wheels, handlebars, and a seat, side view, simple cartoon style."
+
+      - fr_slug: vehicules-bus
+        en_slug: vehicles-bus
+        fr_title: "Bus scolaire"
+        en_title: "School Bus"
+        fr_tags: ["bus", "vehicule", "ecole", "jaune"]
+        en_tags: ["bus", "vehicle", "school", "yellow"]
+        prompt: "A cute cartoon school bus with round windows and a happy face on the front, side view, simple style."
+
+      - fr_slug: vehicules-tracteur
+        en_slug: vehicles-tractor
+        fr_title: "Tracteur de ferme"
+        en_title: "Farm Tractor"
+        fr_tags: ["tracteur", "ferme", "vehicule", "grand"]
+        en_tags: ["tractor", "farm", "vehicle", "big"]
+        prompt: "A friendly cartoon farm tractor with large rear wheels and a cab, side view, simple style."
+
+      - fr_slug: vehicules-sous-marin
+        en_slug: vehicles-submarine
+        fr_title: "Sous-marin jaune"
+        en_title: "Yellow Submarine"
+        fr_tags: ["sous-marin", "ocean", "vehicule", "aventure"]
+        en_tags: ["submarine", "ocean", "vehicle", "adventure"]
+        prompt: "A cute cartoon submarine with a periscope and porthole windows, side view, simple cartoon style."
+
+      - fr_slug: vehicules-velo
+        en_slug: vehicles-bicycle
+        fr_title: "Velo amusant"
+        en_title: "Fun Bicycle"
+        fr_tags: ["velo", "vehicule", "sport", "roues"]
+        en_tags: ["bicycle", "vehicle", "sport", "wheels"]
+        prompt: "A cute cartoon bicycle with big wheels, handlebars, and a seat, side view, simple cartoon style."
+
+      - fr_slug: vehicules-camion-pompier
+        en_slug: vehicles-fire-truck
+        fr_title: "Camion de pompier"
+        en_title: "Fire Truck"
+        fr_tags: ["pompier", "vehicule", "rouge", "urgence"]
+        en_tags: ["fire truck", "vehicle", "red", "emergency"]
+        prompt: "A cartoon fire truck with a ladder, hose, and flashing light on top, side view, simple cartoon style."
+
+      - fr_slug: vehicules-pelleteuse
+        en_slug: vehicles-excavator
+        fr_title: "Pelleteuse puissante"
+        en_title: "Powerful Excavator"
+        fr_tags: ["pelleteuse", "chantier", "vehicule", "construction"]
+        en_tags: ["excavator", "construction", "vehicle", "digger"]
+        prompt: "A cartoon excavator with a digging arm and bucket, on a construction site, side view, simple style."
+
+      - fr_slug: vehicules-ambulance
+        en_slug: vehicles-ambulance
+        fr_title: "Ambulance urgence"
+        en_title: "Emergency Ambulance"
+        fr_tags: ["ambulance", "soin", "urgence", "vehicule"]
+        en_tags: ["ambulance", "care", "emergency", "vehicle"]
+        prompt: "A cartoon ambulance with a red cross, flashing light on top, side view, simple cartoon style."
 
   nature:
     subjects:
@@ -225,6 +361,70 @@ categories:
         en_tags: ["ocean", "sea", "wave", "nature"]
         prompt: "Ocean waves with a sun above the horizon, a dolphin jumping, simple cartoon landscape style."
 
+      - fr_slug: nature-arc-en-ciel
+        en_slug: nature-rainbow
+        fr_title: "Arc-en-ciel colore"
+        en_title: "Colorful Rainbow"
+        fr_tags: ["arc-en-ciel", "nature", "couleurs", "ciel"]
+        en_tags: ["rainbow", "nature", "colors", "sky"]
+        prompt: "A big rainbow arching over clouds with a smiling sun peeking out, simple cartoon landscape style."
+
+      - fr_slug: nature-foret
+        en_slug: nature-forest
+        fr_title: "Foret magique"
+        en_title: "Magic Forest"
+        fr_tags: ["foret", "nature", "arbres", "magique"]
+        en_tags: ["forest", "nature", "trees", "magic"]
+        prompt: "A magical forest scene with tall trees, mushrooms and a path, simple cartoon landscape style."
+
+      - fr_slug: nature-plage
+        en_slug: nature-beach
+        fr_title: "Plage ensoleilee"
+        en_title: "Sunny Beach"
+        fr_tags: ["plage", "mer", "sable", "vacances"]
+        en_tags: ["beach", "sea", "sand", "vacation"]
+        prompt: "A beach scene with waves, a sandcastle, a sun umbrella, and seashells, simple cartoon style."
+
+      - fr_slug: nature-volcan
+        en_slug: nature-volcano
+        fr_title: "Volcan impressionnant"
+        en_title: "Impressive Volcano"
+        fr_tags: ["volcan", "nature", "feu", "montagne"]
+        en_tags: ["volcano", "nature", "fire", "mountain"]
+        prompt: "A cartoon volcano erupting with lava and smoke puffs, simple cartoon style, no danger."
+
+      - fr_slug: nature-champignon
+        en_slug: nature-mushroom
+        fr_title: "Champignon magique"
+        en_title: "Magic Mushroom"
+        fr_tags: ["champignon", "nature", "foret", "magique"]
+        en_tags: ["mushroom", "nature", "forest", "magic"]
+        prompt: "A cute cartoon mushroom with spots and a round cap, surrounded by small flowers, simple style."
+
+      - fr_slug: nature-cascade
+        en_slug: nature-waterfall
+        fr_title: "Belle cascade"
+        en_title: "Beautiful Waterfall"
+        fr_tags: ["cascade", "eau", "nature", "paysage"]
+        en_tags: ["waterfall", "water", "nature", "landscape"]
+        prompt: "A peaceful waterfall flowing down rocks into a pond with lily pads, simple cartoon style."
+
+      - fr_slug: nature-desert
+        en_slug: nature-desert
+        fr_title: "Desert chaud"
+        en_title: "Hot Desert"
+        fr_tags: ["desert", "cactus", "sable", "soleil"]
+        en_tags: ["desert", "cactus", "sand", "sun"]
+        prompt: "A cartoon desert scene with a tall cactus, sand dunes, and a bright sun, simple landscape style."
+
+      - fr_slug: nature-nuage
+        en_slug: nature-cloud
+        fr_title: "Nuage moelleux"
+        en_title: "Fluffy Cloud"
+        fr_tags: ["nuage", "ciel", "pluie", "moelleux"]
+        en_tags: ["cloud", "sky", "rain", "fluffy"]
+        prompt: "A group of fluffy clouds in the sky with a smiling sun, simple cartoon style."
+
   alphabet:
     subjects:
       - fr_slug: alphabet-a
@@ -241,7 +441,7 @@ categories:
         en_title: "The Letter B"
         fr_tags: ["alphabet", "lettre", "B", "apprendre"]
         en_tags: ["alphabet", "letter", "B", "learn"]
-        prompt: "The capital letter B decorated with a butterfly or ball motif, cute cartoon style for children."
+        prompt: "The capital letter B decorated with a butterfly motif, cute cartoon style for children."
 
       - fr_slug: alphabet-c
         en_slug: alphabet-c
@@ -249,7 +449,7 @@ categories:
         en_title: "The Letter C"
         fr_tags: ["alphabet", "lettre", "C", "apprendre"]
         en_tags: ["alphabet", "letter", "C", "learn"]
-        prompt: "The capital letter C decorated with a cat or cloud motif, cute cartoon style for children."
+        prompt: "The capital letter C decorated with a cat motif, cute cartoon style for children."
 
       - fr_slug: alphabet-d
         en_slug: alphabet-d
@@ -257,7 +457,7 @@ categories:
         en_title: "The Letter D"
         fr_tags: ["alphabet", "lettre", "D", "apprendre"]
         en_tags: ["alphabet", "letter", "D", "learn"]
-        prompt: "The capital letter D decorated with a dinosaur or dolphin motif, cute cartoon style for children."
+        prompt: "The capital letter D decorated with a dolphin motif, cute cartoon style for children."
 
       - fr_slug: alphabet-e
         en_slug: alphabet-e
@@ -265,4 +465,832 @@ categories:
         en_title: "The Letter E"
         fr_tags: ["alphabet", "lettre", "E", "apprendre"]
         en_tags: ["alphabet", "letter", "E", "learn"]
-        prompt: "The capital letter E decorated with an elephant or eagle motif, cute cartoon style for children."
+        prompt: "The capital letter E decorated with an elephant motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-f
+        en_slug: alphabet-f
+        fr_title: "La lettre F"
+        en_title: "The Letter F"
+        fr_tags: ["alphabet", "lettre", "F", "apprendre"]
+        en_tags: ["alphabet", "letter", "F", "learn"]
+        prompt: "The capital letter F decorated with a fish motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-g
+        en_slug: alphabet-g
+        fr_title: "La lettre G"
+        en_title: "The Letter G"
+        fr_tags: ["alphabet", "lettre", "G", "apprendre"]
+        en_tags: ["alphabet", "letter", "G", "learn"]
+        prompt: "The capital letter G decorated with a giraffe motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-h
+        en_slug: alphabet-h
+        fr_title: "La lettre H"
+        en_title: "The Letter H"
+        fr_tags: ["alphabet", "lettre", "H", "apprendre"]
+        en_tags: ["alphabet", "letter", "H", "learn"]
+        prompt: "The capital letter H decorated with a hedgehog motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-i
+        en_slug: alphabet-i
+        fr_title: "La lettre I"
+        en_title: "The Letter I"
+        fr_tags: ["alphabet", "lettre", "I", "apprendre"]
+        en_tags: ["alphabet", "letter", "I", "learn"]
+        prompt: "The capital letter I decorated with an igloo and an ice cream motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-j
+        en_slug: alphabet-j
+        fr_title: "La lettre J"
+        en_title: "The Letter J"
+        fr_tags: ["alphabet", "lettre", "J", "apprendre"]
+        en_tags: ["alphabet", "letter", "J", "learn"]
+        prompt: "The capital letter J decorated with a jungle and jaguar motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-k
+        en_slug: alphabet-k
+        fr_title: "La lettre K"
+        en_title: "The Letter K"
+        fr_tags: ["alphabet", "lettre", "K", "apprendre"]
+        en_tags: ["alphabet", "letter", "K", "learn"]
+        prompt: "The capital letter K decorated with a kangaroo motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-l
+        en_slug: alphabet-l
+        fr_title: "La lettre L"
+        en_title: "The Letter L"
+        fr_tags: ["alphabet", "lettre", "L", "apprendre"]
+        en_tags: ["alphabet", "letter", "L", "learn"]
+        prompt: "The capital letter L decorated with a lion motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-m
+        en_slug: alphabet-m
+        fr_title: "La lettre M"
+        en_title: "The Letter M"
+        fr_tags: ["alphabet", "lettre", "M", "apprendre"]
+        en_tags: ["alphabet", "letter", "M", "learn"]
+        prompt: "The capital letter M decorated with a monkey motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-n
+        en_slug: alphabet-n
+        fr_title: "La lettre N"
+        en_title: "The Letter N"
+        fr_tags: ["alphabet", "lettre", "N", "apprendre"]
+        en_tags: ["alphabet", "letter", "N", "learn"]
+        prompt: "The capital letter N decorated with a nest and bird motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-o
+        en_slug: alphabet-o
+        fr_title: "La lettre O"
+        en_title: "The Letter O"
+        fr_tags: ["alphabet", "lettre", "O", "apprendre"]
+        en_tags: ["alphabet", "letter", "O", "learn"]
+        prompt: "The capital letter O decorated with an octopus motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-p
+        en_slug: alphabet-p
+        fr_title: "La lettre P"
+        en_title: "The Letter P"
+        fr_tags: ["alphabet", "lettre", "P", "apprendre"]
+        en_tags: ["alphabet", "letter", "P", "learn"]
+        prompt: "The capital letter P decorated with a penguin motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-q
+        en_slug: alphabet-q
+        fr_title: "La lettre Q"
+        en_title: "The Letter Q"
+        fr_tags: ["alphabet", "lettre", "Q", "apprendre"]
+        en_tags: ["alphabet", "letter", "Q", "learn"]
+        prompt: "The capital letter Q decorated with a queen bee motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-r
+        en_slug: alphabet-r
+        fr_title: "La lettre R"
+        en_title: "The Letter R"
+        fr_tags: ["alphabet", "lettre", "R", "apprendre"]
+        en_tags: ["alphabet", "letter", "R", "learn"]
+        prompt: "The capital letter R decorated with a rabbit and rainbow motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-s
+        en_slug: alphabet-s
+        fr_title: "La lettre S"
+        en_title: "The Letter S"
+        fr_tags: ["alphabet", "lettre", "S", "apprendre"]
+        en_tags: ["alphabet", "letter", "S", "learn"]
+        prompt: "The capital letter S decorated with a snake motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-t
+        en_slug: alphabet-t
+        fr_title: "La lettre T"
+        en_title: "The Letter T"
+        fr_tags: ["alphabet", "lettre", "T", "apprendre"]
+        en_tags: ["alphabet", "letter", "T", "learn"]
+        prompt: "The capital letter T decorated with a turtle motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-u
+        en_slug: alphabet-u
+        fr_title: "La lettre U"
+        en_title: "The Letter U"
+        fr_tags: ["alphabet", "lettre", "U", "apprendre"]
+        en_tags: ["alphabet", "letter", "U", "learn"]
+        prompt: "The capital letter U decorated with a unicorn motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-v
+        en_slug: alphabet-v
+        fr_title: "La lettre V"
+        en_title: "The Letter V"
+        fr_tags: ["alphabet", "lettre", "V", "apprendre"]
+        en_tags: ["alphabet", "letter", "V", "learn"]
+        prompt: "The capital letter V decorated with a violet flower and butterfly motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-w
+        en_slug: alphabet-w
+        fr_title: "La lettre W"
+        en_title: "The Letter W"
+        fr_tags: ["alphabet", "lettre", "W", "apprendre"]
+        en_tags: ["alphabet", "letter", "W", "learn"]
+        prompt: "The capital letter W decorated with a wolf and woods motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-x
+        en_slug: alphabet-x
+        fr_title: "La lettre X"
+        en_title: "The Letter X"
+        fr_tags: ["alphabet", "lettre", "X", "apprendre"]
+        en_tags: ["alphabet", "letter", "X", "learn"]
+        prompt: "The capital letter X decorated with a xylophone motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-y
+        en_slug: alphabet-y
+        fr_title: "La lettre Y"
+        en_title: "The Letter Y"
+        fr_tags: ["alphabet", "lettre", "Y", "apprendre"]
+        en_tags: ["alphabet", "letter", "Y", "learn"]
+        prompt: "The capital letter Y decorated with a yak and yoyo motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-z
+        en_slug: alphabet-z
+        fr_title: "La lettre Z"
+        en_title: "The Letter Z"
+        fr_tags: ["alphabet", "lettre", "Z", "apprendre"]
+        en_tags: ["alphabet", "letter", "Z", "learn"]
+        prompt: "The capital letter Z decorated with a zebra motif, cute cartoon style for children."
+
+  dinosaures:
+    subjects:
+      - fr_slug: dinosaures-triceratops
+        en_slug: dinosaurs-triceratops
+        fr_title: "Triceratops feroce"
+        en_title: "Fierce Triceratops"
+        fr_tags: ["dinosaure", "triceratops", "prehistoire", "cornes"]
+        en_tags: ["dinosaur", "triceratops", "prehistoric", "horns"]
+        prompt: "A friendly cartoon triceratops with three horns and a neck frill, standing, simple cartoon style."
+
+      - fr_slug: dinosaures-brachiosaurus
+        en_slug: dinosaurs-brachiosaurus
+        fr_title: "Brachiosaurus geant"
+        en_title: "Giant Brachiosaurus"
+        fr_tags: ["dinosaure", "brachiosaurus", "prehistoire", "grand"]
+        en_tags: ["dinosaur", "brachiosaurus", "prehistoric", "giant"]
+        prompt: "A cute long-necked brachiosaurus eating leaves from a tall tree, side view, simple cartoon style."
+
+      - fr_slug: dinosaures-stegosaurus
+        en_slug: dinosaurs-stegosaurus
+        fr_title: "Stegosaurus epineux"
+        en_title: "Spiky Stegosaurus"
+        fr_tags: ["dinosaure", "stegosaurus", "prehistoire", "plaques"]
+        en_tags: ["dinosaur", "stegosaurus", "prehistoric", "plates"]
+        prompt: "A cute stegosaurus with diamond-shaped plates along its back, side view, simple cartoon style."
+
+      - fr_slug: dinosaures-pterodactyle
+        en_slug: dinosaurs-pterodactyl
+        fr_title: "Pterodactyle volant"
+        en_title: "Flying Pterodactyl"
+        fr_tags: ["dinosaure", "pterodactyle", "prehistoire", "voler"]
+        en_tags: ["dinosaur", "pterodactyl", "prehistoric", "flying"]
+        prompt: "A cartoon pterodactyl with spread wings flying through the sky, simple cartoon style."
+
+      - fr_slug: dinosaures-ankylosaurus
+        en_slug: dinosaurs-ankylosaurus
+        fr_title: "Ankylosaurus armure"
+        en_title: "Armored Ankylosaurus"
+        fr_tags: ["dinosaure", "ankylosaurus", "prehistoire", "armure"]
+        en_tags: ["dinosaur", "ankylosaurus", "prehistoric", "armor"]
+        prompt: "A cute armored ankylosaurus with a club tail and bumpy back, side view, simple cartoon style."
+
+      - fr_slug: dinosaures-velociraptor
+        en_slug: dinosaurs-velociraptor
+        fr_title: "Velociraptor vif"
+        en_title: "Swift Velociraptor"
+        fr_tags: ["dinosaure", "velociraptor", "prehistoire", "rapide"]
+        en_tags: ["dinosaur", "velociraptor", "prehistoric", "fast"]
+        prompt: "A friendly cartoon velociraptor running with tiny arms and feathers, side view, cartoon style."
+
+      - fr_slug: dinosaures-diplodocus
+        en_slug: dinosaurs-diplodocus
+        fr_title: "Diplodocus long"
+        en_title: "Long Diplodocus"
+        fr_tags: ["dinosaure", "diplodocus", "prehistoire", "long"]
+        en_tags: ["dinosaur", "diplodocus", "prehistoric", "long"]
+        prompt: "A cute diplodocus with an extremely long neck and tail, side view, simple cartoon style."
+
+      - fr_slug: dinosaures-spinosaurus
+        en_slug: dinosaurs-spinosaurus
+        fr_title: "Spinosaurus nageant"
+        en_title: "Swimming Spinosaurus"
+        fr_tags: ["dinosaure", "spinosaurus", "prehistoire", "nager"]
+        en_tags: ["dinosaur", "spinosaurus", "prehistoric", "swim"]
+        prompt: "A friendly cartoon spinosaurus with a large sail fin on its back, standing by water, cartoon style."
+
+      - fr_slug: dinosaures-t-rex
+        en_slug: dinosaurs-t-rex
+        fr_title: "T-Rex puissant"
+        en_title: "Powerful T-Rex"
+        fr_tags: ["dinosaure", "t-rex", "prehistoire", "roi"]
+        en_tags: ["dinosaur", "t-rex", "prehistoric", "king"]
+        prompt: "A friendly T-Rex standing upright with tiny arms and a big smile, front view, simple cartoon style."
+
+      - fr_slug: dinosaures-iguanodon
+        en_slug: dinosaurs-iguanodon
+        fr_title: "Iguanodon herbivore"
+        en_title: "Herbivore Iguanodon"
+        fr_tags: ["dinosaure", "iguanodon", "prehistoire", "herbivore"]
+        en_tags: ["dinosaur", "iguanodon", "prehistoric", "herbivore"]
+        prompt: "A cute iguanodon with thumb spikes, walking on two legs, eating a leaf, simple cartoon style."
+
+  princesses-chevaliers:
+    subjects:
+      - fr_slug: princesses-chevaliers-princesse
+        en_slug: princesses-knights-princess
+        fr_title: "Belle princesse"
+        en_title: "Beautiful Princess"
+        fr_tags: ["princesse", "chateau", "robe", "couronne"]
+        en_tags: ["princess", "castle", "dress", "crown"]
+        prompt: "A beautiful princess in a flowing dress with a crown, standing gracefully, simple cartoon style."
+
+      - fr_slug: princesses-chevaliers-chevalier
+        en_slug: princesses-knights-knight
+        fr_title: "Brave chevalier"
+        en_title: "Brave Knight"
+        fr_tags: ["chevalier", "armure", "epee", "courageux"]
+        en_tags: ["knight", "armor", "sword", "brave"]
+        prompt: "A brave cartoon knight in shining armor holding a shield and sword, simple cartoon style."
+
+      - fr_slug: princesses-chevaliers-dragon
+        en_slug: princesses-knights-dragon
+        fr_title: "Dragon ami"
+        en_title: "Friendly Dragon"
+        fr_tags: ["dragon", "feu", "ailes", "ami"]
+        en_tags: ["dragon", "fire", "wings", "friendly"]
+        prompt: "A friendly cute dragon with wings, breathing a small harmless flame, cartoon style."
+
+      - fr_slug: princesses-chevaliers-chateau
+        en_slug: princesses-knights-castle
+        fr_title: "Grand chateau"
+        en_title: "Grand Castle"
+        fr_tags: ["chateau", "tour", "remparts", "medievale"]
+        en_tags: ["castle", "tower", "walls", "medieval"]
+        prompt: "A fairy tale castle with towers, flags, and a drawbridge, simple cartoon landscape style."
+
+      - fr_slug: princesses-chevaliers-fee
+        en_slug: princesses-knights-fairy
+        fr_title: "Petite fee"
+        en_title: "Little Fairy"
+        fr_tags: ["fee", "ailes", "magie", "baguette"]
+        en_tags: ["fairy", "wings", "magic", "wand"]
+        prompt: "A cute fairy with butterfly wings and a magic wand with sparkles, simple cartoon style."
+
+      - fr_slug: princesses-chevaliers-licorne
+        en_slug: princesses-knights-unicorn
+        fr_title: "Licorne magique"
+        en_title: "Magic Unicorn"
+        fr_tags: ["licorne", "magie", "arc-en-ciel", "corne"]
+        en_tags: ["unicorn", "magic", "rainbow", "horn"]
+        prompt: "A beautiful unicorn with a flowing mane and a sparkly horn, prancing, simple cartoon style."
+
+      - fr_slug: princesses-chevaliers-prince
+        en_slug: princesses-knights-prince
+        fr_title: "Beau prince"
+        en_title: "Handsome Prince"
+        fr_tags: ["prince", "couronne", "cape", "beau"]
+        en_tags: ["prince", "crown", "cape", "handsome"]
+        prompt: "A young prince in royal clothing with a crown and cape, smiling, simple cartoon style."
+
+      - fr_slug: princesses-chevaliers-sirene
+        en_slug: princesses-knights-mermaid
+        fr_title: "Sirene gracieuse"
+        en_title: "Graceful Mermaid"
+        fr_tags: ["sirene", "mer", "poisson", "gracieuse"]
+        en_tags: ["mermaid", "sea", "fish", "graceful"]
+        prompt: "A beautiful mermaid with a fish tail swimming underwater with fish and corals, cartoon style."
+
+      - fr_slug: princesses-chevaliers-sorciere
+        en_slug: princesses-knights-witch
+        fr_title: "Sorciere gentille"
+        en_title: "Kind Witch"
+        fr_tags: ["sorciere", "chapeau", "baguette", "magie"]
+        en_tags: ["witch", "hat", "wand", "magic"]
+        prompt: "A friendly cartoon witch with a pointy hat, on a broomstick, with a cute cat, cartoon style."
+
+      - fr_slug: princesses-chevaliers-geant
+        en_slug: princesses-knights-giant
+        fr_title: "Geant gentil"
+        en_title: "Friendly Giant"
+        fr_tags: ["geant", "grand", "fort", "gentil"]
+        en_tags: ["giant", "big", "strong", "friendly"]
+        prompt: "A friendly giant sitting on a hilltop next to a tiny castle, smiling, simple cartoon style."
+
+  metiers:
+    subjects:
+      - fr_slug: metiers-pompier
+        en_slug: jobs-firefighter
+        fr_title: "Brave pompier"
+        en_title: "Brave Firefighter"
+        fr_tags: ["pompier", "metier", "feu", "heros"]
+        en_tags: ["firefighter", "job", "fire", "hero"]
+        prompt: "A friendly cartoon firefighter in uniform with a helmet and hose, simple cartoon style."
+
+      - fr_slug: metiers-medecin
+        en_slug: jobs-doctor
+        fr_title: "Docteur bienveillant"
+        en_title: "Kind Doctor"
+        fr_tags: ["medecin", "docteur", "sante", "metier"]
+        en_tags: ["doctor", "health", "job", "care"]
+        prompt: "A friendly cartoon doctor in a white coat with a stethoscope, simple cartoon style."
+
+      - fr_slug: metiers-cuisinier
+        en_slug: jobs-chef
+        fr_title: "Chef cuisinier"
+        en_title: "Head Chef"
+        fr_tags: ["cuisinier", "chef", "cuisine", "metier"]
+        en_tags: ["chef", "cook", "kitchen", "job"]
+        prompt: "A cartoon chef in a tall white hat holding a ladle and a pot, simple cartoon style."
+
+      - fr_slug: metiers-policier
+        en_slug: jobs-police-officer
+        fr_title: "Policier protecteur"
+        en_title: "Protective Police Officer"
+        fr_tags: ["policier", "police", "proteger", "metier"]
+        en_tags: ["police", "officer", "protect", "job"]
+        prompt: "A friendly cartoon police officer in uniform with a badge, waving, simple cartoon style."
+
+      - fr_slug: metiers-astronaute
+        en_slug: jobs-astronaut
+        fr_title: "Astronaute aventurier"
+        en_title: "Adventurous Astronaut"
+        fr_tags: ["astronaute", "espace", "combinaison", "metier"]
+        en_tags: ["astronaut", "space", "suit", "job"]
+        prompt: "A cartoon astronaut in a spacesuit with a helmet, floating in space with stars, cartoon style."
+
+      - fr_slug: metiers-pilote
+        en_slug: jobs-pilot
+        fr_title: "Pilote courageux"
+        en_title: "Courageous Pilot"
+        fr_tags: ["pilote", "avion", "vol", "metier"]
+        en_tags: ["pilot", "airplane", "flight", "job"]
+        prompt: "A friendly cartoon pilot in uniform with a cap, holding a plane model, simple cartoon style."
+
+      - fr_slug: metiers-jardinier
+        en_slug: jobs-gardener
+        fr_title: "Jardinier nature"
+        en_title: "Nature Gardener"
+        fr_tags: ["jardinier", "jardin", "fleurs", "metier"]
+        en_tags: ["gardener", "garden", "flowers", "job"]
+        prompt: "A cartoon gardener with a watering can, surrounded by flowers and plants, simple cartoon style."
+
+      - fr_slug: metiers-professeur
+        en_slug: jobs-teacher
+        fr_title: "Professeur savant"
+        en_title: "Knowledgeable Teacher"
+        fr_tags: ["professeur", "ecole", "apprendre", "metier"]
+        en_tags: ["teacher", "school", "learn", "job"]
+        prompt: "A friendly cartoon teacher at a blackboard with chalk and books, simple cartoon style."
+
+      - fr_slug: metiers-architecte
+        en_slug: jobs-architect
+        fr_title: "Architecte createur"
+        en_title: "Creative Architect"
+        fr_tags: ["architecte", "plan", "batiment", "metier"]
+        en_tags: ["architect", "plan", "building", "job"]
+        prompt: "A cartoon architect holding a blueprint with buildings in the background, simple cartoon style."
+
+      - fr_slug: metiers-veterinaire
+        en_slug: jobs-veterinarian
+        fr_title: "Veterinaire doux"
+        en_title: "Gentle Veterinarian"
+        fr_tags: ["veterinaire", "animaux", "soin", "metier"]
+        en_tags: ["veterinarian", "animals", "care", "job"]
+        prompt: "A friendly cartoon vet in a lab coat holding a puppy with a bandage, simple cartoon style."
+
+  sport:
+    subjects:
+      - fr_slug: sport-football
+        en_slug: sport-soccer
+        fr_title: "Joueur de football"
+        en_title: "Soccer Player"
+        fr_tags: ["football", "sport", "ballon", "joueur"]
+        en_tags: ["soccer", "sport", "ball", "player"]
+        prompt: "A cartoon child kicking a soccer ball with a goal in the background, simple cartoon style."
+
+      - fr_slug: sport-basketball
+        en_slug: sport-basketball
+        fr_title: "Joueur de basket"
+        en_title: "Basketball Player"
+        fr_tags: ["basketball", "sport", "panier", "balle"]
+        en_tags: ["basketball", "sport", "hoop", "ball"]
+        prompt: "A cartoon child jumping to shoot a basketball into a hoop, simple cartoon style."
+
+      - fr_slug: sport-tennis
+        en_slug: sport-tennis
+        fr_title: "Joueur de tennis"
+        en_title: "Tennis Player"
+        fr_tags: ["tennis", "sport", "raquette", "balle"]
+        en_tags: ["tennis", "sport", "racket", "ball"]
+        prompt: "A cartoon child swinging a tennis racket to hit a ball over a net, simple cartoon style."
+
+      - fr_slug: sport-natation
+        en_slug: sport-swimming
+        fr_title: "Nageur rapide"
+        en_title: "Fast Swimmer"
+        fr_tags: ["natation", "sport", "piscine", "nager"]
+        en_tags: ["swimming", "sport", "pool", "swim"]
+        prompt: "A cartoon child swimming freestyle in a pool with splashing water, simple cartoon style."
+
+      - fr_slug: sport-velo
+        en_slug: sport-cycling
+        fr_title: "Cycliste sportif"
+        en_title: "Sporty Cyclist"
+        fr_tags: ["velo", "cycliste", "sport", "casque"]
+        en_tags: ["cycling", "cyclist", "sport", "helmet"]
+        prompt: "A cartoon child riding a bicycle with a helmet on a path, simple cartoon style."
+
+      - fr_slug: sport-ski
+        en_slug: sport-skiing
+        fr_title: "Skieur enneige"
+        en_title: "Snowy Skier"
+        fr_tags: ["ski", "sport", "neige", "montagne"]
+        en_tags: ["skiing", "sport", "snow", "mountain"]
+        prompt: "A cartoon child skiing down a snowy slope with poles, wearing a helmet, simple cartoon style."
+
+      - fr_slug: sport-gym
+        en_slug: sport-gymnastics
+        fr_title: "Gymnaste souple"
+        en_title: "Flexible Gymnast"
+        fr_tags: ["gym", "sport", "souplesse", "acrobate"]
+        en_tags: ["gymnastics", "sport", "flexibility", "acrobat"]
+        prompt: "A cartoon child doing a cartwheel on a gymnastics mat, simple cartoon style."
+
+      - fr_slug: sport-course
+        en_slug: sport-running
+        fr_title: "Coureur rapide"
+        en_title: "Fast Runner"
+        fr_tags: ["course", "sport", "sprint", "vitesse"]
+        en_tags: ["running", "sport", "sprint", "speed"]
+        prompt: "A cartoon child running fast on a track with a finish line ribbon, simple cartoon style."
+
+      - fr_slug: sport-yoga
+        en_slug: sport-yoga
+        fr_title: "Yoga zen"
+        en_title: "Zen Yoga"
+        fr_tags: ["yoga", "sport", "zen", "equilibre"]
+        en_tags: ["yoga", "sport", "zen", "balance"]
+        prompt: "A cartoon child doing a simple tree pose yoga position on a mat, simple cartoon style."
+
+      - fr_slug: sport-surf
+        en_slug: sport-surfing
+        fr_title: "Surfeur des vagues"
+        en_title: "Wave Surfer"
+        fr_tags: ["surf", "sport", "vagues", "planche"]
+        en_tags: ["surfing", "sport", "waves", "board"]
+        prompt: "A cartoon child surfing on a big wave on a surfboard, simple cartoon style."
+
+  saisons:
+    subjects:
+      # Printemps (Spring)
+      - fr_slug: saisons-printemps-fleurs
+        en_slug: seasons-spring-flowers
+        fr_title: "Fleurs de printemps"
+        en_title: "Spring Flowers"
+        fr_tags: ["printemps", "fleurs", "saison", "jardin"]
+        en_tags: ["spring", "flowers", "season", "garden"]
+        prompt: "A garden bursting with spring flowers including tulips and daisies with butterflies, cartoon style."
+
+      - fr_slug: saisons-printemps-papillons
+        en_slug: seasons-spring-butterflies
+        fr_title: "Papillons de printemps"
+        en_title: "Spring Butterflies"
+        fr_tags: ["printemps", "papillons", "saison", "nature"]
+        en_tags: ["spring", "butterflies", "season", "nature"]
+        prompt: "Several cute butterflies flying among spring flowers and a blue sky, simple cartoon style."
+
+      - fr_slug: saisons-printemps-pluie
+        en_slug: seasons-spring-rain
+        fr_title: "Pluie de printemps"
+        en_title: "Spring Rain"
+        fr_tags: ["printemps", "pluie", "parapluie", "saison"]
+        en_tags: ["spring", "rain", "umbrella", "season"]
+        prompt: "A cartoon child with a big umbrella walking in spring rain with puddles, cartoon style."
+
+      - fr_slug: saisons-printemps-arc-en-ciel
+        en_slug: seasons-spring-rainbow
+        fr_title: "Arc-en-ciel printanier"
+        en_title: "Spring Rainbow"
+        fr_tags: ["printemps", "arc-en-ciel", "pluie", "ciel"]
+        en_tags: ["spring", "rainbow", "rain", "sky"]
+        prompt: "A rainbow over a spring meadow with flowers and a smiling sun peeking through clouds, cartoon style."
+
+      - fr_slug: saisons-printemps-bebe-animaux
+        en_slug: seasons-spring-baby-animals
+        fr_title: "Bebes animaux du printemps"
+        en_title: "Spring Baby Animals"
+        fr_tags: ["printemps", "bebe", "animaux", "naissance"]
+        en_tags: ["spring", "baby", "animals", "birth"]
+        prompt: "Cute baby animals including a lamb, chick, and bunny in a spring field, simple cartoon style."
+
+      # Ete (Summer)
+      - fr_slug: saisons-ete-plage
+        en_slug: seasons-summer-beach
+        fr_title: "Plage d'ete"
+        en_title: "Summer Beach"
+        fr_tags: ["ete", "plage", "sable", "soleil"]
+        en_tags: ["summer", "beach", "sand", "sun"]
+        prompt: "A beach summer scene with a sandcastle, beach ball, umbrella and waves, simple cartoon style."
+
+      - fr_slug: saisons-ete-soleil
+        en_slug: seasons-summer-sun
+        fr_title: "Soleil d'ete"
+        en_title: "Summer Sun"
+        fr_tags: ["ete", "soleil", "chaud", "ciel"]
+        en_tags: ["summer", "sun", "hot", "sky"]
+        prompt: "A bright summer sun shining over a meadow with sunflowers and a clear sky, cartoon style."
+
+      - fr_slug: saisons-ete-glace
+        en_slug: seasons-summer-ice-cream
+        fr_title: "Glace de l'ete"
+        en_title: "Summer Ice Cream"
+        fr_tags: ["ete", "glace", "dessert", "sucre"]
+        en_tags: ["summer", "ice cream", "dessert", "sweet"]
+        prompt: "A cute child holding a big ice cream cone with multiple scoops in summer sunshine, cartoon style."
+
+      - fr_slug: saisons-ete-piscine
+        en_slug: seasons-summer-pool
+        fr_title: "Piscine estivale"
+        en_title: "Summer Pool"
+        fr_tags: ["ete", "piscine", "nager", "baignade"]
+        en_tags: ["summer", "pool", "swim", "splash"]
+        prompt: "Children splashing and playing in a backyard pool with inflatables, simple cartoon style."
+
+      - fr_slug: saisons-ete-pique-nique
+        en_slug: seasons-summer-picnic
+        fr_title: "Pique-nique d'ete"
+        en_title: "Summer Picnic"
+        fr_tags: ["ete", "pique-nique", "nature", "famille"]
+        en_tags: ["summer", "picnic", "nature", "family"]
+        prompt: "A summer picnic scene with a blanket, basket of food, fruits, and butterflies, cartoon style."
+
+      # Automne (Autumn)
+      - fr_slug: saisons-automne-feuilles
+        en_slug: seasons-autumn-leaves
+        fr_title: "Feuilles d'automne"
+        en_title: "Autumn Leaves"
+        fr_tags: ["automne", "feuilles", "saison", "couleurs"]
+        en_tags: ["autumn", "leaves", "season", "colors"]
+        prompt: "A tree with falling autumn leaves in various shapes, a child catching leaves, cartoon style."
+
+      - fr_slug: saisons-automne-citrouille
+        en_slug: seasons-autumn-pumpkin
+        fr_title: "Citrouilles d'automne"
+        en_title: "Autumn Pumpkins"
+        fr_tags: ["automne", "citrouille", "recolte", "saison"]
+        en_tags: ["autumn", "pumpkin", "harvest", "season"]
+        prompt: "Three cute pumpkins of different sizes with carved faces, leaves around them, cartoon style."
+
+      - fr_slug: saisons-automne-champignons
+        en_slug: seasons-autumn-mushrooms
+        fr_title: "Champignons d'automne"
+        en_title: "Autumn Mushrooms"
+        fr_tags: ["automne", "champignons", "foret", "saison"]
+        en_tags: ["autumn", "mushrooms", "forest", "season"]
+        prompt: "Cute mushrooms with spots growing in an autumn forest floor with fallen leaves, cartoon style."
+
+      - fr_slug: saisons-automne-herisson
+        en_slug: seasons-autumn-hedgehog
+        fr_title: "Herisson d'automne"
+        en_title: "Autumn Hedgehog"
+        fr_tags: ["automne", "herisson", "feuilles", "saison"]
+        en_tags: ["autumn", "hedgehog", "leaves", "season"]
+        prompt: "A cute hedgehog carrying autumn leaves on its spines, surrounded by fallen leaves, cartoon style."
+
+      - fr_slug: saisons-automne-ecureuil
+        en_slug: seasons-autumn-squirrel
+        fr_title: "Ecureuil et noisettes"
+        en_title: "Squirrel and Nuts"
+        fr_tags: ["automne", "ecureuil", "noisettes", "saison"]
+        en_tags: ["autumn", "squirrel", "nuts", "season"]
+        prompt: "A cute squirrel collecting acorns among autumn leaves and a big oak tree, cartoon style."
+
+      # Hiver (Winter)
+      - fr_slug: saisons-hiver-neige
+        en_slug: seasons-winter-snow
+        fr_title: "Neige de l'hiver"
+        en_title: "Winter Snow"
+        fr_tags: ["hiver", "neige", "flocon", "blanc"]
+        en_tags: ["winter", "snow", "snowflake", "white"]
+        prompt: "A winter scene with houses covered in snow, snowflakes falling, trees with snow, cartoon style."
+
+      - fr_slug: saisons-hiver-bonhomme-neige
+        en_slug: seasons-winter-snowman
+        fr_title: "Bonhomme de neige"
+        en_title: "Snowman"
+        fr_tags: ["hiver", "neige", "bonhomme", "saison"]
+        en_tags: ["winter", "snow", "snowman", "season"]
+        prompt: "A cheerful snowman with a scarf, carrot nose, and hat, surrounded by snowflakes, cartoon style."
+
+      - fr_slug: saisons-hiver-patinage
+        en_slug: seasons-winter-ice-skating
+        fr_title: "Patinage sur glace"
+        en_title: "Ice Skating"
+        fr_tags: ["hiver", "patinage", "glace", "sport"]
+        en_tags: ["winter", "skating", "ice", "sport"]
+        prompt: "A cartoon child ice skating on a frozen pond with a scarf, cartoon style."
+
+      - fr_slug: saisons-hiver-ski
+        en_slug: seasons-winter-skiing
+        fr_title: "Ski en montagne"
+        en_title: "Mountain Skiing"
+        fr_tags: ["hiver", "ski", "montagne", "neige"]
+        en_tags: ["winter", "skiing", "mountain", "snow"]
+        prompt: "A cartoon child skiing down a snowy mountain slope with pine trees and a lodge, cartoon style."
+
+      - fr_slug: saisons-hiver-chalet
+        en_slug: seasons-winter-chalet
+        fr_title: "Chalet enneige"
+        en_title: "Snowy Chalet"
+        fr_tags: ["hiver", "chalet", "neige", "cosy"]
+        en_tags: ["winter", "chalet", "snow", "cozy"]
+        prompt: "A cozy chalet covered in snow with smoke from the chimney, pine trees around, cartoon style."
+
+  fetes:
+    subjects:
+      # Noel (Christmas)
+      - fr_slug: fetes-noel-sapin
+        en_slug: holidays-christmas-tree
+        fr_title: "Sapin de Noel"
+        en_title: "Christmas Tree"
+        fr_tags: ["noel", "sapin", "decoration", "fete"]
+        en_tags: ["christmas", "tree", "decoration", "holiday"]
+        prompt: "A beautiful Christmas tree decorated with stars, ornaments, and a star on top, cartoon style."
+
+      - fr_slug: fetes-noel-pere-noel
+        en_slug: holidays-christmas-santa
+        fr_title: "Pere Noel"
+        en_title: "Santa Claus"
+        fr_tags: ["noel", "pere noel", "cadeau", "fete"]
+        en_tags: ["christmas", "santa", "gift", "holiday"]
+        prompt: "A jolly Santa Claus with a big belly, red suit, and bag of gifts, simple cartoon style."
+
+      - fr_slug: fetes-noel-renne
+        en_slug: holidays-christmas-reindeer
+        fr_title: "Renne de Noel"
+        en_title: "Christmas Reindeer"
+        fr_tags: ["noel", "renne", "rudolph", "fete"]
+        en_tags: ["christmas", "reindeer", "rudolph", "holiday"]
+        prompt: "A cute cartoon reindeer with antlers, a red nose (Rudolph), pulling a sled, cartoon style."
+
+      - fr_slug: fetes-noel-bonhomme-pain-epice
+        en_slug: holidays-christmas-gingerbread
+        fr_title: "Bonhomme pain d'epice"
+        en_title: "Gingerbread Man"
+        fr_tags: ["noel", "pain d'epice", "biscuit", "fete"]
+        en_tags: ["christmas", "gingerbread", "cookie", "holiday"]
+        prompt: "A smiling gingerbread man with icing decorations and buttons, simple cartoon style."
+
+      - fr_slug: fetes-noel-flocon
+        en_slug: holidays-christmas-snowflake
+        fr_title: "Flocon de neige"
+        en_title: "Christmas Snowflake"
+        fr_tags: ["noel", "flocon", "neige", "hiver"]
+        en_tags: ["christmas", "snowflake", "snow", "winter"]
+        prompt: "Beautiful symmetrical snowflakes with intricate patterns, simple cartoon coloring page style."
+
+      # Paques (Easter)
+      - fr_slug: fetes-paques-lapin
+        en_slug: holidays-easter-bunny
+        fr_title: "Lapin de Paques"
+        en_title: "Easter Bunny"
+        fr_tags: ["paques", "lapin", "oeufs", "fete"]
+        en_tags: ["easter", "bunny", "eggs", "holiday"]
+        prompt: "A cute Easter bunny carrying a basket of decorated eggs, simple cartoon style."
+
+      - fr_slug: fetes-paques-oeuf
+        en_slug: holidays-easter-egg
+        fr_title: "Oeuf de Paques"
+        en_title: "Easter Egg"
+        fr_tags: ["paques", "oeuf", "decoration", "fete"]
+        en_tags: ["easter", "egg", "decoration", "holiday"]
+        prompt: "Decorated Easter eggs with patterns of flowers, dots, and zigzags, ready to color, simple style."
+
+      - fr_slug: fetes-paques-poussin
+        en_slug: holidays-easter-chick
+        fr_title: "Poussin de Paques"
+        en_title: "Easter Chick"
+        fr_tags: ["paques", "poussin", "oeuf", "printemps"]
+        en_tags: ["easter", "chick", "egg", "spring"]
+        prompt: "A cute baby chick hatching out of an Easter egg with a spring flower, cartoon style."
+
+      - fr_slug: fetes-paques-panier
+        en_slug: holidays-easter-basket
+        fr_title: "Panier de Paques"
+        en_title: "Easter Basket"
+        fr_tags: ["paques", "panier", "oeufs", "fete"]
+        en_tags: ["easter", "basket", "eggs", "holiday"]
+        prompt: "A wicker Easter basket filled with decorated eggs and spring flowers, simple cartoon style."
+
+      - fr_slug: fetes-paques-agneau
+        en_slug: holidays-easter-lamb
+        fr_title: "Agneau de Paques"
+        en_title: "Easter Lamb"
+        fr_tags: ["paques", "agneau", "printemps", "doux"]
+        en_tags: ["easter", "lamb", "spring", "soft"]
+        prompt: "A cute fluffy baby lamb with a spring flower ribbon around its neck, cartoon style."
+
+      # Halloween
+      - fr_slug: fetes-halloween-citrouille
+        en_slug: holidays-halloween-pumpkin
+        fr_title: "Citrouille Halloween"
+        en_title: "Halloween Pumpkin"
+        fr_tags: ["halloween", "citrouille", "Jack-o-lantern", "fete"]
+        en_tags: ["halloween", "pumpkin", "jack-o-lantern", "holiday"]
+        prompt: "A carved Halloween pumpkin with a scary but friendly face, simple cartoon style."
+
+      - fr_slug: fetes-halloween-sorciere
+        en_slug: holidays-halloween-witch
+        fr_title: "Sorciere d'Halloween"
+        en_title: "Halloween Witch"
+        fr_tags: ["halloween", "sorciere", "chapeau", "fete"]
+        en_tags: ["halloween", "witch", "hat", "holiday"]
+        prompt: "A cartoon witch flying on a broomstick with a black cat, moon in background, cartoon style."
+
+      - fr_slug: fetes-halloween-fantome
+        en_slug: holidays-halloween-ghost
+        fr_title: "Fantome rigolo"
+        en_title: "Funny Ghost"
+        fr_tags: ["halloween", "fantome", "effrayant", "fete"]
+        en_tags: ["halloween", "ghost", "spooky", "holiday"]
+        prompt: "A cute friendly ghost with a surprised face, surrounded by stars and bats, simple cartoon style."
+
+      - fr_slug: fetes-halloween-chauve-souris
+        en_slug: holidays-halloween-bat
+        fr_title: "Chauve-souris nocturne"
+        en_title: "Nighttime Bat"
+        fr_tags: ["halloween", "chauve-souris", "nuit", "fete"]
+        en_tags: ["halloween", "bat", "night", "holiday"]
+        prompt: "Cute cartoon bats flying around a haunted house under a full moon, simple cartoon style."
+
+      - fr_slug: fetes-halloween-squelette
+        en_slug: holidays-halloween-skeleton
+        fr_title: "Squelette dansant"
+        en_title: "Dancing Skeleton"
+        fr_tags: ["halloween", "squelette", "os", "danseur"]
+        en_tags: ["halloween", "skeleton", "bones", "dancer"]
+        prompt: "A friendly cartoon skeleton in a fun dancing pose, simple bold outlines, cartoon style."
+
+      # Carnaval
+      - fr_slug: fetes-carnaval-masque
+        en_slug: holidays-carnival-mask
+        fr_title: "Masque de carnaval"
+        en_title: "Carnival Mask"
+        fr_tags: ["carnaval", "masque", "decoration", "fete"]
+        en_tags: ["carnival", "mask", "decoration", "holiday"]
+        prompt: "An ornate carnival mask decorated with feathers and swirls, ready to color, simple cartoon style."
+
+      - fr_slug: fetes-carnaval-arlequin
+        en_slug: holidays-carnival-harlequin
+        fr_title: "Arlequin de carnaval"
+        en_title: "Carnival Harlequin"
+        fr_tags: ["carnaval", "arlequin", "costume", "fete"]
+        en_tags: ["carnival", "harlequin", "costume", "holiday"]
+        prompt: "A cartoon harlequin in a diamond-pattern suit with a jester hat, simple cartoon style."
+
+      - fr_slug: fetes-carnaval-confettis
+        en_slug: holidays-carnival-confetti
+        fr_title: "Confettis joyeux"
+        en_title: "Joyful Confetti"
+        fr_tags: ["carnaval", "confettis", "fete", "joie"]
+        en_tags: ["carnival", "confetti", "party", "joy"]
+        prompt: "Children celebrating carnival throwing confetti and streamers, wearing costumes, cartoon style."
+
+      - fr_slug: fetes-carnaval-char
+        en_slug: holidays-carnival-float
+        fr_title: "Char de carnaval"
+        en_title: "Carnival Float"
+        fr_tags: ["carnaval", "char", "parade", "fete"]
+        en_tags: ["carnival", "float", "parade", "holiday"]
+        prompt: "A colorful carnival parade float decorated with flowers and stars, simple cartoon style."
+
+      - fr_slug: fetes-carnaval-costume
+        en_slug: holidays-carnival-costume
+        fr_title: "Costume de roi"
+        en_title: "King Costume"
+        fr_tags: ["carnaval", "costume", "roi", "fete"]
+        en_tags: ["carnival", "costume", "king", "holiday"]
+        prompt: "A cartoon child dressed as a carnival king with a crown and colorful costume, simple cartoon style."
