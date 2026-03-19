@@ -49,8 +49,8 @@ RATE_LIMIT_SECONDS_DALLE = 13
 # Gemini Imagen 3: generous quota, 2s is safe
 RATE_LIMIT_SECONDS_GEMINI = 2
 
-# Gemini Imagen 3 model (CEO calls it "Nano Banana")
-GEMINI_IMAGEN_MODEL = "imagen-3.0-generate-002"
+# Gemini Imagen 4 model
+GEMINI_IMAGEN_MODEL = "imagen-4.0-generate-001"
 # Aspect ratio closest to A4 (1:√2 ≈ 3:4.24); 3:4 is nearest available
 GEMINI_ASPECT_RATIO = "3:4"
 
@@ -134,7 +134,7 @@ def generate_image_gemini(client, prompt: str) -> bytes:
             number_of_images=1,
             aspect_ratio=GEMINI_ASPECT_RATIO,
             output_mime_type="image/png",
-            safety_filter_level="BLOCK_ONLY_HIGH",
+            safety_filter_level="BLOCK_LOW_AND_ABOVE",
         ),
     )
     if not response.generated_images:
