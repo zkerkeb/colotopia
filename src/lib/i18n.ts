@@ -72,6 +72,18 @@ const translations: Record<string, Record<Locale, string>> = {
     fr: 'Tous droits réservés',
     en: 'All rights reserved',
   },
+  'footer.kids': { fr: 'Coloriages Enfants', en: 'Kids Coloring' },
+  'footer.adults': { fr: 'Coloriages Adultes', en: 'Adult Coloring' },
+  'footer.legal': { fr: 'Informations', en: 'Information' },
+  'footer.privacy': { fr: 'Politique de confidentialité', en: 'Privacy Policy' },
+  'footer.terms': { fr: "Conditions d'utilisation", en: 'Terms of Use' },
+  'footer.contact': { fr: 'Contact', en: 'Contact' },
+  'share.label': { fr: 'Partager', en: 'Share' },
+  'share.whatsapp': { fr: 'Partager sur WhatsApp', en: 'Share on WhatsApp' },
+  'share.facebook': { fr: 'Partager sur Facebook', en: 'Share on Facebook' },
+  'share.pinterest': { fr: 'Épingler sur Pinterest', en: 'Pin on Pinterest' },
+  'legal.privacy.title': { fr: 'Politique de confidentialité', en: 'Privacy Policy' },
+  'legal.terms.title': { fr: "Conditions d'utilisation", en: 'Terms of Use' },
   'home.hero.subtitle': {
     fr: 'Des centaines de coloriages originaux pour les enfants. Téléchargez, imprimez et coloriez !',
     en: 'Hundreds of original coloring pages for kids. Download, print and color!',
@@ -142,4 +154,12 @@ export function getCategorySlug(category: Category, locale: Locale): string {
 
 export function getColoringBasePath(locale: Locale): string {
   return locale === 'fr' ? 'coloriage' : 'coloring';
+}
+
+export function getPrivacyPath(locale: Locale): string {
+  return getLocalePath(locale, locale === 'fr' ? '/confidentialite' : '/privacy');
+}
+
+export function getTermsPath(locale: Locale): string {
+  return getLocalePath(locale, locale === 'fr' ? '/conditions' : '/terms');
 }

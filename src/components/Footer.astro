@@ -1,6 +1,6 @@
 ---
 import type { Locale } from '../lib/i18n';
-import { t } from '../lib/i18n';
+import { t, kidsCategories, adultCategories, getCategoryLabel, getCategorySlug, getLocalePath, getPrivacyPath, getTermsPath } from '../lib/i18n';
 
 interface Props {
   locale: Locale;
@@ -12,24 +12,110 @@ const year = new Date().getFullYear();
 
 <footer class="site-footer">
   <div class="footer-inner">
-    <p>&copy; {year} Coloriages. {t('footer.rights', locale)}.</p>
+    <div class="footer-grid">
+      <!-- Kids categories -->
+      <div class="footer-col">
+        <h4>{t('footer.kids', locale)}</h4>
+        <ul>
+          {kidsCategories.map((cat) => (
+            <li>
+              <a href={getLocalePath(locale, `/${getCategorySlug(cat, locale)}`)}>
+                {getCategoryLabel(cat, locale)}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Adult categories -->
+      <div class="footer-col">
+        <h4>{t('footer.adults', locale)}</h4>
+        <ul>
+          {adultCategories.map((cat) => (
+            <li>
+              <a href={getLocalePath(locale, `/${getCategorySlug(cat, locale)}`)}>
+                {getCategoryLabel(cat, locale)}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Legal / info -->
+      <div class="footer-col">
+        <h4>{t('footer.legal', locale)}</h4>
+        <ul>
+          <li><a href={getPrivacyPath(locale)}>{t('footer.privacy', locale)}</a></li>
+          <li><a href={getTermsPath(locale)}>{t('footer.terms', locale)}</a></li>
+          <li><a href={`mailto:contact@coloriages.example.com`}>{t('footer.contact', locale)}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {year} Coloriages. {t('footer.rights', locale)}.</p>
+    </div>
   </div>
 </footer>
 
 <style>
   .site-footer {
-    background: white;
-    border-top: 1px solid #e5e7eb;
+    background: #1f2937;
     margin-top: 4rem;
-    padding: 2rem 1rem;
-    text-align: center;
-    color: #6b7280;
+    padding: 3rem 1rem 1.5rem;
+    color: #d1d5db;
     font-size: 0.875rem;
   }
 
   .footer-inner {
     max-width: 1200px;
     margin: 0 auto;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 640px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .footer-col h4 {
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .footer-col a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .footer-col a:hover {
+    color: white;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #374151;
+    padding-top: 1.25rem;
+    text-align: center;
+    color: #6b7280;
   }
 
   @media print {
