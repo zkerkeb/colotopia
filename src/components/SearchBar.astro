@@ -242,5 +242,16 @@ const indexUrl = `/${locale}/search-index.json`;
     document.addEventListener('click', (e) => {
       if (!bar.contains(e.target as Node)) closeResults();
     });
+
+    // Auto-trigger search from ?q= URL param (e.g. when clicking a tag)
+    const urlQ = new URLSearchParams(window.location.search).get('q');
+    if (urlQ) {
+      input.value = urlQ;
+      loadIndex().then(() => {
+        const hits = search(urlQ);
+        renderResults(hits);
+        input.focus();
+      });
+    }
   }
 </script>
