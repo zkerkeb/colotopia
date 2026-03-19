@@ -1,0 +1,79 @@
+---
+import type { Locale } from '../lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const title = locale === 'fr' ? 'Fournitures recommandées' : 'Recommended Supplies';
+const cta = locale === 'fr' ? 'Voir sur Amazon' : 'View on Amazon';
+
+const products = [
+  {
+    name: locale === 'fr' ? 'Crayons de couleur (24 pcs)' : 'Colored Pencils (24 pcs)',
+    link: '#',
+  },
+  {
+    name: locale === 'fr' ? 'Feutres lavables' : 'Washable Markers',
+    link: '#',
+  },
+];
+---
+
+<aside class="affiliate-widget">
+  <h3>{title}</h3>
+  <ul>
+    {products.map((product) => (
+      <li>
+        <span>{product.name}</span>
+        <a href={product.link} target="_blank" rel="noopener sponsored">
+          {cta} →
+        </a>
+      </li>
+    ))}
+  </ul>
+</aside>
+
+<style>
+  .affiliate-widget {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 2rem 0;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    color: #92400e;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+  }
+
+  li a {
+    color: #b45309;
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
+
+  @media print {
+    .affiliate-widget {
+      display: none;
+    }
+  }
+</style>

@@ -1,0 +1,87 @@
+---
+import type { Locale } from '../lib/i18n';
+import { t, getLocalePath } from '../lib/i18n';
+import CategoryNav from './CategoryNav.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const altLocale = locale === 'fr' ? 'en' : 'fr';
+const altLabel = locale === 'fr' ? 'EN' : 'FR';
+---
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href={getLocalePath(locale)} class="logo">
+      🎨 {t('site.title', locale)}
+    </a>
+    <nav class="header-nav">
+      <a href={getLocalePath(locale)}>{t('nav.home', locale)}</a>
+      <a
+        href={Astro.url.href.replace(`/${locale}/`, `/${altLocale}/`)}
+        class="lang-switch"
+      >
+        {altLabel}
+      </a>
+    </nav>
+  </div>
+  <CategoryNav locale={locale} />
+</header>
+
+<style>
+  .site-header {
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+
+  .header-nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .header-nav a {
+    color: #4b5563;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .header-nav a:hover {
+    color: #2563eb;
+  }
+
+  .lang-switch {
+    background: #f3f4f6;
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  @media print {
+    .site-header {
+      display: none;
+    }
+  }
+</style>

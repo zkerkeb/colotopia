@@ -1,0 +1,58 @@
+---
+import type { Locale } from '../lib/i18n';
+import { categories, getCategoryLabel, getCategorySlug, getLocalePath } from '../lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<nav class="category-nav">
+  <div class="category-nav-inner">
+    {categories.map((cat) => (
+      <a href={getLocalePath(locale, `/${getCategorySlug(cat, locale)}`)}>
+        {getCategoryLabel(cat, locale)}
+      </a>
+    ))}
+  </div>
+</nav>
+
+<style>
+  .category-nav {
+    background: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .category-nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+  }
+
+  .category-nav-inner a {
+    white-space: nowrap;
+    color: #4b5563;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.375rem 0.75rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .category-nav-inner a:hover {
+    background: #e5e7eb;
+    color: #1f2937;
+  }
+
+  @media print {
+    .category-nav {
+      display: none;
+    }
+  }
+</style>

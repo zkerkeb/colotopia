@@ -1,0 +1,97 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import type { Locale } from '../lib/i18n';
+import { t } from '../lib/i18n';
+
+interface Props {
+  title?: string;
+  description?: string;
+  locale: Locale;
+  canonical?: string;
+  ogImage?: string;
+  structuredData?: object;
+}
+
+const {
+  title,
+  description,
+  locale,
+  canonical,
+  ogImage,
+  structuredData,
+} = Astro.props;
+
+const siteTitle = t('site.title', locale);
+const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+const pageDescription = description || t('site.description', locale);
+const altLocale = locale === 'fr' ? 'en' : 'fr';
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="alternate" hreflang={locale} href={Astro.url.href} />
+    <link
+      rel="alternate"
+      hreflang={altLocale}
+      href={Astro.url.href.replace(`/${locale}/`, `/${altLocale}/`)}
+    />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:locale" content={locale === 'fr' ? 'fr_FR' : 'en_US'} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    {structuredData && (
+      <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    )}
+  </head>
+  <body>
+    <Header locale={locale} />
+    <main>
+      <slot />
+    </main>
+    <Footer locale={locale} />
+    <style is:global>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        line-height: 1.6;
+        color: #1a1a1a;
+        background: #fafafa;
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+
+      a {
+        color: #2563eb;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </body>
+</html>

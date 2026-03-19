@@ -1,0 +1,40 @@
+---
+import type { Locale } from '../lib/i18n';
+import { t } from '../lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; {year} Coloriages. {t('footer.rights', locale)}.</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: white;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 4rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  @media print {
+    .site-footer {
+      display: none;
+    }
+  }
+</style>

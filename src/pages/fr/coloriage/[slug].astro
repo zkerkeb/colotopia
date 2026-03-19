@@ -1,0 +1,34 @@
+---
+import ColoringLayout from '../../../layouts/ColoringLayout.astro';
+import AffiliateWidget from '../../../components/AffiliateWidget.astro';
+import AdSlot from '../../../components/AdSlot.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const coloriages = await getCollection(
+    'coloriages',
+    ({ data }) => data.locale === 'fr'
+  );
+  return coloriages.map((c) => ({
+    params: { slug: c.data.slug },
+    props: { coloring: c },
+  }));
+}
+
+const { coloring } = Astro.props;
+const { title, image, alt, category, tags, seoDescription } = coloring.data;
+---
+
+<ColoringLayout
+  title={title}
+  description={seoDescription}
+  locale="fr"
+  image={image}
+  alt={alt}
+  category={category}
+  tags={tags}
+>
+</ColoringLayout>
+
+<AdSlot slot="" format="rectangle" />
+<AffiliateWidget locale="fr" />

@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ColoringCard from '../../../components/ColoringCard.astro';
+import AdSlot from '../../../components/AdSlot.astro';
+import { getCollection } from 'astro:content';
+import { categories, getCategoryLabel, type Category } from '../../../lib/i18n';
+
+export function getStaticPaths() {
+  return categories.map((cat) => ({ params: { category: cat } }));
+}
+
+const locale = 'fr';
+const { category } = Astro.params as { category: Category };
+const label = getCategoryLabel(category, locale);
+
+const coloriages = await getCollection(
+  'coloriages',
+  ({ data }) => data.locale === locale && data.category === category
+);
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `Coloriages ${label}`,
+  description: `Coloriages ${label} gratuits à imprimer pour les enfants.`,
+  url: Astro.url.href,
+};
+---
+
+<BaseLayout
+  title={`Coloriages ${label}`}
+  description={`Coloriages ${label} gratuits à imprimer.`}
+  locale={locale}
+  structuredData={structuredData}
+>
+  <h1>Coloriages {label}</h1>
+  <p class="category-description">
+    Découvrez nos coloriages {label.toLowerCase()} gratuits à imprimer.
+  </p>
+
+  <AdSlot slot="" format="horizontal" />
+
+  <section class="coloring-grid">
+    {coloriages.map((c) => (
+      <ColoringCard
+        title={c.data.title}
+        slug={c.data.slug}
+        image={c.data.image}
+        alt={c.data.alt}
+        locale={locale}
+      />
+    ))}
+  </section>
+
+  {coloriages.length === 0 && (
+    <p class="empty-state">
+      Les coloriages {label.toLowerCase()} arrivent bientôt !
+    </p>
+  )}
+</BaseLayout>
+
+<style>
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .category-description {
+    color: #6b7280;
+    margin-bottom: 2rem;
+  }
+
+  .coloring-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .empty-state {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 1.1rem;
+    padding: 4rem 0;
+  }
+</style>

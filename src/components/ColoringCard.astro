@@ -1,0 +1,62 @@
+---
+import type { Locale } from '../lib/i18n';
+import { getLocalePath, getColoringBasePath } from '../lib/i18n';
+
+interface Props {
+  title: string;
+  slug: string;
+  image: string;
+  alt: string;
+  locale: Locale;
+}
+
+const { title, slug, image, alt, locale } = Astro.props;
+const href = getLocalePath(locale, `/${getColoringBasePath(locale)}/${slug}`);
+---
+
+<a href={href} class="coloring-card">
+  <div class="card-image">
+    <img src={image} alt={alt} width="300" height="400" loading="lazy" />
+  </div>
+  <h3 class="card-title">{title}</h3>
+</a>
+
+<style>
+  .coloring-card {
+    display: block;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+
+  .coloring-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+
+  .card-image {
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-title {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    color: #1a1a1a;
+    text-align: center;
+  }
+</style>
