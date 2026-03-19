@@ -1,0 +1,268 @@
+# Coloring page prompt templates
+# Used by generate-coloriages.py to generate images via DALL-E 3
+#
+# Structure:
+#   categories:
+#     <category_key>:
+#       subjects:
+#         - fr_slug: <slug used for FR filenames>
+#           en_slug: <slug used for EN filenames>
+#           fr_title: <French display title>
+#           en_title: <English display title>
+#           fr_tags: <list of French tags>
+#           en_tags: <list of English tags>
+#           prompt: <DALL-E 3 prompt for image generation>
+
+base_prompt_suffix: >
+  Coloring book page style. Thick clean black outlines on pure white background.
+  No shading, no gradients, no color fill. Simple bold shapes suitable for
+  children ages 3-8 to color. Cute and friendly style. Printable quality.
+
+categories:
+  animaux:
+    subjects:
+      - fr_slug: animaux-chat
+        en_slug: animals-cat
+        fr_title: "Chat mignon"
+        en_title: "Cute Cat"
+        fr_tags: ["chat", "animaux", "mignon", "facile"]
+        en_tags: ["cat", "animals", "cute", "easy"]
+        prompt: "A cute sitting cat with big eyes and a fluffy tail, front view, simple cartoon style."
+
+      - fr_slug: animaux-chien
+        en_slug: animals-dog
+        fr_title: "Chien joyeux"
+        en_title: "Happy Dog"
+        fr_tags: ["chien", "animaux", "joyeux", "facile"]
+        en_tags: ["dog", "animals", "happy", "easy"]
+        prompt: "A happy sitting dog with floppy ears and a wagging tail, front view, simple cartoon style."
+
+      - fr_slug: animaux-lion
+        en_slug: animals-lion
+        fr_title: "Lion royal"
+        en_title: "Royal Lion"
+        fr_tags: ["lion", "animaux", "savane", "roi"]
+        en_tags: ["lion", "animals", "savanna", "king"]
+        prompt: "A friendly lion with a big fluffy mane, sitting and smiling, simple cartoon style."
+
+      - fr_slug: animaux-elephant
+        en_slug: animals-elephant
+        fr_title: "Elephant gentil"
+        en_title: "Kind Elephant"
+        fr_tags: ["elephant", "animaux", "savane", "grand"]
+        en_tags: ["elephant", "animals", "savanna", "big"]
+        prompt: "A cute baby elephant with big ears and a raised trunk, simple cartoon style."
+
+      - fr_slug: animaux-papillon
+        en_slug: animals-butterfly
+        fr_title: "Beau papillon"
+        en_title: "Beautiful Butterfly"
+        fr_tags: ["papillon", "insecte", "nature", "joli"]
+        en_tags: ["butterfly", "insect", "nature", "pretty"]
+        prompt: "A beautiful butterfly with symmetrical wings covered in simple patterns, top-down view."
+
+      - fr_slug: animaux-poisson
+        en_slug: animals-fish
+        fr_title: "Poisson coloré"
+        en_title: "Colorful Fish"
+        fr_tags: ["poisson", "mer", "ocean", "facile"]
+        en_tags: ["fish", "sea", "ocean", "easy"]
+        prompt: "A cute tropical fish with fins and scales, side view, simple cartoon style."
+
+      - fr_slug: animaux-oiseau
+        en_slug: animals-bird
+        fr_title: "Petit oiseau"
+        en_title: "Little Bird"
+        fr_tags: ["oiseau", "animaux", "ciel", "facile"]
+        en_tags: ["bird", "animals", "sky", "easy"]
+        prompt: "A cute small bird perched on a branch with wings slightly open, simple cartoon style."
+
+      - fr_slug: animaux-lapin
+        en_slug: animals-rabbit
+        fr_title: "Lapin doux"
+        en_title: "Soft Rabbit"
+        fr_tags: ["lapin", "animaux", "doux", "facile"]
+        en_tags: ["rabbit", "animals", "soft", "easy"]
+        prompt: "A cute fluffy rabbit with long ears, sitting upright, simple cartoon style."
+
+      - fr_slug: animaux-cheval
+        en_slug: animals-horse
+        fr_title: "Beau cheval"
+        en_title: "Beautiful Horse"
+        fr_tags: ["cheval", "animaux", "ferme", "fier"]
+        en_tags: ["horse", "animals", "farm", "proud"]
+        prompt: "A friendly horse with a flowing mane, standing proudly, side view, simple cartoon style."
+
+      - fr_slug: animaux-dinosaure
+        en_slug: animals-dinosaur
+        fr_title: "Dinosaure sympa"
+        en_title: "Friendly Dinosaur"
+        fr_tags: ["dinosaure", "prehistoire", "cool", "facile"]
+        en_tags: ["dinosaur", "prehistoric", "cool", "easy"]
+        prompt: "A friendly cute dinosaur (T-Rex style) standing upright with tiny arms, cartoon style."
+
+  vehicules:
+    subjects:
+      - fr_slug: vehicules-voiture
+        en_slug: vehicles-car
+        fr_title: "Voiture rapide"
+        en_title: "Fast Car"
+        fr_tags: ["voiture", "vehicule", "route", "rapide"]
+        en_tags: ["car", "vehicle", "road", "fast"]
+        prompt: "A cute cartoon race car with big wheels and a spoiler, side view, simple cartoon style."
+
+      - fr_slug: vehicules-camion
+        en_slug: vehicles-truck
+        fr_title: "Grand camion"
+        en_title: "Big Truck"
+        fr_tags: ["camion", "vehicule", "grand", "route"]
+        en_tags: ["truck", "vehicle", "big", "road"]
+        prompt: "A big friendly cartoon truck with a large cab and cargo area, side view, simple style."
+
+      - fr_slug: vehicules-avion
+        en_slug: vehicles-airplane
+        fr_title: "Avion dans le ciel"
+        en_title: "Airplane in the Sky"
+        fr_tags: ["avion", "ciel", "voyage", "voler"]
+        en_tags: ["airplane", "sky", "travel", "fly"]
+        prompt: "A cute cartoon airplane with round windows, wings, and a propeller, side view, simple style."
+
+      - fr_slug: vehicules-bateau
+        en_slug: vehicles-boat
+        fr_title: "Joli bateau"
+        en_title: "Pretty Boat"
+        fr_tags: ["bateau", "mer", "voilier", "voyage"]
+        en_tags: ["boat", "sea", "sailboat", "travel"]
+        prompt: "A cute cartoon sailboat with a large sail and a hull, side view on calm water, simple style."
+
+      - fr_slug: vehicules-train
+        en_slug: vehicles-train
+        fr_title: "Petit train"
+        en_title: "Little Train"
+        fr_tags: ["train", "rail", "voyage", "locomotive"]
+        en_tags: ["train", "rail", "travel", "locomotive"]
+        prompt: "A cute cartoon steam locomotive with smoke puffs, side view, simple cartoon style."
+
+      - fr_slug: vehicules-fusee
+        en_slug: vehicles-rocket
+        fr_title: "Fusée spatiale"
+        en_title: "Space Rocket"
+        fr_tags: ["fusee", "espace", "astronaute", "cool"]
+        en_tags: ["rocket", "space", "astronaut", "cool"]
+        prompt: "A cute cartoon rocket ship with fins and a porthole, launching upward, simple cartoon style."
+
+      - fr_slug: vehicules-helicoptere
+        en_slug: vehicles-helicopter
+        fr_title: "Hélicoptère"
+        en_title: "Helicopter"
+        fr_tags: ["helicoptere", "ciel", "voler", "helices"]
+        en_tags: ["helicopter", "sky", "fly", "blades"]
+        prompt: "A cute cartoon helicopter with rotor blades and a round cockpit, side view, simple style."
+
+      - fr_slug: vehicules-moto
+        en_slug: vehicles-motorcycle
+        fr_title: "Moto cool"
+        en_title: "Cool Motorcycle"
+        fr_tags: ["moto", "vehicule", "cool", "route"]
+        en_tags: ["motorcycle", "vehicle", "cool", "road"]
+        prompt: "A cartoon motorcycle with large wheels, handlebars, and a seat, side view, simple cartoon style."
+
+  nature:
+    subjects:
+      - fr_slug: nature-arbre
+        en_slug: nature-tree
+        fr_title: "Grand arbre"
+        en_title: "Big Tree"
+        fr_tags: ["arbre", "nature", "foret", "vert"]
+        en_tags: ["tree", "nature", "forest", "green"]
+        prompt: "A big round tree with a thick trunk and leafy canopy, simple cartoon style."
+
+      - fr_slug: nature-fleur
+        en_slug: nature-flower
+        fr_title: "Belle fleur"
+        en_title: "Beautiful Flower"
+        fr_tags: ["fleur", "nature", "jardin", "joli"]
+        en_tags: ["flower", "nature", "garden", "pretty"]
+        prompt: "A cute cartoon sunflower with large petals and a round center, front view, simple style."
+
+      - fr_slug: nature-soleil
+        en_slug: nature-sun
+        fr_title: "Soleil souriant"
+        en_title: "Smiling Sun"
+        fr_tags: ["soleil", "ciel", "joyeux", "chaud"]
+        en_tags: ["sun", "sky", "happy", "warm"]
+        prompt: "A smiling cartoon sun with rays all around, simple face with eyes and smile, simple style."
+
+      - fr_slug: nature-lune
+        en_slug: nature-moon
+        fr_title: "Belle lune"
+        en_title: "Beautiful Moon"
+        fr_tags: ["lune", "nuit", "etoile", "ciel"]
+        en_tags: ["moon", "night", "star", "sky"]
+        prompt: "A crescent moon with a smiling face and stars around it, simple cartoon style."
+
+      - fr_slug: nature-etoile
+        en_slug: nature-star
+        fr_title: "Etoile brillante"
+        en_title: "Shining Star"
+        fr_tags: ["etoile", "ciel", "nuit", "brillant"]
+        en_tags: ["star", "sky", "night", "shining"]
+        prompt: "A large five-pointed star with a smiling face and sparkle details, simple cartoon style."
+
+      - fr_slug: nature-montagne
+        en_slug: nature-mountain
+        fr_title: "Haute montagne"
+        en_title: "High Mountain"
+        fr_tags: ["montagne", "nature", "neige", "paysage"]
+        en_tags: ["mountain", "nature", "snow", "landscape"]
+        prompt: "A majestic mountain with a snow-capped peak and pine trees at the base, simple landscape style."
+
+      - fr_slug: nature-ocean
+        en_slug: nature-ocean
+        fr_title: "Ocean bleu"
+        en_title: "Blue Ocean"
+        fr_tags: ["ocean", "mer", "vague", "nature"]
+        en_tags: ["ocean", "sea", "wave", "nature"]
+        prompt: "Ocean waves with a sun above the horizon, a dolphin jumping, simple cartoon landscape style."
+
+  alphabet:
+    subjects:
+      - fr_slug: alphabet-a
+        en_slug: alphabet-a
+        fr_title: "La lettre A"
+        en_title: "The Letter A"
+        fr_tags: ["alphabet", "lettre", "A", "apprendre"]
+        en_tags: ["alphabet", "letter", "A", "learn"]
+        prompt: "The capital letter A decorated with an apple motif, cute and simple cartoon style for children."
+
+      - fr_slug: alphabet-b
+        en_slug: alphabet-b
+        fr_title: "La lettre B"
+        en_title: "The Letter B"
+        fr_tags: ["alphabet", "lettre", "B", "apprendre"]
+        en_tags: ["alphabet", "letter", "B", "learn"]
+        prompt: "The capital letter B decorated with a butterfly or ball motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-c
+        en_slug: alphabet-c
+        fr_title: "La lettre C"
+        en_title: "The Letter C"
+        fr_tags: ["alphabet", "lettre", "C", "apprendre"]
+        en_tags: ["alphabet", "letter", "C", "learn"]
+        prompt: "The capital letter C decorated with a cat or cloud motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-d
+        en_slug: alphabet-d
+        fr_title: "La lettre D"
+        en_title: "The Letter D"
+        fr_tags: ["alphabet", "lettre", "D", "apprendre"]
+        en_tags: ["alphabet", "letter", "D", "learn"]
+        prompt: "The capital letter D decorated with a dinosaur or dolphin motif, cute cartoon style for children."
+
+      - fr_slug: alphabet-e
+        en_slug: alphabet-e
+        fr_title: "La lettre E"
+        en_title: "The Letter E"
+        fr_tags: ["alphabet", "lettre", "E", "apprendre"]
+        en_tags: ["alphabet", "letter", "E", "learn"]
+        prompt: "The capital letter E decorated with an elephant or eagle motif, cute cartoon style for children."
