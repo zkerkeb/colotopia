@@ -26,11 +26,39 @@ import json
 import os
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import yaml
-from datetime import timezone
+
+# ---------------------------------------------------------------------------
+# Auto-load .env file if present (so keys don't need manual export)
+# ---------------------------------------------------------------------------
+
+def _load_dotenv(env_path: Path):
+    """Minimal .env loader — sets vars that aren't already in the environment."""
+    if not env_path.exists():
+        return
+    with open(env_path, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            if "=" not in line:
+                continue
+            key, _, value = line.partition("=")
+            key = key.strip()
+            value = value.strip().strip('"').strip("'")
+            if key and key not in os.environ:
+                os.environ[key] = value
+
+_load_dotenv(Path(__file__).parent.parent / ".env")
+
+
+class QuotaExhaustedError(Exception):
+    """Raised when the API quota is exhausted — stops the batch early."""
+    pass
+
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -295,10 +323,14 @@ def process_subject(
         image_path.write_bytes(png_bytes)
         print(f"  [ok ] Saved {image_path.stat().st_size // 1024}KB → {image_path}")
     except Exception as e:
-        print(f"  [err] Failed to generate {image_slug}: {e}", file=sys.stderr)
+        error_str = str(e)
+        print(f"  [err] Failed to generate {image_slug}: {error_str}", file=sys.stderr)
         entry["status"] = "error"
-        entry["error"] = str(e)
+        entry["error"] = error_str
         log_entries.append(entry)
+        # Propagate quota errors so the caller can stop early
+        if "RESOURCE_EXHAUSTED" in error_str or "429" in error_str:
+            raise QuotaExhaustedError(error_str)
         return False
 
     # Skip content YAMLs for A/B comparison images (they use a suffixed slug)
@@ -416,19 +448,26 @@ def run(args):
         if ok:
             success += 1
 
+    quota_hit = False
     for cat_name in selected:
+        if quota_hit:
+            break
         subjects = categories[cat_name]["subjects"]
         count = args.count if args.count else len(subjects)
         print(f"\n=== Category: {cat_name} ({min(count, len(subjects))} subjects) ===")
 
         for subject in subjects[:count]:
-            if compare_mode:
-                # Generate both backends with suffixed filenames for side-by-side review
-                _generate_one(subject, "dalle3", dalle_client, img_suffix="-dalle3")
-                _generate_one(subject, "gemini", gemini_client, img_suffix="-gemini")
-            else:
-                the_client = gemini_client if backend == "gemini" else dalle_client
-                _generate_one(subject, backend, the_client)
+            try:
+                if compare_mode:
+                    _generate_one(subject, "dalle3", dalle_client, img_suffix="-dalle3")
+                    _generate_one(subject, "gemini", gemini_client, img_suffix="-gemini")
+                else:
+                    the_client = gemini_client if backend == "gemini" else dalle_client
+                    _generate_one(subject, backend, the_client)
+            except QuotaExhaustedError:
+                print("\n[STOP] API quota exhausted — stopping batch to avoid wasting calls.", file=sys.stderr)
+                quota_hit = True
+                break
 
     # Write log
     log_file = logs_dir / f"generation-{datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S')}.json"
