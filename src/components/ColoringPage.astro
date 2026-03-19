@@ -41,6 +41,10 @@ const {
 } = Astro.props;
 
 const printLabel = locale === 'fr' ? '🖨️ Imprimer' : '🖨️ Print';
+
+// Derive WebP path from PNG path (original PNG kept for PDF generation)
+// e.g. /images/coloriages/animaux-chat.png → /images/coloriages/animaux-chat.webp
+const imageWebp = image.replace(/\.png$/, '.webp');
 ---
 
 <article class="coloring-page">
@@ -55,7 +59,10 @@ const printLabel = locale === 'fr' ? '🖨️ Imprimer' : '🖨️ Print';
     <!-- Main content -->
     <div class="main-content">
       <div class="coloring-image">
-        <img src={image} alt={alt} width="800" height="1100" loading="eager" />
+        <picture>
+          <source type="image/webp" srcset={imageWebp} />
+          <img src={image} alt={alt} width="800" height="1100" loading="eager" decoding="async" fetchpriority="high" />
+        </picture>
       </div>
 
       <div class="coloring-actions">

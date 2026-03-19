@@ -12,11 +12,18 @@ interface Props {
 
 const { title, slug, image, alt, locale } = Astro.props;
 const href = getLocalePath(locale, `/${getColoringBasePath(locale)}/${slug}`);
+
+// Derive WebP thumbnail path from PNG path
+// e.g. /images/coloriages/animaux-chat.png → /images/coloriages/thumbs/animaux-chat.webp
+const thumbWebp = image.replace('/images/coloriages/', '/images/coloriages/thumbs/').replace(/\.png$/, '.webp');
 ---
 
 <a href={href} class="coloring-card">
   <div class="card-image">
-    <img src={image} alt={alt} width="300" height="400" loading="lazy" />
+    <picture>
+      <source type="image/webp" srcset={thumbWebp} />
+      <img src={image} alt={alt} width="300" height="400" loading="lazy" decoding="async" />
+    </picture>
   </div>
   <h3 class="card-title">{title}</h3>
 </a>

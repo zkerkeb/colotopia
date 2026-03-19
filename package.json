@@ -4,8 +4,9 @@
   "type": "module",
   "description": "Site bilingue FR/EN de coloriages a imprimer pour enfants",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
+    "optimize-images": "node scripts/optimize-images.mjs",
+    "dev": "node scripts/optimize-images.mjs && astro dev",
+    "build": "node scripts/optimize-images.mjs && astro build",
     "preview": "astro preview",
     "check": "astro check"
   },
