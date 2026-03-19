@@ -2014,6 +2014,22 @@ categories:
         en_tags: ["penguin", "chef", "funny", "cooking"]
         prompt: "A penguin wearing a chef hat and apron, holding a wooden spoon with a big smile."
 
+      - fr_slug: drole-ours-velo
+        en_slug: funny-bear-bicycle
+        fr_title: "Ours cycliste"
+        en_title: "Bear on Bicycle"
+        fr_tags: ["ours", "velo", "drole", "cycliste"]
+        en_tags: ["bear", "bicycle", "funny", "cyclist"]
+        prompt: "A chubby bear wearing a helmet and backpack, pedaling a bicycle with a happy grin."
+
+      - fr_slug: drole-lapin-magicien
+        en_slug: funny-rabbit-magician
+        fr_title: "Lapin magicien"
+        en_title: "Magician Rabbit"
+        fr_tags: ["lapin", "magie", "drole", "chapeau"]
+        en_tags: ["rabbit", "magic", "funny", "hat"]
+        prompt: "A rabbit in a magician bow tie pulling a giant carrot from a top hat with a wink."
+
   personnages:
     subjects:
       - fr_slug: personnages-pirate
@@ -2269,3 +2285,27 @@ categories:
         fr_tags: ["paysage", "mer", "voilier", "adulte"]
         en_tags: ["landscape", "sea", "sailboat", "adult"]
         prompt: "A peaceful seascape with gentle waves, several sailboats on the horizon, a rocky shore, and seagulls in the sky."
+
+      - fr_slug: paysages-mont-fuji
+        en_slug: landscapes-mount-fuji
+        fr_title: "Mont Fuji au printemps"
+        en_title: "Mount Fuji in Spring"
+        fr_tags: ["paysage", "japon", "mont-fuji", "adulte"]
+        en_tags: ["landscape", "japan", "fuji", "adult"]
+        prompt: "Mount Fuji with cherry blossom trees in full bloom, a traditional pagoda, stone lanterns, and a serene lake reflection."
+
+      - fr_slug: paysages-pyramides
+        en_slug: landscapes-pyramids
+        fr_title: "Pyramides d'Egypte"
+        en_title: "Egyptian Pyramids"
+        fr_tags: ["paysage", "egypte", "pyramides", "adulte"]
+        en_tags: ["landscape", "egypt", "pyramids", "adult"]
+        prompt: "The Great Pyramids of Giza with the Sphinx, sweeping sand dunes, palm trees, and a camel caravan at sunset."
+
+      - fr_slug: paysages-fjord
+        en_slug: landscapes-fjord
+        fr_title: "Fjord de Norvege"
+        en_title: "Norwegian Fjord"
+        fr_tags: ["paysage", "norvege", "fjord", "adulte"]
+        en_tags: ["landscape", "norway", "fjord", "adult"]
+        prompt: "A dramatic Norwegian fjord with steep mountain walls, a small village on the shore, wooden boats, and waterfalls."

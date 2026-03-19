@@ -182,3 +182,21 @@
   category: "vehicules"
   status: "failed-qa"
   reason: "URL watermark + copyright risk (Thomas the Tank Engine)"
+
+# Heartbeat 2 — 2026-03-19 (quota near-exhausted, only 2 images generated):
+- date: "2026-03-19"
+  slug: "paysages-alpes"
+  category: "paysages"
+  prompt: "Alpine mountain landscape with snow-capped peaks, pine forests, wooden chalet, lake reflection."
+  status: "published"
+
+- date: "2026-03-19"
+  slug: "paysages-lavande"
+  category: "paysages"
+  prompt: "Rolling Provencal lavender fields with a stone farmhouse, cypress trees, and distant hills."
+  status: "published"
+
+# Queued for next heartbeat (quota reset):
+# paysages-cote-bretonne, paysages-foret-tropicale, paysages-canyon, paysages-mer-voiliers (missing images)
+# paysages-mont-fuji, paysages-pyramides, paysages-fjord (new prompts added today)
+# drole-ours-velo, drole-lapin-magicien (new prompts added today)
