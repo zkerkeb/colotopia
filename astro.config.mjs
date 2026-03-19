@@ -3,7 +3,7 @@ import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 
 export default defineConfig({
-  site: 'https://coloriages.example.com',
+  site: 'https://colotopia.com',
   output: 'static',
   integrations: [
     sitemap({

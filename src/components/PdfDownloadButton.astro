@@ -10,7 +10,7 @@ interface Props {
 const { image, title, locale } = Astro.props;
 const label = locale === 'fr' ? '📥 Télécharger le PDF' : '📥 Download PDF';
 const loadingLabel = locale === 'fr' ? 'Génération...' : 'Generating...';
-const siteUrl = Astro.site?.href ?? 'https://coloriages.example.com';
+const siteUrl = Astro.site?.href ?? 'https://colotopia.com';
 const watermarkText = locale === 'fr'
   ? `Coloriage gratuit • ${siteUrl}`
   : `Free coloring page • ${siteUrl}`;
