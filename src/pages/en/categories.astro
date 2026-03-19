@@ -111,7 +111,7 @@ const structuredData = {
 </BaseLayout>
 
 <script>
-  document.addEventListener('astro:page-load', () => {
+  document.addEventListener('DOMContentLoaded', () => {
     const tabs = document.querySelectorAll<HTMLButtonElement>('.tab');
     const panels = {
       kids: document.getElementById('tab-kids'),
