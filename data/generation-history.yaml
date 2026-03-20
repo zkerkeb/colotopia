@@ -159,29 +159,29 @@
   status: "published"
   prompt: "A big cartoon delivery truck with a large cab and cargo trailer, side view."
 
-- date: "2026-03-19"
+- date: "2026-03-20"
   slug: "vehicules-ambulance"
   category: "vehicules"
-  status: "failed-qa"
-  reason: "SVG code as text + grayscale photo"
+  status: "published"
+  prompt: "A cartoon ambulance van with a red cross on the side and a light bar on the roof."
 
-- date: "2026-03-19"
+- date: "2026-03-20"
   slug: "vehicules-fusee"
   category: "vehicules"
-  status: "failed-qa"
-  reason: "photo of real person instead of line art"
+  status: "published"
+  prompt: "A cartoon rocket ship with fins and a round window, pointing upward."
 
-- date: "2026-03-19"
+- date: "2026-03-20"
   slug: "vehicules-tracteur"
   category: "vehicules"
-  status: "failed-qa"
-  reason: "photo of real person instead of line art"
+  status: "published"
+  prompt: "A cartoon farm tractor with big rear wheels and small front wheels, side view."
 
-- date: "2026-03-19"
+- date: "2026-03-20"
   slug: "vehicules-train"
   category: "vehicules"
-  status: "failed-qa"
-  reason: "URL watermark + copyright risk (Thomas the Tank Engine)"
+  status: "published"
+  prompt: "A cheerful cartoon locomotive engine on a railway track, side view."
 
 # Heartbeat 2 — 2026-03-19 (quota near-exhausted, only 2 images generated):
 - date: "2026-03-19"
@@ -196,7 +196,37 @@
   prompt: "Rolling Provencal lavender fields with a stone farmhouse, cypress trees, and distant hills."
   status: "published"
 
-# Queued for next heartbeat (quota reset):
+- date: "2026-03-20"
+  slug: "drole-singe-voiture"
+  category: "drole"
+  status: "published"
+  prompt: "A monkey in sunglasses driving a race car, grinning and waving from the window."
+
+- date: "2026-03-20"
+  slug: "drole-chat-astronaute"
+  category: "drole"
+  status: "published"
+  prompt: "A cat wearing a space suit and helmet, floating near the moon with stars around."
+
+- date: "2026-03-20"
+  slug: "drole-dinosaure-skateboard"
+  category: "drole"
+  status: "published"
+  prompt: "A T-Rex balanced on a skateboard with tiny arms raised happily in the air."
+
+- date: "2026-03-20"
+  slug: "drole-grenouille-chevalier"
+  category: "drole"
+  status: "published"
+  prompt: "A frog in knight armor holding a sword and a round shield, standing proudly."
+
+- date: "2026-03-20"
+  slug: "drole-pingouin-chef"
+  category: "drole"
+  status: "published"
+  prompt: "A penguin wearing a chef hat and apron, holding a wooden spoon with a big smile."
+
+# Queued for next heartbeat:
 # paysages-cote-bretonne, paysages-foret-tropicale, paysages-canyon, paysages-mer-voiliers (missing images)
-# paysages-mont-fuji, paysages-pyramides, paysages-fjord (new prompts added today)
-# drole-ours-velo, drole-lapin-magicien (new prompts added today)
+# paysages-mont-fuji, paysages-pyramides, paysages-fjord (new prompts added)
+# drole-ours-velo, drole-lapin-magicien (new prompts added)
