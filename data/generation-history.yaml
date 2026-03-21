@@ -523,9 +523,20 @@
   prompt: "A robot holding a large paintbrush making splashes on a canvas, paint drops around, smiling."
   status: "published"
 
-# Queued for tomorrow (quota exhausted — images deleted, prompts updated in yaml):
-# - drole-loup-ballet (shading fail → prompt updated)
+# Heartbeat 6 — 2026-03-21 (quota exhausted, 2 verified regenerations):
+- date: "2026-03-21"
+  slug: "musique-concert"
+  category: "musique"
+  prompt: "A concert stage with a vintage microphone, two speakers, and three spotlights shining down."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "musique-maracas"
+  category: "musique"
+  prompt: "Two maracas surrounded by music notes, stars, and decorative swirls."
+  status: "published"
+
+# QA failures (quota exhausted — queued for next-day regen):
+# - drole-loup-ballet (photo of real person → prompt updated in coloriages-prompts.yaml)
 # - paysages-santorin (shading fail → prompt updated)
-# - musique-concert (solid black crowd → prompt updated)
-# - musique-maracas (shading + text on image → retry)
 # - robots-surfeur (photo of real person → retry)
