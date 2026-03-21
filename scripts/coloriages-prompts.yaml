@@ -2030,6 +2030,164 @@ categories:
         en_tags: ["rabbit", "magic", "funny", "hat"]
         prompt: "A rabbit in a magician bow tie pulling a giant carrot from a top hat with a wink."
 
+      - fr_slug: drole-requin-surfeur
+        en_slug: funny-shark-surfer
+        fr_title: "Requin surfeur"
+        en_title: "Surfing Shark"
+        fr_tags: ["requin", "surf", "drole", "ocean"]
+        en_tags: ["shark", "surf", "funny", "ocean"]
+        prompt: "A shark in sunglasses riding a surfboard on a wave, arms raised, big grin."
+
+      - fr_slug: drole-lion-guitare
+        en_slug: funny-lion-guitar
+        fr_title: "Lion rockstar"
+        en_title: "Rock Star Lion"
+        fr_tags: ["lion", "guitare", "rock", "drole"]
+        en_tags: ["lion", "guitar", "rock", "funny"]
+        prompt: "A lion with a big mane playing electric guitar on stage, rock star pose."
+
+      - fr_slug: drole-elephant-peintre
+        en_slug: funny-elephant-painter
+        fr_title: "Elephant peintre"
+        en_title: "Elephant Painter"
+        fr_tags: ["elephant", "peinture", "drole", "art"]
+        en_tags: ["elephant", "painting", "funny", "art"]
+        prompt: "An elephant using its trunk as a paintbrush, painting a colorful picture on canvas."
+
+      - fr_slug: drole-crocodile-dentiste
+        en_slug: funny-crocodile-dentist
+        fr_title: "Crocodile dentiste"
+        en_title: "Crocodile Dentist"
+        fr_tags: ["crocodile", "dentiste", "drole", "dents"]
+        en_tags: ["crocodile", "dentist", "funny", "teeth"]
+        prompt: "A crocodile wearing a dentist coat and glasses, inspecting tiny teeth with a mirror."
+
+  robots:
+    subjects:
+      - fr_slug: robots-danseur
+        en_slug: robots-dancer
+        fr_title: "Robot danseur"
+        en_title: "Dancing Robot"
+        fr_tags: ["robot", "danse", "drole", "disco"]
+        en_tags: ["robot", "dance", "funny", "disco"]
+        prompt: "A round cute robot doing a funky dance move with arms out, big dot eyes, happy."
+
+      - fr_slug: robots-jardinier
+        en_slug: robots-gardener
+        fr_title: "Robot jardinier"
+        en_title: "Gardener Robot"
+        fr_tags: ["robot", "jardin", "fleurs", "arrosoir"]
+        en_tags: ["robot", "garden", "flowers", "watering"]
+        prompt: "A friendly boxy robot watering flowers in a sunny garden with a small watering can."
+
+      - fr_slug: robots-astronaute
+        en_slug: robots-astronaut
+        fr_title: "Robot astronaute"
+        en_title: "Astronaut Robot"
+        fr_tags: ["robot", "espace", "etoiles", "planete"]
+        en_tags: ["robot", "space", "stars", "planet"]
+        prompt: "A cute boxy robot floating in space with stars and a planet nearby, antenna blinking."
+
+      - fr_slug: robots-pompier
+        en_slug: robots-firefighter
+        fr_title: "Robot pompier"
+        en_title: "Firefighter Robot"
+        fr_tags: ["robot", "pompier", "tuyau", "casque"]
+        en_tags: ["robot", "firefighter", "hose", "helmet"]
+        prompt: "A robot wearing a firefighter helmet, aiming a water hose, big round eyes, cartoon style."
+
+      - fr_slug: robots-chef
+        en_slug: robots-chef
+        fr_title: "Robot cuisinier"
+        en_title: "Chef Robot"
+        fr_tags: ["robot", "cuisine", "chef", "toque"]
+        en_tags: ["robot", "cooking", "chef", "hat"]
+        prompt: "A robot wearing a chef toque, stirring a pot with one arm, holding a spatula with the other."
+
+  musique:
+    subjects:
+      - fr_slug: musique-guitare
+        en_slug: music-guitar
+        fr_title: "Guitare electrique"
+        en_title: "Electric Guitar"
+        fr_tags: ["musique", "guitare", "rock", "notes"]
+        en_tags: ["music", "guitar", "rock", "notes"]
+        prompt: "A cartoon electric guitar with musical notes floating around it, simple bold lines."
+
+      - fr_slug: musique-piano
+        en_slug: music-piano
+        fr_title: "Piano a queue"
+        en_title: "Grand Piano"
+        fr_tags: ["musique", "piano", "classique", "touches"]
+        en_tags: ["music", "piano", "classic", "keys"]
+        prompt: "A cartoon grand piano with musical notes and stars floating above the keys."
+
+      - fr_slug: musique-batterie
+        en_slug: music-drums
+        fr_title: "Batterie rock"
+        en_title: "Rock Drum Kit"
+        fr_tags: ["musique", "batterie", "rock", "baguettes"]
+        en_tags: ["music", "drums", "rock", "sticks"]
+        prompt: "A cartoon drum kit with cymbals and bass drum, drumsticks crossing above, musical notes."
+
+      - fr_slug: musique-violon
+        en_slug: music-violin
+        fr_title: "Violon melodieux"
+        en_title: "Melodious Violin"
+        fr_tags: ["musique", "violon", "archet", "classique"]
+        en_tags: ["music", "violin", "bow", "classic"]
+        prompt: "A cartoon violin with its bow resting beside it, musical notes swirling around, simple style."
+
+      - fr_slug: musique-trompette
+        en_slug: music-trumpet
+        fr_title: "Trompette de jazz"
+        en_title: "Jazz Trumpet"
+        fr_tags: ["musique", "trompette", "jazz", "notes"]
+        en_tags: ["music", "trumpet", "jazz", "notes"]
+        prompt: "A cartoon trumpet with musical notes bursting from the bell, simple bold outline."
+
+  pirates:
+    subjects:
+      - fr_slug: pirates-navire
+        en_slug: pirates-ship
+        fr_title: "Navire pirate"
+        en_title: "Pirate Ship"
+        fr_tags: ["pirate", "navire", "mer", "drapeau"]
+        en_tags: ["pirate", "ship", "sea", "flag"]
+        prompt: "A cartoon pirate ship with tall masts, a skull flag, and waves below, side view."
+
+      - fr_slug: pirates-tresor
+        en_slug: pirates-treasure
+        fr_title: "Coffre au tresor"
+        en_title: "Treasure Chest"
+        fr_tags: ["pirate", "tresor", "coffre", "or"]
+        en_tags: ["pirate", "treasure", "chest", "gold"]
+        prompt: "An open treasure chest overflowing with gold coins, gems, and jewels, cartoon style."
+
+      - fr_slug: pirates-carte
+        en_slug: pirates-map
+        fr_title: "Carte au tresor"
+        en_title: "Treasure Map"
+        fr_tags: ["pirate", "carte", "tresor", "aventure"]
+        en_tags: ["pirate", "map", "treasure", "adventure"]
+        prompt: "A rolled-out treasure map with a dotted path, palm tree, and a big X marking the spot."
+
+      - fr_slug: pirates-perroquet
+        en_slug: pirates-parrot
+        fr_title: "Perroquet du pirate"
+        en_title: "Pirate's Parrot"
+        fr_tags: ["pirate", "perroquet", "oiseau", "epaule"]
+        en_tags: ["pirate", "parrot", "bird", "shoulder"]
+        prompt: "A colorful cartoon parrot perched on a pirate's shoulder, holding a tiny spyglass."
+
+      - fr_slug: pirates-ile
+        en_slug: pirates-island
+        fr_title: "Ile au tresor"
+        en_title: "Treasure Island"
+        fr_tags: ["pirate", "ile", "palmier", "tresor"]
+        en_tags: ["pirate", "island", "palm", "treasure"]
+        prompt: "A small tropical island with a palm tree, a shovel, and a treasure chest half buried in sand."
+
   personnages:
     subjects:
       - fr_slug: personnages-pirate
@@ -2284,7 +2442,7 @@ categories:
         en_title: "Sea and Sailboats"
         fr_tags: ["paysage", "mer", "voilier", "adulte"]
         en_tags: ["landscape", "sea", "sailboat", "adult"]
-        prompt: "A peaceful seascape with gentle waves, several sailboats on the horizon, a rocky shore, and seagulls in the sky."
+        prompt: "Sailboats on calm ocean waves, seagulls soaring, rocky shore in foreground, clouds above."
 
       - fr_slug: paysages-mont-fuji
         en_slug: landscapes-mount-fuji

@@ -226,7 +226,83 @@
   status: "published"
   prompt: "A penguin wearing a chef hat and apron, holding a wooden spoon with a big smile."
 
-# Queued for next heartbeat:
-# paysages-cote-bretonne, paysages-foret-tropicale, paysages-canyon, paysages-mer-voiliers (missing images)
-# paysages-mont-fuji, paysages-pyramides, paysages-fjord (new prompts added)
-# drole-ours-velo, drole-lapin-magicien (new prompts added)
+# Heartbeat 3 — 2026-03-21:
+- date: "2026-03-21"
+  slug: "paysages-foret-tropicale"
+  category: "paysages"
+  prompt: "A lush tropical rainforest with towering trees, exotic plants, a winding river, and colorful birds perched in branches."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "paysages-canyon"
+  category: "paysages"
+  prompt: "A vast canyon landscape with layered rock formations, a river winding far below, and sparse desert plants on the rim."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "paysages-mer-voiliers"
+  category: "paysages"
+  prompt: "Sailboats on calm ocean waves, seagulls soaring, rocky shore in foreground, clouds above."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "paysages-fjord"
+  category: "paysages"
+  prompt: "A dramatic Norwegian fjord with steep mountain walls, a small village on the shore, wooden boats, and waterfalls."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "paysages-cote-bretonne"
+  category: "paysages"
+  prompt: "A dramatic Brittany coastline with rocky cliffs, crashing waves, a lighthouse, and seabirds soaring in the sky."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "paysages-mont-fuji"
+  category: "paysages"
+  prompt: "Mount Fuji with cherry blossom trees in full bloom, a traditional pagoda, stone lanterns, and a serene lake reflection."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "paysages-pyramides"
+  category: "paysages"
+  prompt: "The Great Pyramids of Giza with the Sphinx, sweeping sand dunes, palm trees, and a camel caravan at sunset."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "drole-ours-velo"
+  category: "drole"
+  prompt: "A chubby bear wearing a helmet and backpack, pedaling a bicycle with a happy grin."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "drole-lapin-magicien"
+  category: "drole"
+  prompt: "A rabbit in a magician bow tie pulling a giant carrot from a top hat with a wink."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "drole-requin-surfeur"
+  category: "drole"
+  prompt: "A shark in sunglasses riding a surfboard on a wave, arms raised, big grin."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "drole-lion-guitare"
+  category: "drole"
+  prompt: "A lion with a big mane playing electric guitar on stage, rock star pose."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "drole-elephant-peintre"
+  category: "drole"
+  prompt: "An elephant using its trunk as a paintbrush, painting a colorful picture on canvas."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "drole-crocodile-dentiste"
+  category: "drole"
+  prompt: "A crocodile wearing a dentist coat and glasses, inspecting tiny teeth with a mirror."
+  status: "published"
+
+# New categories added 2026-03-21: robots, musique, pirates (prompts queued, images to generate)
