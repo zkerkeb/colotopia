@@ -2687,3 +2687,255 @@ categories:
         fr_tags: ["robot", "peinture", "art", "pinceau"]
         en_tags: ["robot", "painting", "art", "brush"]
         prompt: "A robot holding a large paintbrush making splashes on a canvas, paint drops around, smiling."
+
+  # ---- Ferme (NEW category) ----
+  ferme:
+    subjects:
+      - fr_slug: ferme-vache
+        en_slug: farm-cow
+        fr_title: "La vache de la ferme"
+        en_title: "Farm Cow"
+        fr_tags: ["vache", "ferme", "animal", "enfant"]
+        en_tags: ["cow", "farm", "animal", "kids"]
+        prompt: "A round cartoon cow with big eyes, spots, and a cowbell, standing in a green meadow."
+
+      - fr_slug: ferme-poule
+        en_slug: farm-hen
+        fr_title: "La poule et ses poussins"
+        en_title: "Hen and Chicks"
+        fr_tags: ["poule", "poussin", "ferme", "enfant"]
+        en_tags: ["hen", "chicks", "farm", "kids"]
+        prompt: "A fluffy cartoon hen with three tiny chicks around her feet, pecking at the ground."
+
+      - fr_slug: ferme-cochon
+        en_slug: farm-pig
+        fr_title: "Le cochon rose"
+        en_title: "Pink Pig"
+        fr_tags: ["cochon", "ferme", "boue", "enfant"]
+        en_tags: ["pig", "farm", "mud", "kids"]
+        prompt: "A chubby cartoon pig with curly tail and big snout, standing by a mud puddle, big smile."
+
+      - fr_slug: ferme-mouton
+        en_slug: farm-sheep
+        fr_title: "Le mouton laineux"
+        en_title: "Fluffy Sheep"
+        fr_tags: ["mouton", "laine", "ferme", "enfant"]
+        en_tags: ["sheep", "wool", "farm", "kids"]
+        prompt: "A round cartoon sheep with fluffy cloud-like wool, four short legs, and a gentle smile."
+
+      - fr_slug: ferme-canard
+        en_slug: farm-duck
+        fr_title: "Le canard et ses canetons"
+        en_title: "Duck and Ducklings"
+        fr_tags: ["canard", "caneton", "ferme", "mare"]
+        en_tags: ["duck", "ducklings", "farm", "pond"]
+        prompt: "A mama duck leading three tiny ducklings in a line on a pond with lily pads."
+
+      - fr_slug: ferme-coq
+        en_slug: farm-rooster
+        fr_title: "Le coq fier"
+        en_title: "Proud Rooster"
+        fr_tags: ["coq", "ferme", "matin", "enfant"]
+        en_tags: ["rooster", "farm", "morning", "kids"]
+        prompt: "A proud cartoon rooster with a big comb and colorful tail feathers, standing on a fence post."
+
+      - fr_slug: ferme-chevre
+        en_slug: farm-goat
+        fr_title: "La chevre espiegle"
+        en_title: "Playful Goat"
+        fr_tags: ["chevre", "ferme", "corne", "enfant"]
+        en_tags: ["goat", "farm", "horns", "kids"]
+        prompt: "A cartoon goat with small horns and a little beard, chewing on a flower, happy expression."
+
+      - fr_slug: ferme-ane
+        en_slug: farm-donkey
+        fr_title: "L'ane de la ferme"
+        en_title: "Farm Donkey"
+        fr_tags: ["ane", "ferme", "oreilles", "enfant"]
+        en_tags: ["donkey", "farm", "ears", "kids"]
+        prompt: "A cute cartoon donkey with big floppy ears, a fluffy mane, and a happy grin."
+
+      - fr_slug: ferme-grange
+        en_slug: farm-barn
+        fr_title: "La grande grange rouge"
+        en_title: "Big Red Barn"
+        fr_tags: ["grange", "ferme", "animaux", "enfant"]
+        en_tags: ["barn", "farm", "animals", "kids"]
+        prompt: "A cartoon red barn with a weather vane on top, a rooster, and a horse poking its head out."
+
+      - fr_slug: ferme-tracteur
+        en_slug: farm-tractor
+        fr_title: "Le tracteur de la ferme"
+        en_title: "Farm Tractor"
+        fr_tags: ["tracteur", "ferme", "champ", "enfant"]
+        en_tags: ["tractor", "farm", "field", "kids"]
+        prompt: "A big cartoon farm tractor with large rear wheels and a friendly face on the grill, in a field."
+
+  # ---- Animaux marins (NEW category) ----
+  animaux-marins:
+    subjects:
+      - fr_slug: animaux-marins-pieuvre
+        en_slug: sea-animals-octopus
+        fr_title: "La pieuvre curieuse"
+        en_title: "Curious Octopus"
+        fr_tags: ["pieuvre", "mer", "tentacules", "enfant"]
+        en_tags: ["octopus", "sea", "tentacles", "kids"]
+        prompt: "A cartoon octopus with eight curling arms, big round eyes, and a cheerful smile, underwater."
+
+      - fr_slug: animaux-marins-hippocampe
+        en_slug: sea-animals-seahorse
+        fr_title: "L'hippocampe colore"
+        en_title: "Colorful Seahorse"
+        fr_tags: ["hippocampe", "mer", "nageoire", "enfant"]
+        en_tags: ["seahorse", "sea", "fin", "kids"]
+        prompt: "A curly cartoon seahorse with a curled tail, dorsal fin, and swirling patterns on its body."
+
+      - fr_slug: animaux-marins-baleine
+        en_slug: sea-animals-whale
+        fr_title: "La baleine bleue"
+        en_title: "Blue Whale"
+        fr_tags: ["baleine", "mer", "souffle", "enfant"]
+        en_tags: ["whale", "sea", "spout", "kids"]
+        prompt: "A friendly cartoon whale with a big smile, water spouting from its blowhole, and a wavy tail."
+
+      - fr_slug: animaux-marins-requin
+        en_slug: sea-animals-shark
+        fr_title: "Le requin souriant"
+        en_title: "Smiling Shark"
+        fr_tags: ["requin", "mer", "dents", "enfant"]
+        en_tags: ["shark", "sea", "teeth", "kids"]
+        prompt: "A cartoon shark with a big toothy grin, a dorsal fin, and small fish swimming around it."
+
+      - fr_slug: animaux-marins-meduse
+        en_slug: sea-animals-jellyfish
+        fr_title: "La meduse lumineuse"
+        en_title: "Glowing Jellyfish"
+        fr_tags: ["meduse", "mer", "tentacules", "enfant"]
+        en_tags: ["jellyfish", "sea", "tentacles", "kids"]
+        prompt: "A round cartoon jellyfish with long flowing tentacles, big cute eyes, surrounded by bubbles."
+
+      - fr_slug: animaux-marins-crabe
+        en_slug: sea-animals-crab
+        fr_title: "Le crabe sur la plage"
+        en_title: "Beach Crab"
+        fr_tags: ["crabe", "plage", "pince", "enfant"]
+        en_tags: ["crab", "beach", "claws", "kids"]
+        prompt: "A cartoon crab with big claws raised up, walking sideways on a sandy beach with shells."
+
+      - fr_slug: animaux-marins-etoile-mer
+        en_slug: sea-animals-starfish
+        fr_title: "L'etoile de mer"
+        en_title: "Starfish"
+        fr_tags: ["etoile", "mer", "plage", "enfant"]
+        en_tags: ["starfish", "sea", "beach", "kids"]
+        prompt: "A cartoon starfish with five rounded arms, dots on its body, and a happy face, on a sandy floor."
+
+      - fr_slug: animaux-marins-dauphin
+        en_slug: sea-animals-dolphin
+        fr_title: "Le dauphin sauteur"
+        en_title: "Jumping Dolphin"
+        fr_tags: ["dauphin", "mer", "saut", "enfant"]
+        en_tags: ["dolphin", "sea", "jump", "kids"]
+        prompt: "A cartoon dolphin leaping out of the water with a smile, water droplets around, a wave below."
+
+      - fr_slug: animaux-marins-homard
+        en_slug: sea-animals-lobster
+        fr_title: "Le homard des fonds marins"
+        en_title: "Sea Lobster"
+        fr_tags: ["homard", "mer", "pince", "enfant"]
+        en_tags: ["lobster", "sea", "claws", "kids"]
+        prompt: "A cartoon lobster with large claws, antennae, and a segmented tail, on the ocean floor."
+
+      - fr_slug: animaux-marins-tortue-mer
+        en_slug: sea-animals-sea-turtle
+        fr_title: "La tortue de mer"
+        en_title: "Sea Turtle"
+        fr_tags: ["tortue", "mer", "nageoire", "enfant"]
+        en_tags: ["turtle", "sea", "flipper", "kids"]
+        prompt: "A cartoon sea turtle with flippers, a patterned shell, swimming through the ocean with small fish."
+
+  # ---- Nourriture extra ----
+  nourriture_extra:
+    subjects:
+      - fr_slug: nourriture-hamburger
+        en_slug: food-hamburger
+        fr_title: "Le grand hamburger"
+        en_title: "Big Hamburger"
+        fr_tags: ["hamburger", "fast-food", "enfant", "repas"]
+        en_tags: ["hamburger", "fast-food", "kids", "meal"]
+        prompt: "A tall cartoon hamburger with sesame bun, lettuce, tomato, cheese, and patty, stacked high."
+
+      - fr_slug: nourriture-sushi
+        en_slug: food-sushi
+        fr_title: "Plateau de sushi"
+        en_title: "Sushi Plate"
+        fr_tags: ["sushi", "japon", "repas", "enfant"]
+        en_tags: ["sushi", "japan", "meal", "kids"]
+        prompt: "A wooden sushi board with salmon nigiri, maki rolls, and a bowl of soy sauce, cartoon style."
+
+      - fr_slug: nourriture-crepe
+        en_slug: food-crepe
+        fr_title: "La crepe garnie"
+        en_title: "Filled Crepe"
+        fr_tags: ["crepe", "france", "dessert", "enfant"]
+        en_tags: ["crepe", "france", "dessert", "kids"]
+        prompt: "A round crepe folded with strawberries, whipped cream, and chocolate drizzle, on a plate."
+
+      - fr_slug: nourriture-cupcake
+        en_slug: food-cupcake
+        fr_title: "Cupcake decore"
+        en_title: "Decorated Cupcake"
+        fr_tags: ["cupcake", "gateau", "dessert", "enfant"]
+        en_tags: ["cupcake", "cake", "dessert", "kids"]
+        prompt: "A single cupcake with a swirl of frosting, sprinkles, a star on top, in a polka-dot wrapper."
+
+      - fr_slug: nourriture-legumes
+        en_slug: food-vegetables
+        fr_title: "Le panier de legumes"
+        en_title: "Vegetable Basket"
+        fr_tags: ["legumes", "carotte", "brocoli", "enfant"]
+        en_tags: ["vegetables", "carrot", "broccoli", "kids"]
+        prompt: "A wicker basket overflowing with cartoon carrots, broccoli, tomatoes, corn, and peppers."
+
+  # ---- Pirates extra ----
+  pirates_extra:
+    subjects:
+      - fr_slug: pirates-canon
+        en_slug: pirates-cannon
+        fr_title: "Le canon du pirate"
+        en_title: "Pirate Cannon"
+        fr_tags: ["pirate", "canon", "boulet", "enfant"]
+        en_tags: ["pirate", "cannon", "cannonball", "kids"]
+        prompt: "A big cartoon cannon on a ship deck with cannonballs stacked beside it, smoke from the barrel."
+
+      - fr_slug: pirates-ancre
+        en_slug: pirates-anchor
+        fr_title: "L'ancre du navire pirate"
+        en_title: "Pirate Ship Anchor"
+        fr_tags: ["pirate", "ancre", "mer", "enfant"]
+        en_tags: ["pirate", "anchor", "sea", "kids"]
+        prompt: "A large decorative anchor with a rope wrapped around it, starfish and seaweed around the base."
+
+      - fr_slug: pirates-epee
+        en_slug: pirates-sword
+        fr_title: "Le sabre de pirate"
+        en_title: "Pirate Sword"
+        fr_tags: ["pirate", "epee", "sabre", "enfant"]
+        en_tags: ["pirate", "sword", "saber", "kids"]
+        prompt: "Two crossed pirate cutlasses with a skull above them, decorative swirls and a compass rose."
+
+      - fr_slug: pirates-bouteille-mer
+        en_slug: pirates-bottle-sea
+        fr_title: "Le message dans la bouteille"
+        en_title: "Message in a Bottle"
+        fr_tags: ["pirate", "bouteille", "message", "mer"]
+        en_tags: ["pirate", "bottle", "message", "sea"]
+        prompt: "A glass bottle sealed with a cork floating on waves, a rolled message visible inside, cartoon."
+
+      - fr_slug: pirates-chapeau
+        en_slug: pirates-hat
+        fr_title: "Le chapeau du capitaine"
+        en_title: "Captain's Hat"
+        fr_tags: ["pirate", "chapeau", "capitaine", "tete-de-mort"]
+        en_tags: ["pirate", "hat", "captain", "skull"]
+        prompt: "A pirate captain hat with a skull and crossbones, a large feather, and a gold band."
