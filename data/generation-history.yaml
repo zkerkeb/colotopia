@@ -395,3 +395,137 @@
   category: "pirates"
   prompt: "A small desert island with a palm tree, treasure chest, and shovel in the sand."
   status: "published"
+
+# Heartbeat 5 — 2026-03-21 (nourriture x5 NEW, drole x5, paysages x4, musique x3, robots x4 — quota exhausted, 5 queued for tomorrow):
+- date: "2026-03-21"
+  slug: "nourriture-gateau"
+  category: "nourriture"
+  prompt: "A tall layered birthday cake with frosting swirls, lit candles, and stars, cartoon style."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "nourriture-pizza"
+  category: "nourriture"
+  prompt: "A round pizza cut into slices with mushrooms, peppers, olives, big cartoon style."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "nourriture-fruits"
+  category: "nourriture"
+  prompt: "A big bowl piled with bananas, apples, strawberries, grapes, and a pineapple, cartoon style."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "nourriture-glace"
+  category: "nourriture"
+  prompt: "A tall ice cream sundae glass with three scoops, whipped cream, sprinkles, and a cherry on top."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "nourriture-boulangerie"
+  category: "nourriture"
+  prompt: "A French bakery display with croissants, baguettes, macarons, and a pain au chocolat, cartoon."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "drole-tortue-pizza"
+  category: "drole"
+  prompt: "A cartoon turtle in a chef hat spinning pizza dough on one finger, big smile, apron."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "drole-cochon-plongeur"
+  category: "drole"
+  prompt: "A chubby pig in scuba gear with tank, flippers, and mask, thumbs up, bubbles around."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "drole-panda-ninja"
+  category: "drole"
+  prompt: "A round fluffy panda in a ninja headband mid-jump, holding two bamboo sticks, fierce face."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "drole-koala-pilote"
+  category: "drole"
+  prompt: "A sleepy koala in aviator goggles and pilot cap sitting in a tiny biplane cockpit."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "drole-vache-astronaute"
+  category: "drole"
+  prompt: "A cartoon cow in a full space suit waving from a rocket window, Earth visible behind."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "paysages-venise"
+  category: "paysages"
+  prompt: "Venice canal with gondolas, arched stone bridges, and tall historic buildings lining both sides."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "paysages-toscane"
+  category: "paysages"
+  prompt: "Rolling Tuscan hills with vineyard rows, a stone farmhouse, tall cypress trees, and a winding road."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "paysages-amazonie"
+  category: "paysages"
+  prompt: "A wide Amazon river winding through dense jungle canopy, wooden canoes, exotic birds, and lush vegetation."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "paysages-angkor"
+  category: "paysages"
+  prompt: "Angkor Wat temple towers reflected in a still moat, palm trees, lotus flowers, stone causeways."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "musique-accordeon"
+  category: "musique"
+  prompt: "A cartoon accordion with bellows stretched open, music notes floating around it."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "musique-harpe"
+  category: "musique"
+  prompt: "A tall classical harp with strings and swirling music notes around it, cartoon style."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "musique-saxophone"
+  category: "musique"
+  prompt: "A cartoon saxophone with music notes and stars bursting from the bell, jazz style."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "robots-musicien"
+  category: "robots"
+  prompt: "A robot with four arms playing a drum kit simultaneously, music notes flying, big grin."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "robots-footballeur"
+  category: "robots"
+  prompt: "A cartoon robot in a soccer uniform kicking a football, big round eyes, arms out for balance."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "robots-detective"
+  category: "robots"
+  prompt: "A robot in a deerstalker hat holding a giant magnifying glass, one eye large through the lens."
+  status: "published"
+
+- date: "2026-03-21"
+  slug: "robots-peintre"
+  category: "robots"
+  prompt: "A robot holding a large paintbrush making splashes on a canvas, paint drops around, smiling."
+  status: "published"
+
+# Queued for tomorrow (quota exhausted — images deleted, prompts updated in yaml):
+# - drole-loup-ballet (shading fail → prompt updated)
+# - paysages-santorin (shading fail → prompt updated)
+# - musique-concert (solid black crowd → prompt updated)
+# - musique-maracas (shading + text on image → retry)
+# - robots-surfeur (photo of real person → retry)

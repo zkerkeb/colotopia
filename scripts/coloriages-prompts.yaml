@@ -2467,3 +2467,223 @@ categories:
         fr_tags: ["paysage", "norvege", "fjord", "adulte"]
         en_tags: ["landscape", "norway", "fjord", "adult"]
         prompt: "A dramatic Norwegian fjord with steep mountain walls, a small village on the shore, wooden boats, and waterfalls."
+
+      - fr_slug: paysages-venise
+        en_slug: landscapes-venice
+        fr_title: "Venise et ses canaux"
+        en_title: "Venice and its Canals"
+        fr_tags: ["paysage", "venise", "canal", "gondole", "adulte"]
+        en_tags: ["landscape", "venice", "canal", "gondola", "adult"]
+        prompt: "Venice canal with gondolas, arched stone bridges, and tall historic buildings lining both sides."
+
+      - fr_slug: paysages-toscane
+        en_slug: landscapes-tuscany
+        fr_title: "Collines de Toscane"
+        en_title: "Tuscan Hills"
+        fr_tags: ["paysage", "toscane", "italie", "vigne", "adulte"]
+        en_tags: ["landscape", "tuscany", "italy", "vineyard", "adult"]
+        prompt: "Rolling Tuscan hills with vineyard rows, a stone farmhouse, tall cypress trees, and a winding road."
+
+      - fr_slug: paysages-santorin
+        en_slug: landscapes-santorini
+        fr_title: "Santorin, Grece"
+        en_title: "Santorini, Greece"
+        fr_tags: ["paysage", "santorin", "grece", "falaises", "adulte"]
+        en_tags: ["landscape", "santorini", "greece", "cliffs", "adult"]
+        prompt: "Santorini cliffside with white cubic houses, rounded rooftops, bell towers, and sea visible below."
+
+      - fr_slug: paysages-amazonie
+        en_slug: landscapes-amazon
+        fr_title: "Amazonie, fleuve et jungle"
+        en_title: "Amazon River and Jungle"
+        fr_tags: ["paysage", "amazonie", "jungle", "fleuve", "adulte"]
+        en_tags: ["landscape", "amazon", "jungle", "river", "adult"]
+        prompt: "A wide Amazon river winding through dense jungle canopy, wooden canoes, exotic birds, and lush vegetation."
+
+      - fr_slug: paysages-angkor
+        en_slug: landscapes-angkor-wat
+        fr_title: "Angkor Wat, Cambodge"
+        en_title: "Angkor Wat, Cambodia"
+        fr_tags: ["paysage", "angkor", "cambodge", "temple", "adulte"]
+        en_tags: ["landscape", "angkor", "cambodia", "temple", "adult"]
+        prompt: "Angkor Wat temple towers reflected in a still moat, palm trees, lotus flowers, stone causeways."
+
+  # ---- Humour / drole ----
+  drole_extra:
+    subjects:
+      - fr_slug: drole-tortue-pizza
+        en_slug: funny-turtle-pizza
+        fr_title: "La tortue pizzaiolo"
+        en_title: "Pizza Turtle Chef"
+        fr_tags: ["tortue", "pizza", "drole", "cuisine"]
+        en_tags: ["turtle", "pizza", "funny", "cooking"]
+        prompt: "A cartoon turtle in a chef hat spinning pizza dough on one finger, big smile, apron."
+
+      - fr_slug: drole-loup-ballet
+        en_slug: funny-wolf-ballet
+        fr_title: "Le loup danseur de ballet"
+        en_title: "Ballet Wolf"
+        fr_tags: ["loup", "ballet", "drole", "danse"]
+        en_tags: ["wolf", "ballet", "funny", "dance"]
+        prompt: "A cartoon wolf in a ballet tutu standing on tiptoe, arms raised overhead, big wide eyes, white background."
+
+      - fr_slug: drole-cochon-plongeur
+        en_slug: funny-pig-scuba
+        fr_title: "Le cochon plongeur"
+        en_title: "Scuba Diving Pig"
+        fr_tags: ["cochon", "plongee", "drole", "ocean"]
+        en_tags: ["pig", "scuba", "funny", "ocean"]
+        prompt: "A chubby pig in scuba gear with tank, flippers, and mask, thumbs up, bubbles around."
+
+      - fr_slug: drole-panda-ninja
+        en_slug: funny-panda-ninja
+        fr_title: "Le panda ninja"
+        en_title: "Ninja Panda"
+        fr_tags: ["panda", "ninja", "drole", "arts-martiaux"]
+        en_tags: ["panda", "ninja", "funny", "martial-arts"]
+        prompt: "A round fluffy panda in a ninja headband mid-jump, holding two bamboo sticks, fierce face."
+
+      - fr_slug: drole-koala-pilote
+        en_slug: funny-koala-pilot
+        fr_title: "Le koala pilote"
+        en_title: "Pilot Koala"
+        fr_tags: ["koala", "pilote", "drole", "avion"]
+        en_tags: ["koala", "pilot", "funny", "plane"]
+        prompt: "A sleepy koala in aviator goggles and pilot cap sitting in a tiny biplane cockpit."
+
+      - fr_slug: drole-vache-astronaute
+        en_slug: funny-cow-astronaut
+        fr_title: "La vache astronaute"
+        en_title: "Astronaut Cow"
+        fr_tags: ["vache", "astronaute", "drole", "espace"]
+        en_tags: ["cow", "astronaut", "funny", "space"]
+        prompt: "A cartoon cow in a full space suit waving from a rocket window, Earth visible behind."
+
+  # ---- Nourriture (NEW category) ----
+  nourriture:
+    subjects:
+      - fr_slug: nourriture-gateau
+        en_slug: food-birthday-cake
+        fr_title: "Gateau d'anniversaire"
+        en_title: "Birthday Cake"
+        fr_tags: ["gateau", "anniversaire", "bougies", "enfant"]
+        en_tags: ["cake", "birthday", "candles", "kids"]
+        prompt: "A tall layered birthday cake with frosting swirls, lit candles, and stars, cartoon style."
+
+      - fr_slug: nourriture-pizza
+        en_slug: food-pizza
+        fr_title: "Pizza geante"
+        en_title: "Giant Pizza"
+        fr_tags: ["pizza", "fromage", "tomate", "enfant"]
+        en_tags: ["pizza", "cheese", "tomato", "kids"]
+        prompt: "A round pizza cut into slices with mushrooms, peppers, olives, big cartoon style."
+
+      - fr_slug: nourriture-fruits
+        en_slug: food-fruit-bowl
+        fr_title: "Corbeille de fruits"
+        en_title: "Fruit Bowl"
+        fr_tags: ["fruits", "pomme", "banane", "enfant"]
+        en_tags: ["fruit", "apple", "banana", "kids"]
+        prompt: "A big bowl piled with bananas, apples, strawberries, grapes, and a pineapple, cartoon style."
+
+      - fr_slug: nourriture-glace
+        en_slug: food-ice-cream-sundae
+        fr_title: "Coupe glacee"
+        en_title: "Ice Cream Sundae"
+        fr_tags: ["glace", "sundae", "chocolat", "enfant"]
+        en_tags: ["ice cream", "sundae", "chocolate", "kids"]
+        prompt: "A tall ice cream sundae glass with three scoops, whipped cream, sprinkles, and a cherry on top."
+
+      - fr_slug: nourriture-boulangerie
+        en_slug: food-french-bakery
+        fr_title: "La boulangerie francaise"
+        en_title: "French Bakery"
+        fr_tags: ["boulangerie", "croissant", "baguette", "pain"]
+        en_tags: ["bakery", "croissant", "baguette", "bread"]
+        prompt: "A French bakery display with croissants, baguettes, macarons, and a pain au chocolat, cartoon."
+
+  # ---- Musique extra ----
+  musique_extra:
+    subjects:
+      - fr_slug: musique-accordeon
+        en_slug: music-accordion
+        fr_title: "Accordeon"
+        en_title: "Accordion"
+        fr_tags: ["accordeon", "musique", "notes", "instrument"]
+        en_tags: ["accordion", "music", "notes", "instrument"]
+        prompt: "A cartoon accordion with bellows stretched open, music notes floating around it."
+
+      - fr_slug: musique-harpe
+        en_slug: music-harp
+        fr_title: "Harpe classique"
+        en_title: "Classical Harp"
+        fr_tags: ["harpe", "musique", "notes", "instrument"]
+        en_tags: ["harp", "music", "notes", "instrument"]
+        prompt: "A tall classical harp with strings and swirling music notes around it, cartoon style."
+
+      - fr_slug: musique-saxophone
+        en_slug: music-saxophone
+        fr_title: "Saxophone"
+        en_title: "Saxophone"
+        fr_tags: ["saxophone", "jazz", "musique", "notes"]
+        en_tags: ["saxophone", "jazz", "music", "notes"]
+        prompt: "A cartoon saxophone with music notes and stars bursting from the bell, jazz style."
+
+      - fr_slug: musique-concert
+        en_slug: music-concert-stage
+        fr_title: "Scene de concert"
+        en_title: "Concert Stage"
+        fr_tags: ["concert", "scene", "musique", "rockstar"]
+        en_tags: ["concert", "stage", "music", "rockstar"]
+        prompt: "A rock concert stage with a vintage microphone on stand, two big speakers, and two spotlights above."
+
+      - fr_slug: musique-maracas
+        en_slug: music-maracas
+        fr_title: "Maracas et percussions"
+        en_title: "Maracas and Percussion"
+        fr_tags: ["maracas", "percussion", "musique", "rythme"]
+        en_tags: ["maracas", "percussion", "music", "rhythm"]
+        prompt: "A pair of colorful maracas surrounded by music notes, stars, and rhythm symbols."
+
+  # ---- Robots extra ----
+  robots_extra:
+    subjects:
+      - fr_slug: robots-musicien
+        en_slug: robots-musician
+        fr_title: "Robot musicien"
+        en_title: "Musician Robot"
+        fr_tags: ["robot", "musique", "batterie", "drole"]
+        en_tags: ["robot", "music", "drums", "funny"]
+        prompt: "A robot with four arms playing a drum kit simultaneously, music notes flying, big grin."
+
+      - fr_slug: robots-footballeur
+        en_slug: robots-soccer-player
+        fr_title: "Robot footballeur"
+        en_title: "Soccer Robot"
+        fr_tags: ["robot", "football", "sport", "ballon"]
+        en_tags: ["robot", "soccer", "sport", "ball"]
+        prompt: "A cartoon robot in a soccer uniform kicking a football, big round eyes, arms out for balance."
+
+      - fr_slug: robots-detective
+        en_slug: robots-detective
+        fr_title: "Robot detective"
+        en_title: "Detective Robot"
+        fr_tags: ["robot", "detective", "loupe", "mystere"]
+        en_tags: ["robot", "detective", "magnifier", "mystery"]
+        prompt: "A robot in a deerstalker hat holding a giant magnifying glass, one eye large through the lens."
+
+      - fr_slug: robots-surfeur
+        en_slug: robots-surfer
+        fr_title: "Robot surfeur"
+        en_title: "Surfer Robot"
+        fr_tags: ["robot", "surf", "ocean", "sport"]
+        en_tags: ["robot", "surfing", "ocean", "sport"]
+        prompt: "A cartoon robot riding a big wave on a surfboard, arms wide, happy face, fins visible."
+
+      - fr_slug: robots-peintre
+        en_slug: robots-painter
+        fr_title: "Robot peintre"
+        en_title: "Painter Robot"
+        fr_tags: ["robot", "peinture", "art", "pinceau"]
+        en_tags: ["robot", "painting", "art", "brush"]
+        prompt: "A robot holding a large paintbrush making splashes on a canvas, paint drops around, smiling."
