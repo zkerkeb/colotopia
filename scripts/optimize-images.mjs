@@ -6,7 +6,7 @@
  */
 
 import sharp from 'sharp';
-import { readdir, mkdir } from 'fs/promises';
+import { readdir, mkdir, stat } from 'fs/promises';
 import { existsSync } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -29,7 +29,7 @@ async function run() {
     (f) => f.endsWith('.png') && !f.startsWith('.')
   );
 
-  console.log(`Converting ${files.length} PNG images to WebP...`);
+  console.log(`Found ${files.length} PNG source images.`);
 
   let converted = 0;
   let skipped = 0;
@@ -39,6 +39,17 @@ async function run() {
     const srcPath = path.join(IMAGES_DIR, file);
     const webpPath = path.join(IMAGES_DIR, `${baseName}.webp`);
     const thumbPath = path.join(THUMBS_DIR, `${baseName}.webp`);
+
+    // Skip if both outputs exist and are newer than the source PNG
+    if (existsSync(webpPath) && existsSync(thumbPath)) {
+      const srcMtime = (await stat(srcPath)).mtimeMs;
+      const webpMtime = (await stat(webpPath)).mtimeMs;
+      const thumbMtime = (await stat(thumbPath)).mtimeMs;
+      if (webpMtime > srcMtime && thumbMtime > srcMtime) {
+        skipped++;
+        continue;
+      }
+    }
 
     // Full-size WebP (for detail page hero)
     await sharp(srcPath)
@@ -57,7 +68,7 @@ async function run() {
     }
   }
 
-  console.log(`Done: ${converted} images converted, ${skipped} skipped.`);
+  console.log(`Done: ${converted} converted, ${skipped} skipped (already up-to-date).`);
   console.log(`  Full-size WebP: ${IMAGES_DIR}/*.webp`);
   console.log(`  Thumbnails:     ${THUMBS_DIR}/*.webp`);
 }
