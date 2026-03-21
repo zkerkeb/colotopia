@@ -2078,7 +2078,7 @@ categories:
         en_title: "Gardener Robot"
         fr_tags: ["robot", "jardin", "fleurs", "arrosoir"]
         en_tags: ["robot", "garden", "flowers", "watering"]
-        prompt: "A friendly boxy robot watering flowers in a sunny garden with a small watering can."
+        prompt: "A cartoon robot with square body and big eyes, holding a watering can over small flowers."
 
       - fr_slug: robots-astronaute
         en_slug: robots-astronaut
@@ -2086,7 +2086,7 @@ categories:
         en_title: "Astronaut Robot"
         fr_tags: ["robot", "espace", "etoiles", "planete"]
         en_tags: ["robot", "space", "stars", "planet"]
-        prompt: "A cute boxy robot floating in space with stars and a planet nearby, antenna blinking."
+        prompt: "A cheerful cartoon robot with antenna and round visor helmet, waving one arm, white background."
 
       - fr_slug: robots-pompier
         en_slug: robots-firefighter
@@ -2102,7 +2102,7 @@ categories:
         en_title: "Chef Robot"
         fr_tags: ["robot", "cuisine", "chef", "toque"]
         en_tags: ["robot", "cooking", "chef", "hat"]
-        prompt: "A robot wearing a chef toque, stirring a pot with one arm, holding a spatula with the other."
+        prompt: "A cartoon robot with a chef hat and apron, stirring a big pot on a stove, smiling face."
 
   musique:
     subjects:
@@ -2162,7 +2162,7 @@ categories:
         en_title: "Treasure Chest"
         fr_tags: ["pirate", "tresor", "coffre", "or"]
         en_tags: ["pirate", "treasure", "chest", "gold"]
-        prompt: "An open treasure chest overflowing with gold coins, gems, and jewels, cartoon style."
+        prompt: "A big wooden treasure chest with lock and metal bands, open lid, sparkling coins inside."
 
       - fr_slug: pirates-carte
         en_slug: pirates-map
