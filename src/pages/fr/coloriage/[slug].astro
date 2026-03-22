@@ -2,10 +2,11 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import ColoringPage from '../../../components/ColoringPage.astro';
 import { getCollection } from 'astro:content';
+import { getPublishableColoriages } from '../../../lib/coloriages';
 import type { Category } from '../../../lib/i18n';
 
 export async function getStaticPaths() {
-  const coloriages = await getCollection('coloriages', ({ data }) => data.locale === 'fr');
+  const coloriages = await getPublishableColoriages('fr');
   return coloriages.map((c) => ({
     params: { slug: c.data.slug },
     props: { coloring: c },
@@ -25,7 +26,7 @@ const pageDescription =
   seoDescription ??
   `Télécharge et imprime gratuitement ce coloriage de ${title}. Format A4, haute qualité, parfait pour les enfants.`;
 
-const allFr = await getCollection('coloriages', ({ data }) => data.locale === 'fr');
+const allFr = await getPublishableColoriages('fr');
 const related = allFr
   .filter((c) => c.data.category === category)
   .map((c) => ({ title: c.data.title, slug: c.data.slug, image: c.data.image, alt: c.data.alt }));

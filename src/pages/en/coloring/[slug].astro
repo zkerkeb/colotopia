@@ -2,10 +2,11 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import ColoringPage from '../../../components/ColoringPage.astro';
 import { getCollection } from 'astro:content';
+import { getPublishableColoriages } from '../../../lib/coloriages';
 import type { Category } from '../../../lib/i18n';
 
 export async function getStaticPaths() {
-  const coloriages = await getCollection('coloriages', ({ data }) => data.locale === 'en');
+  const coloriages = await getPublishableColoriages('en');
   return coloriages.map((c) => ({
     params: { slug: c.data.slug },
     props: { coloring: c },
@@ -25,7 +26,7 @@ const pageDescription =
   seoDescription ??
   `Download and print this free ${title} coloring page. A4 format, high quality, perfect for kids.`;
 
-const allEn = await getCollection('coloriages', ({ data }) => data.locale === 'en');
+const allEn = await getPublishableColoriages('en');
 const related = allEn
   .filter((c) => c.data.category === category)
   .map((c) => ({ title: c.data.title, slug: c.data.slug, image: c.data.image, alt: c.data.alt }));

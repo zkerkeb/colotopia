@@ -1,11 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { getPublishableColoriages } from '../../lib/coloriages';
 import { t, ti, kidsCategories, adultCategories, getCategoryLabel, getCategorySlug, getLocalePath, type Category } from '../../lib/i18n';
 
 const locale = 'en';
 
-const allColoriages = await getCollection('coloriages', ({ data }) => data.locale === 'en');
+const allColoriages = await getPublishableColoriages('en');
 
 // Build category data: label, slug, count, and up to 4 preview images
 function buildCategoryData(cats: readonly string[]) {

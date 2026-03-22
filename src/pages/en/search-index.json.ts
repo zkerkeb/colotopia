@@ -1,8 +1,8 @@
-import { getCollection } from 'astro:content';
+import { getPublishableColoriages } from '../../lib/coloriages';
 import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = async () => {
-  const coloriages = await getCollection('coloriages', ({ data }) => data.locale === 'en');
+  const coloriages = await getPublishableColoriages('en');
   const index = coloriages.map((c) => ({
     title: c.data.title,
     slug: c.data.slug,
