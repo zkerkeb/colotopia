@@ -4,6 +4,8 @@ import { glob } from 'astro/loaders';
 const categories = [
   // Kids
   'animaux',
+  'animaux-marins',
+  'ferme',
   'vehicules',
   'nature',
   'alphabet',
@@ -33,7 +35,11 @@ const categories = [
 const audiences = ['enfants', 'adultes'] as const;
 
 const coloriages = defineCollection({
-  loader: glob({ pattern: '**/*.yaml', base: './src/content/coloriages' }),
+  loader: glob({
+    pattern: '**/*.yaml',
+    base: './src/content/coloriages',
+    generateId: ({ data }) => `${data.locale}/${data.slug}`,
+  }),
   schema: z.object({
     title: z.string(),
     slug: z.string(),

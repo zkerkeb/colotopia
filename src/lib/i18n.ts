@@ -5,6 +5,8 @@ export const locales: Locale[] = ['fr', 'en'];
 
 export const kidsCategories = [
   'animaux',
+  'animaux-marins',
+  'ferme',
   'vehicules',
   'nature',
   'alphabet',
@@ -51,6 +53,8 @@ const translations: Record<string, Record<Locale, string>> = {
   'audience.enfants': { fr: 'Enfants', en: 'Kids' },
   'audience.adultes': { fr: 'Adultes', en: 'Adults' },
   'category.animaux': { fr: 'Animaux', en: 'Animals' },
+  'category.animaux-marins': { fr: 'Animaux Marins', en: 'Sea Animals' },
+  'category.ferme': { fr: 'Ferme', en: 'Farm' },
   'category.vehicules': { fr: 'Véhicules', en: 'Vehicles' },
   'category.nature': { fr: 'Nature', en: 'Nature' },
   'category.alphabet': { fr: 'Alphabet', en: 'Alphabet' },
@@ -136,6 +140,14 @@ const translations: Record<string, Record<Locale, string>> = {
   'category.description.adults': {
     fr: 'Découvrez nos coloriages {label} gratuits à imprimer pour adultes.',
     en: 'Discover our free printable {label} coloring pages for adults.',
+  },
+  'category.animaux-marins.seoText': {
+    fr: '<h2>Coloriages animaux marins gratuits à imprimer</h2><p>Plongez dans les fonds marins avec nos coloriages animaux marins ! Pieuvres aux tentacules ondulants, hippocampes majestueux, baleines géantes, requins souriants, méduses lumineuses — notre collection vous invite à explorer la vie sous-marine. Parfait pour apprendre aux enfants à connaître les créatures des océans tout en s\'amusant à colorier. Chaque dessin est simple, cute et adapté aux enfants de 3 à 10 ans.</p>',
+    en: '<h2>Free sea animal coloring pages to print</h2><p>Dive into the ocean depths with our sea animal coloring pages! Octopuses with waving tentacles, majestic seahorses, giant whales, smiling sharks, glowing jellyfish — our collection invites you to explore underwater life. Perfect for teaching children about ocean creatures while having fun coloring. Each drawing is simple, cute and suitable for children aged 3 to 10.</p>',
+  },
+  'category.ferme.seoText': {
+    fr: '<h2>Coloriages animaux de la ferme gratuits</h2><p>La vie à la ferme en coloriages ! Vaches tachetées, moutons laineux, cochons roses, poules et leurs poussins, canards sur la mare — nos coloriages ferme font découvrir aux enfants les animaux domestiques et la vie rurale. Idéal pour les petits qui découvrent les animaux et les plus grands qui aiment colorier des scènes champêtres. Des dessins attachants avec le tracteur, la grange rouge et les animaux adorables à colorier.</p>',
+    en: '<h2>Free farm animal coloring pages to print</h2><p>Farm life in coloring pages! Spotted cows, fluffy sheep, pink pigs, hens with their chicks, ducks on the pond — our farm coloring pages introduce children to domestic animals and rural life. Perfect for little ones discovering animals and older children who enjoy coloring countryside scenes. Charming drawings featuring tractors, red barns, and adorable animals to color.</p>',
   },
   'category.animaux.seoText': {
     fr: '<h2>Coloriages animaux gratuits à imprimer</h2><p>Les coloriages animaux sont parmi les plus appréciés de notre collection. Que votre enfant soit passionné par les <a href="/fr/coloriage/animaux-lion">lions</a> de la savane, les <a href="/fr/coloriage/animaux-dauphin">dauphins</a> des océans ou les <a href="/fr/coloriage/animaux-lapin">lapins</a> de la maison, vous trouverez ici des dizaines de modèles à imprimer gratuitement. Notre sélection couvre l\'ensemble du règne animal : animaux sauvages d\'Afrique et d\'Asie (<a href="/fr/coloriage/animaux-elephant">éléphants</a>, tigres, girafes, rhinocéros), animaux de la ferme (vaches, cochons, poules, chevaux), animaux domestiques (<a href="/fr/coloriage/animaux-chat">chats</a>, chiens, lapins, perroquets) et créatures marines (dauphins, requins, tortues marines, étoiles de mer).</p><h2>Apprendre en coloriant les animaux</h2><p>Colorier des animaux présente de nombreux avantages pédagogiques : les enfants apprennent à reconnaître les espèces, découvrent leurs habitats naturels et développent leur sensibilité à la nature et à la biodiversité. C\'est aussi une activité ludique qui renforce la concentration et améliore la motricité fine. Les grands peuvent choisir des coloriages plus détaillés avec les textures des plumes, des écailles ou de la fourrure. Les petits apprécieront des dessins aux contours simples et aux formes rondes. Tous nos coloriages animaux sont disponibles au format A4, imprimables gratuitement depuis n\'importe quel appareil. Imprimez-les pour des activités à la maison, en classe ou lors d\'ateliers créatifs en famille.</p>',
@@ -257,6 +269,8 @@ export function getLocalePath(locale: Locale, path: string = ''): string {
 
 const enSlugs: Record<Category, string> = {
   animaux: 'animals',
+  'animaux-marins': 'sea-animals',
+  ferme: 'farm',
   vehicules: 'vehicles',
   nature: 'nature',
   alphabet: 'alphabet',
