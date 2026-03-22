@@ -1,0 +1,159 @@
+{
+  "summary": {
+    "total": 10,
+    "success": 10,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-22T12:45:53.378265+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-marins-pieuvre",
+      "en_slug": "sea-animals-octopus",
+      "prompt": "A cartoon octopus with eight curling arms, big round eyes, and a cheerful smile, underwater. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-marins-pieuvre.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-marins-pieuvre.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/sea-animals-octopus.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:46:02.531307+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-marins-hippocampe",
+      "en_slug": "sea-animals-seahorse",
+      "prompt": "A curly cartoon seahorse with a curled tail, dorsal fin, and swirling patterns on its body. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-marins-hippocampe.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-marins-hippocampe.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/sea-animals-seahorse.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:46:13.828049+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-marins-baleine",
+      "en_slug": "sea-animals-whale",
+      "prompt": "A friendly cartoon whale with a big smile, water spouting from its blowhole, and a wavy tail. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-marins-baleine.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-marins-baleine.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/sea-animals-whale.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:46:26.632151+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-marins-requin",
+      "en_slug": "sea-animals-shark",
+      "prompt": "A cartoon shark with a big toothy grin, a dorsal fin, and small fish swimming around it. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-marins-requin.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-marins-requin.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/sea-animals-shark.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:46:35.711125+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-marins-meduse",
+      "en_slug": "sea-animals-jellyfish",
+      "prompt": "A round cartoon jellyfish with long flowing tentacles, big cute eyes, surrounded by bubbles. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-marins-meduse.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-marins-meduse.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/sea-animals-jellyfish.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:46:46.357630+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-marins-crabe",
+      "en_slug": "sea-animals-crab",
+      "prompt": "A cartoon crab with big claws raised up, walking sideways on a sandy beach with shells. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-marins-crabe.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-marins-crabe.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/sea-animals-crab.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:46:55.237392+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-marins-etoile-mer",
+      "en_slug": "sea-animals-starfish",
+      "prompt": "A cartoon starfish with five rounded arms, dots on its body, and a happy face, on a sandy floor. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-marins-etoile-mer.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-marins-etoile-mer.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/sea-animals-starfish.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:47:02.693254+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-marins-dauphin",
+      "en_slug": "sea-animals-dolphin",
+      "prompt": "A cartoon dolphin leaping out of the water with a smile, water droplets around, a wave below. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-marins-dauphin.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-marins-dauphin.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/sea-animals-dolphin.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:47:13.606250+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-marins-homard",
+      "en_slug": "sea-animals-lobster",
+      "prompt": "A cartoon lobster with large claws, antennae, and a segmented tail, on the ocean floor. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-marins-homard.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-marins-homard.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/sea-animals-lobster.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:47:27.983349+00:00",
+      "backend": "gemini",
+      "fr_slug": "animaux-marins-tortue-mer",
+      "en_slug": "sea-animals-sea-turtle",
+      "prompt": "A cartoon sea turtle with flippers, a patterned shell, swimming through the ocean with small fish. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/animaux-marins-tortue-mer.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/animaux-marins-tortue-mer.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/sea-animals-sea-turtle.yaml"
+      ],
+      "error": null
+    }
+  ]
+}

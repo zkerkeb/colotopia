@@ -1,0 +1,144 @@
+{
+  "summary": {
+    "total": 10,
+    "success": 10,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-22T12:49:56.693817+00:00",
+      "backend": "gemini",
+      "fr_slug": "nourriture-gateau",
+      "en_slug": "food-birthday-cake",
+      "prompt": "A tall layered birthday cake with frosting swirls, lit candles, and stars, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nourriture-gateau.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:49:58.694371+00:00",
+      "backend": "gemini",
+      "fr_slug": "nourriture-pizza",
+      "en_slug": "food-pizza",
+      "prompt": "A round pizza cut into slices with mushrooms, peppers, olives, big cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nourriture-pizza.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:50:00.705626+00:00",
+      "backend": "gemini",
+      "fr_slug": "nourriture-fruits",
+      "en_slug": "food-fruit-bowl",
+      "prompt": "A big bowl piled with bananas, apples, strawberries, grapes, and a pineapple, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nourriture-fruits.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:50:02.710387+00:00",
+      "backend": "gemini",
+      "fr_slug": "nourriture-glace",
+      "en_slug": "food-ice-cream-sundae",
+      "prompt": "A tall ice cream sundae glass with three scoops, whipped cream, sprinkles, and a cherry on top. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nourriture-glace.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:50:04.719292+00:00",
+      "backend": "gemini",
+      "fr_slug": "nourriture-boulangerie",
+      "en_slug": "food-french-bakery",
+      "prompt": "A French bakery display with croissants, baguettes, macarons, and a pain au chocolat, cartoon. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nourriture-boulangerie.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:50:06.720921+00:00",
+      "backend": "gemini",
+      "fr_slug": "nourriture-hamburger",
+      "en_slug": "food-hamburger",
+      "prompt": "A tall stacked cartoon hamburger with lettuce, tomato, cheese and a toothpick flag on top. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nourriture-hamburger.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nourriture-hamburger.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/food-hamburger.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:50:16.655612+00:00",
+      "backend": "gemini",
+      "fr_slug": "nourriture-sushi",
+      "en_slug": "food-sushi",
+      "prompt": "A cartoon sushi platter with nigiri, maki rolls, and chopsticks, cute faces on each piece. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nourriture-sushi.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nourriture-sushi.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/food-sushi.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:50:22.570934+00:00",
+      "backend": "gemini",
+      "fr_slug": "nourriture-crepe",
+      "en_slug": "food-crepe",
+      "prompt": "A stack of cartoon crepes with a drizzle of chocolate sauce, a strawberry on top, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nourriture-crepe.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nourriture-crepe.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/food-crepe.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:50:28.507482+00:00",
+      "backend": "gemini",
+      "fr_slug": "nourriture-cupcake",
+      "en_slug": "food-cupcake",
+      "prompt": "A single cupcake with a swirl of frosting, sprinkles, a star on top, in a polka-dot wrapper. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nourriture-cupcake.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nourriture-cupcake.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/food-cupcake.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:50:35.464917+00:00",
+      "backend": "gemini",
+      "fr_slug": "nourriture-legumes",
+      "en_slug": "food-vegetables",
+      "prompt": "A wicker basket overflowing with cartoon carrots, broccoli, tomatoes, corn, and peppers. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nourriture-legumes.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nourriture-legumes.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/food-vegetables.yaml"
+      ],
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "summary": {
+    "total": 10,
+    "success": 10,
+    "dry_run": true
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-22T12:37:07.365907+00:00",
+      "backend": "gemini",
+      "fr_slug": "ferme-vache",
+      "en_slug": "farm-cow",
+      "prompt": "A round cartoon cow with big eyes, spots, and a cowbell, standing in a green meadow. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/ferme-vache.png",
+      "dry_run": true,
+      "status": "dry_run",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:37:07.366118+00:00",
+      "backend": "gemini",
+      "fr_slug": "ferme-poule",
+      "en_slug": "farm-hen",
+      "prompt": "A fluffy cartoon hen with three tiny chicks around her feet, pecking at the ground. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/ferme-poule.png",
+      "dry_run": true,
+      "status": "dry_run",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:37:07.366143+00:00",
+      "backend": "gemini",
+      "fr_slug": "ferme-cochon",
+      "en_slug": "farm-pig",
+      "prompt": "A chubby cartoon pig with curly tail and big snout, standing by a mud puddle, big smile. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/ferme-cochon.png",
+      "dry_run": true,
+      "status": "dry_run",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:37:07.366160+00:00",
+      "backend": "gemini",
+      "fr_slug": "ferme-mouton",
+      "en_slug": "farm-sheep",
+      "prompt": "A round cartoon sheep with fluffy cloud-like wool, four short legs, and a gentle smile. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/ferme-mouton.png",
+      "dry_run": true,
+      "status": "dry_run",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:37:07.366177+00:00",
+      "backend": "gemini",
+      "fr_slug": "ferme-canard",
+      "en_slug": "farm-duck",
+      "prompt": "A mama duck leading three tiny ducklings in a line on a pond with lily pads. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/ferme-canard.png",
+      "dry_run": true,
+      "status": "dry_run",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:37:07.366194+00:00",
+      "backend": "gemini",
+      "fr_slug": "ferme-coq",
+      "en_slug": "farm-rooster",
+      "prompt": "A proud cartoon rooster with a big comb and colorful tail feathers, standing on a fence post. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/ferme-coq.png",
+      "dry_run": true,
+      "status": "dry_run",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:37:07.366212+00:00",
+      "backend": "gemini",
+      "fr_slug": "ferme-chevre",
+      "en_slug": "farm-goat",
+      "prompt": "A cartoon goat with small horns and a little beard, chewing on a flower, happy expression. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/ferme-chevre.png",
+      "dry_run": true,
+      "status": "dry_run",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:37:07.366227+00:00",
+      "backend": "gemini",
+      "fr_slug": "ferme-ane",
+      "en_slug": "farm-donkey",
+      "prompt": "A cute cartoon donkey with big floppy ears, a fluffy mane, and a happy grin. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/ferme-ane.png",
+      "dry_run": true,
+      "status": "dry_run",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:37:07.366241+00:00",
+      "backend": "gemini",
+      "fr_slug": "ferme-grange",
+      "en_slug": "farm-barn",
+      "prompt": "A cartoon red barn with a weather vane on top, a rooster, and a horse poking its head out. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/ferme-grange.png",
+      "dry_run": true,
+      "status": "dry_run",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:37:07.366254+00:00",
+      "backend": "gemini",
+      "fr_slug": "ferme-tracteur",
+      "en_slug": "farm-tractor",
+      "prompt": "A big cartoon farm tractor with large rear wheels and a friendly face on the grill, in a field. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/ferme-tracteur.png",
+      "dry_run": true,
+      "status": "dry_run",
+      "content_files": [],
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "summary": {
+    "total": 3,
+    "success": 3,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-22T12:59:00.928931+00:00",
+      "backend": "gemini",
+      "fr_slug": "metiers-pompier",
+      "en_slug": "jobs-firefighter",
+      "prompt": "A friendly cartoon firefighter in uniform with a helmet and hose, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/metiers-pompier.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:59:02.931006+00:00",
+      "backend": "gemini",
+      "fr_slug": "metiers-medecin",
+      "en_slug": "jobs-doctor",
+      "prompt": "A friendly cartoon doctor in a white coat with a stethoscope, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/metiers-medecin.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T12:59:04.936249+00:00",
+      "backend": "gemini",
+      "fr_slug": "metiers-cuisinier",
+      "en_slug": "jobs-chef",
+      "prompt": "A cartoon chef in a tall white hat holding a ladle and a pot, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/metiers-cuisinier.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    }
+  ]
+}
