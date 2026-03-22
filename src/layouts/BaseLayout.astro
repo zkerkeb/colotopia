@@ -49,7 +49,7 @@ const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
 const pageDescription = description || t('site.description', locale);
 const altLocale = locale === 'fr' ? 'en' : 'fr';
 const adsenseId = import.meta.env.PUBLIC_ADSENSE_PUBLISHER_ID;
-const gtmId = import.meta.env.PUBLIC_GTM_ID;
+const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 ---
 
 <!doctype html>
@@ -85,17 +85,14 @@ const gtmId = import.meta.env.PUBLIC_GTM_ID;
     {structuredData && (
       <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     )}
-    {gtmId && (
-      <Fragment set:html={`<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${gtmId}');<\/script>`} />
+    {gaMeasurementId && (
+      <Fragment set:html={`<script async src="https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}"><\/script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${gaMeasurementId}');<\/script>`} />
     )}
     {adsenseId && (
       <Fragment set:html={`<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}" crossorigin="anonymous"><\/script>`} />
     )}
   </head>
   <body>
-    {gtmId && (
-      <Fragment set:html={`<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${gtmId}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>`} />
-    )}
     <Header locale={locale} />
     <main>
       <slot />

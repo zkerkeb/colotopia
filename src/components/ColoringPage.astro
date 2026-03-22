@@ -81,7 +81,7 @@ const pinterestUrl = `https://pinterest.com/pin/create/button/?url=${encodeURICo
 
       <div class="coloring-actions">
         <PdfDownloadButton image={image} title={title} locale={locale} />
-        <button class="btn btn-secondary" id="print-btn" onclick="(window.dataLayer=window.dataLayer||[]).push({event:'print_page',page_title:document.title});window.print();">
+        <button class="btn btn-secondary" id="print-btn" onclick="if(typeof gtag==='function'){gtag('event','print_page',{page_title:document.title});}window.print();">
           {printLabel}
         </button>
       </div>

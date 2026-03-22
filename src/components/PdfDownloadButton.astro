@@ -101,14 +101,14 @@ const watermarkText = locale === 'fr'
         .replace(/^-|-$/g, '');
       doc.save(`${filename}.pdf`);
 
-      // GTM/GA4 conversion event
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: 'file_download',
-        file_name: `${filename}.pdf`,
-        file_extension: 'pdf',
-        link_text: title,
-      });
+      // GA4 conversion event
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'file_download', {
+          file_name: `${filename}.pdf`,
+          file_extension: 'pdf',
+          link_text: title,
+        });
+      }
     } catch (err) {
       console.error('PDF generation failed:', err);
     } finally {

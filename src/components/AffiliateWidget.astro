@@ -39,12 +39,12 @@ const products = [
 <script>
   document.querySelectorAll('.affiliate-link').forEach((link) => {
     link.addEventListener('click', () => {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: 'affiliate_click',
-        product_name: (link as HTMLAnchorElement).dataset.product,
-        link_url: (link as HTMLAnchorElement).href,
-      });
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'affiliate_click', {
+          product_name: (link as HTMLAnchorElement).dataset.product,
+          link_url: (link as HTMLAnchorElement).href,
+        });
+      }
     });
   });
 </script>
