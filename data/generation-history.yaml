@@ -540,3 +540,58 @@
 # - drole-loup-ballet (photo of real person → prompt updated in coloriages-prompts.yaml)
 # - paysages-santorin (shading fail → prompt updated)
 # - robots-surfeur (photo of real person → retry)
+
+# Heartbeat 7 — 2026-03-22 (CAS-54: vehicules verified + 8 drole pages):
+- date: "2026-03-22"
+  slug: "drole-chat-pirate"
+  category: "drole"
+  prompt: "A cat with an eyepatch and pirate hat steering a ship's wheel, fish in the background."
+  status: "published"
+
+- date: "2026-03-22"
+  slug: "drole-chien-surfeur"
+  category: "drole"
+  prompt: "A dog in board shorts and sunglasses riding a surfboard on a big wave, paws raised."
+  status: "published"
+
+- date: "2026-03-22"
+  slug: "drole-hippopotame-pompier"
+  category: "drole"
+  prompt: "A chubby hippo in a fire helmet holding a huge hose spraying water, big smile."
+  status: "published"
+
+- date: "2026-03-22"
+  slug: "drole-ours-pirate"
+  category: "drole"
+  prompt: "A bear with a pirate hat, eyepatch, and treasure map, sitting on a chest of gold coins."
+  status: "published"
+
+- date: "2026-03-22"
+  slug: "drole-perroquet-magicien"
+  category: "drole"
+  prompt: "A colorful parrot in a wizard hat and robe casting a spell with a glowing wand, stars around."
+  status: "published"
+
+- date: "2026-03-22"
+  slug: "drole-serpent-cuisinier"
+  category: "drole"
+  prompt: "A smiling snake wearing a chef hat, coiled around a big pot of soup, holding a ladle."
+  status: "published"
+
+- date: "2026-03-22"
+  slug: "drole-tigre-superhero"
+  category: "drole"
+  prompt: "A tiger in a superhero costume with a cape flying through the sky, fist forward, heroic pose."
+  status: "published"
+
+- date: "2026-03-22"
+  slug: "drole-zebre-musicien"
+  category: "drole"
+  prompt: "A zebra playing electric guitar on stage wearing sunglasses, crowd cheering, rock star pose."
+  status: "published"
+
+# QA failures (drole batch 2 — 2026-03-22):
+# - drole-canard-ninja (heavy black fill, not coloring-page line art)
+# - drole-girafe-ballerine (gray shading on tutu/spots)
+# - drole-renard-magicien (heavy black fills on hat and cape)
+# - drole-souris-karate (photo-style illustrated scene, not line art)
