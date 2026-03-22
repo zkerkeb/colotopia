@@ -60,6 +60,11 @@ class QuotaExhaustedError(Exception):
     pass
 
 
+class QCFailedError(Exception):
+    """Raised when a generated image fails quality control."""
+    pass
+
+
 # ---------------------------------------------------------------------------
 # Constants
 # ---------------------------------------------------------------------------
@@ -77,6 +82,9 @@ RATE_LIMIT_SECONDS = 2
 GEMINI_IMAGEN_MODEL = "imagen-4.0-generate-001"
 # Aspect ratio closest to A4 (1:√2 ≈ 3:4.24); 3:4 is nearest available
 GEMINI_ASPECT_RATIO = "3:4"
+
+# QC: max retries when an image fails quality control
+MAX_QC_RETRIES = 2
 
 LINE_ART_SUFFIX_KIDS = (
     "Black and white line drawing for kids. Thick bold outlines, pure white "
@@ -191,6 +199,66 @@ def upscale_to_a4(image_bytes: bytes) -> bytes:
 
 
 # ---------------------------------------------------------------------------
+# Post-generation quality control
+# ---------------------------------------------------------------------------
+
+def validate_line_art(png_bytes: bytes, category: str = "") -> dict:
+    """Analyse pixel distribution to detect photos or non-colorable images.
+
+    Returns a dict with keys: passed (bool), white_pct, black_pct, mid_pct, reason.
+    """
+    from PIL import Image
+    import io
+
+    img = Image.open(io.BytesIO(png_bytes)).convert("L")
+    # Sample pixels (every 4th pixel for speed on large A4 images)
+    pixels = list(img.getdata())[::4]
+    total = len(pixels)
+
+    white = sum(1 for p in pixels if p > 240)
+    black = sum(1 for p in pixels if p < 30)
+    mid = sum(1 for p in pixels if 50 < p < 200)
+
+    white_pct = white / total * 100
+    black_pct = black / total * 100
+    mid_pct = mid / total * 100
+
+    is_adult = category in ADULT_CATEGORIES
+
+    # Hard reject: clearly a photograph (near-zero white)
+    if white_pct < 5:
+        return {
+            "passed": False, "white_pct": white_pct, "black_pct": black_pct,
+            "mid_pct": mid_pct, "reason": "photograph detected (white < 5%)",
+        }
+
+    if is_adult:
+        # Adult patterns are denser — more lenient thresholds
+        if mid_pct > 50:
+            return {
+                "passed": False, "white_pct": white_pct, "black_pct": black_pct,
+                "mid_pct": mid_pct, "reason": "too much shading for adult pattern (mid > 50%)",
+            }
+    else:
+        # Kids line art: mostly white background with clean black outlines
+        if white_pct < 45:
+            return {
+                "passed": False, "white_pct": white_pct, "black_pct": black_pct,
+                "mid_pct": mid_pct, "reason": f"not enough white space (white={white_pct:.0f}% < 45%)",
+            }
+        if mid_pct > 30:
+            return {
+                "passed": False, "white_pct": white_pct, "black_pct": black_pct,
+                "mid_pct": mid_pct, "reason": f"too much shading (mid={mid_pct:.0f}% > 30%)",
+            }
+
+    return {
+        "passed": True, "white_pct": white_pct, "black_pct": black_pct,
+        "mid_pct": mid_pct, "reason": None,
+    }
+
+
+# ---------------------------------------------------------------------------
 # Astro content YAML generation
 # ---------------------------------------------------------------------------
 
@@ -300,24 +368,49 @@ def process_subject(
         return True
 
     print(f"  [gen] {image_slug}.png ({backend}) ...")
-    try:
-        if backend == "openai":
-            raw_bytes = generate_image_openai(client, prompt)
+    png_bytes = None
+    last_qc = None
+    for attempt in range(1, MAX_QC_RETRIES + 2):  # 1 initial + MAX_QC_RETRIES retries
+        try:
+            if backend == "openai":
+                raw_bytes = generate_image_openai(client, prompt)
+            else:
+                raw_bytes = generate_image_gemini(client, prompt)
+            candidate = upscale_to_a4(raw_bytes)
+        except Exception as e:
+            error_str = str(e)
+            print(f"  [err] Failed to generate {image_slug}: {error_str}", file=sys.stderr)
+            entry["status"] = "error"
+            entry["error"] = error_str
+            log_entries.append(entry)
+            if "RESOURCE_EXHAUSTED" in error_str or "429" in error_str or "rate_limit" in error_str.lower():
+                raise QuotaExhaustedError(error_str)
+            return False
+
+        # --- Quality control ---
+        qc = validate_line_art(candidate, category)
+        last_qc = qc
+        if qc["passed"]:
+            png_bytes = candidate
+            print(f"  [qc ] PASS (white={qc['white_pct']:.0f}% mid={qc['mid_pct']:.0f}%)")
+            break
         else:
-            raw_bytes = generate_image_gemini(client, prompt)
-        png_bytes = upscale_to_a4(raw_bytes)
-        image_path.write_bytes(png_bytes)
-        print(f"  [ok ] Saved {image_path.stat().st_size // 1024}KB → {image_path}")
-    except Exception as e:
-        error_str = str(e)
-        print(f"  [err] Failed to generate {image_slug}: {error_str}", file=sys.stderr)
-        entry["status"] = "error"
-        entry["error"] = error_str
+            print(f"  [qc ] FAIL attempt {attempt}: {qc['reason']}")
+            if attempt <= MAX_QC_RETRIES:
+                print(f"  [qc ] Retrying ({attempt}/{MAX_QC_RETRIES})...")
+                time.sleep(RATE_LIMIT_SECONDS)
+
+    if png_bytes is None:
+        entry["status"] = "qc_failed"
+        entry["error"] = f"QC failed after {MAX_QC_RETRIES + 1} attempts: {last_qc['reason']}"
+        entry["qc"] = last_qc
         log_entries.append(entry)
-        # Propagate quota errors so the caller can stop early
-        if "RESOURCE_EXHAUSTED" in error_str or "429" in error_str or "rate_limit" in error_str.lower():
-            raise QuotaExhaustedError(error_str)
+        print(f"  [err] QC REJECTED {image_slug} — {last_qc['reason']}", file=sys.stderr)
         return False
+
+    image_path.write_bytes(png_bytes)
+    entry["qc"] = last_qc
+    print(f"  [ok ] Saved {image_path.stat().st_size // 1024}KB → {image_path}")
 
     for locale in locales:
         content = make_content_yaml(subject, locale, image_slug)
@@ -446,6 +539,46 @@ def run(args):
     print(f"Log: {log_file}")
 
 
+def run_audit(args):
+    """Scan existing images and report QC pass/fail for each."""
+    with open(PROMPTS_FILE, encoding="utf-8") as f:
+        config = yaml.safe_load(f)
+
+    astro_root = get_astro_root()
+    images_dir = get_images_dir(astro_root)
+
+    # Build slug→category map from prompts config
+    slug_category = {}
+    for cat_name, cat_data in config["categories"].items():
+        for subj in cat_data["subjects"]:
+            slug_category[subj["fr_slug"]] = cat_name
+
+    failures = []
+    passes = 0
+    for png in sorted(images_dir.glob("*.png")):
+        slug = png.stem
+        category = slug_category.get(slug, slug.split("-")[0])
+        qc = validate_line_art(png.read_bytes(), category)
+        if qc["passed"]:
+            passes += 1
+        else:
+            failures.append((slug, qc))
+            print(f"  FAIL  {slug:45s} {qc['reason']}  (white={qc['white_pct']:.0f}% mid={qc['mid_pct']:.0f}%)")
+
+    print(f"\n=== Audit: {passes} passed, {len(failures)} failed out of {passes + len(failures)} ===")
+    if failures and args.delete:
+        for slug, qc in failures:
+            for path in [
+                images_dir / f"{slug}.png",
+                images_dir / f"{slug}.webp",
+                images_dir / "thumbs" / f"{slug}.webp",
+            ]:
+                if path.exists():
+                    path.unlink()
+                    print(f"  [del] {path}")
+        print("  Deleted failed images. Re-run generation to recreate them.")
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Generate coloring page images via Gemini Imagen 4 or OpenAI gpt-image-1.",
@@ -463,16 +596,28 @@ Examples:
 
   # Use OpenAI backend
   python3 generate-coloriages.py --all --backend openai
+
+  # Audit existing images for QC failures
+  python3 generate-coloriages.py --audit
+
+  # Audit and auto-delete failures
+  python3 generate-coloriages.py --audit --delete
 """,
     )
     group = parser.add_mutually_exclusive_group()
     group.add_argument("--all", action="store_true", help="Process all categories")
     group.add_argument("--category", metavar="NAME", help="Process a single category")
+    group.add_argument("--audit", action="store_true", help="Scan existing images for QC failures")
     parser.add_argument("--count", type=int, metavar="N", help="Max subjects per category (default: all)")
     parser.add_argument("--locale", choices=["fr", "en", "both"], default="both", help="Generate content YAML for locale(s) (default: both)")
     parser.add_argument("--backend", choices=["gemini", "openai"], default="gemini", help="Image generation backend (default: gemini)")
     parser.add_argument("--dry-run", action="store_true", help="Print what would be done without calling the API")
+    parser.add_argument("--delete", action="store_true", help="With --audit, delete failed images")
     args = parser.parse_args()
+
+    if args.audit:
+        run_audit(args)
+        return
 
     if not args.all and not args.category:
         parser.print_help()

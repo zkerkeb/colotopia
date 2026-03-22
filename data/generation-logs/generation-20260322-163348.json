@@ -1,0 +1,149 @@
+{
+  "summary": {
+    "total": 10,
+    "success": 10,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-22T16:33:03.083533+00:00",
+      "backend": "openai",
+      "fr_slug": "pirates-navire",
+      "en_slug": "pirates-ship",
+      "prompt": "A cartoon pirate ship with tall masts, a skull flag, and waves below, side view. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/pirates-navire.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T16:33:05.086353+00:00",
+      "backend": "openai",
+      "fr_slug": "pirates-tresor",
+      "en_slug": "pirates-treasure",
+      "prompt": "A big wooden treasure chest with lock and metal bands, open lid, sparkling coins inside. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/pirates-tresor.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T16:33:07.090006+00:00",
+      "backend": "openai",
+      "fr_slug": "pirates-carte",
+      "en_slug": "pirates-map",
+      "prompt": "A rolled-out treasure map with a dotted path, palm tree, and a big X marking the spot. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/pirates-carte.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T16:33:09.100209+00:00",
+      "backend": "openai",
+      "fr_slug": "pirates-perroquet",
+      "en_slug": "pirates-parrot",
+      "prompt": "A colorful cartoon parrot perched on a pirate's shoulder, holding a tiny spyglass. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/pirates-perroquet.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T16:33:11.110389+00:00",
+      "backend": "openai",
+      "fr_slug": "pirates-ile",
+      "en_slug": "pirates-island",
+      "prompt": "A small tropical island with a palm tree, a shovel, and a treasure chest half buried in sand. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/pirates-ile.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T16:33:13.120631+00:00",
+      "backend": "openai",
+      "fr_slug": "pirates-canon",
+      "en_slug": "pirates-cannon",
+      "prompt": "A big cartoon cannon on a ship deck with cannonballs stacked beside it, smoke from the barrel. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/pirates-canon.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T16:33:15.130954+00:00",
+      "backend": "openai",
+      "fr_slug": "pirates-ancre",
+      "en_slug": "pirates-anchor",
+      "prompt": "A large decorative anchor with a rope wrapped around it, starfish and seaweed around the base. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/pirates-ancre.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T16:33:17.137487+00:00",
+      "backend": "openai",
+      "fr_slug": "pirates-epee",
+      "en_slug": "pirates-sword",
+      "prompt": "Two crossed pirate cutlasses with a skull above them, decorative swirls and a compass rose. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/pirates-epee.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/pirates-epee.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/pirates-sword.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 84.36003420752566,
+        "black_pct": 5.684012579541693,
+        "mid_pct": 1.5159359252583957,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-22T16:33:33.851724+00:00",
+      "backend": "openai",
+      "fr_slug": "pirates-bouteille-mer",
+      "en_slug": "pirates-bottle-sea",
+      "prompt": "A glass bottle sealed with a cork floating on waves, a rolled message visible inside, cartoon. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/pirates-bouteille-mer.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-22T16:33:35.860082+00:00",
+      "backend": "openai",
+      "fr_slug": "pirates-chapeau",
+      "en_slug": "pirates-hat",
+      "prompt": "A pirate captain hat with a skull and crossbones, a large feather, and a gold band. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/pirates-chapeau.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/pirates-chapeau.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/pirates-hat.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 76.52880972523633,
+        "black_pct": 22.252639128995476,
+        "mid_pct": 0.7704049729650201,
+        "reason": null
+      }
+    }
+  ]
+}
