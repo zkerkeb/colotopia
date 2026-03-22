@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "total": 2,
+    "success": 1,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-21T13:37:25.073144+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-tortue-pizza",
+      "en_slug": "funny-turtle-pizza",
+      "prompt": "A cartoon turtle in a chef hat spinning pizza dough on one finger, big smile, apron. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-tortue-pizza.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:37:27.074173+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-loup-ballet",
+      "en_slug": "funny-wolf-ballet",
+      "prompt": "A cartoon wolf in a ballet tutu standing on tiptoe, arms raised overhead, big wide eyes, white background. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-loup-ballet.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/predict_requests_per_model_per_day_paid_tier_1, limit: 70, model: imagen-4.0-generate', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/predict_requests_per_model_per_day_paid_tier_1', 'quotaId': 'PredictRequestsPerDayPerProjectPerModelPaidTier1', 'quotaDimensions': {'location': 'global', 'model': 'imagen-4.0-generate'}, 'quotaValue': '70'}]}]}}"
+    }
+  ]
+}

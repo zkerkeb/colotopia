@@ -1,0 +1,84 @@
+{
+  "summary": {
+    "total": 5,
+    "success": 5,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-21T13:12:49.043735+00:00",
+      "backend": "gemini",
+      "fr_slug": "musique-guitare",
+      "en_slug": "music-guitar",
+      "prompt": "A cartoon electric guitar with musical notes floating around it, simple bold lines. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/musique-guitare.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/musique-guitare.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/music-guitar.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:13:01.888794+00:00",
+      "backend": "gemini",
+      "fr_slug": "musique-piano",
+      "en_slug": "music-piano",
+      "prompt": "A cartoon grand piano with musical notes and stars floating above the keys. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/musique-piano.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/musique-piano.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/music-piano.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:13:15.825718+00:00",
+      "backend": "gemini",
+      "fr_slug": "musique-batterie",
+      "en_slug": "music-drums",
+      "prompt": "A cartoon drum kit with cymbals and bass drum, drumsticks crossing above, musical notes. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/musique-batterie.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/musique-batterie.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/music-drums.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:13:28.951919+00:00",
+      "backend": "gemini",
+      "fr_slug": "musique-violon",
+      "en_slug": "music-violin",
+      "prompt": "A cartoon violin with its bow resting beside it, musical notes swirling around, simple style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/musique-violon.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/musique-violon.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/music-violin.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:13:40.957367+00:00",
+      "backend": "gemini",
+      "fr_slug": "musique-trompette",
+      "en_slug": "music-trumpet",
+      "prompt": "A cartoon trumpet with musical notes bursting from the bell, simple bold outline. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/musique-trompette.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/musique-trompette.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/music-trumpet.yaml"
+      ],
+      "error": null
+    }
+  ]
+}

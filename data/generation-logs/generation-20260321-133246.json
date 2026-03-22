@@ -1,0 +1,192 @@
+{
+  "summary": {
+    "total": 14,
+    "success": 14,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-21T13:31:34.989544+00:00",
+      "backend": "gemini",
+      "fr_slug": "paysages-alpes",
+      "en_slug": "landscapes-alps",
+      "prompt": "A detailed Alpine mountain landscape with snow-capped peaks, dense pine forests, a wooden chalet, and a lake reflection. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paysages-alpes.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:31:36.994695+00:00",
+      "backend": "gemini",
+      "fr_slug": "paysages-lavande",
+      "en_slug": "landscapes-lavender",
+      "prompt": "Rolling Provencal lavender fields with a stone farmhouse, cypress trees, and distant hills under a sunny sky. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paysages-lavande.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:31:38.999834+00:00",
+      "backend": "gemini",
+      "fr_slug": "paysages-cote-bretonne",
+      "en_slug": "landscapes-breton-coast",
+      "prompt": "A dramatic Brittany coastline with rocky cliffs, crashing waves, a lighthouse, and seabirds soaring in the sky. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paysages-cote-bretonne.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:31:41.004667+00:00",
+      "backend": "gemini",
+      "fr_slug": "paysages-foret-tropicale",
+      "en_slug": "landscapes-tropical-forest",
+      "prompt": "A lush tropical rainforest with towering trees, exotic plants, a winding river, and colorful birds perched in branches. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paysages-foret-tropicale.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:31:43.009808+00:00",
+      "backend": "gemini",
+      "fr_slug": "paysages-canyon",
+      "en_slug": "landscapes-canyon",
+      "prompt": "A vast canyon landscape with layered rock formations, a river winding far below, and sparse desert plants on the rim. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paysages-canyon.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:31:45.014979+00:00",
+      "backend": "gemini",
+      "fr_slug": "paysages-mer-voiliers",
+      "en_slug": "landscapes-sailboats-sea",
+      "prompt": "Sailboats on calm ocean waves, seagulls soaring, rocky shore in foreground, clouds above. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paysages-mer-voiliers.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:31:47.017855+00:00",
+      "backend": "gemini",
+      "fr_slug": "paysages-mont-fuji",
+      "en_slug": "landscapes-mount-fuji",
+      "prompt": "Mount Fuji with cherry blossom trees in full bloom, a traditional pagoda, stone lanterns, and a serene lake reflection. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paysages-mont-fuji.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:31:49.022240+00:00",
+      "backend": "gemini",
+      "fr_slug": "paysages-pyramides",
+      "en_slug": "landscapes-pyramids",
+      "prompt": "The Great Pyramids of Giza with the Sphinx, sweeping sand dunes, palm trees, and a camel caravan at sunset. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paysages-pyramides.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:31:51.022577+00:00",
+      "backend": "gemini",
+      "fr_slug": "paysages-fjord",
+      "en_slug": "landscapes-fjord",
+      "prompt": "A dramatic Norwegian fjord with steep mountain walls, a small village on the shore, wooden boats, and waterfalls. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paysages-fjord.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:31:53.026916+00:00",
+      "backend": "gemini",
+      "fr_slug": "paysages-venise",
+      "en_slug": "landscapes-venice",
+      "prompt": "Venice canal with gondolas, arched stone bridges, and tall historic buildings lining both sides. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paysages-venise.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/paysages-venise.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/landscapes-venice.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:32:08.389286+00:00",
+      "backend": "gemini",
+      "fr_slug": "paysages-toscane",
+      "en_slug": "landscapes-tuscany",
+      "prompt": "Rolling Tuscan hills with vineyard rows, a stone farmhouse, tall cypress trees, and a winding road. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paysages-toscane.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/paysages-toscane.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/landscapes-tuscany.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:32:14.909508+00:00",
+      "backend": "gemini",
+      "fr_slug": "paysages-santorin",
+      "en_slug": "landscapes-santorini",
+      "prompt": "White cubic buildings with blue domes on a Santorini cliff, overlooking the sparkling Aegean sea. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paysages-santorin.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/paysages-santorin.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/landscapes-santorini.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:32:26.768142+00:00",
+      "backend": "gemini",
+      "fr_slug": "paysages-amazonie",
+      "en_slug": "landscapes-amazon",
+      "prompt": "A wide Amazon river winding through dense jungle canopy, wooden canoes, exotic birds, and lush vegetation. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paysages-amazonie.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/paysages-amazonie.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/landscapes-amazon.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:32:33.445429+00:00",
+      "backend": "gemini",
+      "fr_slug": "paysages-angkor",
+      "en_slug": "landscapes-angkor-wat",
+      "prompt": "Angkor Wat temple towers reflected in a still moat, palm trees, lotus flowers, stone causeways. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paysages-angkor.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/paysages-angkor.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/landscapes-angkor-wat.yaml"
+      ],
+      "error": null
+    }
+  ]
+}

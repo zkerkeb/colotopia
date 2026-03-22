@@ -1,0 +1,84 @@
+{
+  "summary": {
+    "total": 5,
+    "success": 5,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-21T13:29:30.084523+00:00",
+      "backend": "gemini",
+      "fr_slug": "nourriture-gateau",
+      "en_slug": "food-birthday-cake",
+      "prompt": "A tall layered birthday cake with frosting swirls, lit candles, and stars, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nourriture-gateau.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nourriture-gateau.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/food-birthday-cake.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:29:37.720591+00:00",
+      "backend": "gemini",
+      "fr_slug": "nourriture-pizza",
+      "en_slug": "food-pizza",
+      "prompt": "A round pizza cut into slices with mushrooms, peppers, olives, big cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nourriture-pizza.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nourriture-pizza.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/food-pizza.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:29:47.423221+00:00",
+      "backend": "gemini",
+      "fr_slug": "nourriture-fruits",
+      "en_slug": "food-fruit-bowl",
+      "prompt": "A big bowl piled with bananas, apples, strawberries, grapes, and a pineapple, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nourriture-fruits.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nourriture-fruits.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/food-fruit-bowl.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:29:55.031738+00:00",
+      "backend": "gemini",
+      "fr_slug": "nourriture-glace",
+      "en_slug": "food-ice-cream-sundae",
+      "prompt": "A tall ice cream sundae glass with three scoops, whipped cream, sprinkles, and a cherry on top. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nourriture-glace.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nourriture-glace.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/food-ice-cream-sundae.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:30:01.479364+00:00",
+      "backend": "gemini",
+      "fr_slug": "nourriture-boulangerie",
+      "en_slug": "food-french-bakery",
+      "prompt": "A French bakery display with croissants, baguettes, macarons, and a pain au chocolat, cartoon. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/nourriture-boulangerie.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/nourriture-boulangerie.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/food-french-bakery.yaml"
+      ],
+      "error": null
+    }
+  ]
+}

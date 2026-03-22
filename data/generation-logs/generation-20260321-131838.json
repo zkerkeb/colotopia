@@ -1,0 +1,72 @@
+{
+  "summary": {
+    "total": 5,
+    "success": 5,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-21T13:18:22.080095+00:00",
+      "backend": "gemini",
+      "fr_slug": "robots-danseur",
+      "en_slug": "robots-dancer",
+      "prompt": "A round cute robot doing a funky dance move with arms out, big dot eyes, happy. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/robots-danseur.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:18:24.085688+00:00",
+      "backend": "gemini",
+      "fr_slug": "robots-jardinier",
+      "en_slug": "robots-gardener",
+      "prompt": "A cartoon robot with square body and big eyes, holding a watering can over small flowers. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/robots-jardinier.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:18:26.089603+00:00",
+      "backend": "gemini",
+      "fr_slug": "robots-astronaute",
+      "en_slug": "robots-astronaut",
+      "prompt": "A cheerful cartoon robot with antenna and round visor helmet, waving one arm, white background. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/robots-astronaute.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/robots-astronaute.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/robots-astronaut.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:18:36.575295+00:00",
+      "backend": "gemini",
+      "fr_slug": "robots-pompier",
+      "en_slug": "robots-firefighter",
+      "prompt": "A robot wearing a firefighter helmet, aiming a water hose, big round eyes, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/robots-pompier.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:18:38.577133+00:00",
+      "backend": "gemini",
+      "fr_slug": "robots-chef",
+      "en_slug": "robots-chef",
+      "prompt": "A cartoon robot with a chef hat and apron, stirring a big pot on a stove, smiling face. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/robots-chef.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    }
+  ]
+}

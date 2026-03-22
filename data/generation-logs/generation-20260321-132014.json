@@ -1,0 +1,72 @@
+{
+  "summary": {
+    "total": 5,
+    "success": 5,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-21T13:19:57.805417+00:00",
+      "backend": "gemini",
+      "fr_slug": "pirates-navire",
+      "en_slug": "pirates-ship",
+      "prompt": "A cartoon pirate ship with tall masts, a skull flag, and waves below, side view. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/pirates-navire.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:19:59.809108+00:00",
+      "backend": "gemini",
+      "fr_slug": "pirates-tresor",
+      "en_slug": "pirates-treasure",
+      "prompt": "A big wooden treasure chest with lock and metal bands, open lid, sparkling coins inside. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/pirates-tresor.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/pirates-tresor.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/pirates-treasure.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:20:10.706657+00:00",
+      "backend": "gemini",
+      "fr_slug": "pirates-carte",
+      "en_slug": "pirates-map",
+      "prompt": "A rolled-out treasure map with a dotted path, palm tree, and a big X marking the spot. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/pirates-carte.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:20:12.710568+00:00",
+      "backend": "gemini",
+      "fr_slug": "pirates-perroquet",
+      "en_slug": "pirates-parrot",
+      "prompt": "A colorful cartoon parrot perched on a pirate's shoulder, holding a tiny spyglass. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/pirates-perroquet.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:20:14.713851+00:00",
+      "backend": "gemini",
+      "fr_slug": "pirates-ile",
+      "en_slug": "pirates-island",
+      "prompt": "A small tropical island with a palm tree, a shovel, and a treasure chest half buried in sand. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/pirates-ile.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    }
+  ]
+}

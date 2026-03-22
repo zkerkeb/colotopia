@@ -1,0 +1,147 @@
+{
+  "summary": {
+    "total": 11,
+    "success": 11,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-21T12:50:19.786962+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-singe-voiture",
+      "en_slug": "funny-monkey-car",
+      "prompt": "A monkey in sunglasses driving a race car, grinning and waving from the window. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-singe-voiture.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T12:50:21.788147+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-chat-astronaute",
+      "en_slug": "funny-cat-astronaut",
+      "prompt": "A cat wearing a space suit and helmet, floating near the moon with stars around. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-chat-astronaute.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T12:50:23.793521+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-dinosaure-skateboard",
+      "en_slug": "funny-dinosaur-skateboard",
+      "prompt": "A T-Rex balanced on a skateboard with tiny arms raised happily in the air. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-dinosaure-skateboard.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T12:50:25.798665+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-grenouille-chevalier",
+      "en_slug": "funny-frog-knight",
+      "prompt": "A frog in knight armor holding a sword and a round shield, standing proudly. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-grenouille-chevalier.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T12:50:27.803204+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-pingouin-chef",
+      "en_slug": "funny-penguin-chef",
+      "prompt": "A penguin wearing a chef hat and apron, holding a wooden spoon with a big smile. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-pingouin-chef.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T12:50:29.806492+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-ours-velo",
+      "en_slug": "funny-bear-bicycle",
+      "prompt": "A chubby bear wearing a helmet and backpack, pedaling a bicycle with a happy grin. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-ours-velo.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T12:50:31.812717+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-lapin-magicien",
+      "en_slug": "funny-rabbit-magician",
+      "prompt": "A rabbit in a magician bow tie pulling a giant carrot from a top hat with a wink. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-lapin-magicien.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T12:50:33.819885+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-requin-surfeur",
+      "en_slug": "funny-shark-surfer",
+      "prompt": "A shark in sunglasses riding a surfboard on a wave, arms raised, big grin. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-requin-surfeur.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/drole-requin-surfeur.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/funny-shark-surfer.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T12:50:44.332335+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-lion-guitare",
+      "en_slug": "funny-lion-guitar",
+      "prompt": "A lion with a big mane playing electric guitar on stage, rock star pose. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-lion-guitare.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T12:50:46.355193+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-elephant-peintre",
+      "en_slug": "funny-elephant-painter",
+      "prompt": "An elephant using its trunk as a paintbrush, painting a colorful picture on canvas. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-elephant-peintre.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/drole-elephant-peintre.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/funny-elephant-painter.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T12:50:54.328160+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-crocodile-dentiste",
+      "en_slug": "funny-crocodile-dentist",
+      "prompt": "A crocodile wearing a dentist coat and glasses, inspecting tiny teeth with a mirror. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-crocodile-dentiste.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    }
+  ]
+}

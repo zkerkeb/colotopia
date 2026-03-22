@@ -1,0 +1,84 @@
+{
+  "summary": {
+    "total": 6,
+    "success": 6,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-21T18:01:30.194868+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-tortue-pizza",
+      "en_slug": "funny-turtle-pizza",
+      "prompt": "A cartoon turtle in a chef hat spinning pizza dough on one finger, big smile, apron. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-tortue-pizza.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T18:01:32.205050+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-loup-ballet",
+      "en_slug": "funny-wolf-ballet",
+      "prompt": "A cartoon wolf in a ballet tutu standing on tiptoe, arms raised overhead, big wide eyes, white background. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-loup-ballet.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/drole-loup-ballet.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/funny-wolf-ballet.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T18:01:39.452820+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-cochon-plongeur",
+      "en_slug": "funny-pig-scuba",
+      "prompt": "A chubby pig in scuba gear with tank, flippers, and mask, thumbs up, bubbles around. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-cochon-plongeur.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T18:01:41.457766+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-panda-ninja",
+      "en_slug": "funny-panda-ninja",
+      "prompt": "A round fluffy panda in a ninja headband mid-jump, holding two bamboo sticks, fierce face. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-panda-ninja.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T18:01:43.465172+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-koala-pilote",
+      "en_slug": "funny-koala-pilot",
+      "prompt": "A sleepy koala in aviator goggles and pilot cap sitting in a tiny biplane cockpit. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-koala-pilote.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T18:01:45.467739+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-vache-astronaute",
+      "en_slug": "funny-cow-astronaut",
+      "prompt": "A cartoon cow in a full space suit waving from a rocket window, Earth visible behind. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-vache-astronaute.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    }
+  ]
+}

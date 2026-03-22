@@ -1,0 +1,84 @@
+{
+  "summary": {
+    "total": 5,
+    "success": 5,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-21T13:32:50.269354+00:00",
+      "backend": "gemini",
+      "fr_slug": "robots-musicien",
+      "en_slug": "robots-musician",
+      "prompt": "A robot with four arms playing a drum kit simultaneously, music notes flying, big grin. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/robots-musicien.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/robots-musicien.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/robots-musician.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:33:07.693442+00:00",
+      "backend": "gemini",
+      "fr_slug": "robots-footballeur",
+      "en_slug": "robots-soccer-player",
+      "prompt": "A cartoon robot in a soccer uniform kicking a football, big round eyes, arms out for balance. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/robots-footballeur.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/robots-footballeur.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/robots-soccer-player.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:33:15.832113+00:00",
+      "backend": "gemini",
+      "fr_slug": "robots-detective",
+      "en_slug": "robots-detective",
+      "prompt": "A robot in a deerstalker hat holding a giant magnifying glass, one eye large through the lens. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/robots-detective.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/robots-detective.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/robots-detective.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:33:22.009817+00:00",
+      "backend": "gemini",
+      "fr_slug": "robots-surfeur",
+      "en_slug": "robots-surfer",
+      "prompt": "A cartoon robot riding a big wave on a surfboard, arms wide, happy face, fins visible. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/robots-surfeur.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/robots-surfeur.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/robots-surfer.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:33:30.956634+00:00",
+      "backend": "gemini",
+      "fr_slug": "robots-peintre",
+      "en_slug": "robots-painter",
+      "prompt": "A robot holding a large paintbrush making splashes on a canvas, paint drops around, smiling. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/robots-peintre.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/robots-peintre.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/robots-painter.yaml"
+      ],
+      "error": null
+    }
+  ]
+}

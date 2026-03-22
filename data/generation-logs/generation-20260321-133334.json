@@ -1,0 +1,84 @@
+{
+  "summary": {
+    "total": 5,
+    "success": 5,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-21T13:32:50.269585+00:00",
+      "backend": "gemini",
+      "fr_slug": "musique-accordeon",
+      "en_slug": "music-accordion",
+      "prompt": "A cartoon accordion with bellows stretched open, music notes floating around it. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/musique-accordeon.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/musique-accordeon.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/music-accordion.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:32:58.438184+00:00",
+      "backend": "gemini",
+      "fr_slug": "musique-harpe",
+      "en_slug": "music-harp",
+      "prompt": "A tall classical harp with strings and swirling music notes around it, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/musique-harpe.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/musique-harpe.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/music-harp.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:33:06.273419+00:00",
+      "backend": "gemini",
+      "fr_slug": "musique-saxophone",
+      "en_slug": "music-saxophone",
+      "prompt": "A cartoon saxophone with music notes and stars bursting from the bell, jazz style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/musique-saxophone.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/musique-saxophone.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/music-saxophone.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:33:16.056090+00:00",
+      "backend": "gemini",
+      "fr_slug": "musique-concert",
+      "en_slug": "music-concert-stage",
+      "prompt": "A concert stage with a microphone, spotlights, big speakers, and cheering crowd silhouette below. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/musique-concert.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/musique-concert.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/music-concert-stage.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:33:28.033597+00:00",
+      "backend": "gemini",
+      "fr_slug": "musique-maracas",
+      "en_slug": "music-maracas",
+      "prompt": "A pair of colorful maracas surrounded by music notes, stars, and rhythm symbols. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/musique-maracas.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/musique-maracas.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/music-maracas.yaml"
+      ],
+      "error": null
+    }
+  ]
+}

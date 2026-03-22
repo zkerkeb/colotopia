@@ -1,0 +1,57 @@
+{
+  "summary": {
+    "total": 4,
+    "success": 3,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-21T18:02:35.730425+00:00",
+      "backend": "gemini",
+      "fr_slug": "robots-musicien",
+      "en_slug": "robots-musician",
+      "prompt": "A robot with four arms playing a drum kit simultaneously, music notes flying, big grin. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/robots-musicien.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T18:02:37.731829+00:00",
+      "backend": "gemini",
+      "fr_slug": "robots-footballeur",
+      "en_slug": "robots-soccer-player",
+      "prompt": "A cartoon robot in a soccer uniform kicking a football, big round eyes, arms out for balance. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/robots-footballeur.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T18:02:39.739521+00:00",
+      "backend": "gemini",
+      "fr_slug": "robots-detective",
+      "en_slug": "robots-detective",
+      "prompt": "A robot in a deerstalker hat holding a giant magnifying glass, one eye large through the lens. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/robots-detective.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T18:02:41.749615+00:00",
+      "backend": "gemini",
+      "fr_slug": "robots-surfeur",
+      "en_slug": "robots-surfer",
+      "prompt": "A cartoon robot riding a big wave on a surfboard, arms wide, happy face, fins visible. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/robots-surfeur.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/predict_requests_per_model_per_day_paid_tier_1, limit: 70, model: imagen-4.0-generate', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/predict_requests_per_model_per_day_paid_tier_1', 'quotaId': 'PredictRequestsPerDayPerProjectPerModelPaidTier1', 'quotaDimensions': {'location': 'global', 'model': 'imagen-4.0-generate'}, 'quotaValue': '70'}]}]}}"
+    }
+  ]
+}

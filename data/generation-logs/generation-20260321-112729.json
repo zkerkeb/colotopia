@@ -1,0 +1,93 @@
+{
+  "summary": {
+    "total": 7,
+    "success": 7,
+    "dry_run": true
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-21T11:27:29.622272+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-singe-voiture",
+      "en_slug": "funny-monkey-car",
+      "prompt": "A monkey in sunglasses driving a race car, grinning and waving from the window. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-singe-voiture.png",
+      "dry_run": true,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T11:27:29.622826+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-chat-astronaute",
+      "en_slug": "funny-cat-astronaut",
+      "prompt": "A cat wearing a space suit and helmet, floating near the moon with stars around. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-chat-astronaute.png",
+      "dry_run": true,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T11:27:29.622869+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-dinosaure-skateboard",
+      "en_slug": "funny-dinosaur-skateboard",
+      "prompt": "A T-Rex balanced on a skateboard with tiny arms raised happily in the air. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-dinosaure-skateboard.png",
+      "dry_run": true,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T11:27:29.622907+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-grenouille-chevalier",
+      "en_slug": "funny-frog-knight",
+      "prompt": "A frog in knight armor holding a sword and a round shield, standing proudly. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-grenouille-chevalier.png",
+      "dry_run": true,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T11:27:29.622953+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-pingouin-chef",
+      "en_slug": "funny-penguin-chef",
+      "prompt": "A penguin wearing a chef hat and apron, holding a wooden spoon with a big smile. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-pingouin-chef.png",
+      "dry_run": true,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T11:27:29.622985+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-ours-velo",
+      "en_slug": "funny-bear-bicycle",
+      "prompt": "A chubby bear wearing a helmet and backpack, pedaling a bicycle with a happy grin. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-ours-velo.png",
+      "dry_run": true,
+      "status": "dry_run",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T11:27:29.623051+00:00",
+      "backend": "gemini",
+      "fr_slug": "drole-lapin-magicien",
+      "en_slug": "funny-rabbit-magician",
+      "prompt": "A rabbit in a magician bow tie pulling a giant carrot from a top hat with a wink. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/drole-lapin-magicien.png",
+      "dry_run": true,
+      "status": "dry_run",
+      "content_files": [],
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "summary": {
+    "total": 5,
+    "success": 5,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-21T13:12:09.724885+00:00",
+      "backend": "gemini",
+      "fr_slug": "robots-danseur",
+      "en_slug": "robots-dancer",
+      "prompt": "A round cute robot doing a funky dance move with arms out, big dot eyes, happy. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/robots-danseur.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/robots-danseur.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/robots-dancer.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:12:17.986245+00:00",
+      "backend": "gemini",
+      "fr_slug": "robots-jardinier",
+      "en_slug": "robots-gardener",
+      "prompt": "A friendly boxy robot watering flowers in a sunny garden with a small watering can. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/robots-jardinier.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/robots-jardinier.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/robots-gardener.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:12:25.280026+00:00",
+      "backend": "gemini",
+      "fr_slug": "robots-astronaute",
+      "en_slug": "robots-astronaut",
+      "prompt": "A cute boxy robot floating in space with stars and a planet nearby, antenna blinking. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/robots-astronaute.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/robots-astronaute.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/robots-astronaut.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:12:32.655388+00:00",
+      "backend": "gemini",
+      "fr_slug": "robots-pompier",
+      "en_slug": "robots-firefighter",
+      "prompt": "A robot wearing a firefighter helmet, aiming a water hose, big round eyes, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/robots-pompier.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/robots-pompier.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/robots-firefighter.yaml"
+      ],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-21T13:12:38.630875+00:00",
+      "backend": "gemini",
+      "fr_slug": "robots-chef",
+      "en_slug": "robots-chef",
+      "prompt": "A robot wearing a chef toque, stirring a pot with one arm, holding a spatula with the other. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/robots-chef.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/robots-chef.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/robots-chef.yaml"
+      ],
+      "error": null
+    }
+  ]
+}
