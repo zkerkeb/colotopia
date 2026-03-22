@@ -1,0 +1,102 @@
+---
+import type { Locale } from '../lib/i18n';
+import type { PillarFaq } from '../data/pillar-content';
+
+interface Props {
+  locale: Locale;
+  faq: PillarFaq[];
+  categoryLabel: string;
+}
+
+const { locale, faq, categoryLabel } = Astro.props;
+
+const title = locale === 'fr'
+  ? `Questions fréquentes — Coloriages ${categoryLabel}`
+  : `FAQ — ${categoryLabel} Coloring Pages`;
+---
+
+{faq.length > 0 && (
+  <section class="category-faq">
+    <h2>{title}</h2>
+    <div class="faq-list">
+      {faq.map((item, i) => (
+        <details class="faq-item" open={i === 0}>
+          <summary>{item.question}</summary>
+          <p>{item.answer}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+)}
+
+<style>
+  .category-faq {
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    background: #f9fafb;
+    border-radius: 12px;
+  }
+
+  .category-faq h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 1.25rem;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .faq-item {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .faq-item summary {
+    padding: 1rem 1.25rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #1f2937;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::before {
+    content: '+';
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #6366f1;
+    flex-shrink: 0;
+    width: 1.25rem;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+
+  .faq-item[open] summary::before {
+    content: '−';
+  }
+
+  .faq-item summary:hover {
+    background: #f9fafb;
+  }
+
+  .faq-item p {
+    padding: 0 1.25rem 1rem 3rem;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #4b5563;
+  }
+</style>

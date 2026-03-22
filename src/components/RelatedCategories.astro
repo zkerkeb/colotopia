@@ -1,0 +1,73 @@
+---
+import type { Locale, Category } from '../lib/i18n';
+import { getCategoryLabel, getCategorySlug, getLocalePath } from '../lib/i18n';
+
+interface Props {
+  locale: Locale;
+  categories: Category[];
+}
+
+const { locale, categories } = Astro.props;
+
+const title = locale === 'fr'
+  ? 'Catégories similaires'
+  : 'Related Categories';
+
+const items = categories.map((cat) => ({
+  key: cat,
+  label: getCategoryLabel(cat, locale),
+  href: getLocalePath(locale, `/${getCategorySlug(cat, locale)}`),
+}));
+---
+
+{items.length > 0 && (
+  <section class="related-categories">
+    <h2>{title}</h2>
+    <div class="related-grid">
+      {items.map((item) => (
+        <a href={item.href} class="related-link">
+          {item.label}
+        </a>
+      ))}
+    </div>
+  </section>
+)}
+
+<style>
+  .related-categories {
+    margin-top: 2rem;
+  }
+
+  .related-categories h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 1rem;
+  }
+
+  .related-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .related-link {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4b5563;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .related-link:hover {
+    border-color: #93c5fd;
+    color: #2563eb;
+    background: #eff6ff;
+    transform: translateY(-1px);
+  }
+</style>

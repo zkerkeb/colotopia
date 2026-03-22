@@ -1,0 +1,140 @@
+---
+import type { Locale } from '../lib/i18n';
+import type { PillarData } from '../data/pillar-content';
+
+interface Props {
+  locale: Locale;
+  pillar: PillarData;
+  categoryLabel: string;
+}
+
+const { locale, pillar, categoryLabel } = Astro.props;
+
+const labels = {
+  fr: {
+    ageTitle: 'Âge recommandé',
+    benefitsTitle: 'Bienfaits éducatifs',
+    tipsTitle: 'Conseils pour colorier',
+  },
+  en: {
+    ageTitle: 'Recommended age',
+    benefitsTitle: 'Educational benefits',
+    tipsTitle: 'Coloring tips',
+  },
+};
+
+const l = labels[locale];
+---
+
+<section class="pillar-section">
+  <div class="pillar-intro">
+    <p>{pillar.intro}</p>
+  </div>
+
+  <div class="pillar-cards">
+    <div class="pillar-card pillar-card--age">
+      <h2>{l.ageTitle}</h2>
+      <p class="age-range">{pillar.ageRange}</p>
+    </div>
+
+    <div class="pillar-card pillar-card--benefits">
+      <h2>{l.benefitsTitle}</h2>
+      <ul>
+        {pillar.benefits.map((b) => (
+          <li>{b}</li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="pillar-card pillar-card--tips">
+      <h2>{l.tipsTitle}</h2>
+      <ul>
+        {pillar.tips.map((tip) => (
+          <li>{tip}</li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pillar-section {
+    margin-bottom: 2rem;
+  }
+
+  .pillar-intro {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #374151;
+    margin-bottom: 1.5rem;
+  }
+
+  .pillar-intro p {
+    margin: 0;
+  }
+
+  .pillar-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .pillar-card {
+    padding: 1.25rem;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+  }
+
+  .pillar-card--age {
+    background: linear-gradient(135deg, #eff6ff 0%, #f0f9ff 100%);
+    border-color: #bfdbfe;
+  }
+
+  .pillar-card--benefits {
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+    border-color: #bbf7d0;
+  }
+
+  .pillar-card--tips {
+    background: linear-gradient(135deg, #fefce8 0%, #fef9c3 100%);
+    border-color: #fde68a;
+  }
+
+  .pillar-card h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem;
+    color: #1f2937;
+  }
+
+  .age-range {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #2563eb;
+    margin: 0;
+  }
+
+  .pillar-card ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    list-style: disc;
+  }
+
+  .pillar-card li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #4b5563;
+    margin-bottom: 0.25rem;
+  }
+
+  .pillar-card li:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 640px) {
+    .pillar-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

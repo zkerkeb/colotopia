@@ -4,8 +4,12 @@ import ColoringCard from '../../../components/ColoringCard.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 import Pagination from '../../../components/Pagination.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
+import PillarSection from '../../../components/PillarSection.astro';
+import CategoryFaq from '../../../components/CategoryFaq.astro';
+import RelatedCategories from '../../../components/RelatedCategories.astro';
 import { getCollection } from 'astro:content';
 import { categories, adultCategories, getCategoryLabel, getCategorySlug, ti, type Category } from '../../../lib/i18n';
+import { getPillarContent } from '../../../data/pillar-content';
 
 const locale = 'en';
 
@@ -30,9 +34,12 @@ export async function getStaticPaths({ paginate }: { paginate: Function }) {
 const { page, categoryKey } = Astro.props as { page: any; categoryKey: Category };
 const label = getCategoryLabel(categoryKey, locale);
 const isAdult = (adultCategories as readonly string[]).includes(categoryKey);
+const pillar = page.currentPage === 1 ? getPillarContent(categoryKey, locale) : null;
 
 const descriptionKey = isAdult ? 'category.description.adults' : 'category.description';
-const pageDescription = ti(descriptionKey, locale, { label: label.toLowerCase() });
+const pageDescription = pillar
+  ? pillar.intro.slice(0, 160).replace(/\s+\S*$/, '…')
+  : ti(descriptionKey, locale, { label: label.toLowerCase() });
 const seoText = ti(`category.${categoryKey}.seoText`, locale, {});
 const hasSeoText = seoText !== `category.${categoryKey}.seoText`;
 const canonical = Astro.url.href;
@@ -40,15 +47,41 @@ const siteUrl = Astro.site?.href.replace(/\/$/, '') ?? 'https://colotopia.com';
 const firstImage = page.data[0]?.data.image;
 const ogImage = firstImage ? `${siteUrl}${firstImage}` : undefined;
 
-const structuredData = {
-  '@context': 'https://schema.org',
-  '@type': 'CollectionPage',
-  name: page.currentPage === 1
-    ? `${label} Coloring Pages`
-    : `${label} Coloring Pages — Page ${page.currentPage}`,
-  description: pageDescription,
-  url: Astro.url.href,
-};
+const structuredData = pillar && pillar.faq.length > 0
+  ? {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'CollectionPage',
+          name: page.currentPage === 1
+            ? `${label} Coloring Pages`
+            : `${label} Coloring Pages — Page ${page.currentPage}`,
+          description: pageDescription,
+          url: Astro.url.href,
+          numberOfItems: page.total,
+        },
+        {
+          '@type': 'FAQPage',
+          mainEntity: pillar.faq.map((f) => ({
+            '@type': 'Question',
+            name: f.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: f.answer,
+            },
+          })),
+        },
+      ],
+    }
+  : {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: page.currentPage === 1
+        ? `${label} Coloring Pages`
+        : `${label} Coloring Pages — Page ${page.currentPage}`,
+      description: pageDescription,
+      url: Astro.url.href,
+    };
 ---
 
 <BaseLayout
@@ -68,8 +101,16 @@ const structuredData = {
   <Breadcrumb locale={locale} currentPage={`${label} Coloring Pages`} />
   <div class:list={['category-hero', { 'category-hero--adult': isAdult }]}>
     <h1>{label} Coloring Pages</h1>
-    <p class="category-description">{pageDescription}</p>
+    <p class="category-description">
+      {pillar
+        ? ti(isAdult ? 'category.description.adults' : 'category.description', locale, { label: label.toLowerCase() })
+        : pageDescription}
+    </p>
   </div>
+
+  {pillar && (
+    <PillarSection locale={locale} pillar={pillar} categoryLabel={label} />
+  )}
 
   <AdSlot adSlot="" format="horizontal" />
 
@@ -100,7 +141,15 @@ const structuredData = {
     locale={locale}
   />
 
-  {page.currentPage === 1 && hasSeoText && (
+  {pillar && pillar.faq.length > 0 && (
+    <CategoryFaq locale={locale} faq={pillar.faq} categoryLabel={label} />
+  )}
+
+  {pillar && pillar.relatedCategories.length > 0 && (
+    <RelatedCategories locale={locale} categories={pillar.relatedCategories} />
+  )}
+
+  {page.currentPage === 1 && hasSeoText && !pillar && (
     <div class="seo-content" set:html={seoText} />
   )}
 </BaseLayout>
