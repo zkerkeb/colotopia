@@ -18,6 +18,9 @@ export async function getStaticPaths({ paginate }: { paginate: Function }) {
 const { page } = Astro.props as { page: any };
 const isFirstPage = page.currentPage === 1;
 const canonical = Astro.url.href;
+const siteUrl = Astro.site?.href.replace(/\/$/, '') ?? 'https://colotopia.com';
+const firstImage = page.data[0]?.data.image;
+const ogImage = firstImage ? `${siteUrl}${firstImage}` : undefined;
 
 // Nouveaux: 10 most recent by createdAt (only on page 1)
 let nouveaux: typeof page.data = [];
@@ -44,6 +47,9 @@ const structuredData = {
   locale={locale}
   title={page.currentPage > 1 ? `Coloriages Gratuits — Page ${page.currentPage}` : undefined}
   canonical={canonical}
+  ogImage={ogImage}
+  ogImageWidth={800}
+  ogImageHeight={1100}
   structuredData={structuredData}
   prevUrl={page.url.prev}
   nextUrl={page.url.next}

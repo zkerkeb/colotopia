@@ -35,6 +35,9 @@ const pageDescription = ti(descriptionKey, locale, { label: label.toLowerCase() 
 const seoText = ti(`category.${categoryKey}.seoText`, locale, {});
 const hasSeoText = seoText !== `category.${categoryKey}.seoText`;
 const canonical = Astro.url.href;
+const siteUrl = Astro.site?.href.replace(/\/$/, '') ?? 'https://colotopia.com';
+const firstImage = page.data[0]?.data.image;
+const ogImage = firstImage ? `${siteUrl}${firstImage}` : undefined;
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -54,6 +57,9 @@ const structuredData = {
   description={pageDescription}
   locale={locale}
   canonical={canonical}
+  ogImage={ogImage}
+  ogImageWidth={800}
+  ogImageHeight={1100}
   structuredData={structuredData}
   prevUrl={page.url.prev}
   nextUrl={page.url.next}
