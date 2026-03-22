@@ -18,6 +18,10 @@ const categories = [
   'personnages',
   'contes',
   'drole',
+  'musique',
+  'nourriture',
+  'pirates',
+  'robots',
   // Adults
   'mandalas',
   'mosaiques',
