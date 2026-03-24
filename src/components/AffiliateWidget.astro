@@ -10,14 +10,25 @@ const { locale } = Astro.props;
 const title = locale === 'fr' ? 'Fournitures recommandées' : 'Recommended Supplies';
 const cta = locale === 'fr' ? 'Voir sur Amazon' : 'View on Amazon';
 
+const tag = 'colotopia-21';
+const base = 'https://www.amazon.fr/s';
+
 const products = [
   {
     name: locale === 'fr' ? 'Crayons de couleur (24 pcs)' : 'Colored Pencils (24 pcs)',
-    link: '#',
+    link: `${base}?k=${encodeURIComponent(locale === 'fr' ? 'crayons de couleur 24 enfant' : 'colored pencils 24 kids')}&tag=${tag}`,
   },
   {
     name: locale === 'fr' ? 'Feutres lavables' : 'Washable Markers',
-    link: '#',
+    link: `${base}?k=${encodeURIComponent(locale === 'fr' ? 'feutres lavables enfant' : 'washable markers kids')}&tag=${tag}`,
+  },
+  {
+    name: locale === 'fr' ? 'Cahier de coloriage' : 'Coloring Book',
+    link: `${base}?k=${encodeURIComponent(locale === 'fr' ? 'cahier coloriage enfant' : 'kids coloring book')}&tag=${tag}`,
+  },
+  {
+    name: locale === 'fr' ? 'Papier dessin épais' : 'Thick Drawing Paper',
+    link: `${base}?k=${encodeURIComponent(locale === 'fr' ? 'papier dessin épais enfant' : 'thick drawing paper kids')}&tag=${tag}`,
   },
 ];
 ---
@@ -28,7 +39,7 @@ const products = [
     {products.map((product) => (
       <li>
         <span>{product.name}</span>
-        <a href={product.link} target="_blank" rel="noopener sponsored" class="affiliate-link" data-product={product.name}>
+        <a href={product.link} target="_blank" rel="noopener sponsored nofollow" class="affiliate-link" data-product={product.name}>
           {cta} →
         </a>
       </li>
