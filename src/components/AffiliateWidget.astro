@@ -10,8 +10,8 @@ const { locale } = Astro.props;
 const title = locale === 'fr' ? 'Fournitures recommandées' : 'Recommended Supplies';
 const cta = locale === 'fr' ? 'Voir sur Amazon' : 'View on Amazon';
 
-const tag = 'colotopia-21';
-const base = 'https://www.amazon.fr/s';
+const tag = locale === 'fr' ? 'colotopia-21' : 'colotopiaus-20';
+const base = locale === 'fr' ? 'https://www.amazon.fr/s' : 'https://www.amazon.com/s';
 
 const products = [
   {
