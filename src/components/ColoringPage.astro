@@ -10,7 +10,7 @@ import AdSlot from './AdSlot.astro';
 import AffiliateWidget from './AffiliateWidget.astro';
 import type { Locale } from '../lib/i18n';
 import type { Category } from '../lib/i18n';
-import { t, getLocalePath, getColoringBasePath } from '../lib/i18n';
+import { t, getLocalePath, getColoringBasePath, categoryColors, categoryIcons } from '../lib/i18n';
 
 interface RelatedItem {
   title: string;
@@ -42,6 +42,8 @@ const {
 } = Astro.props;
 
 const printLabel = t('coloring.print', locale);
+const catColor = categoryColors[category];
+const catIcon = categoryIcons[category];
 
 // Derive WebP path from PNG path (original PNG kept for PDF generation)
 // e.g. /images/coloriages/animaux-chat.png → /images/coloriages/animaux-chat.webp
@@ -68,15 +70,21 @@ const pinterestUrl = `https://pinterest.com/pin/create/button/?url=${encodeURICo
   <div class="page-layout">
     <!-- Main content -->
     <div class="main-content">
-      <div class="coloring-image">
-        <picture>
-          <source type="image/webp" srcset={imageWebp} />
-          <img src={image} alt={alt} width="800" height="1100" loading="eager" decoding="async" fetchpriority="high"
-            data-pin-url={pageUrl}
-            data-pin-description={shareText}
-            data-pin-media={imageAbsUrl}
-          />
-        </picture>
+      <div class="coloring-image-frame" style={`background: ${catColor.light}; border-color: ${catColor.bg};`}>
+        <div class="frame-corner frame-tl" style={`color: ${catColor.bg};`}>{catIcon}</div>
+        <div class="frame-corner frame-tr" style={`color: ${catColor.bg};`}>{catIcon}</div>
+        <div class="coloring-image">
+          <picture>
+            <source type="image/webp" srcset={imageWebp} />
+            <img src={image} alt={alt} width="800" height="1100" loading="eager" decoding="async" fetchpriority="high"
+              data-pin-url={pageUrl}
+              data-pin-description={shareText}
+              data-pin-media={imageAbsUrl}
+            />
+          </picture>
+        </div>
+        <div class="frame-corner frame-bl" style={`color: ${catColor.bg};`}>{catIcon}</div>
+        <div class="frame-corner frame-br" style={`color: ${catColor.bg};`}>{catIcon}</div>
       </div>
 
       <div class="coloring-actions">
@@ -154,13 +162,32 @@ const pinterestUrl = `https://pinterest.com/pin/create/button/?url=${encodeURICo
     }
   }
 
+  .coloring-image-frame {
+    position: relative;
+    border: 3px solid;
+    border-radius: 16px;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .frame-corner {
+    position: absolute;
+    font-size: 1.25rem;
+    opacity: 0.4;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .frame-tl { top: 0.4rem; left: 0.5rem; }
+  .frame-tr { top: 0.4rem; right: 0.5rem; transform: scaleX(-1); }
+  .frame-bl { bottom: 0.4rem; left: 0.5rem; }
+  .frame-br { bottom: 0.4rem; right: 0.5rem; transform: scaleX(-1); }
+
   .coloring-image {
     background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 1rem;
     text-align: center;
-    margin-bottom: 1.5rem;
   }
 
   .coloring-image img {
@@ -291,6 +318,16 @@ const pinterestUrl = `https://pinterest.com/pin/create/button/?url=${encodeURICo
 
     .page-layout {
       display: block;
+    }
+
+    .coloring-image-frame {
+      border: none;
+      padding: 0;
+      background: none !important;
+    }
+
+    .frame-corner {
+      display: none;
     }
 
     .coloring-image {

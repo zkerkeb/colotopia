@@ -1,6 +1,6 @@
 ---
 import type { Locale } from '../lib/i18n';
-import { t, getLocalePath, getCategoriesPath } from '../lib/i18n';
+import { t, getLocalePath, getCategoriesPath, kidsCategories, adultCategories, getCategoryLabel, getCategorySlug, categoryIcons } from '../lib/i18n';
 import CategoryNav from './CategoryNav.astro';
 import SearchBar from './SearchBar.astro';
 
@@ -29,9 +29,95 @@ const altLabel = locale === 'fr' ? 'EN' : 'FR';
         {altLabel}
       </a>
     </nav>
+
+    <!-- Mobile hamburger button -->
+    <button class="hamburger" id="hamburger-btn" aria-label={t('nav.menu', locale)} aria-expanded="false">
+      <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+      <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
   </div>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" hidden>
+    <div class="drawer-inner">
+      <nav class="drawer-nav">
+        <a href={getLocalePath(locale)} class="drawer-link drawer-link--primary">{t('nav.home', locale)}</a>
+        <a href={getCategoriesPath(locale)} class="drawer-link drawer-link--primary">{t('nav.categories', locale)}</a>
+      </nav>
+
+      <div class="drawer-section">
+        <h4 class="drawer-section-title">{t('audience.enfants', locale)}</h4>
+        <div class="drawer-categories">
+          {kidsCategories.map((cat) => (
+            <a href={getLocalePath(locale, `/${getCategorySlug(cat, locale)}`)} class="drawer-cat">
+              <span class="drawer-cat-icon">{categoryIcons[cat]}</span>
+              {getCategoryLabel(cat, locale)}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="drawer-section">
+        <h4 class="drawer-section-title">{t('audience.adultes', locale)}</h4>
+        <div class="drawer-categories">
+          {adultCategories.map((cat) => (
+            <a href={getLocalePath(locale, `/${getCategorySlug(cat, locale)}`)} class="drawer-cat">
+              <span class="drawer-cat-icon">{categoryIcons[cat]}</span>
+              {getCategoryLabel(cat, locale)}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="drawer-footer">
+        <a
+          href={Astro.url.href.replace(`/${locale}/`, `/${altLocale}/`)}
+          class="drawer-lang-switch"
+        >
+          🌐 {altLabel}
+        </a>
+      </div>
+    </div>
+  </div>
+
   <CategoryNav locale={locale} />
 </header>
+
+<script>
+  const btn = document.getElementById('hamburger-btn');
+  const drawer = document.getElementById('mobile-drawer');
+  if (btn && drawer) {
+    const hamburgerIcon = btn.querySelector('.hamburger-icon') as SVGElement;
+    const closeIcon = btn.querySelector('.close-icon') as SVGElement;
+
+    btn.addEventListener('click', () => {
+      const isOpen = !drawer.hidden;
+      drawer.hidden = isOpen;
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      hamburgerIcon.style.display = isOpen ? '' : 'none';
+      closeIcon.style.display = isOpen ? 'none' : '';
+      document.body.style.overflow = isOpen ? '' : 'hidden';
+    });
+
+    // Close on link click
+    drawer.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        drawer.hidden = true;
+        btn.setAttribute('aria-expanded', 'false');
+        hamburgerIcon.style.display = '';
+        closeIcon.style.display = 'none';
+        document.body.style.overflow = '';
+      });
+    });
+  }
+</script>
 
 <style>
   .site-header {
@@ -81,6 +167,162 @@ const altLabel = locale === 'fr' ? 'EN' : 'FR';
     border-radius: 6px;
     font-size: 0.875rem;
     font-weight: 600;
+  }
+
+  /* Hamburger: hidden on desktop */
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    color: #374151;
+    border-radius: 8px;
+    transition: background 0.15s;
+  }
+
+  .hamburger:hover {
+    background: #f3f4f6;
+  }
+
+  /* Mobile drawer */
+  .mobile-drawer {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .header-nav {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+    }
+
+    .logo {
+      font-size: 1rem;
+    }
+
+    .mobile-drawer:not([hidden]) {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: white;
+      z-index: 99;
+      overflow-y: auto;
+      padding-top: 60px;
+      animation: drawer-slide-in 0.2s ease-out;
+    }
+
+    @keyframes drawer-slide-in {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .drawer-inner {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 1rem 1.25rem 2rem;
+    }
+
+    .drawer-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .drawer-link {
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #374151;
+      font-size: 1rem;
+      transition: background 0.15s;
+    }
+
+    .drawer-link:hover {
+      background: #fce7f3;
+      color: #e8437f;
+      text-decoration: none;
+    }
+
+    .drawer-section {
+      margin-bottom: 1.25rem;
+    }
+
+    .drawer-section-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9ca3af;
+      padding: 0 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .drawer-categories {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.25rem;
+    }
+
+    .drawer-cat {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 0.75rem;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #374151;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: background 0.15s;
+    }
+
+    .drawer-cat:hover {
+      background: #fce7f3;
+      color: #e8437f;
+      text-decoration: none;
+    }
+
+    .drawer-cat-icon {
+      font-size: 1.1rem;
+    }
+
+    .drawer-footer {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #f3f4f6;
+      text-align: center;
+    }
+
+    .drawer-lang-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1.25rem;
+      background: #f3f4f6;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: #374151;
+      text-decoration: none;
+    }
+
+    .drawer-lang-switch:hover {
+      background: #e5e7eb;
+      text-decoration: none;
+    }
   }
 
   @media print {

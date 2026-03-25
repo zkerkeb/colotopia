@@ -69,6 +69,36 @@ export const categoryIcons: Record<Category, string> = {
   'paysages': '🏔️',
 };
 
+/** Accent color per category — used for hero, card borders, tags */
+export const categoryColors: Record<Category, { bg: string; light: string; text: string; gradient: string }> = {
+  'animaux':               { bg: '#f472b6', light: '#fce7f3', text: '#9d174d', gradient: 'linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%)' },
+  'animaux-marins':        { bg: '#22d3ee', light: '#cffafe', text: '#155e75', gradient: 'linear-gradient(135deg, #cffafe 0%, #a5f3fc 100%)' },
+  'ferme':                 { bg: '#fb923c', light: '#fff7ed', text: '#9a3412', gradient: 'linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%)' },
+  'vehicules':             { bg: '#f87171', light: '#fef2f2', text: '#991b1b', gradient: 'linear-gradient(135deg, #fef2f2 0%, #fecaca 100%)' },
+  'nature':                { bg: '#4ade80', light: '#f0fdf4', text: '#166534', gradient: 'linear-gradient(135deg, #f0fdf4 0%, #bbf7d0 100%)' },
+  'alphabet':              { bg: '#a78bfa', light: '#f5f3ff', text: '#5b21b6', gradient: 'linear-gradient(135deg, #f5f3ff 0%, #ddd6fe 100%)' },
+  'dinosaures':            { bg: '#34d399', light: '#ecfdf5', text: '#065f46', gradient: 'linear-gradient(135deg, #ecfdf5 0%, #a7f3d0 100%)' },
+  'super-heros':           { bg: '#f43f5e', light: '#fff1f2', text: '#9f1239', gradient: 'linear-gradient(135deg, #fff1f2 0%, #fecdd3 100%)' },
+  'espace':                { bg: '#818cf8', light: '#eef2ff', text: '#3730a3', gradient: 'linear-gradient(135deg, #eef2ff 0%, #c7d2fe 100%)' },
+  'princesses-chevaliers': { bg: '#e879f9', light: '#fdf4ff', text: '#86198f', gradient: 'linear-gradient(135deg, #fdf4ff 0%, #f5d0fe 100%)' },
+  'metiers':               { bg: '#fbbf24', light: '#fffbeb', text: '#92400e', gradient: 'linear-gradient(135deg, #fffbeb 0%, #fde68a 100%)' },
+  'sport':                 { bg: '#38bdf8', light: '#f0f9ff', text: '#075985', gradient: 'linear-gradient(135deg, #f0f9ff 0%, #bae6fd 100%)' },
+  'saisons':               { bg: '#fb923c', light: '#fff7ed', text: '#9a3412', gradient: 'linear-gradient(135deg, #fff7ed 0%, #fdba74 100%)' },
+  'fetes':                 { bg: '#f43f5e', light: '#fff1f2', text: '#9f1239', gradient: 'linear-gradient(135deg, #fff1f2 0%, #fda4af 100%)' },
+  'personnages':           { bg: '#a78bfa', light: '#f5f3ff', text: '#5b21b6', gradient: 'linear-gradient(135deg, #f5f3ff 0%, #c4b5fd 100%)' },
+  'contes':                { bg: '#e879f9', light: '#fdf4ff', text: '#86198f', gradient: 'linear-gradient(135deg, #fdf4ff 0%, #e9d5ff 100%)' },
+  'drole':                 { bg: '#fbbf24', light: '#fffbeb', text: '#92400e', gradient: 'linear-gradient(135deg, #fffbeb 0%, #fef08a 100%)' },
+  'musique':               { bg: '#f472b6', light: '#fce7f3', text: '#9d174d', gradient: 'linear-gradient(135deg, #fce7f3 0%, #f9a8d4 100%)' },
+  'nourriture':            { bg: '#fb923c', light: '#fff7ed', text: '#9a3412', gradient: 'linear-gradient(135deg, #fff7ed 0%, #fdba74 100%)' },
+  'pirates':               { bg: '#64748b', light: '#f8fafc', text: '#1e293b', gradient: 'linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%)' },
+  'robots':                { bg: '#38bdf8', light: '#f0f9ff', text: '#075985', gradient: 'linear-gradient(135deg, #f0f9ff 0%, #7dd3fc 100%)' },
+  'mandalas':              { bg: '#a855f7', light: '#faf5ff', text: '#6b21a8', gradient: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #3730a3 100%)' },
+  'mosaiques':             { bg: '#6366f1', light: '#eef2ff', text: '#3730a3', gradient: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%)' },
+  'abstrait':              { bg: '#ec4899', light: '#fdf2f8', text: '#9d174d', gradient: 'linear-gradient(135deg, #1e1b4b 0%, #581c87 50%, #7e22ce 100%)' },
+  'cartes':                { bg: '#14b8a6', light: '#f0fdfa', text: '#115e59', gradient: 'linear-gradient(135deg, #1e1b4b 0%, #0f766e 50%, #14b8a6 100%)' },
+  'paysages':              { bg: '#22c55e', light: '#f0fdf4', text: '#166534', gradient: 'linear-gradient(135deg, #1e1b4b 0%, #14532d 50%, #166534 100%)' },
+};
+
 const translations: Record<string, Record<Locale, string>> = {
   'site.title': {
     fr: 'Colotopia — Coloriages Gratuits à Imprimer',
@@ -80,6 +110,8 @@ const translations: Record<string, Record<Locale, string>> = {
   },
   'nav.home': { fr: 'Accueil', en: 'Home' },
   'nav.categories': { fr: 'Catégories', en: 'Categories' },
+  'nav.menu': { fr: 'Menu', en: 'Menu' },
+  'nav.close': { fr: 'Fermer', en: 'Close' },
   'audience.enfants': { fr: 'Enfants', en: 'Kids' },
   'audience.adultes': { fr: 'Adultes', en: 'Adults' },
   'category.animaux': { fr: 'Animaux', en: 'Animals' },

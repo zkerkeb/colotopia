@@ -11,7 +11,24 @@ const year = new Date().getFullYear();
 ---
 
 <footer class="site-footer">
+  <!-- Decorative wave separator -->
+  <div class="footer-wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="none">
+      <path d="M0 20c240 30 480-10 720 15s480-20 720 10v35H0z" fill="currentColor"/>
+    </svg>
+  </div>
+
   <div class="footer-inner">
+    <!-- Footer branding -->
+    <div class="footer-brand">
+      <a href={getLocalePath(locale)} class="footer-logo">
+        🎨 Colotopia
+      </a>
+      <p class="footer-tagline">
+        {locale === 'fr' ? 'Des coloriages gratuits pour tous les âges !' : 'Free coloring pages for all ages!'}
+      </p>
+    </div>
+
     <div class="footer-grid">
       <!-- Kids categories -->
       <div class="footer-col">
@@ -56,20 +73,65 @@ const year = new Date().getFullYear();
       <p>&copy; {year} Colotopia. {t('footer.rights', locale)}.</p>
     </div>
   </div>
+
+  <!-- Decorative footer elements -->
+  <div class="footer-deco" aria-hidden="true">
+    <span class="footer-deco-item" style="left: 5%; bottom: 2rem; font-size: 1.5rem; opacity: 0.15;">🖍️</span>
+    <span class="footer-deco-item" style="left: 15%; bottom: 4rem; font-size: 1.25rem; opacity: 0.1;">⭐</span>
+    <span class="footer-deco-item" style="right: 8%; bottom: 3rem; font-size: 1.75rem; opacity: 0.12;">🎨</span>
+    <span class="footer-deco-item" style="right: 20%; bottom: 5rem; font-size: 1rem; opacity: 0.1;">✏️</span>
+  </div>
 </footer>
 
 <style>
   .site-footer {
-    background: #1f2937;
+    position: relative;
+    background: linear-gradient(135deg, #4a1942 0%, #2d1b4e 50%, #1a1145 100%);
     margin-top: 4rem;
-    padding: 3rem 1rem 1.5rem;
+    padding: 0 1rem 1.5rem;
     color: #d1d5db;
     font-size: 0.875rem;
+    overflow: hidden;
+  }
+
+  .footer-wave {
+    color: #fffdf9;
+    margin: 0 -1rem;
+    line-height: 0;
+  }
+
+  .footer-wave svg {
+    width: 100%;
+    height: 40px;
   }
 
   .footer-inner {
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer-brand {
+    text-align: center;
+    padding: 1.5rem 0 2rem;
+  }
+
+  .footer-logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer-logo:hover {
+    text-decoration: none;
+  }
+
+  .footer-tagline {
+    margin-top: 0.375rem;
+    color: #c4b5fd;
+    font-size: 0.9rem;
   }
 
   .footer-grid {
@@ -86,7 +148,7 @@ const year = new Date().getFullYear();
   }
 
   .footer-col h4 {
-    color: white;
+    color: #f9a8d4;
     font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -102,20 +164,30 @@ const year = new Date().getFullYear();
   }
 
   .footer-col a {
-    color: #9ca3af;
+    color: #a5b4c8;
     text-decoration: none;
     transition: color 0.15s;
   }
 
   .footer-col a:hover {
-    color: white;
+    color: #f9a8d4;
   }
 
   .footer-bottom {
-    border-top: 1px solid #374151;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 1.25rem;
     text-align: center;
-    color: #6b7280;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .footer-deco {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .footer-deco-item {
+    position: absolute;
   }
 
   @media print {

@@ -8,7 +8,7 @@ import PillarSection from '../../../components/PillarSection.astro';
 import CategoryFaq from '../../../components/CategoryFaq.astro';
 import RelatedCategories from '../../../components/RelatedCategories.astro';
 import { getCollection } from 'astro:content';
-import { categories, adultCategories, getCategoryLabel, getCategorySlug, ti, type Category } from '../../../lib/i18n';
+import { categories, adultCategories, getCategoryLabel, getCategorySlug, ti, categoryIcons, categoryColors, type Category } from '../../../lib/i18n';
 import { getPillarContent } from '../../../data/pillar-content';
 
 const locale = 'en';
@@ -34,6 +34,8 @@ export async function getStaticPaths({ paginate }: { paginate: Function }) {
 const { page, categoryKey } = Astro.props as { page: any; categoryKey: Category };
 const label = getCategoryLabel(categoryKey, locale);
 const isAdult = (adultCategories as readonly string[]).includes(categoryKey);
+const catIcon = categoryIcons[categoryKey];
+const catColor = categoryColors[categoryKey];
 const pillar = page.currentPage === 1 ? getPillarContent(categoryKey, locale) : null;
 
 const descriptionKey = isAdult ? 'category.description.adults' : 'category.description';
@@ -99,9 +101,10 @@ const structuredData = pillar && pillar.faq.length > 0
   nextUrl={page.url.next}
 >
   <Breadcrumb locale={locale} currentPage={`${label} Coloring Pages`} />
-  <div class:list={['category-hero', { 'category-hero--adult': isAdult }]}>
+  <div class:list={['category-hero', { 'category-hero--adult': isAdult }]} style={`background: ${catColor.gradient};`}>
+    <span class="category-hero-icon">{catIcon}</span>
     <h1>{label} Coloring Pages</h1>
-    <p class="category-description">
+    <p class="category-description" style={isAdult ? undefined : `color: ${catColor.text};`}>
       {pillar
         ? ti(isAdult ? 'category.description.adults' : 'category.description', locale, { label: label.toLowerCase() })
         : pageDescription}
@@ -158,13 +161,18 @@ const structuredData = pillar && pillar.faq.length > 0
 <style>
   .category-hero {
     margin-bottom: 2rem;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     border-radius: 16px;
-    background: linear-gradient(135deg, #fce7f3 0%, #fef3c7 35%, #d1fae5 65%, #e0e7ff 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
   }
 
-  .category-hero--adult {
-    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #3730a3 100%);
+  .category-hero-icon {
+    display: block;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    line-height: 1;
   }
 
   .category-hero h1 {
@@ -179,8 +187,9 @@ const structuredData = pillar && pillar.faq.length > 0
   }
 
   .category-description {
-    color: #6b7280;
     margin: 0;
+    font-size: 0.95rem;
+    opacity: 0.85;
   }
 
   .category-hero--adult .category-description {
