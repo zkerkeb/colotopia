@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { image, title, locale } = Astro.props;
-const label = locale === 'fr' ? '📥 Télécharger le PDF' : '📥 Download PDF';
+const label = locale === 'fr' ? 'Télécharger le PDF' : 'Download PDF';
 const loadingLabel = locale === 'fr' ? 'Génération...' : 'Generating...';
 const siteUrl = Astro.site?.href ?? 'https://colotopia.com';
 const watermarkText = locale === 'fr'
@@ -24,6 +24,7 @@ const watermarkText = locale === 'fr'
   data-watermark={watermarkText}
   data-loading-label={loadingLabel}
 >
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
   {label}
 </button>
 
@@ -131,12 +132,12 @@ const watermarkText = locale === 'fr'
     border: none;
     text-decoration: none;
     transition: background 0.2s, opacity 0.2s;
-    background: #2563eb;
+    background: #e8437f;
     color: white;
   }
 
   .btn-primary:hover:not(:disabled) {
-    background: #1d4ed8;
+    background: #d63370;
   }
 
   .btn-primary:disabled {

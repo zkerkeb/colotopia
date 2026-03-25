@@ -23,12 +23,14 @@ const ogImage = firstImage ? `${siteUrl}${firstImage}` : undefined;
 
 // Nouveaux: 10 most recent by createdAt (only on page 1)
 let nouveaux: typeof page.data = [];
+let nouveauxSlugs = new Set<string>();
 if (isFirstPage) {
   const allColoriages = await getPublishableColoriages('en');
   nouveaux = allColoriages
     .filter((c: any) => c.data.createdAt)
     .sort((a: any, b: any) => (b.data.createdAt || '').localeCompare(a.data.createdAt || ''))
     .slice(0, 10);
+  nouveauxSlugs = new Set(nouveaux.map((c: any) => c.data.slug));
 }
 
 const structuredData = {
@@ -54,6 +56,26 @@ const structuredData = {
   nextUrl={page.url.next}
 >
   <section class="hero">
+    <svg class="deco deco-pencil" width="60" height="60" viewBox="0 0 60 60" fill="none" aria-hidden="true">
+      <rect x="20" y="5" width="12" height="44" rx="2" fill="#FBBF24" opacity="0.7"/>
+      <polygon points="20,49 32,49 26,58" fill="#F472B6" opacity="0.6"/>
+      <rect x="20" y="5" width="12" height="6" rx="1" fill="#4ECDC4" opacity="0.5"/>
+    </svg>
+    <svg class="deco deco-star" width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <path d="M24 4l5.5 13.5L44 19l-11 9.5L36 44l-12-7.5L12 44l3-15.5L4 19l14.5-1.5z" fill="#FBBF24" opacity="0.5"/>
+    </svg>
+    <svg class="deco deco-splash" width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+      <circle cx="32" cy="32" r="14" fill="#4ECDC4" opacity="0.35"/>
+      <circle cx="18" cy="18" r="6" fill="#A855F7" opacity="0.3"/>
+      <circle cx="48" cy="22" r="5" fill="#F472B6" opacity="0.35"/>
+      <circle cx="44" cy="48" r="7" fill="#FBBF24" opacity="0.3"/>
+    </svg>
+    <svg class="deco deco-dots" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true">
+      <circle cx="10" cy="10" r="4" fill="#e8437f" opacity="0.3"/>
+      <circle cx="30" cy="8" r="3" fill="#4ECDC4" opacity="0.35"/>
+      <circle cx="45" cy="20" r="5" fill="#FBBF24" opacity="0.3"/>
+      <circle cx="15" cy="35" r="3.5" fill="#A855F7" opacity="0.3"/>
+    </svg>
     <h1>{t('site.title', locale)}</h1>
     <p>{t('home.hero.subtitle', locale)}</p>
   </section>
@@ -73,6 +95,8 @@ const structuredData = {
             alt={c.data.alt}
             locale={locale}
             audience={c.data.audience}
+            category={c.data.category}
+            isNew={true}
           />
         ))}
       </div>
@@ -96,6 +120,8 @@ const structuredData = {
         alt={c.data.alt}
         locale={locale}
         audience={c.data.audience}
+        category={c.data.category}
+        isNew={nouveauxSlugs.has(c.data.slug)}
       />
     ))}
   </section>
@@ -141,9 +167,43 @@ const structuredData = {
   .hero {
     text-align: center;
     margin-bottom: 2rem;
-    background: linear-gradient(135deg, #dbeafe 0%, #ede9fe 50%, #fce7f3 100%);
+    background: linear-gradient(135deg, #fce7f3 0%, #fef3c7 35%, #d1fae5 65%, #e0e7ff 100%);
     border-radius: 20px;
     padding: 2.5rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .deco {
+    position: absolute;
+    pointer-events: none;
+  }
+
+  .deco-pencil {
+    top: 0.75rem;
+    left: 1.5rem;
+    transform: rotate(-15deg);
+  }
+
+  .deco-star {
+    top: 0.5rem;
+    right: 2rem;
+    animation: deco-float 4s ease-in-out infinite;
+  }
+
+  .deco-splash {
+    bottom: 0.5rem;
+    left: 3rem;
+  }
+
+  .deco-dots {
+    bottom: 0.5rem;
+    right: 1.5rem;
+  }
+
+  @keyframes deco-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
   }
 
   .hero h1 {
@@ -151,6 +211,7 @@ const structuredData = {
     font-weight: 800;
     margin-bottom: 0.75rem;
     color: #1a1a1a;
+    position: relative;
   }
 
   .hero p {
@@ -159,11 +220,15 @@ const structuredData = {
     max-width: 600px;
     margin: 0 auto;
     font-weight: 500;
+    position: relative;
   }
 
   @media (max-width: 600px) {
     .hero h1 {
       font-size: 1.75rem;
+    }
+    .deco {
+      display: none;
     }
   }
 
@@ -216,13 +281,13 @@ const structuredData = {
   }
 
   .filter-btn:hover {
-    border-color: #93c5fd;
-    color: #2563eb;
+    border-color: #f9a8d4;
+    color: #e8437f;
   }
 
   .filter-btn.active {
-    background: #2563eb;
-    border-color: #2563eb;
+    background: #e8437f;
+    border-color: #e8437f;
     color: white;
   }
 

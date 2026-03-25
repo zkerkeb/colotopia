@@ -39,6 +39,36 @@ export const categories = [...kidsCategories, ...adultCategories] as const;
 
 export type Category = (typeof categories)[number];
 
+/** Emoji icon for each category — used in nav bar and cards */
+export const categoryIcons: Record<Category, string> = {
+  'animaux': '🐱',
+  'animaux-marins': '🐙',
+  'ferme': '🐄',
+  'vehicules': '🚗',
+  'nature': '🌿',
+  'alphabet': '🔤',
+  'dinosaures': '🦕',
+  'super-heros': '🦸',
+  'espace': '🚀',
+  'princesses-chevaliers': '👑',
+  'metiers': '👷',
+  'sport': '⚽',
+  'saisons': '🍂',
+  'fetes': '🎄',
+  'personnages': '🧑',
+  'contes': '🧚',
+  'drole': '😄',
+  'musique': '🎵',
+  'nourriture': '🍕',
+  'pirates': '🏴‍☠️',
+  'robots': '🤖',
+  'mandalas': '🔮',
+  'mosaiques': '🧩',
+  'abstrait': '🎨',
+  'cartes': '🗺️',
+  'paysages': '🏔️',
+};
+
 const translations: Record<string, Record<Locale, string>> = {
   'site.title': {
     fr: 'Colotopia — Coloriages Gratuits à Imprimer',

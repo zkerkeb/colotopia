@@ -1,6 +1,7 @@
 ---
 import type { Locale } from '../lib/i18n';
-import { getLocalePath, getColoringBasePath } from '../lib/i18n';
+import type { Category } from '../lib/i18n';
+import { getLocalePath, getColoringBasePath, categoryIcons } from '../lib/i18n';
 
 interface Props {
   title: string;
@@ -9,10 +10,14 @@ interface Props {
   alt: string;
   locale: Locale;
   audience?: string;
+  category?: Category;
+  isNew?: boolean;
 }
 
-const { title, slug, image, alt, locale, audience } = Astro.props;
+const { title, slug, image, alt, locale, audience, category, isNew } = Astro.props;
 const href = getLocalePath(locale, `/${getColoringBasePath(locale)}/${slug}`);
+const icon = category ? categoryIcons[category] : undefined;
+const newLabel = locale === 'fr' ? 'Nouveau' : 'New';
 
 // Derive WebP thumbnail path from PNG path
 // e.g. /images/coloriages/animaux-chat.png → /images/coloriages/thumbs/animaux-chat.webp
@@ -20,18 +25,20 @@ const thumbWebp = image.replace('/images/coloriages/', '/images/coloriages/thumb
 ---
 
 <a href={href} class="coloring-card" data-audience={audience}>
+  {isNew && <span class="badge-new">{newLabel}</span>}
   <div class="card-image">
     <picture>
       <source type="image/webp" srcset={thumbWebp} />
       <img src={image} alt={alt} width="300" height="400" loading="lazy" decoding="async" />
     </picture>
   </div>
-  <h3 class="card-title">{title}</h3>
+  <h3 class="card-title">{icon && <span class="card-cat-icon">{icon}</span>}{title}</h3>
 </a>
 
 <style>
   .coloring-card {
     display: block;
+    position: relative;
     background: white;
     border: 2px solid #f3f4f6;
     border-radius: 16px;
@@ -41,10 +48,26 @@ const thumbWebp = image.replace('/images/coloriages/', '/images/coloriages/thumb
   }
 
   .coloring-card:hover {
-    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.12);
+    box-shadow: 0 6px 20px rgba(232, 67, 127, 0.15);
     transform: translateY(-3px);
-    border-color: #bfdbfe;
+    border-color: #f9a8d4;
     text-decoration: none;
+  }
+
+  .badge-new {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: linear-gradient(135deg, #f472b6, #e8437f);
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 9999px;
+    z-index: 1;
+    box-shadow: 0 2px 6px rgba(232, 67, 127, 0.3);
   }
 
   .card-image {
@@ -68,5 +91,9 @@ const thumbWebp = image.replace('/images/coloriages/', '/images/coloriages/thumb
     font-weight: 700;
     color: #1a1a1a;
     text-align: center;
+  }
+
+  .card-cat-icon {
+    margin-right: 0.25rem;
   }
 </style>
