@@ -46,6 +46,9 @@ const seoText = ti(`category.${categoryKey}.seoText`, locale, {});
 const hasSeoText = seoText !== `category.${categoryKey}.seoText`;
 const canonical = Astro.url.href;
 const siteUrl = Astro.site?.href.replace(/\/$/, '') ?? 'https://colotopia.com';
+const altUrl = page.currentPage === 1
+  ? `${siteUrl}/fr/${categoryKey}/`
+  : `${siteUrl}/fr/${categoryKey}/${page.currentPage}/`;
 const firstImage = page.data[0]?.data.image;
 const ogImage = firstImage ? `${siteUrl}${firstImage}` : undefined;
 
@@ -93,6 +96,7 @@ const structuredData = pillar && pillar.faq.length > 0
   description={pageDescription}
   locale={locale}
   canonical={canonical}
+  altUrl={altUrl}
   ogImage={ogImage}
   ogImageWidth={800}
   ogImageHeight={1100}

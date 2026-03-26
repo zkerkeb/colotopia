@@ -15,3 +15,30 @@ export async function getPublishableColoriages(locale: 'fr' | 'en') {
     return existsSync(imagePath) || existsSync(webpPath);
   });
 }
+
+/**
+ * Builds a mapping of FR slug → EN slug and EN slug → FR slug,
+ * using the shared image path as the linking key.
+ */
+export async function buildSlugMap(): Promise<{ frToEn: Record<string, string>; enToFr: Record<string, string> }> {
+  const frPages = await getPublishableColoriages('fr');
+  const enPages = await getPublishableColoriages('en');
+
+  const imageToFr: Record<string, string> = {};
+  for (const c of frPages) {
+    imageToFr[c.data.image] = c.data.slug;
+  }
+
+  const frToEn: Record<string, string> = {};
+  const enToFr: Record<string, string> = {};
+
+  for (const c of enPages) {
+    const frSlug = imageToFr[c.data.image];
+    if (frSlug) {
+      frToEn[frSlug] = c.data.slug;
+      enToFr[c.data.slug] = frSlug;
+    }
+  }
+
+  return { frToEn, enToFr };
+}

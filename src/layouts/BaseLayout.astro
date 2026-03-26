@@ -9,6 +9,7 @@ interface Props {
   description?: string;
   locale: Locale;
   canonical?: string;
+  altUrl?: string;
   ogImage?: string;
   ogImageWidth?: number;
   ogImageHeight?: number;
@@ -23,6 +24,7 @@ const {
   description,
   locale,
   canonical,
+  altUrl,
   ogImage,
   ogImageWidth,
   ogImageHeight,
@@ -66,11 +68,11 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
     {canonical && <link rel="canonical" href={canonical} />}
     {prevUrl && <link rel="prev" href={prevUrl} />}
     {nextUrl && <link rel="next" href={nextUrl} />}
-    <link rel="alternate" hreflang={locale} href={Astro.url.href} />
+    <link rel="alternate" hreflang={locale} href={canonical ?? Astro.url.href} />
     <link
       rel="alternate"
       hreflang={altLocale}
-      href={Astro.url.href.replace(`/${locale}/`, `/${altLocale}/`)}
+      href={altUrl ?? Astro.url.href.replace(`/${locale}/`, `/${altLocale}/`)}
     />
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={ogUrl} />

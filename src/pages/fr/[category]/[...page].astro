@@ -8,7 +8,7 @@ import PillarSection from '../../../components/PillarSection.astro';
 import CategoryFaq from '../../../components/CategoryFaq.astro';
 import RelatedCategories from '../../../components/RelatedCategories.astro';
 import { getCollection } from 'astro:content';
-import { categories, adultCategories, getCategoryLabel, ti, categoryIcons, categoryColors, type Category } from '../../../lib/i18n';
+import { categories, adultCategories, getCategoryLabel, getCategorySlug, ti, categoryIcons, categoryColors, type Category } from '../../../lib/i18n';
 import { getPillarContent } from '../../../data/pillar-content';
 
 const locale = 'fr';
@@ -45,6 +45,10 @@ const seoText = ti(`category.${categoryKey}.seoText`, locale, {});
 const hasSeoText = seoText !== `category.${categoryKey}.seoText`;
 const canonical = Astro.url.href;
 const siteUrl = Astro.site?.href.replace(/\/$/, '') ?? 'https://colotopia.com';
+const enCatSlug = getCategorySlug(categoryKey, 'en');
+const altUrl = page.currentPage === 1
+  ? `${siteUrl}/en/${enCatSlug}/`
+  : `${siteUrl}/en/${enCatSlug}/${page.currentPage}/`;
 const firstImage = page.data[0]?.data.image;
 const ogImage = firstImage ? `${siteUrl}${firstImage}` : undefined;
 
@@ -92,6 +96,7 @@ const structuredData = pillar && pillar.faq.length > 0
   description={pageDescription}
   locale={locale}
   canonical={canonical}
+  altUrl={altUrl}
   ogImage={ogImage}
   ogImageWidth={800}
   ogImageHeight={1100}

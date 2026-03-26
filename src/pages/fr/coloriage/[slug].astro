@@ -2,24 +2,25 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import ColoringPage from '../../../components/ColoringPage.astro';
 import { getCollection } from 'astro:content';
-import { getPublishableColoriages } from '../../../lib/coloriages';
+import { getPublishableColoriages, buildSlugMap } from '../../../lib/coloriages';
 import type { Category } from '../../../lib/i18n';
 
 export async function getStaticPaths() {
   const coloriages = await getPublishableColoriages('fr');
+  const { frToEn } = await buildSlugMap();
   return coloriages.map((c) => ({
     params: { slug: c.data.slug },
-    props: { coloring: c },
+    props: { coloring: c, enSlug: frToEn[c.data.slug] },
   }));
 }
 
-const { coloring } = Astro.props;
+const { coloring, enSlug } = Astro.props;
 const { title, image, alt, category, tags, slug, seoTitle, seoDescription } = coloring.data;
 
 const locale = 'fr' as const;
 const siteUrl = Astro.site?.href.replace(/\/$/, '') ?? 'https://colotopia.com';
 const canonicalUrl = `${siteUrl}/fr/coloriage/${slug}/`;
-const altUrl = `${siteUrl}/en/coloring/${slug}/`;
+const altUrl = enSlug ? `${siteUrl}/en/coloring/${enSlug}/` : undefined;
 
 const pageTitle = seoTitle ?? `Coloriage ${title} a imprimer gratuitement | Coloriages`;
 const pageDescription =
@@ -61,6 +62,7 @@ const structuredData = {
   description={pageDescription}
   locale={locale}
   canonical={canonicalUrl}
+  altUrl={altUrl}
   ogImage={`${siteUrl}${image}`}
   ogImageWidth={800}
   ogImageHeight={1100}
