@@ -16,7 +16,8 @@ const altLabel = locale === 'fr' ? 'EN' : 'FR';
 <header class="site-header">
   <div class="header-inner">
     <a href={getLocalePath(locale)} class="logo">
-      🎨 {t('site.title', locale)}
+      <img src="/images/colotopia-logo.png" alt="Colotopia" class="logo-img" width="499" height="391" />
+      <span class="logo-text">{t('site.title', locale)}</span>
     </a>
     <SearchBar locale={locale} />
     <nav class="header-nav">
@@ -138,11 +139,27 @@ const altLabel = locale === 'fr' ? 'EN' : 'FR';
   }
 
   .logo {
-    font-size: 1.25rem;
-    font-weight: 800;
-    color: #1a1a1a;
+    display: flex;
+    align-items: center;
     text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .logo-img {
+    height: 44px;
+    width: auto;
+  }
+
+  .logo-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
     white-space: nowrap;
+    border: 0;
   }
 
   .header-nav {
@@ -202,8 +219,8 @@ const altLabel = locale === 'fr' ? 'EN' : 'FR';
       margin-left: auto;
     }
 
-    .logo {
-      font-size: 1rem;
+    .logo-img {
+      height: 36px;
     }
 
     .mobile-drawer:not([hidden]) {

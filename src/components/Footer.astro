@@ -22,7 +22,7 @@ const year = new Date().getFullYear();
     <!-- Footer branding -->
     <div class="footer-brand">
       <a href={getLocalePath(locale)} class="footer-logo">
-        🎨 Colotopia
+        <img src="/images/colotopia-logo.png" alt="Colotopia" class="footer-logo-img" width="499" height="391" />
       </a>
       <p class="footer-tagline">
         {locale === 'fr' ? 'Des coloriages gratuits pour tous les âges !' : 'Free coloring pages for all ages!'}
@@ -118,14 +118,20 @@ const year = new Date().getFullYear();
   }
 
   .footer-logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: white;
+    display: inline-block;
     text-decoration: none;
   }
 
-  .footer-logo:hover {
-    text-decoration: none;
+  .footer-logo-img {
+    height: 56px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    transition: opacity 0.15s;
+  }
+
+  .footer-logo:hover .footer-logo-img {
+    opacity: 1;
   }
 
   .footer-tagline {
