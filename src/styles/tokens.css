@@ -120,6 +120,7 @@
   --shadow-card-hover: var(--shadow-lg);
   --shadow-primary: 0 4px 15px rgba(108, 92, 231, 0.25);
   --shadow-secondary: 0 4px 15px rgba(255, 107, 107, 0.25);
+  --shadow-btn: 0 2px 8px rgba(108, 92, 231, 0.2);
 
   /* ── Transitions ── */
   --transition-fast: 150ms ease-out;
