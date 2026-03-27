@@ -1,0 +1,127 @@
+---
+import type { Locale } from '../lib/i18n';
+import { kidsCategories, adultCategories, getCategoryLabel, getCategorySlug, getLocalePath, categoryIcons, categoryColors } from '../lib/i18n';
+import CategoryCard from './CategoryCard.astro';
+
+interface Props {
+  locale: Locale;
+  kidsCounts?: Record<string, number>;
+  adultCounts?: Record<string, number>;
+}
+
+const { locale, kidsCounts = {}, adultCounts = {} } = Astro.props;
+
+const kidsTitle = locale === 'fr' ? 'Pour les enfants' : 'For kids';
+const adultsTitle = locale === 'fr' ? 'Pour les adultes' : 'For adults';
+const sectionTitle = locale === 'fr' ? 'Explorer les catégories' : 'Explore categories';
+---
+
+<section class="categories-section">
+  <h2 class="section-title">{sectionTitle}</h2>
+
+  <div class="categories-group">
+    <h3 class="group-title">
+      <span class="group-icon" aria-hidden="true">🧒</span>
+      {kidsTitle}
+      <span class="group-separator" aria-hidden="true"></span>
+    </h3>
+    <div class="categories-grid">
+      {kidsCategories.map((cat) => (
+        <CategoryCard
+          name={getCategoryLabel(cat, locale)}
+          slug={getCategorySlug(cat, locale)}
+          emoji={categoryIcons[cat]}
+          count={kidsCounts[cat] ?? 0}
+          color={categoryColors[cat]?.light ?? '#f0ebff'}
+          href={getLocalePath(locale, `/${getCategorySlug(cat, locale)}`)}
+          locale={locale}
+        />
+      ))}
+    </div>
+  </div>
+
+  <div class="categories-group">
+    <h3 class="group-title">
+      <span class="group-icon" aria-hidden="true">🎨</span>
+      {adultsTitle}
+      <span class="group-separator" aria-hidden="true"></span>
+    </h3>
+    <div class="categories-grid categories-grid--small">
+      {adultCategories.map((cat) => (
+        <CategoryCard
+          name={getCategoryLabel(cat, locale)}
+          slug={getCategorySlug(cat, locale)}
+          emoji={categoryIcons[cat]}
+          count={adultCounts[cat] ?? 0}
+          color={categoryColors[cat]?.light ?? '#f0ebff'}
+          href={getLocalePath(locale, `/${getCategorySlug(cat, locale)}`)}
+          locale={locale}
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .categories-section {
+    padding: var(--space-16) var(--content-padding);
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-extrabold);
+    font-size: var(--font-size-3xl);
+    color: var(--color-text);
+    text-align: center;
+    margin-bottom: var(--space-12);
+  }
+
+  .categories-group {
+    margin-bottom: var(--space-12);
+  }
+
+  .group-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+    margin-bottom: var(--space-6);
+  }
+
+  .group-icon {
+    font-size: 1.4rem;
+  }
+
+  .group-separator {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, var(--color-primary), transparent);
+    border-radius: 1px;
+  }
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+
+  @media (min-width: 640px) {
+    .categories-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .categories-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .categories-grid--small {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+</style>
