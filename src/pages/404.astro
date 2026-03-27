@@ -1,185 +1,170 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { t, getCategoryLabel, getCategorySlug, getLocalePath, type Locale } from '../lib/i18n';
+import CategoryCard from '../components/CategoryCard.astro';
+import SearchBar from '../components/SearchBar.astro';
+import { getCategoryLabel, getCategorySlug, getLocalePath, categoryColors, categoryIcons, type Locale } from '../lib/i18n';
 
 // Detect locale from URL prefix; default to FR
 const url = Astro.url.pathname;
 const locale: Locale = url.startsWith('/en') ? 'en' : 'fr';
 
 const popularCategories = [
-  'animaux',
-  'vehicules',
-  'nature',
-  'dinosaures',
-  'mandalas',
-] as const;
+  { key: 'animaux' as const, count: 45 },
+  { key: 'dinosaures' as const, count: 32 },
+  { key: 'vehicules' as const, count: 28 },
+  { key: 'nature' as const, count: 36 },
+];
 ---
 
 <BaseLayout
-  title={locale === 'fr' ? 'Page introuvable' : 'Page not found'}
+  title={locale === 'fr' ? 'Page introuvable — Colo s\'est perdu' : 'Page not found — Colo got lost'}
   description={locale === 'fr'
-    ? 'Cette page n\'existe pas. Explorez nos coloriages gratuits à imprimer !'
+    ? 'Cette page n\'existe pas. Explore nos coloriages gratuits à imprimer !'
     : 'This page doesn\'t exist. Explore our free printable coloring pages!'}
   locale={locale}
 >
-  <div class="not-found">
-    <div class="hero">
-      <div class="emoji">🎨</div>
-      <h1>
-        {locale === 'fr'
-          ? 'Oups ! Page introuvable'
-          : 'Oops! Page not found'}
-      </h1>
-      <p>
-        {locale === 'fr'
-          ? 'Cette page n\'existe pas ou a été déplacée. Mais ne t\'en fais pas, il y a plein de coloriages à découvrir !'
-          : "This page doesn't exist or has been moved. But don't worry, there are plenty of coloring pages to discover!"}
-      </p>
-      <a href={getLocalePath(locale)} class="home-btn">
-        {locale === 'fr' ? '🏠 Retour à l\'accueil' : '🏠 Back to home'}
-      </a>
+  <div class="not-found-page">
+    <!-- Mascot -->
+    <div class="not-found-illustration" aria-hidden="true">🦎</div>
+
+    <h1 class="not-found-title">
+      {locale === 'fr' ? 'Oups\u00a0! Colo s\u2019est perdu\u2026' : 'Oops\u00a0! Colo got lost\u2026'}
+    </h1>
+    <p class="not-found-subtitle">
+      {locale === 'fr'
+        ? 'Cette page n\u2019existe pas ou a \u00e9t\u00e9 d\u00e9plac\u00e9e.'
+        : 'This page doesn\u2019t exist or has been moved.'}
+    </p>
+
+    <!-- Search -->
+    <div class="not-found-search">
+      <SearchBar locale={locale} showSubmit={true} />
     </div>
 
-    <div class="categories-section">
-      <h2>
-        {locale === 'fr' ? 'Catégories populaires' : 'Popular categories'}
-      </h2>
-      <div class="categories-grid">
-        {popularCategories.map((cat) => (
-          <a
-            href={getLocalePath(locale, `/${getCategorySlug(cat, locale)}`)}
-            class="category-chip"
-          >
-            {getCategoryLabel(cat, locale)}
-          </a>
-        ))}
-        <a href={locale === 'fr' ? '/fr/categories' : '/en/categories'} class="category-chip all">
-          {locale === 'fr' ? 'Toutes les catégories →' : 'All categories →'}
-        </a>
-      </div>
+    <!-- Popular categories -->
+    <div class="not-found-suggestions">
+      {popularCategories.map(({ key, count }) => (
+        <CategoryCard
+          name={getCategoryLabel(key, locale)}
+          emoji={categoryIcons[key]}
+          count={count}
+          color={categoryColors[key].bg}
+          href={`${getLocalePath(locale)}/${getCategorySlug(key, locale)}/`}
+          locale={locale}
+        />
+      ))}
     </div>
+
+    <!-- Home button -->
+    <a href={getLocalePath(locale)} class="btn-home">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      {locale === 'fr' ? 'Retour \u00e0 l\u2019accueil' : 'Back to home'}
+    </a>
   </div>
 </BaseLayout>
 
 <style>
-  .not-found {
+  .not-found-page {
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
-    padding: 2rem 0;
-  }
-
-  .hero {
-    text-align: center;
-    background: linear-gradient(135deg, #fce7f3 0%, #fef3c7 35%, #d1fae5 65%, #e0e7ff 100%);
-    border-radius: 20px;
-    padding: 3rem 2rem;
-    max-width: 600px;
-    width: 100%;
-  }
-
-  .emoji {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    line-height: 1;
-  }
-
-  h1 {
-    font-size: 2rem;
-    font-weight: 800;
-    color: #1a1a1a;
-    margin-bottom: 1rem;
-  }
-
-  .hero p {
-    font-size: 1.05rem;
-    color: #4b5563;
-    font-weight: 500;
-    line-height: 1.7;
-    margin-bottom: 1.75rem;
-  }
-
-  .home-btn {
-    display: inline-block;
-    background: #e8437f;
-    color: white;
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 0.75rem 1.75rem;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: background 0.2s, transform 0.2s;
-  }
-
-  .home-btn:hover {
-    background: #d63370;
-    transform: translateY(-2px);
-    text-decoration: none;
-  }
-
-  .categories-section {
-    text-align: center;
-    width: 100%;
-    max-width: 600px;
-  }
-
-  .categories-section h2 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 1rem;
-  }
-
-  .categories-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
     justify-content: center;
+    text-align: center;
+    padding: var(--space-16) var(--content-padding);
+    max-width: var(--max-width-content);
+    margin: 0 auto;
   }
 
-  .category-chip {
+  /* ── Mascot ── */
+  .not-found-illustration {
+    font-size: 6rem;
+    line-height: 1;
+    margin-bottom: var(--space-6);
     display: inline-block;
-    background: white;
-    border: 2px solid #e5e7eb;
-    border-radius: 50px;
-    padding: 0.5rem 1.25rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: #374151;
-    text-decoration: none;
-    transition: border-color 0.2s, color 0.2s, transform 0.15s;
+    animation: wobble 2s ease-in-out infinite;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.12));
   }
 
-  .category-chip:hover {
-    border-color: #f9a8d4;
-    color: #e8437f;
+  @keyframes wobble {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .not-found-illustration {
+      animation: none;
+    }
+  }
+
+  /* ── Copy ── */
+  .not-found-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    color: var(--color-text);
+    margin-bottom: var(--space-4);
+    line-height: var(--line-height-tight);
+  }
+
+  .not-found-subtitle {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-8);
+    max-width: 420px;
+    line-height: var(--line-height-normal);
+  }
+
+  /* ── Search bar ── */
+  .not-found-search {
+    width: 100%;
+    max-width: 480px;
+    margin-bottom: var(--space-12);
+  }
+
+  /* ── Category suggestions ── */
+  .not-found-suggestions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    width: 100%;
+    max-width: 480px;
+    margin-bottom: var(--space-8);
+  }
+
+  @media (min-width: 640px) {
+    .not-found-suggestions {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 720px;
+    }
+  }
+
+  /* ── Home button ── */
+  .btn-home {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: var(--color-primary);
+    color: #ffffff;
+    font-family: inherit;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-base);
+    padding: 0.875rem 2rem;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    box-shadow: var(--shadow-btn);
+    transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .btn-home:hover {
+    background: var(--color-primary-hover);
     transform: translateY(-2px);
+    box-shadow: var(--shadow-primary);
     text-decoration: none;
   }
 
-  .category-chip.all {
-    background: #fce7f3;
-    border-color: #f9a8d4;
-    color: #e8437f;
-  }
-
-  .category-chip.all:hover {
-    background: #fbcfe8;
-    border-color: #f472b6;
-  }
-
-  @media (max-width: 600px) {
-    h1 {
-      font-size: 1.5rem;
-    }
-
-    .hero {
-      padding: 2rem 1.25rem;
-    }
-
-    .emoji {
-      font-size: 3rem;
+  @media (prefers-reduced-motion: reduce) {
+    .btn-home:hover {
+      transform: none;
     }
   }
 </style>
