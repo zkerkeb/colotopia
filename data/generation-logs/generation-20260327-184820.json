@@ -1,0 +1,53 @@
+{
+  "summary": {
+    "total": 2,
+    "success": 2,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-27T18:47:50.020917+00:00",
+      "backend": "openai",
+      "fr_slug": "contes-chateau-magique",
+      "en_slug": "tales-magic-castle",
+      "prompt": "A fairy tale castle with tall towers, a drawbridge, and magical sparkles all around it, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/contes-chateau-magique.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/contes-chateau-magique.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/tales-magic-castle.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 85.6448854231802,
+        "black_pct": 10.57113694044948,
+        "mid_pct": 2.699589877514989,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-27T18:48:05.612677+00:00",
+      "backend": "openai",
+      "fr_slug": "contes-dragon-tresor",
+      "en_slug": "tales-dragon-treasure",
+      "prompt": "A cute friendly dragon guarding a pile of treasure chests and gold coins in a cave, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/contes-dragon-tresor.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/contes-dragon-tresor.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/tales-dragon-treasure.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 79.269825651966,
+        "black_pct": 14.772639496818332,
+        "mid_pct": 3.9911078824438153,
+        "reason": null
+      }
+    }
+  ]
+}

@@ -1615,7 +1615,7 @@ categories:
         en_title: "Shapeshifter Superhero"
         fr_tags: ["super-heros", "transformation", "metamorphose", "pouvoir"]
         en_tags: ["superhero", "shapeshifter", "transform", "power"]
-        prompt: "A superhero mid-transformation with parts of the body changing shape into different forms, simple cartoon style."
+        prompt: "A cartoon superhero with a glowing costume, swirling energy stars around them, heroic pose, simple lines."
 
       - fr_slug: super-heros-ombre
         en_slug: superheroes-shadow
@@ -2214,7 +2214,7 @@ categories:
         en_title: "Karate Mouse"
         fr_tags: ["souris", "karate", "arts-martiaux", "drole"]
         en_tags: ["mouse", "karate", "martial-arts", "funny"]
-        prompt: "A tiny mouse in a white karate gi with a black belt doing a high kick, fierce expression."
+        prompt: "A cartoon mouse in a karate uniform doing a high kick, big smile, round eyes, simple pose."
 
       - fr_slug: drole-chien-surfeur
         en_slug: funny-dog-surfer
@@ -2238,7 +2238,7 @@ categories:
         en_title: "Magician Fox"
         fr_tags: ["renard", "magie", "chapeau", "drole"]
         en_tags: ["fox", "magic", "hat", "funny"]
-        prompt: "A fox in a magician's top hat and cape pulling a rabbit from a hat with a sparkly wand."
+        prompt: "A smiling fox with a tall striped top hat pulling a white rabbit out of a hat, stars around."
 
       - fr_slug: drole-chat-pirate
         en_slug: funny-cat-pirate
@@ -2262,7 +2262,7 @@ categories:
         en_title: "Ninja Duck"
         fr_tags: ["canard", "ninja", "arts-martiaux", "drole"]
         en_tags: ["duck", "ninja", "martial-arts", "funny"]
-        prompt: "A cartoon duck in a black ninja outfit balancing on one foot, holding a tiny sword."
+        prompt: "A cartoon duck in a martial arts headband balancing on one foot, holding a tiny sword, smiling."
 
       - fr_slug: drole-girafe-ballerine
         en_slug: funny-giraffe-ballerina
@@ -2270,7 +2270,7 @@ categories:
         en_title: "Ballerina Giraffe"
         fr_tags: ["girafe", "danse", "ballet", "drole"]
         en_tags: ["giraffe", "dance", "ballet", "funny"]
-        prompt: "A tall giraffe in a tiny pink tutu standing on its back legs doing a ballet arabesque, graceful."
+        prompt: "A cute giraffe standing upright in a frilly tutu, arms raised gracefully, big smile, simple lines."
 
       - fr_slug: drole-ours-pirate
         en_slug: funny-bear-pirate
@@ -2486,7 +2486,7 @@ categories:
         en_title: "Silent Ninja"
         fr_tags: ["ninja", "personnage", "combat", "discret"]
         en_tags: ["ninja", "character", "combat", "stealthy"]
-        prompt: "A cartoon ninja in black outfit doing a jumping kick pose, holding a star throwing weapon, simple cartoon style."
+        prompt: "A cartoon ninja character in a headband and robe doing a jumping kick, holding a throwing star, happy face."
 
       - fr_slug: personnages-magicien
         en_slug: characters-wizard

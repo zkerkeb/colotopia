@@ -1,0 +1,239 @@
+{
+  "summary": {
+    "total": 15,
+    "success": 15,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-27T18:59:24.589100+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-triceratops",
+      "en_slug": "dinosaurs-triceratops",
+      "prompt": "A friendly cartoon triceratops with three horns and a neck frill, standing, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-triceratops.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T18:59:26.593843+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-brachiosaurus",
+      "en_slug": "dinosaurs-brachiosaurus",
+      "prompt": "A cute long-necked brachiosaurus eating leaves from a tall tree, side view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-brachiosaurus.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T18:59:28.593998+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-stegosaurus",
+      "en_slug": "dinosaurs-stegosaurus",
+      "prompt": "A cute stegosaurus with diamond-shaped plates along its back, side view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-stegosaurus.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T18:59:30.595961+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-pterodactyle",
+      "en_slug": "dinosaurs-pterodactyl",
+      "prompt": "A cartoon pterodactyl with spread wings flying through the sky, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-pterodactyle.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T18:59:32.604282+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-ankylosaurus",
+      "en_slug": "dinosaurs-ankylosaurus",
+      "prompt": "A cute armored ankylosaurus with a club tail and bumpy back, side view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-ankylosaurus.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T18:59:34.609030+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-velociraptor",
+      "en_slug": "dinosaurs-velociraptor",
+      "prompt": "A friendly cartoon velociraptor running with tiny arms and feathers, side view, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-velociraptor.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T18:59:36.614403+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-diplodocus",
+      "en_slug": "dinosaurs-diplodocus",
+      "prompt": "A cute diplodocus with an extremely long neck and tail, side view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-diplodocus.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T18:59:38.618655+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-spinosaurus",
+      "en_slug": "dinosaurs-spinosaurus",
+      "prompt": "A friendly cartoon spinosaurus with a large sail fin on its back, standing by water, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-spinosaurus.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T18:59:40.622189+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-t-rex",
+      "en_slug": "dinosaurs-t-rex",
+      "prompt": "A friendly T-Rex standing upright with tiny arms and a big smile, front view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-t-rex.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T18:59:42.625175+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-iguanodon",
+      "en_slug": "dinosaurs-iguanodon",
+      "prompt": "A cute iguanodon with thumb spikes, walking on two legs, eating a leaf, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-iguanodon.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T18:59:44.632380+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-carnotaurus",
+      "en_slug": "dinosaurs-carnotaurus",
+      "prompt": "A friendly cartoon carnotaurus with small horns above its eyes and tiny arms, standing, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-carnotaurus.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/dinosaures-carnotaurus.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/dinosaurs-carnotaurus.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 93.28148563651746,
+        "black_pct": 4.447070290947879,
+        "mid_pct": 1.472854673189392,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-27T19:00:00.008960+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-parasaurolophus",
+      "en_slug": "dinosaurs-parasaurolophus",
+      "prompt": "A cute parasaurolophus with a distinctive curved head crest, walking on two legs, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-parasaurolophus.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/dinosaures-parasaurolophus.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/dinosaurs-parasaurolophus.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 89.84560635597896,
+        "black_pct": 8.630549527347629,
+        "mid_pct": 0.9589141869275756,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-27T19:00:15.363790+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-pachycephalosaurus",
+      "en_slug": "dinosaurs-pachycephalosaurus",
+      "prompt": "A cute pachycephalosaurus with a thick domed skull, standing upright, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-pachycephalosaurus.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/dinosaures-pachycephalosaurus.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/dinosaurs-pachycephalosaurus.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 91.45575091036157,
+        "black_pct": 6.789090374075846,
+        "mid_pct": 1.1431014823261116,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-27T19:00:30.845933+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-allosaurus",
+      "en_slug": "dinosaurs-allosaurus",
+      "prompt": "A friendly cartoon allosaurus with large jaws and strong legs, standing, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-allosaurus.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/dinosaures-allosaurus.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/dinosaurs-allosaurus.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 91.38678412476551,
+        "black_pct": 6.407198293301946,
+        "mid_pct": 1.474234008901313,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-27T19:00:49.029896+00:00",
+      "backend": "openai",
+      "fr_slug": "dinosaures-protoceratops",
+      "en_slug": "dinosaurs-protoceratops",
+      "prompt": "A cute small protoceratops with a neck frill and beak, walking, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/dinosaures-protoceratops.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/dinosaures-protoceratops.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/dinosaurs-protoceratops.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 91.4686247103395,
+        "black_pct": 7.21829366976864,
+        "mid_pct": 0.8664986942288594,
+        "reason": null
+      }
+    }
+  ]
+}

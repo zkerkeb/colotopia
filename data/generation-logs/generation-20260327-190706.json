@@ -1,0 +1,259 @@
+{
+  "summary": {
+    "total": 20,
+    "success": 20,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-27T19:06:14.417024+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-volant",
+      "en_slug": "superheroes-flying",
+      "prompt": "A superhero with a flowing cape flying through the sky with arms outstretched, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-volant.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:06:16.421763+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-heroine-forte",
+      "en_slug": "superheroes-strong-heroine",
+      "prompt": "A strong superheroine with fists raised and a determined smile, wearing a mask and cape, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-heroine-forte.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:06:18.428903+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-masque",
+      "en_slug": "superheroes-masked",
+      "prompt": "A masked superhero standing on a rooftop with a billowing cape, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-masque.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:06:20.429206+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-robot",
+      "en_slug": "superheroes-robot",
+      "prompt": "A friendly robot superhero with jet boots and glowing eyes, standing heroically, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-robot.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:06:22.435327+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-animal",
+      "en_slug": "superheroes-animal",
+      "prompt": "A cartoon dog wearing a superhero cape and mask, flying through clouds, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-animal.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:06:24.436129+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-nature",
+      "en_slug": "superheroes-nature",
+      "prompt": "A superhero surrounded by growing vines and flowers, with leaf-shaped cape, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-nature.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:06:26.442800+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-vitesse",
+      "en_slug": "superheroes-speed",
+      "prompt": "A superhero running at super speed with motion lines behind, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-vitesse.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:06:28.444272+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-invisible",
+      "en_slug": "superheroes-invisible",
+      "prompt": "A superhero partially fading invisible with sparkle effects around the body, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-invisible.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:06:30.445321+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-equipe",
+      "en_slug": "superheroes-team",
+      "prompt": "A team of three diverse cartoon superheroes standing together in heroic poses, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-equipe.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:06:32.455505+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-entrainement",
+      "en_slug": "superheroes-training",
+      "prompt": "A young cartoon superhero training by lifting a boulder, with a determined smile, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-entrainement.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:06:34.462839+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-aquatique",
+      "en_slug": "superheroes-aquatic",
+      "prompt": "A superhero swimming underwater with fish and coral around, wearing an aquatic suit, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-aquatique.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:06:36.473288+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-espace",
+      "en_slug": "superheroes-space",
+      "prompt": "A superhero flying through space among stars and planets, with a cosmic cape, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-espace.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:06:38.473827+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-heroine-volante",
+      "en_slug": "superheroes-flying-heroine",
+      "prompt": "A superheroine soaring through clouds with flowing hair and a cape, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-heroine-volante.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:06:40.482169+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-feu",
+      "en_slug": "superheroes-fire",
+      "prompt": "A superhero with harmless cartoon flames around the hands, standing heroically, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-feu.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:06:42.489677+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-glace",
+      "en_slug": "superheroes-ice",
+      "prompt": "A superhero creating ice crystals and snowflakes with outstretched hands, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-glace.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:06:44.493857+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-tonnerre",
+      "en_slug": "superheroes-thunder",
+      "prompt": "A superhero surrounded by cartoon lightning bolts with arms raised and a dramatic cape, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-tonnerre.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:06:46.495378+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-force",
+      "en_slug": "superheroes-strength",
+      "prompt": "A superhero flexing enormous cartoon muscles, lifting a boulder overhead, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-force.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:06:48.503425+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-telepathie",
+      "en_slug": "superheroes-telepathy",
+      "prompt": "A superhero with glowing eyes and spiral waves emanating from the head showing mental powers, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-telepathie.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:06:50.512576+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-transformation",
+      "en_slug": "superheroes-shapeshifter",
+      "prompt": "A cartoon superhero with a glowing costume, swirling energy stars around them, heroic pose, simple lines. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-transformation.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/super-heros-transformation.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/superheroes-shapeshifter.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 85.8604296170964,
+        "black_pct": 11.294460587780925,
+        "mid_pct": 1.8903336153308568,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-27T19:07:06.691247+00:00",
+      "backend": "openai",
+      "fr_slug": "super-heros-ombre",
+      "en_slug": "superheroes-shadow",
+      "prompt": "A mysterious superhero emerging from a dark shadow with a flowing cape and glowing eyes, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/super-heros-ombre.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    }
+  ]
+}

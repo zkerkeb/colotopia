@@ -1,0 +1,209 @@
+{
+  "summary": {
+    "total": 10,
+    "success": 10,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-27T18:49:00.496634+00:00",
+      "backend": "openai",
+      "fr_slug": "contes-chateau-magique",
+      "en_slug": "tales-magic-castle",
+      "prompt": "A fairy tale castle with tall towers, a drawbridge, and magical sparkles all around it, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/contes-chateau-magique.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T18:49:02.506910+00:00",
+      "backend": "openai",
+      "fr_slug": "contes-dragon-tresor",
+      "en_slug": "tales-dragon-treasure",
+      "prompt": "A cute friendly dragon guarding a pile of treasure chests and gold coins in a cave, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/contes-dragon-tresor.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T18:49:04.515670+00:00",
+      "backend": "openai",
+      "fr_slug": "contes-fee-foret",
+      "en_slug": "tales-forest-fairy",
+      "prompt": "A tiny fairy with glowing wings sitting on a large mushroom in an enchanted forest, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/contes-fee-foret.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/contes-fee-foret.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/tales-forest-fairy.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 85.9765237061831,
+        "black_pct": 9.837790120278074,
+        "mid_pct": 2.754395483135322,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-27T18:49:22.783054+00:00",
+      "backend": "openai",
+      "fr_slug": "contes-chaperon-rouge",
+      "en_slug": "tales-little-red-hood",
+      "prompt": "A cartoon girl in a red hooded cape carrying a basket, walking on a forest path, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/contes-chaperon-rouge.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/contes-chaperon-rouge.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/tales-little-red-hood.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 86.23937911501821,
+        "black_pct": 9.755949534704087,
+        "mid_pct": 2.5983926141170413,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-27T18:49:39.772375+00:00",
+      "backend": "openai",
+      "fr_slug": "contes-maison-sorciere",
+      "en_slug": "tales-witch-house",
+      "prompt": "A crooked candy witch house in the forest with gingerbread walls, candy decorations, and a cauldron outside. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/contes-maison-sorciere.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/contes-maison-sorciere.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/tales-witch-house.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 76.51207378526502,
+        "black_pct": 14.08168426085997,
+        "mid_pct": 6.887253098907566,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-27T18:49:56.025151+00:00",
+      "backend": "openai",
+      "fr_slug": "contes-prince-grenouille",
+      "en_slug": "tales-frog-prince",
+      "prompt": "A cute cartoon frog wearing a tiny golden crown, sitting on a lily pad near a princess, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/contes-prince-grenouille.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/contes-prince-grenouille.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/tales-frog-prince.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 86.48131459888917,
+        "black_pct": 11.061674697465701,
+        "mid_pct": 1.568856438739103,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-27T18:50:12.291324+00:00",
+      "backend": "openai",
+      "fr_slug": "contes-princesse-dragon",
+      "en_slug": "tales-princess-dragon",
+      "prompt": "A cartoon princess and her friendly dragon companion standing together in front of a castle, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/contes-princesse-dragon.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/contes-princesse-dragon.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/tales-princess-dragon.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 85.66502372457424,
+        "black_pct": 9.379115018207232,
+        "mid_pct": 3.351280023540663,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-27T18:50:30.193606+00:00",
+      "backend": "openai",
+      "fr_slug": "contes-geant-haricot",
+      "en_slug": "tales-beanstalk-giant",
+      "prompt": "A cartoon giant at the top of a giant beanstalk among clouds, looking down at tiny houses below, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/contes-geant-haricot.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/contes-geant-haricot.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/tales-beanstalk-giant.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 85.42451355427227,
+        "black_pct": 8.93069297826167,
+        "mid_pct": 3.8629216169492775,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-27T18:50:44.506292+00:00",
+      "backend": "openai",
+      "fr_slug": "contes-rose-enchantee",
+      "en_slug": "tales-enchanted-rose",
+      "prompt": "An enchanted rose under a glass dome with magical sparkles and petals falling around it, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/contes-rose-enchantee.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/contes-rose-enchantee.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/tales-enchanted-rose.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 83.6881138043918,
+        "black_pct": 14.04103983521536,
+        "mid_pct": 1.5437525287821385,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-27T18:50:59.360467+00:00",
+      "backend": "openai",
+      "fr_slug": "contes-licorne-arc-en-ciel",
+      "en_slug": "tales-rainbow-unicorn",
+      "prompt": "A majestic unicorn galloping through rainbow clouds in a magical sky, mane flowing, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/contes-licorne-arc-en-ciel.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/contes-licorne-arc-en-ciel.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/tales-rainbow-unicorn.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 89.7907087946445,
+        "black_pct": 6.720675322764556,
+        "mid_pct": 2.320456468164932,
+        "reason": null
+      }
+    }
+  ]
+}

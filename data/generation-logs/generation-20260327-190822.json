@@ -1,0 +1,199 @@
+{
+  "summary": {
+    "total": 15,
+    "success": 15,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-27T19:07:41.460899+00:00",
+      "backend": "openai",
+      "fr_slug": "personnages-pirate",
+      "en_slug": "characters-pirate",
+      "prompt": "A cartoon pirate with an eye patch, tricorn hat, and treasure chest, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/personnages-pirate.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:07:43.464211+00:00",
+      "backend": "openai",
+      "fr_slug": "personnages-cowboy",
+      "en_slug": "characters-cowboy",
+      "prompt": "A friendly cartoon cowboy with a hat, lasso and boots, standing in a western pose, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/personnages-cowboy.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:07:45.472679+00:00",
+      "backend": "openai",
+      "fr_slug": "personnages-ninja",
+      "en_slug": "characters-ninja",
+      "prompt": "A cartoon ninja character in a headband and robe doing a jumping kick, holding a throwing star, happy face. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/personnages-ninja.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/personnages-ninja.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/characters-ninja.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 84.52610622724096,
+        "black_pct": 12.243673446867987,
+        "mid_pct": 2.1793044469783354,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-27T19:08:00.885943+00:00",
+      "backend": "openai",
+      "fr_slug": "personnages-magicien",
+      "en_slug": "characters-wizard",
+      "prompt": "A cartoon wizard with a tall pointed hat and long robe, casting a spell with a glowing wand, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/personnages-magicien.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:08:02.893511+00:00",
+      "backend": "openai",
+      "fr_slug": "personnages-explorateur",
+      "en_slug": "characters-explorer",
+      "prompt": "A cartoon explorer with a pith helmet, binoculars and backpack, standing in front of jungle, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/personnages-explorateur.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:08:04.895937+00:00",
+      "backend": "openai",
+      "fr_slug": "personnages-viking",
+      "en_slug": "characters-viking",
+      "prompt": "A friendly cartoon viking with a horned helmet, round shield and axe, standing proudly, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/personnages-viking.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:08:06.906505+00:00",
+      "backend": "openai",
+      "fr_slug": "personnages-samourai",
+      "en_slug": "characters-samurai",
+      "prompt": "A cartoon samurai in traditional armor with a katana sword, standing in a warrior pose, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/personnages-samourai.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:08:08.913999+00:00",
+      "backend": "openai",
+      "fr_slug": "personnages-sherif",
+      "en_slug": "characters-sheriff",
+      "prompt": "A cartoon sheriff with a star badge, cowboy hat, and a lasso, standing in front of a saloon, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/personnages-sherif.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:08:10.915012+00:00",
+      "backend": "openai",
+      "fr_slug": "personnages-roi",
+      "en_slug": "characters-king",
+      "prompt": "A cartoon king in royal robes with a golden crown and scepter, sitting on a throne, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/personnages-roi.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:08:12.923538+00:00",
+      "backend": "openai",
+      "fr_slug": "personnages-reine",
+      "en_slug": "characters-queen",
+      "prompt": "A cartoon queen in an elegant gown with a crown and jewels, standing gracefully, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/personnages-reine.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:08:14.929399+00:00",
+      "backend": "openai",
+      "fr_slug": "personnages-pharaon",
+      "en_slug": "characters-pharaoh",
+      "prompt": "A cartoon pharaoh with a tall headdress, striped collar, and staff, in front of pyramids, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/personnages-pharaon.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:08:16.931367+00:00",
+      "backend": "openai",
+      "fr_slug": "personnages-gladiateur",
+      "en_slug": "characters-gladiator",
+      "prompt": "A cartoon gladiator with a helmet, round shield, and sword, standing in an arena, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/personnages-gladiateur.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:08:18.934092+00:00",
+      "backend": "openai",
+      "fr_slug": "personnages-elfe",
+      "en_slug": "characters-elf",
+      "prompt": "A cute cartoon elf with pointed ears, green outfit, and a bow and arrow, in a magical forest, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/personnages-elfe.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:08:20.936187+00:00",
+      "backend": "openai",
+      "fr_slug": "personnages-nain",
+      "en_slug": "characters-dwarf",
+      "prompt": "A cute cartoon dwarf with a big beard, helmet, and pickaxe, in front of a mine entrance, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/personnages-nain.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-27T19:08:22.943443+00:00",
+      "backend": "openai",
+      "fr_slug": "personnages-detective",
+      "en_slug": "characters-detective",
+      "prompt": "A cartoon detective with a deerstalker cap and magnifying glass, looking for clues, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/personnages-detective.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    }
+  ]
+}

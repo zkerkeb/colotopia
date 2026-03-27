@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "total": 1,
+    "success": 0,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-27T18:47:18.618858+00:00",
+      "backend": "gemini",
+      "fr_slug": "contes-chateau-magique",
+      "en_slug": "tales-magic-castle",
+      "prompt": "A fairy tale castle with tall towers, a drawbridge, and magical sparkles all around it, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/contes-chateau-magique.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'Your project has exceeded its spending cap.', 'status': 'RESOURCE_EXHAUSTED'}}"
+    }
+  ]
+}

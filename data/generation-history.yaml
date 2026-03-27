@@ -590,8 +590,306 @@
   prompt: "A zebra playing electric guitar on stage wearing sunglasses, crowd cheering, rock star pose."
   status: "published"
 
-# QA failures (drole batch 2 — 2026-03-22):
-# - drole-canard-ninja (heavy black fill, not coloring-page line art)
-# - drole-girafe-ballerine (gray shading on tutu/spots)
-# - drole-renard-magicien (heavy black fills on hat and cape)
-# - drole-souris-karate (photo-style illustrated scene, not line art)
+# QA failures (drole batch 2 — 2026-03-22, fixed in heartbeat 8):
+# - drole-canard-ninja → prompt updated, regenerated via OpenAI ✅
+# - drole-girafe-ballerine → prompt updated, regenerated via OpenAI ✅
+# - drole-renard-magicien → prompt updated, regenerated via OpenAI ✅
+# - drole-souris-karate → prompt updated, regenerated via OpenAI ✅
+
+# Heartbeat 8 — 2026-03-27 (OpenAI backend, Gemini quota exhausted):
+# Switched to OpenAI backend (gpt-image-1) — Gemini spending cap hit.
+# 49 new images generated and verified. New categories: contes, personnages.
+
+- date: "2026-03-27"
+  slug: "contes-chateau-magique"
+  category: "contes"
+  prompt: "A fairy-tale castle with tall towers, turrets, flags, and sparkling stars, simple cartoon style."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "contes-dragon-tresor"
+  category: "contes"
+  prompt: "A cute dragon sitting on treasure chests and gold coins in a cave, friendly smile."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "contes-fee-foret"
+  category: "contes"
+  prompt: "A magical fairy with big wings sitting on a mushroom in a forest, stars and flowers around."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "contes-chaperon-rouge"
+  category: "contes"
+  prompt: "Little Red Riding Hood walking through a forest path with a basket, big trees around."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "contes-maison-sorciere"
+  category: "contes"
+  prompt: "A crooked witch's house in the woods with a pointy roof, candy decorations, and a smoking chimney."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "contes-prince-grenouille"
+  category: "contes"
+  prompt: "A frog wearing a tiny crown sitting on a lily pad next to a golden ball, regal pose."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "contes-princesse-dragon"
+  category: "contes"
+  prompt: "A brave princess in armor standing next to a friendly dragon, both smiling, castle in background."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "contes-geant-haricot"
+  category: "contes"
+  prompt: "A giant beanstalk growing into clouds with a small boy climbing it, leaves and vines around."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "contes-rose-enchantee"
+  category: "contes"
+  prompt: "An enchanted rose in a glass dome with magical sparkles and swirling vines around it."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "contes-licorne-arc-en-ciel"
+  category: "contes"
+  prompt: "A unicorn leaping over a rainbow with stars, clouds, and flowers, magical and joyful."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "personnages-pirate"
+  category: "personnages"
+  prompt: "A cartoon pirate with a tricorn hat, eyepatch, and parrot on shoulder, holding a treasure map."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "personnages-cowboy"
+  category: "personnages"
+  prompt: "A cartoon cowboy in hat and boots with a lasso, standing next to a cactus."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "personnages-ninja"
+  category: "personnages"
+  prompt: "A cartoon ninja character in a headband and robe doing a jumping kick, holding a throwing star, happy face."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "personnages-magicien"
+  category: "personnages"
+  prompt: "A friendly wizard in a star-covered robe and pointy hat, holding a glowing wand with stars."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "personnages-explorateur"
+  category: "personnages"
+  prompt: "A cartoon explorer with a pith helmet, backpack, and binoculars, in a jungle setting."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "personnages-viking"
+  category: "personnages"
+  prompt: "A friendly cartoon viking with a horned helmet, braids, and shield, smiling broadly."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "personnages-samourai"
+  category: "personnages"
+  prompt: "A cartoon samurai in traditional armor with a katana, determined expression, simple pose."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "personnages-sherif"
+  category: "personnages"
+  prompt: "A cartoon sheriff with a star badge, hat, and boots, hands on hips in a western town."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "personnages-roi"
+  category: "personnages"
+  prompt: "A cartoon king sitting on a throne with a crown and scepter, wearing a royal robe."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "personnages-reine"
+  category: "personnages"
+  prompt: "A cartoon queen in an elegant gown with a crown and magic wand, graceful and kind."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "personnages-pharaon"
+  category: "personnages"
+  prompt: "A cartoon pharaoh with a striped headdress and ankh staff, pyramids in the background."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "personnages-gladiateur"
+  category: "personnages"
+  prompt: "A cartoon gladiator in helmet and armor with a shield and sword, thumbs up pose."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "personnages-elfe"
+  category: "personnages"
+  prompt: "A forest elf with pointed ears, a bow and quiver, standing among tall trees and mushrooms."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "personnages-nain"
+  category: "personnages"
+  prompt: "A friendly cartoon dwarf with a big beard, mining helmet, and pickaxe, in a gem-filled cave."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "personnages-detective"
+  category: "personnages"
+  prompt: "A cartoon detective in a trench coat and hat with a magnifying glass, looking for clues."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "ferme-vache"
+  category: "ferme"
+  prompt: "A happy cartoon cow with spots standing in a meadow, flowers around, big friendly eyes."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "ferme-ane"
+  category: "ferme"
+  prompt: "A cartoon donkey with big ears and a friendly smile, standing on a farm path."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "ferme-grange"
+  category: "ferme"
+  prompt: "A classic red barn with a weathervane, hay bales, and sunflowers around it, sunny day."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "ferme-tracteur"
+  category: "ferme"
+  prompt: "A friendly cartoon tractor with big wheels in a farm field, sun shining above."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "super-heros-tonnerre"
+  category: "super-heros"
+  prompt: "A superhero channeling lightning bolts from their hands, dramatic pose, storm clouds behind."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "super-heros-force"
+  category: "super-heros"
+  prompt: "A strong superhero lifting a huge boulder above their head, flexing, cape flowing."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "super-heros-telepathie"
+  category: "super-heros"
+  prompt: "A superhero with glowing eyes and swirling thought bubbles around their head, calm expression."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "super-heros-transformation"
+  category: "super-heros"
+  prompt: "A cartoon superhero with a glowing costume, swirling energy stars around them, heroic pose."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "super-heros-ombre"
+  category: "super-heros"
+  prompt: "A shadowy superhero with a dark swirling cloak, stars and mist around, mysterious pose."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "dinosaures-carnotaurus"
+  category: "dinosaures"
+  prompt: "A cute cartoon Carnotaurus with small horns above its eyes, running playfully."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "dinosaures-parasaurolophus"
+  category: "dinosaures"
+  prompt: "A friendly cartoon Parasaurolophus with its distinctive head crest, grazing peacefully."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "dinosaures-pachycephalosaurus"
+  category: "dinosaures"
+  prompt: "A cute cartoon Pachycephalosaurus with its domed head, curious expression, simple lines."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "dinosaures-allosaurus"
+  category: "dinosaures"
+  prompt: "A cartoon Allosaurus with large jaws and tiny arms, friendly expression, simple cartoon style."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "dinosaures-protoceratops"
+  category: "dinosaures"
+  prompt: "A small cartoon Protoceratops with a frill around its neck, smiling, simple cute design."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "drole-mouton-dj"
+  category: "drole"
+  prompt: "A fluffy cartoon sheep with oversized headphones and sunglasses at DJ turntables, dancing pose."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "drole-souris-karate"
+  category: "drole"
+  prompt: "A cartoon mouse in a karate uniform doing a high kick, big smile, round eyes, simple pose."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "drole-renard-magicien"
+  category: "drole"
+  prompt: "A smiling fox with a tall striped top hat pulling a white rabbit out of a hat, stars around."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "drole-canard-ninja"
+  category: "drole"
+  prompt: "A cartoon duck in a martial arts headband balancing on one foot, holding a tiny sword, smiling."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "drole-girafe-ballerine"
+  category: "drole"
+  prompt: "A cute giraffe standing upright in a frilly tutu, arms raised gracefully, big smile, simple lines."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "drole-loup-ballet"
+  category: "drole"
+  prompt: "A cute cartoon wolf animal wearing a pink ballet tutu, dancing on tiptoe, arms raised, big round eyes, happy face."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "paysages-santorin"
+  category: "paysages"
+  prompt: "Santorini cliffside with white cubic houses, rounded rooftops, bell towers, and sea visible below."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "animaux-marins-requin"
+  category: "animaux-marins"
+  prompt: "A cartoon shark with a big friendly smile swimming in the ocean, fish around."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "metiers-infirmiere"
+  category: "metiers"
+  prompt: "A friendly cartoon nurse in scrubs with a stethoscope, holding a clipboard, smiling."
+  status: "published"
+
+- date: "2026-03-27"
+  slug: "metiers-pharmacienne"
+  category: "metiers"
+  prompt: "A cartoon female pharmacist in a white coat behind a counter with medicine bottles, friendly smile."
+  status: "published"

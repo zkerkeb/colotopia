@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "total": 1,
+    "success": 1,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-27T19:07:35.468710+00:00",
+      "backend": "openai",
+      "fr_slug": "personnages-pirate",
+      "en_slug": "characters-pirate",
+      "prompt": "A cartoon pirate with an eye patch, tricorn hat, and treasure chest, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/personnages-pirate.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    }
+  ]
+}
