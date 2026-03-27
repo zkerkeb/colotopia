@@ -73,11 +73,11 @@ const structuredData = {
 >
   {isFirstPage && <Hero locale={locale} />}
 
-  {isFirstPage && <CategoriesSection locale={locale} kidsCounts={kidsCounts} adultCounts={adultCounts} />}
-
   {isFirstPage && nouveaux.length > 0 && (
     <NewSection locale={locale} items={nouveaux} />
   )}
+
+  {isFirstPage && <CategoriesSection locale={locale} kidsCounts={kidsCounts} adultCounts={adultCounts} />}
 
   <AdSlot adSlot="" format="horizontal" />
 
