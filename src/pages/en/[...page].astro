@@ -8,7 +8,7 @@ import CategoriesSection from '../../components/CategoriesSection.astro';
 import NewSection from '../../components/NewSection.astro';
 import { getCollection } from 'astro:content';
 import { getPublishableColoriages } from '../../lib/coloriages';
-import { t } from '../../lib/i18n';
+import { t, kidsCategories, adultCategories } from '../../lib/i18n';
 
 const locale = 'en';
 
@@ -30,6 +30,8 @@ const ogImage = firstImage ? `${siteUrl}${firstImage}` : undefined;
 // Nouveaux: 10 most recent by createdAt (only on page 1)
 let nouveaux: typeof page.data = [];
 let nouveauxSlugs = new Set<string>();
+let kidsCounts: Record<string, number> = {};
+let adultCounts: Record<string, number> = {};
 if (isFirstPage) {
   const allColoriages = await getPublishableColoriages('en');
   nouveaux = allColoriages
@@ -37,6 +39,13 @@ if (isFirstPage) {
     .sort((a: any, b: any) => (b.data.createdAt || '').localeCompare(a.data.createdAt || ''))
     .slice(0, 10);
   nouveauxSlugs = new Set(nouveaux.map((c: any) => c.data.slug));
+
+  for (const cat of kidsCategories) {
+    kidsCounts[cat] = allColoriages.filter((c) => c.data.category === cat).length;
+  }
+  for (const cat of adultCategories) {
+    adultCounts[cat] = allColoriages.filter((c) => c.data.category === cat).length;
+  }
 }
 
 const structuredData = {
@@ -64,7 +73,7 @@ const structuredData = {
 >
   {isFirstPage && <Hero locale={locale} />}
 
-  {isFirstPage && <CategoriesSection locale={locale} />}
+  {isFirstPage && <CategoriesSection locale={locale} kidsCounts={kidsCounts} adultCounts={adultCounts} />}
 
   {isFirstPage && nouveaux.length > 0 && (
     <NewSection locale={locale} items={nouveaux} />
