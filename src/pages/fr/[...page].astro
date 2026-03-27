@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ColoringCard from '../../components/ColoringCard.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import Pagination from '../../components/Pagination.astro';
+import Hero from '../../components/Hero.astro';
 import { getCollection } from 'astro:content';
 import { getPublishableColoriages } from '../../lib/coloriages';
 import { t } from '../../lib/i18n';
@@ -60,31 +61,7 @@ const structuredData = {
   prevUrl={page.url.prev}
   nextUrl={page.url.next}
 >
-  <section class="hero">
-    <!-- Decorative SVG elements -->
-    <svg class="deco deco-pencil" width="60" height="60" viewBox="0 0 60 60" fill="none" aria-hidden="true">
-      <rect x="20" y="5" width="12" height="44" rx="2" fill="#FBBF24" opacity="0.7"/>
-      <polygon points="20,49 32,49 26,58" fill="#F472B6" opacity="0.6"/>
-      <rect x="20" y="5" width="12" height="6" rx="1" fill="#4ECDC4" opacity="0.5"/>
-    </svg>
-    <svg class="deco deco-star" width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-      <path d="M24 4l5.5 13.5L44 19l-11 9.5L36 44l-12-7.5L12 44l3-15.5L4 19l14.5-1.5z" fill="#FBBF24" opacity="0.5"/>
-    </svg>
-    <svg class="deco deco-splash" width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-      <circle cx="32" cy="32" r="14" fill="#4ECDC4" opacity="0.35"/>
-      <circle cx="18" cy="18" r="6" fill="#A855F7" opacity="0.3"/>
-      <circle cx="48" cy="22" r="5" fill="#F472B6" opacity="0.35"/>
-      <circle cx="44" cy="48" r="7" fill="#FBBF24" opacity="0.3"/>
-    </svg>
-    <svg class="deco deco-dots" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true">
-      <circle cx="10" cy="10" r="4" fill="#e8437f" opacity="0.3"/>
-      <circle cx="30" cy="8" r="3" fill="#4ECDC4" opacity="0.35"/>
-      <circle cx="45" cy="20" r="5" fill="#FBBF24" opacity="0.3"/>
-      <circle cx="15" cy="35" r="3.5" fill="#A855F7" opacity="0.3"/>
-    </svg>
-    <h1>{t('site.title', locale)}</h1>
-    <p>{t('home.hero.subtitle', locale)}</p>
-  </section>
+  {isFirstPage && <Hero locale={locale} />}
 
   {isFirstPage && nouveaux.length > 0 && (
     <section class="nouveaux-section">
@@ -170,74 +147,6 @@ const structuredData = {
 </script>
 
 <style>
-  .hero {
-    text-align: center;
-    margin-bottom: 2rem;
-    background: linear-gradient(135deg, #fce7f3 0%, #fef3c7 35%, #d1fae5 65%, #e0e7ff 100%);
-    border-radius: 20px;
-    padding: 2.5rem 1.5rem;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .deco {
-    position: absolute;
-    pointer-events: none;
-  }
-
-  .deco-pencil {
-    top: 0.75rem;
-    left: 1.5rem;
-    transform: rotate(-15deg);
-  }
-
-  .deco-star {
-    top: 0.5rem;
-    right: 2rem;
-    animation: deco-float 4s ease-in-out infinite;
-  }
-
-  .deco-splash {
-    bottom: 0.5rem;
-    left: 3rem;
-  }
-
-  .deco-dots {
-    bottom: 0.5rem;
-    right: 1.5rem;
-  }
-
-  @keyframes deco-float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-6px); }
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 0.75rem;
-    color: #1a1a1a;
-    position: relative;
-  }
-
-  .hero p {
-    font-size: 1.1rem;
-    color: #4b5563;
-    max-width: 600px;
-    margin: 0 auto;
-    font-weight: 500;
-    position: relative;
-  }
-
-  @media (max-width: 600px) {
-    .hero h1 {
-      font-size: 1.75rem;
-    }
-    .deco {
-      display: none;
-    }
-  }
-
   .nouveaux-section {
     margin-bottom: 2.5rem;
   }
