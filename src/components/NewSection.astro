@@ -1,0 +1,207 @@
+---
+import type { Locale } from '../lib/i18n';
+import ColoringCard from './ColoringCard.astro';
+import type { Category } from '../lib/i18n';
+
+interface ColoriageItem {
+  data: {
+    title: string;
+    slug: string;
+    image: string;
+    alt: string;
+    audience?: string;
+    category?: Category;
+    createdAt?: string;
+  };
+}
+
+interface Props {
+  locale: Locale;
+  items: ColoriageItem[];
+}
+
+const { locale, items } = Astro.props;
+const title = locale === 'fr' ? 'Nouveautés' : 'New arrivals';
+const viewAllLabel = locale === 'fr' ? 'Voir tout' : 'View all';
+---
+
+<section class="new-section">
+  <div class="new-section-header">
+    <h2 class="new-section-title">
+      <span aria-hidden="true">✨</span> {title}
+    </h2>
+    <div class="carousel-controls">
+      <button class="carousel-btn" id="carousel-prev" aria-label="Précédent">&#8592;</button>
+      <button class="carousel-btn" id="carousel-next" aria-label="Suivant">&#8594;</button>
+    </div>
+  </div>
+
+  <div class="carousel-track" id="carousel-track">
+    {items.map((c) => (
+      <div class="carousel-item">
+        <ColoringCard
+          title={c.data.title}
+          slug={c.data.slug}
+          image={c.data.image}
+          alt={c.data.alt}
+          locale={locale}
+          audience={c.data.audience}
+          category={c.data.category}
+          isNew={true}
+        />
+      </div>
+    ))}
+  </div>
+
+  <div class="carousel-dots" id="carousel-dots" aria-hidden="true"></div>
+</section>
+
+<script>
+  const track = document.getElementById('carousel-track');
+  const prevBtn = document.getElementById('carousel-prev');
+  const nextBtn = document.getElementById('carousel-next');
+  const dotsContainer = document.getElementById('carousel-dots');
+
+  if (track && prevBtn && nextBtn && dotsContainer) {
+    const items = Array.from(track.querySelectorAll('.carousel-item'));
+    const itemCount = items.length;
+
+    // Build dots
+    items.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.className = i === 0 ? 'carousel-dot carousel-dot--active' : 'carousel-dot';
+      dotsContainer.appendChild(dot);
+    });
+
+    function getItemWidth(): number {
+      return items[0]?.getBoundingClientRect().width ?? 0;
+    }
+
+    function updateDots() {
+      const dots = dotsContainer!.querySelectorAll('.carousel-dot');
+      const scrollLeft = track!.scrollLeft;
+      const itemW = getItemWidth();
+      const gap = 16; // var(--space-4)
+      const activeIndex = Math.round(scrollLeft / (itemW + gap));
+      dots.forEach((d, i) => {
+        d.classList.toggle('carousel-dot--active', i === activeIndex);
+      });
+    }
+
+    prevBtn.addEventListener('click', () => {
+      const w = getItemWidth() + 16;
+      track.scrollBy({ left: -w * 2, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+      const w = getItemWidth() + 16;
+      track.scrollBy({ left: w * 2, behavior: 'smooth' });
+    });
+
+    track.addEventListener('scroll', updateDots, { passive: true });
+  }
+</script>
+
+<style>
+  .new-section {
+    padding: var(--space-16) 0;
+    overflow: hidden;
+  }
+
+  .new-section-header {
+    max-width: var(--max-width);
+    margin: 0 auto var(--space-8);
+    padding: 0 var(--content-padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .new-section-title {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-extrabold);
+    font-size: var(--font-size-2xl);
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .carousel-controls {
+    display: flex;
+    gap: var(--space-2);
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-pill);
+    border: 2px solid var(--color-primary);
+    background: #ffffff;
+    color: var(--color-primary);
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background var(--transition-fast), color var(--transition-fast);
+    line-height: 1;
+  }
+
+  .carousel-btn:hover {
+    background: var(--color-primary);
+    color: #ffffff;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: var(--space-4);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: var(--space-2) var(--content-padding) var(--space-4);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-item {
+    flex: 0 0 calc(50% - var(--space-2));
+    scroll-snap-align: start;
+  }
+
+  @media (min-width: 640px) {
+    .carousel-item {
+      flex: 0 0 calc(33.333% - var(--space-3));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .carousel-item {
+      flex: 0 0 calc(25% - var(--space-3));
+    }
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+  }
+
+  :global(.carousel-dot) {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-pill);
+    background: rgba(108, 92, 231, 0.2);
+    transition: background var(--transition-fast), width var(--transition-fast);
+  }
+
+  :global(.carousel-dot--active) {
+    background: var(--color-primary);
+    width: 20px;
+  }
+</style>

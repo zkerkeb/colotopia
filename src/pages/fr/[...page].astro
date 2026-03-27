@@ -5,6 +5,7 @@ import AdSlot from '../../components/AdSlot.astro';
 import Pagination from '../../components/Pagination.astro';
 import Hero from '../../components/Hero.astro';
 import CategoriesSection from '../../components/CategoriesSection.astro';
+import NewSection from '../../components/NewSection.astro';
 import { getCollection } from 'astro:content';
 import { getPublishableColoriages } from '../../lib/coloriages';
 import { t, kidsCategories, adultCategories } from '../../lib/i18n';
@@ -67,26 +68,7 @@ const structuredData = {
   {isFirstPage && <CategoriesSection locale={locale} />}
 
   {isFirstPage && nouveaux.length > 0 && (
-    <section class="nouveaux-section">
-      <div class="section-header">
-        <h2>{t('home.nouveaux.title', locale)}</h2>
-        <span class="section-sub">{t('home.nouveaux.subtitle', locale)}</span>
-      </div>
-      <div class="nouveaux-grid">
-        {nouveaux.map((c: any) => (
-          <ColoringCard
-            title={c.data.title}
-            slug={c.data.slug}
-            image={c.data.image}
-            alt={c.data.alt}
-            locale={locale}
-            audience={c.data.audience}
-            category={c.data.category}
-            isNew={true}
-          />
-        ))}
-      </div>
-    </section>
+    <NewSection locale={locale} items={nouveaux} />
   )}
 
   <AdSlot adSlot="" format="horizontal" />
@@ -150,34 +132,6 @@ const structuredData = {
 </script>
 
 <style>
-  .nouveaux-section {
-    margin-bottom: 2.5rem;
-  }
-
-  .section-header {
-    display: flex;
-    align-items: baseline;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
-  }
-
-  .section-header h2 {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #1a1a1a;
-  }
-
-  .section-sub {
-    font-size: 0.9rem;
-    color: #9ca3af;
-  }
-
-  .nouveaux-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 1rem;
-  }
-
   .audience-filter {
     display: flex;
     gap: 0.5rem;
