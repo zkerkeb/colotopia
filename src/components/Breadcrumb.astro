@@ -16,6 +16,8 @@ interface Props {
 
 const { locale, category, currentPage } = Astro.props;
 
+const ariaLabel = locale === 'fr' ? 'Fil d\'Ariane' : 'Breadcrumb';
+
 const items: BreadcrumbItem[] = [
   { label: t('nav.home', locale), href: getLocalePath(locale) },
 ];
@@ -37,17 +39,23 @@ const schemaItems = items.map((item, index) => ({
 }));
 ---
 
-<nav class="breadcrumb" aria-label="breadcrumb">
-  <ol>
+<nav aria-label={ariaLabel}>
+  <ol class="breadcrumb">
     {items.map((item, i) => (
-      <li>
-        {i > 0 && <span class="sep" aria-hidden="true">/</span>}
-        {item.href ? (
-          <a href={item.href}>{item.label}</a>
-        ) : (
-          <span aria-current="page">{item.label}</span>
+      <>
+        <li class:list={['breadcrumb-item', !item.href && 'breadcrumb-item--current']}>
+          {item.href ? (
+            <a href={item.href} class="breadcrumb-link">
+              <span>{item.label}</span>
+            </a>
+          ) : (
+            <span class="breadcrumb-current" aria-current="page">{item.label}</span>
+          )}
+        </li>
+        {i < items.length - 1 && (
+          <li class="breadcrumb-separator" aria-hidden="true">›</li>
         )}
-      </li>
+      </>
     ))}
   </ol>
 </nav>
@@ -60,47 +68,47 @@ const schemaItems = items.map((item, index) => ({
 
 <style>
   .breadcrumb {
-    margin-bottom: 1.5rem;
-  }
-
-  ol {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    gap: 0.375rem;
+    flex-wrap: wrap;
+    gap: 0;
     list-style: none;
     padding: 0;
-    font-size: 0.875rem;
-    color: #6b7280;
+    margin: 0 0 var(--space-6);
+    font-family: var(--font-body);
+    font-size: var(--font-size-sm);
   }
 
-  li {
+  .breadcrumb-item {
     display: flex;
     align-items: center;
-    gap: 0.375rem;
   }
 
-  .sep {
-    color: #d1d5db;
+  .breadcrumb-separator {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-semibold);
+    margin: 0 var(--space-2);
+    list-style: none;
   }
 
-  a {
-    color: #e8437f;
+  .breadcrumb-link {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+
+  .breadcrumb-link:hover {
+    color: var(--color-primary);
     text-decoration: none;
   }
 
-  a:hover {
-    text-decoration: underline;
-  }
-
-  span[aria-current="page"] {
-    color: #374151;
-    font-weight: 500;
+  .breadcrumb-current {
+    color: var(--color-text);
+    font-weight: var(--font-weight-bold);
   }
 
   @media print {
-    .breadcrumb {
-      display: none;
-    }
+    nav { display: none; }
   }
 </style>
