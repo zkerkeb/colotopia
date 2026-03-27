@@ -134,6 +134,7 @@
   --max-width-content: 1200px;
   --header-height: 64px;
   --gap-grid: 1.5rem;
+  --content-padding: 1rem;
 
   /* ── Z-index scale ── */
   --z-base: 0;
