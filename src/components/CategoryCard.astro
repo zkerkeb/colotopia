@@ -1,0 +1,72 @@
+---
+interface Props {
+  name: string;
+  slug: string;
+  emoji: string;
+  count: number;
+  color: string;
+  href: string;
+  locale?: string;
+}
+
+const { name, emoji, count, color, href, locale = 'fr' } = Astro.props;
+const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring pages`;
+---
+
+<a
+  href={href}
+  class="category-card"
+  style={`--category-color: ${color}`}
+  aria-label={`${name} — ${countLabel}`}
+>
+  <span class="category-emoji" aria-hidden="true">{emoji}</span>
+  <span class="category-name">{name}</span>
+  <span class="category-count">{countLabel}</span>
+</a>
+
+<style>
+  .category-card {
+    background: var(--category-color, var(--color-accent-mint));
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    transition: transform var(--transition-normal), filter var(--transition-normal);
+    box-shadow: var(--shadow-card);
+  }
+
+  .category-card:hover {
+    transform: scale(1.03);
+    filter: brightness(1.05);
+    text-decoration: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .category-card:hover {
+      transform: none;
+      filter: none;
+    }
+  }
+
+  .category-emoji {
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+
+  .category-name {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-extrabold);
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+  }
+
+  .category-count {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: rgba(45, 52, 54, 0.7);
+  }
+</style>
