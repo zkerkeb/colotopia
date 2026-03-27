@@ -103,8 +103,9 @@ const structuredData = pillar && pillar.faq.length > 0
   structuredData={structuredData}
   prevUrl={page.url.prev}
   nextUrl={page.url.next}
+  category={categoryKey}
 >
-  <div class="category-hero" style={`--category-color: ${catColor.bg}`}>
+  <div class="category-hero">
     <div class="category-hero-overlay">
       <span class="category-hero-emoji" aria-hidden="true">{catIcon}</span>
       <h1 class="category-hero-title">Coloriages {label}</h1>
@@ -168,7 +169,7 @@ const structuredData = pillar && pillar.faq.length > 0
     position: relative;
     height: 200px;
     overflow: hidden;
-    background: var(--category-color, var(--color-accent-mint));
+    background: var(--category-accent);
     margin-bottom: 0;
   }
 

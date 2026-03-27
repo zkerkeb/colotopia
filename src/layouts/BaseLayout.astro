@@ -19,6 +19,7 @@ interface Props {
   structuredData?: object;
   prevUrl?: string;
   nextUrl?: string;
+  category?: string;
 }
 
 const {
@@ -34,6 +35,7 @@ const {
   structuredData,
   prevUrl,
   nextUrl,
+  category,
 } = Astro.props;
 
 const siteUrl = Astro.site?.href.replace(/\/$/, '') ?? 'https://colotopia.com';
@@ -98,7 +100,7 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
       <Fragment set:html={`<meta name="google-adsense-account" content="${adsenseId}"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}" crossorigin="anonymous"><\/script>`} />
     )}
   </head>
-  <body>
+  <body data-category={category}>
     <a href="#main-content" class="skip-link">
       {locale === 'fr' ? 'Aller au contenu principal' : 'Skip to main content'}
     </a>
@@ -109,6 +111,11 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
     <Footer locale={locale} />
     <Toast />
     <style is:global>
+      /* ── Category accent: header bottom border on category pages ── */
+      [data-category] #site-header {
+        border-bottom: 3px solid var(--category-accent);
+      }
+
       /* ── Skip navigation link ── */
       .skip-link {
         position: absolute;

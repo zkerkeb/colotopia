@@ -48,6 +48,10 @@
   --color-cat-mandala: #6c5ce7;
   --color-cat-adultes: #636e72;
 
+  /* ── Dynamic category accent (overridden via [data-category] selectors below) ── */
+  --category-accent: var(--color-accent-mint);
+  --category-accent-light: var(--color-accent-mint-light);
+
   /* ── Colors: Neutrals ── */
   --color-bg: #fff9f0;
   --color-bg-card: #ffffff;
@@ -159,3 +163,38 @@
     --transition-interactive: none;
   }
 }
+
+/* =============================================================
+   Category accent overrides — pure CSS via [data-category] on <body>
+   No JS required. Fallback: --category-accent defaults in :root above.
+   ============================================================= */
+
+/* Kids categories */
+[data-category="animaux"]               { --category-accent: #f472b6; --category-accent-light: #fce7f3; }
+[data-category="animaux-marins"]        { --category-accent: #22d3ee; --category-accent-light: #cffafe; }
+[data-category="ferme"]                 { --category-accent: #fb923c; --category-accent-light: #fff7ed; }
+[data-category="vehicules"]             { --category-accent: #f87171; --category-accent-light: #fef2f2; }
+[data-category="nature"]                { --category-accent: #4ade80; --category-accent-light: #f0fdf4; }
+[data-category="alphabet"]              { --category-accent: #a78bfa; --category-accent-light: #f5f3ff; }
+[data-category="dinosaures"]            { --category-accent: #34d399; --category-accent-light: #ecfdf5; }
+[data-category="super-heros"]           { --category-accent: #f43f5e; --category-accent-light: #fff1f2; }
+[data-category="espace"]                { --category-accent: #818cf8; --category-accent-light: #eef2ff; }
+[data-category="princesses-chevaliers"] { --category-accent: #e879f9; --category-accent-light: #fdf4ff; }
+[data-category="metiers"]               { --category-accent: #fbbf24; --category-accent-light: #fffbeb; }
+[data-category="sport"]                 { --category-accent: #38bdf8; --category-accent-light: #f0f9ff; }
+[data-category="saisons"]               { --category-accent: #fb923c; --category-accent-light: #fff7ed; }
+[data-category="fetes"]                 { --category-accent: #f43f5e; --category-accent-light: #fff1f2; }
+[data-category="personnages"]           { --category-accent: #a78bfa; --category-accent-light: #f5f3ff; }
+[data-category="contes"]                { --category-accent: #e879f9; --category-accent-light: #fdf4ff; }
+[data-category="drole"]                 { --category-accent: #fbbf24; --category-accent-light: #fffbeb; }
+[data-category="musique"]               { --category-accent: #f472b6; --category-accent-light: #fce7f3; }
+[data-category="nourriture"]            { --category-accent: #fb923c; --category-accent-light: #fff7ed; }
+[data-category="pirates"]               { --category-accent: #64748b; --category-accent-light: #f8fafc; }
+[data-category="robots"]                { --category-accent: #38bdf8; --category-accent-light: #f0f9ff; }
+
+/* Adult categories */
+[data-category="mandalas"]              { --category-accent: #a855f7; --category-accent-light: #faf5ff; }
+[data-category="mosaiques"]             { --category-accent: #6366f1; --category-accent-light: #eef2ff; }
+[data-category="abstrait"]              { --category-accent: #ec4899; --category-accent-light: #fdf2f8; }
+[data-category="cartes"]                { --category-accent: #14b8a6; --category-accent-light: #f0fdfa; }
+[data-category="paysages"]              { --category-accent: #22c55e; --category-accent-light: #f0fdf4; }
