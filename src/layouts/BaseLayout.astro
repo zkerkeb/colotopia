@@ -62,7 +62,9 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;500;600;700;800&display=swap" /></noscript>
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -112,9 +114,41 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 
       body {
         font-family: var(--font-body);
+        font-size: var(--font-size-base);
+        font-weight: var(--font-weight-regular);
         line-height: var(--line-height-normal);
         color: var(--color-text);
         background: var(--color-bg);
+      }
+
+      h1, h2, h3 {
+        font-family: var(--font-body);
+        font-weight: var(--font-weight-extrabold);
+        line-height: var(--line-height-tight);
+      }
+
+      h1 { font-size: var(--font-size-4xl); }
+      h2 { font-size: var(--font-size-3xl); }
+      h3 { font-size: var(--font-size-2xl); }
+
+      h4, h5, h6 {
+        font-family: var(--font-body);
+        font-weight: var(--font-weight-bold);
+        line-height: var(--line-height-snug);
+      }
+
+      h4 { font-size: var(--font-size-xl); }
+      h5 { font-size: var(--font-size-lg); }
+      h6 { font-size: var(--font-size-base); }
+
+      button, [role="button"] {
+        font-family: var(--font-body);
+        font-weight: var(--font-weight-semibold);
+      }
+
+      small, caption, .label {
+        font-size: var(--font-size-sm);
+        font-weight: var(--font-weight-medium);
       }
 
       main {
