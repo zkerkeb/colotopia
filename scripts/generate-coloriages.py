@@ -24,6 +24,7 @@ import argparse
 import base64
 import json
 import os
+import subprocess
 import sys
 import time
 from datetime import datetime, timezone
@@ -537,6 +538,17 @@ def run(args):
 
     print(f"\n=== Done: {success}/{total} ===")
     print(f"Log: {log_file}")
+
+    # Auto-generate WebP thumbnails for any new images
+    if success > 0 and not args.dry_run:
+        print("\n=== Running image optimization (WebP + thumbnails) ===")
+        optimize_script = astro_root / "scripts" / "optimize-images.mjs"
+        result = subprocess.run(
+            ["node", str(optimize_script)],
+            cwd=str(astro_root),
+        )
+        if result.returncode != 0:
+            print("[warn] Image optimization failed — run 'npm run optimize-images' manually.", file=sys.stderr)
 
 
 def run_audit(args):
