@@ -1,0 +1,53 @@
+---
+interface Props {
+  count?: number;
+}
+
+const { count = 1 } = Astro.props;
+const items = Array.from({ length: count });
+---
+
+{items.map(() => (
+  <div class="skeleton-card" aria-hidden="true">
+    <div class="skeleton-image"></div>
+    <div class="skeleton-text"></div>
+  </div>
+))}
+
+<style>
+  .skeleton-card {
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+  }
+
+  .skeleton-image {
+    aspect-ratio: 3 / 4;
+    background: linear-gradient(90deg, #f0ebff 25%, #e8e0ff 50%, #f0ebff 75%);
+    background-size: 200% 100%;
+    animation: skeleton-pulse 1.5s ease-in-out infinite;
+  }
+
+  .skeleton-text {
+    height: 16px;
+    margin: 12px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #f0ebff 25%, #e8e0ff 50%, #f0ebff 75%);
+    background-size: 200% 100%;
+    animation: skeleton-pulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes skeleton-pulse {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .skeleton-image,
+    .skeleton-text {
+      animation: none;
+      background: #f0ebff;
+    }
+  }
+</style>
