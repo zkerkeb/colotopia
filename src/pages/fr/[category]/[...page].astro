@@ -104,16 +104,15 @@ const structuredData = pillar && pillar.faq.length > 0
   prevUrl={page.url.prev}
   nextUrl={page.url.next}
 >
-  <Breadcrumb locale={locale} currentPage={`Coloriages ${label}`} />
-  <div class:list={['category-hero', { 'category-hero--adult': isAdult }]} style={`background: ${catColor.gradient};`}>
-    <span class="category-hero-icon">{catIcon}</span>
-    <h1>Coloriages {label}</h1>
-    <p class="category-description" style={isAdult ? undefined : `color: ${catColor.text};`}>
-      {pillar
-        ? ti(isAdult ? 'category.description.adults' : 'category.description', locale, { label: label.toLowerCase() })
-        : pageDescription}
-    </p>
+  <div class="category-hero" style={`--category-color: ${catColor.bg}`}>
+    <div class="category-hero-overlay">
+      <span class="category-hero-emoji" aria-hidden="true">{catIcon}</span>
+      <h1 class="category-hero-title">Coloriages {label}</h1>
+      <p class="category-hero-count">{page.total} coloriages</p>
+    </div>
   </div>
+  <div class="category-content">
+    <Breadcrumb locale={locale} currentPage={`Coloriages ${label}`} />
 
   {pillar && (
     <PillarSection locale={locale} pillar={pillar} categoryLabel={label} />
@@ -160,74 +159,100 @@ const structuredData = pillar && pillar.faq.length > 0
   {page.currentPage === 1 && hasSeoText && !pillar && (
     <div class="seo-content" set:html={seoText} />
   )}
+  </div>
 </BaseLayout>
 
 <style>
+  /* Category hero banner */
   .category-hero {
-    margin-bottom: 2rem;
-    padding: 2rem 1.5rem;
-    border-radius: 16px;
-    text-align: center;
     position: relative;
+    height: 200px;
     overflow: hidden;
+    background: var(--category-color, var(--color-accent-mint));
+    margin-bottom: 0;
   }
 
-  .category-hero-icon {
-    display: block;
+  @media (min-width: 768px) {
+    .category-hero { height: 280px; }
+  }
+
+  .category-hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-6);
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .category-hero-emoji {
     font-size: 3rem;
-    margin-bottom: 0.5rem;
     line-height: 1;
+    margin-bottom: var(--space-2);
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
   }
 
-  .category-hero h1 {
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 0.5rem;
-    color: #1a1a1a;
-  }
-
-  .category-hero--adult h1 {
+  .category-hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
     color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin: 0 0 var(--space-2);
+    line-height: 1.1;
   }
 
-  .category-description {
-    margin: 0;
-    font-size: 0.95rem;
-    opacity: 0.85;
+  .category-hero-count {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: var(--font-weight-semibold);
   }
 
-  .category-hero--adult .category-description {
-    color: #c7d2fe;
+  /* Page content */
+  .category-content {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+    padding: var(--space-6) var(--space-4);
   }
 
   .coloring-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+
+  @media (min-width: 640px) {
+    .coloring-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    .coloring-grid { grid-template-columns: repeat(4, 1fr); }
   }
 
   .empty-state {
     text-align: center;
-    color: #9ca3af;
-    font-size: 1.1rem;
-    padding: 4rem 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-lg);
+    padding: var(--space-16) 0;
   }
 
   .seo-content {
-    margin-top: 2.5rem;
-    padding: 1.5rem;
-    background: #f9fafb;
-    border-radius: 12px;
-    color: #6b7280;
-    font-size: 0.95rem;
-    line-height: 1.75;
+    margin-top: var(--space-10);
+    padding: var(--space-6);
+    background: var(--color-bg-subtle);
+    border-radius: var(--radius-md);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
   }
 
   .seo-content :global(h2) {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #374151;
-    margin: 1.5rem 0 0.75rem;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+    margin: var(--space-6) 0 var(--space-3);
   }
 
   .seo-content :global(h2:first-child) {
@@ -235,9 +260,9 @@ const structuredData = pillar && pillar.faq.length > 0
   }
 
   .seo-content :global(a) {
-    color: #6366f1;
+    color: var(--color-primary);
     text-decoration: underline;
-    text-decoration-color: #c7d2fe;
+    text-decoration-color: var(--color-primary-light);
     text-underline-offset: 2px;
   }
 
