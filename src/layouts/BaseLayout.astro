@@ -247,6 +247,63 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
         }
       }
 
+      /* ── Tag / Chip utilities ── */
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 14px;
+        border-radius: var(--radius-pill);
+        font-family: var(--font-body);
+        font-weight: var(--font-weight-semibold);
+        font-size: var(--font-size-xs);
+        text-decoration: none;
+        transition: opacity var(--transition-fast);
+        cursor: pointer;
+        line-height: 1.5;
+      }
+
+      .tag:hover { opacity: 0.8; }
+
+      .tag:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 2px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .tag { transition: none; }
+      }
+
+      .tag--primary { background: var(--color-primary-light); color: var(--color-primary); }
+      .tag--mint { background: rgba(85, 239, 196, 0.2); color: #00b894; }
+      .tag--coral { background: rgba(255, 107, 107, 0.15); color: #d63031; }
+      .tag--yellow { background: rgba(255, 234, 167, 0.5); color: #b8860b; }
+      .tag--blue { background: rgba(116, 185, 255, 0.2); color: #0984e3; }
+
+      /* ── Badge Nouveau ── */
+      .badge-new {
+        display: inline-block;
+        background: var(--color-secondary);
+        color: #ffffff;
+        font-family: var(--font-body);
+        font-size: 10px;
+        font-weight: var(--font-weight-extrabold);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 3px 8px;
+        border-radius: 8px;
+        line-height: 1.4;
+      }
+
+      .card-badge-wrapper {
+        position: relative;
+      }
+
+      .card-badge-wrapper .badge-new {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+      }
+
       main {
         max-width: var(--max-width-content);
         margin: 0 auto;
