@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" role="img" aria-label="Colotopia">
+  <title>Colotopia</title>
+
+  <!-- Pencil icon (24px wide, 43px tall, x=2..26) -->
+  <!-- Eraser cap -->
+  <rect x="2" y="1" width="24" height="7" rx="3.5" fill="#ff6b6b"/>
+  <!-- Ferrule band -->
+  <rect x="2" y="8" width="24" height="2.5" fill="#c0b8b0"/>
+  <!-- Body -->
+  <rect x="2" y="10.5" width="24" height="22" fill="#6c5ce7"/>
+  <!-- Wood section -->
+  <rect x="2" y="32.5" width="24" height="5" fill="#ffeaa7"/>
+  <!-- Point -->
+  <polygon points="2,37.5 26,37.5 14,44" fill="#2d3436"/>
+  <!-- Lead tip -->
+  <line x1="14" y1="37.5" x2="14" y2="44" stroke="#636e72" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- "Colotopia" wordmark -->
+  <text
+    x="36"
+    y="34"
+    font-family="'Arial Rounded MT Bold', 'Nunito', 'Trebuchet MS', sans-serif"
+    font-weight="800"
+    font-size="29"
+    fill="#2d3436"
+  >Colotopia</text>
+</svg>

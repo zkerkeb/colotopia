@@ -1,3 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-  <text x="0" y="28" font-size="28">🎨</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" role="img" aria-label="Colotopia">
+  <title>Colotopia</title>
+
+  <!-- Rounded square background -->
+  <rect width="36" height="36" rx="7" fill="#6c5ce7"/>
+
+  <!-- Pencil icon (10px wide, centered at x=13..23) -->
+  <!-- Eraser cap (coral) -->
+  <rect x="13" y="3" width="10" height="5" rx="2.5" fill="#ff6b6b"/>
+  <!-- Ferrule band -->
+  <rect x="13" y="8" width="10" height="2" fill="rgba(255,255,255,0.45)"/>
+  <!-- Body -->
+  <rect x="13" y="10" width="10" height="16" fill="#ffffff"/>
+  <!-- Wood section -->
+  <rect x="13" y="26" width="10" height="4" fill="#ffeaa7"/>
+  <!-- Point -->
+  <polygon points="13,30 23,30 18,35" fill="#eeeeee"/>
+  <!-- Lead tip dot -->
+  <line x1="18" y1="30" x2="18" y2="35" stroke="rgba(255,255,255,0.6)" stroke-width="1" stroke-linecap="round"/>
 </svg>
