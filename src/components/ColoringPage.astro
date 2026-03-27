@@ -57,6 +57,8 @@ const imageAbsUrl = `${siteUrl}${image}`;
 const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(`${shareText} ${pageUrl}`)}`;
 const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
 const pinterestUrl = `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(pageUrl)}&media=${encodeURIComponent(imageAbsUrl)}&description=${encodeURIComponent(shareText)}`;
+
+const shareLabel = t('share.label', locale);
 ---
 
 <article class="coloring-page">
@@ -65,36 +67,46 @@ const pinterestUrl = `https://pinterest.com/pin/create/button/?url=${encodeURICo
 
   <Breadcrumb locale={locale} category={category} currentPage={title} />
 
-  <h1>{title}</h1>
+  <h1 class="page-title">{title}</h1>
 
   <div class="page-layout">
     <!-- Main content -->
     <div class="main-content">
-      <div class="coloring-image-frame" style={`background: ${catColor.light}; border-color: ${catColor.bg};`}>
-        <div class="frame-corner frame-tl" style={`color: ${catColor.bg};`}>{catIcon}</div>
-        <div class="frame-corner frame-tr" style={`color: ${catColor.bg};`}>{catIcon}</div>
+      <!-- A4 paper frame -->
+      <div class="coloring-image-frame" style={`--category-color: ${catColor.bg}`}>
         <div class="coloring-image">
           <picture>
             <source type="image/webp" srcset={imageWebp} />
-            <img src={image} alt={alt} width="800" height="1100" loading="eager" decoding="async" fetchpriority="high"
+            <img
+              src={image}
+              alt={alt}
+              width="800"
+              height="1100"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
               data-pin-url={pageUrl}
               data-pin-description={shareText}
               data-pin-media={imageAbsUrl}
             />
           </picture>
         </div>
-        <div class="frame-corner frame-bl" style={`color: ${catColor.bg};`}>{catIcon}</div>
-        <div class="frame-corner frame-br" style={`color: ${catColor.bg};`}>{catIcon}</div>
       </div>
 
+      <!-- Action buttons -->
       <div class="coloring-actions">
         <PdfDownloadButton image={image} title={title} locale={locale} />
-        <button class="btn btn-secondary" id="print-btn" onclick="if(typeof gtag==='function'){gtag('event','print_page',{page_title:document.title});}window.print();">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        <button
+          class="btn-print btn-lg"
+          id="print-btn"
+          onclick="if(typeof gtag==='function'){gtag('event','print_page',{page_title:document.title});}window.print();"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
           {printLabel}
         </button>
       </div>
 
+      <!-- Tags -->
       {tags.length > 0 && (
         <div class="coloring-tags">
           {tags.map((tag) => (
@@ -105,18 +117,21 @@ const pinterestUrl = `https://pinterest.com/pin/create/button/?url=${encodeURICo
 
       <!-- Social sharing -->
       <div class="share-section">
-        <span class="share-label">{t('share.label', locale)} :</span>
+        <span class="share-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          {shareLabel}
+        </span>
         <div class="share-buttons">
           <a href={pinterestUrl} class="share-btn share-pinterest" target="_blank" rel="noopener noreferrer" aria-label={t('share.pinterest', locale)}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
             Pinterest
           </a>
           <a href={whatsappUrl} class="share-btn share-whatsapp" target="_blank" rel="noopener noreferrer" aria-label={t('share.whatsapp', locale)}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             WhatsApp
           </a>
           <a href={facebookUrl} class="share-btn share-facebook" target="_blank" rel="noopener noreferrer" aria-label={t('share.facebook', locale)}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             Facebook
           </a>
         </div>
@@ -140,19 +155,21 @@ const pinterestUrl = `https://pinterest.com/pin/create/button/?url=${encodeURICo
   .coloring-page {
     max-width: 1100px;
     margin: 0 auto;
+    padding: 0 var(--content-padding);
   }
 
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #1a1a1a;
-    line-height: 1.2;
+  .page-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    color: var(--color-text);
+    line-height: var(--line-height-tight);
+    margin: var(--space-4) 0 var(--space-6);
   }
 
   .page-layout {
     display: grid;
     grid-template-columns: 1fr 260px;
-    gap: 2rem;
+    gap: var(--space-8);
     align-items: start;
   }
 
@@ -162,156 +179,162 @@ const pinterestUrl = `https://pinterest.com/pin/create/button/?url=${encodeURICo
     }
   }
 
+  /* ── A4 Paper frame ── */
   .coloring-image-frame {
-    position: relative;
-    border: 3px solid;
-    border-radius: 16px;
-    padding: 0.75rem;
-    margin-bottom: 1.5rem;
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    border-top: 4px solid var(--category-color, var(--color-primary));
+    box-shadow:
+      0 2px 6px rgba(0, 0, 0, 0.06),
+      0 8px 24px rgba(0, 0, 0, 0.09),
+      0 24px 56px rgba(0, 0, 0, 0.05);
+    margin-bottom: var(--space-6);
+    overflow: hidden;
   }
-
-  .frame-corner {
-    position: absolute;
-    font-size: 1.25rem;
-    opacity: 0.4;
-    line-height: 1;
-    pointer-events: none;
-  }
-
-  .frame-tl { top: 0.4rem; left: 0.5rem; }
-  .frame-tr { top: 0.4rem; right: 0.5rem; transform: scaleX(-1); }
-  .frame-bl { bottom: 0.4rem; left: 0.5rem; }
-  .frame-br { bottom: 0.4rem; right: 0.5rem; transform: scaleX(-1); }
 
   .coloring-image {
-    background: white;
-    border-radius: 10px;
-    padding: 1rem;
-    text-align: center;
+    padding: var(--space-6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
   }
 
   .coloring-image img {
+    width: 100%;
+    height: auto;
     max-height: 80vh;
-    width: auto;
-    max-width: 100%;
+    object-fit: contain;
+    display: block;
   }
 
+  /* ── Action buttons ── */
   .coloring-actions {
     display: flex;
-    gap: 1rem;
+    gap: var(--space-3);
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--space-6);
     flex-wrap: wrap;
   }
 
-  .btn {
+  .btn-lg {
+    padding: 0.875rem 2rem;
+    font-size: var(--font-size-lg);
+    border-radius: var(--radius-md);
+    gap: var(--space-2);
+  }
+
+  .btn-print {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--space-2);
     padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
     cursor: pointer;
-    border: none;
-    transition: background 0.2s;
+    border: 2px solid var(--color-border);
+    background: var(--color-bg-card);
+    color: var(--color-text-secondary);
+    transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
+    font-family: inherit;
   }
 
-  .btn-secondary {
-    background: #f3f4f6;
-    color: #374151;
+  .btn-print:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background: var(--color-primary-light);
   }
 
-  .btn-secondary:hover {
-    background: #e5e7eb;
-  }
-
+  /* ── Tags ── */
   .coloring-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
   }
 
   .tag {
-    background: #fce7f3;
-    color: #be185d;
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    font-size: 0.8rem;
+    display: inline-block;
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-pill);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
     text-decoration: none;
-    transition: background 0.15s, color 0.15s;
+    transition: background var(--transition-fast), color var(--transition-fast);
   }
 
   .tag:hover {
-    background: #fbcfe8;
-    color: #9d174d;
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
     text-decoration: none;
   }
 
+  /* ── Share section ── */
   .share-section {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
+    gap: var(--space-3);
+    margin-bottom: var(--space-6);
+    padding: var(--space-4);
+    background: var(--color-bg-subtle);
+    border-radius: var(--radius-md);
   }
 
   .share-label {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #6b7280;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-secondary);
+    white-space: nowrap;
   }
 
   .share-buttons {
     display: flex;
-    gap: 0.5rem;
+    gap: var(--space-2);
     flex-wrap: wrap;
   }
 
   .share-btn {
     display: inline-flex;
     align-items: center;
-    gap: 0.375rem;
+    gap: var(--space-2);
     padding: 0.375rem 0.875rem;
-    border-radius: 8px;
-    font-size: 0.8rem;
-    font-weight: 600;
+    border-radius: var(--radius-pill);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
     text-decoration: none;
-    transition: opacity 0.15s;
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
   }
 
   .share-btn:hover {
-    opacity: 0.85;
+    opacity: 0.88;
+    transform: translateY(-1px);
     text-decoration: none;
   }
 
-  .share-whatsapp {
-    background: #25d366;
-    color: white;
-  }
+  .share-whatsapp { background: #25d366; color: #ffffff; }
+  .share-facebook { background: #1877f2; color: #ffffff; }
+  .share-pinterest { background: #e60023; color: #ffffff; }
 
-  .share-facebook {
-    background: #1877f2;
-    color: white;
-  }
-
-  .share-pinterest {
-    background: #e60023;
-    color: white;
-  }
-
+  /* ── Sidebar ── */
   .sidebar {
     position: sticky;
-    top: 80px;
+    top: calc(var(--header-height) + var(--space-4));
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: var(--space-6);
   }
 
   @media print {
     .coloring-actions,
     .coloring-tags,
+    .share-section,
     .sidebar {
       display: none;
     }
@@ -322,17 +345,16 @@ const pinterestUrl = `https://pinterest.com/pin/create/button/?url=${encodeURICo
 
     .coloring-image-frame {
       border: none;
-      padding: 0;
-      background: none !important;
-    }
-
-    .frame-corner {
-      display: none;
+      box-shadow: none;
+      border-top: none;
     }
 
     .coloring-image {
-      border: none;
       padding: 0;
+    }
+
+    .coloring-image img {
+      max-height: none;
     }
   }
 </style>

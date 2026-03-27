@@ -18,7 +18,7 @@ const watermarkText = locale === 'fr'
 
 <button
   id="pdf-download-btn"
-  class="btn btn-primary pdf-download"
+  class="btn-primary btn-lg pdf-download"
   data-image={image}
   data-title={title}
   data-watermark={watermarkText}
@@ -123,26 +123,38 @@ const watermarkText = locale === 'fr'
   .btn-primary {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--space-2);
     padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
     cursor: pointer;
     border: none;
     text-decoration: none;
-    transition: background 0.2s, opacity 0.2s;
-    background: #e8437f;
-    color: white;
+    transition: background var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+    background: var(--color-primary);
+    color: #ffffff;
+    font-family: inherit;
+    box-shadow: var(--shadow-btn);
   }
 
   .btn-primary:hover:not(:disabled) {
-    background: #d63370;
+    background: var(--color-primary-hover);
+    box-shadow: var(--shadow-primary);
+    transform: translateY(-1px);
   }
 
   .btn-primary:disabled {
     opacity: 0.6;
     cursor: not-allowed;
+    transform: none;
+  }
+
+  .btn-lg {
+    padding: 0.875rem 2rem;
+    font-size: var(--font-size-lg);
+    border-radius: var(--radius-md);
+    gap: var(--space-2);
   }
 
   @media print {
