@@ -3,6 +3,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import type { Locale } from '../lib/i18n';
 import { t } from '../lib/i18n';
+import '../styles/tokens.css';
 
 interface Props {
   title?: string;
@@ -110,20 +111,20 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
       }
 
       body {
-        font-family: 'Nunito', system-ui, -apple-system, sans-serif;
-        line-height: 1.6;
-        color: #1a1a1a;
-        background: #fffdf9;
+        font-family: var(--font-body);
+        line-height: var(--line-height-normal);
+        color: var(--color-text);
+        background: var(--color-bg);
       }
 
       main {
-        max-width: 1200px;
+        max-width: var(--max-width-content);
         margin: 0 auto;
-        padding: 2rem 1rem;
+        padding: var(--space-8) var(--space-4);
       }
 
       a {
-        color: #e8437f;
+        color: var(--color-primary);
         text-decoration: none;
       }
 
