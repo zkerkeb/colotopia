@@ -31,8 +31,8 @@ const viewAllLabel = locale === 'fr' ? 'Voir tout' : 'View all';
       <span aria-hidden="true">✨</span> {title}
     </h2>
     <div class="carousel-controls">
-      <button class="carousel-btn" id="carousel-prev" aria-label="Précédent">&#8592;</button>
-      <button class="carousel-btn" id="carousel-next" aria-label="Suivant">&#8594;</button>
+      <button class="carousel-btn" id="carousel-prev" aria-label={locale === 'fr' ? 'Coloriage précédent' : 'Previous coloring page'}>&#8592;</button>
+      <button class="carousel-btn" id="carousel-next" aria-label={locale === 'fr' ? 'Coloriage suivant' : 'Next coloring page'}>&#8594;</button>
     </div>
   </div>
 

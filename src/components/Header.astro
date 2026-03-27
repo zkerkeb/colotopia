@@ -139,6 +139,7 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
         <a
           href={Astro.url.href.replace(`/${locale}/`, `/${altLocale}/`)}
           class="drawer-lang-switch"
+          aria-label={locale === 'fr' ? `Passer en anglais (${altLabel})` : `Switch to French (${altLabel})`}
         >
           🌐 {altLabel}
         </a>

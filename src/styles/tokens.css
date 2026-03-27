@@ -16,6 +16,9 @@
   --color-secondary-hover: #ff5252;
   --color-secondary-active: #e64444;
   --color-secondary-light: rgba(255, 107, 107, 0.12);
+  /* Accessible variant for white text on secondary (coral fails WCAG AA) */
+  --color-secondary-dark: #c0392b;
+  --color-secondary-dark-hover: #a93226;
 
   --color-tertiary: #ffeaa7;
   --color-tertiary-hover: #ffe07a;

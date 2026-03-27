@@ -99,13 +99,46 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
     )}
   </head>
   <body>
+    <a href="#main-content" class="skip-link">
+      {locale === 'fr' ? 'Aller au contenu principal' : 'Skip to main content'}
+    </a>
     <Header locale={locale} />
-    <main>
+    <main id="main-content">
       <slot />
     </main>
     <Footer locale={locale} />
     <Toast />
     <style is:global>
+      /* ── Skip navigation link ── */
+      .skip-link {
+        position: absolute;
+        top: -100%;
+        left: var(--space-4);
+        background: var(--color-primary);
+        color: #ffffff;
+        padding: var(--space-2) var(--space-4);
+        border-radius: var(--radius-sm);
+        font-weight: var(--font-weight-semibold);
+        font-size: var(--font-size-sm);
+        z-index: 9999;
+        text-decoration: none;
+        transition: top var(--transition-fast);
+      }
+      .skip-link:focus {
+        top: var(--space-4);
+        text-decoration: none;
+      }
+
+      /* ── Focus visible ── */
+      :focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+        border-radius: 4px;
+      }
+      :focus:not(:focus-visible) {
+        outline: none;
+      }
+
       *,
       *::before,
       *::after {
@@ -200,15 +233,15 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
       }
 
       .btn-danger {
-        background: var(--color-secondary);
+        background: var(--color-secondary-dark);
         color: #ffffff;
-        border-color: var(--color-secondary);
+        border-color: var(--color-secondary-dark);
         box-shadow: var(--shadow-secondary);
       }
 
       .btn-danger:hover {
-        background: var(--color-secondary-hover);
-        border-color: var(--color-secondary-hover);
+        background: var(--color-secondary-dark-hover);
+        border-color: var(--color-secondary-dark-hover);
         transform: scale(1.02);
         text-decoration: none;
       }
@@ -223,11 +256,13 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
       .btn-secondary:focus-visible,
       .btn-danger:focus-visible {
         outline: 2px solid var(--color-primary);
-        outline-offset: 2px;
+        outline-offset: 3px;
+        box-shadow: 0 0 0 3px var(--color-primary-focus);
       }
 
       .btn-danger:focus-visible {
-        outline-color: var(--color-secondary);
+        outline-color: var(--color-secondary-dark);
+        box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.3);
       }
 
       .btn-primary:disabled,
@@ -284,7 +319,7 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
       /* ── Badge Nouveau ── */
       .badge-new {
         display: inline-block;
-        background: var(--color-secondary);
+        background: var(--color-secondary-dark);
         color: #ffffff;
         font-family: var(--font-body);
         font-size: 10px;
