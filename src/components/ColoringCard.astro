@@ -26,71 +26,120 @@ const thumbWebp = image.replace('/images/coloriages/', '/images/coloriages/thumb
 
 <a href={href} class="coloring-card" data-audience={audience}>
   {isNew && <span class="badge-new">{newLabel}</span>}
-  <div class="card-image">
+  <div class="card-image-wrapper">
     <picture>
       <source type="image/webp" srcset={thumbWebp} />
       <img src={image} alt={alt} width="300" height="400" loading="lazy" decoding="async" />
     </picture>
+    <div class="card-overlay" aria-hidden="true">
+      <div class="card-overlay-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+      </div>
+    </div>
   </div>
-  <h3 class="card-title">{icon && <span class="card-cat-icon">{icon}</span>}{title}</h3>
+  <div class="card-body">
+    <p class="card-title">{icon && <span class="card-cat-icon">{icon}</span>}{title}</p>
+  </div>
 </a>
 
 <style>
   .coloring-card {
     display: block;
     position: relative;
-    background: white;
-    border: 2px solid #f3f4f6;
-    border-radius: 16px;
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
     overflow: hidden;
     text-decoration: none;
-    transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
   }
 
   .coloring-card:hover {
-    box-shadow: 0 6px 20px rgba(232, 67, 127, 0.15);
-    transform: translateY(-3px);
-    border-color: #f9a8d4;
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
     text-decoration: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .coloring-card:hover {
+      transform: none;
+    }
   }
 
   .badge-new {
     position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    background: linear-gradient(135deg, #f472b6, #e8437f);
-    color: white;
-    font-size: 0.65rem;
-    font-weight: 800;
+    top: 8px;
+    right: 8px;
+    background: var(--color-secondary);
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 0.2rem 0.5rem;
-    border-radius: 9999px;
-    z-index: 1;
-    box-shadow: 0 2px 6px rgba(232, 67, 127, 0.3);
+    letter-spacing: 0.5px;
+    padding: 3px 8px;
+    border-radius: 8px;
+    z-index: 2;
   }
 
-  .card-image {
+  .card-image-wrapper {
     aspect-ratio: 3 / 4;
+    background: #f8f8f8;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    position: relative;
     overflow: hidden;
-    background: #f9fafb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
-  .card-image img {
+  .card-image-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+  }
+
+  .card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(108, 92, 231, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+  }
+
+  .coloring-card:hover .card-overlay {
+    opacity: 1;
+  }
+
+  .card-overlay-icon {
+    width: 48px;
+    height: 48px;
+    background: #ffffff;
+    border-radius: var(--radius-pill);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    color: var(--color-primary);
+  }
+
+  .card-body {
+    padding: var(--space-3) var(--space-4);
   }
 
   .card-title {
-    padding: 0.75rem;
-    font-size: 0.875rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    text-align: center;
+    font-family: var(--font-body);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .card-cat-icon {
