@@ -18,6 +18,7 @@ const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring 
   class="category-card"
   style={`--category-color: ${color}`}
   aria-label={`${name} — ${countLabel}`}
+  data-fade-in
 >
   <span class="category-emoji" aria-hidden="true">{emoji}</span>
   <span class="category-name">{name}</span>

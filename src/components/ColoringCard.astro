@@ -24,7 +24,7 @@ const newLabel = locale === 'fr' ? 'Nouveau' : 'New';
 const thumbWebp = image.replace('/images/coloriages/', '/images/coloriages/thumbs/').replace(/\.png$/, '.webp');
 ---
 
-<a href={href} class="coloring-card" data-audience={audience}>
+<a href={href} class="coloring-card" data-audience={audience} data-fade-in>
   {isNew && <span class="badge-new">{newLabel}</span>}
   <div class="card-image-wrapper">
     <picture>

@@ -99,6 +99,18 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
     {adsenseId && (
       <Fragment set:html={`<meta name="google-adsense-account" content="${adsenseId}"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}" crossorigin="anonymous"><\/script>`} />
     )}
+    <style>
+      /* View Transitions API — cross-document fade (Chrome 126+, Safari 18+) */
+      @view-transition { navigation: auto; }
+      ::view-transition-old(root) { animation: vt-fade-out 0.2s ease; }
+      ::view-transition-new(root) { animation: vt-fade-in 0.2s ease; }
+      @keyframes vt-fade-out { to { opacity: 0; } }
+      @keyframes vt-fade-in { from { opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) {
+        ::view-transition-old(root),
+        ::view-transition-new(root) { animation: none; }
+      }
+    </style>
   </head>
   <body data-category={category}>
     <a href="#main-content" class="skip-link">
@@ -367,6 +379,33 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
         max-width: 100%;
         height: auto;
       }
+
+      /* ── Scroll fade-in animation ── */
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      }
+      .fade-in-up.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .fade-in-up { opacity: 1; transform: none; transition: none; }
+      }
     </style>
+    <script is:inline>
+      /* Scroll fade-in — IntersectionObserver progressive enhancement */
+      if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        var _els = document.querySelectorAll('[data-fade-in]');
+        _els.forEach(function(el) { el.classList.add('fade-in-up'); });
+        var _io = new IntersectionObserver(function(entries) {
+          entries.forEach(function(e) {
+            if (e.isIntersecting) { e.target.classList.add('is-visible'); _io.unobserve(e.target); }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        _els.forEach(function(el) { _io.observe(el); });
+      }
+    </script>
   </body>
 </html>
