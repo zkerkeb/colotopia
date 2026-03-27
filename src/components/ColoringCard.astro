@@ -12,9 +12,10 @@ interface Props {
   audience?: string;
   category?: Category;
   isNew?: boolean;
+  isLCP?: boolean;
 }
 
-const { title, slug, image, alt, locale, audience, category, isNew } = Astro.props;
+const { title, slug, image, alt, locale, audience, category, isNew, isLCP = false } = Astro.props;
 const href = getLocalePath(locale, `/${getColoringBasePath(locale)}/${slug}`);
 const icon = category ? categoryIcons[category] : undefined;
 const newLabel = locale === 'fr' ? 'Nouveau' : 'New';
@@ -28,8 +29,20 @@ const thumbWebp = image.replace('/images/coloriages/', '/images/coloriages/thumb
   {isNew && <span class="badge-new">{newLabel}</span>}
   <div class="card-image-wrapper">
     <picture>
-      <source type="image/webp" srcset={thumbWebp} />
-      <img src={image} alt={alt} width="300" height="400" loading="lazy" decoding="async" />
+      <source
+        type="image/webp"
+        srcset={thumbWebp}
+        sizes="(max-width: 639px) 50vw, (max-width: 1023px) 33vw, 25vw"
+      />
+      <img
+        src={image}
+        alt={alt}
+        width="300"
+        height="400"
+        loading={isLCP ? 'eager' : 'lazy'}
+        decoding="async"
+        fetchpriority={isLCP ? 'high' : undefined}
+      />
     </picture>
     <div class="card-overlay" aria-hidden="true">
       <div class="card-overlay-icon">

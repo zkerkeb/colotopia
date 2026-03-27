@@ -80,7 +80,7 @@ const structuredData = {
   </div>
 
   <section class="coloring-grid" id="main-grid">
-    {page.data.map((c: any) => (
+    {page.data.map((c: any, i: number) => (
       <ColoringCard
         title={c.data.title}
         slug={c.data.slug}
@@ -90,6 +90,7 @@ const structuredData = {
         audience={c.data.audience}
         category={c.data.category}
         isNew={nouveauxSlugs.has(c.data.slug)}
+        isLCP={i === 0}
       />
     ))}
   </section>

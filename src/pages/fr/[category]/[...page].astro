@@ -122,7 +122,7 @@ const structuredData = pillar && pillar.faq.length > 0
   <AdSlot adSlot="" format="horizontal" />
 
   <section class="coloring-grid">
-    {page.data.map((c: any) => (
+    {page.data.map((c: any, i: number) => (
       <ColoringCard
         title={c.data.title}
         slug={c.data.slug}
@@ -131,6 +131,7 @@ const structuredData = pillar && pillar.faq.length > 0
         locale={locale}
         audience={c.data.audience}
         category={c.data.category}
+        isLCP={i === 0}
       />
     ))}
   </section>
