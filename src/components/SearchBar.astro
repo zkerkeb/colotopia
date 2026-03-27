@@ -3,71 +3,131 @@ import type { Locale } from '../lib/i18n';
 
 interface Props {
   locale: Locale;
+  showSubmit?: boolean;
 }
 
-const { locale } = Astro.props;
-const placeholder = locale === 'fr' ? 'Rechercher un coloriage...' : 'Search coloring pages...';
+const { locale, showSubmit = false } = Astro.props;
+
+const action = `/${locale}`;
+const submitLabel = locale === 'fr' ? 'Chercher' : 'Search';
+const ariaLabel = locale === 'fr' ? 'Rechercher un coloriage' : 'Search for a coloring page';
 const noResults = locale === 'fr' ? 'Aucun résultat' : 'No results';
 const indexUrl = `/${locale}/search-index.json`;
+
+const placeholdersFr = [
+  'Cherche un dinosaure…',
+  'Cherche une princesse…',
+  'Cherche un robot…',
+  'Cherche un mandala…',
+  'Cherche un animal…',
+];
+const placeholdersEn = [
+  'Search for a dinosaur…',
+  'Search for a princess…',
+  'Search for a robot…',
+  'Search for a mandala…',
+  'Search for an animal…',
+];
+const defaultPlaceholder = locale === 'fr' ? placeholdersFr[0] : placeholdersEn[0];
+const placeholders = JSON.stringify(locale === 'fr' ? placeholdersFr : placeholdersEn);
 ---
 
-<div class="search-bar" id="search-bar" data-index-url={indexUrl} data-no-results={noResults}>
-  <div class="search-input-wrap">
-    <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
-    </svg>
+<form
+  class:list={['search-bar', showSubmit && 'search-bar--hero']}
+  action={action}
+  method="get"
+  id="search-bar"
+  data-index-url={indexUrl}
+  data-no-results={noResults}
+  data-placeholders={placeholders}
+  role="search"
+>
+  <div class="search-input-wrapper">
+    <span class="search-icon" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+    </span>
     <input
       type="search"
+      name="q"
       class="search-input"
-      placeholder={placeholder}
+      placeholder={defaultPlaceholder}
       autocomplete="off"
-      aria-label={placeholder}
+      aria-label={ariaLabel}
       aria-expanded="false"
       aria-controls="search-results"
     />
+    <ul class="search-results" id="search-results" role="listbox" hidden></ul>
   </div>
-  <ul class="search-results" id="search-results" role="listbox" hidden></ul>
-</div>
+  {showSubmit && (
+    <button type="submit" class="btn-primary search-submit">{submitLabel}</button>
+  )}
+</form>
 
 <style>
   .search-bar {
     position: relative;
-    flex: 1;
-    max-width: 400px;
-  }
-
-  .search-input-wrap {
-    position: relative;
     display: flex;
     align-items: center;
+    gap: var(--space-3);
+    flex: 1;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .search-bar--hero {
+    max-width: 560px;
+  }
+
+  @media (max-width: 480px) {
+    .search-bar--hero {
+      flex-direction: column;
+    }
+    .search-bar--hero .search-input-wrapper {
+      width: 100%;
+    }
+    .search-bar--hero .search-submit {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  .search-input-wrapper {
+    position: relative;
+    flex: 1;
   }
 
   .search-icon {
     position: absolute;
-    left: 0.625rem;
-    color: #9ca3af;
+    left: var(--space-4);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-muted);
     pointer-events: none;
-    flex-shrink: 0;
+    display: flex;
+    align-items: center;
   }
 
   .search-input {
     width: 100%;
-    padding: 0.5rem 0.75rem 0.5rem 2.25rem;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    font-size: 0.875rem;
-    background: #f9fafb;
-    color: #1a1a1a;
+    padding: 12px var(--space-4) 12px 2.75rem;
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    border: 2px solid transparent;
+    border-radius: var(--radius-lg);
+    background: #ffffff;
+    box-shadow: var(--shadow-card);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    color: var(--color-text);
     outline: none;
-    transition: border-color 0.15s, background 0.15s;
   }
 
   .search-input:focus {
-    border-color: #e8437f;
-    background: white;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-primary-focus);
   }
 
-  /* clear button from browser */
   .search-input::-webkit-search-cancel-button {
     cursor: pointer;
   }
@@ -77,14 +137,14 @@ const indexUrl = `/${locale}/search-index.json`;
     top: calc(100% + 4px);
     left: 0;
     right: 0;
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
     list-style: none;
     margin: 0;
-    padding: 0.25rem 0;
-    z-index: 200;
+    padding: var(--space-1) 0;
+    z-index: var(--z-dropdown);
     max-height: 320px;
     overflow-y: auto;
   }
@@ -95,50 +155,64 @@ const indexUrl = `/${locale}/search-index.json`;
 
   .search-result-item {
     display: block;
-    padding: 0.5rem 0.875rem;
-    font-size: 0.875rem;
-    color: #1f2937;
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
     text-decoration: none;
     cursor: pointer;
-    border-radius: 0;
   }
 
   .search-result-item:hover,
   .search-result-item[aria-selected="true"] {
-    background: #eff6ff;
-    color: #1d4ed8;
+    background: var(--color-primary-light);
+    color: var(--color-primary);
   }
 
   .search-result-title {
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     display: block;
   }
 
   .search-result-category {
-    font-size: 0.75rem;
-    color: #9ca3af;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
   }
 
   .search-no-results {
-    padding: 0.5rem 0.875rem;
-    font-size: 0.875rem;
-    color: #9ca3af;
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
     pointer-events: none;
   }
 </style>
 
 <script>
-  const bar = document.getElementById('search-bar') as HTMLDivElement;
+  const bar = document.getElementById('search-bar') as HTMLFormElement;
   if (bar) {
     const input = bar.querySelector<HTMLInputElement>('.search-input')!;
     const results = bar.querySelector<HTMLUListElement>('.search-results')!;
     const indexUrl = bar.dataset.indexUrl!;
     const noResultsText = bar.dataset.noResults!;
+    const placeholders: string[] = JSON.parse(bar.dataset.placeholders || '[]');
 
     let index: Array<{ title: string; slug: string; tags: string[]; category: string; url: string }> = [];
     let loaded = false;
     let debounceTimer: ReturnType<typeof setTimeout>;
     let selectedIndex = -1;
+
+    // Rotating placeholder
+    if (placeholders.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      let pi = 0;
+      setInterval(() => {
+        pi = (pi + 1) % placeholders.length;
+        input.style.opacity = '0.6';
+        setTimeout(() => {
+          input.placeholder = placeholders[pi];
+          input.style.opacity = '1';
+        }, 150);
+      }, 2500);
+      input.style.transition = 'opacity 150ms ease';
+    }
 
     async function loadIndex() {
       if (loaded) return;
@@ -171,7 +245,6 @@ const indexUrl = `/${locale}/search-index.json`;
     function renderResults(items: typeof index) {
       results.innerHTML = '';
       selectedIndex = -1;
-
       if (items.length === 0) {
         const li = document.createElement('li');
         li.className = 'search-no-results';
@@ -189,7 +262,6 @@ const indexUrl = `/${locale}/search-index.json`;
           results.appendChild(li);
         });
       }
-
       results.hidden = false;
       input.setAttribute('aria-expanded', 'true');
     }
@@ -243,7 +315,7 @@ const indexUrl = `/${locale}/search-index.json`;
       if (!bar.contains(e.target as Node)) closeResults();
     });
 
-    // Auto-trigger search from ?q= URL param (e.g. when clicking a tag)
+    // Auto-trigger search from ?q= URL param
     const urlQ = new URLSearchParams(window.location.search).get('q');
     if (urlQ) {
       input.value = urlQ;
