@@ -76,8 +76,8 @@ PROMPTS_FILE = SCRIPT_DIR / "coloriages-prompts.yaml"
 A4_WIDTH_PX = 2480   # A4 at 300 DPI
 A4_HEIGHT_PX = 3508  # A4 at 300 DPI
 
-# Gemini Imagen 4: generous quota, 2s is safe
-RATE_LIMIT_SECONDS = 2
+# Gemini Imagen 4: ~10 RPM limit, 7s keeps us safely under
+RATE_LIMIT_SECONDS = 7
 
 # Gemini Imagen 4 model
 GEMINI_IMAGEN_MODEL = "imagen-4.0-generate-001"
@@ -86,6 +86,15 @@ GEMINI_ASPECT_RATIO = "3:4"
 
 # QC: max retries when an image fails quality control
 MAX_QC_RETRIES = 2
+
+# Exponential backoff delays (seconds) for 429 / RESOURCE_EXHAUSTED errors
+BACKOFF_DELAYS = [30, 60, 120]
+
+# Daily quota: max successful generations per calendar day (UTC)
+DAILY_QUOTA_LIMIT = 70
+
+# Queue file path (relative to astro root)
+QUEUE_FILENAME = "data/generation-queue.json"
 
 LINE_ART_SUFFIX_KIDS = (
     "Black and white line drawing for kids. Thick bold outlines, pure white "
@@ -152,8 +161,31 @@ def build_prompt(subject_prompt: str, base_suffix: str, category: str = "", adul
     return f"{subject_prompt} {line_art}"
 
 
+def _is_rate_limit_error(error: Exception) -> bool:
+    """Check if an error is a rate-limit / quota error that should trigger backoff."""
+    error_str = str(error)
+    return any(tok in error_str for tok in ("RESOURCE_EXHAUSTED", "429", "rate_limit", "Rate limit"))
+
+
+def generate_with_backoff(generate_fn, *args, **kwargs) -> bytes:
+    """Wrap a generation call with exponential backoff on rate-limit errors."""
+    last_err = None
+    for attempt, delay in enumerate([0] + BACKOFF_DELAYS):
+        if delay:
+            print(f"  [backoff] Rate limited — waiting {delay}s (attempt {attempt + 1}/{len(BACKOFF_DELAYS) + 1})...")
+            time.sleep(delay)
+        try:
+            return generate_fn(*args, **kwargs)
+        except Exception as e:
+            if _is_rate_limit_error(e):
+                last_err = e
+                continue
+            raise  # non-rate-limit errors propagate immediately
+    raise QuotaExhaustedError(f"Still rate-limited after {len(BACKOFF_DELAYS)} retries: {last_err}")
+
+
 def generate_image_gemini(client, prompt: str) -> bytes:
-    """Call Google Imagen 3 ("Nano Banana") and return raw PNG bytes."""
+    """Call Google Imagen 4 and return raw PNG bytes."""
     try:
         from google.genai import types as genai_types
     except ImportError:
@@ -257,6 +289,217 @@ def validate_line_art(png_bytes: bytes, category: str = "") -> dict:
         "passed": True, "white_pct": white_pct, "black_pct": black_pct,
         "mid_pct": mid_pct, "reason": None,
     }
+
+
+# ---------------------------------------------------------------------------
+# Persistent queue & daily quota tracking
+# ---------------------------------------------------------------------------
+
+def _get_queue_path(astro_root: Path) -> Path:
+    return astro_root / QUEUE_FILENAME
+
+
+def _load_queue(astro_root: Path) -> dict:
+    """Load or initialise the generation queue JSON."""
+    path = _get_queue_path(astro_root)
+    if path.exists():
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    return {"pending": [], "completed": [], "failed": [], "daily_counts": {}}
+
+
+def _save_queue(astro_root: Path, queue: dict):
+    path = _get_queue_path(astro_root)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(queue, f, indent=2, ensure_ascii=False)
+
+
+def _today_key() -> str:
+    return datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+
+def _daily_count(queue: dict) -> int:
+    return queue.get("daily_counts", {}).get(_today_key(), 0)
+
+
+def _increment_daily(queue: dict):
+    key = _today_key()
+    counts = queue.setdefault("daily_counts", {})
+    counts[key] = counts.get(key, 0) + 1
+
+
+def queue_add(astro_root: Path, categories: dict, selected_cats: list[str], count: int | None):
+    """Add subjects from selected categories to the pending queue.
+
+    Skips subjects whose image already exists or that are already queued.
+    """
+    queue = _load_queue(astro_root)
+    images_dir = get_images_dir(astro_root)
+
+    # Build sets for fast dedup
+    already_queued = {item["fr_slug"] for item in queue["pending"]}
+    already_done = {item["fr_slug"] for item in queue["completed"]}
+
+    added = 0
+    for cat_name in selected_cats:
+        subjects = categories[cat_name]["subjects"]
+        limit = count if count else len(subjects)
+        for subject in subjects[:limit]:
+            fr_slug = subject["fr_slug"]
+            image_path = images_dir / f"{fr_slug}.png"
+
+            if image_path.exists():
+                continue
+            if fr_slug in already_queued or fr_slug in already_done:
+                continue
+
+            queue["pending"].append({
+                "fr_slug": fr_slug,
+                "en_slug": subject["en_slug"],
+                "prompt": subject["prompt"],
+                "category": cat_name,
+                "added_at": datetime.now(timezone.utc).isoformat(),
+            })
+            already_queued.add(fr_slug)
+            added += 1
+
+    _save_queue(astro_root, queue)
+    print(f"[queue] Added {added} items → {len(queue['pending'])} pending total")
+    return added
+
+
+def queue_status(astro_root: Path):
+    """Print queue status summary."""
+    queue = _load_queue(astro_root)
+    today = _today_key()
+    today_count = _daily_count(queue)
+    remaining_today = max(0, DAILY_QUOTA_LIMIT - today_count)
+
+    print(f"=== Generation Queue Status ===")
+    print(f"  Pending   : {len(queue['pending'])}")
+    print(f"  Completed : {len(queue['completed'])}")
+    print(f"  Failed    : {len(queue['failed'])}")
+    print(f"  Today ({today}): {today_count}/{DAILY_QUOTA_LIMIT} generated ({remaining_today} remaining)")
+
+    if queue["pending"]:
+        print(f"\n  Next up:")
+        for item in queue["pending"][:5]:
+            print(f"    - {item['fr_slug']} ({item['category']})")
+        if len(queue["pending"]) > 5:
+            print(f"    ... and {len(queue['pending']) - 5} more")
+
+
+def queue_run(
+    astro_root: Path,
+    config: dict,
+    client,
+    locales: list[str],
+    dry_run: bool,
+    backend: str,
+):
+    """Process pending queue items, respecting daily quota and rate limits."""
+    queue = _load_queue(astro_root)
+    images_dir = get_images_dir(astro_root)
+    logs_dir = get_logs_dir(astro_root)
+    base_suffix = config.get("base_prompt_suffix", "").strip()
+    adult_suffix = config.get("adult_prompt_suffix", "").strip()
+
+    if not queue["pending"]:
+        print("[queue] Nothing pending.")
+        return
+
+    today_count = _daily_count(queue)
+    remaining = DAILY_QUOTA_LIMIT - today_count
+    if remaining <= 0 and not dry_run:
+        print(f"[queue] Daily quota reached ({today_count}/{DAILY_QUOTA_LIMIT}). Try again tomorrow.")
+        return
+
+    log_entries = []
+    processed = 0
+    success = 0
+    first_call = True
+
+    # Work through pending items
+    still_pending = []
+    for item in queue["pending"]:
+        if not dry_run and remaining <= 0:
+            print(f"\n[queue] Daily quota reached ({DAILY_QUOTA_LIMIT}/{DAILY_QUOTA_LIMIT}). Stopping.")
+            still_pending.append(item)
+            continue
+
+        # Reconstruct subject dict for process_subject
+        subject = {
+            "fr_slug": item["fr_slug"],
+            "en_slug": item["en_slug"],
+            "prompt": item["prompt"],
+            "category": item["category"],
+        }
+
+        if not dry_run and not first_call:
+            print(f"  [wait] Rate limiting ({RATE_LIMIT_SECONDS}s)...")
+            time.sleep(RATE_LIMIT_SECONDS)
+        first_call = False
+
+        try:
+            ok = process_subject(
+                subject=subject,
+                base_suffix=base_suffix,
+                images_dir=images_dir,
+                astro_root=astro_root,
+                locales=locales,
+                client=client,
+                dry_run=dry_run,
+                log_entries=log_entries,
+                adult_suffix=adult_suffix,
+                backend=backend,
+            )
+        except QuotaExhaustedError:
+            print("\n[queue] API quota exhausted — saving progress.", file=sys.stderr)
+            still_pending.append(item)
+            # Keep remaining items pending too
+            idx = queue["pending"].index(item)
+            still_pending.extend(queue["pending"][idx + 1:])
+            break
+
+        processed += 1
+        if ok:
+            success += 1
+            if not dry_run:
+                _increment_daily(queue)
+                remaining -= 1
+                item["completed_at"] = datetime.now(timezone.utc).isoformat()
+                queue["completed"].append(item)
+            else:
+                still_pending.append(item)  # keep in queue for dry runs
+        else:
+            if not dry_run:
+                item["failed_at"] = datetime.now(timezone.utc).isoformat()
+                queue["failed"].append(item)
+            else:
+                still_pending.append(item)
+            continue
+
+    # Update pending list with remaining items
+    queue["pending"] = still_pending
+    if not dry_run:
+        _save_queue(astro_root, queue)
+
+    # Write generation log
+    log_file = logs_dir / f"generation-{datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S')}.json"
+    with open(log_file, "w", encoding="utf-8") as f:
+        json.dump({"summary": {"total": processed, "success": success, "dry_run": dry_run, "mode": "queue"}, "entries": log_entries}, f, indent=2)
+
+    print(f"\n=== Queue run: {success}/{processed} succeeded, {len(queue['pending'])} still pending ===")
+    print(f"Log: {log_file}")
+
+    # Run image optimization if we generated anything
+    if success > 0 and not dry_run:
+        print("\n=== Running image optimization (WebP + thumbnails) ===")
+        optimize_script = astro_root / "scripts" / "optimize-images.mjs"
+        result = subprocess.run(["node", str(optimize_script)], cwd=str(astro_root))
+        if result.returncode != 0:
+            print("[warn] Image optimization failed — run 'npm run optimize-images' manually.", file=sys.stderr)
 
 
 # ---------------------------------------------------------------------------
@@ -374,18 +617,21 @@ def process_subject(
     for attempt in range(1, MAX_QC_RETRIES + 2):  # 1 initial + MAX_QC_RETRIES retries
         try:
             if backend == "openai":
-                raw_bytes = generate_image_openai(client, prompt)
+                raw_bytes = generate_with_backoff(generate_image_openai, client, prompt)
             else:
-                raw_bytes = generate_image_gemini(client, prompt)
+                raw_bytes = generate_with_backoff(generate_image_gemini, client, prompt)
             candidate = upscale_to_a4(raw_bytes)
+        except QuotaExhaustedError:
+            entry["status"] = "error"
+            entry["error"] = "quota exhausted after backoff retries"
+            log_entries.append(entry)
+            raise
         except Exception as e:
             error_str = str(e)
             print(f"  [err] Failed to generate {image_slug}: {error_str}", file=sys.stderr)
             entry["status"] = "error"
             entry["error"] = error_str
             log_entries.append(entry)
-            if "RESOURCE_EXHAUSTED" in error_str or "429" in error_str or "rate_limit" in error_str.lower():
-                raise QuotaExhaustedError(error_str)
             return False
 
         # --- Quality control ---
@@ -591,6 +837,80 @@ def run_audit(args):
         print("  Deleted failed images. Re-run generation to recreate them.")
 
 
+def run_queue_add(args):
+    """Add subjects to the generation queue."""
+    with open(PROMPTS_FILE, encoding="utf-8") as f:
+        config = yaml.safe_load(f)
+    categories = config["categories"]
+    astro_root = get_astro_root()
+
+    if args.queue_cat:
+        if args.queue_cat not in categories:
+            print(f"Unknown category '{args.queue_cat}'. Available: {list(categories.keys())}", file=sys.stderr)
+            sys.exit(1)
+        selected = [args.queue_cat]
+    else:
+        selected = list(categories.keys())
+
+    queue_add(astro_root, categories, selected, args.count)
+
+
+def run_queue_status(args):
+    """Show queue status."""
+    astro_root = get_astro_root()
+    queue_status(astro_root)
+
+
+def run_queue_run(args):
+    """Process the pending queue."""
+    with open(PROMPTS_FILE, encoding="utf-8") as f:
+        config = yaml.safe_load(f)
+
+    astro_root = get_astro_root()
+    backend = args.backend
+
+    # Locales
+    if args.locale == "both":
+        locales = ["fr", "en"]
+    else:
+        locales = [args.locale]
+
+    # Init API client
+    api_client = None
+    if not args.dry_run:
+        if backend == "openai":
+            try:
+                from openai import OpenAI
+            except ImportError:
+                print("openai package not installed. Run: pip install openai", file=sys.stderr)
+                sys.exit(1)
+            openai_api_key = os.environ.get("OPENAI_API_KEY")
+            if not openai_api_key:
+                print("OPENAI_API_KEY env var not set.", file=sys.stderr)
+                sys.exit(1)
+            api_client = OpenAI(api_key=openai_api_key)
+        else:
+            try:
+                from google import genai as google_genai
+            except ImportError:
+                print("google-genai package not installed. Run: pip install google-genai", file=sys.stderr)
+                sys.exit(1)
+            gemini_api_key = os.environ.get("GEMINI_API_KEY")
+            if not gemini_api_key:
+                print("GEMINI_API_KEY env var not set.", file=sys.stderr)
+                sys.exit(1)
+            api_client = google_genai.Client(api_key=gemini_api_key)
+
+    queue_run(
+        astro_root=astro_root,
+        config=config,
+        client=api_client,
+        locales=locales,
+        dry_run=args.dry_run,
+        backend=backend,
+    )
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Generate coloring page images via Gemini Imagen 4 or OpenAI gpt-image-1.",
@@ -603,11 +923,20 @@ Examples:
   # Generate 3 images in a category
   python3 generate-coloriages.py --category animaux --count 3
 
-  # Generate all categories
-  python3 generate-coloriages.py --all
+  # Queue: add all missing images to the queue
+  python3 generate-coloriages.py --queue-add
 
-  # Use OpenAI backend
-  python3 generate-coloriages.py --all --backend openai
+  # Queue: add a single category
+  python3 generate-coloriages.py --queue-add --queue-cat mandalas
+
+  # Queue: check status
+  python3 generate-coloriages.py --queue-status
+
+  # Queue: process pending items (respects 70/day quota)
+  python3 generate-coloriages.py --queue-run
+
+  # Queue: dry-run to see what would be processed
+  python3 generate-coloriages.py --queue-run --dry-run
 
   # Audit existing images for QC failures
   python3 generate-coloriages.py --audit
@@ -616,10 +945,15 @@ Examples:
   python3 generate-coloriages.py --audit --delete
 """,
     )
-    group = parser.add_mutually_exclusive_group()
-    group.add_argument("--all", action="store_true", help="Process all categories")
-    group.add_argument("--category", metavar="NAME", help="Process a single category")
-    group.add_argument("--audit", action="store_true", help="Scan existing images for QC failures")
+    # Main mode (mutually exclusive)
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--all", action="store_true", help="Process all categories (direct generation)")
+    mode.add_argument("--category", metavar="NAME", help="Process a single category (direct generation)")
+    mode.add_argument("--audit", action="store_true", help="Scan existing images for QC failures")
+    mode.add_argument("--queue-add", action="store_true", help="Add subjects to the generation queue (use with --queue-cat or defaults to all)")
+    mode.add_argument("--queue-run", action="store_true", help="Process pending queue items (respects daily quota)")
+    mode.add_argument("--queue-status", action="store_true", help="Show generation queue status")
+    parser.add_argument("--queue-cat", metavar="NAME", help="Category filter for --queue-add (default: all categories)")
     parser.add_argument("--count", type=int, metavar="N", help="Max subjects per category (default: all)")
     parser.add_argument("--locale", choices=["fr", "en", "both"], default="both", help="Generate content YAML for locale(s) (default: both)")
     parser.add_argument("--backend", choices=["gemini", "openai"], default="gemini", help="Image generation backend (default: gemini)")
@@ -629,6 +963,18 @@ Examples:
 
     if args.audit:
         run_audit(args)
+        return
+
+    if args.queue_status:
+        run_queue_status(args)
+        return
+
+    if args.queue_add:
+        run_queue_add(args)
+        return
+
+    if args.queue_run:
+        run_queue_run(args)
         return
 
     if not args.all and not args.category:

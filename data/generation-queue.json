@@ -1,0 +1,1148 @@
+{
+  "pending": [
+    {
+      "fr_slug": "chats-mignon",
+      "en_slug": "cats-cute",
+      "prompt": "A round fluffy kitten sitting upright with big round eyes and a tiny pink nose, simple cartoon style.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373498+00:00"
+    },
+    {
+      "fr_slug": "chats-dors",
+      "en_slug": "cats-sleeping",
+      "prompt": "A cat curled up asleep, tail wrapped around its body, eyes closed with tiny eyelashes, bold lines.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373700+00:00"
+    },
+    {
+      "fr_slug": "chats-joue",
+      "en_slug": "cats-playing",
+      "prompt": "A small kitten batting a ball of yarn with one paw raised, sitting on its hind legs, cute cartoon.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373715+00:00"
+    },
+    {
+      "fr_slug": "chats-siamois",
+      "en_slug": "cats-siamese",
+      "prompt": "A slender Siamese cat sitting regally with a long tail, almond eyes, and pointed ears, clean bold lines.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373727+00:00"
+    },
+    {
+      "fr_slug": "chats-arc-en-ciel",
+      "en_slug": "cats-rainbow",
+      "prompt": "A cheerful cat sitting under a big rainbow with clouds on each side, simple cartoon thick outlines.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373740+00:00"
+    },
+    {
+      "fr_slug": "chats-chapeau",
+      "en_slug": "cats-hat",
+      "prompt": "A cute cat wearing a big top hat and a bow tie, sitting proudly, big eyes, simple cartoon style.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373748+00:00"
+    },
+    {
+      "fr_slug": "chats-jardin",
+      "en_slug": "cats-garden",
+      "prompt": "A cat sitting among large daisy flowers in a garden, looking curious, bold cartoon outlines.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373757+00:00"
+    },
+    {
+      "fr_slug": "chats-panier",
+      "en_slug": "cats-basket",
+      "prompt": "A fluffy cat nestled inside a wicker basket with a pillow, paws folded, eyes half-closed, cute style.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373764+00:00"
+    },
+    {
+      "fr_slug": "chats-poisson",
+      "en_slug": "cats-fish",
+      "prompt": "A cat reaching eagerly toward a fish in a fishbowl, tongue out and eyes wide, thick cartoon lines.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373773+00:00"
+    },
+    {
+      "fr_slug": "chats-fee",
+      "en_slug": "cats-fairy",
+      "prompt": "A small kitten with delicate butterfly wings hovering over flowers, sparkles around it, cartoon style.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373783+00:00"
+    },
+    {
+      "fr_slug": "chats-prince",
+      "en_slug": "cats-prince",
+      "prompt": "A noble cat wearing a small crown and a cape, sitting straight with one paw raised, cartoon style.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373794+00:00"
+    },
+    {
+      "fr_slug": "chats-deux-amis",
+      "en_slug": "cats-two-friends",
+      "prompt": "Two cats sitting side by side touching noses in greeting, different sizes, simple bold cartoon style.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373800+00:00"
+    },
+    {
+      "fr_slug": "chats-lune",
+      "en_slug": "cats-moon",
+      "prompt": "A cat sitting on a crescent moon surrounded by big stars, dangling its legs, dreamy cartoon style.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373809+00:00"
+    },
+    {
+      "fr_slug": "chats-miaulement",
+      "en_slug": "cats-singing",
+      "prompt": "A cat standing on its hind legs with mouth wide open singing, musical notes floating around it, cartoon.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373816+00:00"
+    },
+    {
+      "fr_slug": "chats-printemps",
+      "en_slug": "cats-spring",
+      "prompt": "A happy cat lying in grass with a butterfly on its nose and flowers blooming around it, bold cartoon lines.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373825+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-chat",
+      "en_slug": "bold-easy-cat",
+      "prompt": "A sitting cat with an enormous round head, huge eyes, tiny smile, ultra thick outlines only. Very simple.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373835+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-soleil",
+      "en_slug": "bold-easy-sun",
+      "prompt": "A big smiling sun with eight thick chunky rays, simple round face, ultra thick black outlines.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373842+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-maison",
+      "en_slug": "bold-easy-house",
+      "prompt": "A simple house with a big roof, one door, two windows and a chimney, very thick black outlines only.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373851+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-etoile",
+      "en_slug": "bold-easy-star",
+      "prompt": "A large five-pointed star with a smiling face, very thick outlines, simple shape, white interior.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373859+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-coeur",
+      "en_slug": "bold-easy-heart",
+      "prompt": "A big heart shape with a simple happy face, very thick black outlines, plain white interior, nothing else.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373866+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-chien",
+      "en_slug": "bold-easy-dog",
+      "prompt": "A chubby sitting dog with floppy ears, big nose, and a tail, ultra thick outlines, very minimal detail.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373874+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-fleur",
+      "en_slug": "bold-easy-flower",
+      "prompt": "A simple flower with six large round petals and a big circle center, very thick outlines, stem and two leaves.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373882+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-poisson",
+      "en_slug": "bold-easy-fish",
+      "prompt": "A big round cartoon fish with one large eye, a smile, and a fan tail, ultra thick outlines, minimal detail.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373888+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-voiture",
+      "en_slug": "bold-easy-car",
+      "prompt": "A side-view toy car with two big circles for wheels, rounded body, one window, ultra thick outlines only.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373896+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-arc-en-ciel",
+      "en_slug": "bold-easy-rainbow",
+      "prompt": "A big semicircle rainbow with four thick bold bands, fluffy cloud on each end, ultra simple outline style.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373904+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-papillon",
+      "en_slug": "bold-easy-butterfly",
+      "prompt": "A butterfly with two big round top wings and two smaller bottom wings, simple body, very thick outlines only.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373915+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-elephant",
+      "en_slug": "bold-easy-elephant",
+      "prompt": "A big round elephant head with huge ears, a curled trunk, and two small eyes, ultra thick outlines only.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373921+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-glace",
+      "en_slug": "bold-easy-icecream",
+      "prompt": "A soft serve ice cream cone with a big swirl top and waffle cone, very thick outlines, simple and chunky.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373930+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-nuage",
+      "en_slug": "bold-easy-cloud",
+      "prompt": "A big fluffy cartoon cloud with a smiling face, bumpy top edge, flat bottom, ultra thick black outlines.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373936+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-grenouille",
+      "en_slug": "bold-easy-frog",
+      "prompt": "A round cartoon frog sitting with big bulging eyes, wide smile, stubby arms and legs, ultra thick outlines.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373944+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-arbre",
+      "en_slug": "bold-easy-tree",
+      "prompt": "A simple tree with a thick brown trunk and a big round green fluffy top, ultra thick outlines, very minimal.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373953+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-lapin",
+      "en_slug": "bold-easy-rabbit",
+      "prompt": "A chubby sitting bunny with two tall ears, round body, small tail, ultra thick outlines, very simple style.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373959+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-gateau",
+      "en_slug": "bold-easy-cake",
+      "prompt": "A round birthday cake with three candles on top, one horizontal stripe, ultra thick outlines, simple shapes.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373967+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-etoile-mer",
+      "en_slug": "bold-easy-starfish",
+      "prompt": "A big five-armed starfish with a happy face and smooth arms, ultra thick outlines, plain white background.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373975+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-licorne",
+      "en_slug": "bold-easy-unicorn",
+      "prompt": "A chubby unicorn standing, with a single thick horn, big eyes, flowing mane, ultra thick black outlines only.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373983+00:00"
+    },
+    {
+      "fr_slug": "papillons-monarque",
+      "en_slug": "butterflies-monarch",
+      "prompt": "A monarch butterfly top-down view, large symmetrical wings with simple vein patterns, bold clean outlines.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.373993+00:00"
+    },
+    {
+      "fr_slug": "papillons-morpho",
+      "en_slug": "butterflies-morpho",
+      "prompt": "A morpho butterfly top-down view, large rounded wings with eye-spot patterns, bold clean outlines.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.373999+00:00"
+    },
+    {
+      "fr_slug": "papillons-simple",
+      "en_slug": "butterflies-simple",
+      "prompt": "A cute simple butterfly front view, big round wings with simple circle patterns, thick bold outlines, kids style.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.374007+00:00"
+    },
+    {
+      "fr_slug": "papillons-jardin",
+      "en_slug": "butterflies-garden",
+      "prompt": "A butterfly landing on a big flower, two leaves beside it, simple thick clean outlines, cute style.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.374014+00:00"
+    },
+    {
+      "fr_slug": "papillons-chenille",
+      "en_slug": "butterflies-caterpillar",
+      "prompt": "A fat happy caterpillar on a branch beside a small butterfly, bold clean outlines, cute cartoon style.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.374022+00:00"
+    },
+    {
+      "fr_slug": "papillons-duo",
+      "en_slug": "butterflies-duo",
+      "prompt": "Two butterflies facing each other with wings spread, flowers below them, simple clean black outlines.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.374030+00:00"
+    },
+    {
+      "fr_slug": "papillons-nuit",
+      "en_slug": "butterflies-night-moth",
+      "prompt": "A big fluffy moth with feathery antennae and large wings, crescent moon behind it, bold clean outlines.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.374037+00:00"
+    },
+    {
+      "fr_slug": "papillons-kawaii",
+      "en_slug": "butterflies-kawaii",
+      "prompt": "A kawaii butterfly with a big round face, large eyes, rosy cheeks, small smile, round wings, thick bold outlines.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.374044+00:00"
+    },
+    {
+      "fr_slug": "papillons-branche",
+      "en_slug": "butterflies-branch",
+      "prompt": "A butterfly resting on a thick branch with two leaves, wings slightly open showing detail, clean bold outlines.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.374051+00:00"
+    },
+    {
+      "fr_slug": "papillons-cocon",
+      "en_slug": "butterflies-cocoon",
+      "prompt": "A chrysalis hanging from a twig, a small butterfly emerging from it, simple bold clean outlines for kids.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.374059+00:00"
+    },
+    {
+      "fr_slug": "papillons-printemps",
+      "en_slug": "butterflies-spring",
+      "prompt": "Three small butterflies flying above a row of simple flowers, clean thick outlines, cheerful spring scene.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.374065+00:00"
+    },
+    {
+      "fr_slug": "papillons-tropical",
+      "en_slug": "butterflies-tropical",
+      "prompt": "A large exotic butterfly with ornate wing patterns and long tails, top-down view, clean bold line art.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.374072+00:00"
+    },
+    {
+      "fr_slug": "papillons-famille",
+      "en_slug": "butterflies-family",
+      "prompt": "A big butterfly and two tiny baby butterflies flying together, simple bold outlines, cute cartoon style.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.374080+00:00"
+    },
+    {
+      "fr_slug": "papillons-fee",
+      "en_slug": "butterflies-fairy",
+      "prompt": "A tiny cute fairy with butterfly wings, holding a flower wand, simple cartoon outline, thick clean lines.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.374086+00:00"
+    },
+    {
+      "fr_slug": "papillons-mandala",
+      "en_slug": "butterflies-mandala",
+      "prompt": "A butterfly shape made of mandala-style symmetrical patterns, ornate wing details, bold clean outlines for kids.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.374094+00:00"
+    },
+    {
+      "fr_slug": "anti-stress-lotus",
+      "en_slug": "stress-relief-lotus",
+      "prompt": "A large lotus flower with layered petals and intricate vein details, concentric ripples on water around it, fine line art for adults.",
+      "category": "anti-stress",
+      "added_at": "2026-03-28T19:48:00.374102+00:00"
+    },
+    {
+      "fr_slug": "anti-stress-jardin-zen",
+      "en_slug": "stress-relief-zen-garden",
+      "prompt": "A top-down view of a zen garden with raked sand wave patterns, three smooth stones, and a small bonsai, intricate fine line art.",
+      "category": "anti-stress",
+      "added_at": "2026-03-28T19:48:00.374109+00:00"
+    },
+    {
+      "fr_slug": "anti-stress-arbre-vie",
+      "en_slug": "stress-relief-tree-of-life",
+      "prompt": "A tree of life with Celtic knotwork branches and roots forming a perfect circle, intricate intertwining patterns, fine adult line art.",
+      "category": "anti-stress",
+      "added_at": "2026-03-28T19:48:00.374116+00:00"
+    },
+    {
+      "fr_slug": "anti-stress-koi",
+      "en_slug": "stress-relief-koi",
+      "prompt": "Two large koi fish swimming in opposite circles, surrounded by intricate water ripples and lotus leaves, detailed adult line art.",
+      "category": "anti-stress",
+      "added_at": "2026-03-28T19:48:00.374124+00:00"
+    },
+    {
+      "fr_slug": "anti-stress-plumes",
+      "en_slug": "stress-relief-feathers",
+      "prompt": "Three large overlapping feathers, each filled with intricate floral and swirling patterns inside the barbs, fine detailed line art.",
+      "category": "anti-stress",
+      "added_at": "2026-03-28T19:48:00.374130+00:00"
+    },
+    {
+      "fr_slug": "anti-stress-libellule",
+      "en_slug": "stress-relief-dragonfly",
+      "prompt": "A large dragonfly with wings filled with intricate lace and floral patterns, perched on a lily pad with detailed water ripples below.",
+      "category": "anti-stress",
+      "added_at": "2026-03-28T19:48:00.374138+00:00"
+    },
+    {
+      "fr_slug": "anti-stress-vagues-ocean",
+      "en_slug": "stress-relief-ocean-waves",
+      "prompt": "A full-page composition of rolling ocean waves with intricate foam swirls and small fish swimming beneath, detailed adult line art.",
+      "category": "anti-stress",
+      "added_at": "2026-03-28T19:48:00.374145+00:00"
+    },
+    {
+      "fr_slug": "anti-stress-mandala-nature",
+      "en_slug": "stress-relief-nature-mandala",
+      "prompt": "A circular mandala composed entirely of layered flowers, leaves, and vines, highly detailed with thin fine lines, for adult coloring.",
+      "category": "anti-stress",
+      "added_at": "2026-03-28T19:48:00.374152+00:00"
+    },
+    {
+      "fr_slug": "anti-stress-colibri",
+      "en_slug": "stress-relief-hummingbird",
+      "prompt": "A hummingbird hovering near a large tropical flower, wings detailed with intricate feather patterns, botanical leaves around, fine adult line art.",
+      "category": "anti-stress",
+      "added_at": "2026-03-28T19:48:00.374159+00:00"
+    },
+    {
+      "fr_slug": "anti-stress-foret",
+      "en_slug": "stress-relief-forest",
+      "prompt": "A serene forest path lined with tall detailed trees, intricate leaf canopy overhead, small deer in background, fine adult line art.",
+      "category": "anti-stress",
+      "added_at": "2026-03-28T19:48:00.374167+00:00"
+    },
+    {
+      "fr_slug": "anti-stress-lune-botanique",
+      "en_slug": "stress-relief-botanical-moon",
+      "prompt": "A large crescent moon surrounded by night-blooming flowers, moths, and intricate botanical vines, fine detailed line art for adults.",
+      "category": "anti-stress",
+      "added_at": "2026-03-28T19:48:00.374173+00:00"
+    },
+    {
+      "fr_slug": "anti-stress-geometrie-sacree",
+      "en_slug": "stress-relief-sacred-geometry",
+      "prompt": "A flower of life sacred geometry pattern with interlocking circles, fine detailed lines, surrounded by petal and triangle ornaments.",
+      "category": "anti-stress",
+      "added_at": "2026-03-28T19:48:00.374181+00:00"
+    },
+    {
+      "fr_slug": "anti-stress-paisley",
+      "en_slug": "stress-relief-paisley",
+      "prompt": "A full-page composition of interlocking paisley motifs filled with tiny flowers, swirls, and dots, intricate fine adult line art.",
+      "category": "anti-stress",
+      "added_at": "2026-03-28T19:48:00.374188+00:00"
+    },
+    {
+      "fr_slug": "anti-stress-tortue",
+      "en_slug": "stress-relief-turtle",
+      "prompt": "A sea turtle with an intricate mosaic shell filled with geometric and floral patterns, swimming among detailed seaweed, fine adult line art.",
+      "category": "anti-stress",
+      "added_at": "2026-03-28T19:48:00.374196+00:00"
+    },
+    {
+      "fr_slug": "anti-stress-automne",
+      "en_slug": "stress-relief-autumn-floor",
+      "prompt": "A detailed forest floor scene with intricate autumn leaves, acorns, mushrooms, and pine cones arranged in a decorative pattern, fine adult line art.",
+      "category": "anti-stress",
+      "added_at": "2026-03-28T19:48:00.374202+00:00"
+    },
+    {
+      "fr_slug": "cottagecore-chaumiere",
+      "en_slug": "cottagecore-cottage",
+      "prompt": "A cozy thatched cottage covered in climbing roses, with a wooden door, flower window boxes, and a winding garden path lined with wildflowers.",
+      "category": "cottagecore",
+      "added_at": "2026-03-28T19:48:00.374211+00:00"
+    },
+    {
+      "fr_slug": "cottagecore-theiere",
+      "en_slug": "cottagecore-teapot",
+      "prompt": "A vintage ceramic teapot with floral patterns, surrounded by a bouquet of wildflowers, honeybees, and scattered petals on a lace doily.",
+      "category": "cottagecore",
+      "added_at": "2026-03-28T19:48:00.374218+00:00"
+    },
+    {
+      "fr_slug": "cottagecore-champignon-maison",
+      "en_slug": "cottagecore-mushroom-house",
+      "prompt": "A large mushroom with a round door and tiny windows carved in the stem, surrounded by ferns, wildflowers, and a winding mossy path.",
+      "category": "cottagecore",
+      "added_at": "2026-03-28T19:48:00.374225+00:00"
+    },
+    {
+      "fr_slug": "cottagecore-chat-panier",
+      "en_slug": "cottagecore-cat-basket",
+      "prompt": "A fluffy cat curled asleep in a wicker basket lined with a floral cushion, surrounded by potted herbs and wildflower bouquets.",
+      "category": "cottagecore",
+      "added_at": "2026-03-28T19:48:00.374233+00:00"
+    },
+    {
+      "fr_slug": "cottagecore-tasse-the",
+      "en_slug": "cottagecore-teacup-garden",
+      "prompt": "A large teacup overflowing with wildflowers, butterflies landing on the rim, tiny mushrooms around the base, intricate botanical details.",
+      "category": "cottagecore",
+      "added_at": "2026-03-28T19:48:00.374238+00:00"
+    },
+    {
+      "fr_slug": "cottagecore-ruche",
+      "en_slug": "cottagecore-beehive",
+      "prompt": "A traditional wicker beehive surrounded by tall lavender stalks, honeybees in flight, and wild daisies, intricate floral border design.",
+      "category": "cottagecore",
+      "added_at": "2026-03-28T19:48:00.374244+00:00"
+    },
+    {
+      "fr_slug": "cottagecore-cuisine-rustique",
+      "en_slug": "cottagecore-rustic-kitchen",
+      "prompt": "A rustic wooden shelf with mason jars of herbs, a loaf of braided bread, wildflower bundles, and ceramic crocks, detailed botanical line art.",
+      "category": "cottagecore",
+      "added_at": "2026-03-28T19:48:00.374252+00:00"
+    },
+    {
+      "fr_slug": "cottagecore-prairie-wildflowers",
+      "en_slug": "cottagecore-wildflower-meadow",
+      "prompt": "A lush wildflower meadow with tall grasses, poppies, daisies, cornflowers, and butterflies, with a distant tree line, detailed botanical illustration.",
+      "category": "cottagecore",
+      "added_at": "2026-03-28T19:48:00.374260+00:00"
+    },
+    {
+      "fr_slug": "cottagecore-lanterne",
+      "en_slug": "cottagecore-lantern-ivy",
+      "prompt": "An old hanging lantern wrapped in climbing ivy and tiny roses, surrounded by ferns and moss, intricate vine and floral patterns.",
+      "category": "cottagecore",
+      "added_at": "2026-03-28T19:48:00.374267+00:00"
+    },
+    {
+      "fr_slug": "cottagecore-livre-jardin",
+      "en_slug": "cottagecore-book-garden",
+      "prompt": "An open book lying in a flower garden, with tiny wildflowers growing from the pages, a butterfly resting on the corner, grass and daisies around it.",
+      "category": "cottagecore",
+      "added_at": "2026-03-28T19:48:00.374274+00:00"
+    },
+    {
+      "fr_slug": "paques-lapin",
+      "en_slug": "easter-bunny",
+      "prompt": "A fluffy Easter bunny sitting upright, holding a decorated Easter egg, surrounded by spring flowers and tiny painted eggs on the grass.",
+      "category": "paques",
+      "added_at": "2026-03-28T19:48:00.374283+00:00"
+    },
+    {
+      "fr_slug": "paques-oeuf-decore",
+      "en_slug": "easter-decorated-egg",
+      "prompt": "A large Easter egg divided into sections filled with different decorative patterns: flowers, zigzags, dots, stripes, and hearts.",
+      "category": "paques",
+      "added_at": "2026-03-28T19:48:00.374291+00:00"
+    },
+    {
+      "fr_slug": "paques-poussin-coquille",
+      "en_slug": "easter-hatching-chick",
+      "prompt": "An adorable fluffy chick hatching from a cracked Easter egg, wings spread wide, surrounded by tiny flowers and broken shell pieces.",
+      "category": "paques",
+      "added_at": "2026-03-28T19:48:00.374301+00:00"
+    },
+    {
+      "fr_slug": "paques-panier-oeufs",
+      "en_slug": "easter-basket",
+      "prompt": "A wicker Easter basket overflowing with decorated eggs, spring flowers, a small bunny peeking out, tied with a bow ribbon.",
+      "category": "paques",
+      "added_at": "2026-03-28T19:48:00.374309+00:00"
+    },
+    {
+      "fr_slug": "paques-lapin-jardin",
+      "en_slug": "easter-bunny-garden",
+      "prompt": "A cute rabbit sitting in a spring garden with blooming tulips, daffodils, butterflies, and colorful Easter eggs hidden among the flowers.",
+      "category": "paques",
+      "added_at": "2026-03-28T19:48:00.374315+00:00"
+    },
+    {
+      "fr_slug": "paques-chasse-oeufs",
+      "en_slug": "easter-egg-hunt",
+      "prompt": "Three bunnies searching for hidden Easter eggs in a flower meadow, each finding eggs tucked under flowers, behind mushrooms, and in the grass.",
+      "category": "paques",
+      "added_at": "2026-03-28T19:48:00.374323+00:00"
+    },
+    {
+      "fr_slug": "paques-poule-poussin",
+      "en_slug": "easter-hen-chicks",
+      "prompt": "A mother hen surrounded by four fluffy chicks, all wearing tiny Easter bow ties, with decorated eggs and spring flowers around them.",
+      "category": "paques",
+      "added_at": "2026-03-28T19:48:00.374330+00:00"
+    },
+    {
+      "fr_slug": "paques-couronne-fleurs",
+      "en_slug": "easter-flower-wreath",
+      "prompt": "A circular Easter wreath made of spring flowers, eggs, ribbons, and small butterflies, with a decorative bow at the top.",
+      "category": "paques",
+      "added_at": "2026-03-28T19:48:00.374338+00:00"
+    },
+    {
+      "fr_slug": "paques-agneau-prairie",
+      "en_slug": "easter-lamb-meadow",
+      "prompt": "A fluffy little lamb standing in a spring meadow with daisies and tulips, wearing a small flower crown, Easter eggs scattered in the grass.",
+      "category": "paques",
+      "added_at": "2026-03-28T19:48:00.374344+00:00"
+    },
+    {
+      "fr_slug": "paques-papillon-oeufs",
+      "en_slug": "easter-butterfly-eggs",
+      "prompt": "Two butterflies perched on large decorated Easter eggs among spring blossoms, flower petals, and delicate vines.",
+      "category": "paques",
+      "added_at": "2026-03-28T19:48:00.374351+00:00"
+    },
+    {
+      "fr_slug": "paques-lapin-chocolat",
+      "en_slug": "easter-chocolate-bunny",
+      "prompt": "An adorable sitting Easter bunny wearing a big bow around its neck, holding a smaller bunny made of chocolate, surrounded by wrapped candy eggs.",
+      "category": "paques",
+      "added_at": "2026-03-28T19:48:00.374359+00:00"
+    },
+    {
+      "fr_slug": "paques-scene-foret",
+      "en_slug": "easter-forest-scene",
+      "prompt": "A forest clearing with a bunny, squirrel, and hedgehog celebrating Easter together, surrounding a large decorated egg nest, spring blossoms above.",
+      "category": "paques",
+      "added_at": "2026-03-28T19:48:00.374364+00:00"
+    },
+    {
+      "fr_slug": "paques-lapin-velo",
+      "en_slug": "easter-bunny-bike",
+      "prompt": "A cheerful Easter bunny riding a bicycle with a basket full of colorful Easter eggs, flowers in the wheel spokes, leaving a trail of eggs.",
+      "category": "paques",
+      "added_at": "2026-03-28T19:48:00.374372+00:00"
+    },
+    {
+      "fr_slug": "paques-cloches-rubans",
+      "en_slug": "easter-bells-ribbons",
+      "prompt": "Three Easter bells decorated with ribbons and spring flowers, tied together in a bouquet, surrounded by flying butterflies and lily blossoms.",
+      "category": "paques",
+      "added_at": "2026-03-28T19:48:00.374379+00:00"
+    },
+    {
+      "fr_slug": "paques-jardiniere-fleurs",
+      "en_slug": "easter-flower-pot",
+      "prompt": "A large terracotta pot overflowing with tulips, hyacinths, and daffodils, with a small Easter bunny peeking out from behind the flowers.",
+      "category": "paques",
+      "added_at": "2026-03-28T19:48:00.374385+00:00"
+    },
+    {
+      "fr_slug": "halloween-citrouille-souriante",
+      "en_slug": "halloween-jack-o-lantern",
+      "prompt": "A large carved Halloween pumpkin with a grinning triangular face, surrounded by autumn leaves, small ghost shapes, and bats flying above.",
+      "category": "halloween",
+      "added_at": "2026-03-28T19:48:00.374393+00:00"
+    },
+    {
+      "fr_slug": "halloween-sorciere-balai",
+      "en_slug": "halloween-witch-broomstick",
+      "prompt": "A friendly witch riding her broomstick across a full moon, wearing a pointed hat with stars, her black cat perched behind her among the clouds.",
+      "category": "halloween",
+      "added_at": "2026-03-28T19:48:00.374399+00:00"
+    },
+    {
+      "fr_slug": "halloween-fantome-rigolo",
+      "en_slug": "halloween-friendly-ghost",
+      "prompt": "A cute friendly ghost floating in a haunted house corridor, wearing a tiny witch hat, holding a trick-or-treat bucket shaped like a pumpkin.",
+      "category": "halloween",
+      "added_at": "2026-03-28T19:48:00.374406+00:00"
+    },
+    {
+      "fr_slug": "halloween-maison-hantee",
+      "en_slug": "halloween-haunted-house",
+      "prompt": "A spooky haunted house with broken windows, a crooked door, bats flying out, a full moon behind, and pumpkins along the front path.",
+      "category": "halloween",
+      "added_at": "2026-03-28T19:48:00.374414+00:00"
+    },
+    {
+      "fr_slug": "halloween-araignee-toile",
+      "en_slug": "halloween-spider-web",
+      "prompt": "A large decorative spider web with a friendly cartoon spider at the center, surrounded by crescent moons, stars, and small ghost shapes.",
+      "category": "halloween",
+      "added_at": "2026-03-28T19:48:00.374421+00:00"
+    },
+    {
+      "fr_slug": "halloween-chauve-souris",
+      "en_slug": "halloween-bats",
+      "prompt": "A family of cute cartoon bats hanging upside down from a tree branch, with a crescent moon, stars, and a haunted house in the background.",
+      "category": "halloween",
+      "added_at": "2026-03-28T19:48:00.374427+00:00"
+    },
+    {
+      "fr_slug": "halloween-chat-noir",
+      "en_slug": "halloween-black-cat",
+      "prompt": "A cute cat wearing a tiny witch hat, sitting on a fence with a full moon behind, surrounded by bats, stars, and carved pumpkins.",
+      "category": "halloween",
+      "added_at": "2026-03-28T19:48:00.374435+00:00"
+    },
+    {
+      "fr_slug": "halloween-bonbons-seau",
+      "en_slug": "halloween-candy-bucket",
+      "prompt": "A pumpkin-shaped trick-or-treat bucket overflowing with wrapped candies, lollipops, and chocolate, surrounded by small ghosts and fall leaves.",
+      "category": "halloween",
+      "added_at": "2026-03-28T19:48:00.374443+00:00"
+    },
+    {
+      "fr_slug": "halloween-momie-bandages",
+      "en_slug": "halloween-mummy",
+      "prompt": "A friendly cartoon mummy wrapped in bandages, with big round eyes peeking out, holding a jack-o-lantern, surrounded by bats and cobwebs.",
+      "category": "halloween",
+      "added_at": "2026-03-28T19:48:00.374448+00:00"
+    },
+    {
+      "fr_slug": "halloween-potion-sorciere",
+      "en_slug": "halloween-witch-potion",
+      "prompt": "A bubbling witch cauldron with smoke rising, surrounded by potion bottles, spell books, a witch hat, and a grinning skull on a shelf.",
+      "category": "halloween",
+      "added_at": "2026-03-28T19:48:00.374456+00:00"
+    },
+    {
+      "fr_slug": "halloween-squelette-dansant",
+      "en_slug": "halloween-dancing-skeleton",
+      "prompt": "A friendly cartoon skeleton dancing in a graveyard, wearing a top hat and bow tie, with tombstones, bats, and a crescent moon behind.",
+      "category": "halloween",
+      "added_at": "2026-03-28T19:48:00.374462+00:00"
+    },
+    {
+      "fr_slug": "halloween-citrouilles-trio",
+      "en_slug": "halloween-pumpkin-trio",
+      "prompt": "Three Halloween pumpkins of different sizes, each with a unique carved expression — happy, scary, and surprised — surrounded by autumn leaves and bats.",
+      "category": "halloween",
+      "added_at": "2026-03-28T19:48:00.374470+00:00"
+    },
+    {
+      "fr_slug": "halloween-loup-garou",
+      "en_slug": "halloween-werewolf",
+      "prompt": "A cute cartoon werewolf howling at a full moon, wearing torn clothes, surrounded by autumn trees and flying bats, friendly expression.",
+      "category": "halloween",
+      "added_at": "2026-03-28T19:48:00.374477+00:00"
+    },
+    {
+      "fr_slug": "halloween-village-hante",
+      "en_slug": "halloween-haunted-village",
+      "prompt": "A Halloween village street with carved pumpkins, cobwebs on fences, a haunted house, bats and ghosts floating between bare trees under a full moon.",
+      "category": "halloween",
+      "added_at": "2026-03-28T19:48:00.374483+00:00"
+    },
+    {
+      "fr_slug": "halloween-vampire-enfant",
+      "en_slug": "halloween-vampire-kid",
+      "prompt": "A cute little vampire kid in a black cape with a turned-up collar, tiny fangs and bat wings, holding a pumpkin bucket, friendly smile.",
+      "category": "halloween",
+      "added_at": "2026-03-28T19:48:00.374490+00:00"
+    },
+    {
+      "fr_slug": "halloween-citrouille-araignee",
+      "en_slug": "halloween-pumpkin-spider",
+      "prompt": "A grinning carved pumpkin with a spider crawling on top, cobwebs draped across it, small bats and stars decorating the surrounding scene.",
+      "category": "halloween",
+      "added_at": "2026-03-28T19:48:00.374498+00:00"
+    },
+    {
+      "fr_slug": "noel-pere-noel",
+      "en_slug": "christmas-santa-claus",
+      "prompt": "A jolly Santa Claus carrying a large sack of gifts on his shoulder, wearing his classic suit with belt and hat, surrounded by snowflakes.",
+      "category": "noel",
+      "added_at": "2026-03-28T19:48:00.374506+00:00"
+    },
+    {
+      "fr_slug": "noel-sapin-decore",
+      "en_slug": "christmas-decorated-tree",
+      "prompt": "A tall Christmas tree decorated with baubles, candy canes, stars, tinsel garlands, and a large star on top, gifts piled underneath.",
+      "category": "noel",
+      "added_at": "2026-03-28T19:48:00.374512+00:00"
+    },
+    {
+      "fr_slug": "noel-bonhomme-neige",
+      "en_slug": "christmas-snowman",
+      "prompt": "A friendly snowman with a carrot nose, coal buttons, striped scarf, top hat, and stick arms, surrounded by snowflakes and pine trees.",
+      "category": "noel",
+      "added_at": "2026-03-28T19:48:00.374519+00:00"
+    },
+    {
+      "fr_slug": "noel-renne-Rudolf",
+      "en_slug": "christmas-reindeer-rudolph",
+      "prompt": "A cute reindeer with a glowing round nose, wearing jingle bells around the neck, decorated antlers with holly, surrounded by snowflakes.",
+      "category": "noel",
+      "added_at": "2026-03-28T19:48:00.374528+00:00"
+    },
+    {
+      "fr_slug": "noel-cheminee-bas",
+      "en_slug": "christmas-fireplace-stockings",
+      "prompt": "A cozy stone fireplace with four stockings hung above, a fire burning inside, wrapped gifts on the floor, a Christmas tree beside, candles and holly.",
+      "category": "noel",
+      "added_at": "2026-03-28T19:48:00.374533+00:00"
+    },
+    {
+      "fr_slug": "noel-lutin-atelier",
+      "en_slug": "christmas-elf-workshop",
+      "prompt": "A cheerful Christmas elf in pointed hat and curly shoes, busy wrapping presents in a workshop full of toys, candy canes, and tools.",
+      "category": "noel",
+      "added_at": "2026-03-28T19:48:00.374541+00:00"
+    },
+    {
+      "fr_slug": "noel-couronne-houx",
+      "en_slug": "christmas-holly-wreath",
+      "prompt": "A circular Christmas wreath of holly leaves, berries, pine cones, cinnamon sticks, and a large red bow at the top, with small star ornaments.",
+      "category": "noel",
+      "added_at": "2026-03-28T19:48:00.374548+00:00"
+    },
+    {
+      "fr_slug": "noel-traineau-pere-noel",
+      "en_slug": "christmas-santa-sleigh",
+      "prompt": "Santa's sleigh pulled by flying reindeer across a starry night sky, silhouetted against a large full moon, a bag of gifts on the sleigh.",
+      "category": "noel",
+      "added_at": "2026-03-28T19:48:00.374554+00:00"
+    },
+    {
+      "fr_slug": "noel-ange-etoile",
+      "en_slug": "christmas-angel-star",
+      "prompt": "A sweet Christmas angel with large feathered wings, holding a glowing star, wearing a flowing gown with holly detail, snowflakes surrounding.",
+      "category": "noel",
+      "added_at": "2026-03-28T19:48:00.374561+00:00"
+    },
+    {
+      "fr_slug": "noel-biscuits-pain-epices",
+      "en_slug": "christmas-gingerbread-cookies",
+      "prompt": "A gingerbread house decorated with candy canes, gumdrops, icing swirls, a pretzel door, and gingerbread man cookies standing beside it.",
+      "category": "noel",
+      "added_at": "2026-03-28T19:48:00.374570+00:00"
+    },
+    {
+      "fr_slug": "noel-flocon-neige",
+      "en_slug": "christmas-snowflake",
+      "prompt": "Four large intricate snowflakes, each with a unique six-branched crystal pattern, surrounded by smaller snowflakes and star shapes.",
+      "category": "noel",
+      "added_at": "2026-03-28T19:48:00.374577+00:00"
+    },
+    {
+      "fr_slug": "noel-bas-cadeaux",
+      "en_slug": "christmas-stocking-gifts",
+      "prompt": "A large Christmas stocking overflowing with gifts — a toy bear, candy canes, a small wrapped box, an apple, and a candy lollipop peeking out.",
+      "category": "noel",
+      "added_at": "2026-03-28T19:48:00.374585+00:00"
+    },
+    {
+      "fr_slug": "noel-etoile-bethleem",
+      "en_slug": "christmas-star-bethlehem",
+      "prompt": "A large glowing nativity star above a simple manger scene with the baby in a crib, a donkey and ox, hay bales, and soft radiant light rays.",
+      "category": "noel",
+      "added_at": "2026-03-28T19:48:00.374593+00:00"
+    },
+    {
+      "fr_slug": "noel-bonbon-canne",
+      "en_slug": "christmas-candy-cane",
+      "prompt": "A decorative arrangement of large candy canes tied with a bow, holly leaves, berries, and jingle bells, surrounded by snowflake decorations.",
+      "category": "noel",
+      "added_at": "2026-03-28T19:48:00.374598+00:00"
+    },
+    {
+      "fr_slug": "noel-hiver-village",
+      "en_slug": "christmas-winter-village",
+      "prompt": "A charming snowy village with decorated shop windows, a lit Christmas tree in the square, people ice skating, smoke from chimneys, snowflakes falling.",
+      "category": "noel",
+      "added_at": "2026-03-28T19:48:00.374604+00:00"
+    },
+    {
+      "fr_slug": "champignons-amanite-mouchetee",
+      "en_slug": "mushrooms-spotted-toadstool",
+      "prompt": "A large classic red mushroom with white spots, surrounded by small ferns, dewdrops, and tiny snails exploring the forest floor.",
+      "category": "champignons",
+      "added_at": "2026-03-28T19:48:00.374611+00:00"
+    },
+    {
+      "fr_slug": "champignons-maison-elfe",
+      "en_slug": "mushrooms-elf-house",
+      "prompt": "A large mushroom with a tiny carved door and round windows, flower boxes on the windowsills, a garden path, and a firefly lantern hanging at the entrance.",
+      "category": "champignons",
+      "added_at": "2026-03-28T19:48:00.374617+00:00"
+    },
+    {
+      "fr_slug": "champignons-famille-foret",
+      "en_slug": "mushrooms-forest-family",
+      "prompt": "A family of five mushrooms of varying sizes growing together, each with a unique face — happy, surprised, sleepy — surrounded by autumn leaves.",
+      "category": "champignons",
+      "added_at": "2026-03-28T19:48:00.374623+00:00"
+    },
+    {
+      "fr_slug": "champignons-morille-fantaisie",
+      "en_slug": "mushrooms-fantasy-morel",
+      "prompt": "A fantastical morel mushroom with an intricately patterned honeycomb cap, surrounded by spiral ferns, dewdrop beads, and woodland flowers.",
+      "category": "champignons",
+      "added_at": "2026-03-28T19:48:00.374629+00:00"
+    },
+    {
+      "fr_slug": "champignons-parapluie-pluie",
+      "en_slug": "mushrooms-umbrella-rain",
+      "prompt": "A large mushroom used as an umbrella by a cute snail and a frog sheltering underneath from the rain, with rain drops and puddles around.",
+      "category": "champignons",
+      "added_at": "2026-03-28T19:48:00.374636+00:00"
+    },
+    {
+      "fr_slug": "champignons-spirale-decoratif",
+      "en_slug": "mushrooms-decorative-spiral",
+      "prompt": "A repeating decorative pattern of mushrooms, ferns, stars, and moon phases arranged in a circular spiral design, detailed botanical illustration.",
+      "category": "champignons",
+      "added_at": "2026-03-28T19:48:00.374642+00:00"
+    },
+    {
+      "fr_slug": "champignons-village-champignon",
+      "en_slug": "mushrooms-mushroom-village",
+      "prompt": "A whimsical mushroom village with five different mushroom houses of various sizes and types, connected by mossy paths, flowers, and tiny bridges.",
+      "category": "champignons",
+      "added_at": "2026-03-28T19:48:00.374648+00:00"
+    },
+    {
+      "fr_slug": "champignons-lucioles-nuit",
+      "en_slug": "mushrooms-firefly-night",
+      "prompt": "A cluster of glowing mushrooms at night, with firefly lights dancing around them, a crescent moon above, and intricate fern fronds in the foreground.",
+      "category": "champignons",
+      "added_at": "2026-03-28T19:48:00.374654+00:00"
+    },
+    {
+      "fr_slug": "champignons-lion-criniere",
+      "en_slug": "mushrooms-lion-mane",
+      "prompt": "A beautiful lion mane mushroom with cascading icicle-like tendrils, growing from a mossy log, surrounded by wild herbs and small forest flowers.",
+      "category": "champignons",
+      "added_at": "2026-03-28T19:48:00.374660+00:00"
+    },
+    {
+      "fr_slug": "champignons-cueilleur-panier",
+      "en_slug": "mushrooms-basket-forager",
+      "prompt": "A wicker basket overflowing with different types of mushrooms — chanterelles, boletes, oysters — with autumn leaves, acorns, and pine needles around it.",
+      "category": "champignons",
+      "added_at": "2026-03-28T19:48:00.374666+00:00"
+    },
+    {
+      "fr_slug": "vitrail-rosace-cathedrale",
+      "en_slug": "stained-glass-rose-window",
+      "prompt": "A large circular stained glass rose window design with geometric petals radiating from the center, bold lead came borders, intricate compartmented sections.",
+      "category": "vitrail",
+      "added_at": "2026-03-28T19:48:00.374672+00:00"
+    },
+    {
+      "fr_slug": "vitrail-colombe-lumiere",
+      "en_slug": "stained-glass-dove-light",
+      "prompt": "A stained glass dove in flight with outstretched wings, bold black lead borders dividing the body into geometric color sections, sunburst background.",
+      "category": "vitrail",
+      "added_at": "2026-03-28T19:48:00.374678+00:00"
+    },
+    {
+      "fr_slug": "vitrail-fleurs-geometriques",
+      "en_slug": "stained-glass-geometric-flowers",
+      "prompt": "A stained glass panel with three large stylized flowers, each petal a separate geometric section with bold black borders, Art Nouveau style.",
+      "category": "vitrail",
+      "added_at": "2026-03-28T19:48:00.374684+00:00"
+    },
+    {
+      "fr_slug": "vitrail-paon-plumes",
+      "en_slug": "stained-glass-peacock",
+      "prompt": "A stained glass peacock with a fan of elaborate tail feathers, each feather eye divided into bold geometric sections, architectural lead came borders.",
+      "category": "vitrail",
+      "added_at": "2026-03-28T19:48:00.374690+00:00"
+    },
+    {
+      "fr_slug": "vitrail-arbre-vie",
+      "en_slug": "stained-glass-tree-of-life",
+      "prompt": "A stained glass tree of life with spreading branches and roots, each section between branches a separate bold-bordered panel, Celtic knotwork elements.",
+      "category": "vitrail",
+      "added_at": "2026-03-28T19:48:00.374695+00:00"
+    },
+    {
+      "fr_slug": "vitrail-papillon-ailes",
+      "en_slug": "stained-glass-butterfly-wings",
+      "prompt": "A large stained glass butterfly with symmetrical wings divided into bold geometric sections by lead came borders, detailed vein patterns, ornamental antennae.",
+      "category": "vitrail",
+      "added_at": "2026-03-28T19:48:00.374701+00:00"
+    },
+    {
+      "fr_slug": "vitrail-mandala-solaire",
+      "en_slug": "stained-glass-solar-mandala",
+      "prompt": "A circular stained glass solar mandala with radiating sun rays, each section bordered by bold lead lines, concentric circles of geometric patterns.",
+      "category": "vitrail",
+      "added_at": "2026-03-28T19:48:00.374710+00:00"
+    },
+    {
+      "fr_slug": "vitrail-poisson-eau",
+      "en_slug": "stained-glass-fish-water",
+      "prompt": "Two large stained glass fish swimming in opposite directions, their scales each a separate geometric compartment, wave patterns filling the background.",
+      "category": "vitrail",
+      "added_at": "2026-03-28T19:48:00.374717+00:00"
+    },
+    {
+      "fr_slug": "vitrail-lune-etoiles",
+      "en_slug": "stained-glass-moon-stars",
+      "prompt": "A stained glass panel featuring a crescent moon and five-pointed stars, surrounded by geometric night sky sections with bold lead borders, Art Deco style.",
+      "category": "vitrail",
+      "added_at": "2026-03-28T19:48:00.374722+00:00"
+    },
+    {
+      "fr_slug": "vitrail-iris-botanique",
+      "en_slug": "stained-glass-iris",
+      "prompt": "A tall iris flower in stained glass style, each petal, sepal and leaf divided into bold geometric sections by lead came borders, graceful Art Nouveau curves.",
+      "category": "vitrail",
+      "added_at": "2026-03-28T19:48:00.374728+00:00"
+    },
+    {
+      "fr_slug": "zodiaque-belier",
+      "en_slug": "zodiac-aries",
+      "prompt": "A circular zodiac mandala for Aries, centered on a ram's head with curved horns, surrounded by radiating fire symbols and Mars planetary symbols, fine detailed adult line art.",
+      "category": "zodiaque",
+      "added_at": "2026-03-28T19:48:00.374735+00:00"
+    },
+    {
+      "fr_slug": "zodiaque-taureau",
+      "en_slug": "zodiac-taurus",
+      "prompt": "A circular zodiac mandala for Taurus, centered on a bull's face with curved horns, surrounded by floral earth symbols and Venus symbols, fine detailed adult line art.",
+      "category": "zodiaque",
+      "added_at": "2026-03-28T19:48:00.374740+00:00"
+    },
+    {
+      "fr_slug": "zodiaque-gemeaux",
+      "en_slug": "zodiac-gemini",
+      "prompt": "A circular zodiac mandala for Gemini, centered on twin faces in profile facing each other, surrounded by air current patterns and Mercury symbols, detailed adult line art.",
+      "category": "zodiaque",
+      "added_at": "2026-03-28T19:48:00.374746+00:00"
+    },
+    {
+      "fr_slug": "zodiaque-cancer",
+      "en_slug": "zodiac-cancer",
+      "prompt": "A circular zodiac mandala for Cancer, centered on a crab with detailed claws, surrounded by crescent moons and water wave patterns, fine detailed adult line art.",
+      "category": "zodiaque",
+      "added_at": "2026-03-28T19:48:00.374752+00:00"
+    },
+    {
+      "fr_slug": "zodiaque-lion",
+      "en_slug": "zodiac-leo",
+      "prompt": "A circular zodiac mandala for Leo, centered on a lion's face with a flowing mane forming the mandala pattern, surrounded by sun rays and Sun symbols, adult line art.",
+      "category": "zodiaque",
+      "added_at": "2026-03-28T19:48:00.374758+00:00"
+    },
+    {
+      "fr_slug": "zodiaque-vierge",
+      "en_slug": "zodiac-virgo",
+      "prompt": "A circular zodiac mandala for Virgo, featuring a female figure surrounded by flowing wheat sheaves and botanical flowers, fine detailed adult line art.",
+      "category": "zodiaque",
+      "added_at": "2026-03-28T19:48:00.374764+00:00"
+    },
+    {
+      "fr_slug": "zodiaque-balance",
+      "en_slug": "zodiac-libra",
+      "prompt": "A circular zodiac mandala for Libra, centered on ornate balance scales, surrounded by air symbols, feathers, and Venus symbols in symmetrical mandala pattern.",
+      "category": "zodiaque",
+      "added_at": "2026-03-28T19:48:00.374773+00:00"
+    },
+    {
+      "fr_slug": "zodiaque-scorpion",
+      "en_slug": "zodiac-scorpio",
+      "prompt": "A circular zodiac mandala for Scorpio, centered on a scorpion with curved tail forming part of the mandala design, surrounded by water symbols and Pluto glyphs.",
+      "category": "zodiaque",
+      "added_at": "2026-03-28T19:48:00.374779+00:00"
+    },
+    {
+      "fr_slug": "zodiaque-sagittaire",
+      "en_slug": "zodiac-sagittarius",
+      "prompt": "A circular zodiac mandala for Sagittarius, featuring a centaur archer with a drawn bow forming the center, surrounded by fire and Jupiter symbols, detailed adult line art.",
+      "category": "zodiaque",
+      "added_at": "2026-03-28T19:48:00.374786+00:00"
+    },
+    {
+      "fr_slug": "zodiaque-capricorne",
+      "en_slug": "zodiac-capricorn",
+      "prompt": "A circular zodiac mandala for Capricorn, featuring a mountain goat with fish tail, surrounded by earth symbols and Saturn rings, intricate adult line art.",
+      "category": "zodiaque",
+      "added_at": "2026-03-28T19:48:00.374791+00:00"
+    },
+    {
+      "fr_slug": "zodiaque-verseau",
+      "en_slug": "zodiac-aquarius",
+      "prompt": "A circular zodiac mandala for Aquarius, featuring water waves flowing from an urn in the center, surrounded by air symbols and Uranus glyphs, detailed adult line art.",
+      "category": "zodiaque",
+      "added_at": "2026-03-28T19:48:00.374797+00:00"
+    },
+    {
+      "fr_slug": "zodiaque-poissons",
+      "en_slug": "zodiac-pisces",
+      "prompt": "A circular zodiac mandala for Pisces, with two fish swimming in a yin-yang circle at the center, surrounded by water symbols and Neptune tridents, adult line art.",
+      "category": "zodiaque",
+      "added_at": "2026-03-28T19:48:00.374805+00:00"
+    },
+    {
+      "fr_slug": "affirmations-cadre-floral-1",
+      "en_slug": "affirmations-floral-frame-1",
+      "prompt": "An ornate rectangular floral border frame with roses, leaves, and swirling vines forming a thick decorative border, empty white space in the center for writing.",
+      "category": "affirmations",
+      "added_at": "2026-03-28T19:48:00.374812+00:00"
+    },
+    {
+      "fr_slug": "affirmations-soleil-rayons",
+      "en_slug": "affirmations-sunshine-rays",
+      "prompt": "A large decorative sun with detailed petal-like rays, surrounded by small stars and dots, a clear central oval space, for adult coloring with motivational use.",
+      "category": "affirmations",
+      "added_at": "2026-03-28T19:48:00.374819+00:00"
+    },
+    {
+      "fr_slug": "affirmations-mandala-coeur",
+      "en_slug": "affirmations-heart-mandala",
+      "prompt": "A heart-shaped mandala with intricate floral and geometric patterns inside the heart, radiating decorative elements around the edges, fine adult line art.",
+      "category": "affirmations",
+      "added_at": "2026-03-28T19:48:00.374827+00:00"
+    },
+    {
+      "fr_slug": "affirmations-plume-botanique",
+      "en_slug": "affirmations-botanical-feather",
+      "prompt": "A large ornate feather with botanical flowers and leaves growing from the barbs, vines curling around the quill, decorative border, fine detailed adult line art.",
+      "category": "affirmations",
+      "added_at": "2026-03-28T19:48:00.374835+00:00"
+    },
+    {
+      "fr_slug": "affirmations-cercle-nature",
+      "en_slug": "affirmations-nature-circle",
+      "prompt": "A circular botanical frame of intertwined branches, leaves, flowers, and berries forming a thick wreath border, an open circular center, detailed line art.",
+      "category": "affirmations",
+      "added_at": "2026-03-28T19:48:00.374842+00:00"
+    },
+    {
+      "fr_slug": "affirmations-lotus-zen",
+      "en_slug": "affirmations-lotus-zen",
+      "prompt": "A large open lotus flower with intricate petal details, surrounded by concentric ripples and small geometric dots, a zen-inspired decorative design for adult coloring.",
+      "category": "affirmations",
+      "added_at": "2026-03-28T19:48:00.374850+00:00"
+    },
+    {
+      "fr_slug": "affirmations-montagnes-soleil",
+      "en_slug": "affirmations-mountain-sunrise",
+      "prompt": "A minimalist mountain range silhouette with radiating sunrise lines above, surrounded by a decorative border of small geometric patterns and dots, for adult coloring.",
+      "category": "affirmations",
+      "added_at": "2026-03-28T19:48:00.374858+00:00"
+    },
+    {
+      "fr_slug": "affirmations-papillon-fleurs",
+      "en_slug": "affirmations-butterfly-flowers",
+      "prompt": "A large ornate butterfly with detailed wings filled with flowers, surrounded by a decorative floral border, central space for inscription, fine adult line art.",
+      "category": "affirmations",
+      "added_at": "2026-03-28T19:48:00.374866+00:00"
+    },
+    {
+      "fr_slug": "affirmations-lune-etoiles",
+      "en_slug": "affirmations-moon-stars",
+      "prompt": "A crescent moon with a detailed face, surrounded by ornate stars, constellations, and cosmic swirls forming a circular decorative composition, detailed adult line art.",
+      "category": "affirmations",
+      "added_at": "2026-03-28T19:48:00.374873+00:00"
+    },
+    {
+      "fr_slug": "affirmations-arc-en-ciel",
+      "en_slug": "affirmations-rainbow-hope",
+      "prompt": "A decorative rainbow arch with detailed stripes, surrounded by ornate clouds filled with floral patterns, raindrops as teardrops, and sun peeking through.",
+      "category": "affirmations",
+      "added_at": "2026-03-28T19:48:00.374881+00:00"
+    }
+  ],
+  "completed": [],
+  "failed": [],
+  "daily_counts": {}
+}
