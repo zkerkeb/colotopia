@@ -25,6 +25,7 @@ export const kidsCategories = [
   'nourriture',
   'pirates',
   'robots',
+  'kawaii',
 ] as const;
 
 export const adultCategories = [
@@ -62,6 +63,7 @@ export const categoryIcons: Record<Category, string> = {
   'nourriture': '🍕',
   'pirates': '🏴‍☠️',
   'robots': '🤖',
+  'kawaii': '🌸',
   'mandalas': '🔮',
   'mosaiques': '🧩',
   'abstrait': '🎨',
@@ -92,6 +94,7 @@ export const categoryColors: Record<Category, { bg: string; light: string; text:
   'nourriture':            { bg: '#fb923c', light: '#fff7ed', text: '#9a3412', gradient: 'linear-gradient(135deg, #fff7ed 0%, #fdba74 100%)' },
   'pirates':               { bg: '#64748b', light: '#f8fafc', text: '#1e293b', gradient: 'linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%)' },
   'robots':                { bg: '#38bdf8', light: '#f0f9ff', text: '#075985', gradient: 'linear-gradient(135deg, #f0f9ff 0%, #7dd3fc 100%)' },
+  'kawaii':                { bg: '#fb7185', light: '#fff1f2', text: '#9f1239', gradient: 'linear-gradient(135deg, #fff1f2 0%, #fecdd3 100%)' },
   'mandalas':              { bg: '#a855f7', light: '#faf5ff', text: '#6b21a8', gradient: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #3730a3 100%)' },
   'mosaiques':             { bg: '#6366f1', light: '#eef2ff', text: '#3730a3', gradient: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%)' },
   'abstrait':              { bg: '#ec4899', light: '#fdf2f8', text: '#9d174d', gradient: 'linear-gradient(135deg, #1e1b4b 0%, #581c87 50%, #7e22ce 100%)' },
@@ -139,6 +142,7 @@ const translations: Record<string, Record<Locale, string>> = {
   'category.nourriture': { fr: 'Nourriture', en: 'Food' },
   'category.pirates': { fr: 'Pirates', en: 'Pirates' },
   'category.robots': { fr: 'Robots', en: 'Robots' },
+  'category.kawaii': { fr: 'Kawaii', en: 'Kawaii' },
   'category.paysages': { fr: 'Paysages', en: 'Landscapes' },
   'coloring.download': { fr: 'Télécharger le PDF', en: 'Download PDF' },
   'coloring.print': { fr: 'Imprimer', en: 'Print' },
@@ -283,6 +287,10 @@ const translations: Record<string, Record<Locale, string>> = {
     fr: '<h2>Coloriages pirates gratuits à imprimer</h2><p>À l\'abordage ! Notre collection de coloriages pirates transporte les enfants dans un monde d\'aventures maritimes. Découvrez des <a href="/fr/coloriage/pirates-navire">navires</a> majestueux, des <a href="/fr/coloriage/pirates-ile">îles</a> mystérieuses, des <a href="/fr/coloriage/pirates-tresor">trésors</a> enfouis, des <a href="/fr/coloriage/pirates-carte">cartes au trésor</a> et des <a href="/fr/coloriage/pirates-perroquet">perroquets</a> fidèles compagnons. Chaque dessin est une invitation à l\'aventure et à l\'imagination.</p><h2>Naviguer et imaginer</h2><p>Les pirates fascinent les enfants depuis des générations. En coloriant ces personnages audacieux et leurs univers, les enfants développent leur imagination narrative et s\'inventent des histoires de haute mer. Les coloriages pirates sont parfaits pour les fêtes d\'anniversaire à thème, les activités de vacances ou simplement pour s\'évader dans un monde d\'aventure. Nos coloriages pirates sont disponibles gratuitement au format A4, prêts à imprimer pour de grandes aventures créatives.</p>',
     en: '<h2>Free printable pirate coloring pages</h2><p>Ahoy, mateys! Our pirate coloring page collection transports children into a world of maritime adventures. Discover majestic <a href="/en/coloring/pirates-ship">ships</a>, mysterious <a href="/en/coloring/pirates-island">islands</a>, buried <a href="/en/coloring/pirates-treasure">treasures</a>, <a href="/en/coloring/pirates-map">treasure maps</a>, and faithful <a href="/en/coloring/pirates-parrot">parrot</a> companions. Each drawing is an invitation to adventure and imagination.</p><h2>Navigate and imagine</h2><p>Pirates have fascinated children for generations. By coloring these bold characters and their worlds, children develop their narrative imagination and invent stories of the high seas. Pirate coloring pages are perfect for themed birthday parties, vacation activities, or simply escaping into a world of adventure. Our pirate coloring pages are available for free in A4 format, ready to print for great creative adventures.</p>',
   },
+  'category.kawaii.seoText': {
+    fr: '<h2>Coloriages kawaii gratuits à imprimer</h2><p>Kawaii (かわいい) signifie « mignon » en japonais — et nos coloriages kawaii sont exactement ça : des personnages aux grands yeux ronds, aux joues roses et aux sourires irrésistibles ! Découvrez une <a href="/fr/coloriage/kawaii-fraise">fraise kawaii</a> avec un visage adorable, un <a href="/fr/coloriage/kawaii-chat">chat kawaii</a> aux yeux brillants, une <a href="/fr/coloriage/kawaii-licorne">licorne kawaii</a> avec une crinière arc-en-ciel, et bien d\'autres personnages rigolos. Le style kawaii est né au Japon dans les années 70 et a conquis le monde entier grâce à son esthétique douce, positive et réconfortante.</p><h2>Le kawaii, un univers de douceur</h2><p>Les coloriages kawaii sont parfaits pour les enfants qui aiment les personnages mignons et les couleurs pastel. En coloriant un <a href="/fr/coloriage/kawaii-cupcake">cupcake kawaii</a> ou un <a href="/fr/coloriage/kawaii-panda">panda kawaii</a>, les enfants s\'expriment librement et développent leur sens de l\'esthétique. Ces dessins aux formes arrondies et aux visages expressifs sont faciles à colorier dès 3 ans. Nos coloriages kawaii sont disponibles gratuitement au format A4, prêts à imprimer pour des séances créatives pleines de douceur et de bonne humeur.</p>',
+    en: '<h2>Free printable kawaii coloring pages</h2><p>Kawaii (かわいい) means "cute" in Japanese — and our kawaii coloring pages are exactly that: characters with big round eyes, rosy cheeks and irresistible smiles! Discover a <a href="/en/coloring/kawaii-strawberry">kawaii strawberry</a> with an adorable face, a <a href="/en/coloring/kawaii-cat">kawaii cat</a> with sparkling eyes, a <a href="/en/coloring/kawaii-unicorn">kawaii unicorn</a> with a rainbow mane, and many more lovable characters. The kawaii style was born in Japan in the 1970s and has conquered the world with its soft, positive and comforting aesthetic.</p><h2>Kawaii, a world of sweetness</h2><p>Kawaii coloring pages are perfect for children who love cute characters and pastel colors. By coloring a <a href="/en/coloring/kawaii-cupcake">kawaii cupcake</a> or a <a href="/en/coloring/kawaii-panda">kawaii panda</a>, children express themselves freely and develop their aesthetic sense. These drawings with rounded shapes and expressive faces are easy to color from age 3. Our kawaii coloring pages are available for free in A4 format, ready to print for creative sessions full of sweetness and good cheer.</p>',
+  },
   'category.robots.seoText': {
     fr: '<h2>Coloriages robots gratuits à imprimer</h2><p>Bienvenue dans le futur ! Nos coloriages robots proposent des machines amicales et créatives à colorier. Découvrez un <a href="/fr/coloriage/robots-pompier">robot pompier</a>, un <a href="/fr/coloriage/robots-danseur">robot danseur</a>, un <a href="/fr/coloriage/robots-jardinier">robot jardinier</a>, un <a href="/fr/coloriage/robots-chef">robot chef cuisinier</a> et un <a href="/fr/coloriage/robots-astronaute">robot astronaute</a>. Chaque robot a sa propre personnalité et son propre métier, montrant que la technologie peut être amusante et créative.</p><h2>Technologie et créativité</h2><p>Les coloriages robots stimulent l\'imagination des enfants pour la science et la technologie. En coloriant ces personnages mécaniques attachants, les enfants explorent des concepts de robotique et d\'intelligence artificielle de manière ludique. Ces dessins sont parfaits pour les passionnés de science-fiction, les ateliers STEM et tous les petits inventeurs. Nos coloriages robots sont disponibles gratuitement au format A4, prêts à imprimer pour des aventures technologiques colorées.</p>',
     en: '<h2>Free printable robot coloring pages</h2><p>Welcome to the future! Our robot coloring pages feature friendly and creative machines to color. Discover a <a href="/en/coloring/robots-firefighter">firefighter robot</a>, a <a href="/en/coloring/robots-dancer">dancing robot</a>, a <a href="/en/coloring/robots-gardener">gardener robot</a>, a <a href="/en/coloring/robots-chef">chef robot</a>, and an <a href="/en/coloring/robots-astronaut">astronaut robot</a>. Each robot has its own personality and profession, showing that technology can be fun and creative.</p><h2>Technology and creativity</h2><p>Robot coloring pages stimulate children\'s imagination for science and technology. By coloring these endearing mechanical characters, children explore concepts of robotics and artificial intelligence in a playful way. These drawings are perfect for science fiction fans, STEM workshops, and all young inventors. Our robot coloring pages are available for free in A4 format, ready to print for colorful technological adventures.</p>',
@@ -355,6 +363,7 @@ const enSlugs: Record<Category, string> = {
   nourriture: 'food',
   pirates: 'pirates',
   robots: 'robots',
+  kawaii: 'kawaii',
   paysages: 'landscapes',
 };
 

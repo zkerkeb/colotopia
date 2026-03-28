@@ -3211,6 +3211,168 @@ categories:
         en_tags: ["vegetables", "carrot", "broccoli", "kids"]
         prompt: "A wicker basket overflowing with cartoon carrots, broccoli, tomatoes, corn, and peppers."
 
+  kawaii:
+    subjects:
+      - fr_slug: kawaii-chat
+        en_slug: kawaii-cat
+        fr_title: "Chat kawaii"
+        en_title: "Kawaii Cat"
+        fr_tags: ["kawaii", "chat", "mignon", "enfant"]
+        en_tags: ["kawaii", "cat", "cute", "kids"]
+        prompt: "A chubby cat with huge sparkling eyes, tiny nose, rosy cheeks, sitting with a curled tail."
+
+      - fr_slug: kawaii-fraise
+        en_slug: kawaii-strawberry
+        fr_title: "Fraise kawaii"
+        en_title: "Kawaii Strawberry"
+        fr_tags: ["kawaii", "fraise", "fruit", "mignon"]
+        en_tags: ["kawaii", "strawberry", "fruit", "cute"]
+        prompt: "A round kawaii strawberry with big shiny eyes, rosy cheeks, tiny smile, leafy top, simple outline."
+
+      - fr_slug: kawaii-panda
+        en_slug: kawaii-panda
+        fr_title: "Panda kawaii"
+        en_title: "Kawaii Panda"
+        fr_tags: ["kawaii", "panda", "ours", "mignon"]
+        en_tags: ["kawaii", "panda", "bear", "cute"]
+        prompt: "A chubby round panda with huge eyes, black eye patches, tiny ears, sitting with bamboo, big smile."
+
+      - fr_slug: kawaii-glace
+        en_slug: kawaii-ice-cream
+        fr_title: "Glace kawaii"
+        en_title: "Kawaii Ice Cream"
+        fr_tags: ["kawaii", "glace", "dessert", "mignon"]
+        en_tags: ["kawaii", "ice-cream", "dessert", "cute"]
+        prompt: "An ice cream cone with a big scoop, kawaii face with shiny eyes and smile, waffle cone, sprinkles on top."
+
+      - fr_slug: kawaii-nuage
+        en_slug: kawaii-cloud
+        fr_title: "Nuage kawaii"
+        en_title: "Kawaii Cloud"
+        fr_tags: ["kawaii", "nuage", "ciel", "mignon"]
+        en_tags: ["kawaii", "cloud", "sky", "cute"]
+        prompt: "A fluffy round cloud with a sleepy kawaii face, half-closed eyes, rosy cheeks, small raindrops below."
+
+      - fr_slug: kawaii-renard
+        en_slug: kawaii-fox
+        fr_title: "Renard kawaii"
+        en_title: "Kawaii Fox"
+        fr_tags: ["kawaii", "renard", "animaux", "mignon"]
+        en_tags: ["kawaii", "fox", "animals", "cute"]
+        prompt: "A round fluffy fox with huge sparkling eyes, tiny pointed ears, bushy tail wrapped around, big cheeks."
+
+      - fr_slug: kawaii-cupcake
+        en_slug: kawaii-cupcake
+        fr_title: "Cupcake kawaii"
+        en_title: "Kawaii Cupcake"
+        fr_tags: ["kawaii", "cupcake", "gateau", "mignon"]
+        en_tags: ["kawaii", "cupcake", "cake", "cute"]
+        prompt: "A kawaii cupcake with swirled frosting, big shiny eyes, rosy cheeks, heart sprinkles, polka-dot wrapper."
+
+      - fr_slug: kawaii-licorne
+        en_slug: kawaii-unicorn
+        fr_title: "Licorne kawaii"
+        en_title: "Kawaii Unicorn"
+        fr_tags: ["kawaii", "licorne", "magique", "mignon"]
+        en_tags: ["kawaii", "unicorn", "magic", "cute"]
+        prompt: "A round kawaii unicorn with huge eyes, spiral horn, fluffy mane with stars, sitting with curled legs."
+
+      - fr_slug: kawaii-soleil
+        en_slug: kawaii-sun
+        fr_title: "Soleil kawaii"
+        en_title: "Kawaii Sun"
+        fr_tags: ["kawaii", "soleil", "nature", "mignon"]
+        en_tags: ["kawaii", "sun", "nature", "cute"]
+        prompt: "A round kawaii sun with big happy eyes, rosy cheeks, smile, and chunky rounded rays around it."
+
+      - fr_slug: kawaii-koala
+        en_slug: kawaii-koala
+        fr_title: "Koala kawaii"
+        en_title: "Kawaii Koala"
+        fr_tags: ["kawaii", "koala", "animaux", "mignon"]
+        en_tags: ["kawaii", "koala", "animals", "cute"]
+        prompt: "Cute kawaii koala cartoon, big round ears, large eyes, smiling, thick black outline on white background, no shading."
+
+      - fr_slug: kawaii-etoile
+        en_slug: kawaii-star
+        fr_title: "Etoile kawaii"
+        en_title: "Kawaii Star"
+        fr_tags: ["kawaii", "etoile", "magie", "mignon"]
+        en_tags: ["kawaii", "star", "magic", "cute"]
+        prompt: "A kawaii five-pointed star with big round shiny eyes, rosy cheeks, happy smile, sparkle details."
+
+      - fr_slug: kawaii-ours
+        en_slug: kawaii-bear
+        fr_title: "Ours kawaii"
+        en_title: "Kawaii Bear"
+        fr_tags: ["kawaii", "ours", "animaux", "mignon"]
+        en_tags: ["kawaii", "bear", "animals", "cute"]
+        prompt: "A chubby round teddy bear with huge eyes, round ears, big rosy cheeks, small button nose, sitting."
+
+      - fr_slug: kawaii-pizza
+        en_slug: kawaii-pizza
+        fr_title: "Pizza kawaii"
+        en_title: "Kawaii Pizza"
+        fr_tags: ["kawaii", "pizza", "nourriture", "mignon"]
+        en_tags: ["kawaii", "pizza", "food", "cute"]
+        prompt: "A triangular pizza slice with kawaii face, big eyes, cheese dripping, mushroom and pepper toppings."
+
+      - fr_slug: kawaii-lune
+        en_slug: kawaii-moon
+        fr_title: "Lune kawaii"
+        en_title: "Kawaii Moon"
+        fr_tags: ["kawaii", "lune", "nuit", "mignon"]
+        en_tags: ["kawaii", "moon", "night", "cute"]
+        prompt: "A kawaii crescent moon with sleepy half-closed eyes and rosy cheeks, tiny stars around it, white background."
+
+      - fr_slug: kawaii-bebe-dragon
+        en_slug: kawaii-baby-dragon
+        fr_title: "Bebe dragon kawaii"
+        en_title: "Kawaii Baby Dragon"
+        fr_tags: ["kawaii", "dragon", "fantaisie", "mignon"]
+        en_tags: ["kawaii", "dragon", "fantasy", "cute"]
+        prompt: "A tiny round baby dragon with huge eyes, stubby wings, little horns, big smile, curled tail, sitting."
+
+      - fr_slug: kawaii-cactus
+        en_slug: kawaii-cactus
+        fr_title: "Cactus kawaii"
+        en_title: "Kawaii Cactus"
+        fr_tags: ["kawaii", "cactus", "plante", "mignon"]
+        en_tags: ["kawaii", "cactus", "plant", "cute"]
+        prompt: "A round kawaii cactus in a small pot with big shiny eyes, rosy cheeks, flower on top, small spines."
+
+      - fr_slug: kawaii-cerise
+        en_slug: kawaii-cherries
+        fr_title: "Cerises kawaii"
+        en_title: "Kawaii Cherries"
+        fr_tags: ["kawaii", "cerise", "fruit", "mignon"]
+        en_tags: ["kawaii", "cherries", "fruit", "cute"]
+        prompt: "A pair of round kawaii cherries on a stem, each with big eyes and rosy cheeks, happy faces."
+
+      - fr_slug: kawaii-dinosaure
+        en_slug: kawaii-dinosaur
+        fr_title: "Dinosaure kawaii"
+        en_title: "Kawaii Dinosaur"
+        fr_tags: ["kawaii", "dinosaure", "animaux", "mignon"]
+        en_tags: ["kawaii", "dinosaur", "animals", "cute"]
+        prompt: "A tiny chubby baby T-rex with huge round eyes, stubby arms, big smile, sitting on the ground."
+
+      - fr_slug: kawaii-requin
+        en_slug: kawaii-shark
+        fr_title: "Requin kawaii"
+        en_title: "Kawaii Shark"
+        fr_tags: ["kawaii", "requin", "mer", "mignon"]
+        en_tags: ["kawaii", "shark", "sea", "cute"]
+        prompt: "A round friendly kawaii shark with huge eyes, rosy cheeks, tiny dorsal fin, small cute teeth showing."
+
+      - fr_slug: kawaii-arc-en-ciel
+        en_slug: kawaii-rainbow
+        fr_title: "Arc-en-ciel kawaii"
+        en_title: "Kawaii Rainbow"
+        fr_tags: ["kawaii", "arc-en-ciel", "ciel", "mignon"]
+        en_tags: ["kawaii", "rainbow", "sky", "cute"]
+        prompt: "A kawaii rainbow arc with big sparkling eyes, rosy cheeks, smiling, small clouds on each end."
+
   # ---- Pirates extra ----
   pirates_extra:
     subjects:

@@ -1319,6 +1319,68 @@ const pillarContent: Partial<PillarRecord> = {
       relatedCategories: ['espace', 'vehicules', 'super-heros', 'drole'],
     },
   },
+  kawaii: {
+    fr: {
+      intro: "Kawaii (かわいい) signifie « mignon » en japonais, et nos coloriages kawaii capturent parfaitement cette esthétique douce et attachante. Grands yeux pétillants, joues roses, sourires irrésistibles : chaque personnage est conçu pour provoquer un « aww » instantané ! Fraises souriantes, chats aux yeux brillants, licornes rondelettes, dragons bébés — notre collection kawaii offre une variété infinie de sujets adorables pour les enfants qui aiment le mignon.",
+      ageRange: "3 à 10 ans",
+      benefits: [
+        "Développement de la motricité fine avec des formes rondes accessibles",
+        "Éveil à l'esthétique japonaise et à la culture kawaii",
+        "Expression émotionnelle à travers des personnages expressifs",
+        "Confiance créative grâce à des dessins simples et réussis",
+      ],
+      tips: [
+        "Utilisez des couleurs pastel douces : rose pâle, lavande, menthe, pêche",
+        "Laissez les yeux en blanc pour un effet brillant",
+        "Ajoutez des petits cœurs et des étoiles autour des personnages",
+      ],
+      faq: [
+        {
+          question: "C'est quoi le style kawaii ?",
+          answer: "Kawaii est un mot japonais qui signifie « mignon ». Le style kawaii se caractérise par des personnages aux grands yeux ronds, aux formes arrondies et aux expressions douces. Il est né au Japon dans les années 70 et s'est répandu dans le monde entier.",
+        },
+        {
+          question: "Dès quel âge peut-on colorier les coloriages kawaii ?",
+          answer: "Dès 3 ans ! Les formes rondes et les grands espaces à colorier sont parfaits pour les très jeunes enfants. Les détails des yeux et des joues restent simples et accessibles.",
+        },
+        {
+          question: "Quels sont les sujets kawaii disponibles ?",
+          answer: "Notre collection couvre une grande variété : animaux kawaii (chat, lapin, panda, renard), nourriture kawaii (fraise, glace, cupcake, pizza), objets kawaii (étoile, nuage, lune, soleil) et créatures fantastiques kawaii (licorne, dragon bébé).",
+        },
+      ],
+      relatedCategories: ['drole', 'animaux', 'contes', 'princesses-chevaliers'],
+    },
+    en: {
+      intro: "Kawaii (かわいい) means \"cute\" in Japanese, and our kawaii coloring pages perfectly capture this sweet and lovable aesthetic. Big sparkling eyes, rosy cheeks, irresistible smiles — every character is designed to provoke an instant \"aww\"! Smiling strawberries, bright-eyed cats, chubby unicorns, baby dragons — our kawaii collection offers endless adorable subjects for children who love all things cute.",
+      ageRange: "3 to 10 years",
+      benefits: [
+        "Fine motor skill development with accessible rounded shapes",
+        "Introduction to Japanese aesthetics and kawaii culture",
+        "Emotional expression through expressive characters",
+        "Creative confidence with simple, achievable drawings",
+      ],
+      tips: [
+        "Use soft pastel colors: pale pink, lavender, mint, peach",
+        "Leave the eyes white for a sparkling effect",
+        "Add tiny hearts and stars around the characters",
+      ],
+      faq: [
+        {
+          question: "What is the kawaii style?",
+          answer: "Kawaii is a Japanese word meaning \"cute\". The kawaii style is characterized by characters with big round eyes, rounded shapes, and soft expressions. It originated in Japan in the 1970s and has spread worldwide.",
+        },
+        {
+          question: "From what age can children color kawaii pages?",
+          answer: "From age 3! The rounded shapes and large coloring areas are perfect for very young children. The eye and cheek details remain simple and accessible.",
+        },
+        {
+          question: "What kawaii subjects are available?",
+          answer: "Our collection covers a wide variety: kawaii animals (cat, bunny, panda, fox), kawaii food (strawberry, ice cream, cupcake, pizza), kawaii objects (star, cloud, moon, sun), and kawaii fantasy creatures (unicorn, baby dragon).",
+        },
+      ],
+      relatedCategories: ['drole', 'animaux', 'contes', 'princesses-chevaliers'],
+    },
+  },
   mandalas: {
     fr: {
       intro: "Détendez-vous avec nos coloriages mandalas ! Ces motifs circulaires et symétriques offrent une expérience de coloriage méditative et apaisante. Du mandala simple pour les débutants au mandala complexe pour les experts, notre collection s'adresse aux adultes qui cherchent un moment de calme et de concentration. Le coloriage de mandalas est reconnu pour ses vertus anti-stress et ses bienfaits sur la santé mentale.",
