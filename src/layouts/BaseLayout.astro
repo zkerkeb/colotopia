@@ -364,6 +364,7 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
         max-width: var(--max-width-content);
         margin: 0 auto;
         padding: var(--space-8) var(--space-4);
+        overflow-x: clip; /* clip only — avoids creating a scroll container (unlike hidden) */
       }
 
       a {

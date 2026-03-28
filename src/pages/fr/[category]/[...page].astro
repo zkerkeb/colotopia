@@ -165,12 +165,16 @@ const structuredData = pillar && pillar.faq.length > 0
 </BaseLayout>
 
 <style>
-  /* Category hero banner */
+  /* Category hero banner — full-bleed within the max-width content box */
   .category-hero {
     position: relative;
     height: 200px;
     overflow: hidden;
     background: var(--category-accent);
+    /* Escape main's top padding and side padding */
+    margin-top: calc(-1 * var(--space-8));
+    margin-left: calc(-1 * var(--space-4));
+    margin-right: calc(-1 * var(--space-4));
     margin-bottom: 0;
   }
 
