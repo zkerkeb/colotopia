@@ -4268,3 +4268,803 @@ categories:
         fr_tags: ["automne", "feuilles", "champignon", "nature"]
         en_tags: ["autumn", "leaves", "mushroom", "nature"]
         prompt: "A detailed forest floor scene with intricate autumn leaves, acorns, mushrooms, and pine cones arranged in a decorative pattern, fine adult line art."
+
+  cottagecore:
+    subjects:
+      - fr_slug: cottagecore-chaumiere
+        en_slug: cottagecore-cottage
+        fr_title: "Chaumiere aux roses grimpantes"
+        en_title: "Rose Cottage"
+        fr_tags: ["chaumiere", "roses", "grimpantes", "jardin"]
+        en_tags: ["cottage", "roses", "climbing", "garden"]
+        prompt: "A cozy thatched cottage covered in climbing roses, with a wooden door, flower window boxes, and a winding garden path lined with wildflowers."
+
+      - fr_slug: cottagecore-theiere
+        en_slug: cottagecore-teapot
+        fr_title: "Theiere et bouquets"
+        en_title: "Vintage Teapot with Flowers"
+        fr_tags: ["theiere", "fleurs", "vintage", "botanique"]
+        en_tags: ["teapot", "flowers", "vintage", "botanical"]
+        prompt: "A vintage ceramic teapot with floral patterns, surrounded by a bouquet of wildflowers, honeybees, and scattered petals on a lace doily."
+
+      - fr_slug: cottagecore-champignon-maison
+        en_slug: cottagecore-mushroom-house
+        fr_title: "Maison champignon enchantee"
+        en_title: "Enchanted Mushroom House"
+        fr_tags: ["champignon", "maison", "foret", "feerique"]
+        en_tags: ["mushroom", "house", "forest", "fairy"]
+        prompt: "A large mushroom with a round door and tiny windows carved in the stem, surrounded by ferns, wildflowers, and a winding mossy path."
+
+      - fr_slug: cottagecore-chat-panier
+        en_slug: cottagecore-cat-basket
+        fr_title: "Chat endormi dans un panier"
+        en_title: "Cat Sleeping in a Basket"
+        fr_tags: ["chat", "panier", "cozy", "fleurs"]
+        en_tags: ["cat", "basket", "cozy", "flowers"]
+        prompt: "A fluffy cat curled asleep in a wicker basket lined with a floral cushion, surrounded by potted herbs and wildflower bouquets."
+
+      - fr_slug: cottagecore-tasse-the
+        en_slug: cottagecore-teacup-garden
+        fr_title: "Tasse de the au jardin"
+        en_title: "Teacup Garden"
+        fr_tags: ["tasse", "the", "jardin", "fleurs"]
+        en_tags: ["teacup", "tea", "garden", "flowers"]
+        prompt: "A large teacup overflowing with wildflowers, butterflies landing on the rim, tiny mushrooms around the base, intricate botanical details."
+
+      - fr_slug: cottagecore-ruche
+        en_slug: cottagecore-beehive
+        fr_title: "Ruche et abeilles"
+        en_title: "Beehive and Bees"
+        fr_tags: ["ruche", "abeilles", "lavande", "prairie"]
+        en_tags: ["beehive", "bees", "lavender", "meadow"]
+        prompt: "A traditional wicker beehive surrounded by tall lavender stalks, honeybees in flight, and wild daisies, intricate floral border design."
+
+      - fr_slug: cottagecore-cuisine-rustique
+        en_slug: cottagecore-rustic-kitchen
+        fr_title: "Cuisine rustique"
+        en_title: "Rustic Kitchen Shelf"
+        fr_tags: ["cuisine", "bocaux", "herbes", "rustique"]
+        en_tags: ["kitchen", "jars", "herbs", "rustic"]
+        prompt: "A rustic wooden shelf with mason jars of herbs, a loaf of braided bread, wildflower bundles, and ceramic crocks, detailed botanical line art."
+
+      - fr_slug: cottagecore-prairie-wildflowers
+        en_slug: cottagecore-wildflower-meadow
+        fr_title: "Prairie de fleurs sauvages"
+        en_title: "Wildflower Meadow"
+        fr_tags: ["prairie", "fleurs-sauvages", "papillons", "nature"]
+        en_tags: ["meadow", "wildflowers", "butterflies", "nature"]
+        prompt: "A lush wildflower meadow with tall grasses, poppies, daisies, cornflowers, and butterflies, with a distant tree line, detailed botanical illustration."
+
+      - fr_slug: cottagecore-lanterne
+        en_slug: cottagecore-lantern-ivy
+        fr_title: "Lanterne enveloppee de lierre"
+        en_title: "Lantern Wrapped in Ivy"
+        fr_tags: ["lanterne", "lierre", "fleurs", "vintage"]
+        en_tags: ["lantern", "ivy", "flowers", "vintage"]
+        prompt: "An old hanging lantern wrapped in climbing ivy and tiny roses, surrounded by ferns and moss, intricate vine and floral patterns."
+
+      - fr_slug: cottagecore-livre-jardin
+        en_slug: cottagecore-book-garden
+        fr_title: "Livre ouvert au jardin"
+        en_title: "Open Book in the Garden"
+        fr_tags: ["livre", "jardin", "fleurs", "nature"]
+        en_tags: ["book", "garden", "flowers", "nature"]
+        prompt: "An open book lying in a flower garden, with tiny wildflowers growing from the pages, a butterfly resting on the corner, grass and daisies around it."
+
+  paques:
+    subjects:
+      - fr_slug: paques-lapin
+        en_slug: easter-bunny
+        fr_title: "Lapin de Paques"
+        en_title: "Easter Bunny"
+        fr_tags: ["lapin", "paques", "printemps", "oeufs"]
+        en_tags: ["bunny", "easter", "spring", "eggs"]
+        prompt: "A fluffy Easter bunny sitting upright, holding a decorated Easter egg, surrounded by spring flowers and tiny painted eggs on the grass."
+
+      - fr_slug: paques-oeuf-decore
+        en_slug: easter-decorated-egg
+        fr_title: "Oeuf de Paques decore"
+        en_title: "Decorated Easter Egg"
+        fr_tags: ["oeuf", "decore", "motifs", "paques"]
+        en_tags: ["egg", "decorated", "patterns", "easter"]
+        prompt: "A large Easter egg divided into sections filled with different decorative patterns: flowers, zigzags, dots, stripes, and hearts."
+
+      - fr_slug: paques-poussin-coquille
+        en_slug: easter-hatching-chick
+        fr_title: "Poussin qui eclot"
+        en_title: "Hatching Chick"
+        fr_tags: ["poussin", "coquille", "paques", "mignon"]
+        en_tags: ["chick", "shell", "easter", "cute"]
+        prompt: "An adorable fluffy chick hatching from a cracked Easter egg, wings spread wide, surrounded by tiny flowers and broken shell pieces."
+
+      - fr_slug: paques-panier-oeufs
+        en_slug: easter-basket
+        fr_title: "Panier de Paques"
+        en_title: "Easter Basket"
+        fr_tags: ["panier", "oeufs", "fleurs", "paques"]
+        en_tags: ["basket", "eggs", "flowers", "easter"]
+        prompt: "A wicker Easter basket overflowing with decorated eggs, spring flowers, a small bunny peeking out, tied with a bow ribbon."
+
+      - fr_slug: paques-lapin-jardin
+        en_slug: easter-bunny-garden
+        fr_title: "Lapin dans le jardin printanier"
+        en_title: "Bunny in Spring Garden"
+        fr_tags: ["lapin", "jardin", "jonquilles", "printemps"]
+        en_tags: ["bunny", "garden", "daffodils", "spring"]
+        prompt: "A cute rabbit sitting in a spring garden with blooming tulips, daffodils, butterflies, and colorful Easter eggs hidden among the flowers."
+
+      - fr_slug: paques-chasse-oeufs
+        en_slug: easter-egg-hunt
+        fr_title: "Chasse aux oeufs de Paques"
+        en_title: "Easter Egg Hunt"
+        fr_tags: ["chasse", "oeufs", "prairie", "printemps"]
+        en_tags: ["hunt", "eggs", "meadow", "spring"]
+        prompt: "Three bunnies searching for hidden Easter eggs in a flower meadow, each finding eggs tucked under flowers, behind mushrooms, and in the grass."
+
+      - fr_slug: paques-poule-poussin
+        en_slug: easter-hen-chicks
+        fr_title: "Poule et ses poussins"
+        en_title: "Hen and Chicks"
+        fr_tags: ["poule", "poussin", "ferme", "paques"]
+        en_tags: ["hen", "chicks", "farm", "easter"]
+        prompt: "A mother hen surrounded by four fluffy chicks, all wearing tiny Easter bow ties, with decorated eggs and spring flowers around them."
+
+      - fr_slug: paques-couronne-fleurs
+        en_slug: easter-flower-wreath
+        fr_title: "Couronne de Paques"
+        en_title: "Easter Flower Wreath"
+        fr_tags: ["couronne", "fleurs", "paques", "printemps"]
+        en_tags: ["wreath", "flowers", "easter", "spring"]
+        prompt: "A circular Easter wreath made of spring flowers, eggs, ribbons, and small butterflies, with a decorative bow at the top."
+
+      - fr_slug: paques-agneau-prairie
+        en_slug: easter-lamb-meadow
+        fr_title: "Agneau dans la prairie"
+        en_title: "Easter Lamb in Meadow"
+        fr_tags: ["agneau", "prairie", "printemps", "paques"]
+        en_tags: ["lamb", "meadow", "spring", "easter"]
+        prompt: "A fluffy little lamb standing in a spring meadow with daisies and tulips, wearing a small flower crown, Easter eggs scattered in the grass."
+
+      - fr_slug: paques-papillon-oeufs
+        en_slug: easter-butterfly-eggs
+        fr_title: "Papillons et oeufs en fleurs"
+        en_title: "Butterflies and Easter Eggs"
+        fr_tags: ["papillon", "oeuf", "fleurs", "paques"]
+        en_tags: ["butterfly", "egg", "flowers", "easter"]
+        prompt: "Two butterflies perched on large decorated Easter eggs among spring blossoms, flower petals, and delicate vines."
+
+      - fr_slug: paques-lapin-chocolat
+        en_slug: easter-chocolate-bunny
+        fr_title: "Lapin au chocolat"
+        en_title: "Chocolate Easter Bunny"
+        fr_tags: ["lapin", "chocolat", "noeud", "paques"]
+        en_tags: ["bunny", "chocolate", "bow", "easter"]
+        prompt: "An adorable sitting Easter bunny wearing a big bow around its neck, holding a smaller bunny made of chocolate, surrounded by wrapped candy eggs."
+
+      - fr_slug: paques-scene-foret
+        en_slug: easter-forest-scene
+        fr_title: "Paques dans la foret"
+        en_title: "Easter Forest Scene"
+        fr_tags: ["foret", "animaux", "paques", "printemps"]
+        en_tags: ["forest", "animals", "easter", "spring"]
+        prompt: "A forest clearing with a bunny, squirrel, and hedgehog celebrating Easter together, surrounding a large decorated egg nest, spring blossoms above."
+
+      - fr_slug: paques-lapin-velo
+        en_slug: easter-bunny-bike
+        fr_title: "Lapin a velo avec oeufs"
+        en_title: "Easter Bunny on a Bike"
+        fr_tags: ["lapin", "velo", "oeufs", "drole"]
+        en_tags: ["bunny", "bike", "eggs", "funny"]
+        prompt: "A cheerful Easter bunny riding a bicycle with a basket full of colorful Easter eggs, flowers in the wheel spokes, leaving a trail of eggs."
+
+      - fr_slug: paques-cloches-rubans
+        en_slug: easter-bells-ribbons
+        fr_title: "Cloches de Paques"
+        en_title: "Easter Bells"
+        fr_tags: ["cloches", "rubans", "fleurs", "paques"]
+        en_tags: ["bells", "ribbons", "flowers", "easter"]
+        prompt: "Three Easter bells decorated with ribbons and spring flowers, tied together in a bouquet, surrounded by flying butterflies and lily blossoms."
+
+      - fr_slug: paques-jardiniere-fleurs
+        en_slug: easter-flower-pot
+        fr_title: "Jardiniere de printemps"
+        en_title: "Spring Flower Pot"
+        fr_tags: ["jardiniere", "tulipes", "jacinthes", "printemps"]
+        en_tags: ["pot", "tulips", "hyacinths", "spring"]
+        prompt: "A large terracotta pot overflowing with tulips, hyacinths, and daffodils, with a small Easter bunny peeking out from behind the flowers."
+
+  halloween:
+    subjects:
+      - fr_slug: halloween-citrouille-souriante
+        en_slug: halloween-jack-o-lantern
+        fr_title: "Citrouille Jack-o-Lantern"
+        en_title: "Jack-o-Lantern Pumpkin"
+        fr_tags: ["citrouille", "halloween", "visage", "lanterne"]
+        en_tags: ["pumpkin", "halloween", "face", "lantern"]
+        prompt: "A large carved Halloween pumpkin with a grinning triangular face, surrounded by autumn leaves, small ghost shapes, and bats flying above."
+
+      - fr_slug: halloween-sorciere-balai
+        en_slug: halloween-witch-broomstick
+        fr_title: "Sorciere sur son balai"
+        en_title: "Witch on a Broomstick"
+        fr_tags: ["sorciere", "balai", "lune", "halloween"]
+        en_tags: ["witch", "broomstick", "moon", "halloween"]
+        prompt: "A friendly witch riding her broomstick across a full moon, wearing a pointed hat with stars, her black cat perched behind her among the clouds."
+
+      - fr_slug: halloween-fantome-rigolo
+        en_slug: halloween-friendly-ghost
+        fr_title: "Fantome rigolo"
+        en_title: "Friendly Ghost"
+        fr_tags: ["fantome", "mignon", "halloween", "citrouille"]
+        en_tags: ["ghost", "cute", "halloween", "pumpkin"]
+        prompt: "A cute friendly ghost floating in a haunted house corridor, wearing a tiny witch hat, holding a trick-or-treat bucket shaped like a pumpkin."
+
+      - fr_slug: halloween-maison-hantee
+        en_slug: halloween-haunted-house
+        fr_title: "Maison hantee"
+        en_title: "Haunted House"
+        fr_tags: ["maison", "hantee", "chauve-souris", "halloween"]
+        en_tags: ["house", "haunted", "bats", "halloween"]
+        prompt: "A spooky haunted house with broken windows, a crooked door, bats flying out, a full moon behind, and pumpkins along the front path."
+
+      - fr_slug: halloween-araignee-toile
+        en_slug: halloween-spider-web
+        fr_title: "Araignee et sa toile"
+        en_title: "Spider and Web"
+        fr_tags: ["araignee", "toile", "halloween", "nuit"]
+        en_tags: ["spider", "web", "halloween", "night"]
+        prompt: "A large decorative spider web with a friendly cartoon spider at the center, surrounded by crescent moons, stars, and small ghost shapes."
+
+      - fr_slug: halloween-chauve-souris
+        en_slug: halloween-bats
+        fr_title: "Chauve-souris de la nuit"
+        en_title: "Night Bats"
+        fr_tags: ["chauve-souris", "nuit", "lune", "halloween"]
+        en_tags: ["bats", "night", "moon", "halloween"]
+        prompt: "A family of cute cartoon bats hanging upside down from a tree branch, with a crescent moon, stars, and a haunted house in the background."
+
+      - fr_slug: halloween-chat-noir
+        en_slug: halloween-black-cat
+        fr_title: "Chat noir d Halloween"
+        en_title: "Halloween Black Cat"
+        fr_tags: ["chat", "halloween", "chapeau", "mignon"]
+        en_tags: ["cat", "halloween", "hat", "cute"]
+        prompt: "A cute cat wearing a tiny witch hat, sitting on a fence with a full moon behind, surrounded by bats, stars, and carved pumpkins."
+
+      - fr_slug: halloween-bonbons-seau
+        en_slug: halloween-candy-bucket
+        fr_title: "Seau de bonbons d Halloween"
+        en_title: "Halloween Candy Bucket"
+        fr_tags: ["bonbons", "seau", "halloween", "citrouille"]
+        en_tags: ["candy", "bucket", "halloween", "pumpkin"]
+        prompt: "A pumpkin-shaped trick-or-treat bucket overflowing with wrapped candies, lollipops, and chocolate, surrounded by small ghosts and fall leaves."
+
+      - fr_slug: halloween-momie-bandages
+        en_slug: halloween-mummy
+        fr_title: "Momie avec bandages"
+        en_title: "Mummy with Bandages"
+        fr_tags: ["momie", "bandages", "halloween", "drole"]
+        en_tags: ["mummy", "bandages", "halloween", "funny"]
+        prompt: "A friendly cartoon mummy wrapped in bandages, with big round eyes peeking out, holding a jack-o-lantern, surrounded by bats and cobwebs."
+
+      - fr_slug: halloween-potion-sorciere
+        en_slug: halloween-witch-potion
+        fr_title: "Chaudron et potions"
+        en_title: "Witch Cauldron and Potions"
+        fr_tags: ["chaudron", "potion", "sorciere", "halloween"]
+        en_tags: ["cauldron", "potion", "witch", "halloween"]
+        prompt: "A bubbling witch cauldron with smoke rising, surrounded by potion bottles, spell books, a witch hat, and a grinning skull on a shelf."
+
+      - fr_slug: halloween-squelette-dansant
+        en_slug: halloween-dancing-skeleton
+        fr_title: "Squelette dansant"
+        en_title: "Dancing Skeleton"
+        fr_tags: ["squelette", "danse", "halloween", "drole"]
+        en_tags: ["skeleton", "dance", "halloween", "funny"]
+        prompt: "A friendly cartoon skeleton dancing in a graveyard, wearing a top hat and bow tie, with tombstones, bats, and a crescent moon behind."
+
+      - fr_slug: halloween-citrouilles-trio
+        en_slug: halloween-pumpkin-trio
+        fr_title: "Trio de citrouilles"
+        en_title: "Pumpkin Trio"
+        fr_tags: ["citrouilles", "trio", "halloween", "automne"]
+        en_tags: ["pumpkins", "trio", "halloween", "autumn"]
+        prompt: "Three Halloween pumpkins of different sizes, each with a unique carved expression — happy, scary, and surprised — surrounded by autumn leaves and bats."
+
+      - fr_slug: halloween-loup-garou
+        en_slug: halloween-werewolf
+        fr_title: "Loup-garou mignon"
+        en_title: "Cute Werewolf"
+        fr_tags: ["loup-garou", "lune", "halloween", "mignon"]
+        en_tags: ["werewolf", "moon", "halloween", "cute"]
+        prompt: "A cute cartoon werewolf howling at a full moon, wearing torn clothes, surrounded by autumn trees and flying bats, friendly expression."
+
+      - fr_slug: halloween-village-hante
+        en_slug: halloween-haunted-village
+        fr_title: "Village hante de Halloween"
+        en_title: "Haunted Halloween Village"
+        fr_tags: ["village", "hante", "halloween", "nuit"]
+        en_tags: ["village", "haunted", "halloween", "night"]
+        prompt: "A Halloween village street with carved pumpkins, cobwebs on fences, a haunted house, bats and ghosts floating between bare trees under a full moon."
+
+      - fr_slug: halloween-vampire-enfant
+        en_slug: halloween-vampire-kid
+        fr_title: "Petit vampire"
+        en_title: "Cute Little Vampire"
+        fr_tags: ["vampire", "halloween", "cape", "mignon"]
+        en_tags: ["vampire", "halloween", "cape", "cute"]
+        prompt: "A cute little vampire kid in a black cape with a turned-up collar, tiny fangs and bat wings, holding a pumpkin bucket, friendly smile."
+
+      - fr_slug: halloween-citrouille-araignee
+        en_slug: halloween-pumpkin-spider
+        fr_title: "Citrouille avec araignee"
+        en_title: "Pumpkin with Spider"
+        fr_tags: ["citrouille", "araignee", "toile", "halloween"]
+        en_tags: ["pumpkin", "spider", "web", "halloween"]
+        prompt: "A grinning carved pumpkin with a spider crawling on top, cobwebs draped across it, small bats and stars decorating the surrounding scene."
+
+  noel:
+    subjects:
+      - fr_slug: noel-pere-noel
+        en_slug: christmas-santa-claus
+        fr_title: "Pere Noel avec cadeaux"
+        en_title: "Santa Claus with Gifts"
+        fr_tags: ["pere-noel", "cadeaux", "hotte", "noel"]
+        en_tags: ["santa", "gifts", "sack", "christmas"]
+        prompt: "A jolly Santa Claus carrying a large sack of gifts on his shoulder, wearing his classic suit with belt and hat, surrounded by snowflakes."
+
+      - fr_slug: noel-sapin-decore
+        en_slug: christmas-decorated-tree
+        fr_title: "Sapin de Noel decore"
+        en_title: "Decorated Christmas Tree"
+        fr_tags: ["sapin", "boules", "etoile", "noel"]
+        en_tags: ["tree", "ornaments", "star", "christmas"]
+        prompt: "A tall Christmas tree decorated with baubles, candy canes, stars, tinsel garlands, and a large star on top, gifts piled underneath."
+
+      - fr_slug: noel-bonhomme-neige
+        en_slug: christmas-snowman
+        fr_title: "Bonhomme de neige"
+        en_title: "Snowman"
+        fr_tags: ["bonhomme-neige", "echarpe", "carotte", "hiver"]
+        en_tags: ["snowman", "scarf", "carrot", "winter"]
+        prompt: "A friendly snowman with a carrot nose, coal buttons, striped scarf, top hat, and stick arms, surrounded by snowflakes and pine trees."
+
+      - fr_slug: noel-renne-Rudolf
+        en_slug: christmas-reindeer-rudolph
+        fr_title: "Renne Rudolf"
+        en_title: "Rudolph the Reindeer"
+        fr_tags: ["renne", "rudolf", "nez-rouge", "noel"]
+        en_tags: ["reindeer", "rudolph", "red-nose", "christmas"]
+        prompt: "A cute reindeer with a glowing round nose, wearing jingle bells around the neck, decorated antlers with holly, surrounded by snowflakes."
+
+      - fr_slug: noel-cheminee-bas
+        en_slug: christmas-fireplace-stockings
+        fr_title: "Cheminee de Noel"
+        en_title: "Christmas Fireplace with Stockings"
+        fr_tags: ["cheminee", "bas", "cadeaux", "noel"]
+        en_tags: ["fireplace", "stockings", "gifts", "christmas"]
+        prompt: "A cozy stone fireplace with four stockings hung above, a fire burning inside, wrapped gifts on the floor, a Christmas tree beside, candles and holly."
+
+      - fr_slug: noel-lutin-atelier
+        en_slug: christmas-elf-workshop
+        fr_title: "Lutin dans l atelier"
+        en_title: "Elf in the Workshop"
+        fr_tags: ["lutin", "atelier", "jouets", "noel"]
+        en_tags: ["elf", "workshop", "toys", "christmas"]
+        prompt: "A cheerful Christmas elf in pointed hat and curly shoes, busy wrapping presents in a workshop full of toys, candy canes, and tools."
+
+      - fr_slug: noel-couronne-houx
+        en_slug: christmas-holly-wreath
+        fr_title: "Couronne de Noel"
+        en_title: "Christmas Holly Wreath"
+        fr_tags: ["couronne", "houx", "ruban", "noel"]
+        en_tags: ["wreath", "holly", "ribbon", "christmas"]
+        prompt: "A circular Christmas wreath of holly leaves, berries, pine cones, cinnamon sticks, and a large red bow at the top, with small star ornaments."
+
+      - fr_slug: noel-traineau-pere-noel
+        en_slug: christmas-santa-sleigh
+        fr_title: "Traineau du Pere Noel"
+        en_title: "Santa's Sleigh"
+        fr_tags: ["traineau", "rennes", "nuit", "noel"]
+        en_tags: ["sleigh", "reindeer", "night", "christmas"]
+        prompt: "Santa's sleigh pulled by flying reindeer across a starry night sky, silhouetted against a large full moon, a bag of gifts on the sleigh."
+
+      - fr_slug: noel-ange-etoile
+        en_slug: christmas-angel-star
+        fr_title: "Ange de Noel"
+        en_title: "Christmas Angel"
+        fr_tags: ["ange", "etoile", "ailes", "noel"]
+        en_tags: ["angel", "star", "wings", "christmas"]
+        prompt: "A sweet Christmas angel with large feathered wings, holding a glowing star, wearing a flowing gown with holly detail, snowflakes surrounding."
+
+      - fr_slug: noel-biscuits-pain-epices
+        en_slug: christmas-gingerbread-cookies
+        fr_title: "Maison en pain d epices"
+        en_title: "Gingerbread House"
+        fr_tags: ["pain-epices", "maison", "bonbons", "noel"]
+        en_tags: ["gingerbread", "house", "candy", "christmas"]
+        prompt: "A gingerbread house decorated with candy canes, gumdrops, icing swirls, a pretzel door, and gingerbread man cookies standing beside it."
+
+      - fr_slug: noel-flocon-neige
+        en_slug: christmas-snowflake
+        fr_title: "Flocons de neige"
+        en_title: "Beautiful Snowflakes"
+        fr_tags: ["flocon", "neige", "cristal", "noel"]
+        en_tags: ["snowflake", "snow", "crystal", "christmas"]
+        prompt: "Four large intricate snowflakes, each with a unique six-branched crystal pattern, surrounded by smaller snowflakes and star shapes."
+
+      - fr_slug: noel-bas-cadeaux
+        en_slug: christmas-stocking-gifts
+        fr_title: "Bas de Noel rempli"
+        en_title: "Stuffed Christmas Stocking"
+        fr_tags: ["bas", "cadeaux", "jouets", "noel"]
+        en_tags: ["stocking", "gifts", "toys", "christmas"]
+        prompt: "A large Christmas stocking overflowing with gifts — a toy bear, candy canes, a small wrapped box, an apple, and a candy lollipop peeking out."
+
+      - fr_slug: noel-etoile-bethleem
+        en_slug: christmas-star-bethlehem
+        fr_title: "Etoile de Bethleem"
+        en_title: "Star of Bethlehem"
+        fr_tags: ["etoile", "bethleem", "creche", "noel"]
+        en_tags: ["star", "bethlehem", "nativity", "christmas"]
+        prompt: "A large glowing nativity star above a simple manger scene with the baby in a crib, a donkey and ox, hay bales, and soft radiant light rays."
+
+      - fr_slug: noel-bonbon-canne
+        en_slug: christmas-candy-cane
+        fr_title: "Cannes de bonbon Noel"
+        en_title: "Christmas Candy Canes"
+        fr_tags: ["canne", "bonbon", "rayures", "noel"]
+        en_tags: ["candy", "cane", "stripes", "christmas"]
+        prompt: "A decorative arrangement of large candy canes tied with a bow, holly leaves, berries, and jingle bells, surrounded by snowflake decorations."
+
+      - fr_slug: noel-hiver-village
+        en_slug: christmas-winter-village
+        fr_title: "Village d hiver enneige"
+        en_title: "Snowy Winter Village"
+        fr_tags: ["village", "neige", "hiver", "noel"]
+        en_tags: ["village", "snow", "winter", "christmas"]
+        prompt: "A charming snowy village with decorated shop windows, a lit Christmas tree in the square, people ice skating, smoke from chimneys, snowflakes falling."
+
+  champignons:
+    subjects:
+      - fr_slug: champignons-amanite-mouchetee
+        en_slug: mushrooms-spotted-toadstool
+        fr_title: "Amanite mouchetee"
+        en_title: "Spotted Toadstool"
+        fr_tags: ["amanite", "champignon", "rouge", "foret"]
+        en_tags: ["toadstool", "mushroom", "red", "forest"]
+        prompt: "A large classic red mushroom with white spots, surrounded by small ferns, dewdrops, and tiny snails exploring the forest floor."
+
+      - fr_slug: champignons-maison-elfe
+        en_slug: mushrooms-elf-house
+        fr_title: "Maison champignon pour elfes"
+        en_title: "Mushroom Elf House"
+        fr_tags: ["maison", "champignon", "elfe", "feerique"]
+        en_tags: ["house", "mushroom", "elf", "fairy"]
+        prompt: "A large mushroom with a tiny carved door and round windows, flower boxes on the windowsills, a garden path, and a firefly lantern hanging at the entrance."
+
+      - fr_slug: champignons-famille-foret
+        en_slug: mushrooms-forest-family
+        fr_title: "Famille de champignons en foret"
+        en_title: "Mushroom Family in the Forest"
+        fr_tags: ["famille", "champignons", "foret", "mignon"]
+        en_tags: ["family", "mushrooms", "forest", "cute"]
+        prompt: "A family of five mushrooms of varying sizes growing together, each with a unique face — happy, surprised, sleepy — surrounded by autumn leaves."
+
+      - fr_slug: champignons-morille-fantaisie
+        en_slug: mushrooms-fantasy-morel
+        fr_title: "Morille fantaisie"
+        en_title: "Fantasy Morel Mushroom"
+        fr_tags: ["morille", "fantaisie", "chapeau", "reseau"]
+        en_tags: ["morel", "fantasy", "cap", "network"]
+        prompt: "A fantastical morel mushroom with an intricately patterned honeycomb cap, surrounded by spiral ferns, dewdrop beads, and woodland flowers."
+
+      - fr_slug: champignons-parapluie-pluie
+        en_slug: mushrooms-umbrella-rain
+        fr_title: "Champignon parapluie sous la pluie"
+        en_title: "Mushroom Umbrella in the Rain"
+        fr_tags: ["champignon", "pluie", "parapluie", "escargot"]
+        en_tags: ["mushroom", "rain", "umbrella", "snail"]
+        prompt: "A large mushroom used as an umbrella by a cute snail and a frog sheltering underneath from the rain, with rain drops and puddles around."
+
+      - fr_slug: champignons-spirale-decoratif
+        en_slug: mushrooms-decorative-spiral
+        fr_title: "Motif champignons spirale"
+        en_title: "Decorative Mushroom Spiral Pattern"
+        fr_tags: ["motif", "spirale", "champignons", "decoratif"]
+        en_tags: ["pattern", "spiral", "mushrooms", "decorative"]
+        prompt: "A repeating decorative pattern of mushrooms, ferns, stars, and moon phases arranged in a circular spiral design, detailed botanical illustration."
+
+      - fr_slug: champignons-village-champignon
+        en_slug: mushrooms-mushroom-village
+        fr_title: "Village de champignons"
+        en_title: "Mushroom Village"
+        fr_tags: ["village", "champignons", "feerique", "gnomes"]
+        en_tags: ["village", "mushrooms", "fairy", "gnomes"]
+        prompt: "A whimsical mushroom village with five different mushroom houses of various sizes and types, connected by mossy paths, flowers, and tiny bridges."
+
+      - fr_slug: champignons-lucioles-nuit
+        en_slug: mushrooms-firefly-night
+        fr_title: "Champignons et lucioles la nuit"
+        en_title: "Mushrooms and Fireflies at Night"
+        fr_tags: ["champignons", "lucioles", "nuit", "magique"]
+        en_tags: ["mushrooms", "fireflies", "night", "magical"]
+        prompt: "A cluster of glowing mushrooms at night, with firefly lights dancing around them, a crescent moon above, and intricate fern fronds in the foreground."
+
+      - fr_slug: champignons-lion-criniere
+        en_slug: mushrooms-lion-mane
+        fr_title: "Champignon criniere de lion"
+        en_title: "Lion Mane Mushroom"
+        fr_tags: ["criniere", "lion", "champignon", "detaille"]
+        en_tags: ["mane", "lion", "mushroom", "detailed"]
+        prompt: "A beautiful lion mane mushroom with cascading icicle-like tendrils, growing from a mossy log, surrounded by wild herbs and small forest flowers."
+
+      - fr_slug: champignons-cueilleur-panier
+        en_slug: mushrooms-basket-forager
+        fr_title: "Panier de cueillette"
+        en_title: "Forager Basket of Mushrooms"
+        fr_tags: ["panier", "cueillette", "automne", "foret"]
+        en_tags: ["basket", "foraging", "autumn", "forest"]
+        prompt: "A wicker basket overflowing with different types of mushrooms — chanterelles, boletes, oysters — with autumn leaves, acorns, and pine needles around it."
+
+  vitrail:
+    subjects:
+      - fr_slug: vitrail-rosace-cathedrale
+        en_slug: stained-glass-rose-window
+        fr_title: "Rosace de cathedrale"
+        en_title: "Cathedral Rose Window"
+        fr_tags: ["rosace", "cathedrale", "gothique", "adulte"]
+        en_tags: ["rose", "window", "cathedral", "gothic"]
+        prompt: "A large circular stained glass rose window design with geometric petals radiating from the center, bold lead came borders, intricate compartmented sections."
+
+      - fr_slug: vitrail-colombe-lumiere
+        en_slug: stained-glass-dove-light
+        fr_title: "Colombe en vitrail"
+        en_title: "Stained Glass Dove"
+        fr_tags: ["colombe", "lumiere", "vitrail", "paix"]
+        en_tags: ["dove", "light", "stained-glass", "peace"]
+        prompt: "A stained glass dove in flight with outstretched wings, bold black lead borders dividing the body into geometric color sections, sunburst background."
+
+      - fr_slug: vitrail-fleurs-geometriques
+        en_slug: stained-glass-geometric-flowers
+        fr_title: "Fleurs geometriques en vitrail"
+        en_title: "Geometric Stained Glass Flowers"
+        fr_tags: ["fleurs", "geometrique", "vitrail", "adulte"]
+        en_tags: ["flowers", "geometric", "stained-glass", "adult"]
+        prompt: "A stained glass panel with three large stylized flowers, each petal a separate geometric section with bold black borders, Art Nouveau style."
+
+      - fr_slug: vitrail-paon-plumes
+        en_slug: stained-glass-peacock
+        fr_title: "Paon en vitrail"
+        en_title: "Stained Glass Peacock"
+        fr_tags: ["paon", "plumes", "vitrail", "couleurs"]
+        en_tags: ["peacock", "feathers", "stained-glass", "colors"]
+        prompt: "A stained glass peacock with a fan of elaborate tail feathers, each feather eye divided into bold geometric sections, architectural lead came borders."
+
+      - fr_slug: vitrail-arbre-vie
+        en_slug: stained-glass-tree-of-life
+        fr_title: "Arbre de vie en vitrail"
+        en_title: "Stained Glass Tree of Life"
+        fr_tags: ["arbre", "vie", "vitrail", "celtique"]
+        en_tags: ["tree", "life", "stained-glass", "celtic"]
+        prompt: "A stained glass tree of life with spreading branches and roots, each section between branches a separate bold-bordered panel, Celtic knotwork elements."
+
+      - fr_slug: vitrail-papillon-ailes
+        en_slug: stained-glass-butterfly-wings
+        fr_title: "Papillon en vitrail"
+        en_title: "Stained Glass Butterfly"
+        fr_tags: ["papillon", "ailes", "vitrail", "adulte"]
+        en_tags: ["butterfly", "wings", "stained-glass", "adult"]
+        prompt: "A large stained glass butterfly with symmetrical wings divided into bold geometric sections by lead came borders, detailed vein patterns, ornamental antennae."
+
+      - fr_slug: vitrail-mandala-solaire
+        en_slug: stained-glass-solar-mandala
+        fr_title: "Mandala solaire vitrail"
+        en_title: "Stained Glass Solar Mandala"
+        fr_tags: ["mandala", "soleil", "vitrail", "rayons"]
+        en_tags: ["mandala", "sun", "stained-glass", "rays"]
+        prompt: "A circular stained glass solar mandala with radiating sun rays, each section bordered by bold lead lines, concentric circles of geometric patterns."
+
+      - fr_slug: vitrail-poisson-eau
+        en_slug: stained-glass-fish-water
+        fr_title: "Poissons en vitrail"
+        en_title: "Stained Glass Fish"
+        fr_tags: ["poisson", "eau", "vitrail", "vagues"]
+        en_tags: ["fish", "water", "stained-glass", "waves"]
+        prompt: "Two large stained glass fish swimming in opposite directions, their scales each a separate geometric compartment, wave patterns filling the background."
+
+      - fr_slug: vitrail-lune-etoiles
+        en_slug: stained-glass-moon-stars
+        fr_title: "Lune et etoiles en vitrail"
+        en_title: "Stained Glass Moon and Stars"
+        fr_tags: ["lune", "etoiles", "vitrail", "nuit"]
+        en_tags: ["moon", "stars", "stained-glass", "night"]
+        prompt: "A stained glass panel featuring a crescent moon and five-pointed stars, surrounded by geometric night sky sections with bold lead borders, Art Deco style."
+
+      - fr_slug: vitrail-iris-botanique
+        en_slug: stained-glass-iris
+        fr_title: "Iris en vitrail"
+        en_title: "Stained Glass Iris Flower"
+        fr_tags: ["iris", "botanique", "vitrail", "adulte"]
+        en_tags: ["iris", "botanical", "stained-glass", "adult"]
+        prompt: "A tall iris flower in stained glass style, each petal, sepal and leaf divided into bold geometric sections by lead came borders, graceful Art Nouveau curves."
+
+  zodiaque:
+    subjects:
+      - fr_slug: zodiaque-belier
+        en_slug: zodiac-aries
+        fr_title: "Belier - Mandala Zodiaque"
+        en_title: "Aries Zodiac Mandala"
+        fr_tags: ["belier", "zodiaque", "mandala", "adulte"]
+        en_tags: ["aries", "zodiac", "mandala", "adult"]
+        prompt: "A circular zodiac mandala for Aries, centered on a ram's head with curved horns, surrounded by radiating fire symbols and Mars planetary symbols, fine detailed adult line art."
+
+      - fr_slug: zodiaque-taureau
+        en_slug: zodiac-taurus
+        fr_title: "Taureau - Mandala Zodiaque"
+        en_title: "Taurus Zodiac Mandala"
+        fr_tags: ["taureau", "zodiaque", "mandala", "adulte"]
+        en_tags: ["taurus", "zodiac", "mandala", "adult"]
+        prompt: "A circular zodiac mandala for Taurus, centered on a bull's face with curved horns, surrounded by floral earth symbols and Venus symbols, fine detailed adult line art."
+
+      - fr_slug: zodiaque-gemeaux
+        en_slug: zodiac-gemini
+        fr_title: "Gemeaux - Mandala Zodiaque"
+        en_title: "Gemini Zodiac Mandala"
+        fr_tags: ["gemeaux", "zodiaque", "mandala", "adulte"]
+        en_tags: ["gemini", "zodiac", "mandala", "adult"]
+        prompt: "A circular zodiac mandala for Gemini, centered on twin faces in profile facing each other, surrounded by air current patterns and Mercury symbols, detailed adult line art."
+
+      - fr_slug: zodiaque-cancer
+        en_slug: zodiac-cancer
+        fr_title: "Cancer - Mandala Zodiaque"
+        en_title: "Cancer Zodiac Mandala"
+        fr_tags: ["cancer", "zodiaque", "mandala", "adulte"]
+        en_tags: ["cancer", "zodiac", "mandala", "adult"]
+        prompt: "A circular zodiac mandala for Cancer, centered on a crab with detailed claws, surrounded by crescent moons and water wave patterns, fine detailed adult line art."
+
+      - fr_slug: zodiaque-lion
+        en_slug: zodiac-leo
+        fr_title: "Lion - Mandala Zodiaque"
+        en_title: "Leo Zodiac Mandala"
+        fr_tags: ["lion", "zodiaque", "mandala", "adulte"]
+        en_tags: ["leo", "zodiac", "mandala", "adult"]
+        prompt: "A circular zodiac mandala for Leo, centered on a lion's face with a flowing mane forming the mandala pattern, surrounded by sun rays and Sun symbols, adult line art."
+
+      - fr_slug: zodiaque-vierge
+        en_slug: zodiac-virgo
+        fr_title: "Vierge - Mandala Zodiaque"
+        en_title: "Virgo Zodiac Mandala"
+        fr_tags: ["vierge", "zodiaque", "mandala", "adulte"]
+        en_tags: ["virgo", "zodiac", "mandala", "adult"]
+        prompt: "A circular zodiac mandala for Virgo, featuring a female figure surrounded by flowing wheat sheaves and botanical flowers, fine detailed adult line art."
+
+      - fr_slug: zodiaque-balance
+        en_slug: zodiac-libra
+        fr_title: "Balance - Mandala Zodiaque"
+        en_title: "Libra Zodiac Mandala"
+        fr_tags: ["balance", "zodiaque", "mandala", "adulte"]
+        en_tags: ["libra", "zodiac", "mandala", "adult"]
+        prompt: "A circular zodiac mandala for Libra, centered on ornate balance scales, surrounded by air symbols, feathers, and Venus symbols in symmetrical mandala pattern."
+
+      - fr_slug: zodiaque-scorpion
+        en_slug: zodiac-scorpio
+        fr_title: "Scorpion - Mandala Zodiaque"
+        en_title: "Scorpio Zodiac Mandala"
+        fr_tags: ["scorpion", "zodiaque", "mandala", "adulte"]
+        en_tags: ["scorpio", "zodiac", "mandala", "adult"]
+        prompt: "A circular zodiac mandala for Scorpio, centered on a scorpion with curved tail forming part of the mandala design, surrounded by water symbols and Pluto glyphs."
+
+      - fr_slug: zodiaque-sagittaire
+        en_slug: zodiac-sagittarius
+        fr_title: "Sagittaire - Mandala Zodiaque"
+        en_title: "Sagittarius Zodiac Mandala"
+        fr_tags: ["sagittaire", "zodiaque", "mandala", "adulte"]
+        en_tags: ["sagittarius", "zodiac", "mandala", "adult"]
+        prompt: "A circular zodiac mandala for Sagittarius, featuring a centaur archer with a drawn bow forming the center, surrounded by fire and Jupiter symbols, detailed adult line art."
+
+      - fr_slug: zodiaque-capricorne
+        en_slug: zodiac-capricorn
+        fr_title: "Capricorne - Mandala Zodiaque"
+        en_title: "Capricorn Zodiac Mandala"
+        fr_tags: ["capricorne", "zodiaque", "mandala", "adulte"]
+        en_tags: ["capricorn", "zodiac", "mandala", "adult"]
+        prompt: "A circular zodiac mandala for Capricorn, featuring a mountain goat with fish tail, surrounded by earth symbols and Saturn rings, intricate adult line art."
+
+      - fr_slug: zodiaque-verseau
+        en_slug: zodiac-aquarius
+        fr_title: "Verseau - Mandala Zodiaque"
+        en_title: "Aquarius Zodiac Mandala"
+        fr_tags: ["verseau", "zodiaque", "mandala", "adulte"]
+        en_tags: ["aquarius", "zodiac", "mandala", "adult"]
+        prompt: "A circular zodiac mandala for Aquarius, featuring water waves flowing from an urn in the center, surrounded by air symbols and Uranus glyphs, detailed adult line art."
+
+      - fr_slug: zodiaque-poissons
+        en_slug: zodiac-pisces
+        fr_title: "Poissons - Mandala Zodiaque"
+        en_title: "Pisces Zodiac Mandala"
+        fr_tags: ["poissons", "zodiaque", "mandala", "adulte"]
+        en_tags: ["pisces", "zodiac", "mandala", "adult"]
+        prompt: "A circular zodiac mandala for Pisces, with two fish swimming in a yin-yang circle at the center, surrounded by water symbols and Neptune tridents, adult line art."
+
+  affirmations:
+    subjects:
+      - fr_slug: affirmations-cadre-floral-1
+        en_slug: affirmations-floral-frame-1
+        fr_title: "Cadre floral pour affirmation"
+        en_title: "Floral Frame for Affirmation"
+        fr_tags: ["cadre", "floral", "affirmation", "adulte"]
+        en_tags: ["frame", "floral", "affirmation", "adult"]
+        prompt: "An ornate rectangular floral border frame with roses, leaves, and swirling vines forming a thick decorative border, empty white space in the center for writing."
+
+      - fr_slug: affirmations-soleil-rayons
+        en_slug: affirmations-sunshine-rays
+        fr_title: "Soleil rayonnant affirmation"
+        en_title: "Radiant Sun Affirmation"
+        fr_tags: ["soleil", "rayons", "fleurs", "affirmation"]
+        en_tags: ["sun", "rays", "flowers", "affirmation"]
+        prompt: "A large decorative sun with detailed petal-like rays, surrounded by small stars and dots, a clear central oval space, for adult coloring with motivational use."
+
+      - fr_slug: affirmations-mandala-coeur
+        en_slug: affirmations-heart-mandala
+        fr_title: "Mandala coeur affirmation"
+        en_title: "Heart Mandala Affirmation"
+        fr_tags: ["mandala", "coeur", "amour", "adulte"]
+        en_tags: ["mandala", "heart", "love", "adult"]
+        prompt: "A heart-shaped mandala with intricate floral and geometric patterns inside the heart, radiating decorative elements around the edges, fine adult line art."
+
+      - fr_slug: affirmations-plume-botanique
+        en_slug: affirmations-botanical-feather
+        fr_title: "Plume botanique affirmation"
+        en_title: "Botanical Feather Affirmation"
+        fr_tags: ["plume", "botanique", "feuilles", "adulte"]
+        en_tags: ["feather", "botanical", "leaves", "adult"]
+        prompt: "A large ornate feather with botanical flowers and leaves growing from the barbs, vines curling around the quill, decorative border, fine detailed adult line art."
+
+      - fr_slug: affirmations-cercle-nature
+        en_slug: affirmations-nature-circle
+        fr_title: "Cercle nature affirmation"
+        en_title: "Nature Circle Affirmation"
+        fr_tags: ["cercle", "nature", "feuilles", "affirmation"]
+        en_tags: ["circle", "nature", "leaves", "affirmation"]
+        prompt: "A circular botanical frame of intertwined branches, leaves, flowers, and berries forming a thick wreath border, an open circular center, detailed line art."
+
+      - fr_slug: affirmations-lotus-zen
+        en_slug: affirmations-lotus-zen
+        fr_title: "Lotus zen affirmation"
+        en_title: "Zen Lotus Affirmation"
+        fr_tags: ["lotus", "zen", "meditation", "adulte"]
+        en_tags: ["lotus", "zen", "meditation", "adult"]
+        prompt: "A large open lotus flower with intricate petal details, surrounded by concentric ripples and small geometric dots, a zen-inspired decorative design for adult coloring."
+
+      - fr_slug: affirmations-montagnes-soleil
+        en_slug: affirmations-mountain-sunrise
+        fr_title: "Lever de soleil montagne"
+        en_title: "Mountain Sunrise Affirmation"
+        fr_tags: ["montagne", "soleil", "lever", "adulte"]
+        en_tags: ["mountain", "sunrise", "dawn", "adult"]
+        prompt: "A minimalist mountain range silhouette with radiating sunrise lines above, surrounded by a decorative border of small geometric patterns and dots, for adult coloring."
+
+      - fr_slug: affirmations-papillon-fleurs
+        en_slug: affirmations-butterfly-flowers
+        fr_title: "Papillon et fleurs affirmation"
+        en_title: "Butterfly and Flowers Affirmation"
+        fr_tags: ["papillon", "fleurs", "transformation", "adulte"]
+        en_tags: ["butterfly", "flowers", "transformation", "adult"]
+        prompt: "A large ornate butterfly with detailed wings filled with flowers, surrounded by a decorative floral border, central space for inscription, fine adult line art."
+
+      - fr_slug: affirmations-lune-etoiles
+        en_slug: affirmations-moon-stars
+        fr_title: "Lune et etoiles affirmation"
+        en_title: "Moon and Stars Affirmation"
+        fr_tags: ["lune", "etoiles", "cosmos", "adulte"]
+        en_tags: ["moon", "stars", "cosmos", "adult"]
+        prompt: "A crescent moon with a detailed face, surrounded by ornate stars, constellations, and cosmic swirls forming a circular decorative composition, detailed adult line art."
+
+      - fr_slug: affirmations-arc-en-ciel
+        en_slug: affirmations-rainbow-hope
+        fr_title: "Arc-en-ciel affirmation"
+        en_title: "Rainbow Hope Affirmation"
+        fr_tags: ["arc-en-ciel", "nuages", "espoir", "adulte"]
+        en_tags: ["rainbow", "clouds", "hope", "adult"]
+        prompt: "A decorative rainbow arch with detailed stripes, surrounded by ornate clouds filled with floral patterns, raindrops as teardrops, and sun peeking through."

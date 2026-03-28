@@ -98,7 +98,7 @@ LINE_ART_SUFFIX_ADULTS = (
 )
 
 # Adult categories use the detailed adult prompt suffix
-ADULT_CATEGORIES = {"mandalas", "mosaiques", "abstrait", "cartes", "paysages"}
+ADULT_CATEGORIES = {"mandalas", "mosaiques", "abstrait", "cartes", "paysages", "cottagecore", "vitrail", "zodiaque", "affirmations"}
 
 # ---------------------------------------------------------------------------
 # Path helpers (resolved relative to ASTRO_ROOT env var or auto-detected)
