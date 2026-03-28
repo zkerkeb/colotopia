@@ -116,7 +116,9 @@ const structuredData = pillar && pillar.faq.length > 0
     <Breadcrumb locale={locale} currentPage={`${label} Coloring Pages`} />
 
   {pillar && (
-    <PillarSection locale={locale} pillar={pillar} categoryLabel={label} />
+    <p class="pillar-anchor-link">
+      <a href="#learn-more">Learn more about {label.toLowerCase()} coloring pages</a>
+    </p>
   )}
 
   <AdSlot adSlot="" format="horizontal" />
@@ -149,6 +151,12 @@ const structuredData = pillar && pillar.faq.length > 0
     lastPage={page.lastPage}
     locale={locale}
   />
+
+  {pillar && (
+    <div id="learn-more">
+      <PillarSection locale={locale} pillar={pillar} categoryLabel={label} />
+    </div>
+  )}
 
   {pillar && pillar.faq.length > 0 && (
     <CategoryFaq locale={locale} faq={pillar.faq} categoryLabel={label} />
@@ -234,6 +242,23 @@ const structuredData = pillar && pillar.faq.length > 0
 
   @media (min-width: 1024px) {
     .coloring-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .pillar-anchor-link {
+    margin: 0.5rem 0 1rem;
+    font-size: 0.9rem;
+  }
+
+  .pillar-anchor-link a {
+    color: #6366f1;
+    text-decoration: underline;
+    text-decoration-color: #c7d2fe;
+    text-underline-offset: 2px;
+  }
+
+  .pillar-anchor-link a:hover {
+    color: #4f46e5;
+    text-decoration-color: #6366f1;
   }
 
   .empty-state {

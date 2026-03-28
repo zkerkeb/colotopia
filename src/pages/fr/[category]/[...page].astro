@@ -116,7 +116,9 @@ const structuredData = pillar && pillar.faq.length > 0
     <Breadcrumb locale={locale} currentPage={`Coloriages ${label}`} />
 
   {pillar && (
-    <PillarSection locale={locale} pillar={pillar} categoryLabel={label} />
+    <p class="pillar-anchor-link">
+      <a href="#en-savoir-plus">En savoir plus sur les coloriages {label.toLowerCase()}</a>
+    </p>
   )}
 
   <AdSlot adSlot="" format="horizontal" />
@@ -149,6 +151,12 @@ const structuredData = pillar && pillar.faq.length > 0
     lastPage={page.lastPage}
     locale={locale}
   />
+
+  {pillar && (
+    <div id="en-savoir-plus">
+      <PillarSection locale={locale} pillar={pillar} categoryLabel={label} />
+    </div>
+  )}
 
   {pillar && pillar.faq.length > 0 && (
     <CategoryFaq locale={locale} faq={pillar.faq} categoryLabel={label} />
@@ -235,6 +243,23 @@ const structuredData = pillar && pillar.faq.length > 0
 
   @media (min-width: 1024px) {
     .coloring-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .pillar-anchor-link {
+    margin: var(--space-2) 0 var(--space-4);
+    font-size: var(--font-size-sm);
+  }
+
+  .pillar-anchor-link a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-decoration-color: var(--color-primary-light);
+    text-underline-offset: 2px;
+  }
+
+  .pillar-anchor-link a:hover {
+    color: #4f46e5;
+    text-decoration-color: #6366f1;
   }
 
   .empty-state {
