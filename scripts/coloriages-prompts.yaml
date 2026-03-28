@@ -3739,3 +3739,125 @@ categories:
         fr_tags: ["mandala", "fleurs", "symetrie", "motif"]
         en_tags: ["mandala", "flowers", "symmetry", "pattern"]
         prompt: "Six simple roses arranged in a circle, leaves between them, all bold thick outlines, flat white interior."
+
+  chats:
+    subjects:
+      - fr_slug: chats-mignon
+        en_slug: cats-cute
+        fr_title: "Chat mignon"
+        en_title: "Cute Cat"
+        fr_tags: ["chat", "mignon", "kawaii", "facile"]
+        en_tags: ["cat", "cute", "kawaii", "easy"]
+        prompt: "A round fluffy kitten sitting upright with big round eyes and a tiny pink nose, simple cartoon style."
+
+      - fr_slug: chats-dors
+        en_slug: cats-sleeping
+        fr_title: "Chat qui dort"
+        en_title: "Sleeping Cat"
+        fr_tags: ["chat", "dort", "paisible", "doux"]
+        en_tags: ["cat", "sleeping", "peaceful", "soft"]
+        prompt: "A cat curled up asleep, tail wrapped around its body, eyes closed with tiny eyelashes, bold lines."
+
+      - fr_slug: chats-joue
+        en_slug: cats-playing
+        fr_title: "Chaton qui joue"
+        en_title: "Playful Kitten"
+        fr_tags: ["chaton", "joue", "pelote", "amusant"]
+        en_tags: ["kitten", "playing", "yarn", "fun"]
+        prompt: "A small kitten batting a ball of yarn with one paw raised, sitting on its hind legs, cute cartoon."
+
+      - fr_slug: chats-siamois
+        en_slug: cats-siamese
+        fr_title: "Chat siamois"
+        en_title: "Siamese Cat"
+        fr_tags: ["chat", "siamois", "elegant", "race"]
+        en_tags: ["cat", "siamese", "elegant", "breed"]
+        prompt: "A slender Siamese cat sitting regally with a long tail, almond eyes, and pointed ears, clean bold lines."
+
+      - fr_slug: chats-arc-en-ciel
+        en_slug: cats-rainbow
+        fr_title: "Chat arc-en-ciel"
+        en_title: "Rainbow Cat"
+        fr_tags: ["chat", "arc-en-ciel", "colorier", "festif"]
+        en_tags: ["cat", "rainbow", "colorful", "festive"]
+        prompt: "A cheerful cat sitting under a big rainbow with clouds on each side, simple cartoon thick outlines."
+
+      - fr_slug: chats-chapeau
+        en_slug: cats-hat
+        fr_title: "Chat avec un chapeau"
+        en_title: "Cat with a Hat"
+        fr_tags: ["chat", "chapeau", "drole", "costume"]
+        en_tags: ["cat", "hat", "funny", "costume"]
+        prompt: "A cute cat wearing a big top hat and a bow tie, sitting proudly, big eyes, simple cartoon style."
+
+      - fr_slug: chats-jardin
+        en_slug: cats-garden
+        fr_title: "Chat dans le jardin"
+        en_title: "Cat in the Garden"
+        fr_tags: ["chat", "jardin", "fleurs", "nature"]
+        en_tags: ["cat", "garden", "flowers", "nature"]
+        prompt: "A cat sitting among large daisy flowers in a garden, looking curious, bold cartoon outlines."
+
+      - fr_slug: chats-panier
+        en_slug: cats-basket
+        fr_title: "Chat dans un panier"
+        en_title: "Cat in a Basket"
+        fr_tags: ["chat", "panier", "confort", "doux"]
+        en_tags: ["cat", "basket", "cozy", "soft"]
+        prompt: "A fluffy cat nestled inside a wicker basket with a pillow, paws folded, eyes half-closed, cute style."
+
+      - fr_slug: chats-poisson
+        en_slug: cats-fish
+        fr_title: "Chat et le poisson"
+        en_title: "Cat and the Fish"
+        fr_tags: ["chat", "poisson", "affame", "drole"]
+        en_tags: ["cat", "fish", "hungry", "funny"]
+        prompt: "A cat reaching eagerly toward a fish in a fishbowl, tongue out and eyes wide, thick cartoon lines."
+
+      - fr_slug: chats-fee
+        en_slug: cats-fairy
+        fr_title: "Chat fee"
+        en_title: "Fairy Cat"
+        fr_tags: ["chat", "fee", "ailes", "magique"]
+        en_tags: ["cat", "fairy", "wings", "magic"]
+        prompt: "A small kitten with delicate butterfly wings hovering over flowers, sparkles around it, cartoon style."
+
+      - fr_slug: chats-prince
+        en_slug: cats-prince
+        fr_title: "Chat prince"
+        en_title: "Prince Cat"
+        fr_tags: ["chat", "prince", "couronne", "royal"]
+        en_tags: ["cat", "prince", "crown", "royal"]
+        prompt: "A noble cat wearing a small crown and a cape, sitting straight with one paw raised, cartoon style."
+
+      - fr_slug: chats-deux-amis
+        en_slug: cats-two-friends
+        fr_title: "Deux chats amis"
+        en_title: "Two Cat Friends"
+        fr_tags: ["chats", "amis", "duo", "mignon"]
+        en_tags: ["cats", "friends", "duo", "cute"]
+        prompt: "Two cats sitting side by side touching noses in greeting, different sizes, simple bold cartoon style."
+
+      - fr_slug: chats-lune
+        en_slug: cats-moon
+        fr_title: "Chat sur la lune"
+        en_title: "Cat on the Moon"
+        fr_tags: ["chat", "lune", "nuit", "etoiles"]
+        en_tags: ["cat", "moon", "night", "stars"]
+        prompt: "A cat sitting on a crescent moon surrounded by big stars, dangling its legs, dreamy cartoon style."
+
+      - fr_slug: chats-miaulement
+        en_slug: cats-singing
+        fr_title: "Chat qui chante"
+        en_title: "Singing Cat"
+        fr_tags: ["chat", "chante", "musique", "drole"]
+        en_tags: ["cat", "singing", "music", "funny"]
+        prompt: "A cat standing on its hind legs with mouth wide open singing, musical notes floating around it, cartoon."
+
+      - fr_slug: chats-printemps
+        en_slug: cats-spring
+        fr_title: "Chat du printemps"
+        en_title: "Spring Cat"
+        fr_tags: ["chat", "printemps", "papillon", "fleurs"]
+        en_tags: ["cat", "spring", "butterfly", "flowers"]
+        prompt: "A happy cat lying in grass with a butterfly on its nose and flowers blooming around it, bold cartoon lines."
