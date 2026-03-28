@@ -31,6 +31,7 @@ const categories = [
   'papillons',
   'bold-et-facile',
   // Adults
+  'anti-stress',
   'mandalas',
   'mosaiques',
   'abstrait',

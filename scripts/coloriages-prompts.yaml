@@ -4146,3 +4146,125 @@ categories:
         fr_tags: ["papillon", "mandala", "symetrie", "art"]
         en_tags: ["butterfly", "mandala", "symmetry", "art"]
         prompt: "A butterfly shape made of mandala-style symmetrical patterns, ornate wing details, bold clean outlines for kids."
+
+  anti-stress:
+    subjects:
+      - fr_slug: anti-stress-lotus
+        en_slug: stress-relief-lotus
+        fr_title: "Fleur de lotus zen"
+        en_title: "Zen Lotus Flower"
+        fr_tags: ["lotus", "zen", "anti-stress", "adulte"]
+        en_tags: ["lotus", "zen", "stress-relief", "adult"]
+        prompt: "A large lotus flower with layered petals and intricate vein details, concentric ripples on water around it, fine line art for adults."
+
+      - fr_slug: anti-stress-jardin-zen
+        en_slug: stress-relief-zen-garden
+        fr_title: "Jardin zen"
+        en_title: "Zen Garden"
+        fr_tags: ["jardin", "zen", "sable", "rocher"]
+        en_tags: ["garden", "zen", "sand", "rock"]
+        prompt: "A top-down view of a zen garden with raked sand wave patterns, three smooth stones, and a small bonsai, intricate fine line art."
+
+      - fr_slug: anti-stress-arbre-vie
+        en_slug: stress-relief-tree-of-life
+        fr_title: "Arbre de vie"
+        en_title: "Tree of Life"
+        fr_tags: ["arbre", "vie", "celtique", "nature"]
+        en_tags: ["tree", "life", "celtic", "nature"]
+        prompt: "A tree of life with Celtic knotwork branches and roots forming a perfect circle, intricate intertwining patterns, fine adult line art."
+
+      - fr_slug: anti-stress-koi
+        en_slug: stress-relief-koi
+        fr_title: "Carpes koi dans l etang"
+        en_title: "Koi Fish Pond"
+        fr_tags: ["koi", "poisson", "etang", "vagues"]
+        en_tags: ["koi", "fish", "pond", "waves"]
+        prompt: "Two large koi fish swimming in opposite circles, surrounded by intricate water ripples and lotus leaves, detailed adult line art."
+
+      - fr_slug: anti-stress-plumes
+        en_slug: stress-relief-feathers
+        fr_title: "Plumes ornees"
+        en_title: "Ornate Feathers"
+        fr_tags: ["plume", "orne", "motif", "adulte"]
+        en_tags: ["feather", "ornate", "pattern", "adult"]
+        prompt: "Three large overlapping feathers, each filled with intricate floral and swirling patterns inside the barbs, fine detailed line art."
+
+      - fr_slug: anti-stress-libellule
+        en_slug: stress-relief-dragonfly
+        fr_title: "Libellule dentelle"
+        en_title: "Lace Dragonfly"
+        fr_tags: ["libellule", "dentelle", "etang", "nature"]
+        en_tags: ["dragonfly", "lace", "pond", "nature"]
+        prompt: "A large dragonfly with wings filled with intricate lace and floral patterns, perched on a lily pad with detailed water ripples below."
+
+      - fr_slug: anti-stress-vagues-ocean
+        en_slug: stress-relief-ocean-waves
+        fr_title: "Vagues de l ocean"
+        en_title: "Ocean Waves"
+        fr_tags: ["vague", "ocean", "mer", "mouvement"]
+        en_tags: ["wave", "ocean", "sea", "movement"]
+        prompt: "A full-page composition of rolling ocean waves with intricate foam swirls and small fish swimming beneath, detailed adult line art."
+
+      - fr_slug: anti-stress-mandala-nature
+        en_slug: stress-relief-nature-mandala
+        fr_title: "Mandala nature"
+        en_title: "Nature Mandala"
+        fr_tags: ["mandala", "nature", "fleurs", "feuilles"]
+        en_tags: ["mandala", "nature", "flowers", "leaves"]
+        prompt: "A circular mandala composed entirely of layered flowers, leaves, and vines, highly detailed with thin fine lines, for adult coloring."
+
+      - fr_slug: anti-stress-colibri
+        en_slug: stress-relief-hummingbird
+        fr_title: "Colibri et fleurs"
+        en_title: "Hummingbird and Flowers"
+        fr_tags: ["colibri", "fleur", "botanique", "adulte"]
+        en_tags: ["hummingbird", "flower", "botanical", "adult"]
+        prompt: "A hummingbird hovering near a large tropical flower, wings detailed with intricate feather patterns, botanical leaves around, fine adult line art."
+
+      - fr_slug: anti-stress-foret
+        en_slug: stress-relief-forest
+        fr_title: "Foret paisible"
+        en_title: "Peaceful Forest"
+        fr_tags: ["foret", "arbres", "feuilles", "calme"]
+        en_tags: ["forest", "trees", "leaves", "calm"]
+        prompt: "A serene forest path lined with tall detailed trees, intricate leaf canopy overhead, small deer in background, fine adult line art."
+
+      - fr_slug: anti-stress-lune-botanique
+        en_slug: stress-relief-botanical-moon
+        fr_title: "Lune et plantes nocturnes"
+        en_title: "Botanical Moon"
+        fr_tags: ["lune", "botanique", "nuit", "fleurs"]
+        en_tags: ["moon", "botanical", "night", "flowers"]
+        prompt: "A large crescent moon surrounded by night-blooming flowers, moths, and intricate botanical vines, fine detailed line art for adults."
+
+      - fr_slug: anti-stress-geometrie-sacree
+        en_slug: stress-relief-sacred-geometry
+        fr_title: "Geometrie sacree"
+        en_title: "Sacred Geometry"
+        fr_tags: ["geometrie", "sacre", "motif", "adulte"]
+        en_tags: ["geometry", "sacred", "pattern", "adult"]
+        prompt: "A flower of life sacred geometry pattern with interlocking circles, fine detailed lines, surrounded by petal and triangle ornaments."
+
+      - fr_slug: anti-stress-paisley
+        en_slug: stress-relief-paisley
+        fr_title: "Motifs paisley"
+        en_title: "Paisley Pattern"
+        fr_tags: ["paisley", "motif", "indien", "adulte"]
+        en_tags: ["paisley", "pattern", "indian", "adult"]
+        prompt: "A full-page composition of interlocking paisley motifs filled with tiny flowers, swirls, and dots, intricate fine adult line art."
+
+      - fr_slug: anti-stress-tortue
+        en_slug: stress-relief-turtle
+        fr_title: "Tortue mosai que"
+        en_title: "Mosaic Turtle"
+        fr_tags: ["tortue", "mosaique", "ocean", "adulte"]
+        en_tags: ["turtle", "mosaic", "ocean", "adult"]
+        prompt: "A sea turtle with an intricate mosaic shell filled with geometric and floral patterns, swimming among detailed seaweed, fine adult line art."
+
+      - fr_slug: anti-stress-automne
+        en_slug: stress-relief-autumn-floor
+        fr_title: "Tapis d automne"
+        en_title: "Autumn Forest Floor"
+        fr_tags: ["automne", "feuilles", "champignon", "nature"]
+        en_tags: ["autumn", "leaves", "mushroom", "nature"]
+        prompt: "A detailed forest floor scene with intricate autumn leaves, acorns, mushrooms, and pine cones arranged in a decorative pattern, fine adult line art."
