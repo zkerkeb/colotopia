@@ -4024,3 +4024,125 @@ categories:
         fr_tags: ["licorne", "gros traits", "facile", "magie"]
         en_tags: ["unicorn", "bold", "easy", "magic"]
         prompt: "A chubby unicorn standing, with a single thick horn, big eyes, flowing mane, ultra thick black outlines only."
+
+  papillons:
+    subjects:
+      - fr_slug: papillons-monarque
+        en_slug: butterflies-monarch
+        fr_title: "Papillon monarque"
+        en_title: "Monarch Butterfly"
+        fr_tags: ["papillon", "monarque", "nature", "insecte"]
+        en_tags: ["butterfly", "monarch", "nature", "insect"]
+        prompt: "A monarch butterfly top-down view, large symmetrical wings with simple vein patterns, bold clean outlines."
+
+      - fr_slug: papillons-morpho
+        en_slug: butterflies-morpho
+        fr_title: "Papillon morpho bleu"
+        en_title: "Blue Morpho Butterfly"
+        fr_tags: ["papillon", "morpho", "bleu", "tropical"]
+        en_tags: ["butterfly", "morpho", "blue", "tropical"]
+        prompt: "A morpho butterfly top-down view, large rounded wings with eye-spot patterns, bold clean outlines."
+
+      - fr_slug: papillons-simple
+        en_slug: butterflies-simple
+        fr_title: "Beau papillon simple"
+        en_title: "Simple Beautiful Butterfly"
+        fr_tags: ["papillon", "simple", "facile", "enfant"]
+        en_tags: ["butterfly", "simple", "easy", "child"]
+        prompt: "A cute simple butterfly front view, big round wings with simple circle patterns, thick bold outlines, kids style."
+
+      - fr_slug: papillons-jardin
+        en_slug: butterflies-garden
+        fr_title: "Papillon dans le jardin"
+        en_title: "Butterfly in the Garden"
+        fr_tags: ["papillon", "jardin", "fleur", "nature"]
+        en_tags: ["butterfly", "garden", "flower", "nature"]
+        prompt: "A butterfly landing on a big flower, two leaves beside it, simple thick clean outlines, cute style."
+
+      - fr_slug: papillons-chenille
+        en_slug: butterflies-caterpillar
+        fr_title: "Chenille et papillon"
+        en_title: "Caterpillar and Butterfly"
+        fr_tags: ["chenille", "papillon", "transformation", "nature"]
+        en_tags: ["caterpillar", "butterfly", "metamorphosis", "nature"]
+        prompt: "A fat happy caterpillar on a branch beside a small butterfly, bold clean outlines, cute cartoon style."
+
+      - fr_slug: papillons-duo
+        en_slug: butterflies-duo
+        fr_title: "Deux papillons dansants"
+        en_title: "Two Dancing Butterflies"
+        fr_tags: ["papillon", "duo", "danse", "nature"]
+        en_tags: ["butterfly", "pair", "dance", "nature"]
+        prompt: "Two butterflies facing each other with wings spread, flowers below them, simple clean black outlines."
+
+      - fr_slug: papillons-nuit
+        en_slug: butterflies-night-moth
+        fr_title: "Papillon de nuit"
+        en_title: "Night Moth"
+        fr_tags: ["papillon", "nuit", "papillon-de-nuit", "lune"]
+        en_tags: ["moth", "night", "butterfly", "moon"]
+        prompt: "A big fluffy moth with feathery antennae and large wings, crescent moon behind it, bold clean outlines."
+
+      - fr_slug: papillons-kawaii
+        en_slug: butterflies-kawaii
+        fr_title: "Papillon kawaii mignon"
+        en_title: "Cute Kawaii Butterfly"
+        fr_tags: ["papillon", "kawaii", "mignon", "sourire"]
+        en_tags: ["butterfly", "kawaii", "cute", "smile"]
+        prompt: "A kawaii butterfly with a big round face, large eyes, rosy cheeks, small smile, round wings, thick bold outlines."
+
+      - fr_slug: papillons-branche
+        en_slug: butterflies-branch
+        fr_title: "Papillon sur une branche"
+        en_title: "Butterfly on a Branch"
+        fr_tags: ["papillon", "branche", "repos", "nature"]
+        en_tags: ["butterfly", "branch", "resting", "nature"]
+        prompt: "A butterfly resting on a thick branch with two leaves, wings slightly open showing detail, clean bold outlines."
+
+      - fr_slug: papillons-cocon
+        en_slug: butterflies-cocoon
+        fr_title: "Le cocon magique"
+        en_title: "The Magic Cocoon"
+        fr_tags: ["cocon", "chrysalide", "papillon", "transformation"]
+        en_tags: ["cocoon", "chrysalis", "butterfly", "metamorphosis"]
+        prompt: "A chrysalis hanging from a twig, a small butterfly emerging from it, simple bold clean outlines for kids."
+
+      - fr_slug: papillons-printemps
+        en_slug: butterflies-spring
+        fr_title: "Papillons du printemps"
+        en_title: "Spring Butterflies"
+        fr_tags: ["papillon", "printemps", "fleurs", "nature"]
+        en_tags: ["butterfly", "spring", "flowers", "nature"]
+        prompt: "Three small butterflies flying above a row of simple flowers, clean thick outlines, cheerful spring scene."
+
+      - fr_slug: papillons-tropical
+        en_slug: butterflies-tropical
+        fr_title: "Papillon tropical"
+        en_title: "Tropical Butterfly"
+        fr_tags: ["papillon", "tropical", "exotique", "nature"]
+        en_tags: ["butterfly", "tropical", "exotic", "nature"]
+        prompt: "A large exotic butterfly with ornate wing patterns and long tails, top-down view, clean bold line art."
+
+      - fr_slug: papillons-famille
+        en_slug: butterflies-family
+        fr_title: "Famille de papillons"
+        en_title: "Butterfly Family"
+        fr_tags: ["papillon", "famille", "bebe", "mignon"]
+        en_tags: ["butterfly", "family", "baby", "cute"]
+        prompt: "A big butterfly and two tiny baby butterflies flying together, simple bold outlines, cute cartoon style."
+
+      - fr_slug: papillons-fee
+        en_slug: butterflies-fairy
+        fr_title: "Fee aux ailes de papillon"
+        en_title: "Butterfly Wing Fairy"
+        fr_tags: ["fee", "papillon", "ailes", "magie"]
+        en_tags: ["fairy", "butterfly", "wings", "magic"]
+        prompt: "A tiny cute fairy with butterfly wings, holding a flower wand, simple cartoon outline, thick clean lines."
+
+      - fr_slug: papillons-mandala
+        en_slug: butterflies-mandala
+        fr_title: "Mandala papillon"
+        en_title: "Butterfly Mandala"
+        fr_tags: ["papillon", "mandala", "symetrie", "art"]
+        en_tags: ["butterfly", "mandala", "symmetry", "art"]
+        prompt: "A butterfly shape made of mandala-style symmetrical patterns, ornate wing details, bold clean outlines for kids."

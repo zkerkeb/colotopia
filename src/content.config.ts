@@ -28,6 +28,7 @@ const categories = [
   'licorne',
   'fleurs',
   'chats',
+  'papillons',
   'bold-et-facile',
   // Adults
   'mandalas',
