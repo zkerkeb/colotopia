@@ -24,6 +24,11 @@ const categories = [
   'nourriture',
   'pirates',
   'robots',
+  'kawaii',
+  'licorne',
+  'fleurs',
+  'chats',
+  'bold-et-facile',
   // Adults
   'mandalas',
   'mosaiques',

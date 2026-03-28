@@ -3861,3 +3861,166 @@ categories:
         fr_tags: ["chat", "printemps", "papillon", "fleurs"]
         en_tags: ["cat", "spring", "butterfly", "flowers"]
         prompt: "A happy cat lying in grass with a butterfly on its nose and flowers blooming around it, bold cartoon lines."
+
+  # ---- Bold & Easy / Gros Traits (NEW category) ----
+  bold-et-facile:
+    subjects:
+      - fr_slug: bold-et-facile-chat
+        en_slug: bold-easy-cat
+        fr_title: "Chat gros traits"
+        en_title: "Bold Cat"
+        fr_tags: ["chat", "gros traits", "facile", "tout-petit"]
+        en_tags: ["cat", "bold", "easy", "toddler"]
+        prompt: "A sitting cat with an enormous round head, huge eyes, tiny smile, ultra thick outlines only. Very simple."
+
+      - fr_slug: bold-et-facile-soleil
+        en_slug: bold-easy-sun
+        fr_title: "Grand soleil simple"
+        en_title: "Big Bold Sun"
+        fr_tags: ["soleil", "gros traits", "facile", "nature"]
+        en_tags: ["sun", "bold", "easy", "nature"]
+        prompt: "A big smiling sun with eight thick chunky rays, simple round face, ultra thick black outlines."
+
+      - fr_slug: bold-et-facile-maison
+        en_slug: bold-easy-house
+        fr_title: "Maison facile"
+        en_title: "Easy House"
+        fr_tags: ["maison", "gros traits", "facile", "dessin"]
+        en_tags: ["house", "bold", "easy", "drawing"]
+        prompt: "A simple house with a big roof, one door, two windows and a chimney, very thick black outlines only."
+
+      - fr_slug: bold-et-facile-etoile
+        en_slug: bold-easy-star
+        fr_title: "Grande etoile"
+        en_title: "Big Star"
+        fr_tags: ["etoile", "gros traits", "facile", "nuit"]
+        en_tags: ["star", "bold", "easy", "night"]
+        prompt: "A large five-pointed star with a smiling face, very thick outlines, simple shape, white interior."
+
+      - fr_slug: bold-et-facile-coeur
+        en_slug: bold-easy-heart
+        fr_title: "Grand coeur"
+        en_title: "Big Heart"
+        fr_tags: ["coeur", "gros traits", "facile", "amour"]
+        en_tags: ["heart", "bold", "easy", "love"]
+        prompt: "A big heart shape with a simple happy face, very thick black outlines, plain white interior, nothing else."
+
+      - fr_slug: bold-et-facile-chien
+        en_slug: bold-easy-dog
+        fr_title: "Chien gros traits"
+        en_title: "Bold Dog"
+        fr_tags: ["chien", "gros traits", "facile", "tout-petit"]
+        en_tags: ["dog", "bold", "easy", "toddler"]
+        prompt: "A chubby sitting dog with floppy ears, big nose, and a tail, ultra thick outlines, very minimal detail."
+
+      - fr_slug: bold-et-facile-fleur
+        en_slug: bold-easy-flower
+        fr_title: "Fleur simple"
+        en_title: "Simple Flower"
+        fr_tags: ["fleur", "gros traits", "facile", "nature"]
+        en_tags: ["flower", "bold", "easy", "nature"]
+        prompt: "A simple flower with six large round petals and a big circle center, very thick outlines, stem and two leaves."
+
+      - fr_slug: bold-et-facile-poisson
+        en_slug: bold-easy-fish
+        fr_title: "Poisson gros traits"
+        en_title: "Bold Fish"
+        fr_tags: ["poisson", "gros traits", "facile", "mer"]
+        en_tags: ["fish", "bold", "easy", "sea"]
+        prompt: "A big round cartoon fish with one large eye, a smile, and a fan tail, ultra thick outlines, minimal detail."
+
+      - fr_slug: bold-et-facile-voiture
+        en_slug: bold-easy-car
+        fr_title: "Voiture simple"
+        en_title: "Simple Car"
+        fr_tags: ["voiture", "gros traits", "facile", "vehicule"]
+        en_tags: ["car", "bold", "easy", "vehicle"]
+        prompt: "A side-view toy car with two big circles for wheels, rounded body, one window, ultra thick outlines only."
+
+      - fr_slug: bold-et-facile-arc-en-ciel
+        en_slug: bold-easy-rainbow
+        fr_title: "Arc-en-ciel simple"
+        en_title: "Simple Rainbow"
+        fr_tags: ["arc-en-ciel", "gros traits", "facile", "couleurs"]
+        en_tags: ["rainbow", "bold", "easy", "colors"]
+        prompt: "A big semicircle rainbow with four thick bold bands, fluffy cloud on each end, ultra simple outline style."
+
+      - fr_slug: bold-et-facile-papillon
+        en_slug: bold-easy-butterfly
+        fr_title: "Papillon simple"
+        en_title: "Simple Butterfly"
+        fr_tags: ["papillon", "gros traits", "facile", "nature"]
+        en_tags: ["butterfly", "bold", "easy", "nature"]
+        prompt: "A butterfly with two big round top wings and two smaller bottom wings, simple body, very thick outlines only."
+
+      - fr_slug: bold-et-facile-elephant
+        en_slug: bold-easy-elephant
+        fr_title: "Elephant gros traits"
+        en_title: "Bold Elephant"
+        fr_tags: ["elephant", "gros traits", "facile", "animaux"]
+        en_tags: ["elephant", "bold", "easy", "animals"]
+        prompt: "A big round elephant head with huge ears, a curled trunk, and two small eyes, ultra thick outlines only."
+
+      - fr_slug: bold-et-facile-glace
+        en_slug: bold-easy-icecream
+        fr_title: "Glace simple"
+        en_title: "Simple Ice Cream"
+        fr_tags: ["glace", "gros traits", "facile", "nourriture"]
+        en_tags: ["ice cream", "bold", "easy", "food"]
+        prompt: "A soft serve ice cream cone with a big swirl top and waffle cone, very thick outlines, simple and chunky."
+
+      - fr_slug: bold-et-facile-nuage
+        en_slug: bold-easy-cloud
+        fr_title: "Nuage souriant"
+        en_title: "Smiling Cloud"
+        fr_tags: ["nuage", "gros traits", "facile", "ciel"]
+        en_tags: ["cloud", "bold", "easy", "sky"]
+        prompt: "A big fluffy cartoon cloud with a smiling face, bumpy top edge, flat bottom, ultra thick black outlines."
+
+      - fr_slug: bold-et-facile-grenouille
+        en_slug: bold-easy-frog
+        fr_title: "Grenouille simple"
+        en_title: "Simple Frog"
+        fr_tags: ["grenouille", "gros traits", "facile", "animaux"]
+        en_tags: ["frog", "bold", "easy", "animals"]
+        prompt: "A round cartoon frog sitting with big bulging eyes, wide smile, stubby arms and legs, ultra thick outlines."
+
+      - fr_slug: bold-et-facile-arbre
+        en_slug: bold-easy-tree
+        fr_title: "Arbre simple"
+        en_title: "Simple Tree"
+        fr_tags: ["arbre", "gros traits", "facile", "nature"]
+        en_tags: ["tree", "bold", "easy", "nature"]
+        prompt: "A simple tree with a thick brown trunk and a big round green fluffy top, ultra thick outlines, very minimal."
+
+      - fr_slug: bold-et-facile-lapin
+        en_slug: bold-easy-rabbit
+        fr_title: "Lapin gros traits"
+        en_title: "Bold Rabbit"
+        fr_tags: ["lapin", "gros traits", "facile", "animaux"]
+        en_tags: ["rabbit", "bold", "easy", "animals"]
+        prompt: "A chubby sitting bunny with two tall ears, round body, small tail, ultra thick outlines, very simple style."
+
+      - fr_slug: bold-et-facile-gateau
+        en_slug: bold-easy-cake
+        fr_title: "Gateau simple"
+        en_title: "Simple Cake"
+        fr_tags: ["gateau", "gros traits", "facile", "nourriture"]
+        en_tags: ["cake", "bold", "easy", "food"]
+        prompt: "A round birthday cake with three candles on top, one horizontal stripe, ultra thick outlines, simple shapes."
+
+      - fr_slug: bold-et-facile-etoile-mer
+        en_slug: bold-easy-starfish
+        fr_title: "Etoile de mer"
+        en_title: "Bold Starfish"
+        fr_tags: ["etoile de mer", "gros traits", "facile", "mer"]
+        en_tags: ["starfish", "bold", "easy", "sea"]
+        prompt: "A big five-armed starfish with a happy face and smooth arms, ultra thick outlines, plain white background."
+
+      - fr_slug: bold-et-facile-licorne
+        en_slug: bold-easy-unicorn
+        fr_title: "Licorne gros traits"
+        en_title: "Bold Unicorn"
+        fr_tags: ["licorne", "gros traits", "facile", "magie"]
+        en_tags: ["unicorn", "bold", "easy", "magic"]
+        prompt: "A chubby unicorn standing, with a single thick horn, big eyes, flowing mane, ultra thick black outlines only."
