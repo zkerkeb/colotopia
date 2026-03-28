@@ -3415,3 +3415,165 @@ categories:
         fr_tags: ["pirate", "chapeau", "capitaine", "tete-de-mort"]
         en_tags: ["pirate", "hat", "captain", "skull"]
         prompt: "A pirate captain hat with a skull and crossbones, a large feather, and a gold band."
+
+  licorne:
+    subjects:
+      - fr_slug: licorne-princesse
+        en_slug: unicorn-princess
+        fr_title: "Licorne princesse"
+        en_title: "Princess Unicorn"
+        fr_tags: ["licorne", "princesse", "couronne", "magie"]
+        en_tags: ["unicorn", "princess", "crown", "magic"]
+        prompt: "A unicorn wearing a sparkly crown, sitting gracefully with a flowing mane and a star on its flank."
+
+      - fr_slug: licorne-bebe
+        en_slug: unicorn-baby
+        fr_title: "Bebe licorne"
+        en_title: "Baby Unicorn"
+        fr_tags: ["licorne", "bebe", "mignon", "foal"]
+        en_tags: ["unicorn", "baby", "cute", "foal"]
+        prompt: "A cute baby unicorn with big round eyes, short mane, stubby legs, and a small horn, standing front view."
+
+      - fr_slug: licorne-nuages
+        en_slug: unicorn-clouds
+        fr_title: "Licorne dans les nuages"
+        en_title: "Unicorn in the Clouds"
+        fr_tags: ["licorne", "nuages", "ciel", "voler"]
+        en_tags: ["unicorn", "clouds", "sky", "fly"]
+        prompt: "A unicorn galloping on fluffy clouds high in the sky, stars twinkling around it, wings spread wide."
+
+      - fr_slug: licorne-ailee
+        en_slug: unicorn-winged
+        fr_title: "Licorne ailee"
+        en_title: "Winged Unicorn"
+        fr_tags: ["licorne", "ailes", "alicorne", "voler"]
+        en_tags: ["unicorn", "wings", "alicorn", "fly"]
+        prompt: "A unicorn with big feathered wings prancing on green grass, mane flowing, cute cartoon style."
+
+      - fr_slug: licorne-jardin
+        en_slug: unicorn-garden
+        fr_title: "Licorne au jardin"
+        en_title: "Unicorn in the Garden"
+        fr_tags: ["licorne", "fleurs", "jardin", "papillons"]
+        en_tags: ["unicorn", "flowers", "garden", "butterflies"]
+        prompt: "A happy unicorn standing in a flower garden, butterflies around it, sniffing a big sunflower."
+
+      - fr_slug: licorne-fete
+        en_slug: unicorn-birthday
+        fr_title: "Licorne anniversaire"
+        en_title: "Birthday Unicorn"
+        fr_tags: ["licorne", "anniversaire", "gateau", "ballons"]
+        en_tags: ["unicorn", "birthday", "cake", "balloons"]
+        prompt: "A unicorn celebrating with a birthday cake topped with candles, balloons floating around it, smiling happily."
+
+      - fr_slug: licorne-dodo
+        en_slug: unicorn-sleeping
+        fr_title: "Licorne qui dort"
+        en_title: "Sleeping Unicorn"
+        fr_tags: ["licorne", "dodo", "lune", "etoiles"]
+        en_tags: ["unicorn", "sleeping", "moon", "stars"]
+        prompt: "A baby unicorn sleeping on a soft cloud, eyes closed, crescent moon and twinkling stars nearby."
+
+      - fr_slug: licorne-espace
+        en_slug: unicorn-space
+        fr_title: "Licorne dans l espace"
+        en_title: "Space Unicorn"
+        fr_tags: ["licorne", "espace", "etoiles", "planetes"]
+        en_tags: ["unicorn", "space", "stars", "planets"]
+        prompt: "A unicorn floating in outer space wearing a tiny astronaut helmet, surrounded by stars and colorful planets."
+
+      - fr_slug: licorne-glace
+        en_slug: unicorn-ice-cream
+        fr_title: "Licorne et la glace"
+        en_title: "Ice Cream Unicorn"
+        fr_tags: ["licorne", "glace", "gourmand", "arc-en-ciel"]
+        en_tags: ["unicorn", "ice cream", "sweet", "rainbow"]
+        prompt: "A unicorn happily eating a giant rainbow ice cream cone with three scoops, sprinkles falling around it."
+
+      - fr_slug: licorne-arc-en-ciel
+        en_slug: unicorn-rainbow
+        fr_title: "Licorne et l arc-en-ciel"
+        en_title: "Unicorn and Rainbow"
+        fr_tags: ["licorne", "arc-en-ciel", "magie", "couleurs"]
+        en_tags: ["unicorn", "rainbow", "magic", "colors"]
+        prompt: "A unicorn jumping through a bright rainbow arch, sparkles trailing behind its hooves and flowing mane."
+
+      - fr_slug: licorne-deux-amies
+        en_slug: unicorn-friends
+        fr_title: "Deux licornes amies"
+        en_title: "Unicorn Friends"
+        fr_tags: ["licorne", "amitie", "deux", "mignon"]
+        en_tags: ["unicorn", "friendship", "two", "cute"]
+        prompt: "Two unicorns touching their horns together, both smiling, surrounded by hearts and sparkles."
+
+      - fr_slug: licorne-foret
+        en_slug: unicorn-forest
+        fr_title: "Licorne en foret"
+        en_title: "Forest Unicorn"
+        fr_tags: ["licorne", "foret", "arbres", "nature"]
+        en_tags: ["unicorn", "forest", "trees", "nature"]
+        prompt: "A unicorn standing in an enchanted forest, mushrooms and glowing flowers at its feet, trees around it."
+
+      - fr_slug: licorne-portrait
+        en_slug: unicorn-portrait
+        fr_title: "Portrait de licorne"
+        en_title: "Unicorn Portrait"
+        fr_tags: ["licorne", "portrait", "criniere", "beau"]
+        en_tags: ["unicorn", "portrait", "mane", "beautiful"]
+        prompt: "A unicorn head with a flower wreath on its horn, big kind eyes, flowing colorful mane, facing front."
+
+      - fr_slug: licorne-musique
+        en_slug: unicorn-music
+        fr_title: "Licorne musicienne"
+        en_title: "Musical Unicorn"
+        fr_tags: ["licorne", "musique", "notes", "danse"]
+        en_tags: ["unicorn", "music", "notes", "dance"]
+        prompt: "A unicorn dancing and prancing with musical notes floating all around, looking joyful and lively."
+
+      - fr_slug: licorne-sirene
+        en_slug: unicorn-mermaid
+        fr_title: "Licorne sirene"
+        en_title: "Mermaid Unicorn"
+        fr_tags: ["licorne", "sirene", "ocean", "queue"]
+        en_tags: ["unicorn", "mermaid", "ocean", "tail"]
+        prompt: "A unicorn with a shimmering mermaid fish tail underwater, surrounded by bubbles, fish, and seaweed."
+
+      - fr_slug: licorne-fee
+        en_slug: unicorn-fairy
+        fr_title: "Licorne fee"
+        en_title: "Fairy Unicorn"
+        fr_tags: ["licorne", "fee", "papillons", "magie"]
+        en_tags: ["unicorn", "fairy", "butterflies", "magic"]
+        prompt: "A tiny unicorn with delicate butterfly wings and a flower crown, hovering above a daisy field."
+
+      - fr_slug: licorne-sport
+        en_slug: unicorn-sports
+        fr_title: "Licorne sportive"
+        en_title: "Sports Unicorn"
+        fr_tags: ["licorne", "sport", "football", "rigolo"]
+        en_tags: ["unicorn", "sports", "football", "funny"]
+        prompt: "A unicorn in a jersey kicking a soccer ball with a big grin, cleats on its hooves."
+
+      - fr_slug: licorne-simple
+        en_slug: unicorn-simple
+        fr_title: "Licorne tres simple"
+        en_title: "Very Simple Unicorn"
+        fr_tags: ["licorne", "simple", "maternelle", "debutant"]
+        en_tags: ["unicorn", "simple", "preschool", "beginner"]
+        prompt: "A chubby friendly unicorn with a round body, big smile, and a short spiral horn, facing front."
+
+      - fr_slug: licorne-chateau
+        en_slug: unicorn-castle
+        fr_title: "Licorne devant le chateau"
+        en_title: "Unicorn at the Castle"
+        fr_tags: ["licorne", "chateau", "conte", "magie"]
+        en_tags: ["unicorn", "castle", "fairy tale", "magic"]
+        prompt: "A unicorn standing before a tall magical castle with towers and flags, a rainbow in the sky behind it."
+
+      - fr_slug: licorne-couronne-fleurs
+        en_slug: unicorn-flower-crown
+        fr_title: "Licorne couronne de fleurs"
+        en_title: "Unicorn Flower Crown"
+        fr_tags: ["licorne", "fleurs", "couronne", "printemps"]
+        en_tags: ["unicorn", "flowers", "crown", "spring"]
+        prompt: "A gentle unicorn wearing a crown of roses and daisies, sitting in a meadow with a serene smile."

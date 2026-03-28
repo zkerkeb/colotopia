@@ -1,0 +1,259 @@
+{
+  "summary": {
+    "total": 20,
+    "success": 20,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-28T16:27:26.430332+00:00",
+      "backend": "gemini",
+      "fr_slug": "licorne-princesse",
+      "en_slug": "unicorn-princess",
+      "prompt": "A unicorn wearing a sparkly crown, sitting gracefully with a flowing mane and a star on its flank. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/licorne-princesse.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:27:28.435284+00:00",
+      "backend": "gemini",
+      "fr_slug": "licorne-bebe",
+      "en_slug": "unicorn-baby",
+      "prompt": "A tiny baby unicorn foal with big round eyes, short fluffy mane, wobbly legs, and a tiny horn. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/licorne-bebe.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:27:30.441239+00:00",
+      "backend": "gemini",
+      "fr_slug": "licorne-nuages",
+      "en_slug": "unicorn-clouds",
+      "prompt": "A unicorn galloping on fluffy clouds high in the sky, stars twinkling around it, wings spread wide. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/licorne-nuages.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:27:32.446642+00:00",
+      "backend": "gemini",
+      "fr_slug": "licorne-ailee",
+      "en_slug": "unicorn-winged",
+      "prompt": "A majestic unicorn with large feathered wings, rearing up, mane and tail flowing dramatically. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/licorne-ailee.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:27:34.447061+00:00",
+      "backend": "gemini",
+      "fr_slug": "licorne-jardin",
+      "en_slug": "unicorn-garden",
+      "prompt": "A happy unicorn standing in a flower garden, butterflies around it, sniffing a big sunflower. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/licorne-jardin.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:27:36.450157+00:00",
+      "backend": "gemini",
+      "fr_slug": "licorne-fete",
+      "en_slug": "unicorn-birthday",
+      "prompt": "A unicorn celebrating with a birthday cake topped with candles, balloons floating around it, smiling happily. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/licorne-fete.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:27:38.460444+00:00",
+      "backend": "gemini",
+      "fr_slug": "licorne-dodo",
+      "en_slug": "unicorn-sleeping",
+      "prompt": "A baby unicorn curled up asleep on a cloud, eyes shut with ZZZ bubbles, moon and stars above. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/licorne-dodo.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:27:40.468038+00:00",
+      "backend": "gemini",
+      "fr_slug": "licorne-espace",
+      "en_slug": "unicorn-space",
+      "prompt": "A unicorn floating in outer space wearing a tiny astronaut helmet, surrounded by stars and colorful planets. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/licorne-espace.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:27:42.476775+00:00",
+      "backend": "gemini",
+      "fr_slug": "licorne-glace",
+      "en_slug": "unicorn-ice-cream",
+      "prompt": "A unicorn happily eating a giant rainbow ice cream cone with three scoops, sprinkles falling around it. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/licorne-glace.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:27:44.485062+00:00",
+      "backend": "gemini",
+      "fr_slug": "licorne-arc-en-ciel",
+      "en_slug": "unicorn-rainbow",
+      "prompt": "A unicorn jumping through a bright rainbow arch, sparkles trailing behind its hooves and flowing mane. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/licorne-arc-en-ciel.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:27:46.495545+00:00",
+      "backend": "gemini",
+      "fr_slug": "licorne-deux-amies",
+      "en_slug": "unicorn-friends",
+      "prompt": "Two unicorns touching their horns together, both smiling, surrounded by hearts and sparkles. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/licorne-deux-amies.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:27:48.506702+00:00",
+      "backend": "gemini",
+      "fr_slug": "licorne-foret",
+      "en_slug": "unicorn-forest",
+      "prompt": "A unicorn standing in an enchanted forest, mushrooms and glowing flowers at its feet, trees around it. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/licorne-foret.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:27:50.516687+00:00",
+      "backend": "gemini",
+      "fr_slug": "licorne-portrait",
+      "en_slug": "unicorn-portrait",
+      "prompt": "A close-up portrait of a unicorn face with flowing mane, big gentle eyes, spiral horn, flowers in its hair. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/licorne-portrait.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:27:52.525020+00:00",
+      "backend": "gemini",
+      "fr_slug": "licorne-musique",
+      "en_slug": "unicorn-music",
+      "prompt": "A unicorn dancing and prancing with musical notes floating all around, looking joyful and lively. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/licorne-musique.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:27:54.527323+00:00",
+      "backend": "gemini",
+      "fr_slug": "licorne-sirene",
+      "en_slug": "unicorn-mermaid",
+      "prompt": "A unicorn with a shimmering mermaid fish tail underwater, surrounded by bubbles, fish, and seaweed. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/licorne-sirene.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:27:56.535269+00:00",
+      "backend": "gemini",
+      "fr_slug": "licorne-fee",
+      "en_slug": "unicorn-fairy",
+      "prompt": "A tiny unicorn with delicate butterfly wings and a flower crown, hovering above a daisy field. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/licorne-fee.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:27:58.537068+00:00",
+      "backend": "gemini",
+      "fr_slug": "licorne-sport",
+      "en_slug": "unicorn-sports",
+      "prompt": "A unicorn in a jersey kicking a soccer ball with a big grin, cleats on its hooves. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/licorne-sport.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:28:00.537715+00:00",
+      "backend": "gemini",
+      "fr_slug": "licorne-simple",
+      "en_slug": "unicorn-simple",
+      "prompt": "A chubby friendly unicorn with a round body, big smile, and a short spiral horn, facing front. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/licorne-simple.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/licorne-simple.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/unicorn-simple.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 92.68772759039247,
+        "black_pct": 5.778083275094714,
+        "mid_pct": 0.9659947769154376,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:28:10.668915+00:00",
+      "backend": "gemini",
+      "fr_slug": "licorne-chateau",
+      "en_slug": "unicorn-castle",
+      "prompt": "A unicorn standing before a tall magical castle with towers and flags, a rainbow in the sky behind it. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/licorne-chateau.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:28:12.676726+00:00",
+      "backend": "gemini",
+      "fr_slug": "licorne-couronne-fleurs",
+      "en_slug": "unicorn-flower-crown",
+      "prompt": "A gentle unicorn wearing a crown of roses and daisies, sitting in a meadow with a serene smile. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/licorne-couronne-fleurs.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    }
+  ]
+}

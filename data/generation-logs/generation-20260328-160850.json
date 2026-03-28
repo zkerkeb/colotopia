@@ -1,0 +1,449 @@
+{
+  "summary": {
+    "total": 20,
+    "success": 20,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-28T16:05:19.428706+00:00",
+      "backend": "gemini",
+      "fr_slug": "kawaii-chat",
+      "en_slug": "kawaii-cat",
+      "prompt": "A chubby cat with huge sparkling eyes, tiny nose, rosy cheeks, sitting with a curled tail. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/kawaii-chat.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/kawaii-chat.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/kawaii-cat.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 91.93621951668077,
+        "black_pct": 6.636076065766727,
+        "mid_pct": 0.8882462206201494,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:05:28.065618+00:00",
+      "backend": "gemini",
+      "fr_slug": "kawaii-fraise",
+      "en_slug": "kawaii-strawberry",
+      "prompt": "A round kawaii strawberry with big shiny eyes, rosy cheeks, tiny smile, leafy top, simple outline. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/kawaii-fraise.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/kawaii-fraise.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/kawaii-strawberry.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 90.72447309375805,
+        "black_pct": 7.714302791775481,
+        "mid_pct": 0.984845698311693,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:05:44.619859+00:00",
+      "backend": "gemini",
+      "fr_slug": "kawaii-panda",
+      "en_slug": "kawaii-panda",
+      "prompt": "A chubby round panda with huge eyes, black eye patches, tiny ears, sitting with bamboo, big smile. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/kawaii-panda.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/kawaii-panda.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/kawaii-panda.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 74.16766285356971,
+        "black_pct": 23.853634089822343,
+        "mid_pct": 1.246459705006069,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:06:08.365687+00:00",
+      "backend": "gemini",
+      "fr_slug": "kawaii-glace",
+      "en_slug": "kawaii-ice-cream",
+      "prompt": "An ice cream cone with a big scoop, kawaii face with shiny eyes and smile, waffle cone, sprinkles on top. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/kawaii-glace.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/kawaii-glace.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/kawaii-ice-cream.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 91.22829845146578,
+        "black_pct": 6.6817780556883815,
+        "mid_pct": 1.3132195534630522,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:06:14.687789+00:00",
+      "backend": "gemini",
+      "fr_slug": "kawaii-nuage",
+      "en_slug": "kawaii-cloud",
+      "prompt": "A fluffy round cloud with a sleepy kawaii face, half-closed eyes, rosy cheeks, small raindrops below. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/kawaii-nuage.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/kawaii-nuage.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/kawaii-cloud.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 91.0941350645529,
+        "black_pct": 7.954445139220952,
+        "mid_pct": 0.5984937654025821,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:06:24.919936+00:00",
+      "backend": "gemini",
+      "fr_slug": "kawaii-renard",
+      "en_slug": "kawaii-fox",
+      "prompt": "A round fluffy fox with huge sparkling eyes, tiny pointed ears, bushy tail wrapped around, big cheeks. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/kawaii-renard.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/kawaii-renard.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/kawaii-fox.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 92.47365468790231,
+        "black_pct": 6.017214109684776,
+        "mid_pct": 0.9514657740832014,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:06:31.999779+00:00",
+      "backend": "gemini",
+      "fr_slug": "kawaii-cupcake",
+      "en_slug": "kawaii-cupcake",
+      "prompt": "A kawaii cupcake with swirled frosting, big shiny eyes, rosy cheeks, heart sprinkles, polka-dot wrapper. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/kawaii-cupcake.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/kawaii-cupcake.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/kawaii-cupcake.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.67445838084379,
+        "black_pct": 8.586916540993858,
+        "mid_pct": 1.7123533306359655,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:06:41.186171+00:00",
+      "backend": "gemini",
+      "fr_slug": "kawaii-licorne",
+      "en_slug": "kawaii-unicorn",
+      "prompt": "A round kawaii unicorn with huge eyes, spiral horn, fluffy mane with stars, sitting with curled legs. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/kawaii-licorne.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/kawaii-licorne.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/kawaii-unicorn.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 85.09751903483283,
+        "black_pct": 12.673704343987936,
+        "mid_pct": 1.3987383676021627,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:06:51.037355+00:00",
+      "backend": "gemini",
+      "fr_slug": "kawaii-soleil",
+      "en_slug": "kawaii-sun",
+      "prompt": "A round kawaii sun with big happy eyes, rosy cheeks, smile, and chunky rounded rays around it. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/kawaii-soleil.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/kawaii-soleil.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/kawaii-sun.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 89.72008680619413,
+        "black_pct": 8.976394968183323,
+        "mid_pct": 0.8155552286019054,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:06:58.557858+00:00",
+      "backend": "gemini",
+      "fr_slug": "kawaii-lapin",
+      "en_slug": "kawaii-bunny",
+      "prompt": "A chubby round bunny with huge floppy ears, giant shiny eyes, tiny nose, cotton tail, sitting pose. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/kawaii-lapin.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/kawaii-lapin.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/kawaii-bunny.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 82.79522382020818,
+        "black_pct": 5.787232868650458,
+        "mid_pct": 5.890866958472799,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:07:20.258104+00:00",
+      "backend": "gemini",
+      "fr_slug": "kawaii-etoile",
+      "en_slug": "kawaii-star",
+      "prompt": "A kawaii five-pointed star with big round shiny eyes, rosy cheeks, happy smile, sparkle details. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/kawaii-etoile.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/kawaii-etoile.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/kawaii-star.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 91.38434729834111,
+        "black_pct": 7.358480155956891,
+        "mid_pct": 0.7767499172398573,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:07:30.720078+00:00",
+      "backend": "gemini",
+      "fr_slug": "kawaii-ours",
+      "en_slug": "kawaii-bear",
+      "prompt": "A chubby round teddy bear with huge eyes, round ears, big rosy cheeks, small button nose, sitting. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/kawaii-ours.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/kawaii-ours.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/kawaii-bear.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.56930702173833,
+        "black_pct": 9.445644977378894,
+        "mid_pct": 1.2399768271600398,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:07:38.210606+00:00",
+      "backend": "gemini",
+      "fr_slug": "kawaii-pizza",
+      "en_slug": "kawaii-pizza",
+      "prompt": "A triangular pizza slice with kawaii face, big eyes, cheese dripping, mushroom and pepper toppings. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/kawaii-pizza.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/kawaii-pizza.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/kawaii-pizza.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 90.68415051311288,
+        "black_pct": 6.939437966675249,
+        "mid_pct": 1.4882112774487806,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:07:44.353734+00:00",
+      "backend": "gemini",
+      "fr_slug": "kawaii-lune",
+      "en_slug": "kawaii-moon",
+      "prompt": "A crescent moon with a sleepy kawaii face, half-closed eyes, rosy cheeks, tiny stars floating around. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/kawaii-lune.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/kawaii-lune.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/kawaii-moon.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 73.60843417809983,
+        "black_pct": 23.42424688270129,
+        "mid_pct": 2.2220638540478905,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:07:53.970067+00:00",
+      "backend": "gemini",
+      "fr_slug": "kawaii-bebe-dragon",
+      "en_slug": "kawaii-baby-dragon",
+      "prompt": "A tiny round baby dragon with huge eyes, stubby wings, little horns, big smile, curled tail, sitting. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/kawaii-bebe-dragon.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/kawaii-bebe-dragon.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/kawaii-baby-dragon.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 92.0678541214551,
+        "black_pct": 5.6994611395152095,
+        "mid_pct": 1.3941865597528231,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:08:02.363303+00:00",
+      "backend": "gemini",
+      "fr_slug": "kawaii-cactus",
+      "en_slug": "kawaii-cactus",
+      "prompt": "A round kawaii cactus in a small pot with big shiny eyes, rosy cheeks, flower on top, small spines. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/kawaii-cactus.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/kawaii-cactus.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/kawaii-cactus.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 90.44897377423034,
+        "black_pct": 7.760326626696583,
+        "mid_pct": 1.1219056902195903,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:08:09.208611+00:00",
+      "backend": "gemini",
+      "fr_slug": "kawaii-cerise",
+      "en_slug": "kawaii-cherries",
+      "prompt": "A pair of round kawaii cherries on a stem, each with big eyes and rosy cheeks, happy faces. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/kawaii-cerise.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/kawaii-cerise.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/kawaii-cherries.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.80489756133446,
+        "black_pct": 9.882388641630191,
+        "mid_pct": 0.8255324235848016,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:08:19.657962+00:00",
+      "backend": "gemini",
+      "fr_slug": "kawaii-dinosaure",
+      "en_slug": "kawaii-dinosaur",
+      "prompt": "A tiny chubby T-rex with huge round eyes, stubby arms, big smile, rounded spines along its back. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/kawaii-dinosaure.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/kawaii-dinosaure.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/kawaii-dinosaur.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 67.14491300989444,
+        "black_pct": 17.770809578107183,
+        "mid_pct": 8.963475190348328,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:08:39.464891+00:00",
+      "backend": "gemini",
+      "fr_slug": "kawaii-requin",
+      "en_slug": "kawaii-shark",
+      "prompt": "A round friendly kawaii shark with huge eyes, rosy cheeks, tiny dorsal fin, small cute teeth showing. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/kawaii-requin.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/kawaii-requin.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/kawaii-shark.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 94.09317872512598,
+        "black_pct": 4.9746202229006515,
+        "mid_pct": 0.5824015154301688,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:08:45.280791+00:00",
+      "backend": "gemini",
+      "fr_slug": "kawaii-arc-en-ciel",
+      "en_slug": "kawaii-rainbow",
+      "prompt": "A kawaii rainbow arc with big sparkling eyes, rosy cheeks, smiling, small clouds on each end. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/kawaii-arc-en-ciel.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/kawaii-arc-en-ciel.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/kawaii-rainbow.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 93.08539007613933,
+        "black_pct": 5.647690072461103,
+        "mid_pct": 0.7882443815058667,
+        "reason": null
+      }
+    }
+  ]
+}
