@@ -1,0 +1,279 @@
+{
+  "summary": {
+    "total": 20,
+    "success": 20,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-28T16:43:59.475964+00:00",
+      "backend": "openai",
+      "fr_slug": "fleurs-rose",
+      "en_slug": "flowers-rose",
+      "prompt": "A pretty rose with open petals, a few leaves, and a curved stem, front view, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fleurs-rose.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:44:01.486194+00:00",
+      "backend": "openai",
+      "fr_slug": "fleurs-tournesol",
+      "en_slug": "flowers-sunflower",
+      "prompt": "A tall cheerful sunflower with large round petals and a striped round center, bold cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fleurs-tournesol.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:44:03.489121+00:00",
+      "backend": "openai",
+      "fr_slug": "fleurs-marguerite",
+      "en_slug": "flowers-daisy",
+      "prompt": "A daisy with long white petals and a big round yellow center, a bumblebee sitting on it, simple style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fleurs-marguerite.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:44:05.494844+00:00",
+      "backend": "openai",
+      "fr_slug": "fleurs-tulipe",
+      "en_slug": "flowers-tulip",
+      "prompt": "A round tulip with three smooth petals in a terracotta pot, simple leaves, cute cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fleurs-tulipe.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:44:07.501576+00:00",
+      "backend": "openai",
+      "fr_slug": "fleurs-coquelicot",
+      "en_slug": "flowers-poppy",
+      "prompt": "A poppy with four rounded petals, a dark round center, thin stem and two narrow leaves, simple style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fleurs-coquelicot.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:44:09.511715+00:00",
+      "backend": "openai",
+      "fr_slug": "fleurs-pissenlit",
+      "en_slug": "flowers-dandelion",
+      "prompt": "A dandelion with a round fluffy seed head, seeds floating away in the wind, cute cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fleurs-pissenlit.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:44:11.514276+00:00",
+      "backend": "openai",
+      "fr_slug": "fleurs-jonquille",
+      "en_slug": "flowers-daffodil",
+      "prompt": "A daffodil with six star-shaped petals and a trumpet center, two long leaves at the base, simple style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fleurs-jonquille.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:44:13.523683+00:00",
+      "backend": "openai",
+      "fr_slug": "fleurs-bouquet",
+      "en_slug": "flowers-bouquet",
+      "prompt": "A cheerful bouquet of five mixed flowers tied with a bow ribbon, simple cute cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fleurs-bouquet.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:44:15.532473+00:00",
+      "backend": "openai",
+      "fr_slug": "fleurs-cerisier",
+      "en_slug": "flowers-cherry-blossom",
+      "prompt": "A cherry blossom branch with clusters of five-petaled flowers and round buds, simple elegant style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fleurs-cerisier.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:44:17.540369+00:00",
+      "backend": "openai",
+      "fr_slug": "fleurs-lilas",
+      "en_slug": "flowers-lilac",
+      "prompt": "A lilac branch with cone-shaped clusters of tiny four-petaled flowers and heart-shaped leaves, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fleurs-lilas.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:44:19.550959+00:00",
+      "backend": "openai",
+      "fr_slug": "fleurs-rigolote",
+      "en_slug": "flowers-funny-face",
+      "prompt": "A big sunflower with a funny cartoon face, stick arms and legs doing a silly dance, very cute. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fleurs-rigolote.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:44:21.561005+00:00",
+      "backend": "openai",
+      "fr_slug": "fleurs-dansante",
+      "en_slug": "flowers-dancing",
+      "prompt": "Three flowers with smiling faces, arms raised, dancing together with musical notes around them, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fleurs-dansante.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:44:23.563536+00:00",
+      "backend": "openai",
+      "fr_slug": "fleurs-fee",
+      "en_slug": "flowers-fairy",
+      "prompt": "A tiny fairy with wings sitting inside a large open flower, surrounded by smaller flowers and sparkles. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fleurs-fee.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:44:25.568332+00:00",
+      "backend": "openai",
+      "fr_slug": "fleurs-orchidee",
+      "en_slug": "flowers-orchid",
+      "prompt": "An orchid stem with three open blooms showing petals and a detailed center, graceful leaves, clean line art. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fleurs-orchidee.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:44:27.574209+00:00",
+      "backend": "openai",
+      "fr_slug": "fleurs-pivoine",
+      "en_slug": "flowers-peony",
+      "prompt": "A fully open peony with many layered rounded petals, one bud on the side, and broad leaves, detailed style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fleurs-pivoine.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:44:29.577408+00:00",
+      "backend": "openai",
+      "fr_slug": "fleurs-lotus",
+      "en_slug": "flowers-lotus",
+      "prompt": "A lotus flower floating on still water, petals layered symmetrically, lily pads around it, elegant line art. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fleurs-lotus.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:44:31.578772+00:00",
+      "backend": "openai",
+      "fr_slug": "fleurs-hibiscus",
+      "en_slug": "flowers-hibiscus",
+      "prompt": "A hibiscus with five broad petals and a prominent long stamen column, two leaves beside it, bold clean lines. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fleurs-hibiscus.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-03-28T16:44:33.589396+00:00",
+      "backend": "openai",
+      "fr_slug": "fleurs-couronne",
+      "en_slug": "flowers-crown",
+      "prompt": "A simple round wreath of roses, daisies, and leaves, thick clean outlines only, flat cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fleurs-couronne.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fleurs-couronne.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/flowers-crown.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 86.60219038511053,
+        "black_pct": 9.338930371133262,
+        "mid_pct": 2.950812888512892,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:44:49.444221+00:00",
+      "backend": "openai",
+      "fr_slug": "fleurs-jardin",
+      "en_slug": "flowers-garden",
+      "prompt": "Three big flowers \u2014 sunflower, rose, daisy \u2014 side by side with a simple fence behind them, thick bold outlines. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fleurs-jardin.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fleurs-jardin.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/flowers-garden.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 87.88308750505756,
+        "black_pct": 9.67626990841211,
+        "mid_pct": 1.6444440357523817,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:45:04.863266+00:00",
+      "backend": "openai",
+      "fr_slug": "fleurs-mandala",
+      "en_slug": "flowers-mandala",
+      "prompt": "Six simple roses arranged in a circle, leaves between them, all bold thick outlines, flat white interior. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/fleurs-mandala.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/fleurs-mandala.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/flowers-mandala.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 84.56003788575423,
+        "black_pct": 11.89525324603671,
+        "mid_pct": 2.397055578033619,
+        "reason": null
+      }
+    }
+  ]
+}
