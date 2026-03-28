@@ -12,7 +12,13 @@ export async function getPublishableColoriages(locale: 'fr' | 'en') {
     const imagePath = join(process.cwd(), 'public', c.data.image);
     // Accept both the original PNG and the optimized WebP
     const webpPath = imagePath.replace(/\.png$/, '.webp');
-    return existsSync(imagePath) || existsSync(webpPath);
+    // Also require the thumbnail used by ColoringCard
+    const thumbPath = imagePath
+      .replace('/images/coloriages/', '/images/coloriages/thumbs/')
+      .replace(/\.png$/, '.webp');
+    const hasSource = existsSync(imagePath) || existsSync(webpPath);
+    const hasThumb = existsSync(thumbPath);
+    return hasSource && hasThumb;
   });
 }
 

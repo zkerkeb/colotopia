@@ -482,6 +482,13 @@ const enSlugs: Record<Category, string> = {
   chats: 'cats',
   papillons: 'butterflies',
   'bold-et-facile': 'bold-easy',
+  paques: 'easter',
+  halloween: 'halloween',
+  noel: 'christmas',
+  cottagecore: 'cottagecore',
+  vitrail: 'stained-glass',
+  zodiaque: 'zodiac',
+  affirmations: 'affirmations',
   paysages: 'landscapes',
 };
 

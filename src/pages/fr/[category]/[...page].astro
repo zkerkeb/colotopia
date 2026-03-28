@@ -7,19 +7,18 @@ import Breadcrumb from '../../../components/Breadcrumb.astro';
 import PillarSection from '../../../components/PillarSection.astro';
 import CategoryFaq from '../../../components/CategoryFaq.astro';
 import RelatedCategories from '../../../components/RelatedCategories.astro';
-import { getCollection } from 'astro:content';
 import { categories, adultCategories, getCategoryLabel, getCategorySlug, ti, categoryIcons, categoryColors, type Category } from '../../../lib/i18n';
+import { getPublishableColoriages } from '../../../lib/coloriages';
 import { getPillarContent } from '../../../data/pillar-content';
 
 const locale = 'fr';
 
 export async function getStaticPaths({ paginate }: { paginate: Function }) {
   const results = [];
+  const allColoriages = await getPublishableColoriages('fr');
   for (const cat of categories) {
-    const coloriages = await getCollection(
-      'coloriages',
-      ({ data }) => data.locale === 'fr' && data.category === cat
-    );
+    const coloriages = allColoriages.filter((c) => c.data.category === cat);
+    if (coloriages.length === 0) continue;
     const pages = paginate(coloriages, {
       params: { category: cat },
       props: { categoryKey: cat },
