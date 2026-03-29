@@ -154,28 +154,45 @@ const placeholders = JSON.stringify(locale === 'fr' ? placeholdersFr : placehold
   }
 
   .search-result-item {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
     padding: var(--space-2) var(--space-4);
     font-size: var(--font-size-sm);
     color: var(--color-text);
     text-decoration: none;
     cursor: pointer;
+    transition: background var(--transition-fast);
   }
 
   .search-result-item:hover,
   .search-result-item[aria-selected="true"] {
     background: var(--color-primary-light);
+  }
+
+  .search-result-item:hover .search-result-title,
+  .search-result-item[aria-selected="true"] .search-result-title {
     color: var(--color-primary);
   }
 
   .search-result-title {
     font-weight: var(--font-weight-medium);
-    display: block;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .search-result-category {
     font-size: var(--font-size-xs);
-    color: var(--color-text-muted);
+    color: var(--color-text-secondary);
+    background: var(--color-bg-subtle);
+    padding: 2px var(--space-2);
+    border-radius: var(--radius-pill);
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   .search-no-results {
@@ -195,7 +212,7 @@ const placeholders = JSON.stringify(locale === 'fr' ? placeholdersFr : placehold
     const noResultsText = bar.dataset.noResults!;
     const placeholders: string[] = JSON.parse(bar.dataset.placeholders || '[]');
 
-    let index: Array<{ title: string; slug: string; tags: string[]; category: string; url: string }> = [];
+    let index: Array<{ title: string; slug: string; tags: string[]; category: string; categoryLabel?: string; url: string }> = [];
     let loaded = false;
     let debounceTimer: ReturnType<typeof setTimeout>;
     let selectedIndex = -1;
@@ -257,7 +274,8 @@ const placeholders = JSON.stringify(locale === 'fr' ? placeholdersFr : placehold
           a.href = item.url;
           a.className = 'search-result-item';
           a.setAttribute('role', 'option');
-          a.innerHTML = `<span class="search-result-title">${item.title}</span><span class="search-result-category">${item.category}</span>`;
+          const label = item.categoryLabel || item.category;
+          a.innerHTML = `<span class="search-result-title">${item.title}</span><span class="search-result-category">${label}</span>`;
           li.appendChild(a);
           results.appendChild(li);
         });
