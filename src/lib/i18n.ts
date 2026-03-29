@@ -485,6 +485,7 @@ const enSlugs: Record<Category, string> = {
   paques: 'easter',
   halloween: 'halloween',
   noel: 'christmas',
+  champignons: 'mushrooms',
   cottagecore: 'cottagecore',
   vitrail: 'stained-glass',
   zodiaque: 'zodiac',
