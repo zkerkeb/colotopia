@@ -153,7 +153,7 @@ const placeholders = JSON.stringify(locale === 'fr' ? placeholdersFr : placehold
     display: none;
   }
 
-  .search-result-item {
+  .search-results :global(.search-result-item) {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -166,17 +166,17 @@ const placeholders = JSON.stringify(locale === 'fr' ? placeholdersFr : placehold
     transition: background var(--transition-fast);
   }
 
-  .search-result-item:hover,
-  .search-result-item[aria-selected="true"] {
+  .search-results :global(.search-result-item:hover),
+  .search-results :global(.search-result-item[aria-selected="true"]) {
     background: var(--color-primary-light);
   }
 
-  .search-result-item:hover .search-result-title,
-  .search-result-item[aria-selected="true"] .search-result-title {
+  .search-results :global(.search-result-item:hover .search-result-title),
+  .search-results :global(.search-result-item[aria-selected="true"] .search-result-title) {
     color: var(--color-primary);
   }
 
-  .search-result-title {
+  .search-results :global(.search-result-title) {
     font-weight: var(--font-weight-medium);
     flex: 1;
     min-width: 0;
@@ -185,7 +185,7 @@ const placeholders = JSON.stringify(locale === 'fr' ? placeholdersFr : placehold
     white-space: nowrap;
   }
 
-  .search-result-category {
+  .search-results :global(.search-result-category) {
     font-size: var(--font-size-xs);
     color: var(--color-text-secondary);
     background: var(--color-bg-subtle);
@@ -195,7 +195,7 @@ const placeholders = JSON.stringify(locale === 'fr' ? placeholdersFr : placehold
     flex-shrink: 0;
   }
 
-  .search-no-results {
+  .search-results :global(.search-no-results) {
     padding: var(--space-2) var(--space-4);
     font-size: var(--font-size-sm);
     color: var(--color-text-muted);
