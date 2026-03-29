@@ -1,4 +1,5 @@
 import type { Category, Locale } from '../lib/i18n';
+import { kidsCategories, adultCategories } from '../lib/i18n';
 
 export interface PillarFaq {
   question: string;
@@ -1695,4 +1696,14 @@ const pillarContent: Partial<PillarRecord> = {
 
 export function getPillarContent(category: Category, locale: Locale): PillarData | null {
   return pillarContent[category]?.[locale] ?? null;
+}
+
+export function getRelatedCategories(category: Category, locale: Locale): Category[] {
+  const pillar = getPillarContent(category, locale);
+  if (pillar && pillar.relatedCategories.length > 0) {
+    return pillar.relatedCategories;
+  }
+  const isAdult = (adultCategories as readonly string[]).includes(category);
+  const pool = isAdult ? adultCategories : kidsCategories;
+  return pool.filter((c) => c !== category).slice(0, 4) as Category[];
 }

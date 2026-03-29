@@ -9,7 +9,7 @@ import CategoryFaq from '../../../components/CategoryFaq.astro';
 import RelatedCategories from '../../../components/RelatedCategories.astro';
 import { categories, adultCategories, getCategoryLabel, getCategorySlug, ti, categoryIcons, categoryColors, type Category } from '../../../lib/i18n';
 import { getPublishableColoriages } from '../../../lib/coloriages';
-import { getPillarContent } from '../../../data/pillar-content';
+import { getPillarContent, getRelatedCategories } from '../../../data/pillar-content';
 
 const locale = 'fr';
 
@@ -35,6 +35,7 @@ const isAdult = (adultCategories as readonly string[]).includes(categoryKey);
 const catIcon = categoryIcons[categoryKey];
 const catColor = categoryColors[categoryKey];
 const pillar = page.currentPage === 1 ? getPillarContent(categoryKey, locale) : null;
+const relatedCats = getRelatedCategories(categoryKey, locale);
 
 const descriptionKey = isAdult ? 'category.description.adults' : 'category.description';
 const pageDescription = pillar
@@ -161,8 +162,8 @@ const structuredData = pillar && pillar.faq.length > 0
     <CategoryFaq locale={locale} faq={pillar.faq} categoryLabel={label} />
   )}
 
-  {pillar && pillar.relatedCategories.length > 0 && (
-    <RelatedCategories locale={locale} categories={pillar.relatedCategories} />
+  {relatedCats.length > 0 && (
+    <RelatedCategories locale={locale} categories={relatedCats} />
   )}
 
   {page.currentPage === 1 && hasSeoText && !pillar && (
