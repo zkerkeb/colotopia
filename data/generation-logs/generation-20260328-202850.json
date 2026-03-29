@@ -1,0 +1,229 @@
+{
+  "summary": {
+    "total": 10,
+    "success": 10,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-28T20:25:08.631166+00:00",
+      "backend": "openai",
+      "fr_slug": "cottagecore-chaumiere",
+      "en_slug": "cottagecore-cottage",
+      "prompt": "A cozy thatched cottage covered in climbing roses, with a wooden door, flower window boxes, and a winding garden path lined with wildflowers. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/cottagecore-chaumiere.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/cottagecore-chaumiere.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cottagecore-cottage.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 59.67254570198992,
+        "black_pct": 3.283600617942399,
+        "mid_pct": 23.40052230845625,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:25:29.368351+00:00",
+      "backend": "openai",
+      "fr_slug": "cottagecore-theiere",
+      "en_slug": "cottagecore-teapot",
+      "prompt": "A vintage ceramic teapot with floral patterns, surrounded by a bouquet of wildflowers, honeybees, and scattered petals on a lace doily. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/cottagecore-theiere.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/cottagecore-theiere.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cottagecore-teapot.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 77.68041711111928,
+        "black_pct": 2.4474013315187406,
+        "mid_pct": 12.73182035531688,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:25:51.573583+00:00",
+      "backend": "openai",
+      "fr_slug": "cottagecore-champignon-maison",
+      "en_slug": "cottagecore-mushroom-house",
+      "prompt": "A large mushroom with a round door and tiny windows carved in the stem, surrounded by ferns, wildflowers, and a winding mossy path. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/cottagecore-champignon-maison.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/cottagecore-champignon-maison.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cottagecore-mushroom-house.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 70.38170816934564,
+        "black_pct": 4.03124655166072,
+        "mid_pct": 16.07284731673226,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:26:17.796924+00:00",
+      "backend": "openai",
+      "fr_slug": "cottagecore-chat-panier",
+      "en_slug": "cottagecore-cat-basket",
+      "prompt": "A fluffy cat curled asleep in a wicker basket lined with a floral cushion, surrounded by potted herbs and wildflower bouquets. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/cottagecore-chat-panier.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/cottagecore-chat-panier.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cottagecore-cat-basket.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 71.74490565343731,
+        "black_pct": 4.7478114540037515,
+        "mid_pct": 14.694844962665979,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:26:38.496592+00:00",
+      "backend": "openai",
+      "fr_slug": "cottagecore-tasse-the",
+      "en_slug": "cottagecore-teacup-garden",
+      "prompt": "A large teacup overflowing with wildflowers, butterflies landing on the rim, tiny mushrooms around the base, intricate botanical details. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/cottagecore-tasse-the.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/cottagecore-tasse-the.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cottagecore-teacup-garden.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 72.4387574943907,
+        "black_pct": 2.9944458748666642,
+        "mid_pct": 16.076893368153897,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:27:00.936804+00:00",
+      "backend": "openai",
+      "fr_slug": "cottagecore-ruche",
+      "en_slug": "cottagecore-beehive",
+      "prompt": "A traditional wicker beehive surrounded by tall lavender stalks, honeybees in flight, and wild daisies, intricate floral border design. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/cottagecore-ruche.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/cottagecore-ruche.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cottagecore-beehive.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 58.852346709824545,
+        "black_pct": 2.883869128627653,
+        "mid_pct": 23.73225254717328,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:27:22.825784+00:00",
+      "backend": "openai",
+      "fr_slug": "cottagecore-cuisine-rustique",
+      "en_slug": "cottagecore-rustic-kitchen",
+      "prompt": "A rustic wooden shelf with mason jars of herbs, a loaf of braided bread, wildflower bundles, and ceramic crocks, detailed botanical line art. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/cottagecore-cuisine-rustique.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/cottagecore-cuisine-rustique.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cottagecore-rustic-kitchen.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 66.0968477581197,
+        "black_pct": 5.240510170301983,
+        "mid_pct": 18.687332180821716,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:27:43.385624+00:00",
+      "backend": "openai",
+      "fr_slug": "cottagecore-prairie-wildflowers",
+      "en_slug": "cottagecore-wildflower-meadow",
+      "prompt": "A lush wildflower meadow with tall grasses, poppies, daisies, cornflowers, and butterflies, with a distant tree line, detailed botanical illustration. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/cottagecore-prairie-wildflowers.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/cottagecore-prairie-wildflowers.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cottagecore-wildflower-meadow.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 58.712665980064,
+        "black_pct": 1.2870121749365506,
+        "mid_pct": 25.241935483870968,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:28:06.924094+00:00",
+      "backend": "openai",
+      "fr_slug": "cottagecore-lanterne",
+      "en_slug": "cottagecore-lantern-ivy",
+      "prompt": "An old hanging lantern wrapped in climbing ivy and tiny roses, surrounded by ferns and moss, intricate vine and floral patterns. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/cottagecore-lanterne.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/cottagecore-lanterne.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cottagecore-lantern-ivy.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 56.20604516864678,
+        "black_pct": 3.8158402913157023,
+        "mid_pct": 25.08243829771582,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:28:35.315889+00:00",
+      "backend": "openai",
+      "fr_slug": "cottagecore-livre-jardin",
+      "en_slug": "cottagecore-book-garden",
+      "prompt": "An open book lying in a flower garden, with tiny wildflowers growing from the pages, a butterfly resting on the corner, grass and daisies around it. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/cottagecore-livre-jardin.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/cottagecore-livre-jardin.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cottagecore-book-garden.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 74.37497701107146,
+        "black_pct": 3.8118402177511315,
+        "mid_pct": 13.595928200978408,
+        "reason": null
+      }
+    }
+  ]
+}

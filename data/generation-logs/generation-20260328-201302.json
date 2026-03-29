@@ -1,0 +1,449 @@
+{
+  "summary": {
+    "total": 20,
+    "success": 20,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-28T20:06:44.900961+00:00",
+      "backend": "openai",
+      "fr_slug": "bold-et-facile-chat",
+      "en_slug": "bold-easy-cat",
+      "prompt": "A sitting cat with an enormous round head, huge eyes, tiny smile, ultra thick outlines only. Very simple. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/bold-et-facile-chat.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/bold-et-facile-chat.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/bold-easy-cat.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 83.098079964689,
+        "black_pct": 15.553205576194504,
+        "mid_pct": 0.8604755949534705,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:07:05.336475+00:00",
+      "backend": "openai",
+      "fr_slug": "bold-et-facile-soleil",
+      "en_slug": "bold-easy-sun",
+      "prompt": "A big smiling sun with eight thick chunky rays, simple round face, ultra thick black outlines. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/bold-et-facile-soleil.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/bold-et-facile-soleil.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/bold-easy-sun.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.64153823518593,
+        "black_pct": 10.532285651230367,
+        "mid_pct": 0.5240096369588406,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:07:23.692185+00:00",
+      "backend": "openai",
+      "fr_slug": "bold-et-facile-maison",
+      "en_slug": "bold-easy-house",
+      "prompt": "A simple house with a big roof, one door, two windows and a chimney, very thick black outlines only. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/bold-et-facile-maison.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/bold-et-facile-maison.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/bold-easy-house.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 85.8471420164049,
+        "black_pct": 13.078585353293853,
+        "mid_pct": 0.6696674881377129,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:07:42.566948+00:00",
+      "backend": "openai",
+      "fr_slug": "bold-et-facile-etoile",
+      "en_slug": "bold-easy-star",
+      "prompt": "A large five-pointed star with a smiling face, very thick outlines, simple shape, white interior. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/bold-et-facile-etoile.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/bold-et-facile-etoile.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/bold-easy-star.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 92.9885147313054,
+        "black_pct": 6.492901018869313,
+        "mid_pct": 0.3238680251590834,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:08:00.441325+00:00",
+      "backend": "openai",
+      "fr_slug": "bold-et-facile-coeur",
+      "en_slug": "bold-easy-heart",
+      "prompt": "A big heart shape with a simple happy face, very thick black outlines, plain white interior, nothing else. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/bold-et-facile-coeur.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/bold-et-facile-coeur.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/bold-easy-heart.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 89.25929672269834,
+        "black_pct": 10.217383308198771,
+        "mid_pct": 0.34662706440578217,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:08:20.154783+00:00",
+      "backend": "openai",
+      "fr_slug": "bold-et-facile-chien",
+      "en_slug": "bold-easy-dog",
+      "prompt": "A chubby sitting dog with floppy ears, big nose, and a tail, ultra thick outlines, very minimal detail. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/bold-et-facile-chien.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/bold-et-facile-chien.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/bold-easy-dog.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 89.64633832346341,
+        "black_pct": 9.17129510427778,
+        "mid_pct": 0.7688417258248428,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:08:40.188095+00:00",
+      "backend": "openai",
+      "fr_slug": "bold-et-facile-fleur",
+      "en_slug": "bold-easy-flower",
+      "prompt": "A simple flower with six large round petals and a big circle center, very thick outlines, stem and two leaves. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/bold-et-facile-fleur.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/bold-et-facile-fleur.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/bold-easy-flower.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 86.69810019494612,
+        "black_pct": 12.242983779012027,
+        "mid_pct": 0.6662651267149741,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:08:59.743864+00:00",
+      "backend": "openai",
+      "fr_slug": "bold-et-facile-poisson",
+      "en_slug": "bold-easy-fish",
+      "prompt": "A big round cartoon fish with one large eye, a smile, and a fan tail, ultra thick outlines, minimal detail. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/bold-et-facile-poisson.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/bold-et-facile-poisson.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/bold-easy-fish.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.76668996211424,
+        "black_pct": 10.252740280281017,
+        "mid_pct": 0.617620553941222,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:09:17.962183+00:00",
+      "backend": "openai",
+      "fr_slug": "bold-et-facile-voiture",
+      "en_slug": "bold-easy-car",
+      "prompt": "A side-view toy car with two big circles for wheels, rounded body, one window, ultra thick outlines only. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/bold-et-facile-voiture.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/bold-et-facile-voiture.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/bold-easy-car.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 89.01152205098025,
+        "black_pct": 10.330258947290986,
+        "mid_pct": 0.44483576709456724,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:09:41.516924+00:00",
+      "backend": "openai",
+      "fr_slug": "bold-et-facile-arc-en-ciel",
+      "en_slug": "bold-easy-rainbow",
+      "prompt": "A big semicircle rainbow with four thick bold bands, fluffy cloud on each end, ultra simple outline style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/bold-et-facile-arc-en-ciel.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/bold-et-facile-arc-en-ciel.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/bold-easy-rainbow.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 92.40151543016883,
+        "black_pct": 6.691755250671276,
+        "mid_pct": 0.5798267554345827,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:09:58.847111+00:00",
+      "backend": "openai",
+      "fr_slug": "bold-et-facile-papillon",
+      "en_slug": "bold-easy-butterfly",
+      "prompt": "A butterfly with two big round top wings and two smaller bottom wings, simple body, very thick outlines only. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/bold-et-facile-papillon.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/bold-et-facile-papillon.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/bold-easy-butterfly.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.81841505131128,
+        "black_pct": 10.613482546805459,
+        "mid_pct": 0.3532018979659396,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:10:18.266525+00:00",
+      "backend": "openai",
+      "fr_slug": "bold-et-facile-elephant",
+      "en_slug": "bold-easy-elephant",
+      "prompt": "A big round elephant head with huge ears, a curled trunk, and two small eyes, ultra thick outlines only. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/bold-et-facile-elephant.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/bold-et-facile-elephant.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/bold-easy-elephant.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 90.0309430978041,
+        "black_pct": 9.272308456247472,
+        "mid_pct": 0.44106558281531616,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:10:35.618755+00:00",
+      "backend": "openai",
+      "fr_slug": "bold-et-facile-glace",
+      "en_slug": "bold-easy-icecream",
+      "prompt": "A soft serve ice cream cone with a big swirl top and waffle cone, very thick outlines, simple and chunky. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/bold-et-facile-glace.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/bold-et-facile-glace.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/bold-easy-icecream.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 84.89213594732776,
+        "black_pct": 13.901405083311877,
+        "mid_pct": 0.7605197336962519,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:10:55.806310+00:00",
+      "backend": "openai",
+      "fr_slug": "bold-et-facile-nuage",
+      "en_slug": "bold-easy-cloud",
+      "prompt": "A big fluffy cartoon cloud with a smiling face, bumpy top edge, flat bottom, ultra thick black outlines. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/bold-et-facile-nuage.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/bold-et-facile-nuage.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/bold-easy-cloud.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 94.30311362048037,
+        "black_pct": 5.244372310295361,
+        "mid_pct": 0.28418913451281863,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:11:14.857267+00:00",
+      "backend": "openai",
+      "fr_slug": "bold-et-facile-grenouille",
+      "en_slug": "bold-easy-frog",
+      "prompt": "A round cartoon frog sitting with big bulging eyes, wide smile, stubby arms and legs, ultra thick outlines. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/bold-et-facile-grenouille.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/bold-et-facile-grenouille.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/bold-easy-frog.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 89.76247839040717,
+        "black_pct": 9.318424246882701,
+        "mid_pct": 0.5806543568617354,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:11:34.259411+00:00",
+      "backend": "openai",
+      "fr_slug": "bold-et-facile-arbre",
+      "en_slug": "bold-easy-tree",
+      "prompt": "A simple tree with a thick brown trunk and a big round green fluffy top, ultra thick outlines, very minimal. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/bold-et-facile-arbre.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/bold-et-facile-arbre.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/bold-easy-tree.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 94.57424504358701,
+        "black_pct": 4.772685474675396,
+        "mid_pct": 0.41168573215139587,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:11:53.153432+00:00",
+      "backend": "openai",
+      "fr_slug": "bold-et-facile-lapin",
+      "en_slug": "bold-easy-rabbit",
+      "prompt": "A chubby sitting bunny with two tall ears, round body, small tail, ultra thick outlines, very simple style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/bold-et-facile-lapin.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/bold-et-facile-lapin.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/bold-easy-rabbit.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 86.42163534042005,
+        "black_pct": 12.694762202523266,
+        "mid_pct": 0.5590907418987016,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:12:11.233848+00:00",
+      "backend": "openai",
+      "fr_slug": "bold-et-facile-gateau",
+      "en_slug": "bold-easy-cake",
+      "prompt": "A round birthday cake with three candles on top, one horizontal stripe, ultra thick outlines, simple shapes. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/bold-et-facile-gateau.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/bold-et-facile-gateau.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/bold-easy-cake.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 86.97254202376136,
+        "black_pct": 11.910655828153162,
+        "mid_pct": 0.6927483723838599,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:12:29.668922+00:00",
+      "backend": "openai",
+      "fr_slug": "bold-et-facile-etoile-mer",
+      "en_slug": "bold-easy-starfish",
+      "prompt": "A big five-armed starfish with a happy face and smooth arms, ultra thick outlines, plain white background. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/bold-et-facile-etoile-mer.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/bold-et-facile-etoile-mer.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/bold-easy-starfish.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 93.51799573325486,
+        "black_pct": 5.947419722661566,
+        "mid_pct": 0.33862691727663957,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:12:49.330804+00:00",
+      "backend": "openai",
+      "fr_slug": "bold-et-facile-licorne",
+      "en_slug": "bold-easy-unicorn",
+      "prompt": "A chubby unicorn standing, with a single thick horn, big eyes, flowing mane, ultra thick black outlines only. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/bold-et-facile-licorne.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/bold-et-facile-licorne.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/bold-easy-unicorn.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 87.45135542722625,
+        "black_pct": 10.785255820796705,
+        "mid_pct": 1.1284345459226837,
+        "reason": null
+      }
+    }
+  ]
+}

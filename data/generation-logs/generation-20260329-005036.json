@@ -1,0 +1,361 @@
+{
+  "summary": {
+    "total": 16,
+    "success": 16,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-28T22:02:34.429892+00:00",
+      "backend": "openai",
+      "fr_slug": "halloween-citrouille-souriante",
+      "en_slug": "halloween-jack-o-lantern",
+      "prompt": "A large carved Halloween pumpkin with a grinning triangular face, surrounded by autumn leaves, small ghost shapes, and bats flying above. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/halloween-citrouille-souriante.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/halloween-citrouille-souriante.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/halloween-jack-o-lantern.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 82.56772538345533,
+        "black_pct": 13.514547393975063,
+        "mid_pct": 2.728831794607717,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T22:34:07.815172+00:00",
+      "backend": "openai",
+      "fr_slug": "halloween-sorciere-balai",
+      "en_slug": "halloween-witch-broomstick",
+      "prompt": "A friendly witch riding her broomstick across a full moon, wearing a pointed hat with stars, her black cat perched behind her among the clouds. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/halloween-sorciere-balai.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/halloween-sorciere-balai.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/halloween-witch-broomstick.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 85.69693235737668,
+        "black_pct": 10.873027549931953,
+        "mid_pct": 2.251857505425387,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T22:34:31.054907+00:00",
+      "backend": "openai",
+      "fr_slug": "halloween-fantome-rigolo",
+      "en_slug": "halloween-friendly-ghost",
+      "prompt": "A cute friendly ghost floating in a haunted house corridor, wearing a tiny witch hat, holding a trick-or-treat bucket shaped like a pumpkin. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/halloween-fantome-rigolo.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/halloween-fantome-rigolo.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/halloween-friendly-ghost.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 87.19755765623276,
+        "black_pct": 8.299646890057748,
+        "mid_pct": 2.958767057784971,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T22:34:51.033867+00:00",
+      "backend": "openai",
+      "fr_slug": "halloween-maison-hantee",
+      "en_slug": "halloween-haunted-house",
+      "prompt": "A spooky haunted house with broken windows, a crooked door, bats flying out, a full moon behind, and pumpkins along the front path. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/halloween-maison-hantee.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/halloween-maison-hantee.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/halloween-haunted-house.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 80.42042152499357,
+        "black_pct": 13.33063596571891,
+        "mid_pct": 4.228077757751867,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T22:40:56.903576+00:00",
+      "backend": "openai",
+      "fr_slug": "halloween-araignee-toile",
+      "en_slug": "halloween-spider-web",
+      "prompt": "A large decorative spider web with a friendly cartoon spider at the center, surrounded by crescent moons, stars, and small ghost shapes. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/halloween-araignee-toile.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/halloween-araignee-toile.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/halloween-spider-web.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 87.44473461580903,
+        "black_pct": 9.834111891712952,
+        "mid_pct": 1.7341468348843196,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T22:41:17.711117+00:00",
+      "backend": "openai",
+      "fr_slug": "halloween-chauve-souris",
+      "en_slug": "halloween-bats",
+      "prompt": "A family of cute cartoon bats hanging upside down from a tree branch, with a crescent moon, stars, and a haunted house in the background. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/halloween-chauve-souris.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/halloween-chauve-souris.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/halloween-bats.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 85.93955750910361,
+        "black_pct": 9.230790451318645,
+        "mid_pct": 3.26539338654504,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T23:03:39.816044+00:00",
+      "backend": "openai",
+      "fr_slug": "halloween-chat-noir",
+      "en_slug": "halloween-black-cat",
+      "prompt": "A cute cat wearing a tiny witch hat, sitting on a fence with a full moon behind, surrounded by bats, stars, and carved pumpkins. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/halloween-chat-noir.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/halloween-chat-noir.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/halloween-black-cat.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 84.96951668076655,
+        "black_pct": 12.052911317909293,
+        "mid_pct": 1.9783812116084893,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T23:04:01.871276+00:00",
+      "backend": "openai",
+      "fr_slug": "halloween-bonbons-seau",
+      "en_slug": "halloween-candy-bucket",
+      "prompt": "A pumpkin-shaped trick-or-treat bucket overflowing with wrapped candies, lollipops, and chocolate, surrounded by small ghosts and fall leaves. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/halloween-bonbons-seau.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/halloween-bonbons-seau.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/halloween-candy-bucket.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 81.79828594548866,
+        "black_pct": 12.21590282120131,
+        "mid_pct": 4.1904678706734835,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T23:47:13.301649+00:00",
+      "backend": "openai",
+      "fr_slug": "halloween-momie-bandages",
+      "en_slug": "halloween-mummy",
+      "prompt": "A friendly cartoon mummy wrapped in bandages, with big round eyes peeking out, holding a jack-o-lantern, surrounded by bats and cobwebs. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/halloween-momie-bandages.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/halloween-momie-bandages.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/halloween-mummy.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 83.21376025306213,
+        "black_pct": 9.928182587265972,
+        "mid_pct": 4.549784823628941,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:48:22.007752+00:00",
+      "backend": "openai",
+      "fr_slug": "halloween-potion-sorciere",
+      "en_slug": "halloween-witch-potion",
+      "prompt": "A bubbling witch cauldron with smoke rising, surrounded by potion bottles, spell books, a witch hat, and a grinning skull on a shelf. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/halloween-potion-sorciere.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/halloween-potion-sorciere.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/halloween-witch-potion.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 90.32046566373634,
+        "black_pct": 6.220666127193144,
+        "mid_pct": 2.2399492404458012,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:48:43.831176+00:00",
+      "backend": "openai",
+      "fr_slug": "halloween-squelette-dansant",
+      "en_slug": "halloween-dancing-skeleton",
+      "prompt": "A friendly cartoon skeleton dancing in a graveyard, wearing a top hat and bow tie, with tombstones, bats, and a crescent moon behind. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/halloween-squelette-dansant.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/halloween-squelette-dansant.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/halloween-dancing-skeleton.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 82.74009636958841,
+        "black_pct": 11.68301945782911,
+        "mid_pct": 3.3483374406885646,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:49:04.231774+00:00",
+      "backend": "openai",
+      "fr_slug": "halloween-citrouilles-trio",
+      "en_slug": "halloween-pumpkin-trio",
+      "prompt": "Three Halloween pumpkins of different sizes, each with a unique carved expression \u2014 happy, scary, and surprised \u2014 surrounded by autumn leaves and bats. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/halloween-citrouilles-trio.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/halloween-citrouilles-trio.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/halloween-pumpkin-trio.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 85.25582079670431,
+        "black_pct": 11.081904954573877,
+        "mid_pct": 2.6082318755287455,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:49:22.587457+00:00",
+      "backend": "openai",
+      "fr_slug": "halloween-loup-garou",
+      "en_slug": "halloween-werewolf",
+      "prompt": "A cute cartoon werewolf howling at a full moon, wearing torn clothes, surrounded by autumn trees and flying bats, friendly expression. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/halloween-loup-garou.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/halloween-loup-garou.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/halloween-werewolf.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 82.94865192923089,
+        "black_pct": 10.469985654908596,
+        "mid_pct": 4.454610659506382,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:49:42.342212+00:00",
+      "backend": "openai",
+      "fr_slug": "halloween-village-hante",
+      "en_slug": "halloween-haunted-village",
+      "prompt": "A Halloween village street with carved pumpkins, cobwebs on fences, a haunted house, bats and ghosts floating between bare trees under a full moon. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/halloween-village-hante.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/halloween-village-hante.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/halloween-haunted-village.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 70.28828116379152,
+        "black_pct": 17.230064001177034,
+        "mid_pct": 8.840760289844411,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:50:03.807105+00:00",
+      "backend": "openai",
+      "fr_slug": "halloween-vampire-enfant",
+      "en_slug": "halloween-vampire-kid",
+      "prompt": "A cute little vampire kid in a black cape with a turned-up collar, tiny fangs and bat wings, holding a pumpkin bucket, friendly smile. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/halloween-vampire-enfant.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/halloween-vampire-enfant.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/halloween-vampire-kid.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 80.27434987310112,
+        "black_pct": 18.227967410894912,
+        "mid_pct": 0.9756961047559496,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:50:24.226105+00:00",
+      "backend": "openai",
+      "fr_slug": "halloween-citrouille-araignee",
+      "en_slug": "halloween-pumpkin-spider",
+      "prompt": "A grinning carved pumpkin with a spider crawling on top, cobwebs draped across it, small bats and stars decorating the surrounding scene. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/halloween-citrouille-araignee.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/halloween-citrouille-araignee.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/halloween-pumpkin-spider.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 82.78170633023136,
+        "black_pct": 10.990546952587634,
+        "mid_pct": 4.132949571486373,
+        "reason": null
+      }
+    }
+  ]
+}

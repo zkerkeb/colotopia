@@ -1,0 +1,339 @@
+{
+  "summary": {
+    "total": 15,
+    "success": 15,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-28T20:19:13.019814+00:00",
+      "backend": "openai",
+      "fr_slug": "anti-stress-lotus",
+      "en_slug": "stress-relief-lotus",
+      "prompt": "A large lotus flower with layered petals and intricate vein details, concentric ripples on water around it, fine line art for adults. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/anti-stress-lotus.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/anti-stress-lotus.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stress-relief-lotus.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 87.06173906646559,
+        "black_pct": 9.348999521830287,
+        "mid_pct": 2.336594695994409,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:19:31.830260+00:00",
+      "backend": "openai",
+      "fr_slug": "anti-stress-jardin-zen",
+      "en_slug": "stress-relief-zen-garden",
+      "prompt": "A top-down view of a zen garden with raked sand wave patterns, three smooth stones, and a small bonsai, intricate fine line art. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/anti-stress-jardin-zen.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/anti-stress-jardin-zen.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stress-relief-zen-garden.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 77.88819104719167,
+        "black_pct": 16.49377459815353,
+        "mid_pct": 3.668527237282525,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:19:51.359452+00:00",
+      "backend": "openai",
+      "fr_slug": "anti-stress-arbre-vie",
+      "en_slug": "stress-relief-tree-of-life",
+      "prompt": "A tree of life with Celtic knotwork branches and roots forming a perfect circle, intricate intertwining patterns, fine adult line art. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/anti-stress-arbre-vie.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/anti-stress-arbre-vie.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stress-relief-tree-of-life.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 78.11748262037003,
+        "black_pct": 11.917414573141576,
+        "mid_pct": 7.216316621914885,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:20:11.985829+00:00",
+      "backend": "openai",
+      "fr_slug": "anti-stress-koi",
+      "en_slug": "stress-relief-koi",
+      "prompt": "Two large koi fish swimming in opposite circles, surrounded by intricate water ripples and lotus leaves, detailed adult line art. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/anti-stress-koi.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/anti-stress-koi.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stress-relief-koi.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 78.42056865413618,
+        "black_pct": 10.381018501489683,
+        "mid_pct": 8.004009269135985,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:20:32.790848+00:00",
+      "backend": "openai",
+      "fr_slug": "anti-stress-plumes",
+      "en_slug": "stress-relief-feathers",
+      "prompt": "Three large overlapping feathers, each filled with intricate floral and swirling patterns inside the barbs, fine detailed line art. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/anti-stress-plumes.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/anti-stress-plumes.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stress-relief-feathers.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 75.7614852686946,
+        "black_pct": 11.55676426233126,
+        "mid_pct": 9.077684187295398,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:20:53.203453+00:00",
+      "backend": "openai",
+      "fr_slug": "anti-stress-libellule",
+      "en_slug": "stress-relief-dragonfly",
+      "prompt": "A large dragonfly with wings filled with intricate lace and floral patterns, perched on a lily pad with detailed water ripples below. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/anti-stress-libellule.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/anti-stress-libellule.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stress-relief-dragonfly.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 80.48497443631148,
+        "black_pct": 9.083983153713172,
+        "mid_pct": 7.288180012505976,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:21:12.672012+00:00",
+      "backend": "openai",
+      "fr_slug": "anti-stress-vagues-ocean",
+      "en_slug": "stress-relief-ocean-waves",
+      "prompt": "A full-page composition of rolling ocean waves with intricate foam swirls and small fish swimming beneath, detailed adult line art. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/anti-stress-vagues-ocean.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/anti-stress-vagues-ocean.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stress-relief-ocean-waves.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 73.40714311987347,
+        "black_pct": 13.123919520358996,
+        "mid_pct": 9.193410453525582,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:21:32.115910+00:00",
+      "backend": "openai",
+      "fr_slug": "anti-stress-mandala-nature",
+      "en_slug": "stress-relief-nature-mandala",
+      "prompt": "A circular mandala composed entirely of layered flowers, leaves, and vines, highly detailed with thin fine lines, for adult coloring. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/anti-stress-mandala-nature.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/anti-stress-mandala-nature.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stress-relief-nature-mandala.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 82.40753852944422,
+        "black_pct": 4.977838672895134,
+        "mid_pct": 8.930830911832862,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:21:51.135763+00:00",
+      "backend": "openai",
+      "fr_slug": "anti-stress-colibri",
+      "en_slug": "stress-relief-hummingbird",
+      "prompt": "A hummingbird hovering near a large tropical flower, wings detailed with intricate feather patterns, botanical leaves around, fine adult line art. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/anti-stress-colibri.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/anti-stress-colibri.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stress-relief-hummingbird.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 83.77956376209218,
+        "black_pct": 9.51824401368301,
+        "mid_pct": 4.35290763968073,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:22:10.840682+00:00",
+      "backend": "openai",
+      "fr_slug": "anti-stress-foret",
+      "en_slug": "stress-relief-forest",
+      "prompt": "A serene forest path lined with tall detailed trees, intricate leaf canopy overhead, small deer in background, fine adult line art. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/anti-stress-foret.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/anti-stress-foret.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stress-relief-forest.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 76.16507889800272,
+        "black_pct": 5.309982712325744,
+        "mid_pct": 12.1128664435208,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:22:30.360658+00:00",
+      "backend": "openai",
+      "fr_slug": "anti-stress-lune-botanique",
+      "en_slug": "stress-relief-botanical-moon",
+      "prompt": "A large crescent moon surrounded by night-blooming flowers, moths, and intricate botanical vines, fine detailed line art for adults. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/anti-stress-lune-botanique.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/anti-stress-lune-botanique.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stress-relief-botanical-moon.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 76.66361680214808,
+        "black_pct": 11.246735572148452,
+        "mid_pct": 8.496753963291278,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:22:49.696323+00:00",
+      "backend": "openai",
+      "fr_slug": "anti-stress-geometrie-sacree",
+      "en_slug": "stress-relief-sacred-geometry",
+      "prompt": "A flower of life sacred geometry pattern with interlocking circles, fine detailed lines, surrounded by petal and triangle ornaments. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/anti-stress-geometrie-sacree.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/anti-stress-geometrie-sacree.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stress-relief-sacred-geometry.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 80.76272667083532,
+        "black_pct": 14.945654172950306,
+        "mid_pct": 2.546207746349358,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:23:08.250565+00:00",
+      "backend": "openai",
+      "fr_slug": "anti-stress-paisley",
+      "en_slug": "stress-relief-paisley",
+      "prompt": "A full-page composition of interlocking paisley motifs filled with tiny flowers, swirls, and dots, intricate fine adult line art. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/anti-stress-paisley.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/anti-stress-paisley.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stress-relief-paisley.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 59.845698311693084,
+        "black_pct": 9.139478427189465,
+        "mid_pct": 21.066456394600362,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:23:47.483870+00:00",
+      "backend": "openai",
+      "fr_slug": "anti-stress-tortue",
+      "en_slug": "stress-relief-turtle",
+      "prompt": "A sea turtle with an intricate mosaic shell filled with geometric and floral patterns, swimming among detailed seaweed, fine adult line art. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/anti-stress-tortue.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/anti-stress-tortue.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stress-relief-turtle.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 78.25426674513555,
+        "black_pct": 9.850801853827198,
+        "mid_pct": 8.511512855408835,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:24:07.770224+00:00",
+      "backend": "openai",
+      "fr_slug": "anti-stress-automne",
+      "en_slug": "stress-relief-autumn-floor",
+      "prompt": "A detailed forest floor scene with intricate autumn leaves, acorns, mushrooms, and pine cones arranged in a decorative pattern, fine adult line art. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/anti-stress-automne.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/anti-stress-automne.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stress-relief-autumn-floor.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 71.84849376540258,
+        "black_pct": 12.678256151837275,
+        "mid_pct": 10.913212197005922,
+        "reason": null
+      }
+    }
+  ]
+}

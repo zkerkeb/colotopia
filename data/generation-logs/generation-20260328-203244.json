@@ -1,0 +1,229 @@
+{
+  "summary": {
+    "total": 10,
+    "success": 10,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-28T20:29:33.158288+00:00",
+      "backend": "openai",
+      "fr_slug": "vitrail-rosace-cathedrale",
+      "en_slug": "stained-glass-rose-window",
+      "prompt": "A large circular stained glass rose window design with geometric petals radiating from the center, bold lead came borders, intricate compartmented sections. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vitrail-rosace-cathedrale.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vitrail-rosace-cathedrale.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stained-glass-rose-window.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 68.50282304042373,
+        "black_pct": 13.202633611652628,
+        "mid_pct": 12.196408209806158,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:29:53.809049+00:00",
+      "backend": "openai",
+      "fr_slug": "vitrail-colombe-lumiere",
+      "en_slug": "stained-glass-dove-light",
+      "prompt": "A stained glass dove in flight with outstretched wings, bold black lead borders dividing the body into geometric color sections, sunburst background. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vitrail-colombe-lumiere.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vitrail-colombe-lumiere.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stained-glass-dove-light.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 82.0912568507007,
+        "black_pct": 8.826231287012174,
+        "mid_pct": 6.193447235811234,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:30:12.755739+00:00",
+      "backend": "openai",
+      "fr_slug": "vitrail-fleurs-geometriques",
+      "en_slug": "stained-glass-geometric-flowers",
+      "prompt": "A stained glass panel with three large stylized flowers, each petal a separate geometric section with bold black borders, Art Nouveau style. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vitrail-fleurs-geometriques.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vitrail-fleurs-geometriques.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stained-glass-geometric-flowers.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 72.01631294368632,
+        "black_pct": 13.328888807150477,
+        "mid_pct": 9.035200647368228,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:30:32.032990+00:00",
+      "backend": "openai",
+      "fr_slug": "vitrail-paon-plumes",
+      "en_slug": "stained-glass-peacock",
+      "prompt": "A stained glass peacock with a fan of elaborate tail feathers, each feather eye divided into bold geometric sections, architectural lead came borders. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vitrail-paon-plumes.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vitrail-paon-plumes.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stained-glass-peacock.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 63.13141391106043,
+        "black_pct": 9.365827417515725,
+        "mid_pct": 18.128011549637694,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:30:52.242911+00:00",
+      "backend": "openai",
+      "fr_slug": "vitrail-arbre-vie",
+      "en_slug": "stained-glass-tree-of-life",
+      "prompt": "A stained glass tree of life with spreading branches and roots, each section between branches a separate bold-bordered panel, Celtic knotwork elements. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vitrail-arbre-vie.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vitrail-arbre-vie.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stained-glass-tree-of-life.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 64.87195166807666,
+        "black_pct": 5.268418729539854,
+        "mid_pct": 18.983889358884763,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:31:12.648313+00:00",
+      "backend": "openai",
+      "fr_slug": "vitrail-papillon-ailes",
+      "en_slug": "stained-glass-butterfly-wings",
+      "prompt": "A large stained glass butterfly with symmetrical wings divided into bold geometric sections by lead came borders, detailed vein patterns, ornamental antennae. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vitrail-papillon-ailes.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vitrail-papillon-ailes.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stained-glass-butterfly-wings.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.24557693015043,
+        "black_pct": 7.758487512414021,
+        "mid_pct": 2.6008294405414354,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:31:31.485977+00:00",
+      "backend": "openai",
+      "fr_slug": "vitrail-mandala-solaire",
+      "en_slug": "stained-glass-solar-mandala",
+      "prompt": "A circular stained glass solar mandala with radiating sun rays, each section bordered by bold lead lines, concentric circles of geometric patterns. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vitrail-mandala-solaire.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vitrail-mandala-solaire.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stained-glass-solar-mandala.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 80.25342994813698,
+        "black_pct": 8.123137896788906,
+        "mid_pct": 7.473194909331665,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:31:50.735856+00:00",
+      "backend": "openai",
+      "fr_slug": "vitrail-poisson-eau",
+      "en_slug": "stained-glass-fish-water",
+      "prompt": "Two large stained glass fish swimming in opposite directions, their scales each a separate geometric compartment, wave patterns filling the background. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vitrail-poisson-eau.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vitrail-poisson-eau.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stained-glass-fish-water.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 68.16704675028507,
+        "black_pct": 8.674918159414426,
+        "mid_pct": 15.533205208371648,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:32:11.404743+00:00",
+      "backend": "openai",
+      "fr_slug": "vitrail-lune-etoiles",
+      "en_slug": "stained-glass-moon-stars",
+      "prompt": "A stained glass panel featuring a crescent moon and five-pointed stars, surrounded by geometric night sky sections with bold lead borders, Art Deco style. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vitrail-lune-etoiles.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vitrail-lune-etoiles.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stained-glass-moon-stars.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 48.91970427042337,
+        "black_pct": 13.524156766101445,
+        "mid_pct": 20.101243241255013,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:32:31.390415+00:00",
+      "backend": "openai",
+      "fr_slug": "vitrail-iris-botanique",
+      "en_slug": "stained-glass-iris",
+      "prompt": "A tall iris flower in stained glass style, each petal, sepal and leaf divided into bold geometric sections by lead came borders, graceful Art Nouveau curves. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/vitrail-iris-botanique.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/vitrail-iris-botanique.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/stained-glass-iris.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 82.49852870857394,
+        "black_pct": 7.101050134255342,
+        "mid_pct": 7.225466215470629,
+        "reason": null
+      }
+    }
+  ]
+}

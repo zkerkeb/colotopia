@@ -1,0 +1,339 @@
+{
+  "summary": {
+    "total": 15,
+    "success": 15,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-28T20:00:33.310076+00:00",
+      "backend": "openai",
+      "fr_slug": "chats-mignon",
+      "en_slug": "cats-cute",
+      "prompt": "A round fluffy kitten sitting upright with big round eyes and a tiny pink nose, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/chats-mignon.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/chats-mignon.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cats-cute.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.10529848824807,
+        "black_pct": 10.412835178577996,
+        "mid_pct": 0.9746845919005407,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:00:52.883866+00:00",
+      "backend": "openai",
+      "fr_slug": "chats-dors",
+      "en_slug": "cats-sleeping",
+      "prompt": "A cat curled up asleep, tail wrapped around its body, eyes closed with tiny eyelashes, bold lines. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/chats-dors.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/chats-dors.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cats-sleeping.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 92.32827270386582,
+        "black_pct": 6.649639533600618,
+        "mid_pct": 0.6501728767425607,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:01:13.051536+00:00",
+      "backend": "openai",
+      "fr_slug": "chats-joue",
+      "en_slug": "cats-playing",
+      "prompt": "A small kitten batting a ball of yarn with one paw raised, sitting on its hind legs, cute cartoon. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/chats-joue.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/chats-joue.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cats-playing.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 87.82823592158017,
+        "black_pct": 10.342213190127634,
+        "mid_pct": 1.193263324382977,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:01:35.339922+00:00",
+      "backend": "openai",
+      "fr_slug": "chats-siamois",
+      "en_slug": "cats-siamese",
+      "prompt": "A slender Siamese cat sitting regally with a long tail, almond eyes, and pointed ears, clean bold lines. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/chats-siamois.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/chats-siamois.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cats-siamese.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 92.2826626696583,
+        "black_pct": 6.214780961488947,
+        "mid_pct": 0.9481093905175267,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:01:55.420082+00:00",
+      "backend": "openai",
+      "fr_slug": "chats-arc-en-ciel",
+      "en_slug": "cats-rainbow",
+      "prompt": "A cheerful cat sitting under a big rainbow with clouds on each side, simple cartoon thick outlines. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/chats-arc-en-ciel.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/chats-arc-en-ciel.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cats-rainbow.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.18548387096774,
+        "black_pct": 9.814801191746055,
+        "mid_pct": 1.2733567513885313,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:02:16.536797+00:00",
+      "backend": "openai",
+      "fr_slug": "chats-chapeau",
+      "en_slug": "cats-hat",
+      "prompt": "A cute cat wearing a big top hat and a bow tie, sitting proudly, big eyes, simple cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/chats-chapeau.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/chats-chapeau.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cats-hat.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 87.20155772979733,
+        "black_pct": 10.451226689226468,
+        "mid_pct": 1.5556607937617244,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:02:38.208882+00:00",
+      "backend": "openai",
+      "fr_slug": "chats-jardin",
+      "en_slug": "cats-garden",
+      "prompt": "A cat sitting among large daisy flowers in a garden, looking curious, bold cartoon outlines. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/chats-jardin.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/chats-jardin.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cats-garden.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 82.06555522860191,
+        "black_pct": 12.938398867105603,
+        "mid_pct": 3.5002482804281456,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:03:00.225646+00:00",
+      "backend": "openai",
+      "fr_slug": "chats-panier",
+      "en_slug": "cats-basket",
+      "prompt": "A fluffy cat nestled inside a wicker basket with a pillow, paws folded, eyes half-closed, cute style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/chats-panier.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/chats-panier.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cats-basket.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 83.8790138669217,
+        "black_pct": 13.389257733475556,
+        "mid_pct": 1.7496873505719646,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:03:20.019650+00:00",
+      "backend": "openai",
+      "fr_slug": "chats-poisson",
+      "en_slug": "cats-fish",
+      "prompt": "A cat reaching eagerly toward a fish in a fishbowl, tongue out and eyes wide, thick cartoon lines. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/chats-poisson.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/chats-poisson.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cats-fish.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 86.59773053297532,
+        "black_pct": 10.960753301210136,
+        "mid_pct": 1.645133703608342,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:03:38.971925+00:00",
+      "backend": "openai",
+      "fr_slug": "chats-fee",
+      "en_slug": "cats-fairy",
+      "prompt": "A small kitten with delicate butterfly wings hovering over flowers, sparkles around it, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/chats-fee.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/chats-fee.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cats-fairy.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 82.71917644462427,
+        "black_pct": 13.923474454702614,
+        "mid_pct": 2.246845919005407,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:03:58.701997+00:00",
+      "backend": "openai",
+      "fr_slug": "chats-prince",
+      "en_slug": "cats-prince",
+      "prompt": "A noble cat wearing a small crown and a cape, sitting straight with one paw raised, cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/chats-prince.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/chats-prince.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cats-prince.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 87.78851105307683,
+        "black_pct": 10.633804759627763,
+        "mid_pct": 1.0146853275462537,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:04:17.223227+00:00",
+      "backend": "openai",
+      "fr_slug": "chats-deux-amis",
+      "en_slug": "cats-two-friends",
+      "prompt": "Two cats sitting side by side touching noses in greeting, different sizes, simple bold cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/chats-deux-amis.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/chats-deux-amis.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cats-two-friends.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.6539982344503,
+        "black_pct": 10.181796446831207,
+        "mid_pct": 0.7356457130246074,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:04:37.873488+00:00",
+      "backend": "openai",
+      "fr_slug": "chats-lune",
+      "en_slug": "cats-moon",
+      "prompt": "A cat sitting on a crescent moon surrounded by big stars, dangling its legs, dreamy cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/chats-lune.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/chats-lune.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cats-moon.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 89.71820171405452,
+        "black_pct": 8.113574502519587,
+        "mid_pct": 1.4925791738698644,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:04:58.262608+00:00",
+      "backend": "openai",
+      "fr_slug": "chats-miaulement",
+      "en_slug": "cats-singing",
+      "prompt": "A cat standing on its hind legs with mouth wide open singing, musical notes floating around it, cartoon. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/chats-miaulement.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/chats-miaulement.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cats-singing.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 87.36565270165887,
+        "black_pct": 10.735967558024056,
+        "mid_pct": 1.2363905543090448,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:05:17.350671+00:00",
+      "backend": "openai",
+      "fr_slug": "chats-printemps",
+      "en_slug": "cats-spring",
+      "prompt": "A happy cat lying in grass with a butterfly on its nose and flowers blooming around it, bold cartoon lines. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/chats-printemps.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/chats-printemps.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/cats-spring.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 84.38127597748924,
+        "black_pct": 12.450114025085519,
+        "mid_pct": 2.136131239195204,
+        "reason": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "summary": {
+    "total": 10,
+    "success": 10,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-28T20:41:54.186727+00:00",
+      "backend": "openai",
+      "fr_slug": "affirmations-cadre-floral-1",
+      "en_slug": "affirmations-floral-frame-1",
+      "prompt": "An ornate rectangular floral border frame with roses, leaves, and swirling vines forming a thick decorative border, empty white space in the center for writing. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/affirmations-cadre-floral-1.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/affirmations-cadre-floral-1.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/affirmations-floral-frame-1.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 74.79461691249494,
+        "black_pct": 3.9936826424394014,
+        "mid_pct": 14.434518335969399,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:42:14.229420+00:00",
+      "backend": "openai",
+      "fr_slug": "affirmations-soleil-rayons",
+      "en_slug": "affirmations-sunshine-rays",
+      "prompt": "A large decorative sun with detailed petal-like rays, surrounded by small stars and dots, a clear central oval space, for adult coloring with motivational use. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/affirmations-soleil-rayons.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/affirmations-soleil-rayons.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/affirmations-sunshine-rays.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 83.57638761172619,
+        "black_pct": 3.290497296502005,
+        "mid_pct": 8.378085114208996,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:42:32.635501+00:00",
+      "backend": "openai",
+      "fr_slug": "affirmations-mandala-coeur",
+      "en_slug": "affirmations-heart-mandala",
+      "prompt": "A heart-shaped mandala with intricate floral and geometric patterns inside the heart, radiating decorative elements around the edges, fine adult line art. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/affirmations-mandala-coeur.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/affirmations-mandala-coeur.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/affirmations-heart-mandala.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 79.03018906094826,
+        "black_pct": 3.3773954463530362,
+        "mid_pct": 11.969231618052746,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:42:52.406005+00:00",
+      "backend": "openai",
+      "fr_slug": "affirmations-plume-botanique",
+      "en_slug": "affirmations-botanical-feather",
+      "prompt": "A large ornate feather with botanical flowers and leaves growing from the barbs, vines curling around the quill, decorative border, fine detailed adult line art. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/affirmations-plume-botanique.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/affirmations-plume-botanique.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/affirmations-botanical-feather.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 77.13286681134366,
+        "black_pct": 3.0344006326553132,
+        "mid_pct": 12.706578511788722,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:43:12.848514+00:00",
+      "backend": "openai",
+      "fr_slug": "affirmations-cercle-nature",
+      "en_slug": "affirmations-nature-circle",
+      "prompt": "A circular botanical frame of intertwined branches, leaves, flowers, and berries forming a thick wreath border, an open circular center, detailed line art. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/affirmations-cercle-nature.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/affirmations-cercle-nature.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/affirmations-nature-circle.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 81.92003531099422,
+        "black_pct": 2.8252473608710043,
+        "mid_pct": 10.412743222863869,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:43:32.862590+00:00",
+      "backend": "openai",
+      "fr_slug": "affirmations-lotus-zen",
+      "en_slug": "affirmations-lotus-zen",
+      "prompt": "A large open lotus flower with intricate petal details, surrounded by concentric ripples and small geometric dots, a zen-inspired decorative design for adult coloring. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/affirmations-lotus-zen.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/affirmations-lotus-zen.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/affirmations-lotus-zen.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 85.26432670026115,
+        "black_pct": 3.8516570419685876,
+        "mid_pct": 7.095118990694081,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:43:53.044273+00:00",
+      "backend": "openai",
+      "fr_slug": "affirmations-montagnes-soleil",
+      "en_slug": "affirmations-mountain-sunrise",
+      "prompt": "A minimalist mountain range silhouette with radiating sunrise lines above, surrounded by a decorative border of small geometric patterns and dots, for adult coloring. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/affirmations-montagnes-soleil.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/affirmations-montagnes-soleil.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/affirmations-mountain-sunrise.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 77.59453047412366,
+        "black_pct": 7.5760933534409824,
+        "mid_pct": 8.890370397616508,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:44:14.691252+00:00",
+      "backend": "openai",
+      "fr_slug": "affirmations-papillon-fleurs",
+      "en_slug": "affirmations-butterfly-flowers",
+      "prompt": "A large ornate butterfly with detailed wings filled with flowers, surrounded by a decorative floral border, central space for inscription, fine adult line art. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/affirmations-papillon-fleurs.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/affirmations-papillon-fleurs.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/affirmations-butterfly-flowers.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 68.3477857064038,
+        "black_pct": 5.071587523448707,
+        "mid_pct": 17.516184205686542,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:44:35.518784+00:00",
+      "backend": "openai",
+      "fr_slug": "affirmations-lune-etoiles",
+      "en_slug": "affirmations-moon-stars",
+      "prompt": "A crescent moon with a detailed face, surrounded by ornate stars, constellations, and cosmic swirls forming a circular decorative composition, detailed adult line art. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/affirmations-lune-etoiles.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/affirmations-lune-etoiles.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/affirmations-moon-stars.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 80.61302276823483,
+        "black_pct": 1.2054014786478833,
+        "mid_pct": 11.527614300952662,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T21:31:28.985398+00:00",
+      "backend": "openai",
+      "fr_slug": "affirmations-arc-en-ciel",
+      "en_slug": "affirmations-rainbow-hope",
+      "prompt": "A decorative rainbow arch with detailed stripes, surrounded by ornate clouds filled with floral patterns, raindrops as teardrops, and sun peeking through. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/affirmations-arc-en-ciel.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/affirmations-arc-en-ciel.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/affirmations-rainbow-hope.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 76.11261816309265,
+        "black_pct": 4.5333247508000145,
+        "mid_pct": 12.894122190752933,
+        "reason": null
+      }
+    }
+  ]
+}

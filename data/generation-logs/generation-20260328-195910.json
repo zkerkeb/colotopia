@@ -1,0 +1,339 @@
+{
+  "summary": {
+    "total": 15,
+    "success": 15,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-28T19:54:02.750873+00:00",
+      "backend": "openai",
+      "fr_slug": "paques-lapin",
+      "en_slug": "easter-bunny",
+      "prompt": "A fluffy Easter bunny sitting upright, holding a decorated Easter egg, surrounded by spring flowers and tiny painted eggs on the grass. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paques-lapin.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/paques-lapin.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/easter-bunny.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 86.37404825835877,
+        "black_pct": 8.153391326737044,
+        "mid_pct": 3.846645455548608,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:54:26.795778+00:00",
+      "backend": "openai",
+      "fr_slug": "paques-oeuf-decore",
+      "en_slug": "easter-decorated-egg",
+      "prompt": "A large Easter egg divided into sections filled with different decorative patterns: flowers, zigzags, dots, stripes, and hearts. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paques-oeuf-decore.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/paques-oeuf-decore.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/easter-decorated-egg.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 86.4324401368301,
+        "black_pct": 11.537085739507853,
+        "mid_pct": 1.306736675617023,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:54:47.710549+00:00",
+      "backend": "openai",
+      "fr_slug": "paques-poussin-coquille",
+      "en_slug": "easter-hatching-chick",
+      "prompt": "An adorable fluffy chick hatching from a cracked Easter egg, wings spread wide, surrounded by tiny flowers and broken shell pieces. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paques-poussin-coquille.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/paques-poussin-coquille.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/easter-hatching-chick.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 91.48867105601943,
+        "black_pct": 6.087376319564497,
+        "mid_pct": 1.6046272115349247,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:55:08.358436+00:00",
+      "backend": "openai",
+      "fr_slug": "paques-panier-oeufs",
+      "en_slug": "easter-basket",
+      "prompt": "A wicker Easter basket overflowing with decorated eggs, spring flowers, a small bunny peeking out, tied with a bow ribbon. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paques-panier-oeufs.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/paques-panier-oeufs.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/easter-basket.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 80.07572553058448,
+        "black_pct": 15.322718578732482,
+        "mid_pct": 3.092102843270681,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:55:29.487239+00:00",
+      "backend": "openai",
+      "fr_slug": "paques-lapin-jardin",
+      "en_slug": "easter-bunny-garden",
+      "prompt": "A cute rabbit sitting in a spring garden with blooming tulips, daffodils, butterflies, and colorful Easter eggs hidden among the flowers. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paques-lapin-jardin.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/paques-lapin-jardin.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/easter-bunny-garden.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 81.34420862912421,
+        "black_pct": 9.714339574061132,
+        "mid_pct": 6.360760657667268,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:55:50.363546+00:00",
+      "backend": "openai",
+      "fr_slug": "paques-chasse-oeufs",
+      "en_slug": "easter-egg-hunt",
+      "prompt": "Three bunnies searching for hidden Easter eggs in a flower meadow, each finding eggs tucked under flowers, behind mushrooms, and in the grass. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paques-chasse-oeufs.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/paques-chasse-oeufs.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/easter-egg-hunt.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 82.279582153235,
+        "black_pct": 11.604259388678413,
+        "mid_pct": 4.115523963659102,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:56:12.631996+00:00",
+      "backend": "openai",
+      "fr_slug": "paques-poule-poussin",
+      "en_slug": "easter-hen-chicks",
+      "prompt": "A mother hen surrounded by four fluffy chicks, all wearing tiny Easter bow ties, with decorated eggs and spring flowers around them. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paques-poule-poussin.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/paques-poule-poussin.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/easter-hen-chicks.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 89.25644609556038,
+        "black_pct": 6.234183617169971,
+        "mid_pct": 3.065711553315923,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:56:33.957432+00:00",
+      "backend": "openai",
+      "fr_slug": "paques-couronne-fleurs",
+      "en_slug": "easter-flower-wreath",
+      "prompt": "A circular Easter wreath made of spring flowers, eggs, ribbons, and small butterflies, with a decorative bow at the top. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paques-couronne-fleurs.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/paques-couronne-fleurs.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/easter-flower-wreath.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 82.62768050906683,
+        "black_pct": 9.260997903409718,
+        "mid_pct": 5.423639974988046,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:56:52.891375+00:00",
+      "backend": "openai",
+      "fr_slug": "paques-agneau-prairie",
+      "en_slug": "easter-lamb-meadow",
+      "prompt": "A fluffy little lamb standing in a spring meadow with daisies and tulips, wearing a small flower crown, Easter eggs scattered in the grass. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paques-agneau-prairie.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/paques-agneau-prairie.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/easter-lamb-meadow.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 85.10487549196307,
+        "black_pct": 9.542842167212271,
+        "mid_pct": 3.691148342958031,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:57:13.291727+00:00",
+      "backend": "openai",
+      "fr_slug": "paques-papillon-oeufs",
+      "en_slug": "easter-butterfly-eggs",
+      "prompt": "Two butterflies perched on large decorated Easter eggs among spring blossoms, flower petals, and delicate vines. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paques-papillon-oeufs.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/paques-papillon-oeufs.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/easter-butterfly-eggs.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 78.36718836208482,
+        "black_pct": 3.5096737411262735,
+        "mid_pct": 10.603045573251922,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:57:33.936659+00:00",
+      "backend": "openai",
+      "fr_slug": "paques-lapin-chocolat",
+      "en_slug": "easter-chocolate-bunny",
+      "prompt": "An adorable sitting Easter bunny wearing a big bow around its neck, holding a smaller bunny made of chocolate, surrounded by wrapped candy eggs. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paques-lapin-chocolat.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/paques-lapin-chocolat.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/easter-chocolate-bunny.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 89.32927502114981,
+        "black_pct": 7.493011365726267,
+        "mid_pct": 2.0578769264722108,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:57:54.171407+00:00",
+      "backend": "openai",
+      "fr_slug": "paques-scene-foret",
+      "en_slug": "easter-forest-scene",
+      "prompt": "A forest clearing with a bunny, squirrel, and hedgehog celebrating Easter together, surrounding a large decorated egg nest, spring blossoms above. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paques-scene-foret.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/paques-scene-foret.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/easter-forest-scene.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 81.66853643285393,
+        "black_pct": 9.187065509250743,
+        "mid_pct": 6.195516239379115,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:58:14.852080+00:00",
+      "backend": "openai",
+      "fr_slug": "paques-lapin-velo",
+      "en_slug": "easter-bunny-bike",
+      "prompt": "A cheerful Easter bunny riding a bicycle with a basket full of colorful Easter eggs, flowers in the wheel spokes, leaving a trail of eggs. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paques-lapin-velo.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/paques-lapin-velo.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/easter-bunny-bike.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 83.37045278993637,
+        "black_pct": 10.244372310295361,
+        "mid_pct": 4.269090006252989,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:58:35.763415+00:00",
+      "backend": "openai",
+      "fr_slug": "paques-cloches-rubans",
+      "en_slug": "easter-bells-ribbons",
+      "prompt": "Three Easter bells decorated with ribbons and spring flowers, tied together in a bouquet, surrounded by flying butterflies and lily blossoms. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paques-cloches-rubans.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/paques-cloches-rubans.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/easter-bells-ribbons.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 84.67585610769854,
+        "black_pct": 9.357643358958326,
+        "mid_pct": 4.030832750947144,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:58:56.934122+00:00",
+      "backend": "openai",
+      "fr_slug": "paques-jardiniere-fleurs",
+      "en_slug": "easter-flower-pot",
+      "prompt": "A large terracotta pot overflowing with tulips, hyacinths, and daffodils, with a small Easter bunny peeking out from behind the flowers. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paques-jardiniere-fleurs.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/paques-jardiniere-fleurs.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/easter-flower-pot.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 86.13248059734431,
+        "black_pct": 9.579348585721116,
+        "mid_pct": 2.88520248648251,
+        "reason": null
+      }
+    }
+  ]
+}

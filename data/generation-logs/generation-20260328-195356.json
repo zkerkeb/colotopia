@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "total": 1,
+    "success": 1,
+    "dry_run": true
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-28T19:53:56.166631+00:00",
+      "backend": "openai",
+      "fr_slug": "paques-lapin",
+      "en_slug": "easter-bunny",
+      "prompt": "A fluffy Easter bunny sitting upright, holding a decorated Easter egg, surrounded by spring flowers and tiny painted eggs on the grass. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/paques-lapin.png",
+      "dry_run": true,
+      "status": "dry_run",
+      "content_files": [],
+      "error": null
+    }
+  ]
+}

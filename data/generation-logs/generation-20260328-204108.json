@@ -1,0 +1,273 @@
+{
+  "summary": {
+    "total": 12,
+    "success": 12,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-28T20:37:13.165808+00:00",
+      "backend": "openai",
+      "fr_slug": "zodiaque-belier",
+      "en_slug": "zodiac-aries",
+      "prompt": "A circular zodiac mandala for Aries, centered on a ram's head with curved horns, surrounded by radiating fire symbols and Mars planetary symbols, fine detailed adult line art. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/zodiaque-belier.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/zodiaque-belier.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/zodiac-aries.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 74.0187405745393,
+        "black_pct": 5.460836061352852,
+        "mid_pct": 13.712849891492256,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:37:35.506507+00:00",
+      "backend": "openai",
+      "fr_slug": "zodiaque-taureau",
+      "en_slug": "zodiac-taurus",
+      "prompt": "A circular zodiac mandala for Taurus, centered on a bull's face with curved horns, surrounded by floral earth symbols and Venus symbols, fine detailed adult line art. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/zodiaque-taureau.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/zodiaque-taureau.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/zodiac-taurus.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 74.02655681024018,
+        "black_pct": 4.490289476588075,
+        "mid_pct": 14.335436053996395,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:37:56.564989+00:00",
+      "backend": "openai",
+      "fr_slug": "zodiaque-gemeaux",
+      "en_slug": "zodiac-gemini",
+      "prompt": "A circular zodiac mandala for Gemini, centered on twin faces in profile facing each other, surrounded by air current patterns and Mercury symbols, detailed adult line art. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/zodiaque-gemeaux.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/zodiaque-gemeaux.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/zodiac-gemini.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 78.39767168131829,
+        "black_pct": 4.196628903520065,
+        "mid_pct": 11.366645823371464,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:38:16.757490+00:00",
+      "backend": "openai",
+      "fr_slug": "zodiaque-cancer",
+      "en_slug": "zodiac-cancer",
+      "prompt": "A circular zodiac mandala for Cancer, centered on a crab with detailed claws, surrounded by crescent moons and water wave patterns, fine detailed adult line art. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/zodiaque-cancer.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/zodiaque-cancer.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/zodiac-cancer.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 75.69297826166917,
+        "black_pct": 3.323969176444624,
+        "mid_pct": 14.36408025894729,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:38:36.176845+00:00",
+      "backend": "openai",
+      "fr_slug": "zodiaque-lion",
+      "en_slug": "zodiac-leo",
+      "prompt": "A circular zodiac mandala for Leo, centered on a lion's face with a flowing mane forming the mandala pattern, surrounded by sun rays and Sun symbols, adult line art. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/zodiaque-lion.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/zodiaque-lion.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/zodiac-leo.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 79.15892706072756,
+        "black_pct": 1.8669308860852614,
+        "mid_pct": 12.659727075440468,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:38:55.373597+00:00",
+      "backend": "openai",
+      "fr_slug": "zodiaque-vierge",
+      "en_slug": "zodiac-virgo",
+      "prompt": "A circular zodiac mandala for Virgo, featuring a female figure surrounded by flowing wheat sheaves and botanical flowers, fine detailed adult line art. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/zodiaque-vierge.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/zodiaque-vierge.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/zodiac-virgo.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 71.92454114098649,
+        "black_pct": 4.205364696362232,
+        "mid_pct": 15.394581969323573,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:39:15.933626+00:00",
+      "backend": "openai",
+      "fr_slug": "zodiaque-balance",
+      "en_slug": "zodiac-libra",
+      "prompt": "A circular zodiac mandala for Libra, centered on ornate balance scales, surrounded by air symbols, feathers, and Venus symbols in symmetrical mandala pattern. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/zodiaque-balance.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/zodiaque-balance.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/zodiac-libra.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 80.05029977562805,
+        "black_pct": 5.407271857873249,
+        "mid_pct": 9.716638466914334,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:39:36.473936+00:00",
+      "backend": "openai",
+      "fr_slug": "zodiaque-scorpion",
+      "en_slug": "zodiac-scorpio",
+      "prompt": "A circular zodiac mandala for Scorpio, centered on a scorpion with curved tail forming part of the mandala design, surrounded by water symbols and Pluto glyphs. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/zodiaque-scorpion.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/zodiaque-scorpion.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/zodiac-scorpio.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 75.94323573766873,
+        "black_pct": 4.694155294810019,
+        "mid_pct": 13.531743112517011,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:39:57.344760+00:00",
+      "backend": "openai",
+      "fr_slug": "zodiaque-sagittaire",
+      "en_slug": "zodiac-sagittarius",
+      "prompt": "A circular zodiac mandala for Sagittarius, featuring a centaur archer with a drawn bow forming the center, surrounded by fire and Jupiter symbols, detailed adult line art. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/zodiaque-sagittaire.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/zodiaque-sagittaire.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/zodiac-sagittarius.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 77.59811674697465,
+        "black_pct": 2.9802846948909405,
+        "mid_pct": 11.241586052157281,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:40:16.494169+00:00",
+      "backend": "openai",
+      "fr_slug": "zodiaque-capricorne",
+      "en_slug": "zodiac-capricorn",
+      "prompt": "A circular zodiac mandala for Capricorn, featuring a mountain goat with fish tail, surrounded by earth symbols and Saturn rings, intricate adult line art. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/zodiaque-capricorne.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/zodiaque-capricorne.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/zodiac-capricorn.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 72.59388678412476,
+        "black_pct": 5.3241898701585315,
+        "mid_pct": 14.138926692904697,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:40:35.857318+00:00",
+      "backend": "openai",
+      "fr_slug": "zodiaque-verseau",
+      "en_slug": "zodiac-aquarius",
+      "prompt": "A circular zodiac mandala for Aquarius, featuring water waves flowing from an urn in the center, surrounded by air symbols and Uranus glyphs, detailed adult line art. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/zodiaque-verseau.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/zodiaque-verseau.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/zodiac-aquarius.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 70.70810497664326,
+        "black_pct": 3.733539927171074,
+        "mid_pct": 17.668232978997313,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:40:55.598205+00:00",
+      "backend": "openai",
+      "fr_slug": "zodiaque-poissons",
+      "en_slug": "zodiac-pisces",
+      "prompt": "A circular zodiac mandala for Pisces, with two fish swimming in a yin-yang circle at the center, surrounded by water symbols and Neptune tridents, adult line art. Black and white line drawing. Clean outlines on pure white background. Intricate detailed patterns, fine lines. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/zodiaque-poissons.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/zodiaque-poissons.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/zodiac-pisces.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 72.73807334387759,
+        "black_pct": 5.27623496524074,
+        "mid_pct": 14.369597601794975,
+        "reason": null
+      }
+    }
+  ]
+}

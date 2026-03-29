@@ -1,0 +1,229 @@
+{
+  "summary": {
+    "total": 10,
+    "success": 10,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-28T20:33:32.619298+00:00",
+      "backend": "openai",
+      "fr_slug": "champignons-amanite-mouchetee",
+      "en_slug": "mushrooms-spotted-toadstool",
+      "prompt": "A large classic red mushroom with white spots, surrounded by small ferns, dewdrops, and tiny snails exploring the forest floor. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/champignons-amanite-mouchetee.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/champignons-amanite-mouchetee.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mushrooms-spotted-toadstool.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 84.13603008790966,
+        "black_pct": 10.881625409202927,
+        "mid_pct": 3.4111891712951046,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:33:52.331870+00:00",
+      "backend": "openai",
+      "fr_slug": "champignons-maison-elfe",
+      "en_slug": "mushrooms-elf-house",
+      "prompt": "A large mushroom with a tiny carved door and round windows, flower boxes on the windowsills, a garden path, and a firefly lantern hanging at the entrance. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/champignons-maison-elfe.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/champignons-maison-elfe.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mushrooms-elf-house.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 82.24951263471512,
+        "black_pct": 13.978693861036525,
+        "mid_pct": 2.507310479273182,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:34:12.779690+00:00",
+      "backend": "openai",
+      "fr_slug": "champignons-famille-foret",
+      "en_slug": "mushrooms-forest-family",
+      "prompt": "A family of five mushrooms of varying sizes growing together, each with a unique face \u2014 happy, surprised, sleepy \u2014 surrounded by autumn leaves. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/champignons-famille-foret.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/champignons-famille-foret.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mushrooms-forest-family.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 89.15828337072865,
+        "black_pct": 7.408917865156141,
+        "mid_pct": 2.3748942509287527,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:34:32.131136+00:00",
+      "backend": "openai",
+      "fr_slug": "champignons-morille-fantaisie",
+      "en_slug": "mushrooms-fantasy-morel",
+      "prompt": "A fantastical morel mushroom with an intricately patterned honeycomb cap, surrounded by spiral ferns, dewdrop beads, and woodland flowers. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/champignons-morille-fantaisie.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/champignons-morille-fantaisie.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mushrooms-fantasy-morel.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 79.51764630154118,
+        "black_pct": 11.770653253393167,
+        "mid_pct": 6.091468348843197,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:34:53.166461+00:00",
+      "backend": "openai",
+      "fr_slug": "champignons-parapluie-pluie",
+      "en_slug": "mushrooms-umbrella-rain",
+      "prompt": "A large mushroom used as an umbrella by a cute snail and a frog sheltering underneath from the rain, with rain drops and puddles around. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/champignons-parapluie-pluie.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/champignons-parapluie-pluie.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mushrooms-umbrella-rain.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 86.6087652186707,
+        "black_pct": 9.3930922867547,
+        "mid_pct": 2.6880494353919153,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:35:12.310288+00:00",
+      "backend": "openai",
+      "fr_slug": "champignons-spirale-decoratif",
+      "en_slug": "mushrooms-decorative-spiral",
+      "prompt": "A repeating decorative pattern of mushrooms, ferns, stars, and moon phases arranged in a circular spiral design, detailed botanical illustration. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/champignons-spirale-decoratif.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/champignons-spirale-decoratif.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mushrooms-decorative-spiral.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 69.09920182440136,
+        "black_pct": 17.246248206863573,
+        "mid_pct": 9.584130282855776,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:35:31.502081+00:00",
+      "backend": "openai",
+      "fr_slug": "champignons-village-champignon",
+      "en_slug": "mushrooms-mushroom-village",
+      "prompt": "A whimsical mushroom village with five different mushroom houses of various sizes and types, connected by mossy paths, flowers, and tiny bridges. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/champignons-village-champignon.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/champignons-village-champignon.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mushrooms-mushroom-village.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 80.80093427005555,
+        "black_pct": 9.497829845146576,
+        "mid_pct": 6.512211718836208,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:35:51.682239+00:00",
+      "backend": "openai",
+      "fr_slug": "champignons-lucioles-nuit",
+      "en_slug": "mushrooms-firefly-night",
+      "prompt": "A cluster of glowing mushrooms at night, with firefly lights dancing around them, a crescent moon above, and intricate fern fronds in the foreground. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/champignons-lucioles-nuit.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/champignons-lucioles-nuit.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mushrooms-firefly-night.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 76.90987420458308,
+        "black_pct": 13.891197999043662,
+        "mid_pct": 6.779389046235333,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:36:11.901799+00:00",
+      "backend": "openai",
+      "fr_slug": "champignons-lion-criniere",
+      "en_slug": "mushrooms-lion-mane",
+      "prompt": "A beautiful lion mane mushroom with cascading icicle-like tendrils, growing from a mossy log, surrounded by wild herbs and small forest flowers. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/champignons-lion-criniere.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/champignons-lion-criniere.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mushrooms-lion-mane.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 83.20750726450142,
+        "black_pct": 5.976799573325486,
+        "mid_pct": 7.402940743737815,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:36:30.936053+00:00",
+      "backend": "openai",
+      "fr_slug": "champignons-cueilleur-panier",
+      "en_slug": "mushrooms-basket-forager",
+      "prompt": "A wicker basket overflowing with different types of mushrooms \u2014 chanterelles, boletes, oysters \u2014 with autumn leaves, acorns, and pine needles around it. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/champignons-cueilleur-panier.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/champignons-cueilleur-panier.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/mushrooms-basket-forager.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 84.47815132232317,
+        "black_pct": 9.37102291536396,
+        "mid_pct": 4.130282855776659,
+        "reason": null
+      }
+    }
+  ]
+}

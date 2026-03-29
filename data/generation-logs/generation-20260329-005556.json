@@ -1,0 +1,339 @@
+{
+  "summary": {
+    "total": 15,
+    "success": 15,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-29T00:51:05.632819+00:00",
+      "backend": "openai",
+      "fr_slug": "noel-pere-noel",
+      "en_slug": "christmas-santa-claus",
+      "prompt": "A jolly Santa Claus carrying a large sack of gifts on his shoulder, wearing his classic suit with belt and hat, surrounded by snowflakes. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/noel-pere-noel.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/noel-pere-noel.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/christmas-santa-claus.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 85.1930610218119,
+        "black_pct": 12.040175451502556,
+        "mid_pct": 1.7826994519439439,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:51:26.628843+00:00",
+      "backend": "openai",
+      "fr_slug": "noel-sapin-decore",
+      "en_slug": "christmas-decorated-tree",
+      "prompt": "A tall Christmas tree decorated with baubles, candy canes, stars, tinsel garlands, and a large star on top, gifts piled underneath. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/noel-sapin-decore.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/noel-sapin-decore.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/christmas-decorated-tree.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 85.59293044469783,
+        "black_pct": 8.116838930371133,
+        "mid_pct": 4.359206606098502,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:51:45.611923+00:00",
+      "backend": "openai",
+      "fr_slug": "noel-bonhomme-neige",
+      "en_slug": "christmas-snowman",
+      "prompt": "A friendly snowman with a carrot nose, coal buttons, striped scarf, top hat, and stick arms, surrounded by snowflakes and pine trees. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/noel-bonhomme-neige.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/noel-bonhomme-neige.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/christmas-snowman.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 87.41976863942325,
+        "black_pct": 9.819812778166035,
+        "mid_pct": 1.8099643211829184,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:52:06.405880+00:00",
+      "backend": "openai",
+      "fr_slug": "noel-renne-Rudolf",
+      "en_slug": "christmas-reindeer-rudolph",
+      "prompt": "A cute reindeer with a glowing round nose, wearing jingle bells around the neck, decorated antlers with holly, surrounded by snowflakes. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/noel-renne-Rudolf.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/noel-renne-Rudolf.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/christmas-reindeer-rudolph.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 87.86097215580976,
+        "black_pct": 8.166908816713871,
+        "mid_pct": 2.7200040460514217,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:52:25.059708+00:00",
+      "backend": "openai",
+      "fr_slug": "noel-cheminee-bas",
+      "en_slug": "christmas-fireplace-stockings",
+      "prompt": "A cozy stone fireplace with four stockings hung above, a fire burning inside, wrapped gifts on the floor, a Christmas tree beside, candles and holly. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/noel-cheminee-bas.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/noel-cheminee-bas.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/christmas-fireplace-stockings.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 85.3586272850995,
+        "black_pct": 7.804971125905764,
+        "mid_pct": 4.8403189024165965,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:52:44.129130+00:00",
+      "backend": "openai",
+      "fr_slug": "noel-lutin-atelier",
+      "en_slug": "christmas-elf-workshop",
+      "prompt": "A cheerful Christmas elf in pointed hat and curly shoes, busy wrapping presents in a workshop full of toys, candy canes, and tools. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/noel-lutin-atelier.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/noel-lutin-atelier.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/christmas-elf-workshop.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 73.02299812410344,
+        "black_pct": 16.8336429175709,
+        "mid_pct": 7.044129547210064,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:53:03.533372+00:00",
+      "backend": "openai",
+      "fr_slug": "noel-couronne-houx",
+      "en_slug": "christmas-holly-wreath",
+      "prompt": "A circular Christmas wreath of holly leaves, berries, pine cones, cinnamon sticks, and a large red bow at the top, with small star ornaments. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/noel-couronne-houx.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/noel-couronne-houx.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/christmas-holly-wreath.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 82.48570088645309,
+        "black_pct": 12.685750542538713,
+        "mid_pct": 3.508018538271968,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:53:24.278793+00:00",
+      "backend": "openai",
+      "fr_slug": "noel-traineau-pere-noel",
+      "en_slug": "christmas-santa-sleigh",
+      "prompt": "Santa's sleigh pulled by flying reindeer across a starry night sky, silhouetted against a large full moon, a bag of gifts on the sleigh. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/noel-traineau-pere-noel.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/noel-traineau-pere-noel.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/christmas-santa-sleigh.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 89.98910324787582,
+        "black_pct": 7.074336999301137,
+        "mid_pct": 1.9509324309412588,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:53:43.676241+00:00",
+      "backend": "openai",
+      "fr_slug": "noel-ange-etoile",
+      "en_slug": "christmas-angel-star",
+      "prompt": "A sweet Christmas angel with large feathered wings, holding a glowing star, wearing a flowing gown with holly detail, snowflakes surrounding. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/noel-ange-etoile.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/noel-ange-etoile.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/christmas-angel-star.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 86.52186706881966,
+        "black_pct": 8.821633501305772,
+        "mid_pct": 3.1776676352668556,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:54:04.008943+00:00",
+      "backend": "openai",
+      "fr_slug": "noel-biscuits-pain-epices",
+      "en_slug": "christmas-gingerbread-cookies",
+      "prompt": "A gingerbread house decorated with candy canes, gumdrops, icing swirls, a pretzel door, and gingerbread man cookies standing beside it. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/noel-biscuits-pain-epices.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/noel-biscuits-pain-epices.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/christmas-gingerbread-cookies.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.83096700628977,
+        "black_pct": 8.038952440504653,
+        "mid_pct": 2.160775370581528,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:54:22.730077+00:00",
+      "backend": "openai",
+      "fr_slug": "noel-flocon-neige",
+      "en_slug": "christmas-snowflake",
+      "prompt": "Four large intricate snowflakes, each with a unique six-branched crystal pattern, surrounded by smaller snowflakes and star shapes. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/noel-flocon-neige.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/noel-flocon-neige.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/christmas-snowflake.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 74.18067458711884,
+        "black_pct": 13.280336190090852,
+        "mid_pct": 9.105316879390886,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:54:42.017342+00:00",
+      "backend": "openai",
+      "fr_slug": "noel-bas-cadeaux",
+      "en_slug": "christmas-stocking-gifts",
+      "prompt": "A large Christmas stocking overflowing with gifts \u2014 a toy bear, candy canes, a small wrapped box, an apple, and a candy lollipop peeking out. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/noel-bas-cadeaux.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/noel-bas-cadeaux.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/christmas-stocking-gifts.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 90.57881524257917,
+        "black_pct": 6.823527789016809,
+        "mid_pct": 1.780676426233126,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:55:02.146120+00:00",
+      "backend": "openai",
+      "fr_slug": "noel-etoile-bethleem",
+      "en_slug": "christmas-star-bethlehem",
+      "prompt": "A large glowing nativity star above a simple manger scene with the baby in a crib, a donkey and ox, hay bales, and soft radiant light rays. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/noel-etoile-bethleem.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/noel-etoile-bethleem.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/christmas-star-bethlehem.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.32240592930445,
+        "black_pct": 8.970831647478574,
+        "mid_pct": 1.7522621105675504,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:55:22.710525+00:00",
+      "backend": "openai",
+      "fr_slug": "noel-bonbon-canne",
+      "en_slug": "christmas-candy-cane",
+      "prompt": "A decorative arrangement of large candy canes tied with a bow, holly leaves, berries, and jingle bells, surrounded by snowflake decorations. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/noel-bonbon-canne.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/noel-bonbon-canne.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/christmas-candy-cane.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 83.3076470371869,
+        "black_pct": 12.515080737117005,
+        "mid_pct": 2.9055246993048147,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:55:42.099654+00:00",
+      "backend": "openai",
+      "fr_slug": "noel-hiver-village",
+      "en_slug": "christmas-winter-village",
+      "prompt": "A charming snowy village with decorated shop windows, a lit Christmas tree in the square, people ice skating, smoke from chimneys, snowflakes falling. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/noel-hiver-village.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/noel-hiver-village.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/christmas-winter-village.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 78.58075550814728,
+        "black_pct": 9.286837459079706,
+        "mid_pct": 8.09311435612609,
+        "reason": null
+      }
+    }
+  ]
+}

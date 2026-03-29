@@ -1,0 +1,339 @@
+{
+  "summary": {
+    "total": 15,
+    "success": 15,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-03-28T20:13:57.718427+00:00",
+      "backend": "openai",
+      "fr_slug": "papillons-monarque",
+      "en_slug": "butterflies-monarch",
+      "prompt": "A monarch butterfly top-down view, large symmetrical wings with simple vein patterns, bold clean outlines. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/papillons-monarque.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/papillons-monarque.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/butterflies-monarch.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 82.37089417736418,
+        "black_pct": 15.852843270680841,
+        "mid_pct": 1.14342332732556,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:14:18.078419+00:00",
+      "backend": "openai",
+      "fr_slug": "papillons-morpho",
+      "en_slug": "butterflies-morpho",
+      "prompt": "A morpho butterfly top-down view, large rounded wings with eye-spot patterns, bold clean outlines. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/papillons-morpho.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/papillons-morpho.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/butterflies-morpho.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 86.08130724243205,
+        "black_pct": 11.980036414462795,
+        "mid_pct": 1.241586052157281,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:14:36.266438+00:00",
+      "backend": "openai",
+      "fr_slug": "papillons-simple",
+      "en_slug": "butterflies-simple",
+      "prompt": "A cute simple butterfly front view, big round wings with simple circle patterns, thick bold outlines, kids style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/papillons-simple.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/papillons-simple.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/butterflies-simple.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 87.84529370655092,
+        "black_pct": 10.882820833486592,
+        "mid_pct": 0.8046584764777284,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:14:56.460826+00:00",
+      "backend": "openai",
+      "fr_slug": "papillons-jardin",
+      "en_slug": "butterflies-garden",
+      "prompt": "A butterfly landing on a big flower, two leaves beside it, simple thick clean outlines, cute style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/papillons-jardin.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/papillons-jardin.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/butterflies-garden.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 86.84449369183801,
+        "black_pct": 11.909644315297752,
+        "mid_pct": 0.7854397322249604,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:15:15.034066+00:00",
+      "backend": "openai",
+      "fr_slug": "papillons-chenille",
+      "en_slug": "butterflies-caterpillar",
+      "prompt": "A fat happy caterpillar on a branch beside a small butterfly, bold clean outlines, cute cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/papillons-chenille.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/papillons-chenille.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/butterflies-caterpillar.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 90.70258763379556,
+        "black_pct": 7.316042593886785,
+        "mid_pct": 1.3087137234707764,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:15:35.687952+00:00",
+      "backend": "openai",
+      "fr_slug": "papillons-duo",
+      "en_slug": "butterflies-duo",
+      "prompt": "Two butterflies facing each other with wings spread, flowers below them, simple clean black outlines. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/papillons-duo.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/papillons-duo.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/butterflies-duo.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 86.09693971383382,
+        "black_pct": 11.53032699451944,
+        "mid_pct": 1.5891786515614081,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:15:54.554584+00:00",
+      "backend": "openai",
+      "fr_slug": "papillons-nuit",
+      "en_slug": "butterflies-night-moth",
+      "prompt": "A big fluffy moth with feathery antennae and large wings, crescent moon behind it, bold clean outlines. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/papillons-nuit.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/papillons-nuit.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/butterflies-night-moth.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 86.96063375878177,
+        "black_pct": 9.67433883841542,
+        "mid_pct": 2.2455585390076136,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:16:13.870237+00:00",
+      "backend": "openai",
+      "fr_slug": "papillons-kawaii",
+      "en_slug": "butterflies-kawaii",
+      "prompt": "A kawaii butterfly with a big round face, large eyes, rosy cheeks, small smile, round wings, thick bold outlines. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/papillons-kawaii.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/papillons-kawaii.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/butterflies-kawaii.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 89.44734615809027,
+        "black_pct": 9.222606392761246,
+        "mid_pct": 0.8479696178320522,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:16:34.014781+00:00",
+      "backend": "openai",
+      "fr_slug": "papillons-branche",
+      "en_slug": "butterflies-branch",
+      "prompt": "A butterfly resting on a thick branch with two leaves, wings slightly open showing detail, clean bold outlines. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/papillons-branche.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/papillons-branche.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/butterflies-branch.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.33284290285799,
+        "black_pct": 8.314727627174753,
+        "mid_pct": 2.2962721153492476,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:16:54.152800+00:00",
+      "backend": "openai",
+      "fr_slug": "papillons-cocon",
+      "en_slug": "butterflies-cocoon",
+      "prompt": "A chrysalis hanging from a twig, a small butterfly emerging from it, simple bold clean outlines for kids. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/papillons-cocon.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/papillons-cocon.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/butterflies-cocoon.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.63174495163129,
+        "black_pct": 9.845974178835473,
+        "mid_pct": 0.9758340383271417,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:17:14.394137+00:00",
+      "backend": "openai",
+      "fr_slug": "papillons-printemps",
+      "en_slug": "butterflies-spring",
+      "prompt": "Three small butterflies flying above a row of simple flowers, clean thick outlines, cheerful spring scene. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/papillons-printemps.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/papillons-printemps.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/butterflies-spring.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 81.7291812263214,
+        "black_pct": 16.000294258285212,
+        "mid_pct": 1.481130687460919,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:17:32.901718+00:00",
+      "backend": "openai",
+      "fr_slug": "papillons-tropical",
+      "en_slug": "butterflies-tropical",
+      "prompt": "A large exotic butterfly with ornate wing patterns and long tails, top-down view, clean bold line art. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/papillons-tropical.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/papillons-tropical.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/butterflies-tropical.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 85.01305771140618,
+        "black_pct": 11.004708132563358,
+        "mid_pct": 2.745429801007835,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:17:53.607912+00:00",
+      "backend": "openai",
+      "fr_slug": "papillons-famille",
+      "en_slug": "butterflies-family",
+      "prompt": "A big butterfly and two tiny baby butterflies flying together, simple bold outlines, cute cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/papillons-famille.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/papillons-famille.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/butterflies-family.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.76048295141061,
+        "black_pct": 9.507393239415897,
+        "mid_pct": 1.1788262772648692,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:18:14.649083+00:00",
+      "backend": "openai",
+      "fr_slug": "papillons-fee",
+      "en_slug": "butterflies-fairy",
+      "prompt": "A tiny cute fairy with butterfly wings, holding a flower wand, simple cartoon outline, thick clean lines. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/papillons-fee.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/papillons-fee.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/butterflies-fairy.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.77404641924448,
+        "black_pct": 10.007218523559054,
+        "mid_pct": 0.7720601758193254,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:18:34.777748+00:00",
+      "backend": "openai",
+      "fr_slug": "papillons-mandala",
+      "en_slug": "butterflies-mandala",
+      "prompt": "A butterfly shape made of mandala-style symmetrical patterns, ornate wing details, bold clean outlines for kids. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/gikkhikkart/projets/paperclip/coloriages/public/images/coloriages/papillons-mandala.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/fr/papillons-mandala.yaml",
+        "/Users/gikkhikkart/projets/paperclip/coloriages/src/content/coloriages/en/butterflies-mandala.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 79.57139441644904,
+        "black_pct": 15.3217990215912,
+        "mid_pct": 3.3523375142531355,
+        "reason": null
+      }
+    }
+  ]
+}
