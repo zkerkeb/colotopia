@@ -162,7 +162,7 @@ const structuredData = pillar && pillar.faq.length > 0
     <CategoryFaq locale={locale} faq={pillar.faq} categoryLabel={label} />
   )}
 
-  {relatedCats.length > 0 && (
+  {page.currentPage === 1 && relatedCats.length > 0 && (
     <RelatedCategories locale={locale} categories={relatedCats} />
   )}
 
