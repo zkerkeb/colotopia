@@ -1,6 +1,6 @@
 ---
 import type { Locale } from '../lib/i18n';
-import { t, getLocalePath, getCategoriesPath, kidsCategories, adultCategories, getCategoryLabel, getCategorySlug, categoryIcons } from '../lib/i18n';
+import { t, getLocalePath, getCategoriesPath, getBlogPath, kidsCategories, adultCategories, getCategoryLabel, getCategorySlug, categoryIcons } from '../lib/i18n';
 import CategoryNav from './CategoryNav.astro';
 import SearchBar from './SearchBar.astro';
 
@@ -68,6 +68,9 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
         </div>
       </div>
 
+      <!-- Blog link -->
+      <a href={getBlogPath(locale)} class="nav-link">Blog</a>
+
       <!-- Lang switch -->
       <a
         href={Astro.url.href.replace(`/${locale}/`, `/${altLocale}/`)}
@@ -109,6 +112,7 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
       <nav class="drawer-nav">
         <a href={getLocalePath(locale)} class="drawer-link">{t('nav.home', locale)}</a>
         <a href={getCategoriesPath(locale)} class="drawer-link">{t('nav.categories', locale)}</a>
+        <a href={getBlogPath(locale)} class="drawer-link">Blog</a>
       </nav>
 
       <div class="drawer-section">

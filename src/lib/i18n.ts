@@ -200,6 +200,17 @@ const translations: Record<string, Record<Locale, string>> = {
   'category.zodiaque': { fr: 'Zodiaque', en: 'Zodiac' },
   'category.affirmations': { fr: 'Affirmations', en: 'Affirmations' },
   'category.paysages': { fr: 'Paysages', en: 'Landscapes' },
+  'nav.blog': { fr: 'Blog', en: 'Blog' },
+  'blog.title': { fr: 'Blog Colotopia', en: 'Colotopia Blog' },
+  'blog.description': {
+    fr: 'Conseils, astuces et guides sur le coloriage pour enfants et adultes. Découvrez les bienfaits du coloriage et nos meilleurs dessins à imprimer.',
+    en: 'Tips, tricks and guides about coloring for kids and adults. Discover the benefits of coloring and our best printable designs.',
+  },
+  'blog.readMore': { fr: 'Lire la suite', en: 'Read more' },
+  'blog.publishedOn': { fr: 'Publié le', en: 'Published on' },
+  'blog.backToBlog': { fr: '← Retour au blog', en: '← Back to blog' },
+  'blog.relatedArticles': { fr: 'Articles similaires', en: 'Related articles' },
+  'blog.discoverColoring': { fr: 'Découvrez nos coloriages', en: 'Discover our coloring pages' },
   'coloring.download': { fr: 'Télécharger le PDF', en: 'Download PDF' },
   'coloring.print': { fr: 'Imprimer', en: 'Print' },
   'footer.rights': {
@@ -514,4 +525,11 @@ export function getTermsPath(locale: Locale): string {
 
 export function getCategoriesPath(locale: Locale): string {
   return getLocalePath(locale, locale === 'fr' ? '/categories' : '/categories');
+}
+
+export function getBlogPath(locale: Locale, slug?: string): string {
+  if (slug) {
+    return getLocalePath(locale, `/blog/${slug}`);
+  }
+  return getLocalePath(locale, '/blog');
 }

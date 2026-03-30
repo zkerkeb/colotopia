@@ -1,0 +1,228 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import { t, getBlogPath } from '../../../lib/i18n';
+
+const locale = 'fr';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => data.locale === 'fr');
+  return posts.map((post) => ({
+    params: { slug: post.data.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const allPosts = await getCollection('blog', ({ data }) => data.locale === 'fr');
+const related = allPosts
+  .filter((p) => p.data.slug !== post.data.slug && p.data.category === post.data.category)
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .slice(0, 3);
+
+const breadcrumbs = [
+  { label: t('nav.home', locale), href: `/${locale}` },
+  { label: 'Blog', href: getBlogPath(locale) },
+  { label: post.data.title },
+];
+
+const canonical = `https://colotopia.com/fr/blog/${post.data.slug}/`;
+
+// Find English counterpart by matching slug pattern
+const enPosts = await getCollection('blog', ({ data }) => data.locale === 'en');
+const enMatch = enPosts.find((p) => p.data.tags.some((tag) => post.data.tags.includes(tag)));
+const altUrl = enMatch ? `https://colotopia.com/en/blog/${enMatch.data.slug}/` : 'https://colotopia.com/en/blog/';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.data.seoTitle,
+  description: post.data.seoDescription,
+  datePublished: post.data.date,
+  author: { '@type': 'Organization', name: 'Colotopia' },
+  publisher: { '@type': 'Organization', name: 'Colotopia', url: 'https://colotopia.com' },
+  inLanguage: 'fr',
+  mainEntityOfPage: canonical,
+};
+---
+
+<BaseLayout
+  title={post.data.seoTitle}
+  description={post.data.seoDescription}
+  locale={locale}
+  canonical={canonical}
+  altUrl={altUrl}
+  ogType="article"
+  structuredData={articleSchema}
+>
+  <Breadcrumb items={breadcrumbs} />
+
+  <article class="blog-article">
+    <header class="article-header">
+      <time datetime={post.data.date} class="article-date">
+        {t('blog.publishedOn', locale)} {new Date(post.data.date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
+      </time>
+      <h1>{post.data.title}</h1>
+    </header>
+
+    <div class="article-body">
+      <Content />
+    </div>
+
+    <footer class="article-footer">
+      <a href={getBlogPath(locale)} class="back-link">{t('blog.backToBlog', locale)}</a>
+    </footer>
+  </article>
+
+  {related.length > 0 && (
+    <section class="related-articles">
+      <h2>{t('blog.relatedArticles', locale)}</h2>
+      <div class="related-grid">
+        {related.map((r) => (
+          <a href={getBlogPath(locale, r.data.slug)} class="related-card">
+            <h3>{r.data.title}</h3>
+            <p>{r.data.seoDescription}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+</BaseLayout>
+
+<style>
+  .blog-article {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .article-header {
+    margin-bottom: var(--space-8);
+  }
+
+  .article-date {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    display: block;
+    margin-bottom: var(--space-3);
+  }
+
+  .article-header h1 {
+    font-size: var(--font-size-4xl);
+    line-height: var(--line-height-tight);
+    color: var(--color-primary);
+  }
+
+  .article-body {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-text);
+  }
+
+  .article-body :global(h2) {
+    font-size: var(--font-size-2xl);
+    color: var(--color-text);
+    margin: var(--space-10) 0 var(--space-4);
+  }
+
+  .article-body :global(h3) {
+    font-size: var(--font-size-xl);
+    color: var(--color-text);
+    margin: var(--space-8) 0 var(--space-3);
+  }
+
+  .article-body :global(p) {
+    margin-bottom: var(--space-4);
+  }
+
+  .article-body :global(ul),
+  .article-body :global(ol) {
+    margin-bottom: var(--space-4);
+    padding-left: var(--space-6);
+  }
+
+  .article-body :global(li) {
+    margin-bottom: var(--space-2);
+  }
+
+  .article-body :global(a) {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+
+  .article-body :global(strong) {
+    font-weight: var(--font-weight-bold);
+  }
+
+  .article-body :global(blockquote) {
+    border-left: 4px solid var(--color-primary);
+    padding-left: var(--space-4);
+    margin: var(--space-6) 0;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  .article-footer {
+    margin-top: var(--space-12);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .back-link {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  .related-articles {
+    max-width: 720px;
+    margin: var(--space-12) auto 0;
+  }
+
+  .related-articles h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-6);
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-4);
+  }
+
+  .related-card {
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+  }
+
+  .related-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+
+  .related-card h3 {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+    margin-bottom: var(--space-2);
+    line-height: var(--line-height-snug);
+  }
+
+  .related-card p {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    line-height: var(--line-height-normal);
+  }
+</style>

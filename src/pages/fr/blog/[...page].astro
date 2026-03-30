@@ -1,0 +1,165 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Pagination from '../../../components/Pagination.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import { t, getBlogPath } from '../../../lib/i18n';
+import type { GetStaticPathsOptions } from 'astro';
+
+const locale = 'fr';
+const POSTS_PER_PAGE = 12;
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const allPosts = await getCollection('blog', ({ data }) => data.locale === 'fr');
+  const sorted = allPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+  return paginate(sorted, { pageSize: 12 });
+}
+
+const { page } = Astro.props;
+const posts = page.data;
+const currentPage = page.currentPage;
+const lastPage = page.lastPage;
+
+const prevUrl = page.url.prev ? `/fr/blog${page.url.prev === '/1' || page.url.prev === '/' ? '' : `/${currentPage - 1}`}` : undefined;
+const nextUrl = page.url.next ? `/fr/blog/${currentPage + 1}` : undefined;
+
+const breadcrumbs = [
+  { label: t('nav.home', locale), href: `/${locale}` },
+  { label: 'Blog' },
+];
+
+const canonical = currentPage === 1 ? 'https://colotopia.com/fr/blog/' : `https://colotopia.com/fr/blog/${currentPage}/`;
+const altUrl = currentPage === 1 ? 'https://colotopia.com/en/blog/' : `https://colotopia.com/en/blog/${currentPage}/`;
+---
+
+<BaseLayout
+  title={t('blog.title', locale)}
+  description={t('blog.description', locale)}
+  locale={locale}
+  canonical={canonical}
+  altUrl={altUrl}
+  prevUrl={prevUrl}
+  nextUrl={nextUrl}
+>
+  <Breadcrumb items={breadcrumbs} />
+
+  <section class="blog-header">
+    <h1>{t('blog.title', locale)}</h1>
+    <p class="blog-subtitle">{t('blog.description', locale)}</p>
+  </section>
+
+  <section class="blog-grid">
+    {posts.map((post) => (
+      <article class="blog-card">
+        <a href={getBlogPath(locale, post.data.slug)} class="blog-card-link">
+          <div class="blog-card-content">
+            <time datetime={post.data.date} class="blog-card-date">
+              {new Date(post.data.date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </time>
+            <h2 class="blog-card-title">{post.data.title}</h2>
+            <p class="blog-card-desc">{post.data.seoDescription}</p>
+            <span class="blog-card-cta">{t('blog.readMore', locale)} →</span>
+          </div>
+        </a>
+      </article>
+    ))}
+  </section>
+
+  {lastPage > 1 && (
+    <Pagination
+      prevUrl={prevUrl}
+      nextUrl={nextUrl}
+      currentPage={currentPage}
+      lastPage={lastPage}
+      locale={locale}
+    />
+  )}
+</BaseLayout>
+
+<style>
+  .blog-header {
+    text-align: center;
+    margin-bottom: var(--space-12);
+  }
+
+  .blog-header h1 {
+    font-size: var(--font-size-4xl);
+    color: var(--color-primary);
+    margin-bottom: var(--space-4);
+  }
+
+  .blog-subtitle {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-lg);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-8);
+    margin-bottom: var(--space-12);
+  }
+
+  .blog-card {
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .blog-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .blog-card-link:hover {
+    text-decoration: none;
+  }
+
+  .blog-card-content {
+    padding: var(--space-6);
+  }
+
+  .blog-card-date {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .blog-card-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+    margin: var(--space-2) 0 var(--space-3);
+    line-height: var(--line-height-snug);
+  }
+
+  .blog-card-desc {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--space-4);
+  }
+
+  .blog-card-cta {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 480px) {
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

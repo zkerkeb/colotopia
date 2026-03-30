@@ -110,6 +110,19 @@ export function getAlternateUrl(url: string): { locale: string; altLocale: strin
       return { locale: 'fr', altLocale: 'en', altUrl: `${SITE}/en/coloring/${enSlug}/` };
     }
 
+    // Blog pages: /fr/blog/ or /fr/blog/{slug}/
+    if (rest === 'blog/' || rest === 'blog') {
+      return { locale: 'fr', altLocale: 'en', altUrl: `${SITE}/en/blog/` };
+    }
+    const blogMatch = rest.match(/^blog\/([^/]+)\/?$/);
+    if (blogMatch) {
+      return { locale: 'fr', altLocale: 'en', altUrl: `${SITE}/en/blog/${blogMatch[1]}/` };
+    }
+    const blogPageMatch = rest.match(/^blog\/(\d+)\/?$/);
+    if (blogPageMatch) {
+      return { locale: 'fr', altLocale: 'en', altUrl: `${SITE}/en/blog/${blogPageMatch[1]}/` };
+    }
+
     // Legal pages
     if (rest === 'confidentialite/' || rest === 'confidentialite') {
       return { locale: 'fr', altLocale: 'en', altUrl: `${SITE}/en/privacy/` };
@@ -144,6 +157,19 @@ export function getAlternateUrl(url: string): { locale: string; altLocale: strin
       const enSlug = colorMatch[1];
       const frSlug = _enToFrSlugs?.[enSlug] ?? enSlug;
       return { locale: 'en', altLocale: 'fr', altUrl: `${SITE}/fr/coloriage/${frSlug}/` };
+    }
+
+    // Blog pages: /en/blog/ or /en/blog/{slug}/
+    if (rest === 'blog/' || rest === 'blog') {
+      return { locale: 'en', altLocale: 'fr', altUrl: `${SITE}/fr/blog/` };
+    }
+    const enBlogMatch = rest.match(/^blog\/([^/]+)\/?$/);
+    if (enBlogMatch) {
+      return { locale: 'en', altLocale: 'fr', altUrl: `${SITE}/fr/blog/${enBlogMatch[1]}/` };
+    }
+    const enBlogPageMatch = rest.match(/^blog\/(\d+)\/?$/);
+    if (enBlogPageMatch) {
+      return { locale: 'en', altLocale: 'fr', altUrl: `${SITE}/fr/blog/${enBlogPageMatch[1]}/` };
     }
 
     // Legal pages
