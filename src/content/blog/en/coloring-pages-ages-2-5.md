@@ -1,6 +1,6 @@
 ---
 title: "Best Coloring Pages for Kids Ages 2-5"
-slug: "coloring-pages-ages-2-5"
+slug: "best-coloring-pages-kids-ages-2-5"
 locale: "en"
 date: "2026-03-30"
 author: "Colotopia"
@@ -88,7 +88,9 @@ As your child approaches age 4 or 5, you can gradually introduce pages with more
 
 Our [animals collection](/en/animals/) includes pages across a range of complexity levels, making it easy to find the right challenge for your growing child. You might start with a simple outline of a rabbit and progress to a more detailed page featuring a rabbit in a garden.
 
-By age 5, many children are ready for pages that include smaller sections and more intricate designs. This is a great time to introduce themed pages that align with their interests -- whether that is space, dinosaurs, or vehicles.
+By age 5, many children are ready for pages that include smaller sections and more intricate designs. This is a great time to introduce themed pages that align with their interests -- whether that is space, dinosaurs, or [vehicles](/en/vehicles/). Cars, trucks, and trains are perennial favorites, and coloring them helps children practice filling in smaller mechanical details like wheels and windows.
+
+Our [alphabet collection](/en/alphabet/) is also an excellent choice for children approaching school age. Coloring letter shapes while learning their names bridges the gap between creative play and early literacy, giving kids a head start before kindergarten.
 
 ## Frequently Asked Questions
 

@@ -1,6 +1,6 @@
 ---
 title: "Developing Fine Motor Skills Through Coloring"
-slug: "fine-motor-skills-coloring"
+slug: "developing-fine-motor-skills-coloring"
 locale: "en"
 date: "2026-03-30"
 author: "Colotopia"
@@ -70,7 +70,7 @@ Older children refine their skills with:
 - **Detailed illustrations** requiring careful color placement
 - **Pages that reward patience** and sustained attention
 
-At this level, pages from our more detailed categories provide excellent fine motor challenges. A complex animal illustration or a detailed alphabet design pushes hand control further while remaining genuinely enjoyable.
+At this level, pages from our more detailed categories provide excellent fine motor challenges. A complex animal illustration, a detailed alphabet design, or an intricate page from our [vehicles collection](/en/vehicles/) pushes hand control further while remaining genuinely enjoyable. Vehicles with wheels, windows, and mechanical details are excellent for practicing precise small-section coloring.
 
 ## Exercises to Enhance Fine Motor Development
 

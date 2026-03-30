@@ -1,6 +1,6 @@
 ---
 title: "Easter Coloring Pages: Our Best Free Designs"
-slug: "easter-coloring-pages"
+slug: "easter-coloring-pages-free-designs"
 locale: "en"
 date: "2026-03-30"
 author: "Colotopia"
@@ -50,7 +50,7 @@ Easter doesn't exist in isolation -- it connects beautifully with other themes i
 
 **Nature and spring.** Our [nature collection](/en/nature/) includes spring-themed landscapes with blooming trees, rain showers, and gardens that complement the Easter holiday perfectly. A [nature spring page](/en/coloring/nature-spring/) makes a lovely companion to Easter-specific designs.
 
-**Flowers.** Easter and flowers go hand in hand. After coloring Easter eggs and bunnies, extend the spring theme with pages from our collection featuring daffodils, tulips, and other seasonal blooms. The floral elements in Easter designs naturally lead to an interest in more detailed flower pages.
+**Flowers.** Easter and flowers go hand in hand. After coloring Easter eggs and bunnies, extend the spring theme with pages from our [flowers collection](/en/flowers/) featuring daffodils, tulips, and other seasonal blooms. The floral elements in Easter designs naturally lead to an interest in more detailed flower pages.
 
 ## Tips for the Best Easter Coloring Experience
 

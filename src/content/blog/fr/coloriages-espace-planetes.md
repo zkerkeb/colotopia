@@ -74,11 +74,9 @@ L'espace se marie merveilleusement avec d'autres thèmes de coloriage pour crée
 
 Pour les enfants qui aiment les scènes du ciel nocturne et les paysages lunaires, nos [coloriages nature](/fr/nature/) proposent de magnifiques ciels étoilés et scènes crépusculaires qui complètent parfaitement la thématique spatiale.
 
-Les amateurs de science-fiction apprécieront la combinaison de l'espace avec nos [coloriages de super-héros](/fr/super-heros/). Un super-héros volant entre les planètes ou combattant des extraterrestres : les possibilités narratives sont infinies et stimulent l'imagination créative des enfants.
-
 Les robots spatiaux et les vaisseaux intelligents créent un pont naturel entre l'exploration spatiale et la technologie. Ces dessins plus techniques conviennent aux enfants plus âgés qui aiment les détails mécaniques et les designs futuristes.
 
-Pour les plus jeunes, une version simplifiée de l'espace, avec des planètes souriantes et des étoiles amicales, offre une approche douce et rassurante de cet univers immense. Ces dessins reprennent les codes du kawaii pour rendre l'espace accessible même aux tout-petits.
+Pour les plus jeunes, une version simplifiée de l'espace, avec des planètes souriantes et des étoiles amicales, offre une approche douce et rassurante de cet univers immense.
 
 ## FAQ - Coloriages de l'espace et des planètes
 

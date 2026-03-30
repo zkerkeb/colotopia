@@ -60,29 +60,13 @@ Colorier avec un tout-petit demande un peu de préparation et beaucoup de bienve
 
 Pour enrichir l'expérience de coloriage, voici des idées d'activités qui prolongent la découverte du monde de la ferme.
 
-**Les véhicules de la ferme.** Les tracteurs, moissonneuses et remorques de la ferme fascinent les enfants. Retrouvez de nombreux engins agricoles dans nos [coloriages de véhicules](/fr/vehicules/) pour compléter l'univers de la ferme.
-
-**Les sons de la ferme.** Pendant que votre enfant colorie, imitez le cri de l'animal qu'il est en train de colorier. Meuh pour la vache, cocorico pour le coq, bêê pour le mouton. Ce jeu sonore développe l'écoute et la mémoire auditive tout en rendant le coloriage interactif.
+**Les véhicules de la ferme.** Les tracteurs, moissonneuses et remorques fascinent les enfants. Retrouvez de nombreux engins agricoles dans nos [coloriages de véhicules](/fr/vehicules/) pour compléter l'univers de la ferme.
 
 **Les décors naturels.** La ferme s'inscrit dans un cadre naturel riche : champs, arbres, rivières et fleurs des champs. Explorez nos [coloriages nature](/fr/nature/) pour ajouter de magnifiques paysages champêtres à la collection de votre enfant.
 
-**La visite à la ferme pédagogique.** Si vous en avez la possibilité, emmenez votre enfant dans une ferme pédagogique avant ou après une séance de coloriage. Le lien entre l'animal réel et sa représentation en dessin renforce la compréhension et donne plus de sens à l'activité de coloriage.
+**La visite à la ferme pédagogique.** Emmenez votre enfant dans une ferme pédagogique avant ou après une séance de coloriage. Le lien entre l'animal réel et sa représentation en dessin renforce la compréhension et donne plus de sens à l'activité.
 
-**Le livre de la ferme.** Assemblez les coloriages terminés dans un petit livre relié avec une agrafeuse ou du ruban. L'enfant sera fier de feuilleter son propre "livre de la ferme" et de montrer ses oeuvres à sa famille. Cette valorisation encourage la persévérance et la confiance en soi.
-
-**Les comptines de la ferme.** "Dans la ferme de Mathurin", "Une poule sur un mur", "Petit escargot" : les comptines traditionnelles sur les animaux de la ferme sont parfaites pour accompagner le coloriage. Elles rythment l'activité et ancrent les apprentissages dans la mémoire à long terme.
-
-## L'évolution du coloriage selon l'âge
-
-Il est fascinant d'observer comment le rapport au coloriage évolue au fil des mois et des années chez les tout-petits.
-
-Vers 18 mois à 2 ans, l'enfant gribouille sans intention particulière. Il découvre la trace que laisse le crayon sur le papier et cette découverte le fascine. Le coloriage de la ferme sert alors principalement de support sensoriel.
-
-Vers 2-3 ans, l'enfant commence à remplir de grands espaces avec une couleur, même s'il dépasse largement les contours. Il nomme parfois ce qu'il colorie, signe qu'il fait le lien entre le dessin et l'animal réel.
-
-Vers 3-4 ans, l'enfant cherche à respecter les contours, même imparfaitement. Il choisit ses couleurs avec plus de réflexion et peut colorier des zones de taille moyenne. C'est l'âge idéal pour les coloriages de la ferme avec des détails simples.
-
-Vers 4-5 ans, la maîtrise s'affine considérablement. L'enfant colorie dans les lignes avec plus de précision, alterne les couleurs et commence à ajouter des détails personnels. Il est prêt pour des dessins plus complexes avec des éléments de décor.
+**Les comptines de la ferme.** "Dans la ferme de Mathurin", "Une poule sur un mur" : les comptines traditionnelles sont parfaites pour accompagner le coloriage et ancrer les apprentissages dans la mémoire.
 
 ## FAQ - Coloriages de la ferme pour tout-petits
 
