@@ -40,6 +40,20 @@ const currentPath = Astro.url.pathname;
   </div>
 </nav>
 
+<script>
+  document.querySelectorAll('.category-nav a').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'category_click', {
+          category_name: (link as HTMLAnchorElement).textContent?.trim(),
+          link_url: (link as HTMLAnchorElement).href,
+          navigation_type: 'category_bar',
+        });
+      }
+    });
+  });
+</script>
+
 <style>
   .category-nav {
     background: #f9fafb;

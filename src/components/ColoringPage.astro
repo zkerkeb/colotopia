@@ -61,6 +61,18 @@ const pinterestUrl = `https://pinterest.com/pin/create/button/?url=${encodeURICo
 const shareLabel = t('share.label', locale);
 ---
 
+<script define:vars={{ title, category, slug, tags }}>
+  // GA4: track coloring page view
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', 'coloring_view', {
+      coloring_title: title,
+      coloring_category: category,
+      coloring_slug: slug,
+      coloring_tags: tags.join(','),
+    });
+  }
+</script>
+
 <article class="coloring-page">
   <!-- Above-fold banner ad -->
   <AdSlot adSlot="" format="horizontal" />
@@ -136,6 +148,24 @@ const shareLabel = t('share.label', locale);
           </a>
         </div>
       </div>
+
+      <script>
+        // GA4: track share button clicks
+        document.querySelectorAll('.share-btn').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            if (typeof window.gtag === 'function') {
+              const platform = btn.classList.contains('share-pinterest') ? 'pinterest'
+                : btn.classList.contains('share-whatsapp') ? 'whatsapp'
+                : btn.classList.contains('share-facebook') ? 'facebook' : 'unknown';
+              window.gtag('event', 'share', {
+                method: platform,
+                content_type: 'coloring_page',
+                item_id: window.location.pathname,
+              });
+            }
+          });
+        });
+      </script>
 
       <!-- Below-content ad -->
       <AdSlot adSlot="" format="rectangle" />

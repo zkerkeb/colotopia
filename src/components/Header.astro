@@ -233,6 +233,20 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
   mobileDrawer?.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', closeDrawer);
   });
+
+  // GA4: track category clicks in mega menu and mobile drawer
+  document.querySelectorAll('.mega-menu-link, .drawer-cat').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (typeof window.gtag === 'function') {
+        const isMobile = link.classList.contains('drawer-cat');
+        window.gtag('event', 'category_click', {
+          category_name: (link as HTMLAnchorElement).textContent?.trim(),
+          link_url: (link as HTMLAnchorElement).href,
+          navigation_type: isMobile ? 'mobile_drawer' : 'mega_menu',
+        });
+      }
+    });
+  });
 </script>
 
 <style>

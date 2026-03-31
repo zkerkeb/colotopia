@@ -276,6 +276,16 @@ const placeholders = JSON.stringify(locale === 'fr' ? placeholdersFr : placehold
           a.setAttribute('role', 'option');
           const label = item.categoryLabel || item.category;
           a.innerHTML = `<span class="search-result-title">${item.title}</span><span class="search-result-category">${label}</span>`;
+          a.addEventListener('click', () => {
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'search', {
+                search_term: input.value.trim(),
+                result_title: item.title,
+                result_category: item.category,
+                result_url: item.url,
+              });
+            }
+          });
           li.appendChild(a);
           results.appendChild(li);
         });
