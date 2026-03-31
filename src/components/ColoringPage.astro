@@ -118,6 +118,11 @@ const shareLabel = t('share.label', locale);
         </button>
       </div>
 
+      <!-- Mobile affiliate widget (hidden on desktop where sidebar shows it) -->
+      <div class="mobile-affiliate">
+        <AffiliateWidget locale={locale} />
+      </div>
+
       <!-- Tags -->
       {tags.length > 0 && (
         <div class="coloring-tags">
@@ -203,9 +208,21 @@ const shareLabel = t('share.label', locale);
     align-items: start;
   }
 
+  .mobile-affiliate {
+    display: none;
+  }
+
   @media (max-width: 860px) {
     .page-layout {
       grid-template-columns: 1fr;
+    }
+
+    .mobile-affiliate {
+      display: block;
+    }
+
+    .sidebar {
+      display: none;
     }
   }
 
@@ -372,6 +389,7 @@ const shareLabel = t('share.label', locale);
     .coloring-actions,
     .coloring-tags,
     .share-section,
+    .mobile-affiliate,
     .sidebar {
       display: none;
     }
