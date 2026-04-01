@@ -44,64 +44,72 @@ _load_dotenv(Path(__file__).parent.parent / ".env")
 
 CATEGORY_PROMPTS = {
     "animaux": (
-        "Simple black and white coloring page icon of cute animals, "
-        "clean line art drawing, featuring a cat, a dog, a rabbit and a bird "
-        "arranged in a square composition, white background, thick outlines, "
-        "no color fills, no text, no shading, suitable as a small thumbnail icon, "
-        "children's coloring book style, minimal and charming"
+        "Square coloring page button image, white background, thick black outlines. "
+        "Top 70%: cute animals (cat, dog, rabbit, bird) in simple line art, children's coloring book style. "
+        "Bottom 30%: bold playful text 'Animaux' centered in large friendly font, black letters on white. "
+        "No color fills, no shading, clean minimal illustration."
     ),
     "animaux-marins": (
-        "Simple black and white coloring page icon, clean line art drawing of "
-        "sea animals: fish, octopus, starfish arranged in a square composition, "
-        "white background, thick outlines, no color, children's coloring book style"
+        "Square coloring page button image, white background, thick black outlines. "
+        "Top 70%: sea animals (fish, octopus, starfish) in simple line art, children's coloring book style. "
+        "Bottom 30%: bold playful text 'Animaux Marins' centered in large friendly font, black letters on white. "
+        "No color fills, no shading, clean minimal illustration."
     ),
     "ferme": (
-        "Simple black and white coloring page icon, clean line art of farm animals: "
-        "cow, pig, hen arranged in a square composition, white background, thick outlines, "
-        "no color, children's coloring book style"
+        "Square coloring page button image, white background, thick black outlines. "
+        "Top 70%: farm animals (cow, pig, hen) in simple line art, children's coloring book style. "
+        "Bottom 30%: bold playful text 'Ferme' centered in large friendly font, black letters on white. "
+        "No color fills, no shading, clean minimal illustration."
     ),
     "vehicules": (
-        "Simple black and white coloring page icon, clean line art of vehicles: "
-        "car, train, airplane arranged in a square composition, white background, "
-        "thick outlines, no color, children's coloring book style"
+        "Square coloring page button image, white background, thick black outlines. "
+        "Top 70%: vehicles (car, train, airplane) in simple line art, children's coloring book style. "
+        "Bottom 30%: bold playful text 'Véhicules' centered in large friendly font, black letters on white. "
+        "No color fills, no shading, clean minimal illustration."
     ),
     "nature": (
-        "Simple black and white coloring page icon, clean line art of nature: "
-        "trees, flowers, sun arranged in a square composition, white background, "
-        "thick outlines, no color, children's coloring book style"
+        "Square coloring page button image, white background, thick black outlines. "
+        "Top 70%: nature scene (trees, flowers, sun) in simple line art, children's coloring book style. "
+        "Bottom 30%: bold playful text 'Nature' centered in large friendly font, black letters on white. "
+        "No color fills, no shading, clean minimal illustration."
     ),
     "dinosaures": (
-        "Simple black and white coloring page icon, clean line art of cute dinosaurs "
-        "arranged in a square composition, white background, thick outlines, no color, "
-        "children's coloring book style"
+        "Square coloring page button image, white background, thick black outlines. "
+        "Top 70%: cute dinosaurs in simple line art, children's coloring book style. "
+        "Bottom 30%: bold playful text 'Dinosaures' centered in large friendly font, black letters on white. "
+        "No color fills, no shading, clean minimal illustration."
     ),
     "fleurs": (
-        "Simple black and white coloring page icon, clean line art of flowers "
-        "arranged in a square composition, white background, thick outlines, no color, "
-        "coloring book style"
+        "Square coloring page button image, white background, thick black outlines. "
+        "Top 70%: flowers (roses, tulips, daisies) in simple line art, coloring book style. "
+        "Bottom 30%: bold playful text 'Fleurs' centered in large friendly font, black letters on white. "
+        "No color fills, no shading, clean minimal illustration."
     ),
     "chats": (
-        "Simple black and white coloring page icon, clean line art of cute cats "
-        "arranged in a square composition, white background, thick outlines, no color, "
-        "children's coloring book style"
+        "Square coloring page button image, white background, thick black outlines. "
+        "Top 70%: cute cats in simple line art, children's coloring book style. "
+        "Bottom 30%: bold playful text 'Chats' centered in large friendly font, black letters on white. "
+        "No color fills, no shading, clean minimal illustration."
     ),
     "papillons": (
-        "Simple black and white coloring page icon, clean line art of butterflies "
-        "arranged in a square composition, white background, thick outlines, no color, "
-        "coloring book style"
+        "Square coloring page button image, white background, thick black outlines. "
+        "Top 70%: butterflies in simple line art, coloring book style. "
+        "Bottom 30%: bold playful text 'Papillons' centered in large friendly font, black letters on white. "
+        "No color fills, no shading, clean minimal illustration."
     ),
     "mandalas": (
-        "Simple black and white coloring page icon, clean line art mandala pattern "
-        "in a square composition, white background, thin decorative outlines, no color, "
-        "adult coloring book style"
+        "Square coloring page button image, white background, thin decorative outlines. "
+        "Top 70%: mandala pattern in simple line art, adult coloring book style. "
+        "Bottom 30%: bold elegant text 'Mandalas' centered in large friendly font, black letters on white. "
+        "No color fills, no shading, clean minimal illustration."
     ),
 }
 
 DEFAULT_PROMPT_TEMPLATE = (
-    "Simple black and white coloring page icon for the category '{name}', "
-    "clean line art drawing in a square composition, white background, "
-    "thick outlines, no color fills, no text, children's coloring book style, "
-    "minimal and charming"
+    "Square coloring page button image for the category '{name}', white background, thick black outlines. "
+    "Top 70%: simple line art illustration representing the category, children's coloring book style. "
+    "Bottom 30%: bold playful text '{label}' centered in large friendly font, black letters on white. "
+    "No color fills, no shading, clean minimal illustration."
 )
 
 # ---------------------------------------------------------------------------
@@ -125,9 +133,10 @@ def generate_icon(category: str, output_dir: Path) -> Path:
 
     client = genai.Client(api_key=api_key)
 
+    label = category.replace("-", " ").title()
     prompt = CATEGORY_PROMPTS.get(
         category,
-        DEFAULT_PROMPT_TEMPLATE.format(name=category.replace("-", " "))
+        DEFAULT_PROMPT_TEMPLATE.format(name=category.replace("-", " "), label=label)
     )
 
     print(f"Generating icon for '{category}'...")
