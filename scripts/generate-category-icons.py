@@ -124,8 +124,8 @@ CATEGORY_PROMPTS = {
     ),
     "personnages": (
         f"{_BASE} "
-        "A group of cute cartoon children of different styles — "
-        "two boys and two girls — smiling and waving together."
+        "Four cute cartoon character faces with round heads, big eyes, and friendly smiles, "
+        "each with a different hat or hair style, arranged in a 2x2 grid, cheerful and warm."
     ),
     "contes": (
         f"{_BASE} "
