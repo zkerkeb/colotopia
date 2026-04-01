@@ -36,23 +36,29 @@ const products = [
     link: `${base}?k=${encodeURIComponent(locale === 'fr' ? 'papier dessin épais enfant' : 'thick drawing paper kids')}&tag=${tag}`,
   },
 ];
+
+// Encode links as base64 so ad blockers can't pattern-match Amazon URLs in the HTML
+const encodedProducts = products.map((p) => ({
+  ...p,
+  encodedLink: Buffer.from(p.link).toString('base64'),
+}));
 ---
 
-<aside class="affiliate-widget">
-  <div class="affiliate-header">
-    <span class="affiliate-icon">🎨</span>
+<aside class="supply-widget">
+  <div class="supply-header">
+    <span class="supply-icon">🎨</span>
     <div>
       <h3>{title}</h3>
-      <p class="affiliate-subtitle">{subtitle}</p>
+      <p class="supply-subtitle">{subtitle}</p>
     </div>
   </div>
   <ul>
-    {products.map((product) => (
+    {encodedProducts.map((product) => (
       <li>
-        <a href={product.link} target="_blank" rel="noopener sponsored nofollow" class="affiliate-link" data-product={product.name}>
-          <span class="product-icon">{product.icon}</span>
-          <span class="product-name">{product.name}</span>
-          <span class="product-cta">{cta} <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        <a href="#" data-ref={product.encodedLink} target="_blank" rel="noopener nofollow" class="supply-link" data-product={product.name}>
+          <span class="item-icon">{product.icon}</span>
+          <span class="item-name">{product.name}</span>
+          <span class="item-cta">{cta} <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
         </a>
       </li>
     ))}
@@ -60,12 +66,19 @@ const products = [
 </aside>
 
 <script>
-  document.querySelectorAll('.affiliate-link').forEach((link) => {
-    link.addEventListener('click', () => {
+  document.querySelectorAll('.supply-link').forEach((link) => {
+    const anchor = link as HTMLAnchorElement;
+    // Decode the URL at runtime so ad blockers can't see it in static HTML
+    const encoded = anchor.dataset.ref;
+    if (encoded) {
+      anchor.href = atob(encoded);
+      anchor.removeAttribute('data-ref');
+    }
+    anchor.addEventListener('click', () => {
       if (typeof window.gtag === 'function') {
-        window.gtag('event', 'affiliate_click', {
-          product_name: (link as HTMLAnchorElement).dataset.product,
-          link_url: (link as HTMLAnchorElement).href,
+        window.gtag('event', 'supply_click', {
+          product_name: anchor.dataset.product,
+          link_url: anchor.href,
         });
       }
     });
@@ -73,7 +86,7 @@ const products = [
 </script>
 
 <style>
-  .affiliate-widget {
+  .supply-widget {
     background: linear-gradient(135deg, #fdf2f8 0%, #fef3c7 100%);
     border: 2px solid #f9a8d4;
     border-radius: 16px;
@@ -81,14 +94,14 @@ const products = [
     margin: 2rem 0;
   }
 
-  .affiliate-header {
+  .supply-header {
     display: flex;
     align-items: center;
     gap: 0.75rem;
     margin-bottom: 1rem;
   }
 
-  .affiliate-icon {
+  .supply-icon {
     font-size: 1.75rem;
     line-height: 1;
   }
@@ -100,7 +113,7 @@ const products = [
     margin: 0;
   }
 
-  .affiliate-subtitle {
+  .supply-subtitle {
     font-size: 0.75rem;
     color: #9ca3af;
     margin: 0;
@@ -132,19 +145,19 @@ const products = [
     text-decoration: none;
   }
 
-  .product-icon {
+  .item-icon {
     font-size: 1rem;
     flex-shrink: 0;
   }
 
-  .product-name {
+  .item-name {
     flex: 1;
     font-size: 0.8rem;
     font-weight: 600;
     color: #374151;
   }
 
-  .product-cta {
+  .item-cta {
     display: inline-flex;
     align-items: center;
     gap: 0.25rem;
@@ -155,7 +168,7 @@ const products = [
   }
 
   @media print {
-    .affiliate-widget {
+    .supply-widget {
       display: none;
     }
   }
