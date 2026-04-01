@@ -10,6 +10,7 @@ import RelatedCategories from '../../../components/RelatedCategories.astro';
 import { categories, adultCategories, getCategoryLabel, getCategorySlug, ti, categoryIcons, categoryColors, type Category } from '../../../lib/i18n';
 import { getPublishableColoriages } from '../../../lib/coloriages';
 import { getPillarContent, getRelatedCategories } from '../../../data/pillar-content';
+import fs from 'node:fs';
 
 const locale = 'fr';
 
@@ -34,6 +35,8 @@ const label = getCategoryLabel(categoryKey, locale);
 const isAdult = (adultCategories as readonly string[]).includes(categoryKey);
 const catIcon = categoryIcons[categoryKey];
 const catColor = categoryColors[categoryKey];
+const bannerSvg = `/images/banners/${categoryKey}.svg`;
+const hasBanner = fs.existsSync(`public/images/banners/${categoryKey}.svg`);
 const pillar = page.currentPage === 1 ? getPillarContent(categoryKey, locale) : null;
 const relatedCats = getRelatedCategories(categoryKey, locale);
 
@@ -105,7 +108,8 @@ const structuredData = pillar && pillar.faq.length > 0
   nextUrl={page.url.next}
   category={categoryKey}
 >
-  <div class="category-hero">
+  <div class={`category-hero ${hasBanner ? 'has-banner' : ''}`}>
+    {hasBanner && <img class="category-hero-bg" src={bannerSvg} alt="" aria-hidden="true" loading="eager" />}
     <div class="category-hero-overlay">
       <span class="category-hero-emoji" aria-hidden="true">{catIcon}</span>
       <h1 class="category-hero-title">Coloriages {label}</h1>
@@ -188,6 +192,18 @@ const structuredData = pillar && pillar.faq.length > 0
 
   @media (min-width: 768px) {
     .category-hero { height: 280px; }
+  }
+
+  .category-hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .category-hero.has-banner .category-hero-overlay {
+    background: rgba(0, 0, 0, 0.25);
   }
 
   .category-hero-overlay {

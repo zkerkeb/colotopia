@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 400" width="1400" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fce7f3"/>
+      <stop offset="50%" stop-color="#f9a8d4"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <linearGradient id="overlay" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(0,0,0,0)" />
+      <stop offset="100%" stop-color="rgba(0,0,0,0.15)" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="400" fill="url(#bg)"/>
+  <rect width="1400" height="400" fill="url(#overlay)"/>
+
+  <!-- Decorative dots/circles pattern -->
+  <g opacity="0.12" fill="#fff">
+    <circle cx="50" cy="50" r="8"/><circle cx="150" cy="30" r="5"/><circle cx="250" cy="70" r="6"/>
+    <circle cx="350" cy="20" r="4"/><circle cx="1050" cy="40" r="7"/><circle cx="1150" cy="60" r="5"/>
+    <circle cx="1250" cy="25" r="6"/><circle cx="1350" cy="55" r="4"/><circle cx="100" cy="350" r="6"/>
+    <circle cx="200" cy="370" r="4"/><circle cx="1100" cy="360" r="5"/><circle cx="1300" cy="340" r="7"/>
+    <circle cx="700" cy="380" r="4"/><circle cx="600" cy="15" r="5"/><circle cx="800" cy="25" r="4"/>
+  </g>
+
+  <!-- Left side: Cat sitting (coloring book style) -->
+  <g transform="translate(80, 100)" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.55">
+    <!-- Cat body -->
+    <ellipse cx="60" cy="180" rx="45" ry="55"/>
+    <!-- Cat head -->
+    <circle cx="60" cy="105" r="38"/>
+    <!-- Ears -->
+    <path d="M 32 75 L 22 40 L 50 65"/>
+    <path d="M 88 75 L 98 40 L 70 65"/>
+    <!-- Inner ears -->
+    <path d="M 35 70 L 30 50 L 48 65" stroke-width="2"/>
+    <path d="M 85 70 L 90 50 L 72 65" stroke-width="2"/>
+    <!-- Eyes -->
+    <ellipse cx="45" cy="100" rx="8" ry="9"/>
+    <ellipse cx="75" cy="100" rx="8" ry="9"/>
+    <circle cx="45" cy="98" r="3" fill="#fff"/>
+    <circle cx="75" cy="98" r="3" fill="#fff"/>
+    <!-- Nose -->
+    <path d="M 56 112 L 60 118 L 64 112 Z"/>
+    <!-- Mouth -->
+    <path d="M 60 118 L 60 125 M 55 125 Q 60 132 65 125"/>
+    <!-- Whiskers -->
+    <path d="M 40 115 L 10 110"/><path d="M 40 118 L 12 122"/>
+    <path d="M 80 115 L 110 110"/><path d="M 80 118 L 108 122"/>
+    <!-- Tail -->
+    <path d="M 105 180 Q 140 150 130 110 Q 125 90 135 80" stroke-width="3"/>
+    <!-- Paws -->
+    <ellipse cx="35" cy="232" rx="15" ry="8"/>
+    <ellipse cx="85" cy="232" rx="15" ry="8"/>
+  </g>
+
+  <!-- Left-center: Bird -->
+  <g transform="translate(280, 140)" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.4">
+    <!-- Body -->
+    <ellipse cx="40" cy="50" rx="30" ry="25"/>
+    <!-- Head -->
+    <circle cx="65" cy="30" r="16"/>
+    <!-- Eye -->
+    <circle cx="70" cy="27" r="4"/>
+    <circle cx="71" cy="26" r="1.5" fill="#fff"/>
+    <!-- Beak -->
+    <path d="M 80 30 L 95 28 L 80 34"/>
+    <!-- Wing -->
+    <path d="M 25 40 Q 10 55 20 70 Q 30 60 40 55"/>
+    <!-- Tail -->
+    <path d="M 10 50 L -10 35 M 10 55 L -12 50 M 10 48 L -8 28"/>
+    <!-- Feet -->
+    <path d="M 35 74 L 35 90 M 30 90 L 40 90"/>
+    <path d="M 50 74 L 50 88 M 45 88 L 55 88"/>
+    <!-- Musical notes -->
+    <path d="M 95 10 L 95 -5 L 105 -8 L 105 7" stroke-width="1.5"/>
+    <circle cx="95" cy="12" r="3"/><circle cx="105" cy="9" r="3"/>
+  </g>
+
+  <!-- Right side: Dog sitting -->
+  <g transform="translate(1130, 90)" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.55">
+    <!-- Body -->
+    <ellipse cx="60" cy="190" rx="50" ry="60"/>
+    <!-- Head -->
+    <circle cx="60" cy="110" r="40"/>
+    <!-- Ears (floppy) -->
+    <path d="M 25 100 Q 5 80 10 120 Q 15 140 28 125"/>
+    <path d="M 95 100 Q 115 80 110 120 Q 105 140 92 125"/>
+    <!-- Eyes -->
+    <circle cx="45" cy="105" r="7"/>
+    <circle cx="75" cy="105" r="7"/>
+    <circle cx="46" cy="103" r="2.5" fill="#fff"/>
+    <circle cx="76" cy="103" r="2.5" fill="#fff"/>
+    <!-- Nose -->
+    <ellipse cx="60" cy="122" rx="8" ry="6"/>
+    <!-- Mouth -->
+    <path d="M 60 128 L 60 135 M 50 135 Q 60 145 70 135"/>
+    <!-- Tongue -->
+    <path d="M 58 138 Q 55 150 60 152 Q 65 150 62 138" stroke-width="2"/>
+    <!-- Tail -->
+    <path d="M 10 185 Q -20 160 -15 130 Q -12 115 -5 120" stroke-width="3"/>
+    <!-- Paws -->
+    <ellipse cx="35" cy="248" rx="16" ry="8"/>
+    <ellipse cx="85" cy="248" rx="16" ry="8"/>
+    <!-- Collar -->
+    <path d="M 30 140 Q 60 155 90 140" stroke-width="2.5"/>
+    <circle cx="60" cy="150" r="4"/>
+  </g>
+
+  <!-- Right-center: Rabbit -->
+  <g transform="translate(980, 160)" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.4">
+    <!-- Body -->
+    <ellipse cx="40" cy="100" rx="30" ry="40"/>
+    <!-- Head -->
+    <circle cx="40" cy="50" r="22"/>
+    <!-- Ears -->
+    <path d="M 30 32 Q 22 -10 30 -20 Q 38 -10 35 32"/>
+    <path d="M 50 32 Q 42 -15 50 -25 Q 58 -15 55 32"/>
+    <!-- Inner ears -->
+    <path d="M 31 25 Q 27 0 32 -10 Q 36 0 34 25" stroke-width="1.5"/>
+    <path d="M 51 25 Q 47 -5 52 -15 Q 56 -5 54 25" stroke-width="1.5"/>
+    <!-- Eyes -->
+    <circle cx="32" cy="47" r="5"/>
+    <circle cx="48" cy="47" r="5"/>
+    <circle cx="33" cy="45" r="2" fill="#fff"/>
+    <circle cx="49" cy="45" r="2" fill="#fff"/>
+    <!-- Nose -->
+    <path d="M 37 57 L 40 61 L 43 57"/>
+    <!-- Whiskers -->
+    <path d="M 25 58 L 8 55"/><path d="M 25 62 L 10 65"/>
+    <path d="M 55 58 L 72 55"/><path d="M 55 62 L 70 65"/>
+    <!-- Feet -->
+    <ellipse cx="25" cy="138" rx="14" ry="7"/>
+    <ellipse cx="55" cy="138" rx="14" ry="7"/>
+    <!-- Tail (puff) -->
+    <circle cx="70" cy="105" r="10"/>
+  </g>
+
+  <!-- Bottom: Butterfly -->
+  <g transform="translate(450, 260)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.3">
+    <ellipse cx="0" cy="0" rx="3" ry="15"/>
+    <path d="M 0 -5 Q -25 -30 -30 -10 Q -35 10 0 5"/>
+    <path d="M 0 -5 Q 25 -30 30 -10 Q 35 10 0 5"/>
+    <path d="M 0 5 Q -20 10 -22 25 Q -20 35 0 10"/>
+    <path d="M 0 5 Q 20 10 22 25 Q 20 35 0 10"/>
+    <!-- Antennae -->
+    <path d="M -2 -15 Q -10 -30 -15 -28"/><path d="M 2 -15 Q 10 -30 15 -28"/>
+  </g>
+
+  <!-- Top-right: Stars/sparkles -->
+  <g fill="none" stroke="#fff" stroke-width="1.5" opacity="0.25">
+    <path d="M 850 50 L 850 40 M 845 45 L 855 45" transform="rotate(15, 850, 45)"/>
+    <path d="M 550 320 L 550 310 M 545 315 L 555 315"/>
+    <path d="M 920 290 L 920 280 M 915 285 L 925 285" transform="rotate(-10, 920, 285)"/>
+    <path d="M 200 280 L 200 270 M 195 275 L 205 275"/>
+  </g>
+
+  <!-- Hearts scattered -->
+  <g fill="none" stroke="#fff" stroke-width="2" opacity="0.2">
+    <path d="M 500 80 Q 500 70 510 70 Q 520 70 520 80 Q 520 90 510 100 Q 500 90 500 80"/>
+    <path d="M 870 330 Q 870 320 880 320 Q 890 320 890 330 Q 890 340 880 350 Q 870 340 870 330" transform="scale(0.8) translate(140, 50)"/>
+    <path d="M 370 340 Q 370 330 380 330 Q 390 330 390 340 Q 390 350 380 360 Q 370 350 370 340" transform="scale(0.7) translate(160, 100)"/>
+  </g>
+
+  <!-- Paw prints scattered -->
+  <g fill="#fff" opacity="0.15">
+    <!-- Paw 1 -->
+    <g transform="translate(680, 320) rotate(-20)">
+      <ellipse cx="0" cy="0" rx="8" ry="10"/>
+      <circle cx="-8" cy="-12" r="4"/><circle cx="0" cy="-15" r="4"/><circle cx="8" cy="-12" r="4"/>
+    </g>
+    <!-- Paw 2 -->
+    <g transform="translate(780, 80) rotate(15)">
+      <ellipse cx="0" cy="0" rx="6" ry="8"/>
+      <circle cx="-6" cy="-10" r="3"/><circle cx="0" cy="-12" r="3"/><circle cx="6" cy="-10" r="3"/>
+    </g>
+    <!-- Paw 3 -->
+    <g transform="translate(420, 50) rotate(-5)">
+      <ellipse cx="0" cy="0" rx="5" ry="7"/>
+      <circle cx="-5" cy="-8" r="2.5"/><circle cx="0" cy="-10" r="2.5"/><circle cx="5" cy="-8" r="2.5"/>
+    </g>
+  </g>
+</svg>
