@@ -7,9 +7,10 @@ interface Props {
   color: string;
   href: string;
   locale?: string;
+  image?: string;
 }
 
-const { name, emoji, count, color, href, locale = 'fr' } = Astro.props;
+const { name, emoji, count, color, href, locale = 'fr', image } = Astro.props;
 const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring pages`;
 ---
 
@@ -20,7 +21,10 @@ const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring 
   aria-label={`${name} — ${countLabel}`}
   data-fade-in
 >
-  <span class="category-emoji" aria-hidden="true">{emoji}</span>
+  {image
+    ? <img class="category-icon-img" src={image} alt="" aria-hidden="true" loading="lazy" />
+    : <span class="category-emoji" aria-hidden="true">{emoji}</span>
+  }
   <span class="category-name">{name}</span>
   <span class="category-count">{countLabel}</span>
 </a>
@@ -48,6 +52,13 @@ const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring 
   .category-emoji {
     font-size: 2.5rem;
     line-height: 1;
+  }
+
+  .category-icon-img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
   }
 
   .category-name {
