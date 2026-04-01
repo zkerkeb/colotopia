@@ -35,8 +35,9 @@ const label = getCategoryLabel(categoryKey, locale);
 const isAdult = (adultCategories as readonly string[]).includes(categoryKey);
 const catIcon = categoryIcons[categoryKey];
 const catColor = categoryColors[categoryKey];
-const bannerSvg = `/images/banners/${categoryKey}.svg`;
-const hasBanner = fs.existsSync(`public/images/banners/${categoryKey}.svg`);
+const bannerPng = fs.existsSync(`public/images/banners/${categoryKey}.png`);
+const bannerSrc = bannerPng ? `/images/banners/${categoryKey}.png` : `/images/banners/${categoryKey}.svg`;
+const hasBanner = bannerPng || fs.existsSync(`public/images/banners/${categoryKey}.svg`);
 const pillar = page.currentPage === 1 ? getPillarContent(categoryKey, locale) : null;
 const relatedCats = getRelatedCategories(categoryKey, locale);
 
@@ -109,7 +110,7 @@ const structuredData = pillar && pillar.faq.length > 0
   category={categoryKey}
 >
   <div class={`category-hero ${hasBanner ? 'has-banner' : ''}`}>
-    {hasBanner && <img class="category-hero-bg" src={bannerSvg} alt="" aria-hidden="true" loading="eager" />}
+    {hasBanner && <img class="category-hero-bg" src={bannerSrc} alt="" aria-hidden="true" loading="eager" />}
     <div class="category-hero-overlay">
       <span class="category-hero-emoji" aria-hidden="true">{catIcon}</span>
       <h1 class="category-hero-title">Coloriages {label}</h1>
