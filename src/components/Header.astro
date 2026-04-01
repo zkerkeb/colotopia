@@ -92,7 +92,7 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
   </div>
 
   <!-- Mobile drawer overlay -->
-  <div class="drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+  <div class="drawer-overlay" id="drawer-overlay" aria-hidden="true" hidden></div>
 
   <!-- Mobile drawer -->
   <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label={t('nav.menu', locale)} hidden>
@@ -215,6 +215,7 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
   function openDrawer() {
     if (!mobileDrawer || !hamburgerBtn) return;
     mobileDrawer.hidden = false;
+    if (drawerOverlay) drawerOverlay.hidden = false;
     hamburgerBtn.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
   }
@@ -222,6 +223,7 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
   function closeDrawer() {
     if (!mobileDrawer || !hamburgerBtn) return;
     mobileDrawer.hidden = true;
+    if (drawerOverlay) drawerOverlay.hidden = true;
     hamburgerBtn.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
   }
