@@ -1,0 +1,139 @@
+{
+  "summary": {
+    "total": 10,
+    "success": 10,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-04-01T19:32:54.093578+00:00",
+      "backend": "gemini",
+      "fr_slug": "religions-eglise",
+      "en_slug": "religions-church",
+      "prompt": "A cute simple cartoon church with a bell tower and cross on top, arched door and stained glass windows, flowers around the entrance, friendly style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/religions-eglise.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-01T19:33:01.098768+00:00",
+      "backend": "gemini",
+      "fr_slug": "religions-mosquee",
+      "en_slug": "religions-mosque",
+      "prompt": "A beautiful cartoon mosque with a large dome, crescent moon on top, two minarets, arched windows with simple geometric patterns, welcoming entrance, cute style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/religions-mosquee.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-01T19:33:08.102938+00:00",
+      "backend": "gemini",
+      "fr_slug": "religions-synagogue",
+      "en_slug": "religions-synagogue",
+      "prompt": "A friendly cartoon synagogue building with a Star of David on the facade, arched windows, ornate entrance doors, simple architectural details, cute style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/religions-synagogue.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-01T19:33:15.106501+00:00",
+      "backend": "gemini",
+      "fr_slug": "religions-temple-bouddhiste",
+      "en_slug": "religions-buddhist-temple",
+      "prompt": "A cute cartoon Buddhist temple or pagoda with multiple tiered roofs curving upward, surrounded by lotus flowers and a peaceful garden, simple line art for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/religions-temple-bouddhiste.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-01T19:33:22.110756+00:00",
+      "backend": "gemini",
+      "fr_slug": "religions-temple-hindou",
+      "en_slug": "religions-hindu-temple",
+      "prompt": "A colorful cartoon Hindu temple with ornate gopuram tower, multiple tiers with decorative carvings, lotus motifs, and a welcoming entrance, cute simple style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/religions-temple-hindou.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-01T19:33:29.114865+00:00",
+      "backend": "gemini",
+      "fr_slug": "religions-torii-shinto",
+      "en_slug": "religions-shinto-torii",
+      "prompt": "A cute cartoon Japanese torii gate at the entrance of a shrine, with cherry blossom trees on both sides and stone lanterns, simple line art for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/religions-torii-shinto.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-01T19:33:36.117597+00:00",
+      "backend": "gemini",
+      "fr_slug": "religions-bougie-priere",
+      "en_slug": "religions-prayer-candle",
+      "prompt": "A large decorative candle with a warm flame, surrounded by flowers and peaceful symbols like doves and stars, simple cute line art for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/religions-bougie-priere.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/religions-bougie-priere.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/religions-prayer-candle.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 78.09674660683415,
+        "black_pct": 3.018446316254092,
+        "mid_pct": 9.486657225880016,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-01T19:33:49.655999+00:00",
+      "backend": "gemini",
+      "fr_slug": "religions-colombe-paix",
+      "en_slug": "religions-peace-dove",
+      "prompt": "A beautiful cartoon dove carrying an olive branch in its beak, flying over a peaceful landscape with flowers and a rainbow, simple friendly style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/religions-colombe-paix.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-01T19:33:56.660002+00:00",
+      "backend": "gemini",
+      "fr_slug": "religions-mandala-lotus",
+      "en_slug": "religions-lotus-mandala",
+      "prompt": "A simple mandala pattern made of lotus flower petals arranged in a circle, with small decorative elements around it, peaceful and calming, simple line art for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/religions-mandala-lotus.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-01T19:34:03.663828+00:00",
+      "backend": "gemini",
+      "fr_slug": "religions-livre-sacre",
+      "en_slug": "religions-sacred-book",
+      "prompt": "A large open book on a decorated stand, with light rays emanating from the pages, surrounded by flowers, stars, and peaceful symbols, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/religions-livre-sacre.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    }
+  ]
+}
