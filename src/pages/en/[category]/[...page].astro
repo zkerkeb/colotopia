@@ -158,6 +158,10 @@ const structuredData = pillar && pillar.faq.length > 0
     locale={locale}
   />
 
+  {page.currentPage === 1 && relatedCats.length > 0 && (
+    <RelatedCategories locale={locale} categories={relatedCats} />
+  )}
+
   {pillar && (
     <div id="learn-more">
       <PillarSection locale={locale} pillar={pillar} categoryLabel={label} />
@@ -166,10 +170,6 @@ const structuredData = pillar && pillar.faq.length > 0
 
   {pillar && pillar.faq.length > 0 && (
     <CategoryFaq locale={locale} faq={pillar.faq} categoryLabel={label} />
-  )}
-
-  {page.currentPage === 1 && relatedCats.length > 0 && (
-    <RelatedCategories locale={locale} categories={relatedCats} />
   )}
 
   {page.currentPage === 1 && hasSeoText && !pillar && (
