@@ -358,6 +358,14 @@ def generate_icon_gemini(category: str, output_dir: Path) -> Path:
     return out_path
 
 
+_OPENAI_STYLE_SUFFIX = (
+    " Style: very thin, delicate black line art on pure white background — "
+    "like a professional children's coloring book printed with a fine-tip pen. "
+    "Extremely fine outlines, no thick strokes, no filled black areas, no bold lines. "
+    "Lines should be as thin as pencil marks. No gray tones, no shading, pure outline only."
+)
+
+
 def generate_icon_openai(category: str, output_dir: Path) -> Path:
     import base64
     api_key = os.environ.get("OPENAI_API_KEY")
@@ -370,7 +378,7 @@ def generate_icon_openai(category: str, output_dir: Path) -> Path:
         raise ImportError("openai package not installed. Run: pip install openai")
 
     client = OpenAI(api_key=api_key)
-    prompt = _get_prompt(category)
+    prompt = _get_prompt(category) + _OPENAI_STYLE_SUFFIX
 
     print(f"Generating icon for '{category}' (OpenAI DALL-E 3)...")
     print(f"  Prompt: {prompt[:80]}...")
