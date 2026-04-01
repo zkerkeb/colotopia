@@ -5068,3 +5068,85 @@ categories:
         fr_tags: ["arc-en-ciel", "nuages", "espoir", "adulte"]
         en_tags: ["rainbow", "clouds", "hope", "adult"]
         prompt: "A decorative rainbow arch with detailed stripes, surrounded by ornate clouds filled with floral patterns, raindrops as teardrops, and sun peeking through."
+
+  religions:
+    subjects:
+      - fr_slug: religions-eglise
+        en_slug: religions-church
+        fr_title: "Église"
+        en_title: "Church"
+        fr_tags: ["église", "religion", "christianisme", "lieu de culte"]
+        en_tags: ["church", "religion", "christianity", "place of worship"]
+        prompt: "A cute simple cartoon church with a bell tower and cross on top, arched door and stained glass windows, flowers around the entrance, friendly style for children."
+
+      - fr_slug: religions-mosquee
+        en_slug: religions-mosque
+        fr_title: "Mosquée"
+        en_title: "Mosque"
+        fr_tags: ["mosquée", "islam", "religion", "lieu de culte"]
+        en_tags: ["mosque", "islam", "religion", "place of worship"]
+        prompt: "A beautiful cartoon mosque with a large dome, crescent moon on top, two minarets, arched windows with simple geometric patterns, welcoming entrance, cute style for children."
+
+      - fr_slug: religions-synagogue
+        en_slug: religions-synagogue
+        fr_title: "Synagogue"
+        en_title: "Synagogue"
+        fr_tags: ["synagogue", "judaïsme", "religion", "lieu de culte"]
+        en_tags: ["synagogue", "judaism", "religion", "place of worship"]
+        prompt: "A friendly cartoon synagogue building with a Star of David on the facade, arched windows, ornate entrance doors, simple architectural details, cute style for children."
+
+      - fr_slug: religions-temple-bouddhiste
+        en_slug: religions-buddhist-temple
+        fr_title: "Temple bouddhiste"
+        en_title: "Buddhist Temple"
+        fr_tags: ["temple", "bouddhisme", "religion", "lieu de culte"]
+        en_tags: ["temple", "buddhism", "religion", "place of worship"]
+        prompt: "A cute cartoon Buddhist temple or pagoda with multiple tiered roofs curving upward, surrounded by lotus flowers and a peaceful garden, simple line art for children."
+
+      - fr_slug: religions-temple-hindou
+        en_slug: religions-hindu-temple
+        fr_title: "Temple hindou"
+        en_title: "Hindu Temple"
+        fr_tags: ["temple", "hindouisme", "religion", "lieu de culte"]
+        en_tags: ["temple", "hinduism", "religion", "place of worship"]
+        prompt: "A colorful cartoon Hindu temple with ornate gopuram tower, multiple tiers with decorative carvings, lotus motifs, and a welcoming entrance, cute simple style for children."
+
+      - fr_slug: religions-torii-shinto
+        en_slug: religions-shinto-torii
+        fr_title: "Torii shinto"
+        en_title: "Shinto Torii Gate"
+        fr_tags: ["torii", "shintoïsme", "japon", "religion"]
+        en_tags: ["torii", "shinto", "japan", "religion"]
+        prompt: "A cute cartoon Japanese torii gate at the entrance of a shrine, with cherry blossom trees on both sides and stone lanterns, simple line art for children."
+
+      - fr_slug: religions-bougie-priere
+        en_slug: religions-prayer-candle
+        fr_title: "Bougie de prière"
+        en_title: "Prayer Candle"
+        fr_tags: ["bougie", "prière", "paix", "religion"]
+        en_tags: ["candle", "prayer", "peace", "religion"]
+        prompt: "A large decorative candle with a warm flame, surrounded by flowers and peaceful symbols like doves and stars, simple cute line art for children."
+
+      - fr_slug: religions-colombe-paix
+        en_slug: religions-peace-dove
+        fr_title: "Colombe de la paix"
+        en_title: "Peace Dove"
+        fr_tags: ["colombe", "paix", "religion", "espoir"]
+        en_tags: ["dove", "peace", "religion", "hope"]
+        prompt: "A beautiful cartoon dove carrying an olive branch in its beak, flying over a peaceful landscape with flowers and a rainbow, simple friendly style for children."
+
+      - fr_slug: religions-mandala-lotus
+        en_slug: religions-lotus-mandala
+        fr_title: "Mandala fleur de lotus"
+        en_title: "Lotus Flower Mandala"
+        fr_tags: ["mandala", "lotus", "méditation", "religion"]
+        en_tags: ["mandala", "lotus", "meditation", "religion"]
+        prompt: "A simple mandala pattern made of lotus flower petals arranged in a circle, with small decorative elements around it, peaceful and calming, simple line art for children."
+
+      - fr_slug: religions-livre-sacre
+        en_slug: religions-sacred-book
+        fr_title: "Livre sacré"
+        en_title: "Sacred Book"
+        fr_tags: ["livre", "sacré", "religion", "sagesse"]
+        en_tags: ["book", "sacred", "religion", "wisdom"]
+        prompt: "A large open book on a decorated stand, with light rays emanating from the pages, surrounded by flowers, stars, and peaceful symbols, cute cartoon style for children."

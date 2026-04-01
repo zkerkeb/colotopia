@@ -1692,6 +1692,68 @@ const pillarContent: Partial<PillarRecord> = {
       relatedCategories: ['nature', 'saisons', 'mandalas', 'abstrait'],
     },
   },
+  religions: {
+    fr: {
+      intro: "Découvrez notre collection de coloriages sur les religions du monde, conçue pour aider les enfants à découvrir la diversité des cultures et des traditions spirituelles. Églises, mosquées, synagogues, temples bouddhistes et hindous — chaque coloriage présente un lieu de culte ou un symbole religieux avec respect et bienveillance. Une façon ludique d'apprendre la tolérance et l'ouverture d'esprit tout en s'amusant avec des crayons de couleur.",
+      ageRange: "4 à 12 ans",
+      benefits: [
+        "Découverte des différentes religions et cultures du monde",
+        "Sensibilisation au respect, à la tolérance et à la diversité",
+        "Apprentissage des lieux de culte et symboles religieux",
+        "Activité calme qui favorise la réflexion et la curiosité",
+      ],
+      tips: [
+        "Discutez avec l'enfant des traditions associées à chaque lieu de culte",
+        "Utilisez des couleurs variées pour chaque bâtiment et ses décorations",
+        "Comparez les différents styles architecturaux entre les religions",
+      ],
+      faq: [
+        {
+          question: "Ces coloriages respectent-ils toutes les religions ?",
+          answer: "Oui, notre collection représente les principales traditions religieuses du monde avec respect et bienveillance. Chaque dessin est conçu pour encourager la curiosité et la tolérance envers toutes les cultures.",
+        },
+        {
+          question: "À quel âge peut-on colorier ces dessins ?",
+          answer: "Dès 4 ans, les enfants peuvent colorier les dessins aux contours simples. Les enfants plus âgés (8-12 ans) apprécieront les détails architecturaux et pourront en apprendre davantage sur chaque religion.",
+        },
+        {
+          question: "Comment utiliser ces coloriages pour enseigner la tolérance ?",
+          answer: "Accompagnez le coloriage d'une discussion sur les points communs entre les religions : la paix, l'amour, le respect. Expliquez que chaque culture a ses propres traditions et que toutes méritent le respect.",
+        },
+      ],
+      relatedCategories: ['personnages', 'fetes', 'nature', 'contes'],
+    },
+    en: {
+      intro: "Explore our collection of world religions coloring pages, designed to help children discover the diversity of cultures and spiritual traditions. Churches, mosques, synagogues, Buddhist and Hindu temples — each coloring page presents a place of worship or religious symbol with respect and kindness. A fun way to learn about tolerance and open-mindedness while having fun with colored pencils.",
+      ageRange: "4 to 12 years",
+      benefits: [
+        "Learning about different world religions and cultures",
+        "Building awareness of respect, tolerance and diversity",
+        "Understanding places of worship and religious symbols",
+        "A calm activity that encourages reflection and curiosity",
+      ],
+      tips: [
+        "Discuss the traditions associated with each place of worship",
+        "Use various colors for each building and its decorations",
+        "Compare the different architectural styles across religions",
+      ],
+      faq: [
+        {
+          question: "Do these coloring pages respect all religions?",
+          answer: "Yes, our collection represents major world religious traditions with respect and kindness. Each drawing is designed to encourage curiosity and tolerance toward all cultures.",
+        },
+        {
+          question: "What age are these coloring pages suitable for?",
+          answer: "From age 4, children can color the simple outline drawings. Older children (8-12) will appreciate the architectural details and can learn more about each religion.",
+        },
+        {
+          question: "How can these coloring pages teach tolerance?",
+          answer: "Accompany the coloring activity with discussions about what religions have in common: peace, love, respect. Explain that each culture has its own traditions and all deserve respect.",
+        },
+      ],
+      relatedCategories: ['personnages', 'fetes', 'nature', 'contes'],
+    },
+  },
 };
 
 export function getPillarContent(category: Category, locale: Locale): PillarData | null {

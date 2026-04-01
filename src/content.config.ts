@@ -42,6 +42,7 @@ const categories = [
   'halloween',
   'noel',
   'champignons',
+  'religions',
   // Adults
   'cottagecore',
   'vitrail',

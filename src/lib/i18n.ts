@@ -35,6 +35,7 @@ export const kidsCategories = [
   'halloween',
   'noel',
   'champignons',
+  'religions',
 ] as const;
 
 export const adultCategories = [
@@ -87,6 +88,7 @@ export const categoryIcons: Record<Category, string> = {
   'halloween': '🎃',
   'noel': '🎄',
   'champignons': '🍄',
+  'religions': '🕊️',
   'cottagecore': '🏡',
   'vitrail': '🪟',
   'zodiaque': '♈',
@@ -132,6 +134,7 @@ export const categoryColors: Record<Category, { bg: string; light: string; text:
   'halloween':             { bg: '#f97316', light: '#fff7ed', text: '#7c2d12', gradient: 'linear-gradient(135deg, #1c1917 0%, #44403c 50%, #57534e 100%)' },
   'noel':                  { bg: '#dc2626', light: '#fef2f2', text: '#7f1d1d', gradient: 'linear-gradient(135deg, #0f172a 0%, #14532d 50%, #166534 100%)' },
   'champignons':           { bg: '#a16207', light: '#fefce8', text: '#713f12', gradient: 'linear-gradient(135deg, #fefce8 0%, #fef08a 100%)' },
+  'religions':             { bg: '#8b5cf6', light: '#f5f3ff', text: '#4c1d95', gradient: 'linear-gradient(135deg, #f5f3ff 0%, #ddd6fe 100%)' },
   'cottagecore':           { bg: '#84cc16', light: '#f7fee7', text: '#365314', gradient: 'linear-gradient(135deg, #f7fee7 0%, #d9f99d 100%)' },
   'vitrail':               { bg: '#7c3aed', light: '#f5f3ff', text: '#4c1d95', gradient: 'linear-gradient(135deg, #1e1b4b 0%, #4c1d95 50%, #6d28d9 100%)' },
   'zodiaque':              { bg: '#4f46e5', light: '#eef2ff', text: '#312e81', gradient: 'linear-gradient(135deg, #0f0a1e 0%, #1e1b4b 50%, #312e81 100%)' },
@@ -195,6 +198,7 @@ const translations: Record<string, Record<Locale, string>> = {
   'category.halloween': { fr: 'Halloween', en: 'Halloween' },
   'category.noel': { fr: 'Noël', en: 'Christmas' },
   'category.champignons': { fr: 'Champignons', en: 'Mushrooms' },
+  'category.religions': { fr: 'Religions', en: 'Religions' },
   'category.cottagecore': { fr: 'Cottagecore', en: 'Cottagecore' },
   'category.vitrail': { fr: 'Vitraux', en: 'Stained Glass' },
   'category.zodiaque': { fr: 'Zodiaque', en: 'Zodiac' },
@@ -497,6 +501,7 @@ const enSlugs: Record<Category, string> = {
   halloween: 'halloween',
   noel: 'christmas',
   champignons: 'mushrooms',
+  religions: 'religions',
   cottagecore: 'cottagecore',
   vitrail: 'stained-glass',
   zodiaque: 'zodiac',
