@@ -73,7 +73,7 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
 
       <!-- Lang switch -->
       <a
-        href={Astro.url.href.replace(`/${locale}/`, `/${altLocale}/`)}
+        href={Astro.url.pathname.replace(`/${locale}/`, `/${altLocale}/`)}
         class="nav-link nav-link--lang"
         aria-label={`Switch to ${altLabel}`}
       >
@@ -141,7 +141,7 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
 
       <div class="drawer-footer">
         <a
-          href={Astro.url.href.replace(`/${locale}/`, `/${altLocale}/`)}
+          href={Astro.url.pathname.replace(`/${locale}/`, `/${altLocale}/`)}
           class="drawer-lang-switch"
           aria-label={locale === 'fr' ? `Passer en anglais (${altLabel})` : `Switch to French (${altLabel})`}
         >
