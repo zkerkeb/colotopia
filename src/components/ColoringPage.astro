@@ -59,6 +59,11 @@ const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURICom
 const pinterestUrl = `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(pageUrl)}&media=${encodeURIComponent(imageAbsUrl)}&description=${encodeURIComponent(shareText)}`;
 
 const shareLabel = t('share.label', locale);
+const mobileActionsTitle = t('mobile.actions.title', locale);
+const mobileShareLabel = t('mobile.actions.share', locale);
+const mobilePrintLabel = t('mobile.actions.print', locale);
+const mobileCancelLabel = t('mobile.actions.cancel', locale);
+const downloadLabel = t('coloring.download', locale);
 ---
 
 <script define:vars={{ title, category, slug, tags }}>
@@ -111,12 +116,117 @@ const shareLabel = t('share.label', locale);
         <button
           class="btn-print btn-lg"
           id="print-btn"
-          onclick="if(typeof gtag==='function'){gtag('event','print_page',{page_title:document.title});}window.print();"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
           {printLabel}
         </button>
       </div>
+
+      <!-- Mobile action sheet (share/print/download) -->
+      <div class="action-sheet-overlay" id="action-sheet-overlay" hidden>
+        <div class="action-sheet" role="dialog" aria-label={mobileActionsTitle}>
+          <div class="action-sheet-header">{mobileActionsTitle}</div>
+          <button class="action-sheet-btn" id="action-share" data-share-title={shareText} data-share-url={pageUrl}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            {mobileShareLabel}
+          </button>
+          <button class="action-sheet-btn" id="action-download">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            {downloadLabel}
+          </button>
+          <button class="action-sheet-btn" id="action-print">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            {mobilePrintLabel}
+          </button>
+          <button class="action-sheet-btn action-sheet-cancel" id="action-cancel">{mobileCancelLabel}</button>
+        </div>
+      </div>
+
+      <script>
+        // Mobile action sheet: on small screens, print button opens the sheet instead of window.print()
+        const printBtn = document.getElementById('print-btn');
+        const overlay = document.getElementById('action-sheet-overlay');
+        const shareBtn = document.getElementById('action-share');
+        const downloadBtn = document.getElementById('action-download');
+        const actionPrintBtn = document.getElementById('action-print');
+        const cancelBtn = document.getElementById('action-cancel');
+
+        function isMobile() {
+          return window.matchMedia('(max-width: 860px)').matches;
+        }
+
+        function closeSheet() {
+          if (overlay) overlay.hidden = true;
+        }
+
+        function openSheet() {
+          if (overlay) overlay.hidden = false;
+        }
+
+        if (printBtn) {
+          printBtn.addEventListener('click', () => {
+            if (isMobile()) {
+              openSheet();
+            } else {
+              if (typeof window.gtag === 'function') {
+                window.gtag('event', 'print_page', { page_title: document.title });
+              }
+              window.print();
+            }
+          });
+        }
+
+        // Close on overlay click
+        if (overlay) {
+          overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) closeSheet();
+          });
+        }
+
+        if (cancelBtn) cancelBtn.addEventListener('click', closeSheet);
+
+        // Share via Web Share API
+        if (shareBtn) {
+          shareBtn.addEventListener('click', async () => {
+            closeSheet();
+            const shareTitle = shareBtn.dataset.shareTitle || document.title;
+            const shareUrl = shareBtn.dataset.shareUrl || window.location.href;
+            if (navigator.share) {
+              try {
+                await navigator.share({ title: shareTitle, url: shareUrl });
+                if (typeof window.gtag === 'function') {
+                  window.gtag('event', 'share', { method: 'native', content_type: 'coloring_page', item_id: window.location.pathname });
+                }
+              } catch (_) { /* user cancelled */ }
+            } else {
+              // Fallback: copy URL
+              try {
+                await navigator.clipboard.writeText(shareUrl);
+              } catch (_) {}
+            }
+          });
+        }
+
+        // Download PDF — trigger existing PDF button
+        if (downloadBtn) {
+          downloadBtn.addEventListener('click', () => {
+            closeSheet();
+            const pdfBtn = document.getElementById('pdf-download-btn');
+            if (pdfBtn) pdfBtn.click();
+          });
+        }
+
+        // Print from action sheet
+        if (actionPrintBtn) {
+          actionPrintBtn.addEventListener('click', () => {
+            closeSheet();
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'print_page', { page_title: document.title });
+            }
+            window.print();
+          });
+        }
+      </script>
 
       <!-- Mobile supply widget (hidden on desktop where sidebar shows it) -->
       <div class="mobile-supplies">
@@ -378,6 +488,84 @@ const shareLabel = t('share.label', locale);
     gap: var(--space-6);
   }
 
+  /* ── Mobile action sheet ── */
+  .action-sheet-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    animation: fadeIn 0.15s ease-out;
+  }
+
+  .action-sheet-overlay[hidden] {
+    display: none;
+  }
+
+  .action-sheet {
+    width: 100%;
+    max-width: 500px;
+    background: var(--color-bg-card, #fff);
+    border-radius: var(--radius-lg, 1rem) var(--radius-lg, 1rem) 0 0;
+    padding: var(--space-4, 1rem);
+    padding-bottom: calc(var(--space-4, 1rem) + env(safe-area-inset-bottom, 0px));
+    animation: slideUp 0.2s ease-out;
+  }
+
+  .action-sheet-header {
+    text-align: center;
+    font-size: var(--font-size-sm, 0.875rem);
+    font-weight: var(--font-weight-semibold, 600);
+    color: var(--color-text-secondary, #666);
+    padding-bottom: var(--space-3, 0.75rem);
+    border-bottom: 1px solid var(--color-border, #e5e7eb);
+    margin-bottom: var(--space-2, 0.5rem);
+  }
+
+  .action-sheet-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3, 0.75rem);
+    width: 100%;
+    padding: var(--space-4, 1rem) var(--space-3, 0.75rem);
+    border: none;
+    background: none;
+    font-size: var(--font-size-base, 1rem);
+    font-weight: var(--font-weight-semibold, 600);
+    color: var(--color-text, #1a1a2e);
+    cursor: pointer;
+    border-radius: var(--radius-sm, 0.5rem);
+    font-family: inherit;
+    transition: background var(--transition-fast, 0.15s);
+  }
+
+  .action-sheet-btn:hover {
+    background: var(--color-bg-subtle, #f5f5f5);
+  }
+
+  .action-sheet-btn:active {
+    background: var(--color-primary-light, #e8e0ff);
+  }
+
+  .action-sheet-cancel {
+    margin-top: var(--space-2, 0.5rem);
+    border-top: 1px solid var(--color-border, #e5e7eb);
+    color: var(--color-text-secondary, #666);
+    justify-content: center;
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
   @media print {
     .coloring-page {
       padding: 0 !important;
@@ -391,6 +579,7 @@ const shareLabel = t('share.label', locale);
     .share-section,
     .mobile-supplies,
     .sidebar,
+    .action-sheet-overlay,
     .main-content > :not(.coloring-image-frame) {
       display: none !important;
     }
