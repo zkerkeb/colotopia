@@ -231,10 +231,7 @@ const translations: Record<string, Record<Locale, string>> = {
   'share.whatsapp': { fr: 'Partager sur WhatsApp', en: 'Share on WhatsApp' },
   'share.facebook': { fr: 'Partager sur Facebook', en: 'Share on Facebook' },
   'share.pinterest': { fr: 'Épingler sur Pinterest', en: 'Pin on Pinterest' },
-  'mobile.actions.title': { fr: 'Que souhaitez-vous faire ?', en: 'What would you like to do?' },
-  'mobile.actions.share': { fr: 'Partager', en: 'Share' },
-  'mobile.actions.print': { fr: 'Imprimer', en: 'Print' },
-  'mobile.actions.cancel': { fr: 'Annuler', en: 'Cancel' },
+  'mobile.actions.more': { fr: "Plus d'actions", en: 'More actions' },
   'legal.privacy.title': { fr: 'Politique de confidentialité', en: 'Privacy Policy' },
   'legal.terms.title': { fr: "Conditions d'utilisation", en: 'Terms of Use' },
   'home.hero.subtitle': {
