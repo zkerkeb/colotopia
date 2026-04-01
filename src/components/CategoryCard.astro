@@ -80,12 +80,13 @@ const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring 
     left: 0;
     right: 0;
     text-align: center;
-    font-family: var(--font-body);
-    font-weight: var(--font-weight-extrabold);
-    font-size: clamp(0.85rem, 3.5vw, 1.15rem);
+    font-family: 'Fredoka One', cursive;
+    font-weight: 400;
+    font-size: clamp(1rem, 4vw, 1.3rem);
     color: #fff;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.55), 0 0 12px rgba(0,0,0,0.35);
-    letter-spacing: 0.01em;
+    -webkit-text-stroke: 2.5px #000;
+    paint-order: stroke fill;
+    letter-spacing: 0.03em;
     pointer-events: none;
   }
 
