@@ -88,61 +88,31 @@ const subtitle = locale === 'fr'
     justify-content: center;
   }
 
-  /* Decorative elements */
+  /* Decorative elements — static positioning, no transforms (avoids GPU compositing on mobile Safari) */
   .hero-deco {
     position: absolute;
     pointer-events: none;
     user-select: none;
-    animation: hero-float 6s ease-in-out infinite;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .hero-deco {
-      animation: none;
-    }
   }
 
   .hero-deco--star {
     top: var(--space-6);
     left: 8%;
-    animation-delay: 0s;
   }
 
   .hero-deco--pencil {
     top: var(--space-8);
     right: 8%;
-    transform: rotate(15deg);
-    animation-delay: -2s;
   }
 
   .hero-deco--circle1 {
     bottom: var(--space-4);
     left: 5%;
-    animation-delay: -1s;
   }
 
   .hero-deco--circle2 {
     bottom: var(--space-8);
     right: 12%;
-    animation-delay: -3s;
-  }
-
-  @keyframes hero-float {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-10px) rotate(5deg); }
-  }
-
-  .hero-deco--pencil {
-    transform: rotate(15deg);
-  }
-
-  @keyframes hero-float-pencil {
-    0%, 100% { transform: translateY(0) rotate(15deg); }
-    50% { transform: translateY(-10px) rotate(20deg); }
-  }
-
-  .hero-deco--pencil {
-    animation-name: hero-float-pencil;
   }
 
   @media (max-width: 480px) {

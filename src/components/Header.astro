@@ -259,9 +259,7 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
   }
 
   .site-header--scrolled {
-    background: rgba(108, 92, 231, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(108, 92, 231, 0.97);
   }
 
   .header-inner {
@@ -433,7 +431,7 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
     inset: 0;
     background: rgba(0, 0, 0, 0.4);
     z-index: calc(var(--z-sticky) + 1);
-    backdrop-filter: blur(2px);
+    /* backdrop-filter removed: causes GPU compositing artifacts on mobile Safari */
   }
 
   /* Mobile drawer */
