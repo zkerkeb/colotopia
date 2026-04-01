@@ -14,20 +14,32 @@ const { name, emoji, count, color, href, locale = 'fr', image } = Astro.props;
 const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring pages`;
 ---
 
-<a
-  href={href}
-  class="category-card"
-  style={`--category-color: ${color}`}
-  aria-label={`${name} — ${countLabel}`}
-  data-fade-in
->
-  {image
-    ? <img class="category-icon-img" src={image} alt="" aria-hidden="true" loading="lazy" />
-    : <span class="category-emoji" aria-hidden="true">{emoji}</span>
-  }
-  <span class="category-name">{name}</span>
-  <span class="category-count">{countLabel}</span>
-</a>
+{image ? (
+  <a
+    href={href}
+    class="category-card category-card--image"
+    aria-label={`${name} — ${countLabel}`}
+    data-fade-in
+  >
+    <img class="category-cover" src={image} alt={name} loading="lazy" />
+    <div class="category-overlay">
+      <span class="category-name">{name}</span>
+      <span class="category-count">{countLabel}</span>
+    </div>
+  </a>
+) : (
+  <a
+    href={href}
+    class="category-card"
+    style={`--category-color: ${color}`}
+    aria-label={`${name} — ${countLabel}`}
+    data-fade-in
+  >
+    <span class="category-emoji" aria-hidden="true">{emoji}</span>
+    <span class="category-name">{name}</span>
+    <span class="category-count">{countLabel}</span>
+  </a>
+)}
 
 <style>
   .category-card {
@@ -44,6 +56,44 @@ const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring 
     box-shadow: var(--shadow-card);
   }
 
+  .category-card--image {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    background: #f5f0eb;
+  }
+
+  .category-card--image:hover {
+    box-shadow: var(--shadow-card-hover);
+    text-decoration: none;
+  }
+
+  .category-card--image:hover .category-cover {
+    transform: scale(1.04);
+  }
+
+  .category-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .category-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--space-3) var(--space-4) var(--space-4);
+    background: linear-gradient(to top, rgba(255,255,255,0.92) 60%, transparent);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-1);
+  }
+
   .category-card:hover {
     box-shadow: var(--shadow-card-hover);
     text-decoration: none;
@@ -52,13 +102,6 @@ const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring 
   .category-emoji {
     font-size: 2.5rem;
     line-height: 1;
-  }
-
-  .category-icon-img {
-    width: 3rem;
-    height: 3rem;
-    object-fit: contain;
-    border-radius: var(--radius-sm);
   }
 
   .category-name {
