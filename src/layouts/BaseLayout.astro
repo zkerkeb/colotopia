@@ -100,12 +100,8 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
       <Fragment set:html={`<meta name="google-adsense-account" content="${adsenseId}"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}" crossorigin="anonymous"><\/script>`} />
     )}
     <style>
-      /* View Transitions API — cross-document fade (Chrome 126+, Safari 18+) */
-      @view-transition { navigation: auto; }
-      ::view-transition-old(root) { animation: vt-fade-out 0.2s ease; }
-      ::view-transition-new(root) { animation: vt-fade-in 0.2s ease; }
-      @keyframes vt-fade-out { to { opacity: 0; } }
-      @keyframes vt-fade-in { from { opacity: 0; } }
+      /* View Transitions API — cross-document fade (Chrome 126+, Safari 18+)
+         Disabled: caused blurry bitmap rendering on mobile Safari (CASAA-233) */
       @media (prefers-reduced-motion: reduce) {
         ::view-transition-old(root),
         ::view-transition-new(root) { animation: none; }
@@ -166,6 +162,11 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
         padding: 0;
       }
 
+      html {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+      }
+
       body {
         font-family: var(--font-body);
         font-size: var(--font-size-base);
@@ -173,6 +174,8 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
         line-height: var(--line-height-normal);
         color: var(--color-text);
         background: var(--color-bg);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
 
       h1, h2, h3 {
