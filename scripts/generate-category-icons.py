@@ -83,10 +83,11 @@ CATEGORY_PROMPTS = {
         "Thick clean black outlines, no color fills, no shading. Pure illustration only."
     ),
     "alphabet": (
-        "IMPORTANT: absolutely no text, no words, no letters, no numbers anywhere in this image. "
         "Children's coloring book thumbnail, square, white background. "
-        "Cute art supplies for kids — colorful pencils, a paint brush, an eraser, and a ruler — "
-        "arranged together warmly. Thick clean black outlines, no color fills, no shading. Pure illustration only."
+        "Three giant decorative bubble letters: A, B, C — each letter is a large hollow outlined shape "
+        "filled with cute little illustrations inside (tiny flowers inside A, tiny stars inside B, "
+        "tiny hearts inside C). Warm and playful, coloring-book style. "
+        "Thick clean black outlines, no color fills, no shading. The letters are the illustration."
     ),
     "dinosaures": (
         f"{_BASE} "
