@@ -134,10 +134,6 @@ const downloadLabel = t('coloring.download', locale);
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             {downloadLabel}
           </button>
-          <button class="action-sheet-btn" id="action-print">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-            {mobilePrintLabel}
-          </button>
           <button class="action-sheet-btn action-sheet-cancel" id="action-cancel">{mobileCancelLabel}</button>
         </div>
       </div>
@@ -148,7 +144,6 @@ const downloadLabel = t('coloring.download', locale);
         const overlay = document.getElementById('action-sheet-overlay');
         const shareBtn = document.getElementById('action-share');
         const downloadBtn = document.getElementById('action-download');
-        const actionPrintBtn = document.getElementById('action-print');
         const cancelBtn = document.getElementById('action-cancel');
 
         function isMobile() {
@@ -216,16 +211,6 @@ const downloadLabel = t('coloring.download', locale);
           });
         }
 
-        // Print from action sheet
-        if (actionPrintBtn) {
-          actionPrintBtn.addEventListener('click', () => {
-            closeSheet();
-            if (typeof window.gtag === 'function') {
-              window.gtag('event', 'print_page', { page_title: document.title });
-            }
-            window.print();
-          });
-        }
       </script>
 
       <!-- Mobile supply widget (hidden on desktop where sidebar shows it) -->
