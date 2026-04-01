@@ -44,11 +44,11 @@ _load_dotenv(Path(__file__).parent.parent / ".env")
 
 CATEGORY_PROMPTS = {
     "animaux": (
-        "Children's coloring book page. White background. "
-        "Black ink line drawing of cute cartoon animals: a cat, a dog, a rabbit, and a bird, "
-        "arranged around the edges of a square frame. "
-        "In the center of the image, large bold text reads 'Animaux' in a rounded playful font. "
-        "Style: simple black outlines, no color, no shading, coloring book illustration for kids."
+        "Children's coloring book thumbnail. Square format, white background. "
+        "Warm and cozy illustration of cute cartoon animals — a fluffy cat, a happy dog, "
+        "a chubby rabbit, and a little bird — snuggled together in a friendly group. "
+        "Style: thick clean black outlines, no color fills, no shading, no text, no labels, "
+        "no words anywhere in the image. Pure line art, coloring book for kids, inviting and playful."
     ),
     "animaux-marins": (
         "Square coloring page button image, white background, thick black outlines. "
@@ -107,10 +107,10 @@ CATEGORY_PROMPTS = {
 }
 
 DEFAULT_PROMPT_TEMPLATE = (
-    "Square coloring page button image for the category '{name}', white background, thick black outlines. "
-    "Top 70%: simple line art illustration representing the category, children's coloring book style. "
-    "Bottom 30%: bold playful text '{label}' centered in large friendly font, black letters on white. "
-    "No color fills, no shading, clean minimal illustration."
+    "Children's coloring book thumbnail. Square format, white background. "
+    "Warm and cozy illustration representing the theme '{name}'. "
+    "Style: thick clean black outlines, no color fills, no shading, no text, no labels, "
+    "no words anywhere in the image. Pure line art, coloring book for kids, inviting and playful."
 )
 
 # ---------------------------------------------------------------------------
