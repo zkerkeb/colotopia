@@ -43,9 +43,10 @@ _load_dotenv(Path(__file__).parent.parent / ".env")
 # ---------------------------------------------------------------------------
 
 _BASE = (
+    "IMPORTANT: absolutely no text, no words, no letters, no numbers, no captions, no labels anywhere. "
     "Children's coloring book thumbnail. Square format, white background. "
-    "Warm and cozy illustration, thick clean black outlines, no color fills, no shading, "
-    "no text, no words, no letters anywhere in the image. Pure line art, inviting and playful."
+    "Warm and cozy illustration, thick clean black outlines, no color fills, no shading. "
+    "Pure line art only, inviting and playful. Zero text of any kind."
 )
 
 CATEGORY_PROMPTS = {
@@ -58,9 +59,11 @@ CATEGORY_PROMPTS = {
         "no words anywhere in the image. Pure line art, coloring book for kids, inviting and playful."
     ),
     "animaux-marins": (
-        f"{_BASE} "
+        "IMPORTANT: absolutely no text, no words, no letters anywhere in this image. "
+        "Children's coloring book thumbnail, square, white background. "
         "Cute sea creatures — a smiling fish, a round octopus, a starfish, and a crab — "
-        "playfully arranged together in a cozy underwater scene."
+        "playfully arranged in a cozy underwater scene. "
+        "Thick clean black outlines, no color fills, no shading. Pure illustration only."
     ),
     "ferme": (
         f"{_BASE} "
@@ -73,14 +76,17 @@ CATEGORY_PROMPTS = {
         "arranged in a cozy scene together."
     ),
     "nature": (
-        f"{_BASE} "
+        "IMPORTANT: absolutely no text, no words, no letters anywhere in this image. "
+        "Children's coloring book thumbnail, square, white background. "
         "A cozy nature scene with a big leafy tree, cheerful flowers, a smiling sun, "
-        "and a little butterfly, all snug together."
+        "and a little butterfly, all snug together. "
+        "Thick clean black outlines, no color fills, no shading. Pure illustration only."
     ),
     "alphabet": (
-        f"{_BASE} "
-        "Cute illustrated letters A, B, C in playful rounded shapes decorated with tiny stars "
-        "and doodles — no readable words, purely decorative letterforms."
+        "IMPORTANT: absolutely no text, no words, no letters, no numbers anywhere in this image. "
+        "Children's coloring book thumbnail, square, white background. "
+        "Cute art supplies for kids — colorful pencils, a paint brush, an eraser, and a ruler — "
+        "arranged together warmly. Thick clean black outlines, no color fills, no shading. Pure illustration only."
     ),
     "dinosaures": (
         f"{_BASE} "
@@ -113,9 +119,11 @@ CATEGORY_PROMPTS = {
         "arranged in a playful cozy composition."
     ),
     "saisons": (
-        f"{_BASE} "
-        "Four cozy seasonal icons — a snowflake, a flower bud, a sun, and a falling leaf — "
-        "arranged in four quadrants of a square, warm and cute."
+        "IMPORTANT: absolutely no text, no words, no letters anywhere in this image. "
+        "Children's coloring book thumbnail, square, white background. "
+        "Four cozy seasonal icons — a snowflake, a flower bud, a bright sun, and a falling leaf — "
+        "arranged in four quadrants of the square, warm and cute. "
+        "Thick clean black outlines, no color fills, no shading. Pure illustration only."
     ),
     "fetes": (
         f"{_BASE} "
@@ -138,9 +146,11 @@ CATEGORY_PROMPTS = {
         "a clown nose, and a party hat — arranged in a playful grid."
     ),
     "musique": (
-        f"{_BASE} "
-        "Cute musical instruments — a guitar, a piano, a drum, and musical notes — "
-        "cozy and cheerful, slightly overlapping."
+        "IMPORTANT: absolutely no text, no words, no letters anywhere in this image. "
+        "Children's coloring book thumbnail, square, white background. "
+        "Cute musical instruments — a guitar, a piano keyboard, a drum, and a trumpet — "
+        "cozy and cheerful, slightly overlapping. "
+        "Thick clean black outlines, no color fills, no shading. Pure illustration only."
     ),
     "nourriture": (
         f"{_BASE} "
@@ -148,19 +158,25 @@ CATEGORY_PROMPTS = {
         "smiling and arranged together warmly."
     ),
     "pirates": (
-        f"{_BASE} "
+        "IMPORTANT: absolutely no text, no words, no letters anywhere in this image. "
+        "Children's coloring book thumbnail, square, white background. "
         "A friendly cartoon pirate with a hat, a little ship, a treasure chest, "
-        "and a parrot — all cozy and fun."
+        "and a parrot — all cozy and fun. "
+        "Thick clean black outlines, no color fills, no shading. Pure illustration only."
     ),
     "robots": (
-        f"{_BASE} "
+        "IMPORTANT: absolutely no text, no words, no letters anywhere in this image. "
+        "Children's coloring book thumbnail, square, white background. "
         "Three adorable boxy robots with big round eyes and antennae, "
-        "waving and standing together in a cozy row."
+        "waving and standing together in a cozy row. "
+        "Thick clean black outlines, no color fills, no shading. Pure illustration only."
     ),
     "kawaii": (
-        f"{_BASE} "
-        "Cute kawaii-style icons — a chubby star, a little cloud with a face, "
-        "a happy strawberry, and a tiny bow — grouped together sweetly."
+        "IMPORTANT: absolutely no text, no words, no letters anywhere in this image. "
+        "Children's coloring book thumbnail, square, white background. "
+        "Cute kawaii-style icons — a chubby star with a face, a little cloud with eyes, "
+        "a happy strawberry, and a tiny bow — grouped together sweetly. "
+        "Thick clean black outlines, no color fills, no shading. Pure illustration only."
     ),
     "licorne": (
         f"{_BASE} "
@@ -168,9 +184,11 @@ CATEGORY_PROMPTS = {
         "sitting happily in the center."
     ),
     "fleurs": (
-        f"{_BASE} "
-        "A bouquet of cheerful flowers — roses, tulips, and daisies — "
-        "with curly stems and big petals, warm and inviting."
+        "IMPORTANT: absolutely no text, no words, no letters anywhere in this image. "
+        "Children's coloring book thumbnail, square, white background. "
+        "A lush bouquet of cheerful flowers — roses, tulips, and daisies — "
+        "with curly stems and big petals, warm and inviting. "
+        "Thick clean black outlines, no color fills, no shading. Pure floral illustration."
     ),
     "chats": (
         f"{_BASE} "
@@ -193,14 +211,18 @@ CATEGORY_PROMPTS = {
         "a little bunny, and spring flowers — cozy and sweet."
     ),
     "halloween": (
-        f"{_BASE} "
+        "IMPORTANT: absolutely no text, no words, no letters anywhere in this image. "
+        "Children's coloring book thumbnail, square, white background. "
         "Cute Halloween icons — a friendly ghost, a little pumpkin, a small witch hat, "
-        "and a crescent moon — spooky but adorable."
+        "and a crescent moon — spooky but adorable. "
+        "Thick clean black outlines, no color fills, no shading. Pure illustration only."
     ),
     "noel": (
-        f"{_BASE} "
-        "Cozy Christmas scene — a cute Christmas tree, a little Santa hat, a candy cane, "
-        "and a snowflake — warm and festive."
+        "IMPORTANT: absolutely no text, no words, no letters anywhere in this image. "
+        "Children's coloring book thumbnail, square, white background. "
+        "Cozy Christmas scene — a cute decorated Christmas tree, a little Santa hat, a candy cane, "
+        "and a snowflake — warm and festive. "
+        "Thick clean black outlines, no color fills, no shading. Pure illustration only."
     ),
     "champignons": (
         f"{_BASE} "
@@ -224,19 +246,24 @@ CATEGORY_PROMPTS = {
         "radiating shapes and petal forms, elegant and intricate line art."
     ),
     "zodiaque": (
-        f"{_BASE} "
-        "A decorative circle with four zodiac symbols — a ram, a crab, a lion, and scales — "
-        "arranged elegantly around the center."
+        "IMPORTANT: absolutely no text, no words, no letters, no symbols anywhere in this image. "
+        "Adult coloring book thumbnail, square, white background. "
+        "A decorative circular frame with four illustrated zodiac creatures — a ram, a crab, a lion, and a scorpion — "
+        "arranged elegantly around an ornate center rosette. "
+        "Clean black outlines, no color fills, no shading. Pure illustration only."
     ),
     "affirmations": (
-        f"{_BASE} "
-        "Decorative swirling banners and scroll shapes with ornamental flourishes and tiny stars — "
-        "elegant and uplifting, no text."
+        "IMPORTANT: absolutely no text, no words, no letters, no numbers anywhere in this image. "
+        "Adult coloring book thumbnail, square, white background. "
+        "Decorative composition of hearts, stars, sun rays, and blooming flowers arranged symmetrically — "
+        "uplifting and warm, purely visual. Thick clean black outlines, no color fills, no shading."
     ),
     "anti-stress": (
-        f"{_BASE} "
-        "A calming zentangle-inspired illustration — flowing waves, gentle spirals, "
-        "and soft leaf patterns filling the square, meditative and soothing."
+        "IMPORTANT: absolutely no text, no words, no letters, no numbers anywhere in this image. "
+        "Adult coloring book thumbnail, square, white background. "
+        "Calming zentangle-inspired illustration — flowing waves, gentle spirals, "
+        "and soft leaf patterns filling the square entirely. Meditative and soothing. "
+        "Thin elegant black outlines, no color fills, no shading. Pure abstract pattern."
     ),
     "mandalas": (
         f"{_BASE} "
@@ -254,9 +281,11 @@ CATEGORY_PROMPTS = {
         "and geometric forms layered together, elegant adult coloring style."
     ),
     "cartes": (
-        f"{_BASE} "
-        "A decorative map-inspired illustration — a compass rose, wavy sea lines, "
-        "a tiny mountain range, and a small treasure spot — charming and detailed."
+        "IMPORTANT: absolutely no text, no words, no letters, no numbers anywhere in this image. "
+        "Adult coloring book thumbnail, square, white background. "
+        "A decorative map-inspired illustration — a large ornate compass rose at center, "
+        "wavy sea lines, mountain peaks, and dotted paths — charming and detailed. "
+        "Clean black outlines, no color fills, no shading, no labels of any kind."
     ),
     "paysages": (
         f"{_BASE} "
