@@ -5143,10 +5143,3 @@ categories:
         en_tags: ["mandala", "lotus", "meditation", "religion"]
         prompt: "A simple mandala pattern made of lotus flower petals arranged in a circle, with small decorative elements around it, peaceful and calming, simple line art for children."
 
-      - fr_slug: religions-livre-sacre
-        en_slug: religions-sacred-book
-        fr_title: "Livre sacré"
-        en_title: "Sacred Book"
-        fr_tags: ["livre", "sacré", "religion", "sagesse"]
-        en_tags: ["book", "sacred", "religion", "wisdom"]
-        prompt: "A large open book on a decorated stand, with light rays emanating from the pages, surrounded by flowers, stars, and peaceful symbols, cute cartoon style for children."

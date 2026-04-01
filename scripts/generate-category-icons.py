@@ -42,7 +42,14 @@ _load_dotenv(Path(__file__).parent.parent / ".env")
 # Prompts per category
 # ---------------------------------------------------------------------------
 
+_BASE = (
+    "Children's coloring book thumbnail. Square format, white background. "
+    "Warm and cozy illustration, thick clean black outlines, no color fills, no shading, "
+    "no text, no words, no letters anywhere in the image. Pure line art, inviting and playful."
+)
+
 CATEGORY_PROMPTS = {
+    # --- kids ---
     "animaux": (
         "Children's coloring book thumbnail. Square format, white background. "
         "Warm and cozy illustration of cute cartoon animals — a fluffy cat, a happy dog, "
@@ -51,58 +58,210 @@ CATEGORY_PROMPTS = {
         "no words anywhere in the image. Pure line art, coloring book for kids, inviting and playful."
     ),
     "animaux-marins": (
-        "Square coloring page button image, white background, thick black outlines. "
-        "Top 70%: sea animals (fish, octopus, starfish) in simple line art, children's coloring book style. "
-        "Bottom 30%: bold playful text 'Animaux Marins' centered in large friendly font, black letters on white. "
-        "No color fills, no shading, clean minimal illustration."
+        f"{_BASE} "
+        "Cute sea creatures — a smiling fish, a round octopus, a starfish, and a crab — "
+        "playfully arranged together in a cozy underwater scene."
     ),
     "ferme": (
-        "Square coloring page button image, white background, thick black outlines. "
-        "Top 70%: farm animals (cow, pig, hen) in simple line art, children's coloring book style. "
-        "Bottom 30%: bold playful text 'Ferme' centered in large friendly font, black letters on white. "
-        "No color fills, no shading, clean minimal illustration."
+        f"{_BASE} "
+        "Adorable farm animals — a cow, a pig, a chicken, and a sheep — "
+        "gathered happily on a little farm, barn in background."
     ),
     "vehicules": (
-        "Square coloring page button image, white background, thick black outlines. "
-        "Top 70%: vehicles (car, train, airplane) in simple line art, children's coloring book style. "
-        "Bottom 30%: bold playful text 'Véhicules' centered in large friendly font, black letters on white. "
-        "No color fills, no shading, clean minimal illustration."
+        f"{_BASE} "
+        "Cute cartoon vehicles — a rounded car, a smiling train, a chubby airplane, and a little boat — "
+        "arranged in a cozy scene together."
     ),
     "nature": (
-        "Square coloring page button image, white background, thick black outlines. "
-        "Top 70%: nature scene (trees, flowers, sun) in simple line art, children's coloring book style. "
-        "Bottom 30%: bold playful text 'Nature' centered in large friendly font, black letters on white. "
-        "No color fills, no shading, clean minimal illustration."
+        f"{_BASE} "
+        "A cozy nature scene with a big leafy tree, cheerful flowers, a smiling sun, "
+        "and a little butterfly, all snug together."
+    ),
+    "alphabet": (
+        f"{_BASE} "
+        "Cute illustrated letters A, B, C in playful rounded shapes decorated with tiny stars "
+        "and doodles — no readable words, purely decorative letterforms."
     ),
     "dinosaures": (
-        "Square coloring page button image, white background, thick black outlines. "
-        "Top 70%: cute dinosaurs in simple line art, children's coloring book style. "
-        "Bottom 30%: bold playful text 'Dinosaures' centered in large friendly font, black letters on white. "
-        "No color fills, no shading, clean minimal illustration."
+        f"{_BASE} "
+        "Three adorable baby dinosaurs — a T-Rex, a Triceratops, and a long-neck Brachiosaurus — "
+        "sitting together cozily."
+    ),
+    "super-heros": (
+        f"{_BASE} "
+        "A cute chubby superhero kid in a cape and mask, flying with a big smile, "
+        "stars and sparkles around them."
+    ),
+    "espace": (
+        f"{_BASE} "
+        "A cozy space scene — a round rocket ship, a smiling planet with rings, "
+        "a crescent moon, and little stars, all snuggled together."
+    ),
+    "princesses-chevaliers": (
+        f"{_BASE} "
+        "A cute princess in a puffy dress and a friendly knight in armor standing together "
+        "in front of a little castle, warm and charming."
+    ),
+    "metiers": (
+        f"{_BASE} "
+        "Cute cartoon children dressed as different jobs — a doctor, a firefighter, a chef, "
+        "and a builder — standing together cheerfully."
+    ),
+    "sport": (
+        f"{_BASE} "
+        "Fun sports equipment — a soccer ball, a tennis racket, a bicycle, and a jumping rope — "
+        "arranged in a playful cozy composition."
+    ),
+    "saisons": (
+        f"{_BASE} "
+        "Four cozy seasonal icons — a snowflake, a flower bud, a sun, and a falling leaf — "
+        "arranged in four quadrants of a square, warm and cute."
+    ),
+    "fetes": (
+        f"{_BASE} "
+        "A festive celebration scene — balloons, a birthday cake with candles, confetti, "
+        "and a gift box — cozy and joyful."
+    ),
+    "personnages": (
+        f"{_BASE} "
+        "A group of cute cartoon children of different styles — "
+        "two boys and two girls — smiling and waving together."
+    ),
+    "contes": (
+        f"{_BASE} "
+        "A magical fairy-tale scene — a little fairy, a friendly dragon, a magic wand, "
+        "and a tiny castle — warm and dreamy."
+    ),
+    "drole": (
+        f"{_BASE} "
+        "Funny cartoon faces and silly expressions — a goofy face, a laughing emoji, "
+        "a clown nose, and a party hat — arranged in a playful grid."
+    ),
+    "musique": (
+        f"{_BASE} "
+        "Cute musical instruments — a guitar, a piano, a drum, and musical notes — "
+        "cozy and cheerful, slightly overlapping."
+    ),
+    "nourriture": (
+        f"{_BASE} "
+        "Cute cartoon foods — a slice of pizza, an ice cream cone, a cupcake, and an apple — "
+        "smiling and arranged together warmly."
+    ),
+    "pirates": (
+        f"{_BASE} "
+        "A friendly cartoon pirate with a hat, a little ship, a treasure chest, "
+        "and a parrot — all cozy and fun."
+    ),
+    "robots": (
+        f"{_BASE} "
+        "Three adorable boxy robots with big round eyes and antennae, "
+        "waving and standing together in a cozy row."
+    ),
+    "kawaii": (
+        f"{_BASE} "
+        "Cute kawaii-style icons — a chubby star, a little cloud with a face, "
+        "a happy strawberry, and a tiny bow — grouped together sweetly."
+    ),
+    "licorne": (
+        f"{_BASE} "
+        "A cute chubby unicorn with a swirly horn, flowing mane, and stars around it, "
+        "sitting happily in the center."
     ),
     "fleurs": (
-        "Square coloring page button image, white background, thick black outlines. "
-        "Top 70%: flowers (roses, tulips, daisies) in simple line art, coloring book style. "
-        "Bottom 30%: bold playful text 'Fleurs' centered in large friendly font, black letters on white. "
-        "No color fills, no shading, clean minimal illustration."
+        f"{_BASE} "
+        "A bouquet of cheerful flowers — roses, tulips, and daisies — "
+        "with curly stems and big petals, warm and inviting."
     ),
     "chats": (
-        "Square coloring page button image, white background, thick black outlines. "
-        "Top 70%: cute cats in simple line art, children's coloring book style. "
-        "Bottom 30%: bold playful text 'Chats' centered in large friendly font, black letters on white. "
-        "No color fills, no shading, clean minimal illustration."
+        f"{_BASE} "
+        "Three adorable cats — one curled up, one stretching, one sitting with big eyes — "
+        "snuggled together warmly."
     ),
     "papillons": (
-        "Square coloring page button image, white background, thick black outlines. "
-        "Top 70%: butterflies in simple line art, coloring book style. "
-        "Bottom 30%: bold playful text 'Papillons' centered in large friendly font, black letters on white. "
-        "No color fills, no shading, clean minimal illustration."
+        f"{_BASE} "
+        "Three beautiful butterflies with patterned wings and curly antennae, "
+        "fluttering together among tiny flowers."
+    ),
+    "bold-et-facile": (
+        f"{_BASE} "
+        "Simple bold shapes — a big sun, a round star, a heart, and a flower — "
+        "drawn with very thick lines, easy and clear for young children."
+    ),
+    "paques": (
+        f"{_BASE} "
+        "Easter scene — a cute chick hatching from an egg, decorated Easter eggs, "
+        "a little bunny, and spring flowers — cozy and sweet."
+    ),
+    "halloween": (
+        f"{_BASE} "
+        "Cute Halloween icons — a friendly ghost, a little pumpkin, a small witch hat, "
+        "and a crescent moon — spooky but adorable."
+    ),
+    "noel": (
+        f"{_BASE} "
+        "Cozy Christmas scene — a cute Christmas tree, a little Santa hat, a candy cane, "
+        "and a snowflake — warm and festive."
+    ),
+    "champignons": (
+        f"{_BASE} "
+        "Cute cartoon mushrooms — tall ones, round ones, spotted ones — "
+        "grouped together with tiny flowers and leaves, warm and whimsical."
+    ),
+    "religions": (
+        f"{_BASE} "
+        "Peaceful symbolic icons representing different faiths — a cross, a crescent moon and star, "
+        "a Star of David, and a lotus — arranged harmoniously."
+    ),
+    # --- adults ---
+    "cottagecore": (
+        f"{_BASE} "
+        "A cozy cottagecore scene — a mushroom cottage, wildflowers, a bee, "
+        "and a little bird on a branch — romantic and whimsical line art."
+    ),
+    "vitrail": (
+        f"{_BASE} "
+        "A stained-glass style geometric rose window pattern — "
+        "radiating shapes and petal forms, elegant and intricate line art."
+    ),
+    "zodiaque": (
+        f"{_BASE} "
+        "A decorative circle with four zodiac symbols — a ram, a crab, a lion, and scales — "
+        "arranged elegantly around the center."
+    ),
+    "affirmations": (
+        f"{_BASE} "
+        "Decorative swirling banners and scroll shapes with ornamental flourishes and tiny stars — "
+        "elegant and uplifting, no text."
+    ),
+    "anti-stress": (
+        f"{_BASE} "
+        "A calming zentangle-inspired illustration — flowing waves, gentle spirals, "
+        "and soft leaf patterns filling the square, meditative and soothing."
     ),
     "mandalas": (
-        "Square coloring page button image, white background, thin decorative outlines. "
-        "Top 70%: mandala pattern in simple line art, adult coloring book style. "
-        "Bottom 30%: bold elegant text 'Mandalas' centered in large friendly font, black letters on white. "
-        "No color fills, no shading, clean minimal illustration."
+        f"{_BASE} "
+        "A beautiful circular mandala with symmetrical petal and geometric patterns "
+        "radiating from the center, elegant adult coloring book style."
+    ),
+    "mosaiques": (
+        f"{_BASE} "
+        "A geometric mosaic tile pattern — interlocking diamonds and hexagons "
+        "in a symmetrical arrangement, elegant adult coloring book style."
+    ),
+    "abstrait": (
+        f"{_BASE} "
+        "An abstract composition of flowing organic shapes, bold curves, "
+        "and geometric forms layered together, elegant adult coloring style."
+    ),
+    "cartes": (
+        f"{_BASE} "
+        "A decorative map-inspired illustration — a compass rose, wavy sea lines, "
+        "a tiny mountain range, and a small treasure spot — charming and detailed."
+    ),
+    "paysages": (
+        f"{_BASE} "
+        "A serene landscape scene — rolling hills, a farmhouse, a winding river, "
+        "and trees — calm and detailed adult coloring book style."
     ),
 }
 
