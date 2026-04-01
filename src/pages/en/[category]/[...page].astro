@@ -112,10 +112,11 @@ const structuredData = pillar && pillar.faq.length > 0
   <div class={`category-hero ${hasBanner ? 'has-banner' : ''}`}>
     {hasBanner && <img class="category-hero-bg" src={bannerSrc} alt="" aria-hidden="true" loading="eager" />}
     <div class="category-hero-overlay">
-      <span class="category-hero-emoji" aria-hidden="true">{catIcon}</span>
       <h1 class="category-hero-title">{label} Coloring Pages</h1>
-      <p class="category-hero-count">{page.total} coloring pages</p>
     </div>
+  </div>
+  <div class="category-count-bar">
+    <span>{page.total} coloring pages</span>
   </div>
   <div class="category-content">
     <Breadcrumb locale={locale} currentPage={`${label} Coloring Pages`} />
@@ -219,26 +220,26 @@ const structuredData = pillar && pillar.faq.length > 0
     background: rgba(0, 0, 0, 0.2);
   }
 
-  .category-hero-emoji {
-    font-size: 3rem;
-    line-height: 1;
-    margin-bottom: var(--space-2);
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-  }
-
   .category-hero-title {
     font-family: var(--font-display);
     font-size: clamp(2rem, 4vw, 3rem);
     color: #ffffff;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    margin: 0 0 var(--space-2);
+    margin: 0;
     line-height: 1.1;
   }
 
-  .category-hero-count {
+  .category-count-bar {
+    display: flex;
+    justify-content: flex-end;
+    padding: var(--space-3) 0 0;
     font-size: var(--font-size-sm);
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--color-text-secondary, #6b7280);
     font-weight: var(--font-weight-semibold);
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
   }
 
   .category-content {
