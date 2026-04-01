@@ -44,10 +44,11 @@ _load_dotenv(Path(__file__).parent.parent / ".env")
 
 CATEGORY_PROMPTS = {
     "animaux": (
-        "Square coloring page button image, white background, thick black outlines. "
-        "Top 70%: cute animals (cat, dog, rabbit, bird) in simple line art, children's coloring book style. "
-        "Bottom 30%: bold playful text 'Animaux' centered in large friendly font, black letters on white. "
-        "No color fills, no shading, clean minimal illustration."
+        "Children's coloring book page. White background. "
+        "Black ink line drawing of cute cartoon animals: a cat, a dog, a rabbit, and a bird, "
+        "arranged around the edges of a square frame. "
+        "In the center of the image, large bold text reads 'Animaux' in a rounded playful font. "
+        "Style: simple black outlines, no color, no shading, coloring book illustration for kids."
     ),
     "animaux-marins": (
         "Square coloring page button image, white background, thick black outlines. "

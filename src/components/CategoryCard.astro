@@ -16,17 +16,19 @@ const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring 
 
 <a
   href={href}
-  class="category-card"
+  class={`category-card${image ? ' category-card--image' : ''}`}
   style={`--category-color: ${color}`}
   aria-label={`${name} — ${countLabel}`}
   data-fade-in
 >
   {image
-    ? <div class="category-image-wrap"><img class="category-cover" src={image} alt="" aria-hidden="true" loading="lazy" /></div>
-    : <span class="category-emoji" aria-hidden="true">{emoji}</span>
+    ? <img class="category-cover" src={image} alt={name} loading="lazy" />
+    : <>
+        <span class="category-emoji" aria-hidden="true">{emoji}</span>
+        <span class="category-name">{name}</span>
+        <span class="category-count">{countLabel}</span>
+      </>
   }
-  <span class="category-name">{name}</span>
-  <span class="category-count">{countLabel}</span>
 </a>
 
 <style>
@@ -42,6 +44,7 @@ const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring 
     gap: var(--space-3);
     transition: box-shadow var(--transition-normal);
     box-shadow: var(--shadow-card);
+    overflow: hidden;
   }
 
   .category-card:hover {
@@ -49,11 +52,8 @@ const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring 
     text-decoration: none;
   }
 
-  .category-image-wrap {
-    width: 100%;
-    background: #fff;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
+  .category-card--image {
+    padding: 0;
     aspect-ratio: 1 / 1;
   }
 
@@ -62,10 +62,11 @@ const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring 
     height: 100%;
     object-fit: cover;
     display: block;
+    border-radius: var(--radius-xl);
     transition: transform 0.3s ease;
   }
 
-  .category-card:hover .category-cover {
+  .category-card--image:hover .category-cover {
     transform: scale(1.04);
   }
 
