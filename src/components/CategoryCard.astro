@@ -14,34 +14,26 @@ const { name, emoji, count, color, href, locale = 'fr', image } = Astro.props;
 const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring pages`;
 ---
 
-{image ? (
-  <a
-    href={href}
-    class="category-card category-card--image"
-    aria-label={`${name} — ${countLabel}`}
-    data-fade-in
-  >
-    <img class="category-cover" src={image} alt={name} loading="lazy" />
-  </a>
-) : (
-  <a
-    href={href}
-    class="category-card"
-    style={`--category-color: ${color}`}
-    aria-label={`${name} — ${countLabel}`}
-    data-fade-in
-  >
-    <span class="category-emoji" aria-hidden="true">{emoji}</span>
-    <span class="category-name">{name}</span>
-    <span class="category-count">{countLabel}</span>
-  </a>
-)}
+<a
+  href={href}
+  class="category-card"
+  style={`--category-color: ${color}`}
+  aria-label={`${name} — ${countLabel}`}
+  data-fade-in
+>
+  {image
+    ? <div class="category-image-wrap"><img class="category-cover" src={image} alt="" aria-hidden="true" loading="lazy" /></div>
+    : <span class="category-emoji" aria-hidden="true">{emoji}</span>
+  }
+  <span class="category-name">{name}</span>
+  <span class="category-count">{countLabel}</span>
+</a>
 
 <style>
   .category-card {
     background: var(--category-color, var(--color-accent-mint));
     border-radius: var(--radius-xl);
-    padding: var(--space-6);
+    padding: var(--space-4) var(--space-4) var(--space-5);
     text-align: center;
     text-decoration: none;
     display: flex;
@@ -52,21 +44,17 @@ const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring 
     box-shadow: var(--shadow-card);
   }
 
-  .category-card--image {
-    position: relative;
-    padding: 0;
-    overflow: hidden;
-    aspect-ratio: 1 / 1;
-    background: #f5f0eb;
-  }
-
-  .category-card--image:hover {
+  .category-card:hover {
     box-shadow: var(--shadow-card-hover);
     text-decoration: none;
   }
 
-  .category-card--image:hover .category-cover {
-    transform: scale(1.04);
+  .category-image-wrap {
+    width: 100%;
+    background: #fff;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
   }
 
   .category-cover {
@@ -77,9 +65,8 @@ const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring 
     transition: transform 0.3s ease;
   }
 
-.category-card:hover {
-    box-shadow: var(--shadow-card-hover);
-    text-decoration: none;
+  .category-card:hover .category-cover {
+    transform: scale(1.04);
   }
 
   .category-emoji {
