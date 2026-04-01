@@ -22,7 +22,10 @@ const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring 
   data-fade-in
 >
   {image
-    ? <img class="category-cover" src={image} alt={name} loading="lazy" />
+    ? <>
+        <img class="category-cover" src={image} alt={name} loading="lazy" />
+        <span class="category-name category-name--overlay">{name}</span>
+      </>
     : <>
         <span class="category-emoji" aria-hidden="true">{emoji}</span>
         <span class="category-name">{name}</span>
@@ -55,6 +58,7 @@ const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring 
   .category-card--image {
     padding: 0;
     aspect-ratio: 1 / 1;
+    position: relative;
   }
 
   .category-cover {
@@ -68,6 +72,21 @@ const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring 
 
   .category-card--image:hover .category-cover {
     transform: scale(1.04);
+  }
+
+  .category-name--overlay {
+    position: absolute;
+    bottom: 12%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-extrabold);
+    font-size: clamp(0.85rem, 3.5vw, 1.15rem);
+    color: #fff;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.55), 0 0 12px rgba(0,0,0,0.35);
+    letter-spacing: 0.01em;
+    pointer-events: none;
   }
 
   .category-emoji {
