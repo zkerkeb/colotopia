@@ -146,11 +146,11 @@ CATEGORY_PROMPTS = {
         "a clown nose, and a party hat — arranged in a playful grid."
     ),
     "musique": (
-        "IMPORTANT: absolutely no text, no words, no letters anywhere in this image. "
         "Children's coloring book thumbnail, square, white background. "
-        "Cute musical instruments — a guitar, a piano keyboard, a drum, and a trumpet — "
-        "cozy and cheerful, slightly overlapping. "
-        "Thick clean black outlines, no color fills, no shading. Pure illustration only."
+        "Four cute cartoon musical instruments: an acoustic guitar, a drum, a violin, and a xylophone, "
+        "arranged together. Thick clean black outlines, no color fills, no shading. "
+        "Do not include any musical notes, symbols, text, letters, or decorative floating elements. "
+        "Only the physical instrument shapes, nothing else."
     ),
     "nourriture": (
         f"{_BASE} "
@@ -306,10 +306,19 @@ DEFAULT_PROMPT_TEMPLATE = (
 # ---------------------------------------------------------------------------
 
 GEMINI_IMAGEN_MODEL = "imagen-4.0-generate-001"
+OPENAI_IMAGE_MODEL = "dall-e-3"
 RATE_LIMIT_SECONDS = 7
 
 
-def generate_icon(category: str, output_dir: Path) -> Path:
+def _get_prompt(category: str) -> str:
+    label = category.replace("-", " ").title()
+    return CATEGORY_PROMPTS.get(
+        category,
+        DEFAULT_PROMPT_TEMPLATE.format(name=category.replace("-", " "), label=label)
+    )
+
+
+def generate_icon_gemini(category: str, output_dir: Path) -> Path:
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY not set")
@@ -321,14 +330,9 @@ def generate_icon(category: str, output_dir: Path) -> Path:
         raise ImportError("google-genai package not installed. Run: pip install google-genai")
 
     client = genai.Client(api_key=api_key)
+    prompt = _get_prompt(category)
 
-    label = category.replace("-", " ").title()
-    prompt = CATEGORY_PROMPTS.get(
-        category,
-        DEFAULT_PROMPT_TEMPLATE.format(name=category.replace("-", " "), label=label)
-    )
-
-    print(f"Generating icon for '{category}'...")
+    print(f"Generating icon for '{category}' (Gemini Imagen)...")
     print(f"  Prompt: {prompt[:80]}...")
 
     response = client.models.generate_images(
@@ -346,7 +350,6 @@ def generate_icon(category: str, output_dir: Path) -> Path:
         raise RuntimeError(f"Imagen returned no images for '{category}' (possibly filtered)")
 
     image_bytes = response.generated_images[0].image.image_bytes
-
     output_dir.mkdir(parents=True, exist_ok=True)
     out_path = output_dir / f"{category}.png"
     out_path.write_bytes(image_bytes)
@@ -354,11 +357,53 @@ def generate_icon(category: str, output_dir: Path) -> Path:
     return out_path
 
 
+def generate_icon_openai(category: str, output_dir: Path) -> Path:
+    import base64
+    api_key = os.environ.get("OPENAI_API_KEY")
+    if not api_key:
+        raise RuntimeError("OPENAI_API_KEY not set")
+
+    try:
+        from openai import OpenAI
+    except ImportError:
+        raise ImportError("openai package not installed. Run: pip install openai")
+
+    client = OpenAI(api_key=api_key)
+    prompt = _get_prompt(category)
+
+    print(f"Generating icon for '{category}' (OpenAI DALL-E 3)...")
+    print(f"  Prompt: {prompt[:80]}...")
+
+    response = client.images.generate(
+        model=OPENAI_IMAGE_MODEL,
+        prompt=prompt,
+        size="1024x1024",
+        quality="standard",
+        response_format="b64_json",
+        n=1,
+    )
+
+    image_bytes = base64.b64decode(response.data[0].b64_json)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    out_path = output_dir / f"{category}.png"
+    out_path.write_bytes(image_bytes)
+    print(f"  Saved: {out_path} ({len(image_bytes) // 1024}KB)")
+    return out_path
+
+
+def generate_icon(category: str, output_dir: Path, provider: str = "gemini") -> Path:
+    if provider == "openai":
+        return generate_icon_openai(category, output_dir)
+    return generate_icon_gemini(category, output_dir)
+
+
 def main():
     import argparse
     parser = argparse.ArgumentParser(description="Generate category icon images")
     parser.add_argument("category", nargs="?", help="Category key (e.g. animaux)")
     parser.add_argument("--all", action="store_true", help="Generate all categories with defined prompts")
+    parser.add_argument("--provider", choices=["gemini", "openai"], default="gemini",
+                        help="Image generation provider (default: gemini)")
     args = parser.parse_args()
 
     output_dir = Path(__file__).parent.parent / "public" / "images" / "category-icons"
@@ -375,7 +420,7 @@ def main():
         if i > 0:
             time.sleep(RATE_LIMIT_SECONDS)
         try:
-            generate_icon(cat, output_dir)
+            generate_icon(cat, output_dir, provider=args.provider)
         except Exception as e:
             print(f"  ERROR for '{cat}': {e}", file=sys.stderr)
 
