@@ -24,7 +24,9 @@ const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring 
   {image
     ? <>
         <img class="category-cover" src={image} alt={name} loading="lazy" />
-        <span class="category-name category-name--overlay">{name}</span>
+        <span class="category-image-label">
+          <span class="category-image-label__text">{name}</span>
+        </span>
       </>
     : <>
         <span class="category-emoji" aria-hidden="true">{emoji}</span>
@@ -74,20 +76,29 @@ const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring 
     transform: scale(1.04);
   }
 
-  .category-name--overlay {
+  .category-image-label {
     position: absolute;
-    bottom: 6%;
+    bottom: 0;
     left: 0;
     right: 0;
-    text-align: center;
+    padding: 22% 8% 8%;
+    background: linear-gradient(to top, rgba(0,0,0,0.62) 0%, transparent 100%);
+    border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  .category-image-label__text {
     font-family: 'Fredoka One', cursive;
     font-weight: 400;
-    font-size: clamp(1rem, 4vw, 1.3rem);
+    font-size: clamp(1rem, 4.5vw, 1.35rem);
     color: #fff;
-    -webkit-text-stroke: 2.5px #000;
-    paint-order: stroke fill;
-    letter-spacing: 0.03em;
-    pointer-events: none;
+    text-align: center;
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
   }
 
   .category-emoji {
