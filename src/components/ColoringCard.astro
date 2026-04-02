@@ -77,8 +77,15 @@ const thumbWebp = image.replace('/images/coloriages/', '/images/coloriages/thumb
     text-decoration: none;
   }
 
+  .coloring-card:active {
+    transform: scale(0.97);
+    box-shadow: var(--shadow-sm);
+    transition-duration: 80ms;
+  }
+
   @media (prefers-reduced-motion: reduce) {
-    .coloring-card:hover {
+    .coloring-card:hover,
+    .coloring-card:active {
       transform: none;
     }
   }

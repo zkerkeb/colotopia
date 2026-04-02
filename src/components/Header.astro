@@ -109,6 +109,23 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
     </div>
 
     <div class="drawer-inner">
+      <!-- Mobile search -->
+      <form class="drawer-search" action={`/${locale}`} method="get" role="search">
+        <div class="drawer-search-wrapper">
+          <svg class="drawer-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+          <input
+            type="search"
+            name="q"
+            class="drawer-search-input"
+            placeholder={locale === 'fr' ? 'Chercher un coloriage…' : 'Search for a coloring…'}
+            aria-label={locale === 'fr' ? 'Rechercher un coloriage' : 'Search for a coloring page'}
+            autocomplete="off"
+          />
+        </div>
+      </form>
+
       <nav class="drawer-nav">
         <a href={getLocalePath(locale)} class="drawer-link">{t('nav.home', locale)}</a>
         <a href={getCategoriesPath(locale)} class="drawer-link">{t('nav.categories', locale)}</a>
@@ -526,6 +543,41 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
     .drawer-inner {
       padding: var(--space-5);
       flex: 1;
+    }
+
+    /* Drawer search */
+    .drawer-search {
+      margin-bottom: var(--space-4);
+    }
+
+    .drawer-search-wrapper {
+      position: relative;
+    }
+
+    .drawer-search-icon {
+      position: absolute;
+      left: var(--space-3);
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--color-text-muted);
+      pointer-events: none;
+    }
+
+    .drawer-search-input {
+      width: 100%;
+      padding: 0.75rem var(--space-4) 0.75rem 2.5rem;
+      font-family: var(--font-body);
+      font-size: var(--font-size-base);
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      background: var(--color-bg-card);
+      color: var(--color-text);
+      outline: none;
+      transition: border-color var(--transition-fast);
+    }
+
+    .drawer-search-input:focus {
+      border-color: var(--color-primary);
     }
 
     .drawer-nav {
