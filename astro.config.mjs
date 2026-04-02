@@ -8,6 +8,7 @@ export default defineConfig({
   output: 'static',
   integrations: [
     sitemap({
+      filter: (page) => page !== 'https://colotopia.com/',
       serialize(item) {
         const alt = getAlternateUrl(item.url);
         if (alt) {

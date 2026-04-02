@@ -43,11 +43,21 @@ const ogUrl = canonical ?? Astro.url.href;
 
 const websiteSchema = {
   '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'Colotopia',
-  url: siteUrl,
-  description: 'Coloriages gratuits à imprimer',
-  inLanguage: ['fr', 'en'],
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      name: 'Colotopia',
+      url: siteUrl,
+      description: 'Coloriages gratuits à imprimer',
+      inLanguage: ['fr', 'en'],
+    },
+    {
+      '@type': 'Organization',
+      name: 'Colotopia',
+      url: siteUrl,
+      logo: `${siteUrl}/favicon.svg`,
+    },
+  ],
 };
 
 const siteTitle = t('site.title', locale);
@@ -80,6 +90,11 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
       rel="alternate"
       hreflang={altLocale}
       href={altUrl ?? Astro.url.href.replace(`/${locale}/`, `/${altLocale}/`)}
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={locale === 'fr' ? (canonical ?? Astro.url.href) : (altUrl ?? Astro.url.href.replace(`/${locale}/`, '/fr/'))}
     />
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={ogUrl} />

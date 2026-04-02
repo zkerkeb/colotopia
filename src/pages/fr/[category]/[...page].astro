@@ -90,6 +90,7 @@ const structuredData = pillar && pillar.faq.length > 0
         : `Coloriages ${label} — Page ${page.currentPage}`,
       description: pageDescription,
       url: Astro.url.href,
+      numberOfItems: page.total,
     };
 ---
 
