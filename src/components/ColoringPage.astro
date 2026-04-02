@@ -10,7 +10,7 @@ import AdSlot from './AdSlot.astro';
 import AffiliateWidget from './AffiliateWidget.astro';
 import type { Locale } from '../lib/i18n';
 import type { Category } from '../lib/i18n';
-import { t, getLocalePath, getColoringBasePath, categoryColors, categoryIcons } from '../lib/i18n';
+import { t, getLocalePath, getColoringBasePath, categoryColors, categoryIcons, getCategoryLabel, getCategorySlug } from '../lib/i18n';
 
 interface RelatedItem {
   title: string;
@@ -44,6 +44,11 @@ const {
 const printLabel = t('coloring.print', locale);
 const catColor = categoryColors[category];
 const catIcon = categoryIcons[category];
+const catLabel = getCategoryLabel(category, locale);
+const catUrl = getLocalePath(locale, `/${getCategorySlug(category, locale)}`);
+const exploreCataLabel = locale === 'fr'
+  ? `Voir plus de coloriages ${catLabel}`
+  : `More ${catLabel} coloring pages`;
 
 // Derive WebP path from PNG path (original PNG kept for PDF generation)
 // e.g. /images/coloriages/animaux-chat.png → /images/coloriages/animaux-chat.webp
@@ -183,6 +188,19 @@ const mobileActionsLabel = t('mobile.actions.more', locale);
         }
       </script>
 
+      <!-- Category explore CTA -->
+      <div class="category-cta">
+        <a
+          href={catUrl}
+          class="category-cta-link"
+          style={`--cat-bg: ${catColor.light}; --cat-text: ${catColor.text}; --cat-accent: ${catColor.bg}`}
+        >
+          <span class="category-cta-icon" aria-hidden="true">{catIcon}</span>
+          <span class="category-cta-label">{exploreCataLabel}</span>
+          <svg class="category-cta-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
       <!-- Mobile supply widget (hidden on desktop where sidebar shows it) -->
       <div class="mobile-supplies">
         <AffiliateWidget locale={locale} />
@@ -240,7 +258,7 @@ const mobileActionsLabel = t('mobile.actions.more', locale);
       <!-- Below-content ad -->
       <AdSlot adSlot="" format="rectangle" />
 
-      <RelatedColoriages locale={locale} items={related} currentSlug={slug} />
+      <RelatedColoriages locale={locale} items={related} currentSlug={slug} category={category} />
     </div>
 
     <!-- Sidebar -->
@@ -363,6 +381,46 @@ const mobileActionsLabel = t('mobile.actions.more', locale);
   .btn-print.is-mobile .print-icon { display: none; }
   .btn-print.is-mobile .more-icon { display: inline; }
 
+  /* ── Category CTA ── */
+  .category-cta {
+    margin-bottom: var(--space-6);
+  }
+
+  .category-cta-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: 0.75rem 1.25rem;
+    background: var(--cat-bg, var(--color-primary-light));
+    color: var(--cat-text, var(--color-primary));
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+    transition: filter var(--transition-fast);
+    border-left: 3px solid var(--cat-accent, var(--color-primary));
+    font-family: var(--font-body);
+  }
+
+  .category-cta-link:hover {
+    filter: brightness(0.95);
+    text-decoration: none;
+  }
+
+  .category-cta-icon {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
+  .category-cta-label {
+    flex: 1;
+  }
+
+  .category-cta-arrow {
+    flex-shrink: 0;
+    opacity: 0.7;
+  }
+
   /* ── Tags ── */
   .coloring-tags {
     display: flex;
@@ -458,6 +516,7 @@ const mobileActionsLabel = t('mobile.actions.more', locale);
 
     .page-title,
     .coloring-actions,
+    .category-cta,
     .coloring-tags,
     .share-section,
     .mobile-supplies,
