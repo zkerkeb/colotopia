@@ -439,6 +439,82 @@ const translations: Record<string, Record<Locale, string>> = {
     fr: '<h2>Coloriages cartes géographiques gratuits</h2><p>Explorez le monde depuis votre table grâce à nos coloriages cartes géographiques ! Notre collection propose des cartes illustrées du <a href="/fr/coloriage/cartes-monde">monde</a>, de l\'<a href="/fr/coloriage/cartes-europe">Europe</a>, de la <a href="/fr/coloriage/cartes-france">France</a>, de l\'<a href="/fr/coloriage/cartes-afrique">Afrique</a> et du <a href="/fr/coloriage/cartes-japon">Japon</a> que les adultes et les enfants peuvent colorier pour apprendre la géographie de manière ludique et créative. Colorier une carte du monde est une expérience à la fois artistique et éducative. En donnant une couleur différente à chaque pays ou région, vous mémorisez naturellement leur emplacement et leurs frontières.</p><h2>Apprendre la géographie en coloriant</h2><p>C\'est une méthode d\'apprentissage par le faire, bien plus efficace que la simple lecture d\'un atlas. Nos cartes illustrées intègrent des éléments décoratifs : boussoles, roses des vents et parfois des petites illustrations des productions typiques de chaque région. Ne manquez pas notre <a href="/fr/coloriage/cartes-tresor">carte au trésor</a> pour les aventuriers ! Ces détails rendent le coloriage de cartes particulièrement enrichissant et esthétiquement plaisant. Une carte du monde coloriée avec soin fait un magnifique poster éducatif pour la chambre d\'un enfant ou un bureau d\'adulte. Nos coloriages cartes sont disponibles gratuitement au format A4. Pour les cartes de grand format, assemblez plusieurs feuilles pour un rendu encore plus impressionnant et éducatif.</p>',
     en: '<h2>Free geographical map coloring pages</h2><p>Explore the world from your table with our geographical map coloring pages! Our collection features illustrated maps of the <a href="/en/coloring/maps-world">world</a>, <a href="/en/coloring/maps-europe">Europe</a>, <a href="/en/coloring/maps-france">France</a>, <a href="/en/coloring/maps-africa">Africa</a>, and <a href="/en/coloring/maps-japan">Japan</a> that adults and children can color to learn geography in a fun and creative way. Coloring a world map is both an artistic and educational experience. By giving different colors to each country or region, you naturally memorize their locations and borders.</p><h2>Learning geography through coloring</h2><p>It\'s a learn-by-doing method, far more effective than simply reading an atlas. Our illustrated maps incorporate decorative elements: compasses, wind roses, and sometimes small illustrations of typical productions from each region. Don\'t miss our <a href="/en/coloring/maps-treasure">treasure map</a> for adventurers! These details make map coloring particularly enriching and aesthetically pleasing. A carefully colored world map makes a beautiful educational poster for a child\'s room or an adult\'s office. Our map coloring pages are available for free in A4 format. For large-format maps, assemble several sheets for an even more impressive and educational result.</p>',
   },
+  'category.personnages.metaDesc': {
+    fr: 'Coloriages personnages à imprimer gratuits — pirates, ninjas, vikings, magiciens et héros originaux. +40 dessins pour enfants à télécharger en PDF A4.',
+    en: 'Free printable character coloring pages — pirates, ninjas, wizards and original heroes. 40+ drawings for kids, free A4 PDF download.',
+  },
+  'category.musique.metaDesc': {
+    fr: 'Coloriages musique à imprimer gratuits — instruments, musiciens et notes de musique. Dessins à colorier pour initier les enfants à la musique en s\'amusant.',
+    en: 'Free printable music coloring pages — instruments, musicians and notes. Fun drawings to color and introduce kids to the world of music.',
+  },
+  'category.licorne.metaDesc': {
+    fr: 'Coloriages licorne à imprimer gratuits ! Licornes magiques, arcs-en-ciel et fées. +30 dessins de licornes à colorier pour enfants — PDF A4 gratuit.',
+    en: 'Free unicorn coloring pages to print! Magical unicorns, rainbows and fairies. 30+ unicorn drawings for kids — free A4 PDF download.',
+  },
+  'category.fleurs.metaDesc': {
+    fr: 'Coloriages fleurs à imprimer gratuits — roses, tournesols, tulipes et bouquets. Dessins floraux pour enfants et adultes à télécharger en PDF gratuit.',
+    en: 'Free printable flower coloring pages — roses, sunflowers, tulips and bouquets. Floral designs for kids and adults, free PDF download.',
+  },
+  'category.chats.metaDesc': {
+    fr: 'Coloriages chats à imprimer gratuits ! Chatons, chats kawaii, chats rigolos — +40 dessins à colorier. PDF A4 gratuit pour enfants et amoureux des chats.',
+    en: 'Free cat coloring pages to print! Kittens, kawaii cats, funny cats — 40+ drawings to color. Free A4 PDF for kids and cat lovers.',
+  },
+  'category.papillons.metaDesc': {
+    fr: 'Coloriages papillons à imprimer gratuits — papillons réalistes, mandalas-papillons et scènes naturelles. Dessins délicats pour enfants et adultes, PDF A4.',
+    en: 'Free butterfly coloring pages to print — realistic butterflies, butterfly mandalas and nature scenes. Delicate designs for kids and adults.',
+  },
+  'category.bold-et-facile.metaDesc': {
+    fr: 'Coloriages gros traits faciles à imprimer — dessins simples aux contours épais pour tout-petits dès 2 ans. Gratuit, PDF A4, parfaits pour débuter.',
+    en: 'Bold & easy coloring pages to print — simple thick-outline drawings for toddlers from age 2. Free A4 PDF, perfect for beginners.',
+  },
+  'category.paques.metaDesc': {
+    fr: 'Coloriages Pâques à imprimer gratuits — lapins de Pâques, œufs décorés, poussins et paniers fleuris. Activités créatives pour fêter Pâques en famille.',
+    en: 'Free Easter coloring pages to print — Easter bunnies, decorated eggs, chicks and flower baskets. Fun coloring activities for the whole family.',
+  },
+  'category.halloween.metaDesc': {
+    fr: 'Coloriages Halloween à imprimer gratuits — citrouilles, fantômes, sorcières et chauves-souris. +50 dessins Halloween à colorier pour enfants, PDF A4.',
+    en: 'Free Halloween coloring pages to print — pumpkins, ghosts, witches and bats. 50+ Halloween drawings for kids, free A4 PDF.',
+  },
+  'category.noel.metaDesc': {
+    fr: 'Coloriages Noël à imprimer gratuits — Père Noël, sapin, cadeaux et rennes. Des dizaines de dessins de Noël à colorier pour les fêtes, PDF A4 gratuit.',
+    en: 'Free Christmas coloring pages to print — Santa Claus, Christmas tree, gifts and reindeer. Dozens of holiday drawings to color, free A4 PDF.',
+  },
+  'category.champignons.metaDesc': {
+    fr: 'Coloriages champignons à imprimer gratuits — champignons magiques, forêts enchantées et scènes féeriques. Dessins kawaii pour enfants, PDF A4 gratuit.',
+    en: 'Free mushroom coloring pages to print — magical mushrooms, enchanted forests and whimsical scenes. Kawaii designs for kids, free A4 PDF.',
+  },
+  'category.religions.metaDesc': {
+    fr: 'Coloriages religions à imprimer gratuits — symboles religieux et traditions du monde entier. Des dessins respectueux pour explorer la diversité culturelle.',
+    en: 'Free religion coloring pages to print — religious symbols and world traditions. Respectful drawings to explore cultural and spiritual diversity.',
+  },
+  'category.cottagecore.metaDesc': {
+    fr: 'Coloriages cottagecore adultes à imprimer gratuits — jardins enchantés, nature bucolique et esthétique champêtre. Dessins anti-stress pour adultes, PDF A4.',
+    en: 'Free adult cottagecore coloring pages — enchanted gardens, bucolic nature and rustic aesthetics. Relaxing detailed designs for adults, free A4 PDF.',
+  },
+  'category.vitrail.metaDesc': {
+    fr: 'Coloriages vitraux adultes à imprimer gratuits — motifs géométriques colorés inspirés des vitraux médiévaux. Dessins complexes pour adultes, PDF A4 gratuit.',
+    en: 'Free adult stained glass coloring pages — colorful geometric patterns inspired by medieval stained glass. Complex designs for adults, free A4 PDF.',
+  },
+  'category.zodiaque.metaDesc': {
+    fr: 'Coloriages zodiaque adultes à imprimer gratuits — les 12 signes du zodiaque à colorier. Bélier, Taureau, Gémeaux... Dessins détaillés pour amateurs d\'astrologie.',
+    en: 'Free adult zodiac coloring pages — all 12 zodiac signs to color. Aries, Taurus, Gemini... Detailed designs for adults who love astrology.',
+  },
+  'category.affirmations.metaDesc': {
+    fr: 'Coloriages affirmations adultes à imprimer gratuits — phrases positives et citations inspirantes à colorier. Art-thérapie créative pour adultes, PDF A4.',
+    en: 'Free adult affirmation coloring pages — positive quotes and inspiring phrases to color. Creative art therapy for well-being and mindfulness, free PDF.',
+  },
+  'category.anti-stress.metaDesc': {
+    fr: 'Coloriages anti-stress adultes à imprimer gratuits — motifs complexes pour se détendre. Zentangle, zendoodle et art-thérapie par le coloriage adulte, PDF A4.',
+    en: 'Free adult stress relief coloring pages — complex patterns to unwind. Zentangle, zendoodle and art therapy through mindful adult coloring, free PDF.',
+  },
+  'category.mosaiques.metaDesc': {
+    fr: 'Coloriages mosaïques adultes à imprimer gratuits — motifs géométriques en mosaïque. Dessins complexes inspirés des mosaïques romaines et byzantines, PDF A4.',
+    en: 'Free adult mosaic coloring pages — geometric mosaic patterns to color. Complex designs inspired by Roman and Byzantine mosaics, free A4 PDF.',
+  },
+  'category.paysages.metaDesc': {
+    fr: 'Coloriages paysages adultes à imprimer gratuits — montagnes, forêts, campagnes et bords de mer. Dessins détaillés pour se ressourcer par le coloriage adulte.',
+    en: 'Free adult landscape coloring pages — mountains, forests, countryside and seaside to color. Detailed relaxing drawings for adults, free A4 PDF.',
+  },
   'category.paysages.seoText': {
     fr: '<h2>Coloriages paysages gratuits pour adultes</h2><p>La montagne enneigée, la forêt mystérieuse, la plage au coucher du soleil, la campagne verdoyante : les paysages offrent une infinité de sources d\'inspiration pour les artistes. Nos coloriages paysages pour adultes proposent des vues panoramiques : les <a href="/fr/coloriage/paysages-alpes">Alpes</a> majestueuses, le <a href="/fr/coloriage/paysages-canyon">canyon</a> impressionnant, la <a href="/fr/coloriage/paysages-cote-bretonne">côte bretonne</a> sauvage, les champs de <a href="/fr/coloriage/paysages-lavande">lavande</a> provençaux. Chaque paysage est soigneusement composé pour offrir un équilibre visuel satisfaisant : un premier plan détaillé, un milieu habité et un arrière-plan atmosphérique.</p><h2>Lumière, couleur et perspective</h2><p>Cette structure classique de la composition paysagère permet d\'explorer les techniques de perspective et de rendu de la profondeur. Colorier un paysage invite à réfléchir à la lumière et à l\'atmosphère : un paysage de matin aura des teintes froides et brumeuses, un coucher de soleil des orangés et des roses flamboyants. Découvrez aussi notre <a href="/fr/coloriage/paysages-foret-tropicale">forêt tropicale</a> et la <a href="/fr/coloriage/paysages-mer-voiliers">mer aux voiliers</a>. Ces réflexions sur la couleur et la lumière développent la sensibilité artistique et la conscience visuelle. Les paysages terminés font de beaux décors pour la maison ou le bureau, rappelant des lieux aimés ou évoquant des voyages rêvés. Nos coloriages paysages sont disponibles gratuitement au format A4 haute résolution. Utilisez des aquarelles ou des crayons de couleur pour les effets de dégradé et les textures atmosphériques.</p>',
     en: '<h2>Free landscape coloring pages for adults</h2><p>Snow-capped mountains, mysterious forests, beaches at sunset, verdant countryside — landscapes offer an infinite source of inspiration for artists. Our adult landscape coloring pages feature panoramic views: the majestic <a href="/en/coloring/landscapes-alps">Alps</a>, an impressive <a href="/en/coloring/landscapes-canyon">canyon</a>, the wild <a href="/en/coloring/landscapes-breton-coast">Breton coast</a>, and <a href="/en/coloring/landscapes-lavender">lavender</a> fields of Provence. Each landscape is carefully composed to offer satisfying visual balance: a detailed foreground, a middle ground with life, and an atmospheric background.</p><h2>Light, color, and perspective</h2><p>This classic landscape composition structure allows exploration of perspective techniques and depth rendering. Coloring a landscape invites reflection on light and atmosphere: a morning landscape has cool, misty tones; a sunset blazes with oranges and pinks. Also discover our <a href="/en/coloring/landscapes-tropical-forest">tropical forest</a> and <a href="/en/coloring/landscapes-sailboats-sea">sailboats at sea</a>. These reflections on color and light develop artistic sensibility and visual awareness. Finished landscapes make beautiful decorations for the home or office, recalling beloved places or evoking dreamed-of travels. Our landscape coloring pages are available for free in A4 high-resolution format. Use watercolors or colored pencils for gradient effects and atmospheric textures.</p>',

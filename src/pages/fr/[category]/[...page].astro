@@ -42,8 +42,13 @@ const pillar = page.currentPage === 1 ? getPillarContent(categoryKey, locale) : 
 const relatedCats = getRelatedCategories(categoryKey, locale);
 
 const descriptionKey = isAdult ? 'category.description.adults' : 'category.description';
+const categoryMetaDescKey = `category.${categoryKey}.metaDesc`;
+const categoryMetaDesc = ti(categoryMetaDescKey, locale, {});
+const hasMetaDesc = categoryMetaDesc !== categoryMetaDescKey;
 const pageDescription = pillar
   ? pillar.intro.slice(0, 160).replace(/\s+\S*$/, '…')
+  : hasMetaDesc
+  ? categoryMetaDesc
   : ti(descriptionKey, locale, { label: label.toLowerCase() });
 const seoText = ti(`category.${categoryKey}.seoText`, locale, {});
 const hasSeoText = seoText !== `category.${categoryKey}.seoText`;
