@@ -32,6 +32,9 @@ const related = allEn
   .filter((c) => c.data.category === category)
   .map((c) => ({ title: c.data.title, slug: c.data.slug, image: c.data.image, alt: c.data.alt }));
 
+const imageWebp = image.replace(/\.png$/, '.webp');
+const thumbWebp = image.replace('/images/coloriages/', '/images/coloriages/thumbs/').replace(/\.png$/, '.webp');
+
 const structuredData = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -40,9 +43,11 @@ const structuredData = {
       '@id': `${canonicalUrl}#image`,
       name: title,
       description: pageDescription,
-      contentUrl: `${siteUrl}${image}`,
-      thumbnailUrl: `${siteUrl}${image}`,
-      encodingFormat: 'image/png',
+      contentUrl: `${siteUrl}${imageWebp}`,
+      thumbnailUrl: `${siteUrl}${thumbWebp}`,
+      encodingFormat: 'image/webp',
+      width: 800,
+      height: 1100,
     },
     {
       '@type': 'WebPage',
