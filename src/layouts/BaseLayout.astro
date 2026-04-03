@@ -21,6 +21,7 @@ interface Props {
   prevUrl?: string;
   nextUrl?: string;
   category?: string;
+  noindex?: boolean;
 }
 
 const {
@@ -38,6 +39,7 @@ const {
   prevUrl,
   nextUrl,
   category,
+  noindex = false,
 } = Astro.props;
 
 const siteUrl = Astro.site?.href.replace(/\/$/, '') ?? 'https://colotopia.com';
@@ -83,6 +85,7 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;500;600;700;800&display=swap" /></noscript>
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     {canonical && <link rel="canonical" href={canonical} />}
     {prevUrl && <link rel="prev" href={prevUrl} />}

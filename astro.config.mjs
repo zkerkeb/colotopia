@@ -8,7 +8,14 @@ export default defineConfig({
   output: 'static',
   integrations: [
     sitemap({
-      filter: (page) => page !== 'https://colotopia.com/',
+      filter: (page) => {
+        // Exclude root redirect, 404, and pagination pages (low crawl-budget value)
+        if (page === 'https://colotopia.com/') return false;
+        if (page.includes('/404')) return false;
+        // Exclude pagination: /fr/2/, /en/animals/3/, /fr/blog/2/ etc.
+        if (/\/(fr|en)\/(.*\/)?(\d+)\/$/.test(page)) return false;
+        return true;
+      },
       serialize(item) {
         const alt = getAlternateUrl(item.url);
         if (alt) {
