@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 }
 
 const { coloring, enSlug } = Astro.props;
-const { title, image, alt, category, tags, slug, seoTitle, seoDescription } = coloring.data;
+const { title, image, alt, category, tags, slug, seoTitle, seoDescription, createdAt } = coloring.data;
 
 const locale = 'fr' as const;
 const siteUrl = Astro.site?.href.replace(/\/$/, '') ?? 'https://colotopia.com';
@@ -67,6 +67,7 @@ const structuredData = {
   ogImageWidth={800}
   ogImageHeight={1100}
   ogType="article"
+  articlePublishedTime={createdAt}
   structuredData={structuredData}
   category={category}
 >
