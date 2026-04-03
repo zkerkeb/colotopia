@@ -65,6 +65,7 @@ const pinterestUrl = `https://pinterest.com/pin/create/button/?url=${encodeURICo
 
 const shareLabel = t('share.label', locale);
 const mobileActionsLabel = t('mobile.actions.more', locale);
+const stickyDownloadLabel = locale === 'fr' ? 'Télécharger PDF' : 'Download PDF';
 ---
 
 <script define:vars={{ title, category, slug, tags }}>
@@ -267,6 +268,34 @@ const mobileActionsLabel = t('mobile.actions.more', locale);
       <AffiliateWidget locale={locale} />
     </aside>
   </div>
+  <!-- Sticky mobile download bar — shown when main actions scroll out of view -->
+  <div class="sticky-dl-bar" id="sticky-dl-bar" aria-hidden="true">
+    <button class="sticky-dl-btn" id="sticky-dl-trigger">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      {stickyDownloadLabel}
+    </button>
+  </div>
+
+  <script>
+    // Show sticky bar when main download actions scroll out of view (mobile only)
+    const actionsEl = document.querySelector('.coloring-actions');
+    const stickyBar = document.getElementById('sticky-dl-bar');
+    const stickyTrigger = document.getElementById('sticky-dl-trigger');
+    const mainBtn = document.getElementById('pdf-download-btn');
+
+    if (actionsEl && stickyBar && stickyTrigger && mainBtn) {
+      const io = new IntersectionObserver(([entry]) => {
+        const visible = !entry.isIntersecting;
+        stickyBar.classList.toggle('is-visible', visible);
+        stickyBar.setAttribute('aria-hidden', String(!visible));
+      }, { threshold: 0 });
+      io.observe(actionsEl);
+
+      stickyTrigger.addEventListener('click', () => {
+        mainBtn.click();
+      });
+    }
+  </script>
 </article>
 
 <style>
@@ -507,6 +536,68 @@ const mobileActionsLabel = t('mobile.actions.more', locale);
     gap: var(--space-6);
   }
 
+  /* ── Sticky mobile download bar ── */
+  .sticky-dl-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: var(--space-3) var(--space-4);
+    padding-bottom: calc(var(--space-3) + env(safe-area-inset-bottom, 0px));
+    background: rgba(255, 253, 249, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1px solid var(--color-border);
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(100%);
+    transition: transform var(--transition-normal);
+  }
+
+  .sticky-dl-bar.is-visible {
+    transform: translateY(0);
+  }
+
+  .sticky-dl-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    width: 100%;
+    padding: 0.875rem;
+    background: var(--color-primary);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+    box-shadow: var(--shadow-btn);
+    transition: background var(--transition-fast);
+  }
+
+  .sticky-dl-btn:hover {
+    background: var(--color-primary-hover);
+  }
+
+  .sticky-dl-btn:active {
+    transform: scale(0.98);
+  }
+
+  @media (max-width: 860px) {
+    .sticky-dl-bar {
+      display: block;
+    }
+  }
+
+  @media (min-width: 861px) {
+    .sticky-dl-bar {
+      display: none !important;
+    }
+  }
+
   @media print {
     .coloring-page {
       padding: 0 !important;
@@ -521,6 +612,7 @@ const mobileActionsLabel = t('mobile.actions.more', locale);
     .share-section,
     .mobile-supplies,
     .sidebar,
+    .sticky-dl-bar,
     .main-content > :not(.coloring-image-frame) {
       display: none !important;
     }

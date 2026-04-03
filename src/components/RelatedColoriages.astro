@@ -21,7 +21,7 @@ const { locale, items, currentSlug, category } = Astro.props;
 
 const related = items
   .filter((c) => c.slug !== currentSlug)
-  .slice(0, 6);
+  .slice(0, 8);
 
 const heading = locale === 'fr' ? 'Coloriages similaires' : 'Similar Coloring Pages';
 const catLabel = getCategoryLabel(category, locale);

@@ -71,7 +71,7 @@ const structuredData = {
   prevUrl={page.url.prev}
   nextUrl={page.url.next}
 >
-  {isFirstPage && <Hero locale={locale} />}
+  {isFirstPage && <Hero locale={locale} previews={page.data.slice(0, 4).map((c: any) => ({ image: c.data.image, alt: c.data.alt, slug: c.data.slug }))} />}
 
   {isFirstPage && nouveaux.length > 0 && (
     <NewSection locale={locale} items={nouveaux} />
