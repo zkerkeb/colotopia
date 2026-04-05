@@ -5143,3 +5143,571 @@ categories:
         en_tags: ["mandala", "lotus", "meditation", "religion"]
         prompt: "A simple mandala pattern made of lotus flower petals arranged in a circle, with small decorative elements around it, peaceful and calming, simple line art for children."
 
+  magie:
+    subjects:
+      - fr_slug: magie-sorciere
+        en_slug: magic-witch
+        fr_title: "Sorcière rigolote"
+        en_title: "Funny Witch"
+        fr_tags: ["sorcière", "magie", "halloween", "chapeau"]
+        en_tags: ["witch", "magic", "halloween", "hat"]
+        prompt: "A cute friendly witch with a pointy hat, riding a broomstick, with stars and a crescent moon around her, cartoon style for children."
+
+      - fr_slug: magie-magicien
+        en_slug: magic-wizard
+        fr_title: "Grand magicien"
+        en_title: "Great Wizard"
+        fr_tags: ["magicien", "magie", "chapeau", "baguette"]
+        en_tags: ["wizard", "magic", "hat", "wand"]
+        prompt: "A friendly cartoon wizard with a long robe covered in stars and moons, holding a magic wand with a glowing tip, long beard, simple style for children."
+
+      - fr_slug: magie-chapeau-magique
+        en_slug: magic-magic-hat
+        fr_title: "Chapeau magique"
+        en_title: "Magic Hat"
+        fr_tags: ["chapeau", "magie", "lapin", "tour de magie"]
+        en_tags: ["hat", "magic", "rabbit", "magic trick"]
+        prompt: "A classic magic top hat with a cute rabbit popping out, surrounded by stars, flowers, and playing cards floating around it, cute cartoon style for children."
+
+      - fr_slug: magie-baguette-magique
+        en_slug: magic-magic-wand
+        fr_title: "Baguette magique"
+        en_title: "Magic Wand"
+        fr_tags: ["baguette", "magie", "étoile", "sorts"]
+        en_tags: ["wand", "magic", "star", "spells"]
+        prompt: "A decorative magic wand with a large star on top, surrounded by sparkles, small stars, and magical swirls, simple line art for children to color."
+
+      - fr_slug: magie-chaudron
+        en_slug: magic-cauldron
+        fr_title: "Chaudron bouillonnant"
+        en_title: "Bubbling Cauldron"
+        fr_tags: ["chaudron", "magie", "potion", "sorcière"]
+        en_tags: ["cauldron", "magic", "potion", "witch"]
+        prompt: "A round cauldron with bubbles and steam coming out, surrounded by mushrooms, leaves, and spell ingredients on the ground, cute cartoon style for children."
+
+      - fr_slug: magie-grimoire
+        en_slug: magic-spellbook
+        fr_title: "Grimoire enchanté"
+        en_title: "Enchanted Spell Book"
+        fr_tags: ["grimoire", "magie", "livre", "sorts"]
+        en_tags: ["spell book", "magic", "book", "spells"]
+        prompt: "An old open magic book with decorative borders, symbols and stars on the pages, with sparks of magic flying off it, cute illustration style for children."
+
+      - fr_slug: magie-cristal-boule
+        en_slug: magic-crystal-ball
+        fr_title: "Boule de cristal"
+        en_title: "Crystal Ball"
+        fr_tags: ["cristal", "magie", "boule", "voyance"]
+        en_tags: ["crystal", "magic", "ball", "fortune"]
+        prompt: "A glowing crystal ball on an ornate stand, showing swirling clouds and stars inside it, with magical sparkles around it, cute cartoon style for children."
+
+      - fr_slug: magie-potion
+        en_slug: magic-potion
+        fr_title: "Potion magique"
+        en_title: "Magic Potion"
+        fr_tags: ["potion", "magie", "fiole", "sorcière"]
+        en_tags: ["potion", "magic", "bottle", "witch"]
+        prompt: "Several cute potion bottles in different shapes, with bubbles, hearts, and stars inside them, corked with ribbon bows, simple cartoon style for children."
+
+      - fr_slug: magie-dragon-ami
+        en_slug: magic-friendly-dragon
+        fr_title: "Dragon ami"
+        en_title: "Friendly Dragon"
+        fr_tags: ["dragon", "magie", "feu", "ailes"]
+        en_tags: ["dragon", "magic", "fire", "wings"]
+        prompt: "A cute friendly dragon with wings, scales, and a small flame coming from its mouth, sitting in a friendly pose, big eyes, simple cartoon style for children."
+
+      - fr_slug: magie-etoile-filante
+        en_slug: magic-shooting-star
+        fr_title: "Étoile filante magique"
+        en_title: "Magic Shooting Star"
+        fr_tags: ["étoile", "magie", "nuit", "vœu"]
+        en_tags: ["star", "magic", "night", "wish"]
+        prompt: "A large shooting star with a cute smiling face, leaving a trail of smaller stars and sparkles behind it, surrounded by clouds and crescent moon, cartoon style for children."
+
+  fee:
+    subjects:
+      - fr_slug: fee-foret
+        en_slug: fairy-forest
+        fr_title: "Fée de la forêt"
+        en_title: "Forest Fairy"
+        fr_tags: ["fée", "forêt", "ailes", "nature"]
+        en_tags: ["fairy", "forest", "wings", "nature"]
+        prompt: "A cute little fairy with butterfly wings sitting on a mushroom in a forest, surrounded by flowers and fireflies, friendly cartoon style for children."
+
+      - fr_slug: fee-fleurs
+        en_slug: fairy-flowers
+        fr_title: "Fée des fleurs"
+        en_title: "Flower Fairy"
+        fr_tags: ["fée", "fleurs", "jardin", "printemps"]
+        en_tags: ["fairy", "flowers", "garden", "spring"]
+        prompt: "A tiny fairy sitting inside a large open flower with petals around her, her wings decorated with flower patterns, holding a smaller flower, cute cartoon for children."
+
+      - fr_slug: fee-lune
+        en_slug: fairy-moon
+        fr_title: "Fée de la lune"
+        en_title: "Moon Fairy"
+        fr_tags: ["fée", "lune", "nuit", "étoiles"]
+        en_tags: ["fairy", "moon", "night", "stars"]
+        prompt: "A magical fairy sitting on a crescent moon, with long flowing hair and shimmering wings, surrounded by stars and small clouds, cute dreamy cartoon style for children."
+
+      - fr_slug: fee-eau
+        en_slug: fairy-water
+        fr_title: "Fée de l'eau"
+        en_title: "Water Fairy"
+        fr_tags: ["fée", "eau", "rivière", "cascade"]
+        en_tags: ["fairy", "water", "river", "waterfall"]
+        prompt: "A cute fairy with dragonfly wings hovering over a small pond, with water droplets and lily pads around her, friendly cartoon style for children."
+
+      - fr_slug: fee-neige
+        en_slug: fairy-snow
+        fr_title: "Fée des neiges"
+        en_title: "Snow Fairy"
+        fr_tags: ["fée", "neige", "hiver", "flocon"]
+        en_tags: ["fairy", "snow", "winter", "snowflake"]
+        prompt: "A tiny magical sprite with large transparent wings, surrounded by snowflakes and small icicle shapes, holding a glowing snowflake wand, simple cute cartoon coloring book style on white background, thick black outlines, no shading."
+
+      - fr_slug: fee-jardin
+        en_slug: fairy-garden
+        fr_title: "Fée du jardin"
+        en_title: "Garden Fairy"
+        fr_tags: ["fée", "jardin", "légumes", "potager"]
+        en_tags: ["fairy", "garden", "vegetables", "patch"]
+        prompt: "A cheerful little fairy tending to a small garden with watering can in hand, surrounded by vegetables and fruit, wings decorated with leaf patterns, cute cartoon for children."
+
+      - fr_slug: fee-etoiles
+        en_slug: fairy-stars
+        fr_title: "Fée des étoiles"
+        en_title: "Star Fairy"
+        fr_tags: ["fée", "étoiles", "ciel", "nuit"]
+        en_tags: ["fairy", "stars", "sky", "night"]
+        prompt: "A sparkling fairy flying among big shining stars in the night sky, collecting stars in a small basket, wings glittering with star patterns, cute cartoon for children."
+
+      - fr_slug: fee-papillon
+        en_slug: fairy-butterfly
+        fr_title: "Fée papillon"
+        en_title: "Butterfly Fairy"
+        fr_tags: ["fée", "papillon", "ailes", "coloré"]
+        en_tags: ["fairy", "butterfly", "wings", "colorful"]
+        prompt: "A cute fairy with large butterfly wings decorated with intricate patterns, standing on a flower with several butterflies around her, friendly cartoon style for children."
+
+      - fr_slug: fee-soleil
+        en_slug: fairy-sun
+        fr_title: "Fée du soleil"
+        en_title: "Sun Fairy"
+        fr_tags: ["fée", "soleil", "lumière", "chaleur"]
+        en_tags: ["fairy", "sun", "light", "warmth"]
+        prompt: "A bright cheerful fairy with sun-shaped wings radiating light, surrounded by sunbeams and small suns, wearing a summery outfit, cute cartoon style for children."
+
+      - fr_slug: fee-dents
+        en_slug: fairy-tooth
+        fr_title: "Fée des dents"
+        en_title: "Tooth Fairy"
+        fr_tags: ["fée", "dents", "nuit", "enfants"]
+        en_tags: ["fairy", "tooth", "night", "children"]
+        prompt: "The tooth fairy flying at night carrying a small tooth in a pouch, with a wand that sparkles, wearing a nurse-style outfit with wings, cute cartoon for children."
+
+  cirque:
+    subjects:
+      - fr_slug: cirque-jongleur
+        en_slug: circus-juggler
+        fr_title: "Jongleur du cirque"
+        en_title: "Circus Juggler"
+        fr_tags: ["jongleur", "cirque", "balle", "spectacle"]
+        en_tags: ["juggler", "circus", "ball", "show"]
+        prompt: "A happy circus juggler throwing colorful balls in the air, wearing a patterned costume, simple cartoon style for children."
+
+      - fr_slug: cirque-clown
+        en_slug: circus-clown
+        fr_title: "Clown rigolo"
+        en_title: "Funny Clown"
+        fr_tags: ["clown", "cirque", "rigolo", "nez rouge"]
+        en_tags: ["clown", "circus", "funny", "red nose"]
+        prompt: "A friendly clown with big shoes, curly hair, a round red nose, polka dot costume, holding a bunch of balloons, cute cartoon for children."
+
+      - fr_slug: cirque-acrobate
+        en_slug: circus-acrobat
+        fr_title: "Acrobate agile"
+        en_title: "Agile Acrobat"
+        fr_tags: ["acrobate", "cirque", "gymnaste", "équilibre"]
+        en_tags: ["acrobat", "circus", "gymnast", "balance"]
+        prompt: "A young acrobat in a sparkly costume doing a handstand on a platform, looking cheerful, with stars and confetti around them, simple cartoon for children."
+
+      - fr_slug: cirque-trapeziste
+        en_slug: circus-trapeze
+        fr_title: "Trapéziste volant"
+        en_title: "Flying Trapeze Artist"
+        fr_tags: ["trapéziste", "cirque", "trapèze", "volant"]
+        en_tags: ["trapeze", "circus", "flying", "performer"]
+        prompt: "A smiling circus performer swinging on a trapeze high in the air, with the circus tent visible below, wearing a sparkly costume, simple cartoon for children."
+
+      - fr_slug: cirque-equilibriste
+        en_slug: circus-tightrope
+        fr_title: "Équilibriste sur fil"
+        en_title: "Tightrope Walker"
+        fr_tags: ["équilibriste", "cirque", "fil", "équilibre"]
+        en_tags: ["tightrope", "circus", "balance", "wire"]
+        prompt: "A balanced tightrope walker carefully walking on a thin wire with a balancing pole, high above the crowd, wearing a colorful outfit, simple cartoon for children."
+
+      - fr_slug: cirque-dompteur
+        en_slug: circus-lion-tamer
+        fr_title: "Dompteur courageux"
+        en_title: "Brave Lion Tamer"
+        fr_tags: ["dompteur", "cirque", "lion", "courage"]
+        en_tags: ["lion tamer", "circus", "lion", "courage"]
+        prompt: "A brave lion tamer in a top hat and red coat with a friendly lion sitting on a stool, both looking happy, inside a circus ring, simple cartoon for children."
+
+      - fr_slug: cirque-prestidigitateur
+        en_slug: circus-magician
+        fr_title: "Prestidigitateur mystérieux"
+        en_title: "Mysterious Magician"
+        fr_tags: ["prestidigitateur", "magie", "cirque", "tour"]
+        en_tags: ["magician", "magic", "circus", "trick"]
+        prompt: "A cartoon fox wearing a tuxedo and tall top hat, performing on a circus stage, with a magic wand, playing cards floating in the air, and a rabbit peeking out of a hat beside it, cute coloring book style on white background, thick black outlines, no shading."
+
+      - fr_slug: cirque-chapiteau
+        en_slug: circus-big-top
+        fr_title: "Chapiteau du cirque"
+        en_title: "Circus Big Top"
+        fr_tags: ["chapiteau", "cirque", "tente", "spectacle"]
+        en_tags: ["big top", "circus", "tent", "show"]
+        prompt: "A classic colorful striped circus tent with flags on top, a ticket booth at the entrance, and a banner saying the show is tonight, cute cartoon for children."
+
+  jardinage:
+    subjects:
+      - fr_slug: jardinage-arrosoir
+        en_slug: gardening-watering-can
+        fr_title: "Arrosoir fleuri"
+        en_title: "Flowery Watering Can"
+        fr_tags: ["arrosoir", "jardinage", "fleurs", "eau"]
+        en_tags: ["watering can", "gardening", "flowers", "water"]
+        prompt: "A cute watering can with flowers and plants growing out of it, surrounded by butterflies and small birds, simple cartoon style for children."
+
+      - fr_slug: jardinage-potager
+        en_slug: gardening-vegetable-garden
+        fr_title: "Potager en fleur"
+        en_title: "Flowering Vegetable Garden"
+        fr_tags: ["potager", "légumes", "jardin", "nature"]
+        en_tags: ["vegetable garden", "vegetables", "garden", "nature"]
+        prompt: "A charming vegetable garden with rows of carrots, tomatoes, and lettuce, with a small fence, butterflies, and a watering can nearby, cute cartoon for children."
+
+      - fr_slug: jardinage-serre
+        en_slug: gardening-greenhouse
+        fr_title: "Petite serre"
+        en_title: "Little Greenhouse"
+        fr_tags: ["serre", "plantes", "jardinage", "verre"]
+        en_tags: ["greenhouse", "plants", "gardening", "glass"]
+        prompt: "A cute small greenhouse with glass panes, filled with potted plants and seedlings inside, flowers growing around the outside, cartoon style for children."
+
+      - fr_slug: jardinage-epouvantail
+        en_slug: gardening-scarecrow
+        fr_title: "Épouvantail ami"
+        en_title: "Friendly Scarecrow"
+        fr_tags: ["épouvantail", "jardin", "oiseau", "champ"]
+        en_tags: ["scarecrow", "garden", "bird", "field"]
+        prompt: "A friendly scarecrow in a hat and patched clothes standing in a field, with birds perched on its arms instead of being scared, vegetables growing around it, cute cartoon for children."
+
+      - fr_slug: jardinage-tournesol
+        en_slug: gardening-sunflower
+        fr_title: "Tournesol géant"
+        en_title: "Giant Sunflower"
+        fr_tags: ["tournesol", "fleur", "jardin", "soleil"]
+        en_tags: ["sunflower", "flower", "garden", "sun"]
+        prompt: "A tall happy sunflower with a smiling face, with bees and butterflies visiting its large flower head, set in a sunny garden, simple cartoon for children."
+
+      - fr_slug: jardinage-outils
+        en_slug: gardening-tools
+        fr_title: "Outils du jardinier"
+        en_title: "Gardener's Tools"
+        fr_tags: ["outils", "jardinage", "pelle", "râteau"]
+        en_tags: ["tools", "gardening", "shovel", "rake"]
+        prompt: "A collection of cute gardening tools—shovel, rake, trowel, gloves, and watering can—arranged neatly, with small flowers and worms around them, simple cartoon for children."
+
+      - fr_slug: jardinage-brouette
+        en_slug: gardening-wheelbarrow
+        fr_title: "Brouette de légumes"
+        en_title: "Vegetable Wheelbarrow"
+        fr_tags: ["brouette", "légumes", "jardin", "récolte"]
+        en_tags: ["wheelbarrow", "vegetables", "garden", "harvest"]
+        prompt: "A wooden wheelbarrow overflowing with freshly picked vegetables—pumpkins, cabbages, and carrots—sitting in a sunny garden, cute cartoon style for children."
+
+      - fr_slug: jardinage-panier-recolte
+        en_slug: gardening-harvest-basket
+        fr_title: "Panier de récolte"
+        en_title: "Harvest Basket"
+        fr_tags: ["panier", "récolte", "fruits", "légumes"]
+        en_tags: ["basket", "harvest", "fruits", "vegetables"]
+        prompt: "A large woven basket filled with colorful fruits and vegetables—apples, tomatoes, corn, berries—sitting on a wooden table with leaves around it, simple cartoon for children."
+
+  insectes:
+    subjects:
+      - fr_slug: insectes-coccinelle
+        en_slug: insects-ladybug
+        fr_title: "Coccinelle porte-bonheur"
+        en_title: "Lucky Ladybug"
+        fr_tags: ["coccinelle", "insecte", "nature", "rouge"]
+        en_tags: ["ladybug", "insect", "nature", "red"]
+        prompt: "A cute large ladybug with round spots on her shell, big friendly eyes, sitting on a large green leaf with small flowers around, simple cartoon for children."
+
+      - fr_slug: insectes-abeille
+        en_slug: insects-bee
+        fr_title: "Abeille butineuse"
+        en_title: "Busy Bee"
+        fr_tags: ["abeille", "insecte", "miel", "fleur"]
+        en_tags: ["bee", "insect", "honey", "flower"]
+        prompt: "A friendly striped bee carrying pollen baskets on its legs, hovering over a flower with its wings visible, cheerful expression, simple cartoon for children."
+
+      - fr_slug: insectes-libellule
+        en_slug: insects-dragonfly
+        fr_title: "Libellule gracieuse"
+        en_title: "Graceful Dragonfly"
+        fr_tags: ["libellule", "insecte", "étang", "ailes"]
+        en_tags: ["dragonfly", "insect", "pond", "wings"]
+        prompt: "A graceful dragonfly with large transparent patterned wings resting on a cattail near a pond, with its long segmented body visible, simple cartoon for children."
+
+      - fr_slug: insectes-sauterelle
+        en_slug: insects-grasshopper
+        fr_title: "Sauterelle bondissante"
+        en_title: "Jumping Grasshopper"
+        fr_tags: ["sauterelle", "insecte", "herbe", "saut"]
+        en_tags: ["grasshopper", "insect", "grass", "jump"]
+        prompt: "A cute grasshopper with long jumping legs perched on a blade of grass, with its antennae and wings clearly visible, friendly expression, simple cartoon for children."
+
+      - fr_slug: insectes-chenille
+        en_slug: insects-caterpillar
+        fr_title: "Chenille colorée"
+        en_title: "Colorful Caterpillar"
+        fr_tags: ["chenille", "insecte", "feuille", "transformation"]
+        en_tags: ["caterpillar", "insect", "leaf", "transformation"]
+        prompt: "A cute segmented caterpillar with a smiling face munching on a leaf, with small round body segments decorated with dots and patterns, simple cartoon for children."
+
+      - fr_slug: insectes-scarabee
+        en_slug: insects-beetle
+        fr_title: "Scarabée brillant"
+        en_title: "Shiny Beetle"
+        fr_tags: ["scarabée", "insecte", "carapace", "forêt"]
+        en_tags: ["beetle", "insect", "shell", "forest"]
+        prompt: "A round friendly beetle with a decorative patterned shell, six legs and antennae, walking on a log in a forest, simple cute cartoon for children."
+
+      - fr_slug: insectes-fourmi
+        en_slug: insects-ant
+        fr_title: "Fourmi travailleuse"
+        en_title: "Hard-Working Ant"
+        fr_tags: ["fourmi", "insecte", "travail", "colonie"]
+        en_tags: ["ant", "insect", "work", "colony"]
+        prompt: "A determined cartoon ant carrying a large crumb on its back, with three body segments, six legs, and antennae visible, walking on a path, simple cartoon for children."
+
+      - fr_slug: insectes-bourdon
+        en_slug: insects-bumblebee
+        fr_title: "Bourdon ronronnant"
+        en_title: "Buzzing Bumblebee"
+        fr_tags: ["bourdon", "insecte", "fleur", "pollen"]
+        en_tags: ["bumblebee", "insect", "flower", "pollen"]
+        prompt: "A fat fluffy bumblebee with thick fuzzy stripes on a big flower, its wings buzzing, looking happy, surrounded by other flowers and leaves, simple cartoon for children."
+
+  architecture:
+    subjects:
+      - fr_slug: architecture-chateau-fort
+        en_slug: architecture-castle
+        fr_title: "Château fort médiéval"
+        en_title: "Medieval Castle"
+        fr_tags: ["château", "médiéval", "tour", "chevalier"]
+        en_tags: ["castle", "medieval", "tower", "knight"]
+        prompt: "A grand medieval castle with tall towers, a drawbridge, battlements, a flag on top, and a moat around it, simple cute cartoon style for children."
+
+      - fr_slug: architecture-phare
+        en_slug: architecture-lighthouse
+        fr_title: "Phare côtier"
+        en_title: "Coastal Lighthouse"
+        fr_tags: ["phare", "mer", "côte", "lumière"]
+        en_tags: ["lighthouse", "sea", "coast", "light"]
+        prompt: "A striped lighthouse on a rocky cliff above the sea, with its light beam shining out, seagulls flying nearby, and waves below, simple cartoon for children."
+
+      - fr_slug: architecture-cabane-arbre
+        en_slug: architecture-treehouse
+        fr_title: "Cabane dans l'arbre"
+        en_title: "Treehouse"
+        fr_tags: ["cabane", "arbre", "maison", "enfants"]
+        en_tags: ["treehouse", "tree", "house", "children"]
+        prompt: "A cozy treehouse built in a large tree with a rope ladder, small window with flowers, a tire swing hanging below, and birds nesting nearby, cute cartoon for children."
+
+      - fr_slug: architecture-moulin-vent
+        en_slug: architecture-windmill
+        fr_title: "Moulin à vent"
+        en_title: "Windmill"
+        fr_tags: ["moulin", "vent", "campagne", "hollandais"]
+        en_tags: ["windmill", "wind", "countryside", "dutch"]
+        prompt: "A classic Dutch windmill with four large sails spinning, set in a flat countryside with tulips growing around it, a small canal nearby, cute cartoon for children."
+
+      - fr_slug: architecture-igloo
+        en_slug: architecture-igloo
+        fr_title: "Igloo douillet"
+        en_title: "Cozy Igloo"
+        fr_tags: ["igloo", "neige", "arctique", "glace"]
+        en_tags: ["igloo", "snow", "arctic", "ice"]
+        prompt: "A round igloo made of ice blocks with a small entrance tunnel, surrounded by snow, a sled nearby, polar bears and northern lights in the background, cute cartoon for children."
+
+      - fr_slug: architecture-pyramide
+        en_slug: architecture-pyramid
+        fr_title: "Pyramide mystérieuse"
+        en_title: "Mysterious Pyramid"
+        fr_tags: ["pyramide", "égypte", "histoire", "désert"]
+        en_tags: ["pyramid", "egypt", "history", "desert"]
+        prompt: "A large ancient pyramid in the desert with a sphinx nearby, a camel in the foreground, and the sun shining overhead, simple educational cartoon for children."
+
+      - fr_slug: architecture-pagode
+        en_slug: architecture-pagoda
+        fr_title: "Pagode orientale"
+        en_title: "Eastern Pagoda"
+        fr_tags: ["pagode", "japon", "asie", "temple"]
+        en_tags: ["pagoda", "japan", "asia", "temple"]
+        prompt: "A beautiful multi-tiered Japanese pagoda with curved roofs, surrounded by cherry blossom trees with petals falling, a small bridge over a stream, cute cartoon for children."
+
+      - fr_slug: architecture-cabane-bois
+        en_slug: architecture-log-cabin
+        fr_title: "Cabane en rondins"
+        en_title: "Log Cabin"
+        fr_tags: ["cabane", "bois", "forêt", "montagne"]
+        en_tags: ["log cabin", "wood", "forest", "mountain"]
+        prompt: "A charming log cabin in a forest clearing with smoke coming from the chimney, a woodpile beside it, a small porch with flower boxes, mountains in the background, cartoon for children."
+
+      - fr_slug: architecture-pont
+        en_slug: architecture-bridge
+        fr_title: "Grand pont suspendu"
+        en_title: "Grand Suspension Bridge"
+        fr_tags: ["pont", "ville", "rivière", "ingénierie"]
+        en_tags: ["bridge", "city", "river", "engineering"]
+        prompt: "A simplified cartoon suspension bridge with tall towers and cables spanning a river, with boats passing underneath and a cityscape visible in the distance, cute educational cartoon for children."
+
+      - fr_slug: architecture-maison-pain-epice
+        en_slug: architecture-gingerbread-house
+        fr_title: "Maison en pain d'épices"
+        en_title: "Gingerbread House"
+        fr_tags: ["maison", "pain d'épices", "bonbons", "conte"]
+        en_tags: ["gingerbread house", "candy", "cookies", "fairy tale"]
+        prompt: "A fantasy gingerbread house decorated with candy canes, gumdrops, lollipops and icing, surrounded by candy mushrooms and a chocolate fence, dreamy cartoon style for children."
+
+  portrait:
+    subjects:
+      - fr_slug: portrait-enfant-peintre
+        en_slug: portrait-child-painter
+        fr_title: "Ours peintre créatif"
+        en_title: "Creative Bear Painter"
+        fr_tags: ["peinture", "ours", "artiste", "créatif"]
+        en_tags: ["painting", "bear", "artist", "creative"]
+        prompt: "A cute cartoon bear wearing a beret and paint-splattered smock, holding a paintbrush and palette, with a canvas on an easel behind, simple coloring book line art on white background, no color fill, no shading."
+
+      - fr_slug: portrait-enfant-chef
+        en_slug: portrait-child-chef
+        fr_title: "Lapin chef cuisinier"
+        en_title: "Rabbit Chef"
+        fr_tags: ["chef", "lapin", "cuisine", "tablier"]
+        en_tags: ["chef", "rabbit", "cooking", "apron"]
+        prompt: "A cute cartoon rabbit wearing a tall chef hat and apron, holding a large wooden spoon, with a mixing bowl and ingredients on the counter, simple coloring book line art on white background, no color fill, no shading."
+
+      - fr_slug: portrait-enfant-explorer
+        en_slug: portrait-child-explorer
+        fr_title: "Singe explorateur"
+        en_title: "Monkey Explorer"
+        fr_tags: ["explorateur", "singe", "aventure", "jungle"]
+        en_tags: ["explorer", "monkey", "adventure", "jungle"]
+        prompt: "A cute cartoon monkey with a pith helmet, binoculars around its neck, and a backpack, holding a map, surrounded by tropical plants, simple coloring book line art on white background, no color fill, no shading."
+
+      - fr_slug: portrait-enfant-musicien
+        en_slug: portrait-child-musician
+        fr_title: "Chat musicien"
+        en_title: "Cat Musician"
+        fr_tags: ["musique", "chat", "guitare", "notes"]
+        en_tags: ["music", "cat", "guitar", "notes"]
+        prompt: "A cute cartoon cat sitting and playing a large guitar almost as big as itself, with musical notes floating around it, simple coloring book line art on white background, no color fill, no shading."
+
+      - fr_slug: portrait-enfant-jardinier
+        en_slug: portrait-child-gardener
+        fr_title: "Hérisson jardinier"
+        en_title: "Hedgehog Gardener"
+        fr_tags: ["jardinage", "hérisson", "nature", "fleurs"]
+        en_tags: ["gardening", "hedgehog", "nature", "flowers"]
+        prompt: "A cute cartoon hedgehog wearing gardening gloves and a sun hat, kneeling in a garden planting a seedling, surrounded by flowers and vegetables, simple coloring book line art on white background, no color fill, no shading."
+
+      - fr_slug: portrait-enfant-pompier
+        en_slug: portrait-child-firefighter
+        fr_title: "Chien pompier courageux"
+        en_title: "Brave Dog Firefighter"
+        fr_tags: ["pompier", "chien", "courage", "casque"]
+        en_tags: ["firefighter", "dog", "courage", "helmet"]
+        prompt: "A brave cartoon dog in a firefighter uniform with a bright helmet and boots, holding a fire hose, with a small fire truck in the background, simple coloring book line art on white background, no color fill, no shading."
+
+      - fr_slug: portrait-enfant-scientifique
+        en_slug: portrait-child-scientist
+        fr_title: "Chouette scientifique"
+        en_title: "Owl Scientist"
+        fr_tags: ["science", "chouette", "découverte", "lunettes"]
+        en_tags: ["science", "owl", "discovery", "goggles"]
+        prompt: "A cute cartoon owl wearing round safety goggles and a lab coat, holding a bubbling test tube, with science equipment on a table, simple coloring book line art on white background, no color fill, no shading."
+
+  bricolage:
+    subjects:
+      - fr_slug: bricolage-boite-carton
+        en_slug: crafts-cardboard-box
+        fr_title: "Château en carton"
+        en_title: "Cardboard Castle"
+        fr_tags: ["bricolage", "carton", "château", "créatif"]
+        en_tags: ["crafts", "cardboard", "castle", "creative"]
+        prompt: "A child building a cardboard box fort decorated as a castle with cutout windows and a drawbridge, looking pleased with their creation, simple cartoon for children."
+
+      - fr_slug: bricolage-origami
+        en_slug: crafts-origami
+        fr_title: "Origami en papier"
+        en_title: "Paper Origami"
+        fr_tags: ["origami", "papier", "japon", "pliage"]
+        en_tags: ["origami", "paper", "japan", "folding"]
+        prompt: "Cute origami animals—a crane, frog, and boat—made from folded paper, with squares of colored paper and simple folding steps shown around them, simple cartoon for children."
+
+      - fr_slug: bricolage-peinture-doigts
+        en_slug: crafts-finger-painting
+        fr_title: "Peinture aux doigts"
+        en_title: "Finger Painting"
+        fr_tags: ["peinture", "doigts", "créatif", "art"]
+        en_tags: ["painting", "fingers", "creative", "art"]
+        prompt: "A child's hands covered in paint making colorful handprints on paper, with paint pots, brushes, and a cheerful completed painting visible, simple cartoon for children."
+
+      - fr_slug: bricolage-collier-perles
+        en_slug: crafts-bead-necklace
+        fr_title: "Collier de perles"
+        en_title: "Bead Necklace"
+        fr_tags: ["collier", "perles", "bijoux", "bricolage"]
+        en_tags: ["necklace", "beads", "jewelry", "crafts"]
+        prompt: "A child's hands threading colorful beads onto a string to make a necklace, with various shapes of beads scattered on the table, simple cute cartoon for children."
+
+      - fr_slug: bricolage-marionnette
+        en_slug: crafts-puppet
+        fr_title: "Marionnette maison"
+        en_title: "Homemade Puppet"
+        fr_tags: ["marionnette", "chaussette", "théâtre", "bricolage"]
+        en_tags: ["puppet", "sock", "theater", "crafts"]
+        prompt: "A cute sock puppet with googly eyes, yarn hair, and a felt mouth on a child's hand, with other craft supplies like scissors and glue nearby, simple cartoon for children."
+
+      - fr_slug: bricolage-mobile-papier
+        en_slug: crafts-paper-mobile
+        fr_title: "Mobile en papier"
+        en_title: "Paper Mobile"
+        fr_tags: ["mobile", "papier", "suspension", "décoration"]
+        en_tags: ["mobile", "paper", "hanging", "decoration"]
+        prompt: "A decorative hanging mobile made of paper stars, moons, and clouds suspended on strings from a wooden stick, swinging gently, simple cute cartoon for children."
+
+      - fr_slug: bricolage-cerf-volant
+        en_slug: crafts-kite
+        fr_title: "Cerf-volant fait maison"
+        en_title: "Homemade Kite"
+        fr_tags: ["cerf-volant", "vent", "ciel", "bricolage"]
+        en_tags: ["kite", "wind", "sky", "crafts"]
+        prompt: "A colorful diamond-shaped kite flying high in a blue sky with a long tail of ribbons, a child holding the string below, clouds and birds around, simple cartoon for children."
+
+      - fr_slug: bricolage-tableau-nature
+        en_slug: crafts-nature-collage
+        fr_title: "Tableau nature"
+        en_title: "Nature Collage"
+        fr_tags: ["tableau", "nature", "feuilles", "collage"]
+        en_tags: ["collage", "nature", "leaves", "art"]
+        prompt: "A framed nature collage art piece made from pressed flowers, leaves, and small stones arranged in a pattern, with a child's hand adding the last piece, simple cute cartoon for children."
+
