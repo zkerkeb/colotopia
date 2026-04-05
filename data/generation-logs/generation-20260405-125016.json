@@ -1,0 +1,115 @@
+{
+  "summary": {
+    "total": 8,
+    "success": 1,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-04-05T12:48:49.159553+00:00",
+      "backend": "gemini",
+      "fr_slug": "portrait-enfant-peintre",
+      "en_slug": "portrait-child-painter",
+      "prompt": "A happy child wearing a paint-splattered smock, holding a paintbrush and palette, with a colorful canvas on an easel behind them, simple cute cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/portrait-enfant-peintre.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "Gemini Imagen returned no images (possibly filtered)"
+    },
+    {
+      "timestamp": "2026-04-05T12:49:02.881731+00:00",
+      "backend": "gemini",
+      "fr_slug": "portrait-enfant-astronaute",
+      "en_slug": "portrait-child-astronaut",
+      "prompt": "A cute child in a full astronaut spacesuit with a helmet and visor, holding a flag, with the moon and stars in the background, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/portrait-enfant-astronaute.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/portrait-enfant-astronaute.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/portrait-child-astronaut.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 89.96459705006069,
+        "black_pct": 7.460137197925479,
+        "mid_pct": 1.609684775811969,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:49:14.322569+00:00",
+      "backend": "gemini",
+      "fr_slug": "portrait-enfant-chef",
+      "en_slug": "portrait-child-chef",
+      "prompt": "A cheerful child wearing a tall chef's hat and apron, holding a large wooden spoon, with a mixing bowl on the counter, simple cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/portrait-enfant-chef.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "Gemini Imagen returned no images (possibly filtered)"
+    },
+    {
+      "timestamp": "2026-04-05T12:49:26.376502+00:00",
+      "backend": "gemini",
+      "fr_slug": "portrait-enfant-explorer",
+      "en_slug": "portrait-child-explorer",
+      "prompt": "An adventurous child with a pith helmet, binoculars, and a backpack, holding a map while standing in the jungle with butterflies and tropical plants around them, cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/portrait-enfant-explorer.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "Gemini Imagen returned no images (possibly filtered)"
+    },
+    {
+      "timestamp": "2026-04-05T12:49:38.938466+00:00",
+      "backend": "gemini",
+      "fr_slug": "portrait-enfant-musicien",
+      "en_slug": "portrait-child-musician",
+      "prompt": "A happy child playing a guitar that is almost as big as them, surrounded by musical notes floating in the air, wearing casual clothes with a big smile, cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/portrait-enfant-musicien.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "Gemini Imagen returned no images (possibly filtered)"
+    },
+    {
+      "timestamp": "2026-04-05T12:49:51.301649+00:00",
+      "backend": "gemini",
+      "fr_slug": "portrait-enfant-jardinier",
+      "en_slug": "portrait-child-gardener",
+      "prompt": "A child kneeling in a garden planting a small seedling, wearing gardening gloves and a sun hat, surrounded by flowers and vegetables, simple cute cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/portrait-enfant-jardinier.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "Gemini Imagen returned no images (possibly filtered)"
+    },
+    {
+      "timestamp": "2026-04-05T12:50:01.504194+00:00",
+      "backend": "gemini",
+      "fr_slug": "portrait-enfant-pompier",
+      "en_slug": "portrait-child-firefighter",
+      "prompt": "A child dressed in a firefighter uniform with a helmet and boots, holding a small fire hose, with a toy fire truck nearby, big confident smile, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/portrait-enfant-pompier.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "Gemini Imagen returned no images (possibly filtered)"
+    },
+    {
+      "timestamp": "2026-04-05T12:50:12.070813+00:00",
+      "backend": "gemini",
+      "fr_slug": "portrait-enfant-scientifique",
+      "en_slug": "portrait-child-scientist",
+      "prompt": "A curious child wearing safety goggles and a lab coat, holding a test tube that bubbles, with a science kit and magnifying glass on the table, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/portrait-enfant-scientifique.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "Gemini Imagen returned no images (possibly filtered)"
+    }
+  ]
+}

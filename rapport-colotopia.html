@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rapport Colotopia — 5 Avril 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #0f1117;
+    color: #e0e0e8;
+    line-height: 1.6;
+    padding: 2rem;
+  }
+
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  .header {
+    text-align: center;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(135deg, #1a1d2e, #2a1a3e);
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+  }
+
+  .header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #a78bfa, #f472b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.3rem;
+  }
+
+  .header .subtitle {
+    color: #9ca3af;
+    font-size: 0.95rem;
+  }
+
+  .section-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #c4b5fd;
+    margin: 2rem 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .kpi-card {
+    background: #1a1d2e;
+    border-radius: 12px;
+    padding: 1.3rem;
+    border: 1px solid rgba(255,255,255,0.06);
+    text-align: center;
+  }
+
+  .kpi-card .value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f9fafb;
+  }
+
+  .kpi-card .label {
+    font-size: 0.78rem;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.3rem;
+  }
+
+  .kpi-card.highlight { border-color: rgba(139, 92, 246, 0.4); }
+  .kpi-card.highlight .value { color: #a78bfa; }
+  .kpi-card.green .value { color: #34d399; }
+  .kpi-card.amber .value { color: #fbbf24; }
+  .kpi-card.rose .value { color: #f472b6; }
+
+  .dual-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  @media (max-width: 700px) {
+    .dual-grid { grid-template-columns: 1fr; }
+  }
+
+  .card {
+    background: #1a1d2e;
+    border-radius: 12px;
+    padding: 1.3rem;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .card h3 {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+
+  th {
+    text-align: left;
+    color: #6b7280;
+    font-weight: 500;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 0.6rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  th:not(:first-child) { text-align: right; }
+
+  td {
+    padding: 0.55rem 0.6rem;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    color: #d1d5db;
+  }
+
+  td:not(:first-child) { text-align: right; font-variant-numeric: tabular-nums; }
+
+  tr:hover td { background: rgba(139, 92, 246, 0.04); }
+
+  .bar-container {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .bar-label {
+    font-size: 0.82rem;
+    color: #d1d5db;
+    min-width: 90px;
+    text-align: right;
+  }
+
+  .bar-track {
+    flex: 1;
+    height: 22px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .bar-fill {
+    height: 100%;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+    min-width: 30px;
+  }
+
+  .chart-area {
+    width: 100%;
+    height: 180px;
+    margin-top: 0.5rem;
+  }
+
+  .spark-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 120px;
+    padding: 0 0.5rem;
+  }
+
+  .spark-bar {
+    flex: 1;
+    background: linear-gradient(180deg, #a78bfa, #7c3aed);
+    border-radius: 3px 3px 0 0;
+    position: relative;
+    min-width: 4px;
+    transition: opacity 0.2s;
+  }
+
+  .spark-bar:hover { opacity: 0.8; }
+
+  .spark-labels {
+    display: flex;
+    gap: 3px;
+    padding: 0.4rem 0.5rem 0;
+    font-size: 0.65rem;
+    color: #6b7280;
+  }
+
+  .spark-labels span { flex: 1; text-align: center; }
+
+  .insights {
+    background: linear-gradient(135deg, #1a1d2e, #1e1a2e);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    margin-top: 1.5rem;
+  }
+
+  .insights h3 {
+    font-size: 0.95rem;
+    color: #c4b5fd;
+    margin-bottom: 1rem;
+  }
+
+  .insight-item {
+    display: flex;
+    gap: 0.7rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.88rem;
+    color: #d1d5db;
+    line-height: 1.5;
+  }
+
+  .insight-icon { font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
+
+  .footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    color: #6b7280;
+    font-size: 0.78rem;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>Colotopia — Rapport Performance</h1>
+    <div class="subtitle">Période : 24 mars — 5 avril 2026 (28 derniers jours)</div>
+  </div>
+
+  <!-- KPIs Analytics -->
+  <div class="section-title">Google Analytics</div>
+  <div class="kpi-grid">
+    <div class="kpi-card highlight">
+      <div class="value">46</div>
+      <div class="label">Utilisateurs</div>
+    </div>
+    <div class="kpi-card">
+      <div class="value">45</div>
+      <div class="label">Nouveaux utilisateurs</div>
+    </div>
+    <div class="kpi-card green">
+      <div class="value">76</div>
+      <div class="label">Sessions</div>
+    </div>
+    <div class="kpi-card">
+      <div class="value">656</div>
+      <div class="label">Pages vues</div>
+    </div>
+    <div class="kpi-card amber">
+      <div class="value">8:06</div>
+      <div class="label">Durée moy. session</div>
+    </div>
+    <div class="kpi-card rose">
+      <div class="value">50%</div>
+      <div class="label">Taux de rebond</div>
+    </div>
+  </div>
+
+  <!-- Trend chart -->
+  <div class="card">
+    <h3>Utilisateurs par jour</h3>
+    <div class="spark-row">
+      <div class="spark-bar" style="height: 33%" title="24/03: 3"></div>
+      <div class="spark-bar" style="height: 78%" title="25/03: 7"></div>
+      <div class="spark-bar" style="height: 33%" title="26/03: 3"></div>
+      <div class="spark-bar" style="height: 56%" title="27/03: 5"></div>
+      <div class="spark-bar" style="height: 67%" title="28/03: 6"></div>
+      <div class="spark-bar" style="height: 11%" title="29/03: 1"></div>
+      <div class="spark-bar" style="height: 44%" title="30/03: 4"></div>
+      <div class="spark-bar" style="height: 22%" title="31/03: 2"></div>
+      <div class="spark-bar" style="height: 33%" title="01/04: 3"></div>
+      <div class="spark-bar" style="height: 33%" title="02/04: 3"></div>
+      <div class="spark-bar" style="height: 100%" title="03/04: 9"></div>
+      <div class="spark-bar" style="height: 89%" title="04/04: 8"></div>
+      <div class="spark-bar" style="height: 33%" title="05/04: 3"></div>
+    </div>
+    <div class="spark-labels">
+      <span>24/03</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span><span>01/04</span><span>02</span><span>03</span><span>04</span><span>05</span>
+    </div>
+  </div>
+
+  <!-- KPIs Search Console -->
+  <div class="section-title">Google Search Console</div>
+  <div class="kpi-grid">
+    <div class="kpi-card highlight">
+      <div class="value">16</div>
+      <div class="label">Clics</div>
+    </div>
+    <div class="kpi-card">
+      <div class="value">659</div>
+      <div class="label">Impressions</div>
+    </div>
+    <div class="kpi-card green">
+      <div class="value">2.4%</div>
+      <div class="label">CTR moyen</div>
+    </div>
+    <div class="kpi-card amber">
+      <div class="value">10.8</div>
+      <div class="label">Position moyenne</div>
+    </div>
+    <div class="kpi-card">
+      <div class="value">1 361</div>
+      <div class="label">URLs indexées (sitemap)</div>
+    </div>
+  </div>
+
+  <!-- Impressions trend -->
+  <div class="card" style="margin-bottom: 1rem;">
+    <h3>Impressions Google par jour</h3>
+    <div class="spark-row">
+      <div class="spark-bar" style="height: 7%; background: linear-gradient(180deg, #34d399, #059669);" title="21/03: 10"></div>
+      <div class="spark-bar" style="height: 11%; background: linear-gradient(180deg, #34d399, #059669);" title="22/03: 17"></div>
+      <div class="spark-bar" style="height: 9%; background: linear-gradient(180deg, #34d399, #059669);" title="23/03: 14"></div>
+      <div class="spark-bar" style="height: 9%; background: linear-gradient(180deg, #34d399, #059669);" title="24/03: 13"></div>
+      <div class="spark-bar" style="height: 20%; background: linear-gradient(180deg, #34d399, #059669);" title="25/03: 30"></div>
+      <div class="spark-bar" style="height: 18%; background: linear-gradient(180deg, #34d399, #059669);" title="26/03: 27"></div>
+      <div class="spark-bar" style="height: 17%; background: linear-gradient(180deg, #34d399, #059669);" title="27/03: 25"></div>
+      <div class="spark-bar" style="height: 23%; background: linear-gradient(180deg, #34d399, #059669);" title="28/03: 35"></div>
+      <div class="spark-bar" style="height: 24%; background: linear-gradient(180deg, #34d399, #059669);" title="29/03: 36"></div>
+      <div class="spark-bar" style="height: 13%; background: linear-gradient(180deg, #34d399, #059669);" title="30/03: 20"></div>
+      <div class="spark-bar" style="height: 27%; background: linear-gradient(180deg, #34d399, #059669);" title="31/03: 40"></div>
+      <div class="spark-bar" style="height: 28%; background: linear-gradient(180deg, #34d399, #059669);" title="01/04: 42"></div>
+      <div class="spark-bar" style="height: 42%; background: linear-gradient(180deg, #34d399, #059669);" title="02/04: 63"></div>
+      <div class="spark-bar" style="height: 100%; background: linear-gradient(180deg, #34d399, #059669);" title="03/04: 149"></div>
+      <div class="spark-bar" style="height: 72%; background: linear-gradient(180deg, #34d399, #059669);" title="04/04: 107"></div>
+      <div class="spark-bar" style="height: 21%; background: linear-gradient(180deg, #34d399, #059669);" title="05/04: 31"></div>
+    </div>
+    <div class="spark-labels">
+      <span>21/03</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span><span>01/04</span><span>02</span><span>03</span><span>04</span><span>05</span>
+    </div>
+  </div>
+
+  <div class="dual-grid">
+    <!-- Sources de trafic -->
+    <div class="card">
+      <h3>Sources de trafic</h3>
+      <div class="bar-container">
+        <div class="bar-label">Direct</div>
+        <div class="bar-track"><div class="bar-fill" style="width: 100%; background: linear-gradient(90deg, #a78bfa, #7c3aed);">23</div></div>
+      </div>
+      <div class="bar-container">
+        <div class="bar-label">Organic</div>
+        <div class="bar-track"><div class="bar-fill" style="width: 87%; background: linear-gradient(90deg, #34d399, #059669);">20</div></div>
+      </div>
+      <div class="bar-container">
+        <div class="bar-label">Social</div>
+        <div class="bar-track"><div class="bar-fill" style="width: 4%; background: linear-gradient(90deg, #f472b6, #db2777);">1</div></div>
+      </div>
+      <div class="bar-container">
+        <div class="bar-label">Referral</div>
+        <div class="bar-track"><div class="bar-fill" style="width: 4%; background: linear-gradient(90deg, #fbbf24, #d97706);">1</div></div>
+      </div>
+    </div>
+
+    <!-- Appareils -->
+    <div class="card">
+      <h3>Appareils</h3>
+      <div class="bar-container">
+        <div class="bar-label">Desktop</div>
+        <div class="bar-track"><div class="bar-fill" style="width: 100%; background: linear-gradient(90deg, #a78bfa, #7c3aed);">32 (68%)</div></div>
+      </div>
+      <div class="bar-container">
+        <div class="bar-label">Mobile</div>
+        <div class="bar-track"><div class="bar-fill" style="width: 44%; background: linear-gradient(90deg, #f472b6, #db2777);">14 (30%)</div></div>
+      </div>
+      <div class="bar-container">
+        <div class="bar-label">Smart TV</div>
+        <div class="bar-track"><div class="bar-fill" style="width: 3%; background: linear-gradient(90deg, #fbbf24, #d97706);">1</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dual-grid" style="margin-top: 1rem;">
+    <!-- Top pays -->
+    <div class="card">
+      <h3>Top pays</h3>
+      <table>
+        <tr><th>Pays</th><th>Utilisateurs</th></tr>
+        <tr><td>France</td><td>24</td></tr>
+        <tr><td>États-Unis</td><td>11</td></tr>
+        <tr><td>Algérie</td><td>2</td></tr>
+        <tr><td>Canada</td><td>2</td></tr>
+        <tr><td>Japon</td><td>2</td></tr>
+        <tr><td>Australie</td><td>1</td></tr>
+        <tr><td>Autriche</td><td>1</td></tr>
+        <tr><td>Belgique</td><td>1</td></tr>
+      </table>
+    </div>
+
+    <!-- Top pages -->
+    <div class="card">
+      <h3>Top pages vues</h3>
+      <table>
+        <tr><th>Page</th><th>Vues</th></tr>
+        <tr><td>/fr/ (accueil)</td><td>238</td></tr>
+        <tr><td>/fr/vehicules</td><td>92</td></tr>
+        <tr><td>/fr/dinosaures</td><td>64</td></tr>
+        <tr><td>/fr/coloriage/animaux-chien</td><td>28</td></tr>
+        <tr><td>/fr/nature</td><td>26</td></tr>
+        <tr><td>/fr/metiers</td><td>18</td></tr>
+        <tr><td>/en/ (accueil EN)</td><td>12</td></tr>
+        <tr><td>/fr/animaux</td><td>13</td></tr>
+        <tr><td>/fr/ferme</td><td>7</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Top requêtes GSC -->
+  <div class="card" style="margin-top: 1rem;">
+    <h3>Top requêtes Google (Search Console)</h3>
+    <table>
+      <tr><th>Requête</th><th>Clics</th><th>Impressions</th><th>CTR</th><th>Position</th></tr>
+      <tr><td>colotopia</td><td>1</td><td>11</td><td>9.1%</td><td>3.3</td></tr>
+      <tr><td>coloriage à imprimer enfant 2 ans</td><td>1</td><td>1</td><td>100%</td><td>9.0</td></tr>
+      <tr><td>lettre s a imprimer</td><td>1</td><td>2</td><td>50%</td><td>4.0</td></tr>
+      <tr><td>coloriage drole</td><td>0</td><td>7</td><td>0%</td><td>12.0</td></tr>
+      <tr><td>coloriage chasse aux oeufs</td><td>0</td><td>5</td><td>0%</td><td>9.2</td></tr>
+      <tr><td>char carnaval dessin</td><td>0</td><td>4</td><td>0%</td><td>10.2</td></tr>
+      <tr><td>coloriage chasse aux oeufs de paques</td><td>0</td><td>3</td><td>0%</td><td>6.7</td></tr>
+      <tr><td>coloriage cactus kawaii</td><td>0</td><td>2</td><td>0%</td><td>3.0</td></tr>
+      <tr><td>bethlehem star coloring page</td><td>0</td><td>2</td><td>0%</td><td>34.0</td></tr>
+    </table>
+  </div>
+
+  <!-- Top pages GSC -->
+  <div class="card" style="margin-top: 1rem;">
+    <h3>Top pages dans Google (Search Console)</h3>
+    <table>
+      <tr><th>Page</th><th>Clics</th><th>Impressions</th><th>CTR</th><th>Position</th></tr>
+      <tr><td>/fr/coloriage/paques-chasse-oeufs</td><td>1</td><td>25</td><td>4.0%</td><td>9.5</td></tr>
+      <tr><td>/en/coloring/easter-bunny-bike</td><td>1</td><td>11</td><td>9.1%</td><td>7.1</td></tr>
+      <tr><td>colotopia.com/ (accueil)</td><td>1</td><td>9</td><td>11.1%</td><td>3.4</td></tr>
+      <tr><td>/en/coloring/farm-pig</td><td>1</td><td>9</td><td>11.1%</td><td>3.1</td></tr>
+      <tr><td>/fr/blog/coloriages-enfants-2-5-ans</td><td>1</td><td>10</td><td>10.0%</td><td>8.3</td></tr>
+      <tr><td>/fr/blog/colorier-mandala-techniques</td><td>1</td><td>7</td><td>14.3%</td><td>22.4</td></tr>
+      <tr><td>/fr/blog/coloriage-anti-stress-adultes</td><td>1</td><td>6</td><td>16.7%</td><td>8.7</td></tr>
+      <tr><td>/en/coloring/cats-singing</td><td>1</td><td>3</td><td>33.3%</td><td>3.7</td></tr>
+    </table>
+  </div>
+
+  <!-- Insights -->
+  <div class="insights">
+    <h3>Analyse & Recommandations</h3>
+
+    <div class="insight-item">
+      <span class="insight-icon">📈</span>
+      <div><strong>Tendance très positive sur les impressions.</strong> Les impressions Google explosent en fin de période (149 le 3 avril vs ~15 début mars). Le site commence à être indexé et à gagner en visibilité. C'est le signe que le SEO commence à prendre.</div>
+    </div>
+
+    <div class="insight-item">
+      <span class="insight-icon">⏱️</span>
+      <div><strong>Durée de session excellente (8 min).</strong> Les utilisateurs passent beaucoup de temps sur le site, ce qui montre un vrai engagement avec les coloriages. C'est un signal très positif pour Google.</div>
+    </div>
+
+    <div class="insight-item">
+      <span class="insight-icon">🔍</span>
+      <div><strong>Position moyenne à 10.8 = page 2 de Google.</strong> Beaucoup de requêtes sont en position 6-12, juste à la limite de la page 1. Un travail ciblé de SEO on-page pourrait faire basculer ces résultats en page 1 et multiplier les clics.</div>
+    </div>
+
+    <div class="insight-item">
+      <span class="insight-icon">🎯</span>
+      <div><strong>Requêtes saisonnières à exploiter.</strong> Les requêtes autour de Pâques (chasse aux oeufs, easter bunny) génèrent des impressions. Créer du contenu saisonnier ciblé en avance peut capturer ce trafic.</div>
+    </div>
+
+    <div class="insight-item">
+      <span class="insight-icon">🌍</span>
+      <div><strong>Potentiel international.</strong> 24% des utilisateurs viennent des USA, et les pages EN commencent à ranker. Renforcer le contenu anglophone pourrait doubler l'audience.</div>
+    </div>
+
+    <div class="insight-item">
+      <span class="insight-icon">📱</span>
+      <div><strong>30% mobile, 68% desktop.</strong> Pour un site de coloriages (souvent imprimés), la dominance desktop est logique. S'assurer que l'expérience d'impression est optimisée.</div>
+    </div>
+
+    <div class="insight-item">
+      <span class="insight-icon">🏗️</span>
+      <div><strong>1 361 URLs indexées</strong> via le sitemap, sans erreur. L'infrastructure technique est saine. Le site a une bonne base de contenu à faire ranker.</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Rapport généré le 5 avril 2026 — Données : Google Analytics & Search Console
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,32 +1,69 @@
-import { getCollection } from 'astro:content';
-import { existsSync } from 'node:fs';
-import { join } from 'node:path';
+import { db } from '../db';
+import { colorings } from '../db/schema';
+import { eq } from 'drizzle-orm';
+import { cdnPng } from './cdn';
 
 /**
- * Returns coloriages that have a corresponding image file on disk.
- * Prevents pages from being generated for content stubs without images.
+ * Shape expected by every page and component.
+ * Mirrors the old Astro content-collection entry so existing templates
+ * keep working with `c.data.*` access.
  */
-export async function getPublishableColoriages(locale: 'fr' | 'en') {
-  const all = await getCollection('coloriages', ({ data }) => data.locale === locale);
-  return all.filter((c) => {
-    const imagePath = join(process.cwd(), 'public', c.data.image);
-    // Accept both the original PNG and the optimized WebP
-    const webpPath = imagePath.replace(/\.png$/, '.webp');
-    // Also require the thumbnail used by ColoringCard
-    const thumbPath = imagePath
-      .replace('/images/coloriages/', '/images/coloriages/thumbs/')
-      .replace(/\.png$/, '.webp');
-    const hasSource = existsSync(imagePath) || existsSync(webpPath);
-    const hasThumb = existsSync(thumbPath);
-    return hasSource && hasThumb;
-  });
+export interface ColoringData {
+  title: string;
+  slug: string;
+  category: string;
+  audience: string;
+  tags: string[];
+  image: string;   // CDN PNG URL (full-size)
+  alt: string;
+  locale: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  printable: boolean;
+  createdAt?: string;
+}
+
+export interface ColoringEntry {
+  id: string;
+  data: ColoringData;
 }
 
 /**
- * Builds a mapping of FR slug → EN slug and EN slug → FR slug,
- * using the shared image path as the linking key.
+ * Returns publishable coloriages for a given locale.
+ * Drop-in replacement for the old YAML-based version.
  */
-export async function buildSlugMap(): Promise<{ frToEn: Record<string, string>; enToFr: Record<string, string> }> {
+export async function getPublishableColoriages(locale: 'fr' | 'en'): Promise<ColoringEntry[]> {
+  const rows = await db
+    .select()
+    .from(colorings)
+    .where(eq(colorings.locale, locale));
+
+  return rows.map((row) => ({
+    id: `${row.locale}/${row.slug}`,
+    data: {
+      title: row.title,
+      slug: row.slug,
+      category: row.categorySlug,
+      audience: row.audience,
+      tags: (row.tagsJson as string[]) ?? [],
+      image: cdnPng(row.imagePath),
+      alt: row.alt ?? '',
+      locale: row.locale,
+      seoTitle: row.seoTitle ?? undefined,
+      seoDescription: row.seoDescription ?? undefined,
+      printable: row.printable,
+      createdAt: row.createdAt?.toISOString().split('T')[0],
+    },
+  }));
+}
+
+/**
+ * Builds a FR ↔ EN slug mapping using the shared image key.
+ */
+export async function buildSlugMap(): Promise<{
+  frToEn: Record<string, string>;
+  enToFr: Record<string, string>;
+}> {
   const frPages = await getPublishableColoriages('fr');
   const enPages = await getPublishableColoriages('en');
 

@@ -1,0 +1,185 @@
+{
+  "summary": {
+    "total": 8,
+    "success": 8,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-04-05T12:41:33.288301+00:00",
+      "backend": "gemini",
+      "fr_slug": "jardinage-arrosoir",
+      "en_slug": "gardening-watering-can",
+      "prompt": "A cute watering can with flowers and plants growing out of it, surrounded by butterflies and small birds, simple cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/jardinage-arrosoir.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/jardinage-arrosoir.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/gardening-watering-can.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.74793099643212,
+        "black_pct": 5.7397837201603705,
+        "mid_pct": 3.4455346305219403,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:41:49.408017+00:00",
+      "backend": "gemini",
+      "fr_slug": "jardinage-potager",
+      "en_slug": "gardening-vegetable-garden",
+      "prompt": "A charming vegetable garden with rows of carrots, tomatoes, and lettuce, with a small fence, butterflies, and a watering can nearby, cute cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/jardinage-potager.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/jardinage-potager.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/gardening-vegetable-garden.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 87.46197631220805,
+        "black_pct": 4.410471916724905,
+        "mid_pct": 5.003218449994483,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:42:01.130267+00:00",
+      "backend": "gemini",
+      "fr_slug": "jardinage-serre",
+      "en_slug": "gardening-greenhouse",
+      "prompt": "A cute small greenhouse with glass panes, filled with potted plants and seedlings inside, flowers growing around the outside, cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/jardinage-serre.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/jardinage-serre.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/gardening-greenhouse.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 83.70342443079413,
+        "black_pct": 7.416963990142348,
+        "mid_pct": 5.724335160186854,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:42:12.534117+00:00",
+      "backend": "gemini",
+      "fr_slug": "jardinage-epouvantail",
+      "en_slug": "gardening-scarecrow",
+      "prompt": "A friendly scarecrow in a hat and patched clothes standing in a field, with birds perched on its arms instead of being scared, vegetables growing around it, cute cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/jardinage-epouvantail.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/jardinage-epouvantail.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/gardening-scarecrow.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 89.61415382351859,
+        "black_pct": 5.224785743186081,
+        "mid_pct": 3.2104038694964503,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:42:23.904872+00:00",
+      "backend": "gemini",
+      "fr_slug": "jardinage-tournesol",
+      "en_slug": "gardening-sunflower",
+      "prompt": "A tall happy sunflower with a smiling face, with bees and butterflies visiting its large flower head, set in a sunny garden, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/jardinage-tournesol.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/jardinage-tournesol.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/gardening-sunflower.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 73.86880678265348,
+        "black_pct": 2.7278662596093723,
+        "mid_pct": 14.360953764666936,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:43:13.272202+00:00",
+      "backend": "gemini",
+      "fr_slug": "jardinage-outils",
+      "en_slug": "gardening-tools",
+      "prompt": "A collection of cute gardening tools\u2014shovel, rake, trowel, gloves, and watering can\u2014arranged neatly, with small flowers and worms around them, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/jardinage-outils.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/jardinage-outils.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/gardening-tools.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 92.61223194909331,
+        "black_pct": 2.5926913598411003,
+        "mid_pct": 2.9403299371022915,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:43:34.324008+00:00",
+      "backend": "gemini",
+      "fr_slug": "jardinage-brouette",
+      "en_slug": "gardening-wheelbarrow",
+      "prompt": "A wooden wheelbarrow overflowing with freshly picked vegetables\u2014pumpkins, cabbages, and carrots\u2014sitting in a sunny garden, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/jardinage-brouette.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/jardinage-brouette.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/gardening-wheelbarrow.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 90.03370176922793,
+        "black_pct": 3.882186339059109,
+        "mid_pct": 4.062649428035458,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:43:45.620439+00:00",
+      "backend": "gemini",
+      "fr_slug": "jardinage-panier-recolte",
+      "en_slug": "gardening-harvest-basket",
+      "prompt": "A large woven basket filled with colorful fruits and vegetables\u2014apples, tomatoes, corn, berries\u2014sitting on a wooden table with leaves around it, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/jardinage-panier-recolte.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/jardinage-panier-recolte.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/gardening-harvest-basket.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 86.36416301909,
+        "black_pct": 7.8711792400779785,
+        "mid_pct": 3.5891234781329313,
+        "reason": null
+      }
+    }
+  ]
+}

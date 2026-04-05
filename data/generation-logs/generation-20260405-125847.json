@@ -1,0 +1,93 @@
+{
+  "summary": {
+    "total": 7,
+    "success": 7,
+    "dry_run": true
+  },
+  "entries": [
+    {
+      "timestamp": "2026-04-05T12:58:47.174626+00:00",
+      "backend": "gemini",
+      "fr_slug": "portrait-enfant-peintre",
+      "en_slug": "portrait-child-painter",
+      "prompt": "Black and white coloring book line art. A simple outline drawing of a child figure wearing a smock, holding a paintbrush and palette, with a canvas on an easel, thick clean black outlines on pure white background, no color fill, no shading, cute cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/portrait-enfant-peintre.png",
+      "dry_run": true,
+      "status": "dry_run",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-05T12:58:47.174875+00:00",
+      "backend": "gemini",
+      "fr_slug": "portrait-enfant-chef",
+      "en_slug": "portrait-child-chef",
+      "prompt": "Black and white coloring book line art. A simple outline drawing of a child figure wearing a tall chef hat and apron, holding a wooden spoon, mixing bowl nearby, thick clean black outlines on pure white background, no color fill, no shading, cute cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/portrait-enfant-chef.png",
+      "dry_run": true,
+      "status": "dry_run",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-05T12:58:47.174896+00:00",
+      "backend": "gemini",
+      "fr_slug": "portrait-enfant-explorer",
+      "en_slug": "portrait-child-explorer",
+      "prompt": "Black and white coloring book line art. A simple outline drawing of a child figure with a pith helmet, binoculars around neck, and a backpack, holding a map, tropical plants around, thick black outlines on pure white background, no color fill, no shading. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/portrait-enfant-explorer.png",
+      "dry_run": true,
+      "status": "dry_run",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-05T12:58:47.174912+00:00",
+      "backend": "gemini",
+      "fr_slug": "portrait-enfant-musicien",
+      "en_slug": "portrait-child-musician",
+      "prompt": "Black and white coloring book line art. A simple outline drawing of a child figure playing a large guitar, musical notes floating around, thick clean black outlines on pure white background, no color fill, no shading, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/portrait-enfant-musicien.png",
+      "dry_run": true,
+      "status": "dry_run",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-05T12:58:47.174926+00:00",
+      "backend": "gemini",
+      "fr_slug": "portrait-enfant-jardinier",
+      "en_slug": "portrait-child-gardener",
+      "prompt": "Black and white coloring book line art. A simple outline drawing of a child figure kneeling in a garden, planting a seedling, wearing gloves and a sun hat, flowers and vegetables around, thick black outlines on pure white background, no color fill, no shading. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/portrait-enfant-jardinier.png",
+      "dry_run": true,
+      "status": "dry_run",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-05T12:58:47.174938+00:00",
+      "backend": "gemini",
+      "fr_slug": "portrait-enfant-pompier",
+      "en_slug": "portrait-child-firefighter",
+      "prompt": "Black and white coloring book line art. A simple outline drawing of a child figure in a firefighter uniform with helmet and boots, holding a fire hose, toy fire truck nearby, thick black outlines on pure white background, no color fill, no shading. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/portrait-enfant-pompier.png",
+      "dry_run": true,
+      "status": "dry_run",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-05T12:58:47.174956+00:00",
+      "backend": "gemini",
+      "fr_slug": "portrait-enfant-scientifique",
+      "en_slug": "portrait-child-scientist",
+      "prompt": "Black and white coloring book line art. A simple outline drawing of a child figure wearing safety goggles and a lab coat, holding a bubbling test tube, magnifying glass on table, thick black outlines on pure white background, no color fill, no shading. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/portrait-enfant-scientifique.png",
+      "dry_run": true,
+      "status": "dry_run",
+      "content_files": [],
+      "error": null
+    }
+  ]
+}

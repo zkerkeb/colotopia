@@ -1,7 +1,10 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
-import { getAlternateUrl } from './src/lib/sitemap-alternates.ts';
+import { getAlternateUrl, initSlugMaps } from './src/lib/sitemap-alternates.ts';
+
+// Pre-load DB slug maps before build starts
+await initSlugMaps();
 
 export default defineConfig({
   site: 'https://colotopia.com',

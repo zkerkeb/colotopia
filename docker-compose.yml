@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: colotopia-db-local
+    restart: unless-stopped
+    ports:
+      - '5433:5432'
+    environment:
+      POSTGRES_DB: colotopia
+      POSTGRES_USER: colotopia
+      POSTGRES_PASSWORD: colotopia_local
+    volumes:
+      - colotopia_pgdata:/var/lib/postgresql/data
+
+volumes:
+  colotopia_pgdata:

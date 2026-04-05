@@ -11,6 +11,7 @@ import AffiliateWidget from './AffiliateWidget.astro';
 import type { Locale } from '../lib/i18n';
 import type { Category } from '../lib/i18n';
 import { t, getLocalePath, getColoringBasePath, categoryColors, categoryIcons, getCategoryLabel, getCategorySlug } from '../lib/i18n';
+import { toWebp } from '../lib/cdn';
 
 interface RelatedItem {
   title: string;
@@ -50,15 +51,14 @@ const exploreCataLabel = locale === 'fr'
   ? `Voir plus de coloriages ${catLabel}`
   : `More ${catLabel} coloring pages`;
 
-// Derive WebP path from PNG path (original PNG kept for PDF generation)
-// e.g. /images/coloriages/animaux-chat.png → /images/coloriages/animaux-chat.webp
-const imageWebp = image.replace(/\.png$/, '.webp');
+// Derive WebP from PNG URL (works with CDN URLs)
+const imageWebp = toWebp(image);
 
 // Social sharing URLs
 const siteUrl = 'https://colotopia.com';
 const pageUrl = `${siteUrl}${getLocalePath(locale, `/${getColoringBasePath(locale)}/${slug}`)}/`;
 const shareText = `${title} - ${t('site.title', locale)}`;
-const imageAbsUrl = `${siteUrl}${image}`;
+const imageAbsUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(`${shareText} ${pageUrl}`)}`;
 const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
 const pinterestUrl = `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(pageUrl)}&media=${encodeURIComponent(imageAbsUrl)}&description=${encodeURIComponent(shareText)}`;

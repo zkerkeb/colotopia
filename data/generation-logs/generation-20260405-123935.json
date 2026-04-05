@@ -1,0 +1,219 @@
+{
+  "summary": {
+    "total": 10,
+    "success": 9,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-04-05T12:37:03.647918+00:00",
+      "backend": "gemini",
+      "fr_slug": "fee-foret",
+      "en_slug": "fairy-forest",
+      "prompt": "A cute little fairy with butterfly wings sitting on a mushroom in a forest, surrounded by flowers and fireflies, friendly cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/fee-foret.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/fee-foret.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/fairy-forest.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 87.42919410012138,
+        "black_pct": 5.360190532239673,
+        "mid_pct": 4.510657667267444,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:37:32.815536+00:00",
+      "backend": "gemini",
+      "fr_slug": "fee-fleurs",
+      "en_slug": "fairy-flowers",
+      "prompt": "A tiny fairy sitting inside a large open flower with petals around her, her wings decorated with flower patterns, holding a smaller flower, cute cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/fee-fleurs.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/fee-fleurs.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/fairy-flowers.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 90.29908596020157,
+        "black_pct": 4.843169529554567,
+        "mid_pct": 3.052745797623864,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:37:44.199111+00:00",
+      "backend": "gemini",
+      "fr_slug": "fee-lune",
+      "en_slug": "fairy-moon",
+      "prompt": "A magical fairy sitting on a crescent moon, with long flowing hair and shimmering wings, surrounded by stars and small clouds, cute dreamy cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/fee-lune.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/fee-lune.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/fairy-moon.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 91.96647294662891,
+        "black_pct": 4.659671902011991,
+        "mid_pct": 2.1166826056571155,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:37:57.471825+00:00",
+      "backend": "gemini",
+      "fr_slug": "fee-eau",
+      "en_slug": "fairy-water",
+      "prompt": "A cute fairy with dragonfly wings hovering over a small pond, with water droplets and lily pads around her, friendly cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/fee-eau.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/fee-eau.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/fairy-water.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 90.2395906131607,
+        "black_pct": 4.596958104976643,
+        "mid_pct": 3.2567955272740647,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:38:09.038374+00:00",
+      "backend": "gemini",
+      "fr_slug": "fee-neige",
+      "en_slug": "fairy-snow",
+      "prompt": "A delicate fairy with icy crystal wings holding a snowflake, surrounded by falling snowflakes and icicles, wearing a winter outfit, cute cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/fee-neige.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "Gemini Imagen returned no images (possibly filtered)"
+    },
+    {
+      "timestamp": "2026-04-05T12:38:20.606302+00:00",
+      "backend": "gemini",
+      "fr_slug": "fee-jardin",
+      "en_slug": "fairy-garden",
+      "prompt": "A cheerful little fairy tending to a small garden with watering can in hand, surrounded by vegetables and fruit, wings decorated with leaf patterns, cute cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/fee-jardin.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/fee-jardin.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/fairy-garden.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 90.89344171846838,
+        "black_pct": 4.19851399565969,
+        "mid_pct": 3.0697116268804945,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:38:46.260839+00:00",
+      "backend": "gemini",
+      "fr_slug": "fee-etoiles",
+      "en_slug": "fairy-stars",
+      "prompt": "A sparkling fairy flying among big shining stars in the night sky, collecting stars in a small basket, wings glittering with star patterns, cute cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/fee-etoiles.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/fee-etoiles.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/fairy-stars.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 89.07253466730423,
+        "black_pct": 6.05188141391106,
+        "mid_pct": 3.075596792584691,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:39:00.908839+00:00",
+      "backend": "gemini",
+      "fr_slug": "fee-papillon",
+      "en_slug": "fairy-butterfly",
+      "prompt": "A cute fairy with large butterfly wings decorated with intricate patterns, standing on a flower with several butterflies around her, friendly cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/fee-papillon.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/fee-papillon.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/fairy-butterfly.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 89.98970096001766,
+        "black_pct": 4.1847666163975425,
+        "mid_pct": 3.633951888770368,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:39:13.386874+00:00",
+      "backend": "gemini",
+      "fr_slug": "fee-soleil",
+      "en_slug": "fairy-sun",
+      "prompt": "A bright cheerful fairy with sun-shaped wings radiating light, surrounded by sunbeams and small suns, wearing a summery outfit, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/fee-soleil.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/fee-soleil.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/fairy-sun.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 76.60016735939972,
+        "black_pct": 5.316695479457093,
+        "mid_pct": 7.6311748262037,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:39:28.102888+00:00",
+      "backend": "gemini",
+      "fr_slug": "fee-dents",
+      "en_slug": "fairy-tooth",
+      "prompt": "The tooth fairy flying at night carrying a small tooth in a pouch, with a wand that sparkles, wearing a nurse-style outfit with wings, cute cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/fee-dents.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/fee-dents.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/fairy-tooth.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 91.53993636664582,
+        "black_pct": 6.532993710229154,
+        "mid_pct": 1.2019991172251443,
+        "reason": null
+      }
+    }
+  ]
+}

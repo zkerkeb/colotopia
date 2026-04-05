@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pipx --version)",
+      "Bash(claude mcp:*)",
+      "mcp__analytics-mcp__get_account_summaries",
+      "mcp__analytics-mcp__run_report"
+    ]
+  }
+}

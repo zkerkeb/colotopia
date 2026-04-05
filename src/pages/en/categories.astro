@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
 import { getPublishableColoriages } from '../../lib/coloriages';
+import { toThumb } from '../../lib/cdn';
 import { t, ti, kidsCategories, adultCategories, getCategoryLabel, getCategorySlug, getLocalePath, type Category } from '../../lib/i18n';
 
 const locale = 'en';
@@ -67,7 +67,7 @@ const structuredData = {
       <a href={cat.href} class="category-card">
         <div class="preview-grid">
           {cat.previews.map((p) => {
-            const thumbWebp = p.image.replace('/images/coloriages/', '/images/coloriages/thumbs/').replace(/\.png$/, '.webp');
+            const thumbWebp = toThumb(p.image);
             return (
               <picture>
                 <source type="image/webp" srcset={thumbWebp} />
@@ -92,7 +92,7 @@ const structuredData = {
       <a href={cat.href} class="category-card">
         <div class="preview-grid">
           {cat.previews.map((p) => {
-            const thumbWebp = p.image.replace('/images/coloriages/', '/images/coloriages/thumbs/').replace(/\.png$/, '.webp');
+            const thumbWebp = toThumb(p.image);
             return (
               <picture>
                 <source type="image/webp" srcset={thumbWebp} />

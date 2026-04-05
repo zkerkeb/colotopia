@@ -1,0 +1,185 @@
+{
+  "summary": {
+    "total": 8,
+    "success": 8,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-04-05T12:43:57.055828+00:00",
+      "backend": "gemini",
+      "fr_slug": "insectes-coccinelle",
+      "en_slug": "insects-ladybug",
+      "prompt": "A cute large ladybug with round spots on her shell, big friendly eyes, sitting on a large green leaf with small flowers around, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/insectes-coccinelle.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/insectes-coccinelle.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/insects-ladybug.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 80.06363335417663,
+        "black_pct": 8.524938389671535,
+        "mid_pct": 10.547044543347923,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:44:13.268251+00:00",
+      "backend": "gemini",
+      "fr_slug": "insectes-abeille",
+      "en_slug": "insects-bee",
+      "prompt": "A friendly striped bee carrying pollen baskets on its legs, hovering over a flower with its wings visible, cheerful expression, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/insectes-abeille.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/insectes-abeille.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/insects-bee.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 87.85522492367676,
+        "black_pct": 9.923125022988929,
+        "mid_pct": 1.3899565969029315,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:44:38.807051+00:00",
+      "backend": "gemini",
+      "fr_slug": "insectes-libellule",
+      "en_slug": "insects-dragonfly",
+      "prompt": "A graceful dragonfly with large transparent patterned wings resting on a cattail near a pond, with its long segmented body visible, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/insectes-libellule.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/insectes-libellule.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/insects-dragonfly.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 90.66212711957921,
+        "black_pct": 5.569297826166919,
+        "mid_pct": 2.374158605215728,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:44:51.781306+00:00",
+      "backend": "gemini",
+      "fr_slug": "insectes-sauterelle",
+      "en_slug": "insects-grasshopper",
+      "prompt": "A cute grasshopper with long jumping legs perched on a blade of grass, with its antennae and wings clearly visible, friendly expression, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/insectes-sauterelle.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/insectes-sauterelle.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/insects-grasshopper.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 91.7929984919263,
+        "black_pct": 5.7993250450583,
+        "mid_pct": 1.5192923088240704,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:45:02.775198+00:00",
+      "backend": "gemini",
+      "fr_slug": "insectes-chenille",
+      "en_slug": "insects-caterpillar",
+      "prompt": "A cute segmented caterpillar with a smiling face munching on a leaf, with small round body segments decorated with dots and patterns, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/insectes-chenille.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/insectes-chenille.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/insects-caterpillar.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 89.89627395446354,
+        "black_pct": 7.405147680876889,
+        "mid_pct": 1.6908816713870602,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:45:16.937893+00:00",
+      "backend": "gemini",
+      "fr_slug": "insectes-scarabee",
+      "en_slug": "insects-beetle",
+      "prompt": "A round friendly beetle with a decorative patterned shell, six legs and antennae, walking on a log in a forest, simple cute cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/insectes-scarabee.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/insectes-scarabee.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/insects-beetle.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.67183764299114,
+        "black_pct": 8.124103431787251,
+        "mid_pct": 2.007117372273513,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:45:28.303631+00:00",
+      "backend": "gemini",
+      "fr_slug": "insectes-fourmi",
+      "en_slug": "insects-ant",
+      "prompt": "A determined cartoon ant carrying a large crumb on its back, with three body segments, six legs, and antennae visible, walking on a path, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/insectes-fourmi.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/insectes-fourmi.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/insects-ant.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 90.40460514216353,
+        "black_pct": 3.891887666899621,
+        "mid_pct": 3.453258910508699,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:45:47.779594+00:00",
+      "backend": "gemini",
+      "fr_slug": "insectes-bourdon",
+      "en_slug": "insects-bumblebee",
+      "prompt": "A fat fluffy bumblebee with thick fuzzy stripes on a big flower, its wings buzzing, looking happy, surrounded by other flowers and leaves, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/insectes-bourdon.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/insectes-bourdon.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/insects-bumblebee.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.13808070033473,
+        "black_pct": 8.234450288740943,
+        "mid_pct": 2.270846360392835,
+        "reason": null
+      }
+    }
+  ]
+}

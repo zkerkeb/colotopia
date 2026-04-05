@@ -10,7 +10,7 @@ import RelatedCategories from '../../../components/RelatedCategories.astro';
 import { categories, adultCategories, getCategoryLabel, getCategorySlug, ti, categoryIcons, categoryColors, type Category } from '../../../lib/i18n';
 import { getPublishableColoriages } from '../../../lib/coloriages';
 import { getPillarContent, getRelatedCategories } from '../../../data/pillar-content';
-import fs from 'node:fs';
+import { cdnBanner } from '../../../lib/cdn';
 
 const locale = 'en';
 
@@ -36,9 +36,8 @@ const label = getCategoryLabel(categoryKey, locale);
 const isAdult = (adultCategories as readonly string[]).includes(categoryKey);
 const catIcon = categoryIcons[categoryKey];
 const catColor = categoryColors[categoryKey];
-const bannerPng = fs.existsSync(`public/images/banners/${categoryKey}.png`);
-const bannerSrc = bannerPng ? `/images/banners/${categoryKey}.png` : `/images/banners/${categoryKey}.svg`;
-const hasBanner = bannerPng || fs.existsSync(`public/images/banners/${categoryKey}.svg`);
+const bannerSrc = cdnBanner(categoryKey);
+const hasBanner = true;
 const pillar = page.currentPage === 1 ? getPillarContent(categoryKey, locale) : null;
 const relatedCats = getRelatedCategories(categoryKey, locale);
 
@@ -59,14 +58,14 @@ const altUrl = page.currentPage === 1
   ? `${siteUrl}/fr/${categoryKey}/`
   : `${siteUrl}/fr/${categoryKey}/${page.currentPage}/`;
 const firstImage = page.data[0]?.data.image;
-const ogImage = firstImage ? `${siteUrl}${firstImage}` : undefined;
+const ogImage = firstImage || undefined;
 
 const itemListElements = page.data.map((c: any, i: number) => ({
   '@type': 'ListItem',
   position: (page.currentPage - 1) * page.size + i + 1,
   url: `${siteUrl}/en/coloring/${c.data.slug}/`,
   name: c.data.title,
-  image: `${siteUrl}${c.data.image.replace(/\.png$/, '.webp')}`,
+  image: c.data.image,
 }));
 
 const collectionPage = {

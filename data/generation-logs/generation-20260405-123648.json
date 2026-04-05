@@ -1,0 +1,229 @@
+{
+  "summary": {
+    "total": 10,
+    "success": 10,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-04-05T12:34:56.208672+00:00",
+      "backend": "gemini",
+      "fr_slug": "magie-sorciere",
+      "en_slug": "magic-witch",
+      "prompt": "A cute friendly witch with a pointy hat, riding a broomstick, with stars and a crescent moon around her, cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/magie-sorciere.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/magie-sorciere.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/magic-witch.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 92.19066097767316,
+        "black_pct": 5.736979070879465,
+        "mid_pct": 1.2976790377754073,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:35:07.836588+00:00",
+      "backend": "gemini",
+      "fr_slug": "magie-magicien",
+      "en_slug": "magic-wizard",
+      "prompt": "A friendly cartoon wizard with a long robe covered in stars and moons, holding a magic wand with a glowing tip, long beard, simple style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/magie-magicien.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/magie-magicien.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/magic-wizard.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 90.81077353146725,
+        "black_pct": 6.909690293154816,
+        "mid_pct": 1.4314286239746938,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:35:20.188259+00:00",
+      "backend": "gemini",
+      "fr_slug": "magie-chapeau-magique",
+      "en_slug": "magic-magic-hat",
+      "prompt": "A classic magic top hat with a cute rabbit popping out, surrounded by stars, flowers, and playing cards floating around it, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/magie-chapeau-magique.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/magie-chapeau-magique.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/magic-magic-hat.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 94.77507632324273,
+        "black_pct": 2.909524772869386,
+        "mid_pct": 1.4568543789311068,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:35:33.023665+00:00",
+      "backend": "gemini",
+      "fr_slug": "magie-baguette-magique",
+      "en_slug": "magic-magic-wand",
+      "prompt": "A decorative magic wand with a large star on top, surrounded by sparkles, small stars, and magical swirls, simple line art for children to color. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/magie-baguette-magique.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/magie-baguette-magique.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/magic-magic-wand.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 93.25927833155552,
+        "black_pct": 4.002280501710376,
+        "mid_pct": 1.980082392319859,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:35:45.388639+00:00",
+      "backend": "gemini",
+      "fr_slug": "magie-chaudron",
+      "en_slug": "magic-cauldron",
+      "prompt": "A round cauldron with bubbles and steam coming out, surrounded by mushrooms, leaves, and spell ingredients on the ground, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/magie-chaudron.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/magie-chaudron.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/magic-cauldron.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.68586088939566,
+        "black_pct": 7.404182145878544,
+        "mid_pct": 2.450343914370839,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:36:00.119908+00:00",
+      "backend": "gemini",
+      "fr_slug": "magie-grimoire",
+      "en_slug": "magic-spellbook",
+      "prompt": "An old open magic book with decorative borders, symbols and stars on the pages, with sparks of magic flying off it, cute illustration style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/magie-grimoire.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/magie-grimoire.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/magic-spellbook.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.79386287563909,
+        "black_pct": 7.013186449405966,
+        "mid_pct": 2.6522326847390296,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:36:11.182283+00:00",
+      "backend": "gemini",
+      "fr_slug": "magie-cristal-boule",
+      "en_slug": "magic-crystal-ball",
+      "prompt": "A glowing crystal ball on an ornate stand, showing swirling clouds and stars inside it, with magical sparkles around it, cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/magie-cristal-boule.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/magie-cristal-boule.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/magic-crystal-ball.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 89.80560562033325,
+        "black_pct": 6.464716592489057,
+        "mid_pct": 2.3304796410048922,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:36:22.266337+00:00",
+      "backend": "gemini",
+      "fr_slug": "magie-potion",
+      "en_slug": "magic-potion",
+      "prompt": "Several cute potion bottles in different shapes, with bubbles, hearts, and stars inside them, corked with ribbon bows, simple cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/magie-potion.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/magie-potion.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/magic-potion.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 86.83189575900246,
+        "black_pct": 8.699286423658366,
+        "mid_pct": 2.7960514216353403,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:36:33.576925+00:00",
+      "backend": "gemini",
+      "fr_slug": "magie-dragon-ami",
+      "en_slug": "magic-friendly-dragon",
+      "prompt": "A cute friendly dragon with wings, scales, and a small flame coming from its mouth, sitting in a friendly pose, big eyes, simple cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/magie-dragon-ami.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/magie-dragon-ami.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/magic-friendly-dragon.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 90.06289770846361,
+        "black_pct": 7.628921911207562,
+        "mid_pct": 1.455842866075698,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:36:44.613090+00:00",
+      "backend": "gemini",
+      "fr_slug": "magie-etoile-filante",
+      "en_slug": "magic-shooting-star",
+      "prompt": "A large shooting star with a cute smiling face, leaving a trail of smaller stars and sparkles behind it, surrounded by clouds and crescent moon, cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/magie-etoile-filante.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/magie-etoile-filante.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/magic-shooting-star.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 92.82814396586603,
+        "black_pct": 5.292557104498473,
+        "mid_pct": 1.171285908706367,
+        "reason": null
+      }
+    }
+  ]
+}

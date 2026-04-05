@@ -2,6 +2,7 @@
 import type { Locale } from '../lib/i18n';
 import type { Category } from '../lib/i18n';
 import { getLocalePath, getColoringBasePath, categoryIcons } from '../lib/i18n';
+import { toThumb } from '../lib/cdn';
 
 interface Props {
   title: string;
@@ -20,9 +21,8 @@ const href = getLocalePath(locale, `/${getColoringBasePath(locale)}/${slug}`);
 const icon = category ? categoryIcons[category] : undefined;
 const newLabel = locale === 'fr' ? 'Nouveau' : 'New';
 
-// Derive WebP thumbnail path from PNG path
-// e.g. /images/coloriages/animaux-chat.png → /images/coloriages/thumbs/animaux-chat.webp
-const thumbWebp = image.replace('/images/coloriages/', '/images/coloriages/thumbs/').replace(/\.png$/, '.webp');
+// Derive WebP thumbnail from PNG URL (works with both CDN and legacy paths)
+const thumbWebp = toThumb(image);
 ---
 
 <a href={href} class="coloring-card" data-audience={audience} data-fade-in>

@@ -1,0 +1,69 @@
+{
+  "summary": {
+    "total": 5,
+    "success": 4,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-04-05T13:06:37.882429+00:00",
+      "backend": "gemini",
+      "fr_slug": "fee-foret",
+      "en_slug": "fairy-forest",
+      "prompt": "A cute little fairy with butterfly wings sitting on a mushroom in a forest, surrounded by flowers and fireflies, friendly cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/fee-foret.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-05T13:06:44.887713+00:00",
+      "backend": "gemini",
+      "fr_slug": "fee-fleurs",
+      "en_slug": "fairy-flowers",
+      "prompt": "A tiny fairy sitting inside a large open flower with petals around her, her wings decorated with flower patterns, holding a smaller flower, cute cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/fee-fleurs.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-05T13:06:51.889733+00:00",
+      "backend": "gemini",
+      "fr_slug": "fee-lune",
+      "en_slug": "fairy-moon",
+      "prompt": "A magical fairy sitting on a crescent moon, with long flowing hair and shimmering wings, surrounded by stars and small clouds, cute dreamy cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/fee-lune.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-05T13:06:58.893444+00:00",
+      "backend": "gemini",
+      "fr_slug": "fee-eau",
+      "en_slug": "fairy-water",
+      "prompt": "A cute fairy with dragonfly wings hovering over a small pond, with water droplets and lily pads around her, friendly cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/fee-eau.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-05T13:07:05.896313+00:00",
+      "backend": "gemini",
+      "fr_slug": "fee-neige",
+      "en_slug": "fairy-snow",
+      "prompt": "A delicate fairy with icy crystal wings holding a snowflake, surrounded by falling snowflakes and icicles, wearing a winter outfit, cute cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/fee-neige.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "quota exhausted after backoff retries"
+    }
+  ]
+}

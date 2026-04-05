@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "total": 1,
+    "success": 0,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-04-05T12:58:52.573958+00:00",
+      "backend": "gemini",
+      "fr_slug": "portrait-enfant-peintre",
+      "en_slug": "portrait-child-painter",
+      "prompt": "Black and white coloring book line art. A simple outline drawing of a child figure wearing a smock, holding a paintbrush and palette, with a canvas on an easel, thick clean black outlines on pure white background, no color fill, no shading, cute cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/portrait-enfant-peintre.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "quota exhausted after backoff retries"
+    }
+  ]
+}

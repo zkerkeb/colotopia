@@ -1,8 +1,8 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import ColoringPage from '../../../components/ColoringPage.astro';
-import { getCollection } from 'astro:content';
 import { getPublishableColoriages, buildSlugMap } from '../../../lib/coloriages';
+import { toWebp, toThumb } from '../../../lib/cdn';
 import type { Category } from '../../../lib/i18n';
 
 export async function getStaticPaths() {
@@ -32,8 +32,8 @@ const related = allEn
   .filter((c) => c.data.category === category)
   .map((c) => ({ title: c.data.title, slug: c.data.slug, image: c.data.image, alt: c.data.alt }));
 
-const imageWebp = image.replace(/\.png$/, '.webp');
-const thumbWebp = image.replace('/images/coloriages/', '/images/coloriages/thumbs/').replace(/\.png$/, '.webp');
+const imageWebp = toWebp(image);
+const thumbWebp = toThumb(image);
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -43,8 +43,8 @@ const structuredData = {
       '@id': `${canonicalUrl}#image`,
       name: title,
       description: pageDescription,
-      contentUrl: `${siteUrl}${imageWebp}`,
-      thumbnailUrl: `${siteUrl}${thumbWebp}`,
+      contentUrl: imageWebp,
+      thumbnailUrl: thumbWebp,
       encodingFormat: 'image/webp',
       width: 800,
       height: 1100,
@@ -68,7 +68,7 @@ const structuredData = {
   locale={locale}
   canonical={canonicalUrl}
   altUrl={altUrl}
-  ogImage={`${siteUrl}${image}`}
+  ogImage={image}
   ogImageWidth={800}
   ogImageHeight={1100}
   ogType="article"

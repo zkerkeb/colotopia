@@ -4,8 +4,7 @@
  * for translated paths (coloriage/coloring, animaux/animals, slug differences).
  */
 
-import { readdirSync, readFileSync, existsSync } from 'node:fs';
-import { join } from 'node:path';
+import { buildSlugMap } from './coloriages';
 
 const frToEnCategories: Record<string, string> = {
   animaux: 'animals',
@@ -34,6 +33,29 @@ const frToEnCategories: Record<string, string> = {
   pirates: 'pirates',
   robots: 'robots',
   paysages: 'landscapes',
+  kawaii: 'kawaii',
+  licorne: 'unicorns',
+  fleurs: 'flowers',
+  chats: 'cats',
+  papillons: 'butterflies',
+  'bold-et-facile': 'bold-easy',
+  paques: 'easter',
+  halloween: 'halloween',
+  noel: 'christmas',
+  champignons: 'mushrooms',
+  religions: 'religions',
+  cottagecore: 'cottagecore',
+  vitrail: 'stained-glass',
+  zodiaque: 'zodiac',
+  affirmations: 'affirmations',
+  'anti-stress': 'stress-relief',
+  cirque: 'circus',
+  fee: 'fairies',
+  magie: 'magic',
+  jardinage: 'gardening',
+  insectes: 'insects',
+  bricolage: 'crafts',
+  architecture: 'architecture',
 };
 
 const enToFrCategories: Record<string, string> = Object.fromEntries(
@@ -45,57 +67,19 @@ const enCategorySet = new Set(Object.values(frToEnCategories));
 
 const SITE = 'https://colotopia.com';
 
-// Build slug mapping from YAML content files (image-based pairing)
+// Build slug mapping from DB (image-based pairing)
 let _frToEnSlugs: Record<string, string> | null = null;
 let _enToFrSlugs: Record<string, string> | null = null;
 
-function parseYamlSlugAndLocale(content: string): { slug?: string; locale?: string; image?: string } {
-  const slug = content.match(/^slug:\s*(.+)$/m)?.[1]?.trim();
-  const locale = content.match(/^locale:\s*(.+)$/m)?.[1]?.trim();
-  const image = content.match(/^image:\s*(.+)$/m)?.[1]?.trim();
-  return { slug, locale, image };
-}
-
-function loadSlugMaps() {
+async function loadSlugMaps() {
   if (_frToEnSlugs) return;
-  _frToEnSlugs = {};
-  _enToFrSlugs = {};
-
-  const contentDir = join(process.cwd(), 'src', 'content', 'coloriages');
-  if (!existsSync(contentDir)) return;
-
-  const imageToFr: Record<string, string> = {};
-  const imageToEn: Record<string, string> = {};
-
-  function scanDir(dir: string) {
-    for (const entry of readdirSync(dir, { withFileTypes: true })) {
-      const path = join(dir, entry.name);
-      if (entry.isDirectory()) {
-        scanDir(path);
-      } else if (entry.name.endsWith('.yaml') || entry.name.endsWith('.yml')) {
-        const raw = readFileSync(path, 'utf-8');
-        const { slug, locale, image } = parseYamlSlugAndLocale(raw);
-        if (slug && locale && image) {
-          if (locale === 'fr') imageToFr[image] = slug;
-          else if (locale === 'en') imageToEn[image] = slug;
-        }
-      }
-    }
-  }
-
-  scanDir(contentDir);
-
-  for (const [image, enSlug] of Object.entries(imageToEn)) {
-    const frSlug = imageToFr[image];
-    if (frSlug) {
-      _frToEnSlugs![frSlug] = enSlug;
-      _enToFrSlugs![enSlug] = frSlug;
-    }
-  }
+  const { frToEn, enToFr } = await buildSlugMap();
+  _frToEnSlugs = frToEn;
+  _enToFrSlugs = enToFr;
 }
 
 export function getAlternateUrl(url: string): { locale: string; altLocale: string; altUrl: string } | null {
-  loadSlugMaps();
+  // Note: loadSlugMaps is called at build start via the sitemap integration
   const path = url.replace(SITE, '');
 
   // FR pages
@@ -120,7 +104,7 @@ export function getAlternateUrl(url: string): { locale: string; altLocale: strin
     }
     const blogPageMatch = rest.match(/^blog\/(\d+)\/?$/);
     if (blogPageMatch) {
-      return { locale: 'fr', altLocale: 'en', altUrl: `${SITE}/en/blog/${blogPageMatch[1]}/` };
+      return { locale: 'fr', altLocale: 'en', altUrl: `${SITE}/fr/blog/${blogPageMatch[1]}/` };
     }
 
     // Legal pages
@@ -169,7 +153,7 @@ export function getAlternateUrl(url: string): { locale: string; altLocale: strin
     }
     const enBlogPageMatch = rest.match(/^blog\/(\d+)\/?$/);
     if (enBlogPageMatch) {
-      return { locale: 'en', altLocale: 'fr', altUrl: `${SITE}/fr/blog/${enBlogPageMatch[1]}/` };
+      return { locale: 'en', altLocale: 'fr', altUrl: `${SITE}/en/blog/${enBlogPageMatch[1]}/` };
     }
 
     // Legal pages
@@ -202,4 +186,9 @@ export function getAlternateUrl(url: string): { locale: string; altLocale: strin
   }
 
   return null;
+}
+
+// Pre-load slug maps (called during build)
+export async function initSlugMaps() {
+  await loadSlugMaps();
 }

@@ -1,0 +1,229 @@
+{
+  "summary": {
+    "total": 10,
+    "success": 10,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-04-05T12:46:01.894642+00:00",
+      "backend": "gemini",
+      "fr_slug": "architecture-chateau-fort",
+      "en_slug": "architecture-castle",
+      "prompt": "A grand medieval castle with tall towers, a drawbridge, battlements, a flag on top, and a moat around it, simple cute cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/architecture-chateau-fort.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/architecture-chateau-fort.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/architecture-castle.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 83.61689410379961,
+        "black_pct": 11.664352447861111,
+        "mid_pct": 2.967456872770074,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:46:19.521532+00:00",
+      "backend": "gemini",
+      "fr_slug": "architecture-phare",
+      "en_slug": "architecture-lighthouse",
+      "prompt": "A striped lighthouse on a rocky cliff above the sea, with its light beam shining out, seagulls flying nearby, and waves below, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/architecture-phare.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/architecture-phare.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/architecture-lighthouse.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.7863225070806,
+        "black_pct": 8.682918306543568,
+        "mid_pct": 1.5932247029830433,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:46:30.647859+00:00",
+      "backend": "gemini",
+      "fr_slug": "architecture-cabane-arbre",
+      "en_slug": "architecture-treehouse",
+      "prompt": "A cozy treehouse built in a large tree with a rope ladder, small window with flowers, a tire swing hanging below, and birds nesting nearby, cute cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/architecture-cabane-arbre.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/architecture-cabane-arbre.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/architecture-treehouse.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 90.18947474896089,
+        "black_pct": 5.099725971971898,
+        "mid_pct": 2.949341597086843,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:46:41.997864+00:00",
+      "backend": "gemini",
+      "fr_slug": "architecture-moulin-vent",
+      "en_slug": "architecture-windmill",
+      "prompt": "A classic Dutch windmill with four large sails spinning, set in a flat countryside with tulips growing around it, a small canal nearby, cute cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/architecture-moulin-vent.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/architecture-moulin-vent.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/architecture-windmill.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 74.95098760436973,
+        "black_pct": 5.340466031559201,
+        "mid_pct": 8.179460771692353,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:47:38.037255+00:00",
+      "backend": "gemini",
+      "fr_slug": "architecture-igloo",
+      "en_slug": "architecture-igloo",
+      "prompt": "A round igloo made of ice blocks with a small entrance tunnel, surrounded by snow, a sled nearby, polar bears and northern lights in the background, cute cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/architecture-igloo.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/architecture-igloo.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/architecture-igloo.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 91.51768308382682,
+        "black_pct": 4.212675175635415,
+        "mid_pct": 2.631082870489572,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:47:50.079184+00:00",
+      "backend": "gemini",
+      "fr_slug": "architecture-pyramide",
+      "en_slug": "architecture-pyramid",
+      "prompt": "A large ancient pyramid in the desert with a sphinx nearby, a camel in the foreground, and the sun shining overhead, simple educational cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/architecture-pyramide.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/architecture-pyramide.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/architecture-pyramid.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 84.31410232831868,
+        "black_pct": 1.9322654209732595,
+        "mid_pct": 11.553637768050907,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:48:02.153969+00:00",
+      "backend": "gemini",
+      "fr_slug": "architecture-pagode",
+      "en_slug": "architecture-pagoda",
+      "prompt": "A beautiful multi-tiered Japanese pagoda with curved roofs, surrounded by cherry blossom trees with petals falling, a small bridge over a stream, cute cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/architecture-pagode.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/architecture-pagode.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/architecture-pagoda.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 81.38172656048846,
+        "black_pct": 8.237392871593041,
+        "mid_pct": 5.18469305182624,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:48:14.683254+00:00",
+      "backend": "gemini",
+      "fr_slug": "architecture-cabane-bois",
+      "en_slug": "architecture-log-cabin",
+      "prompt": "A charming log cabin in a forest clearing with smoke coming from the chimney, a woodpile beside it, a small porch with flower boxes, mountains in the background, cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/architecture-cabane-bois.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/architecture-cabane-bois.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/architecture-log-cabin.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 86.38292198477214,
+        "black_pct": 5.30947695589804,
+        "mid_pct": 5.2695221981093905,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:48:26.867306+00:00",
+      "backend": "gemini",
+      "fr_slug": "architecture-pont",
+      "en_slug": "architecture-bridge",
+      "prompt": "A simplified cartoon suspension bridge with tall towers and cables spanning a river, with boats passing underneath and a cityscape visible in the distance, cute educational cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/architecture-pont.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/architecture-pont.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/architecture-bridge.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 82.21512119763122,
+        "black_pct": 10.24469415529481,
+        "mid_pct": 4.669741052709015,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:48:38.379404+00:00",
+      "backend": "gemini",
+      "fr_slug": "architecture-maison-pain-epice",
+      "en_slug": "architecture-gingerbread-house",
+      "prompt": "A fantasy gingerbread house decorated with candy canes, gumdrops, lollipops and icing, surrounded by candy mushrooms and a chocolate fence, dreamy cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/architecture-maison-pain-epice.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/architecture-maison-pain-epice.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/architecture-gingerbread-house.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 87.37466436164343,
+        "black_pct": 4.74142053187185,
+        "mid_pct": 5.003034538566227,
+        "reason": null
+      }
+    }
+  ]
+}

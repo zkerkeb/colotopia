@@ -1,0 +1,93 @@
+{
+  "summary": {
+    "total": 7,
+    "success": 6,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-04-05T13:02:24.192917+00:00",
+      "backend": "gemini",
+      "fr_slug": "cirque-jongleur",
+      "en_slug": "circus-juggler",
+      "prompt": "A happy circus juggler throwing colorful balls in the air, wearing a patterned costume, simple cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/cirque-jongleur.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-05T13:02:31.195027+00:00",
+      "backend": "gemini",
+      "fr_slug": "cirque-clown",
+      "en_slug": "circus-clown",
+      "prompt": "A friendly clown with big shoes, curly hair, a round red nose, polka dot costume, holding a bunch of balloons, cute cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/cirque-clown.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-05T13:02:38.199057+00:00",
+      "backend": "gemini",
+      "fr_slug": "cirque-acrobate",
+      "en_slug": "circus-acrobat",
+      "prompt": "A young acrobat in a sparkly costume doing a handstand on a platform, looking cheerful, with stars and confetti around them, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/cirque-acrobate.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-05T13:02:45.203694+00:00",
+      "backend": "gemini",
+      "fr_slug": "cirque-trapeziste",
+      "en_slug": "circus-trapeze",
+      "prompt": "A smiling circus performer swinging on a trapeze high in the air, with the circus tent visible below, wearing a sparkly costume, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/cirque-trapeziste.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-05T13:02:52.205454+00:00",
+      "backend": "gemini",
+      "fr_slug": "cirque-equilibriste",
+      "en_slug": "circus-tightrope",
+      "prompt": "A balanced tightrope walker carefully walking on a thin wire with a balancing pole, high above the crowd, wearing a colorful outfit, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/cirque-equilibriste.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-05T13:02:59.208730+00:00",
+      "backend": "gemini",
+      "fr_slug": "cirque-dompteur",
+      "en_slug": "circus-lion-tamer",
+      "prompt": "A brave lion tamer in a top hat and red coat with a friendly lion sitting on a stool, both looking happy, inside a circus ring, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/cirque-dompteur.png",
+      "dry_run": false,
+      "status": "skipped",
+      "content_files": [],
+      "error": null
+    },
+    {
+      "timestamp": "2026-04-05T13:03:06.213595+00:00",
+      "backend": "gemini",
+      "fr_slug": "cirque-prestidigitateur",
+      "en_slug": "circus-magician",
+      "prompt": "Black and white coloring book line art. A circus magician in formal attire with top hat and cape, pulling a rabbit from a hat on stage, stars and sparkles around, thick black outlines on pure white background, no color fill, no shading, simple cute cartoon style. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/cirque-prestidigitateur.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "quota exhausted after backoff retries"
+    }
+  ]
+}

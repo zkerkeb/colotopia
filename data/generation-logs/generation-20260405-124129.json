@@ -1,0 +1,175 @@
+{
+  "summary": {
+    "total": 8,
+    "success": 7,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-04-05T12:39:40.954070+00:00",
+      "backend": "gemini",
+      "fr_slug": "cirque-jongleur",
+      "en_slug": "circus-juggler",
+      "prompt": "A happy circus juggler throwing colorful balls in the air, wearing a patterned costume, simple cartoon style for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/cirque-jongleur.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/cirque-jongleur.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/circus-juggler.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 89.79737558391878,
+        "black_pct": 9.119845882223121,
+        "mid_pct": 0.6787711038363924,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:39:54.239261+00:00",
+      "backend": "gemini",
+      "fr_slug": "cirque-clown",
+      "en_slug": "circus-clown",
+      "prompt": "A friendly clown with big shoes, curly hair, a round red nose, polka dot costume, holding a bunch of balloons, cute cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/cirque-clown.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/cirque-clown.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/circus-clown.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 92.05539412219075,
+        "black_pct": 4.301274506197815,
+        "mid_pct": 2.282202891087652,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:40:06.251525+00:00",
+      "backend": "gemini",
+      "fr_slug": "cirque-acrobate",
+      "en_slug": "circus-acrobat",
+      "prompt": "A young acrobat in a sparkly costume doing a handstand on a platform, looking cheerful, with stars and confetti around them, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/cirque-acrobate.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/cirque-acrobate.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/circus-acrobat.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 94.60555596424763,
+        "black_pct": 3.7738165299591717,
+        "mid_pct": 1.0132140361202044,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:40:19.092501+00:00",
+      "backend": "gemini",
+      "fr_slug": "cirque-trapeziste",
+      "en_slug": "circus-trapeze",
+      "prompt": "A smiling circus performer swinging on a trapeze high in the air, with the circus tent visible below, wearing a sparkly costume, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/cirque-trapeziste.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/cirque-trapeziste.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/circus-trapeze.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 87.92915731783573,
+        "black_pct": 9.24085960201567,
+        "mid_pct": 1.773136057674624,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:40:30.493821+00:00",
+      "backend": "gemini",
+      "fr_slug": "cirque-equilibriste",
+      "en_slug": "circus-tightrope",
+      "prompt": "A balanced tightrope walker carefully walking on a thin wire with a balancing pole, high above the crowd, wearing a colorful outfit, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/cirque-equilibriste.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/cirque-equilibriste.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/circus-tightrope.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 95.41352484643396,
+        "black_pct": 2.9477783499466654,
+        "mid_pct": 1.036892632508184,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:40:42.149696+00:00",
+      "backend": "gemini",
+      "fr_slug": "cirque-dompteur",
+      "en_slug": "circus-lion-tamer",
+      "prompt": "A brave lion tamer in a top hat and red coat with a friendly lion sitting on a stool, both looking happy, inside a circus ring, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/cirque-dompteur.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/cirque-dompteur.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/circus-lion-tamer.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 86.3123919520359,
+        "black_pct": 10.506262184132122,
+        "mid_pct": 2.003347187994262,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:41:11.769781+00:00",
+      "backend": "gemini",
+      "fr_slug": "cirque-prestidigitateur",
+      "en_slug": "circus-magician",
+      "prompt": "A circus magician in formal attire with a top hat and cape, pulling a rabbit from a hat on stage, with stars and sparkles around, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/cirque-prestidigitateur.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "Gemini Imagen returned no images (possibly filtered)"
+    },
+    {
+      "timestamp": "2026-04-05T12:41:24.877857+00:00",
+      "backend": "gemini",
+      "fr_slug": "cirque-chapiteau",
+      "en_slug": "circus-big-top",
+      "prompt": "A classic colorful striped circus tent with flags on top, a ticket booth at the entrance, and a banner saying the show is tonight, cute cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/cirque-chapiteau.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/cirque-chapiteau.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/circus-big-top.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 89.05878728804207,
+        "black_pct": 6.195378305807923,
+        "mid_pct": 2.9317320778313163,
+        "reason": null
+      }
+    }
+  ]
+}

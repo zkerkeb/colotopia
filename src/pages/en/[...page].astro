@@ -6,7 +6,6 @@ import Pagination from '../../components/Pagination.astro';
 import Hero from '../../components/Hero.astro';
 import CategoriesSection from '../../components/CategoriesSection.astro';
 import NewSection from '../../components/NewSection.astro';
-import { getCollection } from 'astro:content';
 import { getPublishableColoriages } from '../../lib/coloriages';
 import { t, kidsCategories, adultCategories } from '../../lib/i18n';
 
@@ -25,7 +24,7 @@ const altUrl = page.currentPage === 1
   ? `${siteUrl}/fr/`
   : `${siteUrl}/fr/${page.currentPage}/`;
 const firstImage = page.data[0]?.data.image;
-const ogImage = firstImage ? `${siteUrl}${firstImage}` : undefined;
+const ogImage = firstImage || undefined;
 
 // Nouveaux: 10 most recent by createdAt (only on page 1)
 let nouveaux: typeof page.data = [];

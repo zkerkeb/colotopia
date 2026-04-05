@@ -1,0 +1,131 @@
+{
+  "summary": {
+    "total": 6,
+    "success": 5,
+    "dry_run": false
+  },
+  "entries": [
+    {
+      "timestamp": "2026-04-05T12:50:18.057376+00:00",
+      "backend": "gemini",
+      "fr_slug": "bricolage-boite-carton",
+      "en_slug": "crafts-cardboard-box",
+      "prompt": "A child building a cardboard box fort decorated as a castle with cutout windows and a drawbridge, looking pleased with their creation, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/bricolage-boite-carton.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/bricolage-boite-carton.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/crafts-cardboard-box.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 82.63963475190349,
+        "black_pct": 9.081822194431162,
+        "mid_pct": 1.9808640158899473,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:50:32.975961+00:00",
+      "backend": "gemini",
+      "fr_slug": "bricolage-origami",
+      "en_slug": "crafts-origami",
+      "prompt": "Cute origami animals\u2014a crane, frog, and boat\u2014made from folded paper, with squares of colored paper and simple folding steps shown around them, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/bricolage-origami.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/bricolage-origami.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/crafts-origami.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 90.37062750579321,
+        "black_pct": 5.313660940890867,
+        "mid_pct": 2.6950840475227134,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:50:44.279363+00:00",
+      "backend": "gemini",
+      "fr_slug": "bricolage-peinture-doigts",
+      "en_slug": "crafts-finger-painting",
+      "prompt": "A child's hands covered in paint making colorful handprints on paper, with paint pots, brushes, and a cheerful completed painting visible, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/bricolage-peinture-doigts.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/bricolage-peinture-doigts.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/crafts-finger-painting.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 88.76154044212308,
+        "black_pct": 6.497039026005076,
+        "mid_pct": 2.9746753963291277,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:50:55.556444+00:00",
+      "backend": "gemini",
+      "fr_slug": "bricolage-collier-perles",
+      "en_slug": "crafts-bead-necklace",
+      "prompt": "A child's hands threading colorful beads onto a string to make a necklace, with various shapes of beads scattered on the table, simple cute cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/bricolage-collier-perles.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/bricolage-collier-perles.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/crafts-bead-necklace.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 91.77874535623644,
+        "black_pct": 5.757669106558281,
+        "mid_pct": 1.5519365873395374,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:51:07.259565+00:00",
+      "backend": "gemini",
+      "fr_slug": "bricolage-marionnette",
+      "en_slug": "crafts-puppet",
+      "prompt": "A cute sock puppet with googly eyes, yarn hair, and a felt mouth on a child's hand, with other craft supplies like scissors and glue nearby, simple cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/bricolage-marionnette.png",
+      "dry_run": false,
+      "status": "success",
+      "content_files": [
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/fr/bricolage-marionnette.yaml",
+        "/Users/hikkary/paperclip/coloriages/src/content/coloriages/en/crafts-puppet.yaml"
+      ],
+      "error": null,
+      "qc": {
+        "passed": true,
+        "white_pct": 89.59042924927356,
+        "black_pct": 7.465424651487844,
+        "mid_pct": 1.844861514694523,
+        "reason": null
+      }
+    },
+    {
+      "timestamp": "2026-04-05T12:51:18.705133+00:00",
+      "backend": "gemini",
+      "fr_slug": "bricolage-mobile-papier",
+      "en_slug": "crafts-paper-mobile",
+      "prompt": "A decorative hanging mobile made of paper stars, moons, and clouds suspended on strings from a wooden stick, swinging gently, simple cute cartoon for children. Black and white line drawing for kids. Thick bold outlines, pure white background, cute cartoon style. No shading, no text.",
+      "image_path": "/Users/hikkary/paperclip/coloriages/public/images/coloriages/bricolage-mobile-papier.png",
+      "dry_run": false,
+      "status": "error",
+      "content_files": [],
+      "error": "quota exhausted after backoff retries"
+    }
+  ]
+}

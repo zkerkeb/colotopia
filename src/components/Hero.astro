@@ -1,6 +1,7 @@
 ---
 import type { Locale } from '../lib/i18n';
 import { t, getLocalePath, getColoringBasePath } from '../lib/i18n';
+import { toThumb } from '../lib/cdn';
 import SearchBar from './SearchBar.astro';
 
 interface PreviewItem {
@@ -58,9 +59,7 @@ const subtitle = locale === 'fr'
     {previews.length > 0 && (
       <div class="hero-previews" aria-label={locale === 'fr' ? 'Aperçu des coloriages' : 'Coloring pages preview'}>
         {previews.slice(0, 4).map((p, i) => {
-          const thumbWebp = p.image
-            .replace('/images/coloriages/', '/images/coloriages/thumbs/')
-            .replace(/\.png$/, '.webp');
+          const thumbWebp = toThumb(p.image);
           const href = `${getLocalePath(locale, `/${getColoringBasePath(locale)}/${p.slug}`)}/`;
           return (
             <a href={href} class="hero-preview-thumb" style={`--rotate: ${[-2, 1.5, -1, 2][i] ?? 0}deg`}>
