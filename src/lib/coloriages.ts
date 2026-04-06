@@ -1,6 +1,6 @@
 import { db } from '../db';
 import { colorings } from '../db/schema';
-import { eq } from 'drizzle-orm';
+import { eq, desc } from 'drizzle-orm';
 import { cdnPng } from './cdn';
 
 /**
@@ -36,7 +36,8 @@ export async function getPublishableColoriages(locale: 'fr' | 'en'): Promise<Col
   const rows = await db
     .select()
     .from(colorings)
-    .where(eq(colorings.locale, locale));
+    .where(eq(colorings.locale, locale))
+    .orderBy(desc(colorings.createdAt));
 
   return rows.map((row) => ({
     id: `${row.locale}/${row.slug}`,
