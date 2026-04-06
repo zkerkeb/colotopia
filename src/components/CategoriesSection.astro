@@ -1,7 +1,7 @@
 ---
-import fs from 'node:fs';
 import type { Locale } from '../lib/i18n';
 import { kidsCategories, adultCategories, getCategoryLabel, getCategorySlug, getLocalePath, categoryIcons, categoryColors } from '../lib/i18n';
+import { cdnCategoryIcon } from '../lib/cdn';
 import CategoryCard from './CategoryCard.astro';
 
 interface Props {
@@ -11,11 +11,6 @@ interface Props {
 }
 
 const { locale, kidsCounts = {}, adultCounts = {} } = Astro.props;
-
-function getCategoryImage(cat: string): string | undefined {
-  const path = `public/images/category-icons/${cat}.png`;
-  return fs.existsSync(path) ? `/images/category-icons/${cat}.png` : undefined;
-}
 
 const kidsTitle = locale === 'fr' ? 'Pour les enfants' : 'For kids';
 const adultsTitle = locale === 'fr' ? 'Pour les adultes' : 'For adults';
@@ -41,7 +36,7 @@ const sectionTitle = locale === 'fr' ? 'Explorer les catégories' : 'Explore cat
           color={categoryColors[cat]?.light ?? '#f0ebff'}
           href={getLocalePath(locale, `/${getCategorySlug(cat, locale)}`)}
           locale={locale}
-          image={getCategoryImage(cat)}
+          image={cdnCategoryIcon(cat)}
         />
       ))}
     </div>
@@ -63,7 +58,7 @@ const sectionTitle = locale === 'fr' ? 'Explorer les catégories' : 'Explore cat
           color={categoryColors[cat]?.light ?? '#f0ebff'}
           href={getLocalePath(locale, `/${getCategorySlug(cat, locale)}`)}
           locale={locale}
-          image={getCategoryImage(cat)}
+          image={cdnCategoryIcon(cat)}
         />
       ))}
     </div>
