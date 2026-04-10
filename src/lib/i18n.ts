@@ -43,6 +43,8 @@ export const kidsCategories = [
   'insectes',
   'bricolage',
   'architecture',
+  'sirenes',
+  'fees',
 ] as const;
 
 export const adultCategories = [
@@ -113,6 +115,8 @@ export const categoryIcons: Record<Category, string> = {
   'abstrait': '🎨',
   'cartes': '🗺️',
   'paysages': '🏔️',
+  'sirenes': '🧜',
+  'fees': '🧚',
 };
 
 /** Accent color per category — used for hero, card borders, tags */
@@ -166,6 +170,8 @@ export const categoryColors: Record<Category, { bg: string; light: string; text:
   'abstrait':              { bg: '#ec4899', light: '#fdf2f8', text: '#9d174d', gradient: 'linear-gradient(135deg, #1e1b4b 0%, #581c87 50%, #7e22ce 100%)' },
   'cartes':                { bg: '#14b8a6', light: '#f0fdfa', text: '#115e59', gradient: 'linear-gradient(135deg, #1e1b4b 0%, #0f766e 50%, #14b8a6 100%)' },
   'paysages':              { bg: '#22c55e', light: '#f0fdf4', text: '#166534', gradient: 'linear-gradient(135deg, #1e1b4b 0%, #14532d 50%, #166534 100%)' },
+  'sirenes':               { bg: '#22d3ee', light: '#ecfeff', text: '#155e75', gradient: 'linear-gradient(135deg, #ecfeff 0%, #a5f3fc 100%)' },
+  'fees':                  { bg: '#f0abfc', light: '#fdf4ff', text: '#86198f', gradient: 'linear-gradient(135deg, #f0abfc, #e879f9)' },
 };
 
 const translations: Record<string, Record<Locale, string>> = {
@@ -232,6 +238,8 @@ const translations: Record<string, Record<Locale, string>> = {
   'category.abstrait': { fr: 'Abstrait', en: 'Abstract' },
   'category.cartes': { fr: 'Cartes', en: 'Maps' },
   'category.paysages': { fr: 'Paysages', en: 'Landscapes' },
+  'category.sirenes': { fr: 'Sirènes', en: 'Mermaids' },
+  'category.fees': { fr: 'Fées', en: 'Fairies' },
   'nav.blog': { fr: 'Blog', en: 'Blog' },
   'blog.title': { fr: 'Blog Colotopia', en: 'Colotopia Blog' },
   'blog.description': {
@@ -619,6 +627,8 @@ const enSlugs: Record<Category, string> = {
   insectes: 'insects',
   bricolage: 'crafts',
   architecture: 'architecture',
+  sirenes: 'mermaids',
+  fees: 'fairies-2',
 };
 
 export function getCategorySlug(category: Category, locale: Locale): string {
