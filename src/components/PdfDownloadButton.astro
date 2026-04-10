@@ -34,7 +34,9 @@ const watermarkText = locale === 'fr'
   const btn = document.getElementById('pdf-download-btn') as HTMLButtonElement | null;
   if (!btn) throw new Error('PDF button not found');
 
-  const imageUrl = btn.dataset.image!;
+  const rawImageUrl = btn.dataset.image!;
+  // Use same-origin proxy to avoid CORS issues with canvas
+  const imageUrl = rawImageUrl.replace('https://cdn.colotopia.com/', '/cdn/');
   const title = btn.dataset.title!;
   const watermark = btn.dataset.watermark!;
   const loadingLabel = btn.dataset.loadingLabel!;

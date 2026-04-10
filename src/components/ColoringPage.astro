@@ -54,6 +54,9 @@ const exploreCataLabel = locale === 'fr'
 // Derive WebP from PNG URL (works with CDN URLs)
 const imageWebp = toWebp(image);
 
+// Same-origin proxy URL for PDF/share (avoids CORS issues with canvas)
+const imageProxy = image.replace('https://cdn.colotopia.com/', '/cdn/');
+
 // Social sharing URLs
 const siteUrl = 'https://colotopia.com';
 const pageUrl = `${siteUrl}${getLocalePath(locale, `/${getColoringBasePath(locale)}/${slug}`)}/`;
@@ -120,7 +123,7 @@ const stickyDownloadLabel = locale === 'fr' ? 'Télécharger PDF' : 'Download PD
           id="print-btn"
           data-share-title={shareText}
           data-share-url={pageUrl}
-          data-image-url={image}
+          data-image-url={imageProxy}
           data-mobile-label={mobileActionsLabel}
           data-desktop-label={printLabel}
         >
