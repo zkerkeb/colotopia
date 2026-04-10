@@ -1554,3 +1554,249 @@
   category: "bold-et-facile"
   prompt: "A simple baby unicorn with horn, mane, and tail, thick bold outlines, cute face."
   status: "published"
+
+
+- date: "2026-04-10"
+  slug: "fees-fleurs"
+  category: "fees"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "sirenes-ocean"
+  category: "sirenes"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "animaux-panda-bambou"
+  category: "animaux"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "animaux-herisson"
+  category: "animaux"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "chats-mignon"
+  category: "chats"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "chats-dors"
+  category: "chats"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "chats-joue"
+  category: "chats"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "chats-siamois"
+  category: "chats"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "chats-arc-en-ciel"
+  category: "chats"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "chats-chapeau"
+  category: "chats"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "chats-jardin"
+  category: "chats"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "chats-panier"
+  category: "chats"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "chats-poisson"
+  category: "chats"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "chats-fee"
+  category: "chats"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "chats-prince"
+  category: "chats"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "chats-deux-amis"
+  category: "chats"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "chats-lune"
+  category: "chats"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "chats-miaulement"
+  category: "chats"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "chats-printemps"
+  category: "chats"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "bold-et-facile-chat"
+  category: "bold-et-facile"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "bold-et-facile-soleil"
+  category: "bold-et-facile"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "bold-et-facile-maison"
+  category: "bold-et-facile"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "bold-et-facile-etoile"
+  category: "bold-et-facile"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "bold-et-facile-coeur"
+  category: "bold-et-facile"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "bold-et-facile-fleur"
+  category: "bold-et-facile"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "bold-et-facile-poisson"
+  category: "bold-et-facile"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "bold-et-facile-voiture"
+  category: "bold-et-facile"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "bold-et-facile-arc-en-ciel"
+  category: "bold-et-facile"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "bold-et-facile-papillon"
+  category: "bold-et-facile"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "bold-et-facile-elephant"
+  category: "bold-et-facile"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "bold-et-facile-glace"
+  category: "bold-et-facile"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "bold-et-facile-nuage"
+  category: "bold-et-facile"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "bold-et-facile-grenouille"
+  category: "bold-et-facile"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "bold-et-facile-arbre"
+  category: "bold-et-facile"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "bold-et-facile-lapin"
+  category: "bold-et-facile"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "bold-et-facile-gateau"
+  category: "bold-et-facile"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "bold-et-facile-etoile-mer"
+  category: "bold-et-facile"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "bold-et-facile-licorne"
+  category: "bold-et-facile"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "papillons-monarque"
+  category: "papillons"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "papillons-morpho"
+  category: "papillons"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "papillons-simple"
+  category: "papillons"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "papillons-jardin"
+  category: "papillons"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "papillons-chenille"
+  category: "papillons"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "papillons-duo"
+  category: "papillons"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "papillons-nuit"
+  category: "papillons"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "papillons-kawaii"
+  category: "papillons"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "papillons-branche"
+  category: "papillons"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "papillons-cocon"
+  category: "papillons"
+  status: "published"
+
+- date: "2026-04-10"
+  slug: "papillons-printemps"
+  category: "papillons"
+  status: "published"

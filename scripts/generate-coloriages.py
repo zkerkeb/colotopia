@@ -501,6 +501,54 @@ def queue_run(
         if result.returncode != 0:
             print("[warn] Image optimization failed — run 'npm run optimize-images' manually.", file=sys.stderr)
 
+        # Trigger Coolify rebuild so the site shows the new coloriages
+        trigger_coolify_deploy()
+
+
+# ---------------------------------------------------------------------------
+# Coolify deploy trigger
+# ---------------------------------------------------------------------------
+
+COOLIFY_URL = os.environ.get("COOLIFY_URL", "http://51.77.67.123:8000")
+COOLIFY_TOKEN = os.environ.get("COOLIFY_TOKEN", "")
+COOLIFY_SITE_UUID = "bavjx37y7yerqhzd9qox22zn"  # colotopia Astro site
+COOLIFY_API_UUID = "xcjjwbqri1vhy1i29r21qr6w"   # colotopia-api Express
+
+
+def trigger_coolify_deploy():
+    """Trigger a rebuild of both the Astro site and the API on Coolify."""
+    import urllib.request
+    import urllib.error
+
+    token = COOLIFY_TOKEN
+    if not token:
+        # Try loading from .env.claude
+        env_claude = Path(__file__).resolve().parent.parent / ".env.claude"
+        if env_claude.exists():
+            with open(env_claude, encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if line.startswith("COOLIFY_TOKEN="):
+                        token = line.split("=", 1)[1].strip()
+                        break
+
+    if not token:
+        print("[deploy] No COOLIFY_TOKEN found — skipping deploy trigger.", file=sys.stderr)
+        return
+
+    for label, uuid in [("Colotopia site", COOLIFY_SITE_UUID), ("Colotopia API", COOLIFY_API_UUID)]:
+        url = f"{COOLIFY_URL}/api/v1/deploy?uuid={uuid}&force=true"
+        req = urllib.request.Request(url, headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+        })
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                body = resp.read().decode("utf-8")
+                print(f"[deploy] {label} rebuild triggered: {body}")
+        except urllib.error.URLError as e:
+            print(f"[deploy] Failed to trigger {label} rebuild: {e}", file=sys.stderr)
+
 
 # ---------------------------------------------------------------------------
 # Astro content YAML generation
@@ -795,6 +843,9 @@ def run(args):
         )
         if result.returncode != 0:
             print("[warn] Image optimization failed — run 'npm run optimize-images' manually.", file=sys.stderr)
+
+        # Trigger Coolify rebuild so the site shows the new coloriages
+        trigger_coolify_deploy()
 
 
 def run_audit(args):

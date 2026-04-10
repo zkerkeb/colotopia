@@ -1,328 +1,6 @@
 {
   "pending": [
     {
-      "fr_slug": "chats-mignon",
-      "en_slug": "cats-cute",
-      "prompt": "A round fluffy kitten sitting upright with big round eyes and a tiny pink nose, simple cartoon style.",
-      "category": "chats",
-      "added_at": "2026-03-28T19:48:00.373498+00:00"
-    },
-    {
-      "fr_slug": "chats-dors",
-      "en_slug": "cats-sleeping",
-      "prompt": "A cat curled up asleep, tail wrapped around its body, eyes closed with tiny eyelashes, bold lines.",
-      "category": "chats",
-      "added_at": "2026-03-28T19:48:00.373700+00:00"
-    },
-    {
-      "fr_slug": "chats-joue",
-      "en_slug": "cats-playing",
-      "prompt": "A small kitten batting a ball of yarn with one paw raised, sitting on its hind legs, cute cartoon.",
-      "category": "chats",
-      "added_at": "2026-03-28T19:48:00.373715+00:00"
-    },
-    {
-      "fr_slug": "chats-siamois",
-      "en_slug": "cats-siamese",
-      "prompt": "A slender Siamese cat sitting regally with a long tail, almond eyes, and pointed ears, clean bold lines.",
-      "category": "chats",
-      "added_at": "2026-03-28T19:48:00.373727+00:00"
-    },
-    {
-      "fr_slug": "chats-arc-en-ciel",
-      "en_slug": "cats-rainbow",
-      "prompt": "A cheerful cat sitting under a big rainbow with clouds on each side, simple cartoon thick outlines.",
-      "category": "chats",
-      "added_at": "2026-03-28T19:48:00.373740+00:00"
-    },
-    {
-      "fr_slug": "chats-chapeau",
-      "en_slug": "cats-hat",
-      "prompt": "A cute cat wearing a big top hat and a bow tie, sitting proudly, big eyes, simple cartoon style.",
-      "category": "chats",
-      "added_at": "2026-03-28T19:48:00.373748+00:00"
-    },
-    {
-      "fr_slug": "chats-jardin",
-      "en_slug": "cats-garden",
-      "prompt": "A cat sitting among large daisy flowers in a garden, looking curious, bold cartoon outlines.",
-      "category": "chats",
-      "added_at": "2026-03-28T19:48:00.373757+00:00"
-    },
-    {
-      "fr_slug": "chats-panier",
-      "en_slug": "cats-basket",
-      "prompt": "A fluffy cat nestled inside a wicker basket with a pillow, paws folded, eyes half-closed, cute style.",
-      "category": "chats",
-      "added_at": "2026-03-28T19:48:00.373764+00:00"
-    },
-    {
-      "fr_slug": "chats-poisson",
-      "en_slug": "cats-fish",
-      "prompt": "A cat reaching eagerly toward a fish in a fishbowl, tongue out and eyes wide, thick cartoon lines.",
-      "category": "chats",
-      "added_at": "2026-03-28T19:48:00.373773+00:00"
-    },
-    {
-      "fr_slug": "chats-fee",
-      "en_slug": "cats-fairy",
-      "prompt": "A small kitten with delicate butterfly wings hovering over flowers, sparkles around it, cartoon style.",
-      "category": "chats",
-      "added_at": "2026-03-28T19:48:00.373783+00:00"
-    },
-    {
-      "fr_slug": "chats-prince",
-      "en_slug": "cats-prince",
-      "prompt": "A noble cat wearing a small crown and a cape, sitting straight with one paw raised, cartoon style.",
-      "category": "chats",
-      "added_at": "2026-03-28T19:48:00.373794+00:00"
-    },
-    {
-      "fr_slug": "chats-deux-amis",
-      "en_slug": "cats-two-friends",
-      "prompt": "Two cats sitting side by side touching noses in greeting, different sizes, simple bold cartoon style.",
-      "category": "chats",
-      "added_at": "2026-03-28T19:48:00.373800+00:00"
-    },
-    {
-      "fr_slug": "chats-lune",
-      "en_slug": "cats-moon",
-      "prompt": "A cat sitting on a crescent moon surrounded by big stars, dangling its legs, dreamy cartoon style.",
-      "category": "chats",
-      "added_at": "2026-03-28T19:48:00.373809+00:00"
-    },
-    {
-      "fr_slug": "chats-miaulement",
-      "en_slug": "cats-singing",
-      "prompt": "A cat standing on its hind legs with mouth wide open singing, musical notes floating around it, cartoon.",
-      "category": "chats",
-      "added_at": "2026-03-28T19:48:00.373816+00:00"
-    },
-    {
-      "fr_slug": "chats-printemps",
-      "en_slug": "cats-spring",
-      "prompt": "A happy cat lying in grass with a butterfly on its nose and flowers blooming around it, bold cartoon lines.",
-      "category": "chats",
-      "added_at": "2026-03-28T19:48:00.373825+00:00"
-    },
-    {
-      "fr_slug": "bold-et-facile-chat",
-      "en_slug": "bold-easy-cat",
-      "prompt": "A sitting cat with an enormous round head, huge eyes, tiny smile, ultra thick outlines only. Very simple.",
-      "category": "bold-et-facile",
-      "added_at": "2026-03-28T19:48:00.373835+00:00"
-    },
-    {
-      "fr_slug": "bold-et-facile-soleil",
-      "en_slug": "bold-easy-sun",
-      "prompt": "A big smiling sun with eight thick chunky rays, simple round face, ultra thick black outlines.",
-      "category": "bold-et-facile",
-      "added_at": "2026-03-28T19:48:00.373842+00:00"
-    },
-    {
-      "fr_slug": "bold-et-facile-maison",
-      "en_slug": "bold-easy-house",
-      "prompt": "A simple house with a big roof, one door, two windows and a chimney, very thick black outlines only.",
-      "category": "bold-et-facile",
-      "added_at": "2026-03-28T19:48:00.373851+00:00"
-    },
-    {
-      "fr_slug": "bold-et-facile-etoile",
-      "en_slug": "bold-easy-star",
-      "prompt": "A large five-pointed star with a smiling face, very thick outlines, simple shape, white interior.",
-      "category": "bold-et-facile",
-      "added_at": "2026-03-28T19:48:00.373859+00:00"
-    },
-    {
-      "fr_slug": "bold-et-facile-coeur",
-      "en_slug": "bold-easy-heart",
-      "prompt": "A big heart shape with a simple happy face, very thick black outlines, plain white interior, nothing else.",
-      "category": "bold-et-facile",
-      "added_at": "2026-03-28T19:48:00.373866+00:00"
-    },
-    {
-      "fr_slug": "bold-et-facile-chien",
-      "en_slug": "bold-easy-dog",
-      "prompt": "A chubby sitting dog with floppy ears, big nose, and a tail, ultra thick outlines, very minimal detail.",
-      "category": "bold-et-facile",
-      "added_at": "2026-03-28T19:48:00.373874+00:00"
-    },
-    {
-      "fr_slug": "bold-et-facile-fleur",
-      "en_slug": "bold-easy-flower",
-      "prompt": "A simple flower with six large round petals and a big circle center, very thick outlines, stem and two leaves.",
-      "category": "bold-et-facile",
-      "added_at": "2026-03-28T19:48:00.373882+00:00"
-    },
-    {
-      "fr_slug": "bold-et-facile-poisson",
-      "en_slug": "bold-easy-fish",
-      "prompt": "A big round cartoon fish with one large eye, a smile, and a fan tail, ultra thick outlines, minimal detail.",
-      "category": "bold-et-facile",
-      "added_at": "2026-03-28T19:48:00.373888+00:00"
-    },
-    {
-      "fr_slug": "bold-et-facile-voiture",
-      "en_slug": "bold-easy-car",
-      "prompt": "A side-view toy car with two big circles for wheels, rounded body, one window, ultra thick outlines only.",
-      "category": "bold-et-facile",
-      "added_at": "2026-03-28T19:48:00.373896+00:00"
-    },
-    {
-      "fr_slug": "bold-et-facile-arc-en-ciel",
-      "en_slug": "bold-easy-rainbow",
-      "prompt": "A big semicircle rainbow with four thick bold bands, fluffy cloud on each end, ultra simple outline style.",
-      "category": "bold-et-facile",
-      "added_at": "2026-03-28T19:48:00.373904+00:00"
-    },
-    {
-      "fr_slug": "bold-et-facile-papillon",
-      "en_slug": "bold-easy-butterfly",
-      "prompt": "A butterfly with two big round top wings and two smaller bottom wings, simple body, very thick outlines only.",
-      "category": "bold-et-facile",
-      "added_at": "2026-03-28T19:48:00.373915+00:00"
-    },
-    {
-      "fr_slug": "bold-et-facile-elephant",
-      "en_slug": "bold-easy-elephant",
-      "prompt": "A big round elephant head with huge ears, a curled trunk, and two small eyes, ultra thick outlines only.",
-      "category": "bold-et-facile",
-      "added_at": "2026-03-28T19:48:00.373921+00:00"
-    },
-    {
-      "fr_slug": "bold-et-facile-glace",
-      "en_slug": "bold-easy-icecream",
-      "prompt": "A soft serve ice cream cone with a big swirl top and waffle cone, very thick outlines, simple and chunky.",
-      "category": "bold-et-facile",
-      "added_at": "2026-03-28T19:48:00.373930+00:00"
-    },
-    {
-      "fr_slug": "bold-et-facile-nuage",
-      "en_slug": "bold-easy-cloud",
-      "prompt": "A big fluffy cartoon cloud with a smiling face, bumpy top edge, flat bottom, ultra thick black outlines.",
-      "category": "bold-et-facile",
-      "added_at": "2026-03-28T19:48:00.373936+00:00"
-    },
-    {
-      "fr_slug": "bold-et-facile-grenouille",
-      "en_slug": "bold-easy-frog",
-      "prompt": "A round cartoon frog sitting with big bulging eyes, wide smile, stubby arms and legs, ultra thick outlines.",
-      "category": "bold-et-facile",
-      "added_at": "2026-03-28T19:48:00.373944+00:00"
-    },
-    {
-      "fr_slug": "bold-et-facile-arbre",
-      "en_slug": "bold-easy-tree",
-      "prompt": "A simple tree with a thick brown trunk and a big round green fluffy top, ultra thick outlines, very minimal.",
-      "category": "bold-et-facile",
-      "added_at": "2026-03-28T19:48:00.373953+00:00"
-    },
-    {
-      "fr_slug": "bold-et-facile-lapin",
-      "en_slug": "bold-easy-rabbit",
-      "prompt": "A chubby sitting bunny with two tall ears, round body, small tail, ultra thick outlines, very simple style.",
-      "category": "bold-et-facile",
-      "added_at": "2026-03-28T19:48:00.373959+00:00"
-    },
-    {
-      "fr_slug": "bold-et-facile-gateau",
-      "en_slug": "bold-easy-cake",
-      "prompt": "A round birthday cake with three candles on top, one horizontal stripe, ultra thick outlines, simple shapes.",
-      "category": "bold-et-facile",
-      "added_at": "2026-03-28T19:48:00.373967+00:00"
-    },
-    {
-      "fr_slug": "bold-et-facile-etoile-mer",
-      "en_slug": "bold-easy-starfish",
-      "prompt": "A big five-armed starfish with a happy face and smooth arms, ultra thick outlines, plain white background.",
-      "category": "bold-et-facile",
-      "added_at": "2026-03-28T19:48:00.373975+00:00"
-    },
-    {
-      "fr_slug": "bold-et-facile-licorne",
-      "en_slug": "bold-easy-unicorn",
-      "prompt": "A chubby unicorn standing, with a single thick horn, big eyes, flowing mane, ultra thick black outlines only.",
-      "category": "bold-et-facile",
-      "added_at": "2026-03-28T19:48:00.373983+00:00"
-    },
-    {
-      "fr_slug": "papillons-monarque",
-      "en_slug": "butterflies-monarch",
-      "prompt": "A monarch butterfly top-down view, large symmetrical wings with simple vein patterns, bold clean outlines.",
-      "category": "papillons",
-      "added_at": "2026-03-28T19:48:00.373993+00:00"
-    },
-    {
-      "fr_slug": "papillons-morpho",
-      "en_slug": "butterflies-morpho",
-      "prompt": "A morpho butterfly top-down view, large rounded wings with eye-spot patterns, bold clean outlines.",
-      "category": "papillons",
-      "added_at": "2026-03-28T19:48:00.373999+00:00"
-    },
-    {
-      "fr_slug": "papillons-simple",
-      "en_slug": "butterflies-simple",
-      "prompt": "A cute simple butterfly front view, big round wings with simple circle patterns, thick bold outlines, kids style.",
-      "category": "papillons",
-      "added_at": "2026-03-28T19:48:00.374007+00:00"
-    },
-    {
-      "fr_slug": "papillons-jardin",
-      "en_slug": "butterflies-garden",
-      "prompt": "A butterfly landing on a big flower, two leaves beside it, simple thick clean outlines, cute style.",
-      "category": "papillons",
-      "added_at": "2026-03-28T19:48:00.374014+00:00"
-    },
-    {
-      "fr_slug": "papillons-chenille",
-      "en_slug": "butterflies-caterpillar",
-      "prompt": "A fat happy caterpillar on a branch beside a small butterfly, bold clean outlines, cute cartoon style.",
-      "category": "papillons",
-      "added_at": "2026-03-28T19:48:00.374022+00:00"
-    },
-    {
-      "fr_slug": "papillons-duo",
-      "en_slug": "butterflies-duo",
-      "prompt": "Two butterflies facing each other with wings spread, flowers below them, simple clean black outlines.",
-      "category": "papillons",
-      "added_at": "2026-03-28T19:48:00.374030+00:00"
-    },
-    {
-      "fr_slug": "papillons-nuit",
-      "en_slug": "butterflies-night-moth",
-      "prompt": "A big fluffy moth with feathery antennae and large wings, crescent moon behind it, bold clean outlines.",
-      "category": "papillons",
-      "added_at": "2026-03-28T19:48:00.374037+00:00"
-    },
-    {
-      "fr_slug": "papillons-kawaii",
-      "en_slug": "butterflies-kawaii",
-      "prompt": "A kawaii butterfly with a big round face, large eyes, rosy cheeks, small smile, round wings, thick bold outlines.",
-      "category": "papillons",
-      "added_at": "2026-03-28T19:48:00.374044+00:00"
-    },
-    {
-      "fr_slug": "papillons-branche",
-      "en_slug": "butterflies-branch",
-      "prompt": "A butterfly resting on a thick branch with two leaves, wings slightly open showing detail, clean bold outlines.",
-      "category": "papillons",
-      "added_at": "2026-03-28T19:48:00.374051+00:00"
-    },
-    {
-      "fr_slug": "papillons-cocon",
-      "en_slug": "butterflies-cocoon",
-      "prompt": "A chrysalis hanging from a twig, a small butterfly emerging from it, simple bold clean outlines for kids.",
-      "category": "papillons",
-      "added_at": "2026-03-28T19:48:00.374059+00:00"
-    },
-    {
-      "fr_slug": "papillons-printemps",
-      "en_slug": "butterflies-spring",
-      "prompt": "Three small butterflies flying above a row of simple flowers, clean thick outlines, cheerful spring scene.",
-      "category": "papillons",
-      "added_at": "2026-03-28T19:48:00.374065+00:00"
-    },
-    {
       "fr_slug": "papillons-tropical",
       "en_slug": "butterflies-tropical",
       "prompt": "A large exotic butterfly with ornate wing patterns and long tails, top-down view, clean bold line art.",
@@ -1142,7 +820,467 @@
       "added_at": "2026-03-28T19:48:00.374881+00:00"
     }
   ],
-  "completed": [],
-  "failed": [],
-  "daily_counts": {}
+  "completed": [
+    {
+      "fr_slug": "fees-fleurs",
+      "en_slug": "fairies-flowers",
+      "prompt": "A small fairy with delicate wings flying among giant flowers, sprinkling fairy dust, simple cartoon style for kids.",
+      "category": "fees",
+      "fr_title": "Fée des fleurs",
+      "en_title": "Flower Fairy",
+      "fr_tags": [
+        "fée",
+        "fleurs",
+        "magie",
+        "mignon"
+      ],
+      "en_tags": [
+        "fairy",
+        "flowers",
+        "magic",
+        "cute"
+      ],
+      "added_at": "2026-04-10T04:19:13.150760+00:00",
+      "completed_at": "2026-04-10T04:19:35.295147+00:00"
+    },
+    {
+      "fr_slug": "sirenes-ocean",
+      "en_slug": "mermaids-ocean",
+      "prompt": "A cute mermaid with a fish tail sitting on a rock in the ocean, brushing her long hair, seashells and starfish around, cartoon style.",
+      "category": "sirenes",
+      "fr_title": "Sirène dans l'océan",
+      "en_title": "Mermaid in Ocean",
+      "fr_tags": [
+        "sirène",
+        "océan",
+        "mer",
+        "fantaisie"
+      ],
+      "en_tags": [
+        "mermaid",
+        "ocean",
+        "sea",
+        "fantasy"
+      ],
+      "added_at": "2026-04-10T04:19:13.150777+00:00",
+      "completed_at": "2026-04-10T04:19:48.924761+00:00"
+    },
+    {
+      "fr_slug": "animaux-panda-bambou",
+      "en_slug": "animals-panda-bamboo",
+      "prompt": "A cute panda bear sitting and munching on a bamboo stick, round body, black eye patches, simple cartoon style.",
+      "category": "animaux",
+      "fr_title": "Panda mangeant du bambou",
+      "en_title": "Panda Eating Bamboo",
+      "fr_tags": [
+        "panda",
+        "bambou",
+        "animaux",
+        "mignon"
+      ],
+      "en_tags": [
+        "panda",
+        "bamboo",
+        "animals",
+        "cute"
+      ],
+      "added_at": "2026-04-10T04:19:13.150779+00:00",
+      "completed_at": "2026-04-10T04:20:01.234457+00:00"
+    },
+    {
+      "fr_slug": "animaux-herisson",
+      "en_slug": "animals-hedgehog",
+      "prompt": "A tiny cute hedgehog with spiky back, small nose, holding a small apple, sitting among autumn leaves, simple cartoon.",
+      "category": "animaux",
+      "fr_title": "Petit hérisson",
+      "en_title": "Little Hedgehog",
+      "fr_tags": [
+        "hérisson",
+        "animaux",
+        "mignon",
+        "automne"
+      ],
+      "en_tags": [
+        "hedgehog",
+        "animals",
+        "cute",
+        "autumn"
+      ],
+      "added_at": "2026-04-10T04:19:13.150781+00:00",
+      "completed_at": "2026-04-10T04:20:20.335822+00:00"
+    },
+    {
+      "fr_slug": "chats-mignon",
+      "en_slug": "cats-cute",
+      "prompt": "A round fluffy kitten sitting upright with big round eyes and a tiny pink nose, simple cartoon style.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373498+00:00",
+      "completed_at": "2026-04-10T04:20:35.115199+00:00"
+    },
+    {
+      "fr_slug": "chats-dors",
+      "en_slug": "cats-sleeping",
+      "prompt": "A cat curled up asleep, tail wrapped around its body, eyes closed with tiny eyelashes, bold lines.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373700+00:00",
+      "completed_at": "2026-04-10T04:21:09.547862+00:00"
+    },
+    {
+      "fr_slug": "chats-joue",
+      "en_slug": "cats-playing",
+      "prompt": "A small kitten batting a ball of yarn with one paw raised, sitting on its hind legs, cute cartoon.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373715+00:00",
+      "completed_at": "2026-04-10T04:21:23.561888+00:00"
+    },
+    {
+      "fr_slug": "chats-siamois",
+      "en_slug": "cats-siamese",
+      "prompt": "A slender Siamese cat sitting regally with a long tail, almond eyes, and pointed ears, clean bold lines.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373727+00:00",
+      "completed_at": "2026-04-10T04:21:40.554741+00:00"
+    },
+    {
+      "fr_slug": "chats-arc-en-ciel",
+      "en_slug": "cats-rainbow",
+      "prompt": "A cheerful cat sitting under a big rainbow with clouds on each side, simple cartoon thick outlines.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373740+00:00",
+      "completed_at": "2026-04-10T04:21:56.432188+00:00"
+    },
+    {
+      "fr_slug": "chats-chapeau",
+      "en_slug": "cats-hat",
+      "prompt": "A cute cat wearing a big top hat and a bow tie, sitting proudly, big eyes, simple cartoon style.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373748+00:00",
+      "completed_at": "2026-04-10T04:22:13.404939+00:00"
+    },
+    {
+      "fr_slug": "chats-jardin",
+      "en_slug": "cats-garden",
+      "prompt": "A cat sitting among large daisy flowers in a garden, looking curious, bold cartoon outlines.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373757+00:00",
+      "completed_at": "2026-04-10T04:22:28.255919+00:00"
+    },
+    {
+      "fr_slug": "chats-panier",
+      "en_slug": "cats-basket",
+      "prompt": "A fluffy cat nestled inside a wicker basket with a pillow, paws folded, eyes half-closed, cute style.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373764+00:00",
+      "completed_at": "2026-04-10T04:22:41.947506+00:00"
+    },
+    {
+      "fr_slug": "chats-poisson",
+      "en_slug": "cats-fish",
+      "prompt": "A cat reaching eagerly toward a fish in a fishbowl, tongue out and eyes wide, thick cartoon lines.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373773+00:00",
+      "completed_at": "2026-04-10T04:22:59.324579+00:00"
+    },
+    {
+      "fr_slug": "chats-fee",
+      "en_slug": "cats-fairy",
+      "prompt": "A small kitten with delicate butterfly wings hovering over flowers, sparkles around it, cartoon style.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373783+00:00",
+      "completed_at": "2026-04-10T04:23:16.863084+00:00"
+    },
+    {
+      "fr_slug": "chats-prince",
+      "en_slug": "cats-prince",
+      "prompt": "A noble cat wearing a small crown and a cape, sitting straight with one paw raised, cartoon style.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373794+00:00",
+      "completed_at": "2026-04-10T04:23:37.768763+00:00"
+    },
+    {
+      "fr_slug": "chats-deux-amis",
+      "en_slug": "cats-two-friends",
+      "prompt": "Two cats sitting side by side touching noses in greeting, different sizes, simple bold cartoon style.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373800+00:00",
+      "completed_at": "2026-04-10T04:23:57.839303+00:00"
+    },
+    {
+      "fr_slug": "chats-lune",
+      "en_slug": "cats-moon",
+      "prompt": "A cat sitting on a crescent moon surrounded by big stars, dangling its legs, dreamy cartoon style.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373809+00:00",
+      "completed_at": "2026-04-10T04:24:12.220555+00:00"
+    },
+    {
+      "fr_slug": "chats-miaulement",
+      "en_slug": "cats-singing",
+      "prompt": "A cat standing on its hind legs with mouth wide open singing, musical notes floating around it, cartoon.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373816+00:00",
+      "completed_at": "2026-04-10T04:24:38.234963+00:00"
+    },
+    {
+      "fr_slug": "chats-printemps",
+      "en_slug": "cats-spring",
+      "prompt": "A happy cat lying in grass with a butterfly on its nose and flowers blooming around it, bold cartoon lines.",
+      "category": "chats",
+      "added_at": "2026-03-28T19:48:00.373825+00:00",
+      "completed_at": "2026-04-10T04:25:04.137991+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-chat",
+      "en_slug": "bold-easy-cat",
+      "prompt": "A sitting cat with an enormous round head, huge eyes, tiny smile, ultra thick outlines only. Very simple.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373835+00:00",
+      "completed_at": "2026-04-10T04:25:25.120678+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-soleil",
+      "en_slug": "bold-easy-sun",
+      "prompt": "A big smiling sun with eight thick chunky rays, simple round face, ultra thick black outlines.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373842+00:00",
+      "completed_at": "2026-04-10T04:25:39.014402+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-maison",
+      "en_slug": "bold-easy-house",
+      "prompt": "A simple house with a big roof, one door, two windows and a chimney, very thick black outlines only.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373851+00:00",
+      "completed_at": "2026-04-10T04:25:51.435514+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-etoile",
+      "en_slug": "bold-easy-star",
+      "prompt": "A large five-pointed star with a smiling face, very thick outlines, simple shape, white interior.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373859+00:00",
+      "completed_at": "2026-04-10T04:26:05.569202+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-coeur",
+      "en_slug": "bold-easy-heart",
+      "prompt": "A big heart shape with a simple happy face, very thick black outlines, plain white interior, nothing else.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373866+00:00",
+      "completed_at": "2026-04-10T04:26:22.224311+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-fleur",
+      "en_slug": "bold-easy-flower",
+      "prompt": "A simple flower with six large round petals and a big circle center, very thick outlines, stem and two leaves.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373882+00:00",
+      "completed_at": "2026-04-10T04:26:43.285494+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-poisson",
+      "en_slug": "bold-easy-fish",
+      "prompt": "A big round cartoon fish with one large eye, a smile, and a fan tail, ultra thick outlines, minimal detail.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373888+00:00",
+      "completed_at": "2026-04-10T04:26:59.314188+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-voiture",
+      "en_slug": "bold-easy-car",
+      "prompt": "A side-view toy car with two big circles for wheels, rounded body, one window, ultra thick outlines only.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373896+00:00",
+      "completed_at": "2026-04-10T04:27:14.236460+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-arc-en-ciel",
+      "en_slug": "bold-easy-rainbow",
+      "prompt": "A big semicircle rainbow with four thick bold bands, fluffy cloud on each end, ultra simple outline style.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373904+00:00",
+      "completed_at": "2026-04-10T04:27:34.414866+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-papillon",
+      "en_slug": "bold-easy-butterfly",
+      "prompt": "A butterfly with two big round top wings and two smaller bottom wings, simple body, very thick outlines only.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373915+00:00",
+      "completed_at": "2026-04-10T04:27:50.003224+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-elephant",
+      "en_slug": "bold-easy-elephant",
+      "prompt": "A big round elephant head with huge ears, a curled trunk, and two small eyes, ultra thick outlines only.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373921+00:00",
+      "completed_at": "2026-04-10T04:28:08.182726+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-glace",
+      "en_slug": "bold-easy-icecream",
+      "prompt": "A soft serve ice cream cone with a big swirl top and waffle cone, very thick outlines, simple and chunky.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373930+00:00",
+      "completed_at": "2026-04-10T04:28:23.472999+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-nuage",
+      "en_slug": "bold-easy-cloud",
+      "prompt": "A big fluffy cartoon cloud with a smiling face, bumpy top edge, flat bottom, ultra thick black outlines.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373936+00:00",
+      "completed_at": "2026-04-10T04:28:38.428335+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-grenouille",
+      "en_slug": "bold-easy-frog",
+      "prompt": "A round cartoon frog sitting with big bulging eyes, wide smile, stubby arms and legs, ultra thick outlines.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373944+00:00",
+      "completed_at": "2026-04-10T04:28:57.470725+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-arbre",
+      "en_slug": "bold-easy-tree",
+      "prompt": "A simple tree with a thick brown trunk and a big round green fluffy top, ultra thick outlines, very minimal.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373953+00:00",
+      "completed_at": "2026-04-10T04:29:12.361315+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-lapin",
+      "en_slug": "bold-easy-rabbit",
+      "prompt": "A chubby sitting bunny with two tall ears, round body, small tail, ultra thick outlines, very simple style.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373959+00:00",
+      "completed_at": "2026-04-10T04:29:27.492572+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-gateau",
+      "en_slug": "bold-easy-cake",
+      "prompt": "A round birthday cake with three candles on top, one horizontal stripe, ultra thick outlines, simple shapes.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373967+00:00",
+      "completed_at": "2026-04-10T04:29:44.562706+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-etoile-mer",
+      "en_slug": "bold-easy-starfish",
+      "prompt": "A big five-armed starfish with a happy face and smooth arms, ultra thick outlines, plain white background.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373975+00:00",
+      "completed_at": "2026-04-10T04:29:59.178770+00:00"
+    },
+    {
+      "fr_slug": "bold-et-facile-licorne",
+      "en_slug": "bold-easy-unicorn",
+      "prompt": "A chubby unicorn standing, with a single thick horn, big eyes, flowing mane, ultra thick black outlines only.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373983+00:00",
+      "completed_at": "2026-04-10T04:30:15.479531+00:00"
+    },
+    {
+      "fr_slug": "papillons-monarque",
+      "en_slug": "butterflies-monarch",
+      "prompt": "A monarch butterfly top-down view, large symmetrical wings with simple vein patterns, bold clean outlines.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.373993+00:00",
+      "completed_at": "2026-04-10T04:30:31.359734+00:00"
+    },
+    {
+      "fr_slug": "papillons-morpho",
+      "en_slug": "butterflies-morpho",
+      "prompt": "A morpho butterfly top-down view, large rounded wings with eye-spot patterns, bold clean outlines.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.373999+00:00",
+      "completed_at": "2026-04-10T04:30:46.869915+00:00"
+    },
+    {
+      "fr_slug": "papillons-simple",
+      "en_slug": "butterflies-simple",
+      "prompt": "A cute simple butterfly front view, big round wings with simple circle patterns, thick bold outlines, kids style.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.374007+00:00",
+      "completed_at": "2026-04-10T04:31:02.594160+00:00"
+    },
+    {
+      "fr_slug": "papillons-jardin",
+      "en_slug": "butterflies-garden",
+      "prompt": "A butterfly landing on a big flower, two leaves beside it, simple thick clean outlines, cute style.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.374014+00:00",
+      "completed_at": "2026-04-10T04:31:17.147502+00:00"
+    },
+    {
+      "fr_slug": "papillons-chenille",
+      "en_slug": "butterflies-caterpillar",
+      "prompt": "A fat happy caterpillar on a branch beside a small butterfly, bold clean outlines, cute cartoon style.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.374022+00:00",
+      "completed_at": "2026-04-10T04:31:32.637201+00:00"
+    },
+    {
+      "fr_slug": "papillons-duo",
+      "en_slug": "butterflies-duo",
+      "prompt": "Two butterflies facing each other with wings spread, flowers below them, simple clean black outlines.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.374030+00:00",
+      "completed_at": "2026-04-10T04:31:49.049252+00:00"
+    },
+    {
+      "fr_slug": "papillons-nuit",
+      "en_slug": "butterflies-night-moth",
+      "prompt": "A big fluffy moth with feathery antennae and large wings, crescent moon behind it, bold clean outlines.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.374037+00:00",
+      "completed_at": "2026-04-10T04:32:04.682778+00:00"
+    },
+    {
+      "fr_slug": "papillons-kawaii",
+      "en_slug": "butterflies-kawaii",
+      "prompt": "A kawaii butterfly with a big round face, large eyes, rosy cheeks, small smile, round wings, thick bold outlines.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.374044+00:00",
+      "completed_at": "2026-04-10T04:32:20.387995+00:00"
+    },
+    {
+      "fr_slug": "papillons-branche",
+      "en_slug": "butterflies-branch",
+      "prompt": "A butterfly resting on a thick branch with two leaves, wings slightly open showing detail, clean bold outlines.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.374051+00:00",
+      "completed_at": "2026-04-10T04:32:40.218645+00:00"
+    },
+    {
+      "fr_slug": "papillons-cocon",
+      "en_slug": "butterflies-cocoon",
+      "prompt": "A chrysalis hanging from a twig, a small butterfly emerging from it, simple bold clean outlines for kids.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.374059+00:00",
+      "completed_at": "2026-04-10T04:32:54.404346+00:00"
+    },
+    {
+      "fr_slug": "papillons-printemps",
+      "en_slug": "butterflies-spring",
+      "prompt": "Three small butterflies flying above a row of simple flowers, clean thick outlines, cheerful spring scene.",
+      "category": "papillons",
+      "added_at": "2026-03-28T19:48:00.374065+00:00",
+      "completed_at": "2026-04-10T04:33:08.681489+00:00"
+    }
+  ],
+  "failed": [
+    {
+      "fr_slug": "bold-et-facile-chien",
+      "en_slug": "bold-easy-dog",
+      "prompt": "A chubby sitting dog with floppy ears, big nose, and a tail, ultra thick outlines, very minimal detail.",
+      "category": "bold-et-facile",
+      "added_at": "2026-03-28T19:48:00.373874+00:00",
+      "failed_at": "2026-04-10T04:26:29.331598+00:00"
+    }
+  ],
+  "daily_counts": {
+    "2026-04-10": 49
+  }
 }
