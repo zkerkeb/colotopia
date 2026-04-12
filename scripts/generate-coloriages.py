@@ -98,12 +98,16 @@ QUEUE_FILENAME = "data/generation-queue.json"
 
 LINE_ART_SUFFIX_KIDS = (
     "Black and white line drawing for kids. Thick bold outlines, pure white "
-    "background, cute cartoon style. No shading, no text."
+    "background, cute cartoon style. No shading. "
+    "IMPORTANT: Absolutely no text, no words, no letters, no numbers, no captions, "
+    "no labels, no watermarks anywhere in the image."
 )
 
 LINE_ART_SUFFIX_ADULTS = (
     "Black and white line drawing. Clean outlines on pure white background. "
-    "Intricate detailed patterns, fine lines. No shading, no text."
+    "Intricate detailed patterns, fine lines. No shading. "
+    "IMPORTANT: Absolutely no text, no words, no letters, no numbers, no captions, "
+    "no labels, no watermarks anywhere in the image."
 )
 
 # Adult categories use the detailed adult prompt suffix
@@ -235,10 +239,75 @@ def upscale_to_a4(image_bytes: bytes) -> bytes:
 # Post-generation quality control
 # ---------------------------------------------------------------------------
 
+def _detect_text_in_image(img_gray) -> bool:
+    """Heuristic text detection: looks for horizontal runs of small dark
+    connected components typical of rendered text.
+
+    Works by scanning horizontal strips of the image. In each strip, we count
+    how many short horizontal dark runs exist. Text produces many short runs
+    in a horizontal band; line art doesn't.
+
+    Returns True if text is likely present.
+    """
+    import numpy as np
+    w, h = img_gray.size
+    # Sample the bottom 40% and top 15% of the image (where text usually leaks)
+    regions = [
+        (0, int(h * 0.15)),          # top 15%
+        (int(h * 0.60), h),          # bottom 40%
+    ]
+
+    arr = np.array(img_gray)
+
+    for y_start, y_end in regions:
+        region = arr[y_start:y_end, :]
+        if region.size == 0:
+            continue
+
+        # Binarise: dark pixels < 80
+        dark = (region < 80).astype(np.uint8)
+
+        # For each row, count transitions from white->dark (run starts)
+        # Text creates many short runs per row
+        text_like_rows = 0
+        sample_rows = range(0, dark.shape[0], max(1, dark.shape[0] // 40))
+        for row_idx in sample_rows:
+            row = dark[row_idx]
+            # Count dark runs
+            diffs = np.diff(row)
+            run_starts = np.sum(diffs == 1)
+            # Text typically creates 10+ short dark runs per row in a text region
+            if run_starts > 15:
+                text_like_rows += 1
+
+        # If many rows in this region look text-like, flag it
+        sampled = len(list(sample_rows))
+        if sampled > 0 and (text_like_rows / sampled) > 0.25:
+            return True
+
+    return False
+
+
+def _detect_text_ocr(img_gray) -> bool:
+    """Use OCR (pytesseract) to detect text if available. Falls back silently."""
+    try:
+        import pytesseract
+        # Resize down for speed
+        small = img_gray.copy()
+        small.thumbnail((800, 1100))
+        text = pytesseract.image_to_string(small, lang="eng", config="--psm 6")
+        # Filter out very short strings (noise) — only flag if we find 3+ word characters
+        words = [w for w in text.split() if len(w) >= 3 and w.isalpha()]
+        return len(words) >= 3
+    except Exception:
+        return False
+
+
 def validate_line_art(png_bytes: bytes, category: str = "") -> dict:
     """Analyse pixel distribution to detect photos or non-colorable images.
 
     Returns a dict with keys: passed (bool), white_pct, black_pct, mid_pct, reason.
+    Also checks for text leakage in the generated image.
     """
     from PIL import Image
     import io
@@ -284,6 +353,14 @@ def validate_line_art(png_bytes: bytes, category: str = "") -> dict:
                 "passed": False, "white_pct": white_pct, "black_pct": black_pct,
                 "mid_pct": mid_pct, "reason": f"too much shading (mid={mid_pct:.0f}% > 30%)",
             }
+
+    # --- Text detection ---
+    has_text = _detect_text_ocr(img) or _detect_text_in_image(img)
+    if has_text:
+        return {
+            "passed": False, "white_pct": white_pct, "black_pct": black_pct,
+            "mid_pct": mid_pct, "reason": "text detected in image",
+        }
 
     return {
         "passed": True, "white_pct": white_pct, "black_pct": black_pct,
@@ -435,6 +512,10 @@ def queue_run(
             "prompt": item["prompt"],
             "category": item["category"],
         }
+        # Pass through optional metadata (titles, tags) if present in queue
+        for extra_key in ("fr_title", "en_title", "fr_tags", "en_tags"):
+            if extra_key in item:
+                subject[extra_key] = item[extra_key]
 
         if not dry_run and not first_call:
             print(f"  [wait] Rate limiting ({RATE_LIMIT_SECONDS}s)...")
@@ -562,7 +643,7 @@ def make_content_yaml(subject: dict, locale: str, image_slug: str) -> dict:
     tags_key = "fr_tags" if is_fr else "en_tags"
 
     slug = subject[slug_key]
-    title = subject[title_key]
+    title = subject.get(title_key) or slug.replace("-", " ").title()
     tags = subject.get(tags_key, [])
 
     # Derive category from fr_slug prefix (e.g. "animaux-chat" → "animaux")
