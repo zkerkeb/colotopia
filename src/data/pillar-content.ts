@@ -40,7 +40,7 @@ const pillarContent: Partial<PillarRecord> = {
         },
         {
           question: "Comment imprimer les coloriages animaux ?",
-          answer: "Cliquez sur le coloriage de votre choix, puis utilisez le bouton « Télécharger le PDF ». Le fichier est au format A4, optimisé pour une impression nette sur n'importe quelle imprimante.",
+          answer: "Cliquez sur le coloriage de votre choix, puis utilisez le bouton « Imprimer ». Le coloriage s'imprime directement au format A4, optimisé pour une impression nette sur n'importe quelle imprimante.",
         },
         {
           question: "Les coloriages animaux sont-ils vraiment gratuits ?",
@@ -70,7 +70,7 @@ const pillarContent: Partial<PillarRecord> = {
         },
         {
           question: "How do I print the animal coloring pages?",
-          answer: "Click on your chosen coloring page, then use the 'Download PDF' button. The file is in A4 format, optimized for crisp printing on any printer.",
+          answer: "Click on your chosen coloring page, then use the 'Print' button. The coloring page prints directly in A4 format, optimized for crisp printing on any printer.",
         },
         {
           question: "Are the animal coloring pages really free?",

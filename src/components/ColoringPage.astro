@@ -4,7 +4,6 @@
  * Assembles: hero image, download/print actions, related pages, ads, affiliate widget
  */
 import Breadcrumb from './Breadcrumb.astro';
-import PdfDownloadButton from './PdfDownloadButton.astro';
 import RelatedColoriages from './RelatedColoriages.astro';
 import AdSlot from './AdSlot.astro';
 import AffiliateWidget from './AffiliateWidget.astro';
@@ -54,8 +53,8 @@ const exploreCataLabel = locale === 'fr'
 // Derive WebP from PNG URL (works with CDN URLs)
 const imageWebp = toWebp(image);
 
-// Same-origin proxy URL for PDF/share (avoids CORS issues with canvas)
-const imageProxy = image.replace('https://cdn.colotopia.com/', '/cdn/');
+// CDN has proper CORS headers — use image URL directly (no proxy needed)
+const imageProxy = image;
 
 // Social sharing URLs
 const siteUrl = 'https://colotopia.com';
@@ -68,7 +67,7 @@ const pinterestUrl = `https://pinterest.com/pin/create/button/?url=${encodeURICo
 
 const shareLabel = t('share.label', locale);
 const mobileActionsLabel = t('mobile.actions.more', locale);
-const stickyDownloadLabel = locale === 'fr' ? 'Télécharger PDF' : 'Download PDF';
+const stickyPrintLabel = locale === 'fr' ? 'Imprimer' : 'Print';
 ---
 
 <script define:vars={{ title, category, slug, tags }}>
@@ -117,9 +116,8 @@ const stickyDownloadLabel = locale === 'fr' ? 'Télécharger PDF' : 'Download PD
 
       <!-- Action buttons -->
       <div class="coloring-actions">
-        <PdfDownloadButton image={image} title={title} locale={locale} />
         <button
-          class="btn-print btn-lg"
+          class="btn-primary btn-lg"
           id="print-btn"
           data-share-title={shareText}
           data-share-url={pageUrl}
@@ -271,22 +269,22 @@ const stickyDownloadLabel = locale === 'fr' ? 'Télécharger PDF' : 'Download PD
       <AffiliateWidget locale={locale} />
     </aside>
   </div>
-  <!-- Sticky mobile download bar — shown when main actions scroll out of view -->
+  <!-- Sticky mobile print bar — shown when main actions scroll out of view -->
   <div class="sticky-dl-bar" id="sticky-dl-bar" aria-hidden="true">
     <button class="sticky-dl-btn" id="sticky-dl-trigger">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      {stickyDownloadLabel}
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+      {stickyPrintLabel}
     </button>
   </div>
 
   <script>
-    // Show sticky bar when main download actions scroll out of view (mobile only)
+    // Show sticky bar when main actions scroll out of view (mobile only)
     const actionsEl = document.querySelector('.coloring-actions');
     const stickyBar = document.getElementById('sticky-dl-bar');
     const stickyTrigger = document.getElementById('sticky-dl-trigger');
-    const mainBtn = document.getElementById('pdf-download-btn');
+    const mainPrintBtn = document.getElementById('print-btn');
 
-    if (actionsEl && stickyBar && stickyTrigger && mainBtn) {
+    if (actionsEl && stickyBar && stickyTrigger && mainPrintBtn) {
       const io = new IntersectionObserver(([entry]) => {
         const visible = !entry.isIntersecting;
         stickyBar.classList.toggle('is-visible', visible);
@@ -295,7 +293,7 @@ const stickyDownloadLabel = locale === 'fr' ? 'Télécharger PDF' : 'Download PD
       io.observe(actionsEl);
 
       stickyTrigger.addEventListener('click', () => {
-        mainBtn.click();
+        mainPrintBtn.click();
       });
     }
   </script>
@@ -388,7 +386,7 @@ const stickyDownloadLabel = locale === 'fr' ? 'Télécharger PDF' : 'Download PD
     gap: var(--space-2);
   }
 
-  .btn-print {
+  .btn-primary {
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
@@ -397,23 +395,31 @@ const stickyDownloadLabel = locale === 'fr' ? 'Télécharger PDF' : 'Download PD
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-semibold);
     cursor: pointer;
-    border: 2px solid var(--color-border);
-    background: var(--color-bg-card);
-    color: var(--color-text-secondary);
-    transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
+    border: none;
+    text-decoration: none;
+    transition: background var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+    background: var(--color-primary);
+    color: #ffffff;
     font-family: inherit;
+    box-shadow: var(--shadow-btn);
   }
 
-  .btn-print:hover {
-    border-color: var(--color-primary);
-    color: var(--color-primary);
-    background: var(--color-primary-light);
+  .btn-primary:hover:not(:disabled) {
+    background: var(--color-primary-hover);
+    box-shadow: var(--shadow-primary);
+    transform: translateY(-1px);
+  }
+
+  .btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
   }
 
   /* Toggle printer / more-actions icons based on mobile state */
-  .btn-print .more-icon { display: none; }
-  .btn-print.is-mobile .print-icon { display: none; }
-  .btn-print.is-mobile .more-icon { display: inline; }
+  .btn-primary .more-icon { display: none; }
+  .btn-primary.is-mobile .print-icon { display: none; }
+  .btn-primary.is-mobile .more-icon { display: inline; }
 
   /* ── Category CTA ── */
   .category-cta {
