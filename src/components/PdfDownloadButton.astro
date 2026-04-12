@@ -34,9 +34,9 @@ const watermarkText = locale === 'fr'
   const btn = document.getElementById('pdf-download-btn') as HTMLButtonElement | null;
   if (!btn) throw new Error('PDF button not found');
 
-  const rawImageUrl = btn.dataset.image!;
-  // Use same-origin proxy to avoid CORS issues with canvas
-  const imageUrl = rawImageUrl.replace('https://cdn.colotopia.com/', '/cdn/');
+  const imageUrl = btn.dataset.image!;
+  // CDN has proper CORS headers (Access-Control-Allow-Origin: https://colotopia.com)
+  // so we can load images directly — no same-origin proxy needed.
   const title = btn.dataset.title!;
   const watermark = btn.dataset.watermark!;
   const loadingLabel = btn.dataset.loadingLabel!;
@@ -114,6 +114,8 @@ const watermarkText = locale === 'fr'
       }
     } catch (err) {
       console.error('PDF generation failed:', err);
+      btn.textContent = '❌ Erreur';
+      setTimeout(() => { btn.textContent = originalLabel; }, 2000);
     } finally {
       btn.disabled = false;
       btn.textContent = originalLabel;
