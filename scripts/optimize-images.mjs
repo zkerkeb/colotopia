@@ -1,5 +1,5 @@
 import { fileURLToPath } from 'url';
-import { dirname, join, resolve } from 'path';
+import { basename, dirname, join, resolve } from 'path';
 import { promises as fs } from 'fs';
 import sharp from 'sharp';
 
@@ -40,7 +40,7 @@ async function isWebpUpToDate(pngPath, webpPath) {
 
 // Process a single PNG file
 async function processPngFile(pngPath, outputDir, thumbDir) {
-  const filename = await fs.readFile(pngPath);
+  const filename = basename(pngPath);
   const baseName = filename.replace(/\.png$/i, '');
 
   const webpPath = join(outputDir, `${baseName}.webp`);
