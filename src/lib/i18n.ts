@@ -633,6 +633,7 @@ const enSlugs: Record<Category, string> = {
   architecture: 'architecture',
   sirenes: 'mermaids',
   fees: 'fairies-2',
+  culture: 'culture',
 };
 
 export function getCategorySlug(category: Category, locale: Locale): string {
