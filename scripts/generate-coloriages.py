@@ -467,6 +467,136 @@ def queue_status(astro_root: Path):
             print(f"    ... and {len(queue['pending']) - 5} more")
 
 
+
+# ---------------------------------------------------------------------------
+# Auto-register unknown categories in i18n.ts
+# ---------------------------------------------------------------------------
+
+# Default color palette for auto-registered categories (cycles through these)
+_AUTO_COLORS = [
+    {'bg': '#f59e0b', 'light': '#fffbeb', 'text': '#78350f', 'gradient': 'linear-gradient(135deg, #fffbeb 0%, #fde68a 100%)'},
+    {'bg': '#14b8a6', 'light': '#f0fdfa', 'text': '#115e59', 'gradient': 'linear-gradient(135deg, #f0fdfa 0%, #99f6e4 100%)'},
+    {'bg': '#8b5cf6', 'light': '#f5f3ff', 'text': '#4c1d95', 'gradient': 'linear-gradient(135deg, #f5f3ff 0%, #ddd6fe 100%)'},
+    {'bg': '#ef4444', 'light': '#fef2f2', 'text': '#991b1b', 'gradient': 'linear-gradient(135deg, #fef2f2 0%, #fecaca 100%)'},
+    {'bg': '#06b6d4', 'light': '#ecfeff', 'text': '#164e63', 'gradient': 'linear-gradient(135deg, #ecfeff 0%, #cffafe 100%)'},
+    {'bg': '#84cc16', 'light': '#f7fee7', 'text': '#365314', 'gradient': 'linear-gradient(135deg, #f7fee7 0%, #d9f99d 100%)'},
+]
+
+
+def ensure_categories_registered(astro_root: Path, category_slugs: list[str]):
+    """Auto-register unknown categories in src/lib/i18n.ts.
+
+    For each category not already present in kidsCategories, this function
+    appends the category to:
+      1. kidsCategories array
+      2. categoryIcons mapping (default 🏷️)
+      3. categoryColors mapping (picks from a default palette)
+      4. enSlugs mapping (uses the slug as-is for EN)
+      5. translations ('category.<slug>')
+
+    This prevents build crashes when new categories are created on the fly
+    via the generation queue.
+    """
+    i18n_path = astro_root / "src" / "lib" / "i18n.ts"
+    if not i18n_path.exists():
+        print("[i18n] WARNING: i18n.ts not found, skipping category registration.", file=sys.stderr)
+        return
+
+    content = i18n_path.read_text(encoding="utf-8")
+
+    # Detect which categories are already registered
+    new_cats = []
+    for slug in category_slugs:
+        # Check if slug appears in kidsCategories or adultCategories
+        if f"'{slug}'" in content or f'"{slug}"' in content:
+            continue
+        new_cats.append(slug)
+
+    if not new_cats:
+        return
+
+    print(f"[i18n] Auto-registering {len(new_cats)} new category(ies): {', '.join(new_cats)}")
+
+    for i, slug in enumerate(new_cats):
+        color = _AUTO_COLORS[i % len(_AUTO_COLORS)]
+        label_en = slug.replace('-', ' ').title()
+        label_fr = label_en  # Placeholder — can be refined later
+
+        # 1. Add to kidsCategories (before the '] as const;' closing)
+        content = content.replace(
+            "] as const;\n\nexport const adultCategories",
+            f"  '{slug}',\n] as const;\n\nexport const adultCategories",
+            1,
+        )
+
+        # 2. Add to categoryIcons (before the closing '};' of that block)
+        # Find the icon block by looking for the pattern after the last icon entry
+        icon_marker = "'culture': '🏛️',"
+        if icon_marker in content:
+            content = content.replace(
+                icon_marker,
+                f"{icon_marker}\n  '{slug}': '🏷️',",
+                1,
+            )
+        else:
+            # Fallback: insert before the closing of categoryIcons
+            content = content.replace(
+                "};\n\n/** Accent color",
+                f"  '{slug}': '🏷️',\n}};\n\n/** Accent color",
+                1,
+            )
+
+        # 3. Add to categoryColors (before the closing '};' of that block)
+        color_line = (
+            f"  '{slug}':{' ' * max(1, 24 - len(slug) - 3)}"
+            f"{{ bg: '{color['bg']}', light: '{color['light']}', "
+            f"text: '{color['text']}', gradient: '{color['gradient']}' }},"
+        )
+        content = content.replace(
+            "};\n\nconst translations",
+            f"{color_line}\n}};\n\nconst translations",
+            1,
+        )
+
+        # 4. Add to enSlugs (before the closing '};' of that block)
+        content = content.replace(
+            "};\n\nexport function getCategorySlug",
+            f"  {slug}: '{slug}',\n}};\n\nexport function getCategorySlug",
+            1,
+        )
+
+        # 5. Add translation
+        content = content.replace(
+            "  'category.culture':",
+            f"  'category.culture':",
+        )
+        # Insert after the last 'category.*' translation
+        # Find a safe insertion point: after 'category.culture' line
+        culture_trans = f"  'category.culture': {{ fr: 'Culture', en: 'Culture' }},"
+        if culture_trans in content:
+            content = content.replace(
+                culture_trans,
+                f"{culture_trans}\n  'category.{slug}': {{ fr: '{label_fr}', en: '{label_en}' }},",
+                1,
+            )
+        else:
+            # Fallback: insert after 'category.fees' line
+            fees_line = "  'category.fees':"
+            idx = content.find(fees_line)
+            if idx != -1:
+                end_of_line = content.index("\n", idx)
+                content = (
+                    content[:end_of_line + 1]
+                    + f"  'category.{slug}': {{ fr: '{label_fr}', en: '{label_en}' }},\n"
+                    + content[end_of_line + 1:]
+                )
+
+        print(f"  [i18n] Registered '{slug}' (icon=🏷️, color={color['bg']}, en_slug={slug})")
+
+    i18n_path.write_text(content, encoding="utf-8")
+    print(f"[i18n] Updated {i18n_path}")
+
+
 def queue_run(
     astro_root: Path,
     config: dict,
@@ -485,6 +615,11 @@ def queue_run(
     if not queue["pending"]:
         print("[queue] Nothing pending.")
         return
+
+    # Auto-register any unknown categories before processing
+    pending_cats = list({item["category"] for item in queue["pending"] if "category" in item})
+    if pending_cats:
+        ensure_categories_registered(astro_root, pending_cats)
 
     today_count = _daily_count(queue)
     remaining = DAILY_QUOTA_LIMIT - today_count
