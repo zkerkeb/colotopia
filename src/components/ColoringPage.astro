@@ -42,10 +42,14 @@ const {
 } = Astro.props;
 
 const printLabel = t('coloring.print', locale);
-const catColor = categoryColors[category];
-const catIcon = categoryIcons[category];
+const defaultColor = { bg: '#6b7280', light: '#f9fafb', text: '#1f2937', gradient: 'linear-gradient(135deg, #f9fafb 0%, #e5e7eb 100%)' };
+const catColor = categoryColors[category as keyof typeof categoryColors] ?? defaultColor;
+const catIcon = categoryIcons[category as keyof typeof categoryIcons] ?? '🎨';
 const catLabel = getCategoryLabel(category, locale);
-const catUrl = getLocalePath(locale, `/${getCategorySlug(category, locale)}`);
+const catSlug = (typeof getCategorySlug === 'function' && category in categoryColors)
+  ? getCategorySlug(category, locale)
+  : category;
+const catUrl = getLocalePath(locale, `/${catSlug}`);
 const exploreCataLabel = locale === 'fr'
   ? `Voir plus de coloriages ${catLabel}`
   : `More ${catLabel} coloring pages`;
