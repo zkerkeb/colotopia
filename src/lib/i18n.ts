@@ -46,6 +46,10 @@ export const kidsCategories = [
   'sirenes',
   'fees',
   'culture',
+  'printemps',
+  'ete',
+  'lettres',
+  'licornes',
 ] as const;
 
 export const adultCategories = [
@@ -119,6 +123,10 @@ export const categoryIcons: Record<Category, string> = {
   'sirenes': '🧜',
   'fees': '🧚',
   'culture': '🏛️',
+  'printemps': '🌸',
+  'ete': '☀️',
+  'lettres': '🔤',
+  'licornes': '🦄',
 };
 
 /** Accent color per category — used for hero, card borders, tags */
@@ -175,6 +183,10 @@ export const categoryColors: Record<Category, { bg: string; light: string; text:
   'sirenes':               { bg: '#22d3ee', light: '#ecfeff', text: '#155e75', gradient: 'linear-gradient(135deg, #ecfeff 0%, #a5f3fc 100%)' },
   'fees':                  { bg: '#f0abfc', light: '#fdf4ff', text: '#86198f', gradient: 'linear-gradient(135deg, #f0abfc, #e879f9)' },
   'culture':               { bg: '#f59e0b', light: '#fffbeb', text: '#78350f', gradient: 'linear-gradient(135deg, #fffbeb 0%, #fde68a 100%)' },
+  'printemps':             { bg: '#f472b6', light: '#fdf2f8', text: '#9d174d', gradient: 'linear-gradient(135deg, #fdf2f8 0%, #fbcfe8 100%)' },
+  'ete':                   { bg: '#fbbf24', light: '#fffbeb', text: '#92400e', gradient: 'linear-gradient(135deg, #fffbeb 0%, #fde68a 100%)' },
+  'lettres':               { bg: '#8b5cf6', light: '#f5f3ff', text: '#4c1d95', gradient: 'linear-gradient(135deg, #f5f3ff 0%, #ddd6fe 100%)' },
+  'licornes':              { bg: '#c084fc', light: '#faf5ff', text: '#7e22ce', gradient: 'linear-gradient(135deg, #fdf4ff 0%, #e9d5ff 100%)' },
 };
 
 const translations: Record<string, Record<Locale, string>> = {
@@ -244,6 +256,10 @@ const translations: Record<string, Record<Locale, string>> = {
   'category.sirenes': { fr: 'Sirènes', en: 'Mermaids' },
   'category.fees': { fr: 'Fées', en: 'Fairies' },
   'category.culture': { fr: 'Culture', en: 'Culture' },
+  'category.printemps': { fr: 'Printemps', en: 'Spring' },
+  'category.ete': { fr: 'Été', en: 'Summer' },
+  'category.lettres': { fr: 'Lettres', en: 'Letters' },
+  'category.licornes': { fr: 'Licornes', en: 'Unicorns' },
   'nav.blog': { fr: 'Blog', en: 'Blog' },
   'blog.title': { fr: 'Blog Colotopia', en: 'Colotopia Blog' },
   'blog.description': {
@@ -634,6 +650,10 @@ const enSlugs: Record<Category, string> = {
   sirenes: 'mermaids',
   fees: 'fairies-2',
   culture: 'culture',
+  printemps: 'spring',
+  ete: 'summer',
+  lettres: 'letters',
+  licornes: 'unicorns-2',
 };
 
 export function getCategorySlug(category: Category, locale: Locale): string {
