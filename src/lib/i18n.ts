@@ -45,6 +45,7 @@ export const kidsCategories = [
   'architecture',
   'sirenes',
   'fees',
+  'culture',
 ] as const;
 
 export const adultCategories = [
@@ -117,6 +118,7 @@ export const categoryIcons: Record<Category, string> = {
   'paysages': '🏔️',
   'sirenes': '🧜',
   'fees': '🧚',
+  'culture': '🏛️',
 };
 
 /** Accent color per category — used for hero, card borders, tags */
@@ -172,6 +174,7 @@ export const categoryColors: Record<Category, { bg: string; light: string; text:
   'paysages':              { bg: '#22c55e', light: '#f0fdf4', text: '#166534', gradient: 'linear-gradient(135deg, #1e1b4b 0%, #14532d 50%, #166534 100%)' },
   'sirenes':               { bg: '#22d3ee', light: '#ecfeff', text: '#155e75', gradient: 'linear-gradient(135deg, #ecfeff 0%, #a5f3fc 100%)' },
   'fees':                  { bg: '#f0abfc', light: '#fdf4ff', text: '#86198f', gradient: 'linear-gradient(135deg, #f0abfc, #e879f9)' },
+  'culture':               { bg: '#f59e0b', light: '#fffbeb', text: '#78350f', gradient: 'linear-gradient(135deg, #fffbeb 0%, #fde68a 100%)' },
 };
 
 const translations: Record<string, Record<Locale, string>> = {
@@ -240,6 +243,7 @@ const translations: Record<string, Record<Locale, string>> = {
   'category.paysages': { fr: 'Paysages', en: 'Landscapes' },
   'category.sirenes': { fr: 'Sirènes', en: 'Mermaids' },
   'category.fees': { fr: 'Fées', en: 'Fairies' },
+  'category.culture': { fr: 'Culture', en: 'Culture' },
   'nav.blog': { fr: 'Blog', en: 'Blog' },
   'blog.title': { fr: 'Blog Colotopia', en: 'Colotopia Blog' },
   'blog.description': {
