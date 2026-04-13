@@ -33,10 +33,9 @@ const placeholders = JSON.stringify(locale === 'fr' ? placeholdersFr : placehold
 ---
 
 <form
-  class:list={['search-bar', showSubmit && 'search-bar--hero']}
+  class:list={['search-bar', 'js-search-bar', showSubmit && 'search-bar--hero']}
   action={action}
   method="get"
-  id="search-bar"
   data-index-url={indexUrl}
   data-no-results={noResults}
   data-placeholders={placeholders}
@@ -56,9 +55,8 @@ const placeholders = JSON.stringify(locale === 'fr' ? placeholdersFr : placehold
       autocomplete="off"
       aria-label={ariaLabel}
       aria-expanded="false"
-      aria-controls="search-results"
     />
-    <ul class="search-results" id="search-results" role="listbox" hidden></ul>
+    <ul class="search-results" role="listbox" hidden></ul>
   </div>
   {showSubmit && (
     <button type="submit" class="btn-primary search-submit">{submitLabel}</button>
@@ -204,18 +202,45 @@ const placeholders = JSON.stringify(locale === 'fr' ? placeholdersFr : placehold
 </style>
 
 <script>
-  const bar = document.getElementById('search-bar') as HTMLFormElement;
-  if (bar) {
-    const input = bar.querySelector<HTMLInputElement>('.search-input')!;
-    const results = bar.querySelector<HTMLUListElement>('.search-results')!;
+  type SearchItem = { title: string; slug: string; tags: string[]; category: string; categoryLabel?: string; url: string };
+
+  // Shared search index cache — all SearchBar instances on the page share the same data
+  const indexCache: Record<string, { loaded: boolean; loading: Promise<void> | null; data: SearchItem[] }> = {};
+
+  function normalize(s: string) {
+    return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
+  function searchIndex(index: SearchItem[], query: string): SearchItem[] {
+    const q = normalize(query.trim());
+    if (!q) return [];
+    return index
+      .filter((item) => {
+        const inTitle = normalize(item.title).includes(q);
+        const inTags = item.tags.some((t) => normalize(t).includes(q));
+        const inCategory = normalize(item.category).includes(q);
+        return inTitle || inTags || inCategory;
+      })
+      .slice(0, 8);
+  }
+
+  function initSearchBar(bar: HTMLFormElement) {
+    const input = bar.querySelector<HTMLInputElement>('.search-input');
+    const results = bar.querySelector<HTMLUListElement>('.search-results');
+    if (!input || !results) return;
+
     const indexUrl = bar.dataset.indexUrl!;
     const noResultsText = bar.dataset.noResults!;
     const placeholders: string[] = JSON.parse(bar.dataset.placeholders || '[]');
 
-    let index: Array<{ title: string; slug: string; tags: string[]; category: string; categoryLabel?: string; url: string }> = [];
-    let loaded = false;
     let debounceTimer: ReturnType<typeof setTimeout>;
     let selectedIndex = -1;
+
+    // Init shared cache entry for this index URL
+    if (!indexCache[indexUrl]) {
+      indexCache[indexUrl] = { loaded: false, loading: null, data: [] };
+    }
+    const cache = indexCache[indexUrl];
 
     // Rotating placeholder
     if (placeholders.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -231,35 +256,24 @@ const placeholders = JSON.stringify(locale === 'fr' ? placeholdersFr : placehold
       input.style.transition = 'opacity 150ms ease';
     }
 
-    async function loadIndex() {
-      if (loaded) return;
-      loaded = true;
-      try {
-        const res = await fetch(indexUrl);
-        index = await res.json();
-      } catch {
-        loaded = false;
-      }
+    async function loadIndex(): Promise<void> {
+      if (cache.loaded) return;
+      if (cache.loading) return cache.loading;
+      cache.loading = (async () => {
+        try {
+          const res = await fetch(indexUrl);
+          cache.data = await res.json();
+          cache.loaded = true;
+        } catch {
+          // Allow retry on next attempt
+        } finally {
+          cache.loading = null;
+        }
+      })();
+      return cache.loading;
     }
 
-    function normalize(s: string) {
-      return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-    }
-
-    function search(query: string) {
-      const q = normalize(query.trim());
-      if (!q) return [];
-      return index
-        .filter((item) => {
-          const inTitle = normalize(item.title).includes(q);
-          const inTags = item.tags.some((t) => normalize(t).includes(q));
-          const inCategory = normalize(item.category).includes(q);
-          return inTitle || inTags || inCategory;
-        })
-        .slice(0, 8);
-    }
-
-    function renderResults(items: typeof index) {
+    function renderResults(items: SearchItem[]) {
       results.innerHTML = '';
       selectedIndex = -1;
       if (items.length === 0) {
@@ -310,14 +324,15 @@ const placeholders = JSON.stringify(locale === 'fr' ? placeholdersFr : placehold
       selectedIndex = idx;
     }
 
-    input.addEventListener('focus', loadIndex);
+    input.addEventListener('focus', () => loadIndex());
 
     input.addEventListener('input', () => {
       clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(() => {
+      debounceTimer = setTimeout(async () => {
         const val = input.value;
         if (!val.trim()) { closeResults(); return; }
-        const hits = search(val);
+        await loadIndex();
+        const hits = searchIndex(cache.data, val);
         renderResults(hits);
       }, 250);
     });
@@ -343,12 +358,34 @@ const placeholders = JSON.stringify(locale === 'fr' ? placeholdersFr : placehold
       if (!bar.contains(e.target as Node)) closeResults();
     });
 
-    // Auto-trigger search from ?q= URL param
-    const urlQ = new URLSearchParams(window.location.search).get('q');
-    if (urlQ) {
+    return { input, loadIndex, renderResults, closeResults };
+  }
+
+  /** Check if an element (or any ancestor) is hidden via display:none */
+  function isVisible(el: HTMLElement): boolean {
+    let node: HTMLElement | null = el;
+    while (node && node !== document.body) {
+      if (getComputedStyle(node).display === 'none') return false;
+      node = node.parentElement;
+    }
+    return true;
+  }
+
+  // Initialize all SearchBar instances on the page
+  const instances = Array.from(document.querySelectorAll<HTMLFormElement>('.js-search-bar'))
+    .map((bar) => ({ bar, api: initSearchBar(bar) }))
+    .filter((inst) => inst.api !== undefined) as Array<{ bar: HTMLFormElement; api: { input: HTMLInputElement; loadIndex: () => Promise<void>; renderResults: (items: SearchItem[]) => void; closeResults: () => void } }>;
+
+  // Auto-trigger search from ?q= URL param on the first VISIBLE SearchBar
+  const urlQ = new URLSearchParams(window.location.search).get('q');
+  if (urlQ) {
+    const visible = instances.find((inst) => isVisible(inst.bar));
+    if (visible) {
+      const { input, loadIndex, renderResults } = visible.api;
+      const cache = indexCache[visible.bar.dataset.indexUrl!];
       input.value = urlQ;
       loadIndex().then(() => {
-        const hits = search(urlQ);
+        const hits = searchIndex(cache.data, urlQ);
         renderResults(hits);
         input.focus();
       });
