@@ -48,6 +48,9 @@ const structuredData = {
       encodingFormat: 'image/webp',
       width: 800,
       height: 1100,
+      author: { '@type': 'Organization', name: 'Colotopia', url: siteUrl },
+      copyrightHolder: { '@type': 'Organization', name: 'Colotopia' },
+      license: `${siteUrl}/en/terms/`,
     },
     {
       '@type': 'WebPage',
@@ -56,7 +59,9 @@ const structuredData = {
       description: pageDescription,
       url: canonicalUrl,
       inLanguage: 'en-US',
+      datePublished: createdAt,
       primaryImageOfPage: { '@id': `${canonicalUrl}#image` },
+      isPartOf: { '@type': 'WebSite', name: 'Colotopia', url: siteUrl },
     },
   ],
 };

@@ -41,10 +41,17 @@ const articleSchema = {
   headline: post.data.seoTitle,
   description: post.data.seoDescription,
   datePublished: post.data.date,
-  author: { '@type': 'Organization', name: 'Colotopia' },
-  publisher: { '@type': 'Organization', name: 'Colotopia', url: 'https://colotopia.com' },
+  dateModified: post.data.date,
+  author: { '@type': 'Organization', name: 'Colotopia', url: 'https://colotopia.com' },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Colotopia',
+    url: 'https://colotopia.com',
+    logo: { '@type': 'ImageObject', url: 'https://colotopia.com/favicon.svg' },
+  },
   inLanguage: 'en',
-  mainEntityOfPage: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  keywords: post.data.tags?.join(', '),
 };
 ---
 
