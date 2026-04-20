@@ -1,52 +1,193 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const canonical = 'https://colotopia.com/en/privacy/';
+const altUrl = 'https://colotopia.com/fr/confidentialite/';
 ---
 
-<BaseLayout locale="en" title="Privacy Policy" altUrl="https://colotopia.com/fr/confidentialite/">
+<BaseLayout
+  locale="en"
+  title="Privacy Policy"
+  description="Colotopia privacy policy: data collected, cookies, Google AdSense, Google Analytics, GDPR rights and contact details."
+  canonical={canonical}
+  altUrl={altUrl}
+>
   <article class="legal-page">
     <h1>Privacy Policy</h1>
 
-    <p>Last updated: March 2026</p>
+    <p><em>Last updated: April 20, 2026</em></p>
 
-    <h2>Data Collected</h2>
-    <p>This site does not directly collect personal data. Third-party services (Google AdSense, Google Analytics) may collect browsing data under their own privacy policies.</p>
+    <p>
+      This policy describes how Colotopia (hereinafter "we") collects, uses and protects your
+      personal data when you visit colotopia.com. It complies with the General Data Protection
+      Regulation (GDPR, EU 2016/679) and with the Google AdSense program requirements.
+    </p>
 
-    <h2>Cookies</h2>
-    <p>Advertising cookies may be placed by Google AdSense to display personalized ads. You can disable advertising cookies through your browser settings or the Google consent manager.</p>
+    <h2>1. Data controller</h2>
+    <p>
+      The data controller is the publisher of Colotopia. For any question about this policy or
+      your personal data, you can reach us at:
+      <a href="mailto:contact@colotopia.com">contact@colotopia.com</a>.
+    </p>
 
-    <h2>Advertising</h2>
-    <p>This site uses Google AdSense to display advertisements. Google may use cookies to show ads based on your prior visits to this or other websites.</p>
+    <h2>2. Data we collect</h2>
+    <p>Colotopia requires no registration and does not directly collect names, postal addresses or
+      phone numbers. The data processed is:</p>
+    <ul>
+      <li><strong>Browsing data</strong> (IP address, browser type, operating system, pages viewed,
+        visit duration, traffic source) — collected through Google Analytics if you consent.</li>
+      <li><strong>Advertising cookies</strong> placed by Google AdSense and its partners to
+        personalize ads — only with your consent.</li>
+      <li><strong>Data sent by email</strong> when you contact us (your email address and the
+        content of your message).</li>
+    </ul>
 
-    <h2>Your Rights (GDPR)</h2>
-    <p>Under the General Data Protection Regulation (GDPR), you have the right to access, correct, and delete your data. To exercise these rights, contact us at: <a href="mailto:contact@colotopia.com">contact@colotopia.com</a></p>
+    <h2>3. Purposes and legal bases</h2>
+    <p>Your data is used to:</p>
+    <ul>
+      <li>Measure audience and improve the site (legal basis: <em>consent</em>).</li>
+      <li>Display ads, personalized or not (legal basis: <em>consent</em>).</li>
+      <li>Reply to your messages (legal basis: <em>pre-contractual request</em>).</li>
+      <li>Ensure security and proper site operation (legal basis: <em>legitimate interest</em>).</li>
+    </ul>
 
-    <h2>Contact</h2>
-    <p>For questions about this privacy policy: <a href="mailto:contact@colotopia.com">contact@colotopia.com</a></p>
+    <h2>4. Consent management (CMP)</h2>
+    <p>
+      On your first visit, a banner lets you <strong>accept</strong>, <strong>reject</strong> or
+      <strong>customize</strong> the placement of non-essential cookies. Your choice is stored
+      locally in your browser and you can change it anytime via the
+      "<a href="#" onclick="if(window.colotopiaConsent)window.colotopiaConsent.open();return false;">Manage my cookies</a>"
+      link.
+    </p>
+    <p>
+      Until you consent, no audience measurement or personalized advertising cookies are placed.
+      We use Google Consent Mode v2 to guarantee this behavior.
+    </p>
+
+    <h2>5. Google AdSense advertising</h2>
+    <p>
+      This site uses <strong>Google AdSense</strong>, an advertising service operated by Google LLC,
+      to fund the creation and maintenance of our content.
+    </p>
+    <ul>
+      <li>
+        Google, as a third-party vendor, uses cookies (notably the <strong>DART</strong> and
+        <strong>DoubleClick</strong> cookies) to serve ads on our site.
+      </li>
+      <li>
+        Google's use of the DART cookie enables it to serve ads to users based on their visits to
+        our site and other sites on the internet.
+      </li>
+      <li>
+        You may opt out of personalized advertising at any time by visiting
+        <a href="https://www.google.com/settings/ads" rel="noopener noreferrer" target="_blank">Google Ad Settings</a>
+        or <a href="https://www.aboutads.info/choices/" rel="noopener noreferrer" target="_blank">aboutads.info/choices</a>.
+      </li>
+      <li>
+        Google's rules for the use of advertising data are described here:
+        <a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer" target="_blank">policies.google.com/technologies/ads</a>.
+      </li>
+      <li>
+        Third-party vendors authorized by Google may also use cookies to serve ads based on your
+        browsing history.
+      </li>
+    </ul>
+
+    <h2>6. Audience measurement — Google Analytics</h2>
+    <p>
+      We use Google Analytics 4 to measure site audience anonymously (page views, duration, traffic
+      source). Data is anonymized and only collected with your consent. Learn more:
+      <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Google privacy policy</a>.
+    </p>
+
+    <h2>7. Retention period</h2>
+    <p>
+      Anonymized browsing data is kept by Google Analytics for a maximum of 14 months. Emails you
+      send us are kept as long as needed to handle your request, then deleted or archived for up
+      to 3 years.
+    </p>
+
+    <h2>8. Transfers outside the European Union</h2>
+    <p>
+      Google may transfer some data to the United States. These transfers are covered by the
+      European Commission's <em>Standard Contractual Clauses</em> and by Google's adherence to the
+      <em>EU–US Data Privacy Framework</em>.
+    </p>
+
+    <h2>9. Your GDPR rights</h2>
+    <p>Under GDPR, you have the following rights:</p>
+    <ul>
+      <li>Right of access</li>
+      <li>Right to rectification</li>
+      <li>Right to erasure ("right to be forgotten")</li>
+      <li>Right to restriction of processing</li>
+      <li>Right to object</li>
+      <li>Right to data portability</li>
+      <li>Right to withdraw consent at any time</li>
+      <li>Right to lodge a complaint with a supervisory authority (e.g.,
+        <a href="https://www.cnil.fr" rel="noopener noreferrer" target="_blank">CNIL</a> in France)</li>
+    </ul>
+    <p>
+      To exercise your rights, contact us at
+      <a href="mailto:contact@colotopia.com">contact@colotopia.com</a>. We reply within 30 days
+      maximum.
+    </p>
+
+    <h2>10. Minors</h2>
+    <p>
+      Although part of our content may appeal to children, Colotopia is a general-audience service
+      aimed at adults (parents, teachers, artists, teens over 13). We do not knowingly collect data
+      from children under 13. If you believe a child has sent us data, write to us at
+      <a href="mailto:contact@colotopia.com">contact@colotopia.com</a> for immediate deletion.
+    </p>
+
+    <h2>11. Changes</h2>
+    <p>
+      This policy may be updated to reflect legal or technical changes. The version in force is
+      always the one published on this page. The last update date is shown at the top of the
+      document.
+    </p>
+
+    <h2>12. Contact</h2>
+    <p>
+      For any question about this privacy policy or your data:
+      <a href="mailto:contact@colotopia.com">contact@colotopia.com</a>.
+    </p>
   </article>
 </BaseLayout>
 
 <style>
   .legal-page {
-    max-width: 720px;
+    max-width: 800px;
     margin: 0 auto;
   }
-
   .legal-page h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
-  }
-
-  .legal-page h2 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin: 2rem 0 0.5rem;
     color: #1f2937;
   }
-
-  .legal-page p {
+  .legal-page h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 2rem 0 0.75rem;
+    color: #1f2937;
+  }
+  .legal-page p, .legal-page li {
     color: #4b5563;
+    line-height: 1.75;
+  }
+  .legal-page p {
     margin-bottom: 1rem;
-    line-height: 1.7;
+  }
+  .legal-page ul {
+    margin: 0 0 1rem 1.25rem;
+  }
+  .legal-page li {
+    margin-bottom: 0.4rem;
+  }
+  .legal-page a {
+    color: var(--color-primary);
+    text-decoration: underline;
   }
 </style>

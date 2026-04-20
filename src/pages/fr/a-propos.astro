@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const canonical = 'https://colotopia.com/fr/a-propos/';
+const altUrl = 'https://colotopia.com/en/about/';
+---
+
+<BaseLayout
+  locale="fr"
+  title="À propos de Colotopia"
+  description="Colotopia est un site indépendant dédié aux coloriages gratuits à imprimer pour les enfants et les adultes. Découvrez notre histoire, notre mission et l'équipe derrière le projet."
+  canonical={canonical}
+  altUrl={altUrl}
+>
+  <article class="legal-page">
+    <h1>À propos de Colotopia</h1>
+
+    <p class="lead">
+      Colotopia est un site indépendant qui propose des centaines de coloriages gratuits à imprimer,
+      pensés aussi bien pour les enfants que pour les adultes.
+    </p>
+
+    <h2>Notre mission</h2>
+    <p>
+      Nous croyons que le coloriage est une activité universelle : elle apaise, elle stimule la créativité
+      et elle rassemble les générations. Notre mission est de rendre le plus grand catalogue possible de
+      coloriages originaux accessible gratuitement, en haute qualité, et prêt à imprimer en un clic.
+    </p>
+    <p>
+      Chaque illustration publiée sur Colotopia est conçue spécifiquement pour notre site. Nous ne
+      proposons aucune image téléchargée ailleurs : toutes nos pages sont originales et libres
+      d'utilisation à des fins personnelles et éducatives.
+    </p>
+
+    <h2>Pour qui ?</h2>
+    <p>
+      Notre catalogue s'adresse à un public large. Pour les plus jeunes, nous proposons des dessins
+      simples, mignons et pédagogiques : animaux, véhicules, saisons, métiers, dinosaures. Pour les
+      adolescents et les adultes, nous avons développé une section dédiée avec des mandalas, des
+      mosaïques, des zodiaques, des paysages, du cottagecore et des dessins anti-stress — parfaits
+      pour un moment de détente ou une pratique artistique régulière.
+    </p>
+
+    <h2>Pourquoi le coloriage ?</h2>
+    <p>
+      De nombreuses études ont montré les bienfaits du coloriage : il améliore la concentration, réduit
+      le stress, stimule la motricité fine chez l'enfant et active les zones du cerveau liées à la
+      créativité. C'est aussi un excellent moyen d'encourager l'apprentissage : les couleurs, les
+      formes, les animaux, la géographie ou la musique peuvent tous être abordés à travers un simple
+      coloriage.
+    </p>
+
+    <h2>Notre engagement éditorial</h2>
+    <p>
+      Colotopia est un projet éditorial indépendant. Nous tenons à proposer un contenu qualitatif,
+      sans inscription obligatoire, sans téléchargement forcé, et sans surcharge publicitaire.
+      Quelques encarts publicitaires Google AdSense sont présents sur le site pour nous permettre
+      de continuer à créer de nouveaux coloriages et à maintenir la plateforme à jour.
+    </p>
+
+    <h2>L'équipe</h2>
+    <p>
+      Colotopia est édité par une petite équipe passionnée de design, d'illustration et de parentalité.
+      Le site est né de l'envie de partager une bibliothèque de coloriages soignée, gratuite et
+      utilisable par tous — à la maison, à l'école ou en atelier.
+    </p>
+
+    <h2>Nous contacter</h2>
+    <p>
+      Une question, une suggestion, une demande de partenariat ou un signalement ? Nous sommes à
+      l'écoute : <a href="/fr/contact/">contactez-nous</a> ou écrivez à
+      <a href="mailto:contact@colotopia.com">contact@colotopia.com</a>.
+    </p>
+  </article>
+</BaseLayout>
+
+<style>
+  .legal-page {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .legal-page h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #1f2937;
+  }
+  .legal-page .lead {
+    font-size: 1.125rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  .legal-page h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 2rem 0 0.75rem;
+    color: #1f2937;
+  }
+  .legal-page p {
+    color: #4b5563;
+    margin-bottom: 1rem;
+    line-height: 1.75;
+  }
+  .legal-page a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+</style>

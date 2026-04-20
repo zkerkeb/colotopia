@@ -1,6 +1,6 @@
 ---
 import type { Locale } from '../lib/i18n';
-import { t, kidsCategories, adultCategories, getCategoryLabel, getCategorySlug, getLocalePath, getPrivacyPath, getTermsPath, getBlogPath } from '../lib/i18n';
+import { t, kidsCategories, adultCategories, getCategoryLabel, getCategorySlug, getLocalePath, getPrivacyPath, getTermsPath, getBlogPath, getAboutPath, getContactPath } from '../lib/i18n';
 
 interface Props {
   locale: Locale;
@@ -8,10 +8,10 @@ interface Props {
 
 const { locale } = Astro.props;
 const year = new Date().getFullYear();
-const tagline = locale === 'fr' ? 'Des coloriages gratuits pour tous les âges !' : 'Free coloring pages for all ages!';
+const tagline = t('footer.tagline', locale);
 const infoTitle = locale === 'fr' ? 'Informations' : 'Info';
-const contactLabel = locale === 'fr' ? 'Contact' : 'Contact';
 const allRights = locale === 'fr' ? 'Tous droits réservés' : 'All rights reserved';
+const madeLabel = t('footer.made', locale);
 ---
 
 <footer class="site-footer">
@@ -69,10 +69,18 @@ const allRights = locale === 'fr' ? 'Tous droits réservés' : 'All rights reser
       <div class="footer-column">
         <h4 class="footer-column-title">{infoTitle}</h4>
         <ul class="footer-link-list">
+          <li><a href={getAboutPath(locale)} class="footer-link">{t('footer.about', locale)}</a></li>
           <li><a href={getBlogPath(locale)} class="footer-link">Blog</a></li>
+          <li><a href={getContactPath(locale)} class="footer-link">{t('footer.contact', locale)}</a></li>
           <li><a href={getPrivacyPath(locale)} class="footer-link">{t('footer.privacy', locale)}</a></li>
           <li><a href={getTermsPath(locale)} class="footer-link">{t('footer.terms', locale)}</a></li>
-          <li><a href="mailto:contact@colotopia.com" class="footer-link">{contactLabel}</a></li>
+          <li>
+            <button
+              type="button"
+              class="footer-link footer-link-btn"
+              onclick="if(window.colotopiaConsent)window.colotopiaConsent.open();"
+            >{t('footer.manageCookies', locale)}</button>
+          </li>
         </ul>
       </div>
     </div>
@@ -80,7 +88,7 @@ const allRights = locale === 'fr' ? 'Tous droits réservés' : 'All rights reser
     <!-- Copyright bar -->
     <div class="footer-bottom">
       <span>&copy; {year} Colotopia. {allRights}.</span>
-      <span class="footer-made">Made with ❤️ for kids</span>
+      <span class="footer-made">{madeLabel}</span>
     </div>
   </div>
 </footer>
@@ -203,6 +211,21 @@ const allRights = locale === 'fr' ? 'Tous droits réservés' : 'All rights reser
   .footer-link:hover {
     color: #ffffff;
     text-decoration: none;
+  }
+
+  /* Bouton "Gérer mes cookies" — même apparence que les liens */
+  .footer-link-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: var(--font-size-sm);
+  }
+  .footer-link-btn:hover {
+    color: #ffffff;
   }
 
   /* Copyright bar */

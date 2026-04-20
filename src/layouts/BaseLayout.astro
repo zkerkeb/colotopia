@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Toast from '../components/Toast.astro';
+import CookieConsent from '../components/CookieConsent.astro';
 import type { Locale } from '../lib/i18n';
 import { t } from '../lib/i18n';
 import '../styles/tokens.css';
@@ -52,7 +53,7 @@ const websiteSchema = {
       '@type': 'WebSite',
       name: 'Colotopia',
       url: siteUrl,
-      description: 'Coloriages gratuits à imprimer',
+      description: 'Coloriages gratuits à imprimer pour enfants et adultes',
       inLanguage: ['fr', 'en'],
     },
     {
@@ -117,11 +118,24 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
     {structuredData && (
       <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     )}
-    {gaMeasurementId && (
-      <Fragment set:html={`<script async src="https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}"><\/script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${gaMeasurementId}');<\/script>`} />
-    )}
+    {/* Google Consent Mode v2 — default "denied" BEFORE any Google tag loads. */}
+    {/* AdSense / Analytics scripts are loaded by CookieConsent.astro only after user opt-in. */}
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500,
+      });
+    </script>
     {adsenseId && (
-      <Fragment set:html={`<meta name="google-adsense-account" content="${adsenseId}"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}" crossorigin="anonymous"><\/script>`} />
+      <meta name="google-adsense-account" content={adsenseId} />
     )}
     <style>
       /* View Transitions API — cross-document fade (Chrome 126+, Safari 18+)
@@ -142,6 +156,7 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
     </main>
     <Footer locale={locale} />
     <Toast />
+    <CookieConsent locale={locale} />
     <style is:global>
       /* ── Category accent: header bottom border on category pages ── */
       [data-category] #site-header {

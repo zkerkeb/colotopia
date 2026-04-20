@@ -5,7 +5,6 @@
  */
 import Breadcrumb from './Breadcrumb.astro';
 import RelatedColoriages from './RelatedColoriages.astro';
-import AdSlot from './AdSlot.astro';
 import AffiliateWidget from './AffiliateWidget.astro';
 import type { Locale } from '../lib/i18n';
 import type { Category } from '../lib/i18n';
@@ -42,10 +41,14 @@ const {
 } = Astro.props;
 
 const printLabel = t('coloring.print', locale);
-const catColor = categoryColors[category];
-const catIcon = categoryIcons[category];
+const defaultColor = { bg: '#6b7280', light: '#f9fafb', text: '#1f2937', gradient: 'linear-gradient(135deg, #f9fafb 0%, #e5e7eb 100%)' };
+const catColor = categoryColors[category as keyof typeof categoryColors] ?? defaultColor;
+const catIcon = categoryIcons[category as keyof typeof categoryIcons] ?? '🎨';
 const catLabel = getCategoryLabel(category, locale);
-const catUrl = getLocalePath(locale, `/${getCategorySlug(category, locale)}`);
+const catSlug = (typeof getCategorySlug === 'function' && category in categoryColors)
+  ? getCategorySlug(category, locale)
+  : category;
+const catUrl = getLocalePath(locale, `/${catSlug}`);
 const exploreCataLabel = locale === 'fr'
   ? `Voir plus de coloriages ${catLabel}`
   : `More ${catLabel} coloring pages`;
@@ -68,6 +71,43 @@ const pinterestUrl = `https://pinterest.com/pin/create/button/?url=${encodeURICo
 const shareLabel = t('share.label', locale);
 const mobileActionsLabel = t('mobile.actions.more', locale);
 const stickyPrintLabel = locale === 'fr' ? 'Imprimer' : 'Print';
+
+// Contenu éditorial généré (sort du "low-value content" pour AdSense)
+const isAdultCategory = ['mandalas', 'mosaics', 'zodiac', 'stained-glass', 'cottagecore', 'landscapes', 'abstract', 'stress-relief'].includes(category as string);
+const ageHint = isAdultCategory
+  ? (locale === 'fr' ? 'Adolescents et adultes' : 'Teens and adults')
+  : (locale === 'fr' ? '3 à 10 ans' : '3 to 10 years');
+const difficulty = isAdultCategory
+  ? (locale === 'fr' ? 'Intermédiaire à avancé' : 'Intermediate to advanced')
+  : (locale === 'fr' ? 'Facile' : 'Easy');
+
+const aboutTitle = locale === 'fr' ? `À propos de ce coloriage : ${title}` : `About this coloring page: ${title}`;
+const aboutP1 = locale === 'fr'
+  ? `Ce coloriage « ${title} » fait partie de notre collection ${catLabel.toLowerCase()}. Imprimable gratuitement au format A4, il a été dessiné pour offrir un contour clair, des espaces bien délimités et un niveau de détail adapté à un large public. Téléchargez-le en un clic et coloriez-le aux feutres, crayons de couleur ou aquarelle.`
+  : `This "${title}" coloring page is part of our ${catLabel.toLowerCase()} collection. Free to print in A4 format, it was designed with clear outlines, well-defined areas and a level of detail that suits a wide audience. Download it in one click and color it with markers, colored pencils or watercolors.`;
+const aboutP2 = locale === 'fr'
+  ? `Le coloriage est reconnu pour ses bienfaits sur la concentration, la motricité fine et la gestion du stress. ${isAdultCategory ? `Les ${catLabel.toLowerCase()} sont particulièrement appréciés pour leur effet apaisant : prenez votre temps, jouez avec les nuances et laissez libre cours à votre créativité.` : `Pour les enfants, cette activité est un excellent moyen d'apprendre les couleurs, de développer la précision et de nourrir l'imagination. N'hésitez pas à en faire un moment partagé en famille.`}`
+  : `Coloring is recognized for its benefits on concentration, fine motor skills and stress management. ${isAdultCategory ? `${catLabel} are especially appreciated for their calming effect: take your time, play with shades and let your creativity flow.` : `For children, this activity is a great way to learn colors, develop precision and feed imagination. Make it a shared family moment!`}`;
+
+const infoAge = locale === 'fr' ? 'Âge conseillé' : 'Recommended age';
+const infoDifficulty = locale === 'fr' ? 'Difficulté' : 'Difficulty';
+const infoFormat = locale === 'fr' ? 'Format' : 'Format';
+const infoPrice = locale === 'fr' ? 'Prix' : 'Price';
+const infoFree = locale === 'fr' ? 'Gratuit' : 'Free';
+const infoTips = locale === 'fr' ? 'Conseils pour bien colorier' : 'Coloring tips';
+const tipsList = locale === 'fr'
+  ? [
+      'Imprimez sur du papier épais (120 g/m²) pour éviter que les feutres ne traversent.',
+      'Commencez par les petites zones pour garder un geste précis.',
+      'Variez les teintes proches pour créer du relief (ombres et lumières).',
+      'Laissez sécher chaque zone avant de travailler la suivante si vous utilisez de l\'aquarelle.',
+    ]
+  : [
+      'Print on thick paper (120 gsm) to prevent markers from bleeding through.',
+      'Start with small areas to keep a precise stroke.',
+      'Use close shades to create depth (highlights and shadows).',
+      'Let each area dry before working on the next if you use watercolors.',
+    ];
 ---
 
 <script define:vars={{ title, category, slug, tags }}>
@@ -83,9 +123,6 @@ const stickyPrintLabel = locale === 'fr' ? 'Imprimer' : 'Print';
 </script>
 
 <article class="coloring-page">
-  <!-- Above-fold banner ad -->
-  <AdSlot adSlot="" format="horizontal" />
-
   <Breadcrumb locale={locale} category={category} currentPage={title} />
 
   <h1 class="page-title">{title}</h1>
@@ -257,15 +294,42 @@ const stickyPrintLabel = locale === 'fr' ? 'Imprimer' : 'Print';
         });
       </script>
 
-      <!-- Below-content ad -->
-      <AdSlot adSlot="" format="rectangle" />
+      <!-- Bloc éditorial — contenu original pour SEO + compliance AdSense -->
+      <section class="about-coloring" aria-labelledby="about-heading">
+        <h2 id="about-heading" class="about-title">{aboutTitle}</h2>
+        <p class="about-p">{aboutP1}</p>
+        <p class="about-p">{aboutP2}</p>
+
+        <dl class="about-info">
+          <div class="about-info-item">
+            <dt>{infoAge}</dt>
+            <dd>{ageHint}</dd>
+          </div>
+          <div class="about-info-item">
+            <dt>{infoDifficulty}</dt>
+            <dd>{difficulty}</dd>
+          </div>
+          <div class="about-info-item">
+            <dt>{infoFormat}</dt>
+            <dd>A4 • PNG / WebP</dd>
+          </div>
+          <div class="about-info-item">
+            <dt>{infoPrice}</dt>
+            <dd>{infoFree}</dd>
+          </div>
+        </dl>
+
+        <h3 class="tips-title">{infoTips}</h3>
+        <ul class="tips-list">
+          {tipsList.map((tip) => <li>{tip}</li>)}
+        </ul>
+      </section>
 
       <RelatedColoriages locale={locale} items={related} currentSlug={slug} category={category} />
     </div>
 
     <!-- Sidebar -->
     <aside class="sidebar">
-      <AdSlot adSlot="" format="vertical" />
       <AffiliateWidget locale={locale} />
     </aside>
   </div>
@@ -537,6 +601,65 @@ const stickyPrintLabel = locale === 'fr' ? 'Imprimer' : 'Print';
   .share-whatsapp { background: #25d366; color: #ffffff; }
   .share-facebook { background: #1877f2; color: #ffffff; }
   .share-pinterest { background: #e60023; color: #ffffff; }
+
+  /* ── About / editorial block ── */
+  .about-coloring {
+    margin: var(--space-10) 0 var(--space-8);
+    padding: var(--space-6);
+    background: var(--color-bg-subtle, #fafafa);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border, #e5e7eb);
+  }
+  .about-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: var(--space-3);
+  }
+  .about-p {
+    color: #4b5563;
+    line-height: 1.75;
+    margin-bottom: var(--space-3);
+  }
+  .about-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: var(--space-3);
+    margin: var(--space-5) 0;
+    padding: var(--space-4);
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border, #e5e7eb);
+  }
+  .about-info-item dt {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #6b7280;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  .about-info-item dd {
+    font-size: 0.95rem;
+    color: #1f2937;
+    font-weight: 700;
+    margin: 0;
+  }
+  .tips-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: var(--space-4) 0 var(--space-2);
+  }
+  .tips-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    color: #4b5563;
+    line-height: 1.75;
+  }
+  .tips-list li {
+    margin-bottom: 0.5rem;
+  }
 
   /* ── Sidebar ── */
   .sidebar {

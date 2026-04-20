@@ -45,6 +45,11 @@ export const kidsCategories = [
   'architecture',
   'sirenes',
   'fees',
+  'culture',
+  'printemps',
+  'ete',
+  'lettres',
+  'licornes',
 ] as const;
 
 export const adultCategories = [
@@ -117,6 +122,11 @@ export const categoryIcons: Record<Category, string> = {
   'paysages': '🏔️',
   'sirenes': '🧜',
   'fees': '🧚',
+  'culture': '🏛️',
+  'printemps': '🌸',
+  'ete': '☀️',
+  'lettres': '🔤',
+  'licornes': '🦄',
 };
 
 /** Accent color per category — used for hero, card borders, tags */
@@ -172,6 +182,11 @@ export const categoryColors: Record<Category, { bg: string; light: string; text:
   'paysages':              { bg: '#22c55e', light: '#f0fdf4', text: '#166534', gradient: 'linear-gradient(135deg, #1e1b4b 0%, #14532d 50%, #166534 100%)' },
   'sirenes':               { bg: '#22d3ee', light: '#ecfeff', text: '#155e75', gradient: 'linear-gradient(135deg, #ecfeff 0%, #a5f3fc 100%)' },
   'fees':                  { bg: '#f0abfc', light: '#fdf4ff', text: '#86198f', gradient: 'linear-gradient(135deg, #f0abfc, #e879f9)' },
+  'culture':               { bg: '#f59e0b', light: '#fffbeb', text: '#78350f', gradient: 'linear-gradient(135deg, #fffbeb 0%, #fde68a 100%)' },
+  'printemps':             { bg: '#f472b6', light: '#fdf2f8', text: '#9d174d', gradient: 'linear-gradient(135deg, #fdf2f8 0%, #fbcfe8 100%)' },
+  'ete':                   { bg: '#fbbf24', light: '#fffbeb', text: '#92400e', gradient: 'linear-gradient(135deg, #fffbeb 0%, #fde68a 100%)' },
+  'lettres':               { bg: '#8b5cf6', light: '#f5f3ff', text: '#4c1d95', gradient: 'linear-gradient(135deg, #f5f3ff 0%, #ddd6fe 100%)' },
+  'licornes':              { bg: '#c084fc', light: '#faf5ff', text: '#7e22ce', gradient: 'linear-gradient(135deg, #fdf4ff 0%, #e9d5ff 100%)' },
 };
 
 const translations: Record<string, Record<Locale, string>> = {
@@ -240,6 +255,11 @@ const translations: Record<string, Record<Locale, string>> = {
   'category.paysages': { fr: 'Paysages', en: 'Landscapes' },
   'category.sirenes': { fr: 'Sirènes', en: 'Mermaids' },
   'category.fees': { fr: 'Fées', en: 'Fairies' },
+  'category.culture': { fr: 'Culture', en: 'Culture' },
+  'category.printemps': { fr: 'Printemps', en: 'Spring' },
+  'category.ete': { fr: 'Été', en: 'Summer' },
+  'category.lettres': { fr: 'Lettres', en: 'Letters' },
+  'category.licornes': { fr: 'Licornes', en: 'Unicorns' },
   'nav.blog': { fr: 'Blog', en: 'Blog' },
   'blog.title': { fr: 'Blog Colotopia', en: 'Colotopia Blog' },
   'blog.description': {
@@ -263,6 +283,16 @@ const translations: Record<string, Record<Locale, string>> = {
   'footer.privacy': { fr: 'Politique de confidentialité', en: 'Privacy Policy' },
   'footer.terms': { fr: "Conditions d'utilisation", en: 'Terms of Use' },
   'footer.contact': { fr: 'Contact', en: 'Contact' },
+  'footer.about': { fr: 'À propos', en: 'About' },
+  'footer.manageCookies': { fr: 'Gérer mes cookies', en: 'Manage my cookies' },
+  'footer.tagline': {
+    fr: 'Coloriages gratuits à imprimer pour tous les âges',
+    en: 'Free printable coloring pages for all ages',
+  },
+  'footer.made': {
+    fr: 'Fait avec passion pour petits et grands',
+    en: 'Made with passion for kids and adults',
+  },
   'share.label': { fr: 'Partager', en: 'Share' },
   'share.whatsapp': { fr: 'Partager sur WhatsApp', en: 'Share on WhatsApp' },
   'share.facebook': { fr: 'Partager sur Facebook', en: 'Share on Facebook' },
@@ -271,8 +301,8 @@ const translations: Record<string, Record<Locale, string>> = {
   'legal.privacy.title': { fr: 'Politique de confidentialité', en: 'Privacy Policy' },
   'legal.terms.title': { fr: "Conditions d'utilisation", en: 'Terms of Use' },
   'home.hero.subtitle': {
-    fr: 'Des centaines de coloriages originaux pour les enfants. Téléchargez, imprimez et coloriez !',
-    en: 'Hundreds of original coloring pages for kids. Download, print and color!',
+    fr: 'Des centaines de coloriages originaux pour enfants et adultes. Téléchargez, imprimez et coloriez !',
+    en: 'Hundreds of original coloring pages for kids and adults. Download, print and color!',
   },
   'home.empty': {
     fr: 'Les coloriages arrivent bientôt ! Revenez nous voir.',
@@ -629,6 +659,11 @@ const enSlugs: Record<Category, string> = {
   architecture: 'architecture',
   sirenes: 'mermaids',
   fees: 'fairies-2',
+  culture: 'culture',
+  printemps: 'spring',
+  ete: 'summer',
+  lettres: 'letters',
+  licornes: 'unicorns-2',
 };
 
 export function getCategorySlug(category: Category, locale: Locale): string {
@@ -659,4 +694,12 @@ export function getBlogPath(locale: Locale, slug?: string): string {
     return getLocalePath(locale, `/blog/${slug}`);
   }
   return getLocalePath(locale, '/blog');
+}
+
+export function getAboutPath(locale: Locale): string {
+  return getLocalePath(locale, locale === 'fr' ? '/a-propos' : '/about');
+}
+
+export function getContactPath(locale: Locale): string {
+  return getLocalePath(locale, '/contact');
 }

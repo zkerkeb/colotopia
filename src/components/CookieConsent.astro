@@ -1,0 +1,413 @@
+---
+/**
+ * CookieConsent — bannière RGPD avec Google Consent Mode v2
+ *
+ * - Bloque AdSense / Analytics tant que l'utilisateur n'a pas choisi
+ * - Met à jour gtag('consent', 'update', ...) selon les choix
+ * - Stocke la décision dans localStorage (clé: colotopia_consent_v1)
+ * - Options : Tout accepter / Tout refuser / Personnaliser
+ *
+ * IMPORTANT : le script Consent Mode "default" est défini dans BaseLayout.astro,
+ * AVANT le chargement d'AdSense, pour bloquer les tags par défaut.
+ */
+import type { Locale } from '../lib/i18n';
+import { t, getPrivacyPath } from '../lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const L = {
+  fr: {
+    title: 'Vos choix concernant les cookies',
+    desc: 'Nous utilisons des cookies pour mesurer l\'audience, afficher des publicités pertinentes et améliorer votre expérience. Vous pouvez accepter, refuser ou personnaliser vos choix. Vos préférences peuvent être modifiées à tout moment.',
+    acceptAll: 'Tout accepter',
+    rejectAll: 'Tout refuser',
+    customize: 'Personnaliser',
+    save: 'Enregistrer mes choix',
+    back: 'Retour',
+    learnMore: 'En savoir plus',
+    catNecessary: 'Strictement nécessaires',
+    catNecessaryDesc: 'Indispensables au fonctionnement du site (navigation, sécurité). Toujours actifs.',
+    catAnalytics: 'Mesure d\'audience',
+    catAnalyticsDesc: 'Nous permet de comprendre comment vous utilisez le site (Google Analytics).',
+    catAds: 'Publicités personnalisées',
+    catAdsDesc: 'Permet à Google AdSense d\'afficher des annonces adaptées à vos centres d\'intérêt.',
+    managePrefs: 'Gérer mes cookies',
+  },
+  en: {
+    title: 'Your cookie choices',
+    desc: 'We use cookies to measure audience, show relevant ads and improve your experience. You can accept, reject or customize your choices. You can change your preferences at any time.',
+    acceptAll: 'Accept all',
+    rejectAll: 'Reject all',
+    customize: 'Customize',
+    save: 'Save my choices',
+    back: 'Back',
+    learnMore: 'Learn more',
+    catNecessary: 'Strictly necessary',
+    catNecessaryDesc: 'Required for the site to work (navigation, security). Always active.',
+    catAnalytics: 'Audience measurement',
+    catAnalyticsDesc: 'Helps us understand how you use the site (Google Analytics).',
+    catAds: 'Personalized ads',
+    catAdsDesc: 'Allows Google AdSense to show ads tailored to your interests.',
+    managePrefs: 'Manage my cookies',
+  },
+}[locale];
+
+const privacyHref = getPrivacyPath(locale);
+---
+
+<!-- Banner initial -->
+<div id="cc-banner" class="cc-banner" role="dialog" aria-labelledby="cc-title" aria-describedby="cc-desc" aria-hidden="true">
+  <div class="cc-banner-inner">
+    <div class="cc-banner-text">
+      <p id="cc-title" class="cc-title">{L.title}</p>
+      <p id="cc-desc" class="cc-desc">
+        {L.desc} <a href={privacyHref} class="cc-link">{L.learnMore}</a>
+      </p>
+    </div>
+    <div class="cc-banner-actions">
+      <button type="button" class="cc-btn cc-btn-secondary" data-cc-action="reject">{L.rejectAll}</button>
+      <button type="button" class="cc-btn cc-btn-secondary" data-cc-action="customize">{L.customize}</button>
+      <button type="button" class="cc-btn cc-btn-primary" data-cc-action="accept">{L.acceptAll}</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal preferences -->
+<div id="cc-modal" class="cc-modal" role="dialog" aria-modal="true" aria-labelledby="cc-modal-title" aria-hidden="true">
+  <div class="cc-modal-overlay" data-cc-action="close-modal"></div>
+  <div class="cc-modal-panel">
+    <h2 id="cc-modal-title" class="cc-modal-title">{L.title}</h2>
+    <p class="cc-modal-desc">{L.desc}</p>
+
+    <div class="cc-pref">
+      <div class="cc-pref-head">
+        <span class="cc-pref-name">{L.catNecessary}</span>
+        <span class="cc-pref-always">✓</span>
+      </div>
+      <p class="cc-pref-desc">{L.catNecessaryDesc}</p>
+    </div>
+
+    <label class="cc-pref">
+      <div class="cc-pref-head">
+        <span class="cc-pref-name">{L.catAnalytics}</span>
+        <input type="checkbox" id="cc-pref-analytics" class="cc-switch" />
+      </div>
+      <p class="cc-pref-desc">{L.catAnalyticsDesc}</p>
+    </label>
+
+    <label class="cc-pref">
+      <div class="cc-pref-head">
+        <span class="cc-pref-name">{L.catAds}</span>
+        <input type="checkbox" id="cc-pref-ads" class="cc-switch" />
+      </div>
+      <p class="cc-pref-desc">{L.catAdsDesc}</p>
+    </label>
+
+    <div class="cc-modal-actions">
+      <button type="button" class="cc-btn cc-btn-secondary" data-cc-action="reject">{L.rejectAll}</button>
+      <button type="button" class="cc-btn cc-btn-primary" data-cc-action="save">{L.save}</button>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ adsenseId: import.meta.env.PUBLIC_ADSENSE_PUBLISHER_ID, gaId: import.meta.env.PUBLIC_GA_MEASUREMENT_ID }}>
+  (function () {
+    var STORAGE_KEY = 'colotopia_consent_v1';
+    var banner = document.getElementById('cc-banner');
+    var modal = document.getElementById('cc-modal');
+    var analyticsInput = document.getElementById('cc-pref-analytics');
+    var adsInput = document.getElementById('cc-pref-ads');
+
+    function getStored() {
+      try {
+        var raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return null;
+        return JSON.parse(raw);
+      } catch (_) { return null; }
+    }
+
+    function store(prefs) {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(prefs)); } catch (_) {}
+    }
+
+    function applyConsent(prefs) {
+      if (typeof window.gtag !== 'function') {
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { window.dataLayer.push(arguments); };
+      }
+      window.gtag('consent', 'update', {
+        ad_storage: prefs.ads ? 'granted' : 'denied',
+        ad_user_data: prefs.ads ? 'granted' : 'denied',
+        ad_personalization: prefs.ads ? 'granted' : 'denied',
+        analytics_storage: prefs.analytics ? 'granted' : 'denied',
+      });
+
+      // Charger AdSense seulement après consentement
+      if (prefs.ads && adsenseId && !document.querySelector('script[data-adsense-loaded]')) {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + adsenseId;
+        s.setAttribute('crossorigin', 'anonymous');
+        s.setAttribute('data-adsense-loaded', 'true');
+        document.head.appendChild(s);
+      }
+
+      // Charger Analytics seulement après consentement
+      if (prefs.analytics && gaId && !document.querySelector('script[data-ga-loaded]')) {
+        var g = document.createElement('script');
+        g.async = true;
+        g.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
+        g.setAttribute('data-ga-loaded', 'true');
+        document.head.appendChild(g);
+        window.gtag('js', new Date());
+        window.gtag('config', gaId);
+      }
+    }
+
+    function showBanner() {
+      if (banner) {
+        banner.setAttribute('aria-hidden', 'false');
+        banner.classList.add('is-visible');
+      }
+    }
+    function hideBanner() {
+      if (banner) {
+        banner.setAttribute('aria-hidden', 'true');
+        banner.classList.remove('is-visible');
+      }
+    }
+    function showModal() {
+      var current = getStored() || { analytics: false, ads: false };
+      if (analyticsInput) analyticsInput.checked = !!current.analytics;
+      if (adsInput) adsInput.checked = !!current.ads;
+      if (modal) {
+        modal.setAttribute('aria-hidden', 'false');
+        modal.classList.add('is-visible');
+      }
+    }
+    function hideModal() {
+      if (modal) {
+        modal.setAttribute('aria-hidden', 'true');
+        modal.classList.remove('is-visible');
+      }
+    }
+
+    function accept() {
+      var prefs = { analytics: true, ads: true, ts: Date.now() };
+      store(prefs);
+      applyConsent(prefs);
+      hideModal();
+      hideBanner();
+    }
+    function reject() {
+      var prefs = { analytics: false, ads: false, ts: Date.now() };
+      store(prefs);
+      applyConsent(prefs);
+      hideModal();
+      hideBanner();
+    }
+    function save() {
+      var prefs = {
+        analytics: !!(analyticsInput && analyticsInput.checked),
+        ads: !!(adsInput && adsInput.checked),
+        ts: Date.now(),
+      };
+      store(prefs);
+      applyConsent(prefs);
+      hideModal();
+      hideBanner();
+    }
+
+    document.querySelectorAll('[data-cc-action]').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        var action = el.getAttribute('data-cc-action');
+        if (action === 'accept') accept();
+        else if (action === 'reject') reject();
+        else if (action === 'customize') { hideBanner(); showModal(); }
+        else if (action === 'save') save();
+        else if (action === 'close-modal') hideModal();
+      });
+    });
+
+    // Exposer une API pour rouvrir depuis le footer
+    window.colotopiaConsent = {
+      open: function () { showModal(); },
+      get: getStored,
+    };
+
+    // Au chargement
+    var stored = getStored();
+    if (stored) {
+      applyConsent(stored);
+    } else {
+      showBanner();
+    }
+  })();
+</script>
+
+<style>
+  .cc-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9998;
+    background: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(100%);
+    transition: transform 0.3s ease-out;
+    padding: 1rem;
+  }
+  .cc-banner.is-visible { transform: translateY(0); }
+
+  .cc-banner-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .cc-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #1f2937;
+    margin: 0 0 0.25rem;
+  }
+  .cc-desc {
+    font-size: 0.85rem;
+    color: #4b5563;
+    margin: 0;
+    line-height: 1.5;
+  }
+  .cc-link { color: var(--color-primary, #6366f1); text-decoration: underline; }
+
+  .cc-banner-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .cc-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.55rem 1rem;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s, border-color 0.15s, opacity 0.15s;
+  }
+  .cc-btn-primary {
+    background: var(--color-primary, #6366f1);
+    color: #ffffff;
+    border-color: var(--color-primary, #6366f1);
+  }
+  .cc-btn-primary:hover { opacity: 0.9; }
+  .cc-btn-secondary {
+    background: #ffffff;
+    color: #1f2937;
+    border-color: #d1d5db;
+  }
+  .cc-btn-secondary:hover { background: #f3f4f6; }
+
+  @media (max-width: 720px) {
+    .cc-banner-inner { grid-template-columns: 1fr; }
+    .cc-banner-actions { justify-content: stretch; }
+    .cc-btn { flex: 1; }
+  }
+
+  /* Modal */
+  .cc-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .cc-modal.is-visible { display: flex; }
+  .cc-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(17, 24, 39, 0.55);
+  }
+  .cc-modal-panel {
+    position: relative;
+    background: #ffffff;
+    border-radius: 12px;
+    max-width: 560px;
+    width: 100%;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    padding: 1.5rem;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.25);
+  }
+  .cc-modal-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin: 0 0 0.5rem;
+    color: #1f2937;
+  }
+  .cc-modal-desc {
+    color: #4b5563;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0 0 1.25rem;
+  }
+
+  .cc-pref {
+    display: block;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+  }
+  .cc-pref-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  .cc-pref-name {
+    font-weight: 700;
+    color: #1f2937;
+    font-size: 0.95rem;
+  }
+  .cc-pref-always {
+    color: #10b981;
+    font-weight: 700;
+  }
+  .cc-pref-desc {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin: 0.5rem 0 0;
+    line-height: 1.5;
+  }
+  .cc-switch { width: 20px; height: 20px; cursor: pointer; }
+
+  .cc-modal-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  @media print {
+    .cc-banner, .cc-modal { display: none !important; }
+  }
+</style>

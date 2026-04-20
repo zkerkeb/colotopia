@@ -1,52 +1,199 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const canonical = 'https://colotopia.com/fr/confidentialite/';
+const altUrl = 'https://colotopia.com/en/privacy/';
 ---
 
-<BaseLayout locale="fr" title="Politique de confidentialité" altUrl="https://colotopia.com/en/privacy/">
+<BaseLayout
+  locale="fr"
+  title="Politique de confidentialité"
+  description="Politique de confidentialité de Colotopia : données collectées, cookies, Google AdSense, Google Analytics, droits RGPD et moyens de contact."
+  canonical={canonical}
+  altUrl={altUrl}
+>
   <article class="legal-page">
     <h1>Politique de confidentialité</h1>
 
-    <p>Dernière mise à jour : mars 2026</p>
+    <p><em>Dernière mise à jour : 20 avril 2026</em></p>
 
-    <h2>Données collectées</h2>
-    <p>Ce site n'collecte pas de données personnelles directement. Des services tiers (Google AdSense, Google Analytics) peuvent collecter des données de navigation dans le cadre de leurs propres politiques de confidentialité.</p>
+    <p>
+      La présente politique décrit la manière dont Colotopia (ci-après « nous ») collecte, utilise
+      et protège vos données personnelles lorsque vous consultez le site colotopia.com. Elle est
+      conforme au Règlement Général sur la Protection des Données (RGPD, UE 2016/679) et aux
+      exigences du programme Google AdSense.
+    </p>
 
-    <h2>Cookies</h2>
-    <p>Des cookies publicitaires peuvent être déposés par Google AdSense pour afficher des publicités personnalisées. Vous pouvez désactiver les cookies publicitaires depuis les paramètres de votre navigateur ou via le gestionnaire de consentement Google.</p>
+    <h2>1. Responsable du traitement</h2>
+    <p>
+      Le responsable du traitement est l'éditeur du site Colotopia. Pour toute question relative à
+      cette politique ou à vos données personnelles, vous pouvez nous contacter à :
+      <a href="mailto:contact@colotopia.com">contact@colotopia.com</a>.
+    </p>
 
-    <h2>Publicités</h2>
-    <p>Ce site utilise Google AdSense pour afficher des publicités. Google peut utiliser des cookies pour afficher des annonces basées sur vos visites précédentes sur ce site ou d'autres sites.</p>
+    <h2>2. Données que nous collectons</h2>
+    <p>Colotopia ne demande aucune inscription et ne collecte aucun nom, adresse postale ou numéro
+      de téléphone directement. Les données traitées sont :</p>
+    <ul>
+      <li><strong>Données de navigation</strong> (adresse IP, type de navigateur, système
+        d'exploitation, pages consultées, durée de visite, source du trafic) — collectées via
+        Google Analytics si vous y consentez.</li>
+      <li><strong>Cookies publicitaires</strong> déposés par Google AdSense et ses partenaires pour
+        personnaliser les annonces — uniquement avec votre consentement.</li>
+      <li><strong>Données envoyées par e-mail</strong> lorsque vous nous contactez (votre adresse
+        e-mail et le contenu de votre message).</li>
+    </ul>
 
-    <h2>Droits des utilisateurs (RGPD)</h2>
-    <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour exercer ces droits, contactez-nous à : <a href="mailto:contact@colotopia.com">contact@colotopia.com</a></p>
+    <h2>3. Finalités et bases légales</h2>
+    <p>Vos données sont utilisées pour :</p>
+    <ul>
+      <li>Mesurer l'audience et améliorer le site (base légale : <em>consentement</em>).</li>
+      <li>Afficher des publicités, personnalisées ou non (base légale : <em>consentement</em>).</li>
+      <li>Répondre à vos messages (base légale : <em>exécution d'une demande précontractuelle</em>).</li>
+      <li>Assurer la sécurité et le bon fonctionnement du site (base légale :
+        <em>intérêt légitime</em>).</li>
+    </ul>
 
-    <h2>Contact</h2>
-    <p>Pour toute question relative à cette politique de confidentialité : <a href="mailto:contact@colotopia.com">contact@colotopia.com</a></p>
+    <h2>4. Gestion du consentement (CMP)</h2>
+    <p>
+      Lors de votre première visite, une bannière vous permet d'<strong>accepter</strong>,
+      <strong>refuser</strong> ou <strong>personnaliser</strong> le dépôt de cookies non essentiels.
+      Votre choix est enregistré localement dans votre navigateur et vous pouvez le modifier à tout
+      moment via le lien « <a href="#" onclick="if(window.colotopiaConsent)window.colotopiaConsent.open();return false;">Gérer mes cookies</a> ».
+    </p>
+    <p>
+      Tant que vous n'avez pas consenti, aucun cookie de mesure d'audience ou de publicité
+      personnalisée n'est déposé. Nous utilisons Google Consent Mode v2 pour garantir ce
+      comportement.
+    </p>
+
+    <h2>5. Publicités Google AdSense</h2>
+    <p>
+      Ce site utilise <strong>Google AdSense</strong>, une régie publicitaire opérée par Google LLC,
+      pour financer la création et la maintenance du contenu.
+    </p>
+    <ul>
+      <li>
+        Google, en tant que fournisseur tiers, utilise des cookies (notamment les cookies
+        <strong>DART</strong> et <strong>DoubleClick</strong>) pour diffuser des annonces sur notre
+        site.
+      </li>
+      <li>
+        L'utilisation du cookie DART permet à Google de diffuser des annonces en fonction de vos
+        visites sur notre site et/ou d'autres sites Internet.
+      </li>
+      <li>
+        Vous pouvez désactiver la publicité personnalisée à tout moment en vous rendant sur la page
+        <a href="https://www.google.com/settings/ads" rel="noopener noreferrer" target="_blank">Paramètres des annonces Google</a>
+        ou sur <a href="https://www.aboutads.info/choices/" rel="noopener noreferrer" target="_blank">aboutads.info/choices</a>.
+      </li>
+      <li>
+        Les règles relatives à l'utilisation des données publicitaires par Google sont décrites ici :
+        <a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer" target="_blank">policies.google.com/technologies/ads</a>.
+      </li>
+      <li>
+        Des fournisseurs tiers agréés par Google peuvent également utiliser des cookies pour diffuser
+        des annonces en fonction de votre historique de navigation.
+      </li>
+    </ul>
+
+    <h2>6. Mesure d'audience — Google Analytics</h2>
+    <p>
+      Nous utilisons Google Analytics 4 pour mesurer l'audience du site de façon anonyme
+      (pages vues, durée, source du trafic). Les données sont anonymisées et ne sont collectées
+      qu'avec votre consentement. En savoir plus :
+      <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">politique de confidentialité de Google</a>.
+    </p>
+
+    <h2>7. Durée de conservation</h2>
+    <p>
+      Les données de navigation anonymisées sont conservées par Google Analytics pour une durée
+      maximale de 14 mois. Les e-mails que vous nous envoyez sont conservés le temps nécessaire au
+      traitement de votre demande, puis supprimés ou archivés pendant une durée maximale de 3 ans.
+    </p>
+
+    <h2>8. Transferts hors de l'Union européenne</h2>
+    <p>
+      Google peut transférer certaines données vers les États-Unis. Ces transferts sont encadrés par
+      les <em>Clauses Contractuelles Types</em> de la Commission européenne et par l'adhésion de
+      Google au <em>Data Privacy Framework</em> UE–États-Unis.
+    </p>
+
+    <h2>9. Vos droits RGPD</h2>
+    <p>Conformément au RGPD, vous disposez des droits suivants :</p>
+    <ul>
+      <li>Droit d'accès à vos données</li>
+      <li>Droit de rectification</li>
+      <li>Droit à l'effacement (« droit à l'oubli »)</li>
+      <li>Droit à la limitation du traitement</li>
+      <li>Droit d'opposition</li>
+      <li>Droit à la portabilité</li>
+      <li>Droit de retirer votre consentement à tout moment</li>
+      <li>Droit d'introduire une réclamation auprès de la
+        <a href="https://www.cnil.fr" rel="noopener noreferrer" target="_blank">CNIL</a></li>
+    </ul>
+    <p>
+      Pour exercer vos droits, contactez-nous à
+      <a href="mailto:contact@colotopia.com">contact@colotopia.com</a>. Nous répondons dans un
+      délai maximum de 30 jours.
+    </p>
+
+    <h2>10. Public mineur</h2>
+    <p>
+      Bien qu'une partie de notre contenu puisse intéresser les enfants, Colotopia est un service
+      grand public destiné aux adultes (parents, enseignants, artistes, adolescents de plus de 13
+      ans). Nous ne collectons pas sciemment de données concernant des enfants de moins de 13 ans.
+      Si vous pensez qu'un enfant nous a transmis des données, écrivez-nous à
+      <a href="mailto:contact@colotopia.com">contact@colotopia.com</a> pour suppression immédiate.
+    </p>
+
+    <h2>11. Modifications</h2>
+    <p>
+      Cette politique peut être mise à jour pour refléter les évolutions légales ou techniques. La
+      version en vigueur est toujours celle publiée sur cette page. La date de dernière mise à jour
+      est affichée en tête du document.
+    </p>
+
+    <h2>12. Contact</h2>
+    <p>
+      Pour toute question relative à cette politique de confidentialité ou à vos données :
+      <a href="mailto:contact@colotopia.com">contact@colotopia.com</a>.
+    </p>
   </article>
 </BaseLayout>
 
 <style>
   .legal-page {
-    max-width: 720px;
+    max-width: 800px;
     margin: 0 auto;
   }
-
   .legal-page h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
-  }
-
-  .legal-page h2 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin: 2rem 0 0.5rem;
     color: #1f2937;
   }
-
-  .legal-page p {
+  .legal-page h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 2rem 0 0.75rem;
+    color: #1f2937;
+  }
+  .legal-page p, .legal-page li {
     color: #4b5563;
+    line-height: 1.75;
+  }
+  .legal-page p {
     margin-bottom: 1rem;
-    line-height: 1.7;
+  }
+  .legal-page ul {
+    margin: 0 0 1rem 1.25rem;
+  }
+  .legal-page li {
+    margin-bottom: 0.4rem;
+  }
+  .legal-page a {
+    color: var(--color-primary);
+    text-decoration: underline;
   }
 </style>
