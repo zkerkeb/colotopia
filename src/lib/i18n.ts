@@ -283,6 +283,16 @@ const translations: Record<string, Record<Locale, string>> = {
   'footer.privacy': { fr: 'Politique de confidentialité', en: 'Privacy Policy' },
   'footer.terms': { fr: "Conditions d'utilisation", en: 'Terms of Use' },
   'footer.contact': { fr: 'Contact', en: 'Contact' },
+  'footer.about': { fr: 'À propos', en: 'About' },
+  'footer.manageCookies': { fr: 'Gérer mes cookies', en: 'Manage my cookies' },
+  'footer.tagline': {
+    fr: 'Coloriages gratuits à imprimer pour tous les âges',
+    en: 'Free printable coloring pages for all ages',
+  },
+  'footer.made': {
+    fr: 'Fait avec passion pour petits et grands',
+    en: 'Made with passion for kids and adults',
+  },
   'share.label': { fr: 'Partager', en: 'Share' },
   'share.whatsapp': { fr: 'Partager sur WhatsApp', en: 'Share on WhatsApp' },
   'share.facebook': { fr: 'Partager sur Facebook', en: 'Share on Facebook' },
@@ -291,8 +301,8 @@ const translations: Record<string, Record<Locale, string>> = {
   'legal.privacy.title': { fr: 'Politique de confidentialité', en: 'Privacy Policy' },
   'legal.terms.title': { fr: "Conditions d'utilisation", en: 'Terms of Use' },
   'home.hero.subtitle': {
-    fr: 'Des centaines de coloriages originaux pour les enfants. Téléchargez, imprimez et coloriez !',
-    en: 'Hundreds of original coloring pages for kids. Download, print and color!',
+    fr: 'Des centaines de coloriages originaux pour enfants et adultes. Téléchargez, imprimez et coloriez !',
+    en: 'Hundreds of original coloring pages for kids and adults. Download, print and color!',
   },
   'home.empty': {
     fr: 'Les coloriages arrivent bientôt ! Revenez nous voir.',
@@ -684,4 +694,12 @@ export function getBlogPath(locale: Locale, slug?: string): string {
     return getLocalePath(locale, `/blog/${slug}`);
   }
   return getLocalePath(locale, '/blog');
+}
+
+export function getAboutPath(locale: Locale): string {
+  return getLocalePath(locale, locale === 'fr' ? '/a-propos' : '/about');
+}
+
+export function getContactPath(locale: Locale): string {
+  return getLocalePath(locale, '/contact');
 }

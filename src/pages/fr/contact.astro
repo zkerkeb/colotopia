@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const canonical = 'https://colotopia.com/fr/contact/';
+const altUrl = 'https://colotopia.com/en/contact/';
+---
+
+<BaseLayout
+  locale="fr"
+  title="Contact"
+  description="Contactez l'équipe Colotopia : questions, suggestions, partenariats, signalements. Nous répondons à tous les messages sous 2 jours ouvrés."
+  canonical={canonical}
+  altUrl={altUrl}
+>
+  <article class="legal-page">
+    <h1>Nous contacter</h1>
+
+    <p class="lead">
+      Une question sur un coloriage, une suggestion d'illustration, un partenariat éditorial ou un
+      signalement ? Nous sommes à votre écoute.
+    </p>
+
+    <h2>Par e-mail</h2>
+    <p>
+      Pour toute demande, écrivez-nous à :
+      <a href="mailto:contact@colotopia.com">contact@colotopia.com</a>.
+      Nous répondons généralement sous 2 jours ouvrés.
+    </p>
+
+    <h2>Motifs de contact fréquents</h2>
+    <ul>
+      <li><strong>Suggestion de coloriage</strong> : un thème qui vous manque ? Dites-le nous.</li>
+      <li><strong>Signalement</strong> : une image problématique, un lien cassé, une faute ? Nous corrigeons.</li>
+      <li><strong>Partenariat / presse</strong> : marques, écoles, médias — indiquez-nous votre projet.</li>
+      <li><strong>Utilisation des coloriages</strong> : pour un usage commercial ou institutionnel,
+        contactez-nous pour une autorisation.</li>
+      <li><strong>Droits RGPD</strong> : accès, rectification ou suppression de vos données personnelles
+        (voir notre <a href="/fr/confidentialite/">politique de confidentialité</a>).</li>
+    </ul>
+
+    <h2>Éditeur du site</h2>
+    <p>
+      Colotopia est un projet éditorial indépendant. Pour toute demande légale ou officielle,
+      merci de préciser l'objet dans l'e-mail et de fournir les pièces justificatives nécessaires.
+    </p>
+
+    <h2>Réseaux sociaux</h2>
+    <p>
+      Vous pouvez également nous suivre sur
+      <a href="https://pinterest.com/colotopia" rel="noopener noreferrer" target="_blank">Pinterest</a>
+      et
+      <a href="https://instagram.com/colotopia" rel="noopener noreferrer" target="_blank">Instagram</a>
+      pour découvrir nos nouveautés.
+    </p>
+  </article>
+</BaseLayout>
+
+<style>
+  .legal-page {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .legal-page h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #1f2937;
+  }
+  .legal-page .lead {
+    font-size: 1.125rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  .legal-page h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 2rem 0 0.75rem;
+    color: #1f2937;
+  }
+  .legal-page p {
+    color: #4b5563;
+    margin-bottom: 1rem;
+    line-height: 1.75;
+  }
+  .legal-page ul {
+    color: #4b5563;
+    line-height: 1.75;
+    margin: 0 0 1rem 1.25rem;
+  }
+  .legal-page li {
+    margin-bottom: 0.5rem;
+  }
+  .legal-page a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+</style>

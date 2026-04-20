@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const canonical = 'https://colotopia.com/en/about/';
+const altUrl = 'https://colotopia.com/fr/a-propos/';
+---
+
+<BaseLayout
+  locale="en"
+  title="About Colotopia"
+  description="Colotopia is an independent website dedicated to free printable coloring pages for kids and adults. Discover our story, mission and the team behind the project."
+  canonical={canonical}
+  altUrl={altUrl}
+>
+  <article class="legal-page">
+    <h1>About Colotopia</h1>
+
+    <p class="lead">
+      Colotopia is an independent website offering hundreds of free printable coloring pages,
+      designed for both children and adults.
+    </p>
+
+    <h2>Our mission</h2>
+    <p>
+      We believe coloring is a universal activity: it soothes, sparks creativity and brings
+      generations together. Our mission is to make the largest possible catalog of original coloring
+      pages freely accessible, in high quality, and ready to print with one click.
+    </p>
+    <p>
+      Every illustration published on Colotopia is designed specifically for our site. We do not
+      redistribute images from elsewhere: all our pages are original and free to use for personal
+      and educational purposes.
+    </p>
+
+    <h2>Who is it for?</h2>
+    <p>
+      Our catalog targets a wide audience. For younger children, we offer simple, cute and educational
+      designs: animals, vehicles, seasons, jobs, dinosaurs. For teens and adults, we've developed a
+      dedicated section with mandalas, mosaics, zodiacs, landscapes, cottagecore and stress relief
+      pages — perfect for a relaxing moment or a regular artistic practice.
+    </p>
+
+    <h2>Why coloring?</h2>
+    <p>
+      Many studies have shown the benefits of coloring: it improves concentration, reduces stress,
+      stimulates fine motor skills in children, and activates brain areas linked to creativity.
+      It's also an excellent way to encourage learning: colors, shapes, animals, geography or music
+      can all be approached through a simple coloring page.
+    </p>
+
+    <h2>Our editorial commitment</h2>
+    <p>
+      Colotopia is an independent editorial project. We're committed to offering quality content,
+      with no mandatory sign-up, no forced downloads, and no advertising overload. A few Google
+      AdSense ad slots are displayed on the site to help us keep creating new coloring pages and
+      maintaining the platform.
+    </p>
+
+    <h2>The team</h2>
+    <p>
+      Colotopia is run by a small team passionate about design, illustration and parenting. The site
+      was born from the desire to share a carefully curated, free coloring library usable by
+      everyone — at home, at school or in workshops.
+    </p>
+
+    <h2>Contact us</h2>
+    <p>
+      Got a question, a suggestion, a partnership request or a report? We're listening:
+      <a href="/en/contact/">contact us</a> or write to
+      <a href="mailto:contact@colotopia.com">contact@colotopia.com</a>.
+    </p>
+  </article>
+</BaseLayout>
+
+<style>
+  .legal-page {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .legal-page h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #1f2937;
+  }
+  .legal-page .lead {
+    font-size: 1.125rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  .legal-page h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 2rem 0 0.75rem;
+    color: #1f2937;
+  }
+  .legal-page p {
+    color: #4b5563;
+    margin-bottom: 1rem;
+    line-height: 1.75;
+  }
+  .legal-page a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+</style>
