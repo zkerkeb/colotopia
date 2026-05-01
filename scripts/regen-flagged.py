@@ -105,6 +105,89 @@ CATEGORY_TEMPLATES = {
     'culture': "A decorative {subject}, simple line art coloring page with clean black outlines.",
 }
 
+GEMINI_TEXT_MODEL = os.environ.get("GEMINI_TEXT_MODEL", "gemini-2.5-flash")
+
+# ---------------------------------------------------------------------------
+# Prompt rewriting via Gemini text (addresses flag_reason)
+# ---------------------------------------------------------------------------
+
+_GEMINI_TEXT_CLIENT = None
+
+def _get_gemini_text_client():
+    """Lazy-init a google-genai client for text. Returns None if key missing."""
+    global _GEMINI_TEXT_CLIENT
+    if _GEMINI_TEXT_CLIENT is not None:
+        return _GEMINI_TEXT_CLIENT
+    api_key = os.environ.get("GEMINI_API_KEY")
+    if not api_key:
+        return None
+    try:
+        from google import genai
+    except ImportError:
+        print("[rewrite] google-genai not installed — skipping prompt rewrite")
+        return None
+    _GEMINI_TEXT_CLIENT = genai.Client(api_key=api_key)
+    return _GEMINI_TEXT_CLIENT
+
+
+def rewrite_prompt_with_gemini(
+    fr_title: str,
+    en_title: str,
+    category: str,
+    old_prompt: str,
+    flag_reason: str,
+) -> str | None:
+    """
+    Ask Gemini text to produce a NEW image prompt that addresses the flag_reason.
+    Returns the new prompt string, or None if anything fails (caller should fall back).
+    """
+    client = _get_gemini_text_client()
+    if client is None:
+        return None
+
+    subject = en_title or fr_title or category
+    flag_reason = (flag_reason or "").strip() or "image quality not good enough for a kids coloring page"
+
+    meta = f"""You are a prompt engineer for an AI image generator (Google Imagen 4) producing kids' coloring pages.
+
+A previous coloring page was REJECTED by the editor and must be regenerated. Your job: write ONE new improved image prompt that explicitly fixes the rejection issue.
+
+Subject: {subject}
+Category: {category}
+Previous prompt: {old_prompt or "<none>"}
+Rejection reason: {flag_reason}
+
+Hard requirements for the new prompt:
+- Black line art only, clean bold outlines on plain white background
+- Simple, kid-friendly cartoon style, no shading, no gradients, no color, no fill
+- No text, no letters, no watermark, no border
+- Front view or simple composition, large fillable areas suitable for coloring
+- Address the rejection reason directly (e.g. if "too complex", make it dramatically simpler; if "off-topic", refocus on the subject; if "scary", make it cute and friendly)
+
+Output ONLY the new prompt as ONE short English sentence (max ~30 words). No preamble, no quotes, no markdown, no explanation."""
+
+    try:
+        resp = client.models.generate_content(
+            model=GEMINI_TEXT_MODEL,
+            contents=meta,
+        )
+        text = (getattr(resp, "text", None) or "").strip()
+        # Strip accidental quotes / code fences / leading bullets
+        text = text.strip("`").strip().strip('"').strip("'").lstrip("-•* ").strip()
+        # Take first non-empty line only
+        for line in text.splitlines():
+            line = line.strip()
+            if line:
+                text = line
+                break
+        if len(text) < 10 or len(text) > 600:
+            return None
+        return text
+    except Exception as e:
+        print(f"[rewrite] Gemini text rewrite failed: {e}")
+        return None
+
+
 # ---------------------------------------------------------------------------
 # API helpers
 # ---------------------------------------------------------------------------
@@ -115,6 +198,7 @@ def api_get(path: str) -> dict:
     req = urllib.request.Request(url, headers={
         "Authorization": f"Bearer {ADMIN_TOKEN}",
         "Content-Type": "application/json",
+        "User-Agent": "Colotopia-RegenScript/1.0",
     })
     with urllib.request.urlopen(req, timeout=30) as resp:
         return json.loads(resp.read().decode("utf-8"))
@@ -127,6 +211,7 @@ def api_post(path: str, body: dict) -> dict:
     req = urllib.request.Request(url, data=data, method="POST", headers={
         "Authorization": f"Bearer {ADMIN_TOKEN}",
         "Content-Type": "application/json",
+        "User-Agent": "Colotopia-RegenScript/1.0",
     })
     with urllib.request.urlopen(req, timeout=30) as resp:
         return json.loads(resp.read().decode("utf-8"))
@@ -255,8 +340,31 @@ def queue_flagged_items(items: list[dict], dry_run: bool = False) -> list[dict]:
 
         # Find existing prompt or generate one
         prior = known.get(fr_slug)
-        if prior and prior.get("prompt"):
-            prompt = prior["prompt"]
+        old_prompt = prior.get("prompt") if prior else ""
+        flag_reason = (item.get("flagReason") or "").strip()
+
+        if flag_reason and not dry_run:
+            # Ask Gemini to rewrite the prompt addressing the flag_reason.
+            # If rewrite fails, fall back to old behavior so we don't block.
+            rewritten = rewrite_prompt_with_gemini(
+                fr_title=fr_title,
+                en_title=en_title,
+                category=cat,
+                old_prompt=old_prompt,
+                flag_reason=flag_reason,
+            )
+            if rewritten:
+                prompt = rewritten
+                print(f"[rewrite] {fr_slug}: '{flag_reason}' → new prompt: {prompt[:80]}...")
+            elif old_prompt:
+                prompt = old_prompt
+                print(f"[rewrite] {fr_slug}: rewrite failed, reusing prior prompt")
+            else:
+                tpl = CATEGORY_TEMPLATES.get(cat, "A cute cartoon {subject}, simple line art style for kids, clean black outlines on white.")
+                subj = en_title.lower() if en_title else fr_title.lower()
+                prompt = tpl.format(subject=subj)
+        elif old_prompt:
+            prompt = old_prompt
         else:
             tpl = CATEGORY_TEMPLATES.get(cat, "A cute cartoon {subject}, simple line art style for kids, clean black outlines on white.")
             subj = en_title.lower() if en_title else fr_title.lower()
@@ -436,6 +544,7 @@ def unflag_regenerated(entries: list[dict], dry_run: bool = False):
                             headers={
                                 "Authorization": f"Bearer {ADMIN_TOKEN}",
                                 "Content-Type": "application/json",
+                                "User-Agent": "Colotopia-RegenScript/1.0",
                             }
                         )
                         urllib.request.urlopen(req, timeout=10)
