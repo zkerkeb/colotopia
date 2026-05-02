@@ -33,6 +33,12 @@ export const colorings = pgTable('colorings', {
   seoDescription: text('seo_description'),
   printable: boolean('printable').default(true).notNull(),
   tagsJson: jsonb('tags_json').$type<string[]>().default([]),
+  // Quality flag — managed by the admin UI / regen pipeline. The site reads
+  // this to hide unpublishable items at build time. Owned by colotopia_api;
+  // declared here read-only so Drizzle can build the WHERE clause.
+  flagged: boolean('flagged').default(false).notNull(),
+  flagReason: text('flag_reason'),
+  flaggedAt: timestamp('flagged_at'),
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
 }, (table) => [
