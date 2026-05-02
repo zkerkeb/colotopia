@@ -1,6 +1,6 @@
 import { db } from '../db';
 import { colorings } from '../db/schema';
-import { eq, desc } from 'drizzle-orm';
+import { and, eq, desc } from 'drizzle-orm';
 import { cdnPng } from './cdn';
 
 /**
@@ -33,10 +33,14 @@ export interface ColoringEntry {
  * Drop-in replacement for the old YAML-based version.
  */
 export async function getPublishableColoriages(locale: 'fr' | 'en'): Promise<ColoringEntry[]> {
+  // Filter out flagged items: they are awaiting regeneration and should not
+  // appear anywhere on the public site (listings, category pages, individual
+  // [slug] pages → 404, search index, sitemap). Once regen-flagged.py unflags
+  // them in DB, they reappear on the next build.
   const rows = await db
     .select()
     .from(colorings)
-    .where(eq(colorings.locale, locale))
+    .where(and(eq(colorings.locale, locale), eq(colorings.flagged, false)))
     .orderBy(desc(colorings.createdAt));
 
   return rows.map((row) => ({
