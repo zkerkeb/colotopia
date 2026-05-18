@@ -1,8 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const canonical = 'https://colotopia.com/fr/conditions/';
+const altUrl = 'https://colotopia.com/en/terms/';
 ---
 
-<BaseLayout locale="fr" title="Conditions d'utilisation" altUrl="https://colotopia.com/en/terms/">
+<BaseLayout locale="fr" title="Conditions d'utilisation" canonical={canonical} altUrl={altUrl}>
   <article class="legal-page">
     <h1>Conditions d'utilisation</h1>
 
