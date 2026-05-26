@@ -5,58 +5,12 @@
  */
 
 import { buildSlugMap } from './coloriages';
+import { getTranslatedBlogSlug } from './blog-alternates';
+import { categories, getCategorySlug } from './i18n';
 
-const frToEnCategories: Record<string, string> = {
-  animaux: 'animals',
-  'animaux-marins': 'sea-animals',
-  ferme: 'farm',
-  vehicules: 'vehicles',
-  nature: 'nature',
-  alphabet: 'alphabet',
-  dinosaures: 'dinosaurs',
-  'super-heros': 'superheroes',
-  espace: 'space',
-  'princesses-chevaliers': 'princesses-knights',
-  metiers: 'jobs',
-  sport: 'sport',
-  saisons: 'seasons',
-  fetes: 'holidays',
-  mandalas: 'mandalas',
-  mosaiques: 'mosaics',
-  abstrait: 'abstract',
-  cartes: 'maps',
-  personnages: 'characters',
-  contes: 'fairy-tales',
-  drole: 'funny',
-  musique: 'music',
-  nourriture: 'food',
-  pirates: 'pirates',
-  robots: 'robots',
-  paysages: 'landscapes',
-  kawaii: 'kawaii',
-  licorne: 'unicorns',
-  fleurs: 'flowers',
-  chats: 'cats',
-  papillons: 'butterflies',
-  'bold-et-facile': 'bold-easy',
-  paques: 'easter',
-  halloween: 'halloween',
-  noel: 'christmas',
-  champignons: 'mushrooms',
-  religions: 'religions',
-  cottagecore: 'cottagecore',
-  vitrail: 'stained-glass',
-  zodiaque: 'zodiac',
-  affirmations: 'affirmations',
-  'anti-stress': 'stress-relief',
-  cirque: 'circus',
-  fee: 'fairies',
-  magie: 'magic',
-  jardinage: 'gardening',
-  insectes: 'insects',
-  bricolage: 'crafts',
-  architecture: 'architecture',
-};
+const frToEnCategories: Record<string, string> = Object.fromEntries(
+  categories.map((category) => [category, getCategorySlug(category, 'en')]),
+);
 
 const enToFrCategories: Record<string, string> = Object.fromEntries(
   Object.entries(frToEnCategories).map(([fr, en]) => [en, fr]),
@@ -66,6 +20,19 @@ const frCategorySet = new Set(Object.keys(frToEnCategories));
 const enCategorySet = new Set(Object.values(frToEnCategories));
 
 const SITE = 'https://colotopia.com';
+
+const staticAlternates: Record<string, string> = {
+  '/fr/a-propos/': '/en/about/',
+  '/en/about/': '/fr/a-propos/',
+  '/fr/categories/': '/en/categories/',
+  '/en/categories/': '/fr/categories/',
+  '/fr/contact/': '/en/contact/',
+  '/en/contact/': '/fr/contact/',
+  '/fr/confidentialite/': '/en/privacy/',
+  '/en/privacy/': '/fr/confidentialite/',
+  '/fr/conditions/': '/en/terms/',
+  '/en/terms/': '/fr/conditions/',
+};
 
 // Build slug mapping from DB (image-based pairing)
 let _frToEnSlugs: Record<string, string> | null = null;
@@ -80,7 +47,16 @@ async function loadSlugMaps() {
 
 export function getAlternateUrl(url: string): { locale: string; altLocale: string; altUrl: string } | null {
   // Note: loadSlugMaps is called at build start via the sitemap integration
-  const path = url.replace(SITE, '');
+  const path = normalizePath(url.replace(SITE, ''));
+  const staticAlt = staticAlternates[path];
+  if (staticAlt) {
+    const locale = path.startsWith('/fr/') ? 'fr' : 'en';
+    return {
+      locale,
+      altLocale: locale === 'fr' ? 'en' : 'fr',
+      altUrl: `${SITE}${staticAlt}`,
+    };
+  }
 
   // FR pages
   if (path.startsWith('/fr/')) {
@@ -98,21 +74,14 @@ export function getAlternateUrl(url: string): { locale: string; altLocale: strin
     if (rest === 'blog/' || rest === 'blog') {
       return { locale: 'fr', altLocale: 'en', altUrl: `${SITE}/en/blog/` };
     }
-    const blogMatch = rest.match(/^blog\/([^/]+)\/?$/);
-    if (blogMatch) {
-      return { locale: 'fr', altLocale: 'en', altUrl: `${SITE}/en/blog/${blogMatch[1]}/` };
-    }
     const blogPageMatch = rest.match(/^blog\/(\d+)\/?$/);
     if (blogPageMatch) {
-      return { locale: 'fr', altLocale: 'en', altUrl: `${SITE}/fr/blog/${blogPageMatch[1]}/` };
+      return { locale: 'fr', altLocale: 'en', altUrl: `${SITE}/en/blog/${blogPageMatch[1]}/` };
     }
-
-    // Legal pages
-    if (rest === 'confidentialite/' || rest === 'confidentialite') {
-      return { locale: 'fr', altLocale: 'en', altUrl: `${SITE}/en/privacy/` };
-    }
-    if (rest === 'conditions/' || rest === 'conditions') {
-      return { locale: 'fr', altLocale: 'en', altUrl: `${SITE}/en/terms/` };
+    const blogMatch = rest.match(/^blog\/([^/]+)\/?$/);
+    if (blogMatch) {
+      const enSlug = getTranslatedBlogSlug('fr', blogMatch[1]);
+      return enSlug ? { locale: 'fr', altLocale: 'en', altUrl: `${SITE}/en/blog/${enSlug}/` } : null;
     }
 
     // Category pages: /fr/{category}/ or /fr/{category}/{page}/
@@ -147,21 +116,14 @@ export function getAlternateUrl(url: string): { locale: string; altLocale: strin
     if (rest === 'blog/' || rest === 'blog') {
       return { locale: 'en', altLocale: 'fr', altUrl: `${SITE}/fr/blog/` };
     }
-    const enBlogMatch = rest.match(/^blog\/([^/]+)\/?$/);
-    if (enBlogMatch) {
-      return { locale: 'en', altLocale: 'fr', altUrl: `${SITE}/fr/blog/${enBlogMatch[1]}/` };
-    }
     const enBlogPageMatch = rest.match(/^blog\/(\d+)\/?$/);
     if (enBlogPageMatch) {
-      return { locale: 'en', altLocale: 'fr', altUrl: `${SITE}/en/blog/${enBlogPageMatch[1]}/` };
+      return { locale: 'en', altLocale: 'fr', altUrl: `${SITE}/fr/blog/${enBlogPageMatch[1]}/` };
     }
-
-    // Legal pages
-    if (rest === 'privacy/' || rest === 'privacy') {
-      return { locale: 'en', altLocale: 'fr', altUrl: `${SITE}/fr/confidentialite/` };
-    }
-    if (rest === 'terms/' || rest === 'terms') {
-      return { locale: 'en', altLocale: 'fr', altUrl: `${SITE}/fr/conditions/` };
+    const enBlogMatch = rest.match(/^blog\/([^/]+)\/?$/);
+    if (enBlogMatch) {
+      const frSlug = getTranslatedBlogSlug('en', enBlogMatch[1]);
+      return frSlug ? { locale: 'en', altLocale: 'fr', altUrl: `${SITE}/fr/blog/${frSlug}/` } : null;
     }
 
     // Category pages: /en/{category}/ or /en/{category}/{page}/
@@ -186,6 +148,11 @@ export function getAlternateUrl(url: string): { locale: string; altLocale: strin
   }
 
   return null;
+}
+
+function normalizePath(path: string): string {
+  const [pathname] = path.split(/[?#]/);
+  return pathname.endsWith('/') ? pathname : `${pathname}/`;
 }
 
 // Pre-load slug maps (called during build)

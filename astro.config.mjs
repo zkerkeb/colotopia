@@ -22,9 +22,11 @@ export default defineConfig({
       serialize(item) {
         const alt = getAlternateUrl(item.url);
         if (alt) {
+          const defaultUrl = alt.locale === 'fr' ? item.url : alt.altUrl;
           item.links = [
             { lang: alt.locale === 'fr' ? 'fr-FR' : 'en-US', url: item.url },
             { lang: alt.altLocale === 'fr' ? 'fr-FR' : 'en-US', url: alt.altUrl },
+            { lang: 'x-default', url: defaultUrl },
           ];
         }
         return item;

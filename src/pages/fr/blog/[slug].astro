@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
 import { t, getBlogPath } from '../../../lib/i18n';
+import { getTranslatedBlogSlug } from '../../../lib/blog-alternates';
 
 const locale = 'fr';
 
@@ -31,10 +32,8 @@ const breadcrumbs = [
 
 const canonical = `https://colotopia.com/fr/blog/${post.data.slug}/`;
 
-// Find English counterpart by matching slug pattern
-const enPosts = await getCollection('blog', ({ data }) => data.locale === 'en');
-const enMatch = enPosts.find((p) => p.data.tags.some((tag) => post.data.tags.includes(tag)));
-const altUrl = enMatch ? `https://colotopia.com/en/blog/${enMatch.data.slug}/` : 'https://colotopia.com/en/blog/';
+const enSlug = getTranslatedBlogSlug('fr', post.data.slug);
+const altUrl = enSlug ? `https://colotopia.com/en/blog/${enSlug}/` : undefined;
 
 const articleSchema = {
   '@context': 'https://schema.org',

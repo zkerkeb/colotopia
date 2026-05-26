@@ -36,6 +36,11 @@ describe('getAlternateUrl — FR pages', () => {
   });
 
   it('maps FR legal pages correctly', () => {
+    expect(getAlternateUrl(`${SITE}/fr/a-propos/`)).toEqual({
+      locale: 'fr',
+      altLocale: 'en',
+      altUrl: `${SITE}/en/about/`,
+    });
     expect(getAlternateUrl(`${SITE}/fr/confidentialite/`)).toEqual({
       locale: 'fr',
       altLocale: 'en',
@@ -45,6 +50,27 @@ describe('getAlternateUrl — FR pages', () => {
       locale: 'fr',
       altLocale: 'en',
       altUrl: `${SITE}/en/terms/`,
+    });
+    expect(getAlternateUrl(`${SITE}/fr/categories/`)).toEqual({
+      locale: 'fr',
+      altLocale: 'en',
+      altUrl: `${SITE}/en/categories/`,
+    });
+  });
+
+  it('maps FR blog articles with translated slugs', () => {
+    expect(getAlternateUrl(`${SITE}/fr/blog/coloriage-licorne-gratuit-imprimer/`)).toEqual({
+      locale: 'fr',
+      altLocale: 'en',
+      altUrl: `${SITE}/en/blog/unicorn-coloring-pages/`,
+    });
+  });
+
+  it('maps FR paginated blog to EN paginated blog', () => {
+    expect(getAlternateUrl(`${SITE}/fr/blog/2/`)).toEqual({
+      locale: 'fr',
+      altLocale: 'en',
+      altUrl: `${SITE}/en/blog/2/`,
     });
   });
 
@@ -73,6 +99,11 @@ describe('getAlternateUrl — EN pages', () => {
   });
 
   it('maps EN legal pages correctly', () => {
+    expect(getAlternateUrl(`${SITE}/en/about/`)).toEqual({
+      locale: 'en',
+      altLocale: 'fr',
+      altUrl: `${SITE}/fr/a-propos/`,
+    });
     expect(getAlternateUrl(`${SITE}/en/privacy/`)).toEqual({
       locale: 'en',
       altLocale: 'fr',
@@ -82,6 +113,27 @@ describe('getAlternateUrl — EN pages', () => {
       locale: 'en',
       altLocale: 'fr',
       altUrl: `${SITE}/fr/conditions/`,
+    });
+    expect(getAlternateUrl(`${SITE}/en/categories/`)).toEqual({
+      locale: 'en',
+      altLocale: 'fr',
+      altUrl: `${SITE}/fr/categories/`,
+    });
+  });
+
+  it('maps EN blog articles with translated slugs', () => {
+    expect(getAlternateUrl(`${SITE}/en/blog/unicorn-coloring-pages/`)).toEqual({
+      locale: 'en',
+      altLocale: 'fr',
+      altUrl: `${SITE}/fr/blog/coloriage-licorne-gratuit-imprimer/`,
+    });
+  });
+
+  it('maps EN paginated blog to FR paginated blog', () => {
+    expect(getAlternateUrl(`${SITE}/en/blog/2/`)).toEqual({
+      locale: 'en',
+      altLocale: 'fr',
+      altUrl: `${SITE}/fr/blog/2/`,
     });
   });
 
@@ -109,6 +161,12 @@ describe('getAlternateUrl — category coverage', () => {
     ['mosaiques', 'mosaics'],
     ['abstrait', 'abstract'],
     ['paysages', 'landscapes'],
+    ['fees', 'fairies-2'],
+    ['sirenes', 'mermaids'],
+    ['printemps', 'spring'],
+    ['ete', 'summer'],
+    ['lettres', 'letters'],
+    ['licornes', 'unicorns-2'],
   ];
 
   for (const [fr, en] of categoryPairs) {

@@ -71,6 +71,7 @@ const pageDescription = description || t('site.description', locale);
 const altLocale = locale === 'fr' ? 'en' : 'fr';
 const adsenseId = import.meta.env.PUBLIC_ADSENSE_PUBLISHER_ID;
 const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
+const defaultUrl = locale === 'fr' ? (canonical ?? Astro.url.href) : altUrl;
 ---
 
 <!doctype html>
@@ -93,16 +94,8 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
     {prevUrl && <link rel="prev" href={prevUrl} />}
     {nextUrl && <link rel="next" href={nextUrl} />}
     <link rel="alternate" hreflang={locale} href={canonical ?? Astro.url.href} />
-    <link
-      rel="alternate"
-      hreflang={altLocale}
-      href={altUrl ?? Astro.url.href.replace(`/${locale}/`, `/${altLocale}/`)}
-    />
-    <link
-      rel="alternate"
-      hreflang="x-default"
-      href={locale === 'fr' ? (canonical ?? Astro.url.href) : (altUrl ?? Astro.url.href.replace(`/${locale}/`, '/fr/'))}
-    />
+    {altUrl && <link rel="alternate" hreflang={altLocale} href={altUrl} />}
+    {defaultUrl && <link rel="alternate" hreflang="x-default" href={defaultUrl} />}
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={ogUrl} />
     <meta property="og:title" content={pageTitle} />

@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
 import { t, getBlogPath } from '../../../lib/i18n';
+import { getTranslatedBlogSlug } from '../../../lib/blog-alternates';
 
 const locale = 'en';
 
@@ -31,9 +32,8 @@ const breadcrumbs = [
 
 const canonical = `https://colotopia.com/en/blog/${post.data.slug}/`;
 
-const frPosts = await getCollection('blog', ({ data }) => data.locale === 'fr');
-const frMatch = frPosts.find((p) => p.data.tags.some((tag) => post.data.tags.includes(tag)));
-const altUrl = frMatch ? `https://colotopia.com/fr/blog/${frMatch.data.slug}/` : 'https://colotopia.com/fr/blog/';
+const frSlug = getTranslatedBlogSlug('en', post.data.slug);
+const altUrl = frSlug ? `https://colotopia.com/fr/blog/${frSlug}/` : undefined;
 
 const articleSchema = {
   '@context': 'https://schema.org',
