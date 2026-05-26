@@ -9,17 +9,20 @@ export const CDN_BASE = 'https://cdn.colotopia.com';
 
 /** Full-size PNG (used for PDF generation & OG images) */
 export function cdnPng(key: string): string {
-  return `${CDN_BASE}/coloriages/${key}.png`;
+  const normalized = normalizeColoringKey(key);
+  return normalized ? `${CDN_BASE}/coloriages/${normalized}.png` : key;
 }
 
 /** Full-size WebP (used for on-page display) */
 export function cdnWebp(key: string): string {
-  return `${CDN_BASE}/coloriages/${key}.webp`;
+  const normalized = normalizeColoringKey(key);
+  return normalized ? `${CDN_BASE}/coloriages/${normalized}.webp` : key;
 }
 
 /** Thumbnail WebP 300px (used for cards & grids) */
 export function cdnThumb(key: string): string {
-  return `${CDN_BASE}/coloriages/thumbs/${key}.webp`;
+  const normalized = normalizeColoringKey(key);
+  return normalized ? `${CDN_BASE}/coloriages/thumbs/${normalized}.webp` : key;
 }
 
 /** Category banner */
@@ -45,4 +48,16 @@ export function toThumb(imageUrl: string): string {
   return imageUrl
     .replace(/\.png$/, '.webp')
     .replace(/\/coloriages\/(?!thumbs\/)/, '/coloriages/thumbs/');
+}
+
+function normalizeColoringKey(input: string): string | null {
+  const value = input.trim().split(/[?#]/)[0];
+  if (!value) return null;
+  if (/^https?:\/\//.test(value) && !value.startsWith(CDN_BASE)) return null;
+
+  return value
+    .replace(CDN_BASE, '')
+    .replace(/^\/+/, '')
+    .replace(/^(images\/coloriages|coloriages\/thumbs|coloriages)\//, '')
+    .replace(/\.(png|webp|jpe?g)$/i, '');
 }
