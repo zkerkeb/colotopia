@@ -20,7 +20,7 @@ export function searchCatalog(index: SearchItem[], query: string, audience = '')
 
 const requests = new Map<string, Promise<SearchItem[]>>();
 export function loadSearchIndex(url: string): Promise<SearchItem[]> {
-  if (!requests.has(url)) requests.set(url, fetch(url, { signal: AbortSignal.timeout(15_000) })
+  if (!requests.has(url)) requests.set(url, fetch(url, { cache: 'no-cache', signal: AbortSignal.timeout(15_000) })
     .then(response => { if (!response.ok) throw new Error('Search unavailable'); return response.json(); })
     .then(parseSearchIndex).catch(error => { requests.delete(url); throw error; }));
   return requests.get(url)!;
