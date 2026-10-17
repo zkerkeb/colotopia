@@ -20,7 +20,8 @@ const { page } = Astro.props as { page: any };
 const isFirstPage = page.currentPage === 1;
 const canonical = Astro.url.href;
 const siteUrl = Astro.site?.href.replace(/\/$/, '') ?? 'https://colotopia.com';
-const altUrl = page.currentPage === 1
+const translatedCount = (await getPublishableColoriages('fr')).length;
+const altUrl = page.currentPage > Math.ceil(translatedCount / 24) ? undefined : page.currentPage === 1
   ? `${siteUrl}/fr/`
   : `${siteUrl}/fr/${page.currentPage}/`;
 const firstImage = page.data[0]?.data.image;
@@ -34,7 +35,7 @@ let adultCounts: Record<string, number> = {};
 if (isFirstPage) {
   const allColoriages = await getPublishableColoriages('en');
   nouveaux = allColoriages
-    .filter((c: any) => c.data.createdAt)
+    .filter((c: any) => c.data.createdAt && Date.now() - new Date(c.data.createdAt).getTime() < 30 * 86400000)
     .sort((a: any, b: any) => (b.data.createdAt || '').localeCompare(a.data.createdAt || ''))
     .slice(0, 10);
   nouveauxSlugs = new Set(nouveaux.map((c: any) => c.data.slug));
@@ -70,6 +71,7 @@ const structuredData = {
   prevUrl={page.url.prev}
   nextUrl={page.url.next}
 >
+  {!isFirstPage && <h1>{`Coloring pages — Page ${page.currentPage}`}</h1>}
   {isFirstPage && <Hero locale={locale} previews={page.data.slice(0, 4).map((c: any) => ({ image: c.data.image, alt: c.data.alt, slug: c.data.slug }))} />}
 
   {isFirstPage && nouveaux.length > 0 && (
@@ -81,9 +83,9 @@ const structuredData = {
   <AdSlot adSlot="" format="horizontal" />
 
   <div class="audience-filter" role="group" aria-label="Filter by audience">
-    <button class="filter-btn active" data-filter="all">{t('home.filter.all', locale)}</button>
-    <button class="filter-btn" data-filter="enfants">{t('audience.enfants', locale)}</button>
-    <button class="filter-btn" data-filter="adultes">{t('audience.adultes', locale)}</button>
+    <a class="filter-btn active" href="/en/search/">{t('home.filter.all', locale)}</a>
+    <a class="filter-btn" href="/en/search/?audience=enfants">{t('audience.enfants', locale)}</a>
+    <a class="filter-btn" href="/en/search/?audience=adultes">{t('audience.adultes', locale)}</a>
   </div>
 
   <section class="coloring-grid" id="main-grid">
@@ -115,29 +117,7 @@ const structuredData = {
   />
 </BaseLayout>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const btns = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
-    const grid = document.getElementById('main-grid');
-    if (!grid) return;
 
-    btns.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const filter = btn.dataset.filter;
-        btns.forEach((b) => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
-        btn.classList.add('active');
-        btn.setAttribute('aria-pressed', 'true');
-        grid.querySelectorAll<HTMLElement>('[data-audience]').forEach((card) => {
-          if (!filter || filter === 'all') {
-            card.style.display = '';
-          } else {
-            card.style.display = card.dataset.audience === filter ? '' : 'none';
-          }
-        });
-      });
-    });
-  });
-</script>
 
 <style>
   .audience-filter {

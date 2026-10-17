@@ -12,7 +12,7 @@ tags: ["unicorn", "themes", "rainbow", "magic"]
 
 ## Free Unicorn Coloring Pages: Magic, Rainbows, and Endless Color
 
-Unicorns are the undisputed queens of fantasy creatures — and for good reason. Part horse, part magic, entirely captivating, they've enchanted children and adults for centuries and show absolutely no sign of going out of style. **Unicorn coloring pages** are consistently among the most searched and downloaded coloring sheets online, and Colotopia's [unicorn collection](/en/unicorn/) delivers dozens of beautiful, original designs to print and color.
+Unicorns are the undisputed queens of fantasy creatures — and for good reason. Part horse, part magic, entirely captivating, they've enchanted children and adults for centuries and show absolutely no sign of going out of style. **Unicorn coloring pages** are consistently among the most searched and downloaded coloring sheets online, and Colotopia's [unicorn collection](/en/unicorns/) delivers dozens of beautiful, original designs to print and color.
 
 From the classic white unicorn with a golden horn to rainbow-maned fantasy scenes, baby unicorns with big sparkling eyes, and unicorn mandalas for adults — here's everything you need to know about making the most of your unicorn coloring sessions.
 
@@ -48,7 +48,7 @@ Unicorns flying through starlit skies, drinking from a magical forest pool, surr
 
 ### Adult Unicorn Mandalas
 
-Unicorn motifs integrated into intricate mandala compositions — symmetrical, meditative, detailed. These coloring pages bridge the fantasy world of unicorns with the relaxation practice of mandala coloring. Find more in our [mandala](/en/mandala/) section.
+Unicorn motifs integrated into intricate mandala compositions — symmetrical, meditative, detailed. These coloring pages bridge the fantasy world of unicorns with the relaxation practice of mandala coloring. Find more in our [mandala](/en/mandalas/) section.
 
 ## Color Palette Guide for Unicorns
 
@@ -112,4 +112,4 @@ Resist the urge to leave everything white. White in coloring works best as an ac
 
 Layer multiple applications of colored pencil, using light pressure each time, to build up rich color depth. Blend with a blending stump or colorless blending pencil for smooth transitions. Work in small circular motions rather than back-and-forth strokes for even coverage.
 
-Explore our full [unicorn coloring collection](/en/unicorn/) and let the magic begin!
+Explore our full [unicorn coloring collection](/en/unicorns/) and let the magic begin!

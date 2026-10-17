@@ -11,8 +11,8 @@ import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = async () => {
   const [frPages, enPages] = await Promise.all([
-    getPublishableColoriages('fr'),
-    getPublishableColoriages('en'),
+    getPublishableColoriages('fr', true),
+    getPublishableColoriages('en', true),
   ]);
 
   const coloriages = frPages.map((c) => ({

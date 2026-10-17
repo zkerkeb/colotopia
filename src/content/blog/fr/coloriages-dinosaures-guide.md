@@ -20,13 +20,13 @@ Explorez sans attendre notre [collection de coloriages de dinosaures](/fr/dinosa
 
 ### Le Tyrannosaure Rex
 
-Le roi des dinosaures est sans conteste le plus demandé par les enfants. Avec ses mâchoires impressionnantes, ses petits bras caractéristiques et sa posture imposante, le T-Rex offre un sujet de coloriage spectaculaire. Nos [coloriages de T-Rex](/fr/coloriage/dinosaure-trex/) sont disponibles en plusieurs niveaux de difficulté : du T-Rex simplifié et souriant pour les tout-petits au T-Rex anatomiquement détaillé pour les passionnés de paléontologie.
+Le roi des dinosaures est sans conteste le plus demandé par les enfants. Avec ses mâchoires impressionnantes, ses petits bras caractéristiques et sa posture imposante, le T-Rex offre un sujet de coloriage spectaculaire. Nos [Tyrannosaure Rex](/fr/coloriage/dinosaures-trex/) sont disponibles en plusieurs niveaux de difficulté : du T-Rex simplifié et souriant pour les tout-petits au T-Rex anatomiquement détaillé pour les passionnés de paléontologie.
 
 Le T-Rex vivait à la fin du Crétacé, il y a environ 68 millions d'années. Pendant que votre enfant colorie, vous pouvez lui raconter que ce prédateur mesurait jusqu'à 12 mètres de long et pesait environ 8 tonnes. Le coloriage devient alors un formidable support d'apprentissage.
 
 ### Le Tricératops
 
-Avec ses trois cornes et sa collerette osseuse, le Tricératops est un sujet de coloriage riche en détails. Les enfants adorent imaginer les couleurs de sa peau écailleuse et décorer son impressionnante collerette. Nos [dessins de Tricératops](/fr/coloriage/dinosaure-triceratops/) mettent en valeur les caractéristiques uniques de cet herbivore emblématique.
+Avec ses trois cornes et sa collerette osseuse, le Tricératops est un sujet de coloriage riche en détails. Les enfants adorent imaginer les couleurs de sa peau écailleuse et décorer son impressionnante collerette. Nos [Triceratops feroce](/fr/coloriage/dinosaures-triceratops/) mettent en valeur les caractéristiques uniques de cet herbivore emblématique.
 
 La collerette du Tricératops est particulièrement intéressante à colorier car les scientifiques pensent qu'elle était probablement colorée de manière vive pour impressionner les rivaux et attirer les partenaires, un peu comme les plumes des paons actuels. Les enfants ont donc carte blanche pour laisser éclater les couleurs.
 
@@ -44,7 +44,7 @@ Rendu célèbre par le cinéma, le Vélociraptor est un petit dinosaure agile et
 
 ## Dinosaures volants et marins
 
-Les ptérosaures ne sont pas techniquement des dinosaures, mais ils font partie de l'univers préhistorique que les enfants adorent. Nos [coloriages de ptéranodons](/fr/coloriage/dinosaure-pteranodon/) montrent ces reptiles volants planant au-dessus d'océans peuplés de créatures marines tout aussi impressionnantes.
+Les ptérosaures ne sont pas techniquement des dinosaures, mais ils font partie de l'univers préhistorique que les enfants adorent. Nos [Pterodactyle volant](/fr/coloriage/dinosaures-pterodactyle/) montrent ces reptiles volants planant au-dessus d'océans peuplés de créatures marines tout aussi impressionnantes.
 
 Les reptiles marins comme le Plésiosaure et le Mosasaure complètent notre collection et permettent d'explorer toutes les facettes du monde préhistorique. Ces dessins sous-marins sont parfaits pour utiliser toute la palette de bleus et de verts.
 
@@ -60,7 +60,7 @@ Des analyses de fossiles ont révélé que le Sinosauropteryx avait des rayures 
 
 Pour un décor authentique, les paysages préhistoriques se composent de fougères géantes, de cycas, de conifères primitifs et de palmiers. Pas de fleurs colorées avant la fin du Crétacé et pas d'herbe non plus. Ces détails botaniques enrichissent le coloriage et apportent une dimension éducative.
 
-Nos scènes de [dinosaures dans la nature](/fr/coloriage/dinosaure-foret-prehistorique/) intègrent une végétation adaptée à chaque période géologique, pour un résultat à la fois beau et instructif.
+Nos scènes de dinosaures dans la nature intègrent une végétation adaptée à chaque période géologique, pour un résultat à la fois beau et instructif.
 
 ### Les volcans et les paysages
 

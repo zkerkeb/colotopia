@@ -20,7 +20,7 @@ Découvrez dès maintenant notre [collection complète de coloriages de princess
 
 ### Les princesses classiques
 
-Les robes somptueuses, les couronnes scintillantes et les longs cheveux ondulés : les princesses classiques ont un charme intemporel. Nos [coloriages de princesses en robe de bal](/fr/coloriage/princesse-robe-de-bal/) offrent de grandes surfaces à colorier, idéales pour expérimenter avec les couleurs. Les enfants adorent choisir la couleur de la robe, imaginer les bijoux et décider de la teinte des cheveux de leur princesse.
+Les robes somptueuses, les couronnes scintillantes et les longs cheveux ondulés : les princesses classiques ont un charme intemporel. Nos [Belle princesse](/fr/coloriage/princesses-chevaliers-princesse/) offrent de grandes surfaces à colorier, idéales pour expérimenter avec les couleurs. Les enfants adorent choisir la couleur de la robe, imaginer les bijoux et décider de la teinte des cheveux de leur princesse.
 
 Ces dessins sont aussi l'occasion de travailler la précision du coloriage. Les détails des robes, les motifs des tissus et les ornements des couronnes demandent de la patience et de la minutie. C'est un exercice ludique qui développe la concentration tout en stimulant la créativité.
 
@@ -28,7 +28,7 @@ Ces dessins sont aussi l'occasion de travailler la précision du coloriage. Les 
 
 Les princesses ne sont pas toujours dans leur tour en train d'attendre un prince. Nos coloriages modernes montrent des princesses qui chevauchent des dragons, explorent des forêts enchantées et mènent des quêtes héroïques. Ces dessins véhiculent un message positif d'autonomie et de courage, tout en offrant des scènes dynamiques et passionnantes à colorier.
 
-Les [princesses guerrières](/fr/coloriage/princesse-aventuriere/) portent des armures décorées, manient des épées élégantes et se tiennent fièrement devant des paysages épiques. Ces coloriages plaisent autant aux filles qu'aux garçons et permettent de dépasser les stéréotypes traditionnels.
+Les [Ecuyere courageuse](/fr/coloriage/princesses-chevaliers-ecuyere/) portent des armures décorées, manient des épées élégantes et se tiennent fièrement devant des paysages épiques. Ces coloriages plaisent autant aux filles qu'aux garçons et permettent de dépasser les stéréotypes traditionnels.
 
 ### Les princesses du monde
 
@@ -38,7 +38,7 @@ Notre collection inclut des princesses inspirées de différentes cultures du mo
 
 ### Les chevaliers en armure
 
-L'armure du chevalier est un sujet de coloriage fascinant avec ses multiples pièces et ses reflets métalliques. Nos [coloriages de chevaliers en armure](/fr/coloriage/chevalier-armure/) vont du plus simple, pour les plus jeunes, au plus détaillé, pour les enfants qui aiment les défis. Les enfants peuvent imaginer les couleurs du blason sur le bouclier et créer leur propre héraldique.
+L'armure du chevalier est un sujet de coloriage fascinant avec ses multiples pièces et ses reflets métalliques. Nos [Brave chevalier](/fr/coloriage/princesses-chevaliers-chevalier/) vont du plus simple, pour les plus jeunes, au plus détaillé, pour les enfants qui aiment les défis. Les enfants peuvent imaginer les couleurs du blason sur le bouclier et créer leur propre héraldique.
 
 Le vocabulaire médiéval est riche : heaume, haubert, cotte de mailles, écu, destrier. Le coloriage devient alors un support pédagogique qui enrichit le vocabulaire de l'enfant tout en le divertissant.
 
@@ -48,7 +48,7 @@ Les tournois médiévaux offrent des scènes spectaculaires à colorier. Des che
 
 ## Les châteaux et les décors médiévaux
 
-Un bon coloriage de princesse ou de chevalier mérite un décor à la hauteur. Nos dessins de châteaux forts proposent des architectures variées : tours crénelées, ponts-levis, douves, remparts et donjons. Les [coloriages de châteaux enchantés](/fr/coloriage/chateau-enchante/) mélangent éléments réalistes et touches magiques avec des tours qui touchent les nuages et des jardins fleuris.
+Un bon coloriage de princesse ou de chevalier mérite un décor à la hauteur. Nos dessins de châteaux forts proposent des architectures variées : tours crénelées, ponts-levis, douves, remparts et donjons. Les [Grand chateau](/fr/coloriage/princesses-chevaliers-chateau/) mélangent éléments réalistes et touches magiques avec des tours qui touchent les nuages et des jardins fleuris.
 
 Ces décors se prêtent particulièrement bien à l'utilisation de techniques variées. Les enfants peuvent colorier les pierres du château en utilisant des nuances de gris et de beige, ajouter du vert pour le lierre grimpant et du bleu pour le ciel et les douves. C'est un excellent exercice pour apprendre à jouer avec les nuances et les contrastes.
 

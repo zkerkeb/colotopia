@@ -10,6 +10,7 @@ import RelatedCategories from '../../../components/RelatedCategories.astro';
 import { categories, adultCategories, getCategoryLabel, getCategorySlug, ti, categoryIcons, categoryColors, type Category } from '../../../lib/i18n';
 import { getPublishableColoriages } from '../../../lib/coloriages';
 import { getPillarContent, getRelatedCategories } from '../../../data/pillar-content';
+import bannerCategories from '../../../data/category-banners.json';
 import { cdnBanner } from '../../../lib/cdn';
 
 const locale = 'en';
@@ -37,24 +38,17 @@ const isAdult = (adultCategories as readonly string[]).includes(categoryKey);
 const catIcon = categoryIcons[categoryKey];
 const catColor = categoryColors[categoryKey];
 const bannerSrc = cdnBanner(categoryKey);
-const hasBanner = true;
+const hasBanner = bannerCategories.includes(categoryKey);
 const pillar = page.currentPage === 1 ? getPillarContent(categoryKey, locale) : null;
 const relatedCats = getRelatedCategories(categoryKey, locale);
 
-const descriptionKey = isAdult ? 'category.description.adults' : 'category.description';
-const categoryMetaDescKey = `category.${categoryKey}.metaDesc`;
-const categoryMetaDesc = ti(categoryMetaDescKey, locale, {});
-const hasMetaDesc = categoryMetaDesc !== categoryMetaDescKey;
-const pageDescription = pillar
-  ? pillar.intro.slice(0, 160).replace(/\s+\S*$/, '…')
-  : hasMetaDesc
-  ? categoryMetaDesc
-  : ti(descriptionKey, locale, { label: label.toLowerCase() });
+const pageDescription = `${page.total} free ${label.toLowerCase()} coloring pages to download as PDF and print. Choose a drawing for your next creative activity.`;
 const seoText = ti(`category.${categoryKey}.seoText`, locale, {});
 const hasSeoText = seoText !== `category.${categoryKey}.seoText`;
 const canonical = Astro.url.href;
 const siteUrl = Astro.site?.href.replace(/\/$/, '') ?? 'https://colotopia.com';
-const altUrl = page.currentPage === 1
+const translatedCount = (await getPublishableColoriages('fr')).filter(c => c.data.category === categoryKey).length;
+const altUrl = page.currentPage > Math.ceil(translatedCount / 24) ? undefined : page.currentPage === 1
   ? `${siteUrl}/fr/${categoryKey}/`
   : `${siteUrl}/fr/${categoryKey}/${page.currentPage}/`;
 const firstImage = page.data[0]?.data.image;

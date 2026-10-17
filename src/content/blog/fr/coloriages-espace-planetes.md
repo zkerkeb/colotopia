@@ -10,7 +10,6 @@ seoTitle: "Coloriage espace et planètes à imprimer gratuit"
 seoDescription: "Coloriages de l'espace gratuits : planètes, fusées, astronautes et système solaire. Dessins éducatifs STEM à imprimer pour enfants sur Colotopia."
 ---
 
-# Coloriages de l'espace et des planètes : un voyage cosmique en couleurs
 
 Le **coloriage espace gratuit** fait partie des thèmes les plus captivants pour les enfants de tous âges. Fusées, astronautes, planètes mystérieuses, étoiles scintillantes : l'univers spatial nourrit l'imagination comme aucun autre sujet. Avec un **coloriage planète à imprimer**, chaque enfant devient un explorateur cosmique, crayon en main, prêt à donner des couleurs à l'infini.
 
@@ -26,7 +25,7 @@ Chaque planète de notre système solaire possède des caractéristiques visuell
 
 **Mars**, la planète rouge, est souvent la favorite des enfants. Sa couleur caractéristique et ses calottes polaires blanches créent un contraste saisissant. Notre [coloriage de Mars](/fr/coloriage/espace-mars/) propose un dessin détaillé qui inclut ses célèbres volcans et canyons.
 
-**Jupiter**, la géante gazeuse, est un terrain de jeu chromatique exceptionnel. Ses bandes nuageuses horizontales alternant orange, blanc et brun offrent un exercice de coloriage avancé. La Grande Tache Rouge, une tempête qui dure depuis des siècles, ajoute un détail fascinant au dessin. Découvrez notre [Jupiter majestueuse](/fr/coloriage/espace-jupiter/) pour un défi de coloriage stimulant.
+**Jupiter**, la géante gazeuse, est un terrain de jeu chromatique exceptionnel. Ses bandes nuageuses horizontales alternant orange, blanc et brun offrent un exercice de coloriage avancé. La Grande Tache Rouge, une tempête qui dure depuis des siècles, ajoute un détail fascinant au dessin. Découvrez notre Jupiter majestueuse pour un défi de coloriage stimulant.
 
 **Saturne** et ses anneaux iconiques sont probablement la planète la plus spectaculaire à colorier. Les anneaux, composés de milliards de particules de glace, peuvent être coloriés dans des tons pastel subtils, tandis que la planète elle-même arbore des teintes dorées et beiges. Le [Saturne avec ses anneaux](/fr/coloriage/espace-saturne/) est l'un de nos dessins les plus téléchargés.
 

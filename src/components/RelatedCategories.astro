@@ -1,7 +1,9 @@
 ---
 import type { Locale, Category } from '../lib/i18n';
 import { getCategoryLabel, getCategorySlug, getLocalePath, categoryIcons, categoryColors } from '../lib/i18n';
-import { cdnCategoryIcon } from '../lib/cdn';
+import { categoryArtwork } from '../lib/cdn';
+import { getPublishableColoriages } from '../lib/coloriages';
+import { canonicalCategory } from '../lib/catalog';
 import CategoryCard from './CategoryCard.astro';
 
 interface Props {
@@ -10,26 +12,30 @@ interface Props {
 }
 
 const { locale, categories } = Astro.props;
+const catalog = await getPublishableColoriages(locale);
+const counts = new Map<string, number>();
+for (const c of catalog) counts.set(c.data.category, (counts.get(c.data.category) ?? 0) + 1);
+const visibleCategories = [...new Set(categories.map(c => canonicalCategory(c) as Category))].filter(c => counts.has(c));
 
 const title = locale === 'fr'
   ? 'Catégories similaires'
   : 'Related Categories';
 ---
 
-{categories.length > 0 && (
+{visibleCategories.length > 0 && (
   <section class="related-categories">
     <h2>{title}</h2>
     <div class="related-grid">
-      {categories.map((cat) => (
+      {visibleCategories.map((cat) => (
         <CategoryCard
           name={getCategoryLabel(cat, locale)}
           slug={getCategorySlug(cat, locale)}
           emoji={categoryIcons[cat]}
-          count={0}
+          count={counts.get(cat)!}
           color={categoryColors[cat]?.light ?? '#f0ebff'}
           href={getLocalePath(locale, `/${getCategorySlug(cat, locale)}`)}
           locale={locale}
-          image={cdnCategoryIcon(cat)}
+          image={categoryArtwork(cat)}
         />
       ))}
     </div>

@@ -1,7 +1,7 @@
 ---
 interface Props {
   name: string;
-  slug: string;
+  slug?: string;
   emoji: string;
   count: number;
   color: string;
@@ -23,7 +23,7 @@ const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring 
 >
   {image
     ? <>
-        <img class="category-cover" src={image} alt={name} loading="lazy" />
+        <img class="category-cover" src={image} alt={name} loading="lazy" decoding="async" width="300" height="300" />
         <span class="category-image-label">
           <span class="category-image-label__text">{name}</span>
         </span>

@@ -1,4 +1,5 @@
 ---
+import { getPublishableColoriages } from '../lib/coloriages';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CategoryCard from '../components/CategoryCard.astro';
 import SearchBar from '../components/SearchBar.astro';
@@ -8,6 +9,7 @@ import { getCategoryLabel, getCategorySlug, getLocalePath, categoryColors, categ
 const url = Astro.url.pathname;
 const locale: Locale = url.startsWith('/en') ? 'en' : 'fr';
 
+const catalog = await getPublishableColoriages(locale);
 const popularCategories = [
   { key: 'animaux' as const, count: 45 },
   { key: 'dinosaures' as const, count: 32 },

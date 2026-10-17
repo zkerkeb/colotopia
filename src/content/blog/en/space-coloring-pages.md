@@ -10,7 +10,6 @@ seoTitle: "Space and Planet Coloring Pages | Free Printable"
 seoDescription: "Free space and planet coloring pages for kids and adults. Rockets, astronauts, the solar system, and galaxies to color and print."
 ---
 
-# Space and Planet Coloring Pages
 
 Space and planet coloring pages ignite the imagination in ways that few other themes can match. The vast universe, with its swirling galaxies, colorful planets, soaring rockets, and courageous astronauts, provides endless creative inspiration for colorists of every age. Whether your child dreams of walking on Mars or you simply find the cosmos endlessly fascinating, space coloring pages offer a creative journey through the final frontier -- no spacesuit required.
 

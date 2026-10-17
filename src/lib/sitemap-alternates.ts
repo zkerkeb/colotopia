@@ -66,7 +66,8 @@ export function getAlternateUrl(url: string): { locale: string; altLocale: strin
     const colorMatch = rest.match(/^coloriage\/([^/]+)\/?$/);
     if (colorMatch) {
       const frSlug = colorMatch[1];
-      const enSlug = _frToEnSlugs?.[frSlug] ?? frSlug;
+      const enSlug = _frToEnSlugs?.[frSlug];
+      if (!enSlug) return null;
       return { locale: 'fr', altLocale: 'en', altUrl: `${SITE}/en/coloring/${enSlug}/` };
     }
 
@@ -97,7 +98,7 @@ export function getAlternateUrl(url: string): { locale: string; altLocale: strin
     }
 
     // Home + pagination: /fr/ or /fr/{page}/
-    return { locale: 'fr', altLocale: 'en', altUrl: `${SITE}/en/${rest}` };
+    return /^(\d+\/)?$/.test(rest) ? { locale: 'fr', altLocale: 'en', altUrl: `${SITE}/en/${rest}` } : null;
   }
 
   // EN pages
@@ -108,7 +109,8 @@ export function getAlternateUrl(url: string): { locale: string; altLocale: strin
     const colorMatch = rest.match(/^coloring\/([^/]+)\/?$/);
     if (colorMatch) {
       const enSlug = colorMatch[1];
-      const frSlug = _enToFrSlugs?.[enSlug] ?? enSlug;
+      const frSlug = _enToFrSlugs?.[enSlug];
+      if (!frSlug) return null;
       return { locale: 'en', altLocale: 'fr', altUrl: `${SITE}/fr/coloriage/${frSlug}/` };
     }
 
@@ -139,7 +141,7 @@ export function getAlternateUrl(url: string): { locale: string; altLocale: strin
     }
 
     // Home + pagination: /en/ or /en/{page}/
-    return { locale: 'en', altLocale: 'fr', altUrl: `${SITE}/fr/${rest}` };
+    return /^(\d+\/)?$/.test(rest) ? { locale: 'en', altLocale: 'fr', altUrl: `${SITE}/fr/${rest}` } : null;
   }
 
   // Root URL

@@ -10,7 +10,6 @@ seoTitle: "Coloriage kawaii à imprimer | Dessins mignons"
 seoDescription: "Découvrez les coloriages kawaii à imprimer : origines, tendances et techniques pour colorier des dessins kawaii mignons. Collection gratuite sur Colotopia."
 ---
 
-# Coloriages kawaii : la tendance mignonne qui conquiert petits et grands
 
 Le **coloriage kawaii** est devenu un véritable phénomène créatif en France et dans le monde. Inspiré de la culture japonaise, ce style de **dessin kawaii à colorier** séduit par ses formes rondes, ses expressions adorables et son univers joyeux qui met instantanément de bonne humeur. Sur Colotopia, notre collection de [coloriages kawaii](/fr/kawaii/) ne cesse de s'enrichir pour répondre à cet engouement grandissant.
 

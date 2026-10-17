@@ -34,19 +34,19 @@ Un dessin trop détaillé décourage un enfant de 2 ou 3 ans. Nos coloriages pou
 
 ### Coloriages pour les 2 ans
 
-A deux ans, l'enfant est dans la phase du gribouillage contrôlé. Il commence à comprendre qu'il peut laisser une trace sur le papier et expérimente avec enthousiasme. Les meilleurs coloriages à cet âge sont extrêmement simples : une [grosse pomme](/fr/coloriage/bold-pomme/), un ballon, un soleil, une étoile. Ces formes basiques permettent à l'enfant de s'exercer sans se sentir dépassé.
+A deux ans, l'enfant est dans la phase du gribouillage contrôlé. Il commence à comprendre qu'il peut laisser une trace sur le papier et expérimente avec enthousiasme. Les meilleurs coloriages à cet âge sont extrêmement simples : une [Fruits gros traits](/fr/coloriage/bold-et-facile-fruits/), un ballon, un soleil, une étoile. Ces formes basiques permettent à l'enfant de s'exercer sans se sentir dépassé.
 
 Les crayons de cire épais ou les gros feutres lavables sont les outils les plus adaptés à cet âge. L'enfant les tient à pleine main et peut produire des couleurs vives même avec une pression légère. Ne vous attendez pas à ce qu'il reste dans les contours : à deux ans, l'objectif est le plaisir du geste.
 
 ### Coloriages pour les 3 ans
 
-A trois ans, l'enfant commence à maîtriser la prise du crayon et à contrôler davantage ses gestes. Il peut commencer à respecter les contours, au moins partiellement. C'est l'âge idéal pour introduire des [coloriages d'animaux simples](/fr/coloriage/animaux-chat-simple/) : un chat avec de grandes oreilles, un poisson rond, un oiseau stylisé.
+A trois ans, l'enfant commence à maîtriser la prise du crayon et à contrôler davantage ses gestes. Il peut commencer à respecter les contours, au moins partiellement. C'est l'âge idéal pour introduire des [Chat gros traits](/fr/coloriage/bold-et-facile-chat/) : un chat avec de grandes oreilles, un poisson rond, un oiseau stylisé.
 
 Les animaux de la [ferme](/fr/ferme/) sont particulièrement adaptés à cet âge. La vache, le cochon, le mouton et la poule sont des animaux que l'enfant connaît par les livres et les comptines. Les colorier renforce le lien entre l'image et le mot, contribuant au développement du langage.
 
 ### Coloriages pour les 4 ans
 
-A quatre ans, les progrès en motricité fine sont significatifs. L'enfant peut choisir ses couleurs avec intention, rester plus longtemps dans les contours et commencer à colorier de manière plus uniforme. Les dessins peuvent comporter plus de détails : un [animal dans un décor simple](/fr/coloriage/animaux-chien-jardin/), un personnage avec quelques accessoires, un véhicule avec des roues et des fenêtres.
+A quatre ans, les progrès en motricité fine sont significatifs. L'enfant peut choisir ses couleurs avec intention, rester plus longtemps dans les contours et commencer à colorier de manière plus uniforme. Les dessins peuvent comporter plus de détails : un [Chien joyeux](/fr/coloriage/animaux-chien/), un personnage avec quelques accessoires, un véhicule avec des roues et des fenêtres.
 
 C'est aussi l'âge où les préférences thématiques s'affirment. Certains enfants se passionnent pour les dinosaures, d'autres pour les princesses, d'autres encore pour les véhicules. Suivez les intérêts de votre enfant pour maintenir sa motivation et son plaisir.
 

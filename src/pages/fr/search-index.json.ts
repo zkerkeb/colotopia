@@ -1,3 +1,4 @@
+import { toThumb } from '../../lib/cdn';
 import { getPublishableColoriages } from '../../lib/coloriages';
 import { getCategoryLabel } from '../../lib/i18n';
 import type { APIRoute } from 'astro';
@@ -8,9 +9,11 @@ export const GET: APIRoute = async () => {
     title: c.data.title,
     slug: c.data.slug,
     tags: c.data.tags,
+    audience: c.data.audience,
+    thumbnail: toThumb(c.data.image),
     category: c.data.category,
     categoryLabel: getCategoryLabel(c.data.category, 'fr'),
-    url: `/fr/coloriage/${c.data.slug}`,
+    url: `/fr/coloriage/${c.data.slug}/`,
   }));
   return new Response(JSON.stringify(index), {
     headers: { 'Content-Type': 'application/json' },

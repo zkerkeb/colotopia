@@ -20,8 +20,8 @@ const posts = page.data;
 const currentPage = page.currentPage;
 const lastPage = page.lastPage;
 
-const prevUrl = page.url.prev ? `/fr/blog${page.url.prev === '/1' || page.url.prev === '/' ? '' : `/${currentPage - 1}`}` : undefined;
-const nextUrl = page.url.next ? `/fr/blog/${currentPage + 1}` : undefined;
+const prevUrl = page.url.prev;
+const nextUrl = page.url.next;
 
 const breadcrumbs = [
   { label: t('nav.home', locale), href: `/${locale}` },
@@ -41,7 +41,7 @@ const altUrl = currentPage === 1 ? 'https://colotopia.com/en/blog/' : `https://c
   prevUrl={prevUrl}
   nextUrl={nextUrl}
 >
-  <Breadcrumb items={breadcrumbs} />
+  <Breadcrumb locale={locale} items={breadcrumbs} />
 
   <section class="blog-header">
     <h1>{t('blog.title', locale)}</h1>

@@ -10,7 +10,6 @@ seoDescription: "Free princess and knight coloring pages for kids. Castles, drag
 tags: ["princesses", "knights", "fairy-tales", "article-8"]
 ---
 
-# Princess and Knight Coloring Pages for Kids
 
 Princess and knight coloring pages bring the magic of fairy tales right to your kitchen table. Children have always been captivated by stories of brave knights, elegant princesses, towering castles, and mythical creatures. Coloring these scenes lets kids step into those stories and become part of the adventure, choosing every color and detail themselves.
 
@@ -34,7 +33,7 @@ Our princess designs range from simple silhouettes for young children to highly 
 
 **Princess with crown.** Our classic [princess coloring page](/en/coloring/princesses-knights-princess/) features a princess in a flowing gown with a detailed crown and long, wavy hair. The dress offers large sections perfect for experimenting with color, while the crown and jewelry add fine detail work. This is our most-printed princess page and a wonderful starting point.
 
-**Castle tower princess.** Inspired by classic fairy tales, our [princess tower page](/en/coloring/princesses-knights-tower/) shows a princess gazing from a castle window surrounded by climbing roses and ivy. The architectural details of the stonework give older children a satisfying challenge.
+**Castle tower princess.** Inspired by classic fairy tales, our [Grand Castle](/en/coloring/princesses-knights-castle/) shows a princess gazing from a castle window surrounded by climbing roses and ivy. The architectural details of the stonework give older children a satisfying challenge.
 
 **Princess and unicorn.** Combining two of children's favorite subjects, our [princess unicorn page](/en/coloring/princesses-knights-unicorn/) features a princess riding a magnificent unicorn through a meadow of wildflowers. For more unicorn designs, explore our dedicated [unicorns collection](/en/unicorns/).
 
@@ -52,7 +51,7 @@ Knights offer a different kind of coloring experience -- bold lines, strong shap
 
 Princess and knight coloring naturally extends into related themes across our collection.
 
-**Fairy tales.** Our [fairy tales collection](/en/fairy-tales/) features pages inspired by classic stories -- enchanted forests, magical creatures, and storybook settings. A child who enjoys coloring princesses and knights will find plenty of complementary pages here. Try our [fairy tales enchanted forest page](/en/coloring/fairy-tales-forest/) for a magical woodland setting.
+**Fairy tales.** Our [fairy tales collection](/en/fairy-tales/) features pages inspired by classic stories -- enchanted forests, magical creatures, and storybook settings. A child who enjoys coloring princesses and knights will find plenty of complementary pages here. Try our [Forest Fairy](/en/coloring/tales-forest-fairy/) for a magical woodland setting.
 
 **Unicorns.** The mythical unicorn appears frequently in princess stories and fairy tales. Our [unicorns collection](/en/unicorns/) offers standalone unicorn designs ranging from simple and cute to elaborate and detailed. A [unicorn rainbow page](/en/coloring/unicorns-rainbow/) makes a perfect companion to any princess coloring session.
 

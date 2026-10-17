@@ -1,4 +1,5 @@
 ---
+import { jsonLd } from '../lib/seo';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Toast from '../components/Toast.astro';
@@ -66,7 +67,7 @@ const websiteSchema = {
 };
 
 const siteTitle = t('site.title', locale);
-const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+const pageTitle = title ? `${title.replace(/\s*\|.*$/, '')} | Colotopia` : siteTitle;
 const pageDescription = description || t('site.description', locale);
 const altLocale = locale === 'fr' ? 'en' : 'fr';
 const adsenseId = import.meta.env.PUBLIC_ADSENSE_PUBLISHER_ID;
@@ -88,14 +89,14 @@ const defaultUrl = locale === 'fr' ? (canonical ?? Astro.url.href) : altUrl;
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;500;600;700;800&display=swap" /></noscript>
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
-    {noindex ? <meta name="robots" content="noindex, nofollow" /> : <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />}
+    {noindex ? <meta name="robots" content="noindex, follow" /> : <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     {canonical && <link rel="canonical" href={canonical} />}
     {prevUrl && <link rel="prev" href={prevUrl} />}
     {nextUrl && <link rel="next" href={nextUrl} />}
-    <link rel="alternate" hreflang={locale} href={canonical ?? Astro.url.href} />
-    {altUrl && <link rel="alternate" hreflang={altLocale} href={altUrl} />}
-    {defaultUrl && <link rel="alternate" hreflang="x-default" href={defaultUrl} />}
+    {!noindex && <link rel="alternate" hreflang={locale} href={canonical ?? Astro.url.href} />}
+    {!noindex && altUrl && <link rel="alternate" hreflang={altLocale} href={altUrl} />}
+    {!noindex && defaultUrl && <link rel="alternate" hreflang="x-default" href={defaultUrl} />}
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={ogUrl} />
     <meta property="og:title" content={pageTitle} />
@@ -111,9 +112,9 @@ const defaultUrl = locale === 'fr' ? (canonical ?? Astro.url.href) : altUrl;
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={pageDescription} />
     {ogImage && <meta name="twitter:image" content={ogImage} />}
-    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+    <script type="application/ld+json" set:html={jsonLd(websiteSchema)} />
     {structuredData && (
-      <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+      <script type="application/ld+json" set:html={jsonLd(structuredData)} />
     )}
     {/* Google Consent Mode v2 — default "denied" BEFORE any Google tag loads. */}
     {/* AdSense / Analytics scripts are loaded by CookieConsent.astro only after user opt-in. */}
@@ -147,7 +148,7 @@ const defaultUrl = locale === 'fr' ? (canonical ?? Astro.url.href) : altUrl;
     <a href="#main-content" class="skip-link">
       {locale === 'fr' ? 'Aller au contenu principal' : 'Skip to main content'}
     </a>
-    <Header locale={locale} />
+    <Header locale={locale} altUrl={altUrl} />
     <main id="main-content">
       <slot />
     </main>

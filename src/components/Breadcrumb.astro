@@ -1,4 +1,5 @@
 ---
+import { jsonLd } from '../lib/seo';
 import type { Locale } from '../lib/i18n';
 import { t, getCategoryLabel, getCategorySlug, getLocalePath } from '../lib/i18n';
 import type { Category } from '../lib/i18n';
@@ -11,25 +12,26 @@ interface BreadcrumbItem {
 interface Props {
   locale: Locale;
   category?: Category;
-  currentPage: string;
+  currentPage?: string;
+  items?: BreadcrumbItem[];
 }
 
-const { locale, category, currentPage } = Astro.props;
+const { locale, category, currentPage, items: suppliedItems } = Astro.props;
 
 const ariaLabel = locale === 'fr' ? 'Fil d\'Ariane' : 'Breadcrumb';
 
-const items: BreadcrumbItem[] = [
+const items: BreadcrumbItem[] = suppliedItems ? [...suppliedItems] : [
   { label: t('nav.home', locale), href: getLocalePath(locale) },
 ];
 
-if (category) {
+if (!suppliedItems && category) {
   items.push({
     label: getCategoryLabel(category, locale),
     href: getLocalePath(locale, `/${getCategorySlug(category, locale)}`),
   });
 }
 
-items.push({ label: currentPage });
+if (!suppliedItems && currentPage) items.push({ label: currentPage });
 
 const schemaItems = items.map((item, index) => ({
   '@type': 'ListItem',
@@ -60,7 +62,7 @@ const schemaItems = items.map((item, index) => ({
   </ol>
 </nav>
 
-<script type="application/ld+json" set:html={JSON.stringify({
+<script type="application/ld+json" set:html={jsonLd({
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: schemaItems,

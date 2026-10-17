@@ -10,7 +10,6 @@ seoTitle: "Top 20 Animal Coloring Pages to Print for Free"
 seoDescription: "Browse the top 20 animal coloring pages to print for free: cats, dolphins, dinosaurs, butterflies, and more. Download and print from Colotopia."
 ---
 
-# Top 20 Animal Coloring Pages to Print
 
 **Animal coloring pages** are the most searched category in the coloring world, and for good reason. Children are captivated by creatures of every kind, and adults enjoy the creative challenge of bringing wildlife to life with color. Whether you need a simple farm scene for a toddler or a detailed butterfly for a relaxing weekend project, these top 20 **printable animal coloring** pages cover every age and skill level.
 
@@ -36,7 +35,7 @@ Ocean creatures offer some of the most vibrant and imaginative coloring opportun
 
 **6. Dolphin** -- Graceful and universally loved, the [dolphin page](/en/coloring/sea-animals-dolphin/) features flowing lines and an ocean backdrop that invites beautiful blues and teals.
 
-**7. Sea Turtle** -- The shell pattern on our [sea turtle design](/en/coloring/sea-animals-turtle/) is a wonderful exercise in geometric coloring. Each shell section can be a different color or shade.
+**7. Sea Turtle** -- The shell pattern on our [Sea Turtle](/en/coloring/sea-animals-sea-turtle/) is a wonderful exercise in geometric coloring. Each shell section can be a different color or shade.
 
 **8. Octopus** -- Eight curling tentacles and a playful expression make the [octopus page](/en/coloring/sea-animals-octopus/) both fun and detailed, especially popular with children who love quirky creatures.
 
@@ -48,7 +47,7 @@ Ocean creatures offer some of the most vibrant and imaginative coloring opportun
 
 Farm animals are a fantastic starting point for very young colorists. The familiar shapes and friendly faces make them approachable and engaging. Visit our [farm animal collection](/en/farm/) for the complete range.
 
-**11. Horse** -- Elegant and dynamic, the [horse coloring page](/en/coloring/farm-horse/) is popular with older children and adults alike. The flowing mane and tail offer excellent shading practice.
+**11. Horse** -- Elegant and dynamic, the [Horse at the Stable](/en/coloring/farm-horse-stable/) is popular with older children and adults alike. The flowing mane and tail offer excellent shading practice.
 
 **12. Rooster** -- Vibrant plumage naturally calls for bold, bright colors. Our [rooster page](/en/coloring/farm-rooster/) is a feast of reds, oranges, greens, and blues.
 
@@ -62,15 +61,15 @@ Farm animals are a fantastic starting point for very young colorists. The famili
 
 These two themes deserve a special spotlight. They are perennial favorites with children and adults alike.
 
-**16. Playful kitten** -- From our [cats collection](/en/cats/), this [kitten page](/en/coloring/cats-kitten/) captures a curious cat mid-pounce. The expressive pose makes it a joy to color.
+**16. Playful kitten** -- From our [cats collection](/en/cats/), this [Playful Kitten](/en/coloring/cats-playing/) captures a curious cat mid-pounce. The expressive pose makes it a joy to color.
 
-**17. Persian cat** -- For adults who enjoy detailed work, our [Persian cat design](/en/coloring/cats-persian/) features luxurious fur that rewards patient, layered coloring.
+**17. Persian cat** -- For adults who enjoy detailed work, our [Persian Cat](/en/coloring/animals-persian-cat/) features luxurious fur that rewards patient, layered coloring.
 
 **18. Monarch butterfly** -- The iconic orange-and-black pattern of the [monarch butterfly page](/en/coloring/butterflies-monarch/) is both educational and beautiful. Find more in our [butterflies collection](/en/butterflies/).
 
-**19. Fantasy butterfly** -- This [decorative butterfly design](/en/coloring/butterflies-fantasy/) features ornate wing patterns that invite creative color experimentation with no rules.
+**19. Fantasy butterfly** -- This [Butterfly Wing Fairy](/en/coloring/butterflies-fairy/) features ornate wing patterns that invite creative color experimentation with no rules.
 
-**20. Cat with butterflies** -- Combining two beloved subjects, our [cat with butterflies page](/en/coloring/cats-butterflies/) is a charming scene that tells a story on the page.
+**20. Cat with butterflies** -- Combining two beloved subjects, our cat with butterflies page is a charming scene that tells a story on the page.
 
 ## Dinosaurs: A Timeless Favorite
 

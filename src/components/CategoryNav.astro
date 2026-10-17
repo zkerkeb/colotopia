@@ -41,10 +41,11 @@ const currentPath = Astro.url.pathname;
 </nav>
 
 <script>
+  import { track as trackEvent } from '../lib/analytics';
   document.querySelectorAll('.category-nav a').forEach((link) => {
     link.addEventListener('click', () => {
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'category_click', {
+      if (true) {
+        trackEvent('category_click', {
           category_name: (link as HTMLAnchorElement).textContent?.trim(),
           link_url: (link as HTMLAnchorElement).href,
           navigation_type: 'category_bar',

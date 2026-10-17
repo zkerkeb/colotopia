@@ -10,7 +10,6 @@ seoDescription: "Find the best coloring pages for toddlers and preschoolers ages
 tags: ["toddlers", "age-2-5", "easy", "article-10"]
 ---
 
-# Best Coloring Pages for Kids Ages 2-5
 
 Choosing the right coloring pages for kids ages 2-5 can make the difference between a frustrated toddler and a happy, engaged little artist. Young children need pages designed specifically for their developmental stage -- bold outlines, large shapes, and simple recognizable subjects. In this guide, we help you find the perfect coloring pages for your toddler or preschooler and share tips for making coloring time a success.
 
@@ -47,7 +46,7 @@ Some coloring themes work especially well for this age group:
 
 Animals are a universal favorite with toddlers. Farm animals like cows, pigs, and chickens are particularly appealing because many children encounter them in books, songs, and toys. Try our [farm coloring pages](/en/farm/) for a selection designed with young children in mind.
 
-A simple [cow coloring page](/en/coloring/farm-cow/) or [chicken coloring page](/en/coloring/farm-chicken/) gives toddlers a chance to practice their animal sounds while they color.
+A simple [cow coloring page](/en/coloring/farm-cow/) or [Hen and Chicks](/en/coloring/farm-hen/) gives toddlers a chance to practice their animal sounds while they color.
 
 ### Bold and Easy Designs
 
@@ -71,7 +70,7 @@ Making coloring time enjoyable for very young children takes a little planning. 
 
 5. **Display their work.** Hanging finished coloring pages on the refrigerator or a bulletin board shows children that their effort is valued. It also motivates them to create more.
 
-6. **Combine coloring with other activities.** After coloring a [fish coloring page](/en/coloring/sea-animals-fish/), read a book about fish. After coloring a farm scene, sing "Old MacDonald." These connections make the experience richer.
+6. **Combine coloring with other activities.** After coloring a [Clownfish](/en/coloring/sea-animals-clownfish/), read a book about fish. After coloring a farm scene, sing "Old MacDonald." These connections make the experience richer.
 
 ## Common Mistakes to Avoid
 

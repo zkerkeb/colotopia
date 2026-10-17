@@ -126,7 +126,9 @@ const privacyHref = getPrivacyPath(locale);
       try {
         var raw = localStorage.getItem(STORAGE_KEY);
         if (!raw) return null;
-        return JSON.parse(raw);
+        var prefs = JSON.parse(raw);
+        if (!prefs || typeof prefs.analytics !== 'boolean' || typeof prefs.ads !== 'boolean' || typeof prefs.ts !== 'number' || Date.now() - prefs.ts > 180 * 86400000) return null;
+        return prefs;
       } catch (_) { return null; }
     }
 
@@ -135,6 +137,9 @@ const privacyHref = getPrivacyPath(locale);
     }
 
     function applyConsent(prefs) {
+      var withdrawLoadedTags = (!prefs.analytics && document.querySelector('script[data-ga-loaded]')) || (!prefs.ads && document.querySelector('script[data-adsense-loaded]'));
+      window.colotopiaAnalyticsReady = false;
+      if (gaId) window['ga-disable-' + gaId] = !prefs.analytics;
       if (typeof window.gtag !== 'function') {
         window.dataLayer = window.dataLayer || [];
         window.gtag = function () { window.dataLayer.push(arguments); };
@@ -166,6 +171,10 @@ const privacyHref = getPrivacyPath(locale);
         window.gtag('js', new Date());
         window.gtag('config', gaId);
       }
+      window.colotopiaAnalyticsReady = !!(prefs.analytics && gaId);
+      window.dispatchEvent(new Event('colotopia:consent'));
+      // Reload after withdrawal so previously executed third-party tags stop too.
+      if (withdrawLoadedTags) window.location.reload();
     }
 
     function showBanner() {
@@ -180,19 +189,24 @@ const privacyHref = getPrivacyPath(locale);
         banner.classList.remove('is-visible');
       }
     }
+    var previousFocus;
     function showModal() {
+      previousFocus = document.activeElement;
       var current = getStored() || { analytics: false, ads: false };
       if (analyticsInput) analyticsInput.checked = !!current.analytics;
       if (adsInput) adsInput.checked = !!current.ads;
       if (modal) {
         modal.setAttribute('aria-hidden', 'false');
         modal.classList.add('is-visible');
+        modal.querySelector('button, input')?.focus();
       }
     }
     function hideModal() {
       if (modal) {
         modal.setAttribute('aria-hidden', 'true');
         modal.classList.remove('is-visible');
+        previousFocus?.focus();
+        if (!getStored()) showBanner();
       }
     }
 
@@ -233,6 +247,15 @@ const privacyHref = getPrivacyPath(locale);
       });
     });
 
+    modal?.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') { hideModal(); return; }
+      if (event.key !== 'Tab') return;
+      var controls = Array.from(modal.querySelectorAll('button, input, a[href]')).filter(function(el) { return !el.disabled; });
+      var first = controls[0], last = controls[controls.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+    });
+
     // Exposer une API pour rouvrir depuis le footer
     window.colotopiaConsent = {
       open: function () { showModal(); },
@@ -263,7 +286,8 @@ const privacyHref = getPrivacyPath(locale);
     transition: transform 0.3s ease-out;
     padding: 1rem;
   }
-  .cc-banner.is-visible { transform: translateY(0); }
+  .cc-banner { visibility: hidden; }
+  .cc-banner.is-visible { transform: translateY(0); visibility: visible; }
 
   .cc-banner-inner {
     max-width: 1200px;

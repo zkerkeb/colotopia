@@ -1,7 +1,7 @@
 ---
 import type { Locale } from '../lib/i18n';
 import { kidsCategories, adultCategories, getCategoryLabel, getCategorySlug, getLocalePath, categoryIcons, categoryColors } from '../lib/i18n';
-import { cdnCategoryIcon } from '../lib/cdn';
+import { categoryArtwork } from '../lib/cdn';
 import CategoryCard from './CategoryCard.astro';
 
 interface Props {
@@ -36,7 +36,7 @@ const sectionTitle = locale === 'fr' ? 'Explorer les catégories' : 'Explore cat
           color={categoryColors[cat]?.light ?? '#f0ebff'}
           href={getLocalePath(locale, `/${getCategorySlug(cat, locale)}`)}
           locale={locale}
-          image={cdnCategoryIcon(cat)}
+          image={categoryArtwork(cat)}
         />
       ))}
     </div>
@@ -58,7 +58,7 @@ const sectionTitle = locale === 'fr' ? 'Explorer les catégories' : 'Explore cat
           color={categoryColors[cat]?.light ?? '#f0ebff'}
           href={getLocalePath(locale, `/${getCategorySlug(cat, locale)}`)}
           locale={locale}
-          image={cdnCategoryIcon(cat)}
+          image={categoryArtwork(cat)}
         />
       ))}
     </div>

@@ -26,7 +26,7 @@ Dans la vie quotidienne, la motricité fine intervient dans une multitude de ges
 
 Lorsqu'un enfant colorie, il mobilise simultanément plusieurs compétences motrices. La prise en pince du crayon fait travailler le pouce, l'index et le majeur dans un mouvement de précision. La pression exercée sur le crayon demande un contrôle musculaire fin. Le mouvement du poignet et de l'avant-bras permet de remplir les surfaces tout en restant dans les contours. Enfin, la coordination oeil-main oblige le cerveau à synchroniser ce que l'oeil voit avec ce que la main exécute.
 
-C'est cette combinaison de compétences qui fait du coloriage un exercice si complet. Un simple [coloriage d'animal](/fr/coloriage/animaux-chat-simple/) peut solliciter toutes ces aptitudes en même temps, de manière naturelle et ludique.
+C'est cette combinaison de compétences qui fait du coloriage un exercice si complet. Un simple [Chat gros traits](/fr/coloriage/bold-et-facile-chat/) peut solliciter toutes ces aptitudes en même temps, de manière naturelle et ludique.
 
 ## Le développement moteur par âge et les coloriages adaptés
 
@@ -36,17 +36,17 @@ A cet âge, l'enfant tient le crayon à pleine main et réalise des mouvements a
 
 ### De 2 à 3 ans : la découverte des contours
 
-L'enfant commence à affiner sa prise et à réaliser des mouvements plus contrôlés. C'est le moment d'introduire des coloriages très simples avec des [formes géométriques basiques](/fr/coloriage/bold-cercle-etoile/) et des contours très épais. Ne vous inquiétez pas si le crayon dépasse largement : c'est parfaitement normal à cet âge. L'enfant apprend à reconnaître les limites du dessin, même s'il ne peut pas encore les respecter.
+L'enfant commence à affiner sa prise et à réaliser des mouvements plus contrôlés. C'est le moment d'introduire des coloriages très simples avec des [Grande etoile](/fr/coloriage/bold-et-facile-etoile/) et des contours très épais. Ne vous inquiétez pas si le crayon dépasse largement : c'est parfaitement normal à cet âge. L'enfant apprend à reconnaître les limites du dessin, même s'il ne peut pas encore les respecter.
 
 Nos [coloriages faciles](/fr/bold-et-facile/) sont conçus avec des lignes épaisses et des zones de coloriage généreuses, parfaitement adaptés à cette tranche d'âge.
 
 ### De 3 à 4 ans : le contrôle s'affine
 
-La prise du crayon évolue vers une prise tripode (trois doigts). L'enfant commence à rester davantage dans les contours et à choisir ses couleurs avec intention. C'est l'âge idéal pour introduire des coloriages d'[animaux simples](/fr/coloriage/animaux-lapin-facile/) : un chat, un chien, un lapin. Ces formes familières motivent l'enfant tout en lui offrant un défi moteur adapté.
+La prise du crayon évolue vers une prise tripode (trois doigts). L'enfant commence à rester davantage dans les contours et à choisir ses couleurs avec intention. C'est l'âge idéal pour introduire des coloriages d'[Lapin gros traits](/fr/coloriage/bold-et-facile-lapin/) : un chat, un chien, un lapin. Ces formes familières motivent l'enfant tout en lui offrant un défi moteur adapté.
 
 ### De 4 à 6 ans : vers la précision
 
-L'enfant maîtrise de mieux en mieux le crayon. Il peut colorier des zones plus petites, respecter les contours avec plus de régularité et même commencer à faire des hachures ou des dégradés. Les coloriages peuvent devenir plus détaillés, avec des scènes complètes comme des [animaux dans leur environnement](/fr/coloriage/animaux-foret-scene/) ou des paysages simples.
+L'enfant maîtrise de mieux en mieux le crayon. Il peut colorier des zones plus petites, respecter les contours avec plus de régularité et même commencer à faire des hachures ou des dégradés. Les coloriages peuvent devenir plus détaillés, avec des scènes complètes comme des animaux dans leur environnement ou des paysages simples.
 
 ### A partir de 6 ans : la maîtrise
 

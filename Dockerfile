@@ -1,7 +1,7 @@
-FROM node:22-alpine AS build
+FROM node:24-alpine AS build
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci --omit=dev
+RUN npm ci
 COPY . .
 ARG PUBLIC_GA_MEASUREMENT_ID=G-3LMQNYBWM9
 ARG PUBLIC_ADSENSE_PUBLISHER_ID=ca-pub-1257217558521249

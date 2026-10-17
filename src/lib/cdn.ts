@@ -1,3 +1,4 @@
+import legacyImageAliases from '../data/legacy-image-aliases.json';
 /**
  * CDN URL helpers for Cloudflare R2.
  * Central place to build image URLs — used by components, pages and the API.
@@ -27,7 +28,12 @@ export function cdnThumb(key: string): string {
 
 /** Category banner */
 export function cdnBanner(slug: string): string {
-  return `${CDN_BASE}/banners/${slug}.png`;
+  return `/images/optimized/banners/${slug}.webp`;
+}
+
+/** Small local category artwork for website cards. */
+export function categoryArtwork(slug: string): string {
+  return `/images/optimized/categories/${slug}.webp`;
 }
 
 /** Category icon */
@@ -55,9 +61,11 @@ function normalizeColoringKey(input: string): string | null {
   if (!value) return null;
   if (/^https?:\/\//.test(value) && !value.startsWith(CDN_BASE)) return null;
 
-  return value
+  const key = value
     .replace(CDN_BASE, '')
     .replace(/^\/+/, '')
     .replace(/^(images\/coloriages|coloriages\/thumbs|coloriages)\//, '')
     .replace(/\.(png|webp|jpe?g)$/i, '');
+  // Old EN imports used translated slugs as image keys; the shared asset is FR.
+  return (legacyImageAliases as Record<string, string>)[key] ?? key;
 }

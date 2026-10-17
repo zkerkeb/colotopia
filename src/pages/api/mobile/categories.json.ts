@@ -1,3 +1,4 @@
+import { readFile } from 'node:fs/promises';
 /**
  * Mobile API endpoint — returns all categories with icons.
  *
@@ -12,7 +13,10 @@ import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = async () => {
   // Get categories with counts
-  const rows = await db
+  // Preserve the API contract; local builds may use an explicit read-only snapshot.
+  const rows: { slug: string; nameFr: string; nameEn: string; iconPath: string | null; count: number }[] = process.env.COLORING_SNAPSHOT
+    ? JSON.parse(await readFile(process.env.COLORING_SNAPSHOT, 'utf8')).categories
+    : await db
     .select({
       slug: categories.slug,
       nameFr: categories.nameFr,

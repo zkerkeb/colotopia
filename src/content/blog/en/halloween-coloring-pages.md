@@ -48,7 +48,7 @@ More detailed scenes with multiple elements. A witch flying across a full moon, 
 
 ### Tweens and Adults
 
-Detailed illustrations with cross-hatching shadows, intricate patterns, and dramatic compositions. Halloween mandalas featuring skulls and roses, gothic architecture in fine detail, or Day of the Dead-inspired designs with elaborate floral patterns. Check out our [anti-stress coloring](/en/anti-stress/) section for adult-focused Halloween designs.
+Detailed illustrations with cross-hatching shadows, intricate patterns, and dramatic compositions. Halloween mandalas featuring skulls and roses, gothic architecture in fine detail, or Day of the Dead-inspired designs with elaborate floral patterns. Check out our [anti-stress coloring](/en/stress-relief/) section for adult-focused Halloween designs.
 
 ## Techniques for Stunning Halloween Coloring
 

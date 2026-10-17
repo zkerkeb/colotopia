@@ -26,13 +26,13 @@ Le lapin de Pâques est aussi une excellente occasion de parler des vrais lapins
 
 ### Les oeufs de Pâques décorés
 
-Colorier des oeufs de Pâques est une tradition en soi. Nos [dessins d'oeufs de Pâques](/fr/coloriage/paques-oeufs-decores/) proposent des motifs variés : rayures, pois, fleurs, motifs géométriques et même des scènes miniatures. C'est l'occasion parfaite pour les enfants d'expérimenter avec les couleurs et de laisser libre cours à leur imagination.
+Colorier des oeufs de Pâques est une tradition en soi. Nos [Oeuf de Paques decore](/fr/coloriage/paques-oeuf-decore/) proposent des motifs variés : rayures, pois, fleurs, motifs géométriques et même des scènes miniatures. C'est l'occasion parfaite pour les enfants d'expérimenter avec les couleurs et de laisser libre cours à leur imagination.
 
 Pour aller plus loin dans la décoration, vous pouvez découper les oeufs coloriés et les utiliser comme éléments de décoration pour la table de Pâques ou les coller sur une guirlande à suspendre dans la maison.
 
 ### Les poussins et les cloches
 
-Les poussins sortant de leur coquille sont un classique des coloriages de Pâques. Nos [dessins de poussins de Pâques](/fr/coloriage/paques-poussin/) ravissent les tout-petits avec leurs formes simples et leurs expressions adorables. Les cloches de Pâques, tradition bien française, sont également présentes dans notre collection avec des modèles décorés de rubans et de fleurs.
+Les poussins sortant de leur coquille sont un classique des coloriages de Pâques. Nos [Poussin de Pâques au jardin](/fr/coloriage/paques-poussin-jardin/) ravissent les tout-petits avec leurs formes simples et leurs expressions adorables. Les cloches de Pâques, tradition bien française, sont également présentes dans notre collection avec des modèles décorés de rubans et de fleurs.
 
 ## Conseils pour réussir ses coloriages de Pâques
 
@@ -50,7 +50,7 @@ Transformez la séance de coloriage en véritable moment festif. Mettez une musi
 
 ## Des coloriages de Pâques pour tous les âges
 
-Pour les enfants de 2 à 4 ans, privilégiez nos dessins aux contours épais et aux grandes zones de coloriage. Un [lapin simple](/fr/coloriage/paques-lapin-simple/) ou un [gros oeuf de Pâques](/fr/coloriage/paques-oeuf-geant/) seront parfaits pour leurs petites mains encore hésitantes.
+Pour les enfants de 2 à 4 ans, privilégiez nos dessins aux contours épais et aux grandes zones de coloriage. Un [Famille de lapins de Pâques](/fr/coloriage/paques-lapin-famille/) ou un [Oeuf de Pâques mandala](/fr/coloriage/paques-oeuf-mandala/) seront parfaits pour leurs petites mains encore hésitantes.
 
 Les enfants de 5 à 8 ans pourront s'attaquer à des dessins plus complexes avec davantage de détails. Nos scènes de chasse aux oeufs dans le jardin ou nos paniers de Pâques garnis offrent un défi adapté à leur niveau.
 

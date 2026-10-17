@@ -22,10 +22,10 @@ const siteUrl = Astro.site?.href.replace(/\/$/, '') ?? 'https://colotopia.com';
 const canonicalUrl = `${siteUrl}/fr/coloriage/${slug}/`;
 const altUrl = enSlug ? `${siteUrl}/en/coloring/${enSlug}/` : undefined;
 
-const pageTitle = seoTitle ?? `Coloriage ${title} a imprimer gratuitement | Coloriages`;
+const pageTitle = seoTitle ?? `Coloriage ${title} à imprimer`;
 const pageDescription =
   seoDescription ??
-  `Télécharge et imprime gratuitement ce coloriage de ${title}. Format A4, haute qualité, parfait pour les enfants.`;
+  `Télécharge et imprime gratuitement ce coloriage de ${title}. Format A4, haute qualité, à colorier selon vos envies.`;
 
 const allFr = await getPublishableColoriages('fr');
 const related = allFr

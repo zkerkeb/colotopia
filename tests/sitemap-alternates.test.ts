@@ -1,6 +1,8 @@
-import { describe, it, expect, beforeAll } from 'vitest';
-import { getAlternateUrl } from '../src/lib/sitemap-alternates';
+import { describe, it, expect, beforeAll, vi } from 'vitest';
+import { getAlternateUrl, initSlugMaps } from '../src/lib/sitemap-alternates';
 
+vi.mock('../src/lib/coloriages', () => ({ buildSlugMap: async () => ({ frToEn: { 'ferme-cochon': 'farm-pig' }, enToFr: { 'farm-pig': 'ferme-cochon' } }) }));
+beforeAll(initSlugMaps);
 const SITE = 'https://colotopia.com';
 
 // getAlternateUrl loads slug maps from disk on first call — that's fine, the
@@ -161,12 +163,12 @@ describe('getAlternateUrl — category coverage', () => {
     ['mosaiques', 'mosaics'],
     ['abstrait', 'abstract'],
     ['paysages', 'landscapes'],
-    ['fees', 'fairies-2'],
+    ['fee', 'fairies'],
     ['sirenes', 'mermaids'],
     ['printemps', 'spring'],
     ['ete', 'summer'],
     ['lettres', 'letters'],
-    ['licornes', 'unicorns-2'],
+    ['licorne', 'unicorns'],
   ];
 
   for (const [fr, en] of categoryPairs) {
@@ -201,3 +203,5 @@ describe('getAlternateUrl — edge cases', () => {
     expect(result).toBeNull();
   });
 });
+
+it('does not advertise missing translations', () => { expect(getAlternateUrl(`${SITE}/fr/coloriage/unknown/`)).toBeNull(); expect(getAlternateUrl(`${SITE}/en/unknown/`)).toBeNull(); });

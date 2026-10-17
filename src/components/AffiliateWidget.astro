@@ -37,11 +37,6 @@ const products = [
   },
 ];
 
-// Encode links as base64 so ad blockers can't pattern-match Amazon URLs in the HTML
-const encodedProducts = products.map((p) => ({
-  ...p,
-  encodedLink: Buffer.from(p.link).toString('base64'),
-}));
 ---
 
 <aside class="supply-widget">
@@ -53,9 +48,9 @@ const encodedProducts = products.map((p) => ({
     </div>
   </div>
   <ul>
-    {encodedProducts.map((product) => (
+    {products.map((product) => (
       <li>
-        <a href="#" data-ref={product.encodedLink} target="_blank" rel="noopener nofollow" class="supply-link" data-product={product.name}>
+        <a href={product.link} target="_blank" rel="noopener noreferrer sponsored nofollow" class="supply-link" data-product={product.name}>
           <span class="item-icon">{product.icon}</span>
           <span class="item-name">{product.name}</span>
           <span class="item-cta">{cta} <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
@@ -63,20 +58,16 @@ const encodedProducts = products.map((p) => ({
       </li>
     ))}
   </ul>
+  <p class="supply-subtitle">{locale === 'fr' ? 'Liens affiliés : nous pouvons recevoir une commission, sans surcoût pour vous.' : 'Affiliate links: we may earn a commission at no extra cost to you.'}</p>
 </aside>
 
 <script>
+  import { track as trackEvent } from '../lib/analytics';
   document.querySelectorAll('.supply-link').forEach((link) => {
     const anchor = link as HTMLAnchorElement;
-    // Decode the URL at runtime so ad blockers can't see it in static HTML
-    const encoded = anchor.dataset.ref;
-    if (encoded) {
-      anchor.href = atob(encoded);
-      anchor.removeAttribute('data-ref');
-    }
     anchor.addEventListener('click', () => {
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'supply_click', {
+      if (true) {
+        trackEvent('supply_click', {
           product_name: anchor.dataset.product,
           link_url: anchor.href,
         });

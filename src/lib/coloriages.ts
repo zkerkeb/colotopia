@@ -2,6 +2,8 @@ import { db } from '../db';
 import { colorings } from '../db/schema';
 import { and, eq, desc } from 'drizzle-orm';
 import { cdnPng } from './cdn';
+import { normalizeTags, canonicalCategory, pairTranslations } from './catalog';
+import { readFile } from 'node:fs/promises';
 
 /**
  * Shape expected by every page and component.
@@ -12,6 +14,7 @@ export interface ColoringData {
   title: string;
   slug: string;
   category: string;
+  sourceCategory: string;
   audience: string;
   tags: string[];
   image: string;   // CDN PNG URL (full-size)
@@ -32,12 +35,23 @@ export interface ColoringEntry {
  * Returns publishable coloriages for a given locale.
  * Drop-in replacement for the old YAML-based version.
  */
-export async function getPublishableColoriages(locale: 'fr' | 'en'): Promise<ColoringEntry[]> {
+const cache = new Map<string, Promise<ColoringEntry[]>>();
+export function getPublishableColoriages(locale: 'fr' | 'en', preserveCategoryAliases = false): Promise<ColoringEntry[]> {
+  if (!cache.has(locale)) cache.set(locale, loadColoriages(locale).catch(error => { cache.delete(locale); throw error; }));
+  const result = cache.get(locale)!;
+  return preserveCategoryAliases ? result.then(entries => entries.map(c => ({ ...c, data: { ...c.data, category: c.data.sourceCategory } }))) : result;
+}
+
+async function loadColoriages(locale: 'fr' | 'en'): Promise<ColoringEntry[]> {
   // Filter out flagged items: they are awaiting regeneration and should not
   // appear anywhere on the public site (listings, category pages, individual
   // [slug] pages → 404, search index, sitemap). Once regen-flagged.py unflags
   // them in DB, they reappear on the next build.
-  const rows = await db
+  // Explicit offline snapshot for local verification; production uses the DB.
+  const snapshot = process.env.COLORING_SNAPSHOT;
+  const rows: (typeof colorings.$inferSelect)[] = snapshot
+    ? JSON.parse(await readFile(snapshot, 'utf8')).colorings.filter((row: typeof colorings.$inferSelect) => row.locale === locale && row.flagged === false)
+    : await db
     .select()
     .from(colorings)
     .where(and(eq(colorings.locale, locale), eq(colorings.flagged, false)))
@@ -48,16 +62,17 @@ export async function getPublishableColoriages(locale: 'fr' | 'en'): Promise<Col
     data: {
       title: row.title,
       slug: row.slug,
-      category: row.categorySlug,
+      category: canonicalCategory(row.categorySlug),
+      sourceCategory: row.categorySlug,
       audience: row.audience,
-      tags: (row.tagsJson as string[]) ?? [],
+      tags: normalizeTags(row.tagsJson),
       image: cdnPng(row.imagePath),
-      alt: row.alt ?? '',
+      alt: row.alt?.trim() || row.title,
       locale: row.locale,
       seoTitle: row.seoTitle ?? undefined,
       seoDescription: row.seoDescription ?? undefined,
       printable: row.printable,
-      createdAt: row.createdAt?.toISOString().split('T')[0],
+      createdAt: row.createdAt ? new Date(row.createdAt).toISOString().split('T')[0] : undefined,
     },
   }));
 }
@@ -72,21 +87,5 @@ export async function buildSlugMap(): Promise<{
   const frPages = await getPublishableColoriages('fr');
   const enPages = await getPublishableColoriages('en');
 
-  const imageToFr: Record<string, string> = {};
-  for (const c of frPages) {
-    imageToFr[c.data.image] = c.data.slug;
-  }
-
-  const frToEn: Record<string, string> = {};
-  const enToFr: Record<string, string> = {};
-
-  for (const c of enPages) {
-    const frSlug = imageToFr[c.data.image];
-    if (frSlug) {
-      frToEn[frSlug] = c.data.slug;
-      enToFr[c.data.slug] = frSlug;
-    }
-  }
-
-  return { frToEn, enToFr };
+  return pairTranslations(frPages.map(c => c.data), enPages.map(c => c.data));
 }

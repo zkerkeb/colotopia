@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import type { Locale } from '../lib/i18n';
+const { locale } = Astro.props as { locale: Locale };
+const fr = locale === 'fr';
+const title = fr ? 'Rechercher un coloriage' : 'Find a coloring page';
+---
+<BaseLayout locale={locale} title={title} noindex canonical={`https://colotopia.com/${locale}/${fr ? 'recherche' : 'search'}/`} altUrl={`https://colotopia.com/${fr ? 'en/search' : 'fr/recherche'}/`}>
+  <h1>{title}</h1>
+  <form id="catalog-search" data-locale={locale} role="search">
+    <div class="search-field">
+    <label for="catalog-query">{fr ? 'Sujet, animal, thème…' : 'Subject, animal, theme…'}</label>
+    <input id="catalog-query" type="search" name="q" autocomplete="off" />
+    </div>
+    <div class="search-field">
+    <label for="catalog-audience">{fr ? 'Collection' : 'Collection'}</label>
+    <select id="catalog-audience" name="audience">
+      <option value="">{fr ? 'Tous les coloriages' : 'All coloring pages'}</option>
+      <option value="enfants">{fr ? 'Enfants' : 'Kids'}</option>
+      <option value="adultes">{fr ? 'Adultes' : 'Adults'}</option>
+    </select>
+    </div>
+    <button class="btn-primary" type="submit">{fr ? 'Rechercher' : 'Search'}</button>
+  </form>
+  <p id="search-status" role="status" aria-live="polite"></p>
+  <noscript><p>{fr ? 'Activez JavaScript pour rechercher, ou explorez les catégories.' : 'Enable JavaScript to search, or browse the categories.'} <a href={`/${locale}/categories/`}>{fr ? 'Voir les catégories' : 'Browse categories'}</a></p></noscript>
+  <div id="catalog-results" class="catalog-results"></div>
+  <button id="search-more" class="btn-secondary" hidden>{fr ? 'Voir plus de coloriages' : 'Show more coloring pages'}</button>
+  <p><a href={`/${locale}/categories/`}>{fr ? 'Explorer toutes les catégories' : 'Explore all categories'}</a></p>
+</BaseLayout>
+<script>
+  import { loadSearchIndex, searchCatalog, type SearchItem } from '../lib/search';
+  import { track } from '../lib/analytics';
+  const form = document.querySelector<HTMLFormElement>('#catalog-search')!;
+  const query = document.querySelector<HTMLInputElement>('#catalog-query')!;
+  const audience = document.querySelector<HTMLSelectElement>('#catalog-audience')!;
+  const status = document.querySelector<HTMLElement>('#search-status')!;
+  const results = document.querySelector<HTMLElement>('#catalog-results')!;
+  const more = document.querySelector<HTMLButtonElement>('#search-more')!;
+  const locale = form.dataset.locale!, fr = locale === 'fr';
+  let hits: SearchItem[] = [], shown = 0, revision = 0;
+  function appendResults() {
+    for (const item of hits.slice(shown, shown + 24)) {
+      const link = document.createElement('a'); link.href = item.url; link.className = 'search-card';
+      if (item.thumbnail) { const img = document.createElement('img'); img.src = item.thumbnail; img.alt = ''; img.width = 210; img.height = 297; img.loading = 'lazy'; link.append(img); }
+      const label = document.createElement('span'); label.textContent = item.title; link.append(label); results.append(link);
+    }
+    shown += 24; more.hidden = shown >= hits.length;
+  }
+  async function runSearch(record = false) {
+    const id = ++revision;
+    status.textContent = fr ? 'Recherche…' : 'Searching…';
+    try {
+      const index = await loadSearchIndex(`/${locale}/search-index.json`);
+      if (id !== revision) return;
+      hits = searchCatalog(index, query.value, audience.value); shown = 0; results.replaceChildren(); appendResults();
+      status.textContent = hits.length ? `${hits.length} ${fr ? 'coloriages trouvés' : 'coloring pages found'}` : (fr ? 'Aucun résultat. Essayez un seul mot ou une autre collection.' : 'No results. Try one word or another collection.');
+      if (record) track('search', { search_term: query.value.trim(), result_count: hits.length });
+    } catch {
+      if (id !== revision) return;
+      results.replaceChildren(); more.hidden = true;
+      status.textContent = fr ? 'La recherche est indisponible. Réessayez ou explorez les catégories ci-dessous.' : 'Search is unavailable. Try again or browse the categories below.';
+    }
+  }
+  function restore() { const params = new URLSearchParams(location.search); query.value = params.get('q') ?? ''; audience.value = params.get('audience') ?? ''; void runSearch(); }
+  form.addEventListener('submit', event => { event.preventDefault(); const params = new URLSearchParams(new FormData(form) as any); history.pushState(null, '', `?${params}`); void runSearch(true); });
+  more.addEventListener('click', appendResults); window.addEventListener('popstate', restore); restore();
+</script>
+<style>
+  form { display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-end; margin: 2rem 0 1rem; }
+  .search-field { display: flex; flex: 1 1 220px; flex-direction: column; gap: .5rem; }
+  @media (max-width: 480px) { form { flex-direction: column; align-items: stretch; } .search-field { flex: auto; } form button { justify-content: center; } }
+  input, select { font: inherit; padding: .75rem; border: 1px solid #777; border-radius: .5rem; max-width: 100%; }
+  .catalog-results { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+  .catalog-results :global(.search-card) { display: flex; flex-direction: column; gap: .75rem; padding: 1rem; background: white; border-radius: 1rem; }
+  .catalog-results :global(img) { width: 100%; height: auto; aspect-ratio: 210/297; object-fit: contain; }
+  [hidden] { display: none !important; }
+</style>

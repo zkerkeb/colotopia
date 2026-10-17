@@ -6,9 +6,10 @@ import SearchBar from './SearchBar.astro';
 
 interface Props {
   locale: Locale;
+  altUrl?: string;
 }
 
-const { locale } = Astro.props;
+const { locale, altUrl } = Astro.props;
 const altLocale = locale === 'fr' ? 'en' : 'fr';
 const altLabel = locale === 'fr' ? 'EN' : 'FR';
 const categoriesLabel = locale === 'fr' ? 'Catégories' : 'Categories';
@@ -20,7 +21,7 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
 <header class="site-header" id="site-header">
   <div class="header-inner">
     <!-- Logo -->
-    <a href={getLocalePath(locale)} class="header-logo-link" aria-label="Colotopia — Accueil">
+    <a href={getLocalePath(locale)} class="header-logo-link" aria-label={locale === 'fr' ? 'Colotopia — Accueil' : 'Colotopia — Home'}>
       <img src="/images/colotopia-logo.png" alt="Colotopia" class="header-logo" width="499" height="391" />
     </a>
 
@@ -30,7 +31,7 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
     </div>
 
     <!-- Desktop nav -->
-    <nav class="header-nav" aria-label="Navigation principale">
+    <nav class="header-nav" aria-label={locale === 'fr' ? 'Navigation principale' : 'Main navigation'}>
       <!-- Categories mega menu trigger -->
       <div class="nav-item nav-item--dropdown">
         <button class="nav-link nav-link--dropdown" aria-expanded="false" aria-haspopup="true" id="mega-menu-btn">
@@ -73,7 +74,7 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
 
       <!-- Lang switch -->
       <a
-        href={Astro.url.pathname.replace(`/${locale}/`, `/${altLocale}/`)}
+        href={altUrl ? new URL(altUrl, Astro.site).pathname : `/${altLocale}/`}
         class="nav-link nav-link--lang"
         aria-label={`Switch to ${altLabel}`}
       >
@@ -110,7 +111,7 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
 
     <div class="drawer-inner">
       <!-- Mobile search -->
-      <form class="drawer-search" action={`/${locale}`} method="get" role="search">
+      <form class="drawer-search" action={locale === 'fr' ? '/fr/recherche/' : '/en/search/'} method="get" role="search">
         <div class="drawer-search-wrapper">
           <svg class="drawer-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
@@ -158,7 +159,7 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
 
       <div class="drawer-footer">
         <a
-          href={Astro.url.pathname.replace(`/${locale}/`, `/${altLocale}/`)}
+          href={altUrl ? new URL(altUrl, Astro.site).pathname : `/${altLocale}/`}
           class="drawer-lang-switch"
           aria-label={locale === 'fr' ? `Passer en anglais (${altLabel})` : `Switch to French (${altLabel})`}
         >
@@ -172,6 +173,7 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
 </header>
 
 <script>
+  import { track as trackEvent } from '../lib/analytics';
   // Scroll effect
   const header = document.getElementById('site-header');
   if (header) {
@@ -196,14 +198,14 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
 
     function openMenu() {
       clearTimeout(hoverTimeout);
-      megaMenu.hidden = false;
-      megaBtn.setAttribute('aria-expanded', 'true');
+      megaMenu!.hidden = false;
+      megaBtn!.setAttribute('aria-expanded', 'true');
     }
 
     function closeMenu() {
       hoverTimeout = setTimeout(() => {
-        megaMenu.hidden = true;
-        megaBtn.setAttribute('aria-expanded', 'false');
+        megaMenu!.hidden = true;
+        megaBtn!.setAttribute('aria-expanded', 'false');
       }, 150);
     }
 
@@ -235,6 +237,7 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
     if (drawerOverlay) drawerOverlay.hidden = false;
     hamburgerBtn.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
+    drawerCloseBtn?.focus();
   }
 
   function closeDrawer() {
@@ -243,8 +246,17 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
     if (drawerOverlay) drawerOverlay.hidden = true;
     hamburgerBtn.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
+    hamburgerBtn.focus();
   }
 
+  mobileDrawer?.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') { closeDrawer(); return; }
+    if (event.key !== 'Tab') return;
+    const elements = [...mobileDrawer.querySelectorAll<HTMLElement>('a[href], button, input')];
+    const first = elements[0], last = elements[elements.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+  });
   hamburgerBtn?.addEventListener('click', openDrawer);
   drawerCloseBtn?.addEventListener('click', closeDrawer);
   drawerOverlay?.addEventListener('click', closeDrawer);
@@ -256,9 +268,9 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
   // GA4: track category clicks in mega menu and mobile drawer
   document.querySelectorAll('.mega-menu-link, .drawer-cat').forEach((link) => {
     link.addEventListener('click', () => {
-      if (typeof window.gtag === 'function') {
+      if (true) {
         const isMobile = link.classList.contains('drawer-cat');
-        window.gtag('event', 'category_click', {
+        trackEvent('category_click', {
           category_name: (link as HTMLAnchorElement).textContent?.trim(),
           link_url: (link as HTMLAnchorElement).href,
           navigation_type: isMobile ? 'mobile_drawer' : 'mega_menu',
