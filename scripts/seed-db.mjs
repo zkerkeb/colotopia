@@ -1,19 +1,22 @@
 #!/usr/bin/env node
 /**
  * Seed the colotopia PostgreSQL database from YAML content files.
- * Usage: DATABASE_URL=postgres://... node scripts/seed-db.mjs
+ * Usage: node scripts/seed-db.mjs --approved-images path/to/reviewed-image-keys.json
+ * DATABASE_URL is supplied by the local operator environment.
  */
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import pg from 'pg';
 import yaml from 'js-yaml';
+import { coloringKey, verifyPublishedArtwork, selectApprovedColorings } from './lib/coloring-assets.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const CONTENT_DIR = path.join(ROOT, 'src/content/coloriages');
 
 const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL });
+let database = pool;
 
 async function seedCategories(colorings) {
   const categorySet = new Map();
@@ -31,7 +34,7 @@ async function seedCategories(colorings) {
   console.log(`Seeding ${categories.length} categories...`);
 
   for (const cat of categories) {
-    await pool.query(
+    await database.query(
       `INSERT INTO categories (slug, name_fr, name_en) VALUES ($1, $2, $3) ON CONFLICT (slug) DO NOTHING`,
       [cat.slug, cat.nameFr, cat.nameEn]
     );
@@ -53,7 +56,7 @@ async function seedTags(colorings) {
   console.log(`Seeding ${tags.length} tags...`);
 
   for (const tag of tags) {
-    await pool.query(
+    await database.query(
       `INSERT INTO tags (slug, name_fr, name_en) VALUES ($1, $2, $3) ON CONFLICT (slug) DO NOTHING`,
       [tag, tag, tag]
     );
@@ -66,7 +69,7 @@ async function seedColorings(colorings) {
   let inserted = 0;
 
   for (const c of colorings) {
-    const result = await pool.query(
+    const result = await database.query(
       `INSERT INTO colorings (slug, locale, title, category_slug, audience, image_path, alt, seo_title, seo_description, printable, tags_json, created_at)
        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
        ON CONFLICT (slug, locale) DO NOTHING
@@ -77,7 +80,7 @@ async function seedColorings(colorings) {
         c.title,
         c.category,
         c.audience,
-        c.image,
+        coloringKey(c.image),
         c.alt || null,
         c.seoTitle || null,
         c.seoDescription || null,
@@ -116,12 +119,35 @@ async function main() {
   console.log('Loading YAML files...');
   const fr = await loadYamlFiles('fr');
   const en = await loadYamlFiles('en');
-  const all = [...fr, ...en];
-  console.log(`Loaded ${fr.length} FR + ${en.length} EN = ${all.length} colorings`);
+  let loaded = [...fr, ...en];
+  const selectionIndex = process.argv.indexOf('--approved-images');
+  const selectionPath = process.argv[selectionIndex + 1];
+  if (selectionIndex === -1 || !selectionPath) throw new Error('--approved-images requires a JSON file of visually reviewed image keys');
+  loaded = selectApprovedColorings(loaded, JSON.parse(fs.readFileSync(selectionPath, 'utf8')));
+  const existing = await pool.query('SELECT slug, locale FROM colorings');
+  const existingKeys = new Set(existing.rows.map(row => `${row.locale}/${row.slug}`));
+  const all = loaded.filter(row => !existingKeys.has(`${row.locale}/${row.slug}`));
+  console.log(`Loaded ${loaded.length} colorings; ${all.length} new rows to verify`);
 
-  const catCount = await seedCategories(all);
-  const tagCount = await seedTags(all);
-  const coloringCount = await seedColorings(all);
+  // Verify every shared asset before inserting either locale. An upload failure
+  // must never create publicly visible rows with missing files.
+  for (const key of new Set(all.map(row => coloringKey(row.image)))) {
+    await verifyPublishedArtwork(key);
+  }
+  database = await pool.connect();
+  let catCount, tagCount, coloringCount;
+  try {
+    await database.query('BEGIN');
+    catCount = await seedCategories(all);
+    tagCount = await seedTags(all);
+    coloringCount = await seedColorings(all);
+    await database.query('COMMIT');
+  } catch (error) {
+    await database.query('ROLLBACK');
+    throw error;
+  } finally {
+    database.release();
+  }
 
   console.log(`\nDone:`);
   console.log(`  ${catCount} categories`);
@@ -132,6 +158,6 @@ async function main() {
 }
 
 main().catch(e => {
-  console.error(e);
+  console.error(`Seed cancelled: ${e.message}`);
   process.exit(1);
 });

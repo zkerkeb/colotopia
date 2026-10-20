@@ -1,0 +1,339 @@
+{
+  "reviewedOn": "2026-10-20",
+  "reviewed": true,
+  "replacements": [
+    {
+      "imagePath": "kawaii-hibou-lune",
+      "replacementPath": "kawaii-hibou-lune-r2d1242b78f53",
+      "sha256": {
+        "png": "2d1242b78f53b81f9d39351f1bbab17b9feaf38588b16d60654f6ff6f6fb48e4",
+        "webp": "07eeb04c59081cd1fbdd1b07af8736bf241eacd4e81c932122ca38c8f7e09221",
+        "thumbnail": "9b27300ea310ff286a3f39a04f98f8e36d8fced111c28333ec35233b1129bf03"
+      }
+    },
+    {
+      "imagePath": "drole-chat-pizza",
+      "replacementPath": "drole-chat-pizza-rc5a08882efb6",
+      "sha256": {
+        "png": "c5a08882efb60854f340049b722299be990ef0cba04671c7528f83bf11bbd803",
+        "webp": "8b3760c05daedc13bbd5d18da197624d1f878e11d602fc284c140f5a0f6595b1",
+        "thumbnail": "1cb50f6f90801ab5fea7c0d2b5e4c13fa31eff9c8627e39680f0c444f32e8975"
+      }
+    },
+    {
+      "imagePath": "ferme-cheval-ecurie",
+      "replacementPath": "ferme-cheval-ecurie-r3074c8216eab",
+      "sha256": {
+        "png": "3074c8216eabb0b20c0b111eafa46f288a7121f2dcd9a55a3171c8b1354f71a7",
+        "webp": "a7da4e0c4a9720f9b15b7bbe5f983f8d5d10cdfdb635c190b3d4de8000b2a5a2",
+        "thumbnail": "b1d456c84a793f8ae8cc81a20b012008e38814516c546916ea94602f4b8e618a"
+      }
+    },
+    {
+      "imagePath": "metiers-coiffeur",
+      "replacementPath": "metiers-coiffeur-r7a3cb7a62e91",
+      "sha256": {
+        "png": "7a3cb7a62e91c7748ef40d1585bd2bd931c6582b1b1960d24a08aec90db3e016",
+        "webp": "8d5a052ec171fad773e8f895a1b77d4f88579d199472b284f5ac0880ce9532d7",
+        "thumbnail": "b45c424f380260b5f7fa63844a2284d47eaf6f08d849dd276e44fda60d906ae9"
+      }
+    },
+    {
+      "imagePath": "licornes-chateau",
+      "replacementPath": "licornes-chateau-r6da4bb7ec087",
+      "sha256": {
+        "png": "6da4bb7ec0874199c1c81051d4595dc86da469112f6f4791f35cd07b0717fd33",
+        "webp": "0125148e8fada1b617f263e4b33cfa0836da7d1fdb6239f86c283477322653a6",
+        "thumbnail": "6f8b604f3afad671c69866cb6a633eae184993e92685dcdd87b3cb151713fb12"
+      }
+    },
+    {
+      "imagePath": "nature-recyclage-enfant",
+      "replacementPath": "nature-recyclage-enfant-r93d05466c2d6",
+      "sha256": {
+        "png": "93d05466c2d6d68b2524d4a9bbb7e9014f0291866ce4141b01c7f1323fa198fc",
+        "webp": "c9d7d2aaca7a296bfee9d4a5ce3f12952d417c08ff8cc27ed188a06bf7864b9a",
+        "thumbnail": "f77ed3122bdd1cd11a4d857cf8de50393ced783febefd0e5f568d1dd5ef80841"
+      }
+    },
+    {
+      "imagePath": "animaux-marins-tortue-corail",
+      "replacementPath": "animaux-marins-tortue-corail-rc265c2d62f58",
+      "sha256": {
+        "png": "c265c2d62f5863f01a0775e20283d68e0ebcad49ec612660aa381a56fea9edd7",
+        "webp": "eb051a5a316f2feeba8f519c5d563845fdcfafb212451c372b0144091bfe7b6d",
+        "thumbnail": "f7287b7a967aa0e9183db4a6ffc07425146a8179711e912f0edaa9de3956c123"
+      }
+    },
+    {
+      "imagePath": "nature-bouquet-roses",
+      "replacementPath": "nature-bouquet-roses-rb355b57782cd",
+      "sha256": {
+        "png": "b355b57782cdf43809cc09177612dd65bf23eb31c44d9446decdd15b05c78a6e",
+        "webp": "bb381355ce5fa06d02e8062debb3101c2e73790d10bc0fcfe2e446fb3008fbb7",
+        "thumbnail": "a173b80ab80134bb45266ec246992f34c1be1a8bce0cab6380a003a8024b01a9"
+      }
+    },
+    {
+      "imagePath": "vehicules-taxi-new-york",
+      "replacementPath": "vehicules-taxi-new-york-rbee4dbedefe0",
+      "sha256": {
+        "png": "bee4dbedefe0f9e7114fb943144552c8c55521b4773451a1895a923d90551adb",
+        "webp": "7d0632b3b08fcbfe927f6acde3c058ccc0e1f340e23008758af5562b6bda8049",
+        "thumbnail": "9f9186a4096de5773e78ec101e7369115c28d94f099898b60fa495b57a98ec32"
+      }
+    },
+    {
+      "imagePath": "metiers-coiffeuse-salon",
+      "replacementPath": "metiers-coiffeuse-salon-rca2fd3021dec",
+      "sha256": {
+        "png": "ca2fd3021decc14831fb71b638256058f57db237981d3a8a957033e09b7d50f9",
+        "webp": "60adfdfa46ea99649457efef282ab65009a428893ee20bd63f35f2f17b667074",
+        "thumbnail": "a1ccbfd96bc0478e9df41d03c791cb581bce2c3541a20ed75aee757ffe91f51a"
+      }
+    },
+    {
+      "imagePath": "mosaiques-art-deco",
+      "replacementPath": "mosaiques-art-deco-r877eb9b1afdc",
+      "sha256": {
+        "png": "877eb9b1afdc18b02ede7abf09c9e5da5cfa1ff710ada35d377e701f276271a1",
+        "webp": "320876f7b993cda0fc83e5dfb3d06f70556ceba438d5d71bcc394f03ef798ee5",
+        "thumbnail": "b53280a1b972259041663c06b77b6333fd2d10adb287e86ce134b6ac74b5dc95"
+      }
+    },
+    {
+      "imagePath": "mosaiques-celtique",
+      "replacementPath": "mosaiques-celtique-r67495f2340cd",
+      "sha256": {
+        "png": "67495f2340cd70e8d1f2245dad7821e93dacae12633dfa69224fabb9035124d0",
+        "webp": "865a0611f6d376ba6e6d943d5e396d37421afe91356fa3470112a09462abfc2f",
+        "thumbnail": "b10f775558e3c159cb5e56bebe915f419ccaf3c5b267364bbfccb5967e277997"
+      }
+    },
+    {
+      "imagePath": "culture-zellige",
+      "replacementPath": "culture-zellige-r181f23b167d1",
+      "sha256": {
+        "png": "181f23b167d167e73a1a3648147c44c084ed1b2aa219287c57aea985e69161f9",
+        "webp": "95597189e689aa0e12fcfb549ab7018e23caac3be591f881e62bebde4333ef90",
+        "thumbnail": "8a49f33b822297757689291aba4832ae5ab96d37daed6d9e3700e602ef74a2a8"
+      }
+    },
+    {
+      "imagePath": "drole-poule-detective",
+      "replacementPath": "drole-poule-detective-r3434d8330731",
+      "sha256": {
+        "png": "3434d8330731ffccf736a4121658fcc986fb2a8d6133652dce6ea963bfef8e99",
+        "webp": "7409244ed2c5b7fdf6ac78f82c3b904e6806b279fa87546ad151c9a9372ad082",
+        "thumbnail": "77f2b03264df050505638d412c9f1587904e6251223a7ee652cea0b8b549439d"
+      }
+    },
+    {
+      "imagePath": "drole-ours-danseur",
+      "replacementPath": "drole-ours-danseur-ra5957b872f12",
+      "sha256": {
+        "png": "a5957b872f124223609e716810ae957c19dbb8907ece9c7139ff5c7bce1b4d6c",
+        "webp": "7221ef24ce5d6414913d9f33dc1040138d90b49b5a942a3d48cdde75262aa39d",
+        "thumbnail": "cf2f1e86abaa8f18f1804bfe7dbcd2d62cf7a8ff5830b4ce70e482f046266dc2"
+      }
+    },
+    {
+      "imagePath": "licornes-famille",
+      "replacementPath": "licornes-famille-r831da9f261f1",
+      "sha256": {
+        "png": "831da9f261f1c93d995ecd9287e4bc9660807a3416d57266c1b160aa2c3512d4",
+        "webp": "b12c1b7a6a1a7d7fc748da214d92594dcaea6958b9249d3a22916e40a1e677bd",
+        "thumbnail": "53b565e07c6ef11b6a36545dbdb7b6d8bcf2e2fb5524b8ec6ce74e7edc39d1d3"
+      }
+    },
+    {
+      "imagePath": "culture-mosquee",
+      "replacementPath": "culture-mosquee-rc050dd7f2f5b",
+      "sha256": {
+        "png": "c050dd7f2f5b6096e72e4b24ca677cff00dad39b93349b78d14b795b6d4965fa",
+        "webp": "1a9e1e68aba17241abdd94ede2f29a602a352be4a08789e7daa5f4d1f6ab9674",
+        "thumbnail": "6fe6b57361901d96a63af4a696652701475e9c997c7006eff1774c1f2c561eda"
+      }
+    },
+    {
+      "imagePath": "nature-arc-en-ciel-montagne",
+      "replacementPath": "nature-arc-en-ciel-montagne-rddbdcbab8eaf",
+      "sha256": {
+        "png": "ddbdcbab8eaf8e4b2024a06c890ad93f58d95e7b75e9e355cbc479e7fd895472",
+        "webp": "2b1505267d80dad12255b26493d60505e50c53ff08ea4e28627162eef0656809",
+        "thumbnail": "d7b67479ad797bdfc149179183dd391adb1142437fc9da8f305db8df169a6f6c"
+      }
+    },
+    {
+      "imagePath": "espace-astronaute",
+      "replacementPath": "espace-astronaute-r1e83f993a45f",
+      "sha256": {
+        "png": "1e83f993a45f9d6ad0d7abef2d26bcc11206c4dfe413f4475274f26dc78c401d",
+        "webp": "76f2661ecfd3a071606a67c94c76b538fed4ab1c48e32ea4dce0f57fc0b20598",
+        "thumbnail": "0e5e1a5c3ba25bade85f043b052aed2e50b99f15ea592ebe28cdef53609754b4"
+      }
+    },
+    {
+      "imagePath": "metiers-docteur",
+      "replacementPath": "metiers-docteur-r0ae3a9e916de",
+      "sha256": {
+        "png": "0ae3a9e916ded7a9e81b8cac0ec8a4f534f7a44d8d9a3e26453511754e6216b6",
+        "webp": "8ae6016d0c46e8afd661de733fb15218cdf9cc40d4cc4910123e80f956b8afdf",
+        "thumbnail": "6525b896c240ba0853249ad65d08e26e47f239e7cad01a9212c29db7e62433d9"
+      }
+    },
+    {
+      "imagePath": "metiers-chef-cuisinier",
+      "replacementPath": "metiers-chef-cuisinier-raa88698474a2",
+      "sha256": {
+        "png": "aa88698474a202b31839eeebf255c852acf7469122e49d2cd51dfdc8b078bb64",
+        "webp": "522abf1d2f73986fbf92eb19a7f64bb6bba108618a9577fc597e632942636e19",
+        "thumbnail": "c5307b24d4ffa0d725298d7766a7f8dcf8bc9471add753151202894dc1a9b545"
+      }
+    },
+    {
+      "imagePath": "fees-foret",
+      "replacementPath": "fees-foret-rce8a97015982",
+      "sha256": {
+        "png": "ce8a970159827b355137369a73ffa1832e18154bf99bf5311d4c3d1b00c8347d",
+        "webp": "869c8709fb7ef31bb5b08b48c2cd19b2fc96070656a83dab68f4767781ebaf12",
+        "thumbnail": "86188b0c561289ac4dbe431d565250c32d607e2e651d28fd080b3c08b2c01c6d"
+      }
+    },
+    {
+      "imagePath": "paques-lapin-panier",
+      "replacementPath": "paques-lapin-panier-rd54b0fba7458",
+      "sha256": {
+        "png": "d54b0fba7458d093c9286251f52ff97152f77a9d6e6db564affb5943a28b0670",
+        "webp": "74e907196f046e22d999a9a49517c92214e07d307d19af68f1ba2e60d41770e9",
+        "thumbnail": "8a826dbc7e2c92a731a96f39c3a539dc3d5de586682d77427e6913d43c72f571"
+      }
+    },
+    {
+      "imagePath": "robots-cuisinier",
+      "replacementPath": "robots-cuisinier-r353e7c4c1777",
+      "sha256": {
+        "png": "353e7c4c1777baffbab857c8c5b7c1d02741fda42944504125704345eb71b73a",
+        "webp": "d6c37232a9c05b33086c3b5f611dbb7e8aad63d61c5ab4fe8470d5566dd8b655",
+        "thumbnail": "1fefd2fb7bfc4710e6a42444e2037e7f3663a46956b4ea26957f61d51b97f449"
+      }
+    },
+    {
+      "imagePath": "sport-footballeur",
+      "replacementPath": "sport-footballeur-rcc467de2c57d",
+      "sha256": {
+        "png": "cc467de2c57da59c525fee0315d95ca89f88a33f4711c328084a11efe1e17849",
+        "webp": "22d2442d975a6122e117df3802d24d58229180c7f914100cbf25b2d0b17cc8de",
+        "thumbnail": "2405e16185eadcdd751d021663a0aff32d6f043a3fc055cf0fe27aecb6482d37"
+      }
+    },
+    {
+      "imagePath": "pirates-perroquet-tresor",
+      "replacementPath": "pirates-perroquet-tresor-rf26373c84e17",
+      "sha256": {
+        "png": "f26373c84e17519174a478ef35eb48a646e256eed0804e9d75f8e5a16e00690f",
+        "webp": "a9c369da99c90be96eaf896e51d279bfc2bf42df97134ba75daed0a59e1bfbd5",
+        "thumbnail": "d78e67e79ee3899799fba5b87ea13c99d0cb3c8650cd7c4ba4ecc27d56bd93be"
+      }
+    },
+    {
+      "imagePath": "printemps-coccinelle-fleur",
+      "replacementPath": "printemps-coccinelle-fleur-r3d282904b41a",
+      "sha256": {
+        "png": "3d282904b41a4b3cf7c9396b4d806438c4eb9c0db16d427cd3041aeda0ab097e",
+        "webp": "f8581f7fc87ccf3ca49d0ad237ff7c9b602cdc0c4f86f809134e685ca3972c90",
+        "thumbnail": "2ccf75d8feba81d1b6767b25261bf0de4b33ddaa1d5cb06fce7c35c0475525cc"
+      }
+    },
+    {
+      "imagePath": "printemps-escargot-jardin",
+      "replacementPath": "printemps-escargot-jardin-r4b62bbe1924a",
+      "sha256": {
+        "png": "4b62bbe1924a3b7afed78ddc9fb60a6333ae241e93a5a3e1bba701c8cdada83c",
+        "webp": "3b8315f8c405734ee46f6ac56566108d165d4e2c497f851ceeb815380a64e763",
+        "thumbnail": "a58df2e8435982af7d1199d3df9d9e99e0345302cc6c28f2e1c1c465efd36bb9"
+      }
+    },
+    {
+      "imagePath": "sport-coureur-marathon",
+      "replacementPath": "sport-coureur-marathon-r81459d16ac28",
+      "sha256": {
+        "png": "81459d16ac28019b87c3e9ecab9a587c4cf6f36d413b323aabad0f6bf6183df1",
+        "webp": "86422cca12b797ab1ead61d1a366274e4c5c9cfd44b49a71fd3649c08ef5fa6f",
+        "thumbnail": "0a9d8f1650f1bd90ee64b0a97613659b472bab40e1f7a401529c5f6079eb0a7c"
+      }
+    },
+    {
+      "imagePath": "dinosaures-bebe-eclosion",
+      "replacementPath": "dinosaures-bebe-eclosion-r5869404e1f35",
+      "sha256": {
+        "png": "5869404e1f350334435fec5f086d3b62b8659e38ba7880b41bdda840e1c82328",
+        "webp": "cd06ac60c6c92ebb845b05c00c394ffcbc89ca273f7bb5762b76e98e1ccba009",
+        "thumbnail": "d11289da72fc5016e8c81c794c910459319e153836ed7823105f1ccd9054dd05"
+      }
+    },
+    {
+      "imagePath": "pirates-ile-palmier",
+      "replacementPath": "pirates-ile-palmier-r4783e0be3d4b",
+      "sha256": {
+        "png": "4783e0be3d4b9be01eb1014dcbc9c0967a28e14c3ad297e97a261610e097f372",
+        "webp": "54093af5a6e6ea70695d8255b3e851d2c7ae23af9a19d24e35a477197f51c1fc",
+        "thumbnail": "782d7594388c2f4b162211828f3c14a5404ec836c66deab79afc4940c6664d22"
+      }
+    },
+    {
+      "imagePath": "printemps-bouquet-fleurs",
+      "replacementPath": "printemps-bouquet-fleurs-r7bda9365412d",
+      "sha256": {
+        "png": "7bda9365412d817974771a837b9593dc538e6ea3fb80c47cc0f2ed399639da37",
+        "webp": "72ed903f8475a80198f87c27c7380d9c234ff744040f8cac7140cbcb0615f3b8",
+        "thumbnail": "2527df201aa02f5b85a2b4f60f31ce05a3fe283fdab73d3b6531f0fa15d9c647"
+      }
+    },
+    {
+      "imagePath": "espace-rover-mars",
+      "replacementPath": "espace-rover-mars-r23beb48eaf15",
+      "sha256": {
+        "png": "23beb48eaf15d092ba8c8538314c293ec695b346656219101ce1b1f18415f9f1",
+        "webp": "d7db7b6042ae08479733dfff764ed16db93660af0213fd39194dac126ab6a196",
+        "thumbnail": "7a8b1f159ee6104aeacef7283b67e5362d7c738ff8d283728924ddf1b72c8693"
+      }
+    },
+    {
+      "imagePath": "licornes-volante",
+      "replacementPath": "licornes-volante-rb857907fcb90",
+      "sha256": {
+        "png": "b857907fcb902f3d0da9f83b03cf3742c9b1c95c5e63ae2b79a73d0c235d8353",
+        "webp": "dbee87eefe5d8fd5450bace5ee3d6049fc6b6b012350e0e6114bbd4e9694c6e6",
+        "thumbnail": "fa0a57d3ccce4b4874d966d81b76f71bcbe1193a5dfa196e3ab602256efaca06"
+      }
+    },
+    {
+      "imagePath": "licornes-sirene",
+      "replacementPath": "licornes-sirene-r675b6c57b3ee",
+      "sha256": {
+        "png": "675b6c57b3eec9a38e5e94c4d037d3c46f4d9ad00dbf1b96a2a42cb2ccb14023",
+        "webp": "a8aabe4b2ce592a0f693d9eafb4f4549fdc6f4cef0e7c3aa74e02b11a0347161",
+        "thumbnail": "804a06707f340768b13d144bf2ad5a9926e35ecba63b9bbf7e2239d4358a710d"
+      }
+    },
+    {
+      "imagePath": "kawaii-cactus-amoureux",
+      "replacementPath": "kawaii-cactus-amoureux-rb559527e359f",
+      "sha256": {
+        "png": "b559527e359fef9181d8821d412b386ce421eca137b07b55011cf43e8bc67948",
+        "webp": "d1c7be7e96679fca6651864f6e50d74d3b26039ddec710d18085a864abdab716",
+        "thumbnail": "7f94d02c3f5f3e2ce061b29c23afcbc41a1d695964d182df39e17c331c754599"
+      }
+    },
+    {
+      "imagePath": "metiers-detective",
+      "replacementPath": "metiers-detective-r21cef498386a",
+      "sha256": {
+        "png": "21cef498386ad53c184dd0f566b7cc7b6ad4f950e5660fa9f725099a1b4b5951",
+        "webp": "de1c0fb294f76518b383f5588e82df264d471a11f411c0423c2501db04f0d534",
+        "thumbnail": "876b5172cfed65c8c1e3ef27a2987607cb9cb186d08803733b681c4513a5884a"
+      }
+    }
+  ]
+}

@@ -5,32 +5,37 @@ Automated regeneration of flagged coloring pages.
 Full pipeline:
   1. Fetch flagged items from the Colotopia admin API (both FR+EN metadata)
   2. Queue them in generation-queue.json (prepended for priority)
-  3. Delete existing local PNG/WebP so generator treats them as missing
+  3. Back up local PNG/WebP before generating replacements
   4. Run generation via Gemini Imagen 4 (respects daily quota)
   5. Optimize images (WebP + thumbnails)
   6. Upload to Cloudflare R2
-  7. Unflag successfully regenerated items via admin API
-  8. Trigger Coolify deploy
+  7. Save a manifest for visual review; keep the existing flags
+  8. After review, --publish-manifest atomically updates every locale and rebuilds the site
 
 Usage:
     python3 scripts/regen-flagged.py                  # full pipeline
     python3 scripts/regen-flagged.py --dry-run        # show what would happen
     python3 scripts/regen-flagged.py --queue-only     # just queue, don't generate
     python3 scripts/regen-flagged.py --status         # show current state
+    python3 scripts/regen-flagged.py --publish-manifest data/artwork-reviews/approved.json
 
 Requirements:
     pip install requests pillow pyyaml google-genai
 """
 
+from __future__ import annotations
+
 import argparse
 import json
 import os
 import subprocess
+import shutil
 import sys
 import urllib.request
 import urllib.error
 from datetime import datetime, timezone
 from pathlib import Path
+from artwork_publication import prepare_artwork, upload_artwork
 
 # ---------------------------------------------------------------------------
 # Auto-load .env
@@ -223,65 +228,12 @@ def api_post(path: str, body: dict) -> dict:
 
 def fetch_flagged_items() -> list[dict]:
     """Fetch flagged items from the admin API with both locale metadata."""
-    # Try the new endpoint first
-    try:
-        data = api_get("/admin/colorings/flagged-for-regen")
-        items = data.get("items", [])
-        if items:
-            print(f"[fetch] Got {len(items)} flagged items via /flagged-for-regen endpoint")
-            return items
-    except Exception as e:
-        print(f"[fetch] /flagged-for-regen endpoint not available ({e}), falling back to manual fetch")
-
-    # Fallback: fetch FR flagged items and try to find EN counterparts
-    fr_data = api_get("/admin/colorings?flagged=true&limit=200&locale=fr")
-    fr_items = fr_data.get("data", [])
-    if not fr_items:
-        print("[fetch] No flagged items found")
-        return []
-
-    # For each FR item, try to find the EN counterpart via content YAML
-    result = []
-    content_en_dir = ROOT / "src" / "content" / "coloriages" / "en"
-
-    for fr in fr_items:
-        image_path = fr["slug"]  # imagePath is the FR slug
-        entry = {
-            "imagePath": image_path,
-            "flagReason": fr.get("flagReason"),
-            "fr": {
-                "id": fr["id"],
-                "slug": fr["slug"],
-                "title": fr["title"],
-                "categorySlug": fr["category"],
-                "audience": fr.get("audience", "enfants"),
-                "tagsJson": [],
-            },
-            "en": None,
-        }
-
-        # Try to find EN YAML
-        for yaml_file in content_en_dir.glob("*.yaml"):
-            try:
-                import yaml
-                with open(yaml_file, encoding="utf-8") as f:
-                    en_data = yaml.safe_load(f)
-                if en_data and en_data.get("image") == image_path:
-                    entry["en"] = {
-                        "slug": en_data.get("slug", yaml_file.stem),
-                        "title": en_data.get("title", ""),
-                        "categorySlug": en_data.get("category", fr["category"]),
-                        "audience": en_data.get("audience", "enfants"),
-                        "tagsJson": en_data.get("tags", []),
-                    }
-                    break
-            except Exception:
-                continue
-
-        result.append(entry)
-
-    print(f"[fetch] Got {len(result)} flagged items (fallback mode)")
-    return result
+    data = api_get("/admin/colorings/flagged-for-regen")
+    items = data.get("items")
+    if not isinstance(items, list) or data.get("count") != len(items):
+        raise RuntimeError("Invalid flagged catalog response; generation cancelled")
+    print(f"[fetch] Got {len(items)} flagged artworks with their current shared keys")
+    return items
 
 
 # ---------------------------------------------------------------------------
@@ -312,7 +264,8 @@ def queue_flagged_items(items: list[dict], dry_run: bool = False) -> list[dict]:
             known.setdefault(it.get('fr_slug', ''), it)
 
     entries = []
-    deleted_files = 0
+    archived_files = 0
+    backup_dir = ROOT / "data" / "artwork-backups" / datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
 
     for item in items:
         fr = item.get("fr")
@@ -381,23 +334,21 @@ def queue_flagged_items(items: list[dict], dry_run: bool = False) -> list[dict]:
             "en_tags": list(en_tags) if en_tags else [],
             "added_at": datetime.now(timezone.utc).isoformat(),
             "regen_reason": "flagged_in_admin",
+            "previous_image_path": image_path,
             "flag_reason": item.get("flagReason", ""),
         }
         entries.append(entry)
 
-        # Delete existing files so generator recreates them
+        # Keep rollback originals. The generator writes under the FR slug even
+        # when the current published image has a versioned key.
         if not dry_run:
-            for ext in ("png", "webp"):
-                fp = IMAGES_DIR / f"{image_path}.{ext}"
-                if fp.exists():
-                    fp.unlink()
-                    deleted_files += 1
-            thumb_dir = IMAGES_DIR / "thumbs"
-            for ext in ("png", "webp"):
-                fp = thumb_dir / f"{image_path}.{ext}"
-                if fp.exists():
-                    fp.unlink()
-                    deleted_files += 1
+            for relative in (f"{fr_slug}.png", f"{fr_slug}.webp", f"thumbs/{fr_slug}.webp"):
+                source = IMAGES_DIR / relative
+                if source.exists():
+                    target = backup_dir / relative
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.move(str(source), str(target))
+                    archived_files += 1
 
     if dry_run:
         print(f"[queue] Would queue {len(entries)} items for regeneration")
@@ -418,7 +369,7 @@ def queue_flagged_items(items: list[dict], dry_run: bool = False) -> list[dict]:
     save_queue(queue)
 
     print(f"[queue] Queued {len(entries)} flagged regenerations")
-    print(f"[queue] Deleted {deleted_files} existing image files")
+    print(f"[queue] Archived {archived_files} existing image files for rollback")
     print(f"[queue] Pending total: {len(queue['pending'])}")
     return entries
 
@@ -448,111 +399,32 @@ def run_generation(dry_run: bool = False, backend: str = "gemini"):
 # ---------------------------------------------------------------------------
 
 def upload_to_r2(entries: list[dict], dry_run: bool = False):
-    """Upload regenerated images to Cloudflare R2."""
-    if not CLOUDFLARE_R2_TOKEN or not CLOUDFLARE_ACCOUNT_ID:
-        print("[r2] No R2 credentials — skipping upload")
-        print("[r2] Set CLOUDFLARE_R2_TOKEN and CLOUDFLARE_ACCOUNT_ID in .env")
-        return False
-
-    bucket = "colotopia-images"
-    api_base = f"https://api.cloudflare.com/client/v4/accounts/{CLOUDFLARE_ACCOUNT_ID}/r2/buckets/{bucket}/objects"
-
-    uploaded = 0
-    failed = 0
-
+    """Only fresh successful queue entries can be published; never infer success from a file."""
+    completed = {item["fr_slug"]: item for item in load_queue().get("completed", [])}
+    manifests = []
     for entry in entries:
-        slug = entry["fr_slug"]
-        # Upload PNG, WebP, and thumbnail
-        files_to_upload = [
-            (IMAGES_DIR / f"{slug}.png", f"coloriages/{slug}.png", "image/png"),
-            (IMAGES_DIR / f"{slug}.webp", f"coloriages/{slug}.webp", "image/webp"),
-            (IMAGES_DIR / "thumbs" / f"{slug}.webp", f"coloriages/thumbs/{slug}.webp", "image/webp"),
-        ]
-
-        for local_path, r2_key, content_type in files_to_upload:
-            if not local_path.exists():
-                continue
-
-            if dry_run:
-                print(f"  [r2 dry-run] Would upload: {r2_key}")
-                continue
-
-            try:
-                with open(local_path, "rb") as f:
-                    file_data = f.read()
-
-                url = f"{api_base}/{r2_key}"
-                req = urllib.request.Request(url, data=file_data, method="PUT", headers={
-                    "Authorization": f"Bearer {CLOUDFLARE_R2_TOKEN}",
-                    "Content-Type": content_type,
-                })
-                with urllib.request.urlopen(req, timeout=60) as resp:
-                    if resp.status == 200:
-                        uploaded += 1
-                    else:
-                        print(f"  [r2] Failed {r2_key}: HTTP {resp.status}")
-                        failed += 1
-            except Exception as e:
-                print(f"  [r2] Error uploading {r2_key}: {e}")
-                failed += 1
-
-    print(f"[r2] Uploaded: {uploaded}, Failed: {failed}")
-    return failed == 0
+        result = completed.get(entry["fr_slug"])
+        if not dry_run and (not result or result.get("completed_reason") == "image already existed"
+                            or result.get("completed_at", "") < entry["added_at"]):
+            continue
+        if dry_run:
+            print(f"[publish dry-run] Would verify and publish {entry['fr_slug']}")
+            continue
+        artwork = prepare_artwork(IMAGES_DIR, entry["fr_slug"], entry["previous_image_path"])
+        manifests.append(upload_artwork(artwork, CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_R2_TOKEN))
+    return manifests
 
 
-# ---------------------------------------------------------------------------
-# Step 5: Unflag in database
-# ---------------------------------------------------------------------------
-
-def unflag_regenerated(entries: list[dict], dry_run: bool = False):
-    """Unflag successfully regenerated items via the admin API."""
-    # Only unflag items whose images were actually regenerated
-    success_paths = []
-    for entry in entries:
-        slug = entry["fr_slug"]
-        if (IMAGES_DIR / f"{slug}.png").exists():
-            success_paths.append(slug)
-
-    if not success_paths:
-        print("[unflag] No successfully regenerated items to unflag")
-        return
-
-    if dry_run:
-        print(f"[unflag] Would unflag {len(success_paths)} items")
-        return
-
-    try:
-        result = api_post("/admin/colorings/unflag-batch", {"imagePaths": success_paths})
-        print(f"[unflag] Unflagged {result.get('unflagged', 0)} rows")
-    except Exception as e:
-        print(f"[unflag] Batch unflag failed ({e}), trying individual unflag...")
-        # Fallback: unflag one by one via the flag endpoint
-        unflagged = 0
-        for entry in entries:
-            slug = entry["fr_slug"]
-            if slug not in success_paths:
-                continue
-            # We need the item IDs — re-fetch from API
-            try:
-                data = api_get(f"/admin/colorings?flagged=true&limit=200")
-                for item in data.get("data", []):
-                    if item["slug"] == slug:
-                        req = urllib.request.Request(
-                            f"{API_BASE}/admin/colorings/{item['id']}/flag",
-                            data=json.dumps({"flagged": False}).encode(),
-                            method="PATCH",
-                            headers={
-                                "Authorization": f"Bearer {ADMIN_TOKEN}",
-                                "Content-Type": "application/json",
-                                "User-Agent": "Colotopia-RegenScript/1.0",
-                            }
-                        )
-                        urllib.request.urlopen(req, timeout=10)
-                        unflagged += 1
-                        break
-            except Exception:
-                pass
-        print(f"[unflag] Individually unflagged {unflagged} items")
+def unflag_regenerated(manifests: list[dict], dry_run: bool = False):
+    """Publication swaps the image and clears flags together, after CDN checks."""
+    if dry_run or not manifests:
+        return 0
+    published = 0
+    for index in range(0, len(manifests), 5):
+        result = api_post("/admin/colorings/publish-regenerated", {"replacements": manifests[index:index + 5]})
+        published += result.get("published", 0)
+    print(f"[publish] Published {published} locale rows with verified replacement images")
+    return published
 
 
 # ---------------------------------------------------------------------------
@@ -560,16 +432,15 @@ def unflag_regenerated(entries: list[dict], dry_run: bool = False):
 # ---------------------------------------------------------------------------
 
 def trigger_deploy(dry_run: bool = False):
-    """Trigger rebuild of both the Astro site and the API on Coolify."""
+    """Rebuild the static website after a successful catalog publication."""
     if not COOLIFY_TOKEN:
-        print("[deploy] No COOLIFY_TOKEN — skipping deploy")
-        return
+        raise RuntimeError("Catalog published, but COOLIFY_TOKEN is missing: rebuild the website before reporting completion")
 
     if dry_run:
-        print("[deploy] Would trigger Coolify deploy for site + API")
+        print("[deploy] Would trigger Coolify deploy for the website")
         return
 
-    for label, uuid in [("Colotopia site", COOLIFY_SITE_UUID), ("Colotopia API", COOLIFY_API_UUID)]:
+    for label, uuid in [("Colotopia site", COOLIFY_SITE_UUID)]:
         url = f"{COOLIFY_URL}/api/v1/deploy?uuid={uuid}&force=true"
         req = urllib.request.Request(url, headers={
             "Authorization": f"Bearer {COOLIFY_TOKEN}",
@@ -580,7 +451,7 @@ def trigger_deploy(dry_run: bool = False):
                 body = resp.read().decode("utf-8")
                 print(f"[deploy] {label} rebuild triggered: {body}")
         except Exception as e:
-            print(f"[deploy] Failed to trigger {label}: {e}")
+            raise RuntimeError(f"Catalog published, but the website rebuild failed: {type(e).__name__}") from e
 
 
 # ---------------------------------------------------------------------------
@@ -613,7 +484,7 @@ def show_status():
     print(f"  Pending: {len(queue.get('pending', []))} ({len(flagged_pending)} flagged regens)")
     print(f"  Completed: {len(queue.get('completed', []))}")
     print(f"  Failed: {len(queue.get('failed', []))}")
-    print(f"  Today's generations: {today_count}/70")
+    print(f"  Today's generations: {today_count}")
 
 
 # ---------------------------------------------------------------------------
@@ -629,10 +500,22 @@ def main():
     parser.add_argument("--skip-upload", action="store_true", help="Skip R2 upload step")
     parser.add_argument("--skip-unflag", action="store_true", help="Skip unflagging step")
     parser.add_argument("--skip-deploy", action="store_true", help="Skip Coolify deploy step")
+    parser.add_argument("--publish-manifest", type=Path, help="Publish a visually reviewed manifest instead of generating")
     args = parser.parse_args()
 
     if args.status:
         show_status()
+        return
+    if args.publish_manifest:
+        manifest = json.loads(args.publish_manifest.read_text())
+        if manifest.get("reviewed") is not True or not manifest.get("replacements"):
+            raise RuntimeError("Visual review is required before publishing replacement artwork")
+        if args.dry_run:
+            print(f"[publish dry-run] {len(manifest['replacements'])} reviewed replacements")
+            return
+        published = unflag_regenerated(manifest["replacements"])
+        if published and not args.skip_deploy:
+            trigger_deploy()
         return
 
     print("=" * 60)
@@ -665,28 +548,23 @@ def main():
     print("\n--- Step 3: Running image generation ---")
     gen_ok = run_generation(dry_run=args.dry_run, backend=args.backend)
     if not gen_ok and not args.dry_run:
-        print("[warn] Generation had errors — continuing with available images")
+        raise RuntimeError("Generation failed; publication cancelled and flags preserved")
 
-    # Step 4: Upload to R2
+    # An upload failure must never fall through into unflagging.
+    manifests = []
     if not args.skip_upload:
-        print("\n--- Step 4: Uploading to R2 ---")
-        upload_to_r2(entries, dry_run=args.dry_run)
-    else:
-        print("\n--- Step 4: Skipping R2 upload ---")
-
-    # Step 5: Unflag regenerated items
-    if not args.skip_unflag:
-        print("\n--- Step 5: Unflagging regenerated items ---")
-        unflag_regenerated(entries, dry_run=args.dry_run)
-    else:
-        print("\n--- Step 5: Skipping unflag ---")
-
-    # Step 6: Deploy
-    if not args.skip_deploy:
-        print("\n--- Step 6: Triggering deploy ---")
-        trigger_deploy(dry_run=args.dry_run)
-    else:
-        print("\n--- Step 6: Skipping deploy ---")
+        manifests = upload_to_r2(entries, dry_run=args.dry_run)
+    if manifests:
+        review_dir = ROOT / "data" / "artwork-reviews"
+        review_dir.mkdir(parents=True, exist_ok=True)
+        review_path = review_dir / f"{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')}.json"
+        review_path.write_text(json.dumps({
+            "reviewed": False,
+            "replacements": manifests,
+        }, indent=2))
+        print(f"[review] Inspect every replacement, then set reviewed=true in an approved manifest: {review_path}")
+        print("[review] Publish it with --publish-manifest; rejected drawings must stay flagged")
+    print("[publish] No catalog changes; existing flags were preserved")
 
     print("\n" + "=" * 60)
     print("  Pipeline complete!")
