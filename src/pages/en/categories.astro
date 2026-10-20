@@ -1,27 +1,23 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getPublishableColoriages } from '../../lib/coloriages';
-import { toThumb } from '../../lib/cdn';
-import { t, ti, kidsCategories, adultCategories, getCategoryLabel, getCategorySlug, getLocalePath, type Category } from '../../lib/i18n';
+import CategoryCard from '../../components/CategoryCard.astro';
+import { categoryArtwork } from '../../lib/category-artwork';
+import { t, categoryIcons, categoryColors, kidsCategories, adultCategories, getCategoryLabel, getCategorySlug, getLocalePath, type Category } from '../../lib/i18n';
 
 const locale = 'en';
 
 const allColoriages = await getPublishableColoriages('en');
 
-// Build category data: label, slug, count, and up to 4 preview images
+// Use the same reviewed illustrations as the homepage and category headers.
 function buildCategoryData(cats: readonly string[]) {
   return cats.map((cat) => {
     const items = allColoriages.filter((c) => c.data.category === cat);
-    const previews = items.slice(0, 4).map((c) => ({
-      image: c.data.image,
-      alt: c.data.alt,
-    }));
     return {
       key: cat as Category,
       label: getCategoryLabel(cat as Category, locale),
       href: getLocalePath(locale, `/${getCategorySlug(cat as Category, locale)}`),
       count: items.length,
-      previews,
     };
   });
 }
@@ -64,51 +60,31 @@ const structuredData = {
 
   <section class="category-grid" id="tab-kids" role="tabpanel">
     {kidsData.map((cat) => (
-      <a href={cat.href} class="category-card">
-        <div class="preview-grid">
-          {cat.previews.map((p) => {
-            const thumbWebp = toThumb(p.image);
-            return (
-              <picture>
-                <source type="image/webp" srcset={thumbWebp} />
-                <img src={p.image} alt={p.alt} loading="lazy" decoding="async" />
-              </picture>
-            );
-          })}
-          {cat.previews.length < 4 && Array.from({ length: 4 - cat.previews.length }).map(() => (
-            <div class="preview-placeholder" />
-          ))}
-        </div>
-        <div class="category-info">
-          <h2>{cat.label}</h2>
-          <span class="category-count">{ti('categories.count', locale, { count: String(cat.count) })}</span>
-        </div>
-      </a>
+      <CategoryCard
+        name={cat.label}
+        emoji={categoryIcons[cat.key]}
+        count={cat.count}
+        color={categoryColors[cat.key].light}
+        href={cat.href}
+        locale={locale}
+        image={categoryArtwork(cat.key)}
+        heading
+      />
     ))}
   </section>
 
   <section class="category-grid hidden" id="tab-adults" role="tabpanel">
     {adultsData.map((cat) => (
-      <a href={cat.href} class="category-card">
-        <div class="preview-grid">
-          {cat.previews.map((p) => {
-            const thumbWebp = toThumb(p.image);
-            return (
-              <picture>
-                <source type="image/webp" srcset={thumbWebp} />
-                <img src={p.image} alt={p.alt} loading="lazy" decoding="async" />
-              </picture>
-            );
-          })}
-          {cat.previews.length < 4 && Array.from({ length: 4 - cat.previews.length }).map(() => (
-            <div class="preview-placeholder" />
-          ))}
-        </div>
-        <div class="category-info">
-          <h2>{cat.label}</h2>
-          <span class="category-count">{ti('categories.count', locale, { count: String(cat.count) })}</span>
-        </div>
-      </a>
+      <CategoryCard
+        name={cat.label}
+        emoji={categoryIcons[cat.key]}
+        count={cat.count}
+        color={categoryColors[cat.key].light}
+        href={cat.href}
+        locale={locale}
+        image={categoryArtwork(cat.key)}
+        heading
+      />
     ))}
   </section>
 </BaseLayout>
@@ -220,67 +196,20 @@ const structuredData = {
 
   .category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .category-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+
+  @media (min-width: 1024px) {
+    .category-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   }
 
   .category-grid.hidden {
     display: none;
   }
 
-  .category-card {
-    display: block;
-    background: white;
-    border: 2px solid #f3f4f6;
-    border-radius: 16px;
-    overflow: hidden;
-    text-decoration: none;
-    transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
-  }
-
-  .category-card:hover {
-    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.12);
-    transform: translateY(-3px);
-    border-color: #bfdbfe;
-  }
-
-  .preview-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2px;
-    background: #f3f4f6;
-    aspect-ratio: 4 / 3;
-  }
-
-  .preview-grid picture {
-    overflow: hidden;
-  }
-
-  .preview-grid img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .preview-placeholder {
-    background: #f9fafb;
-  }
-
-  .category-info {
-    padding: 1rem;
-    text-align: center;
-  }
-
-  .category-info h2 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 0.25rem;
-  }
-
-  .category-count {
-    font-size: 0.85rem;
-    color: #6b7280;
-  }
 </style>

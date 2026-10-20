@@ -5,7 +5,7 @@
   "description": "Colotopia \u2014 site bilingue FR/EN de coloriages gratuits \u00e0 imprimer",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build && node scripts/verify-site.mjs",
+    "build": "node scripts/verify-category-artwork.mjs && astro check && astro build && node scripts/verify-site.mjs",
     "preview": "astro preview",
     "check": "astro check",
     "test": "vitest run",

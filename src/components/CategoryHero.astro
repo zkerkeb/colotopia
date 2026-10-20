@@ -1,0 +1,51 @@
+---
+import { categoryArtwork } from '../lib/category-artwork';
+import { categoryColors, type Category } from '../lib/i18n';
+
+interface Props {
+  category: Category;
+  title: string;
+}
+
+const { category, title } = Astro.props;
+const colors = categoryColors[category];
+---
+
+<div class="category-hero" style={`--hero-background: ${colors.light}; --hero-text: ${colors.text}`}>
+  <h1>{title}</h1>
+  <img src={categoryArtwork(category)} alt="" width="600" height="600" loading="eager" decoding="async" />
+</div>
+
+<style>
+  .category-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(110px, 26vw, 240px);
+    align-items: center;
+    gap: clamp(1rem, 3vw, 2.5rem);
+    padding: clamp(1rem, 3vw, 2.5rem);
+    min-height: 190px;
+    background: var(--hero-background);
+    margin-top: calc(-1 * var(--space-8));
+    margin-left: calc(-1 * var(--space-4));
+    margin-right: calc(-1 * var(--space-4));
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    color: var(--hero-text);
+    margin: 0;
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+    padding: var(--space-2);
+    border-radius: var(--radius-xl);
+    background: #fff;
+  }
+</style>

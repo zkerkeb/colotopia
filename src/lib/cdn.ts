@@ -26,16 +26,6 @@ export function cdnThumb(key: string): string {
   return normalized ? `${CDN_BASE}/coloriages/thumbs/${normalized}.webp` : key;
 }
 
-/** Category banner */
-export function cdnBanner(slug: string): string {
-  return `/images/optimized/banners/${slug}.webp`;
-}
-
-/** Small local category artwork for website cards. */
-export function categoryArtwork(slug: string): string {
-  return `/images/optimized/categories/${slug}.webp`;
-}
-
 /** Category icon */
 export function cdnCategoryIcon(slug: string): string {
   return `${CDN_BASE}/category-icons/${slug}.png`;

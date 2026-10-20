@@ -8,10 +8,14 @@ interface Props {
   href: string;
   locale?: string;
   image?: string;
+  heading?: boolean;
 }
 
-const { name, emoji, count, color, href, locale = 'fr', image } = Astro.props;
-const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring pages`;
+const { name, emoji, count, color, href, locale = 'fr', image, heading = false } = Astro.props;
+const countLabel = locale === 'fr'
+  ? `${count} coloriage${count === 1 ? '' : 's'}`
+  : `${count} coloring page${count === 1 ? '' : 's'}`;
+const Label = heading ? 'h2' : 'span';
 ---
 
 <a
@@ -23,10 +27,11 @@ const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring 
 >
   {image
     ? <>
-        <img class="category-cover" src={image} alt={name} loading="lazy" decoding="async" width="300" height="300" />
-        <span class="category-image-label">
-          <span class="category-image-label__text">{name}</span>
-        </span>
+        <img class="category-cover" src={image} alt="" loading="lazy" decoding="async" width="600" height="600" />
+        <div class="category-image-label">
+          <Label class="category-name">{name}</Label>
+          <span class="category-count">{countLabel}</span>
+        </div>
       </>
     : <>
         <span class="category-emoji" aria-hidden="true">{emoji}</span>
@@ -59,16 +64,17 @@ const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring 
 
   .category-card--image {
     padding: 0;
-    aspect-ratio: 1 / 1;
-    position: relative;
+    gap: 0;
+    background: #fff;
   }
 
   .category-cover {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    padding: var(--space-3);
     display: block;
-    border-radius: var(--radius-xl);
     transition: transform 0.3s ease;
   }
 
@@ -77,28 +83,16 @@ const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring 
   }
 
   .category-image-label {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 22% 8% 8%;
-    background: linear-gradient(to top, rgba(0,0,0,0.62) 0%, transparent 100%);
-    border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+    width: 100%;
+    flex: 1;
+    min-height: 5rem;
+    padding: var(--space-3);
+    background: var(--category-color);
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    gap: var(--space-1);
+    align-items: center;
     justify-content: center;
-    pointer-events: none;
-  }
-
-  .category-image-label__text {
-    font-family: 'Fredoka One', cursive;
-    font-weight: 400;
-    font-size: clamp(1rem, 4.5vw, 1.35rem);
-    color: #fff;
-    text-align: center;
-    letter-spacing: 0.04em;
-    line-height: 1.1;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
   }
 
   .category-emoji {
@@ -107,15 +101,22 @@ const countLabel = locale === 'fr' ? `${count} coloriages` : `${count} coloring 
   }
 
   .category-name {
+    margin: 0;
     font-family: var(--font-body);
     font-weight: var(--font-weight-extrabold);
     font-size: var(--font-size-base);
     color: var(--color-text);
+    line-height: 1.3;
   }
 
   .category-count {
     font-size: var(--font-size-xs);
     font-weight: var(--font-weight-semibold);
     color: rgba(45, 52, 54, 0.7);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .category-cover { transition: none; }
+    .category-card--image:hover .category-cover { transform: none; }
   }
 </style>
