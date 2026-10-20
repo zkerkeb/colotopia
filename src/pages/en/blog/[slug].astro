@@ -4,6 +4,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
 import { t, getBlogPath } from '../../../lib/i18n';
 import { getTranslatedBlogSlug } from '../../../lib/blog-alternates';
+import EditorialContent from '../../../components/EditorialContent.astro';
 
 const locale = 'en';
 
@@ -75,7 +76,7 @@ const articleSchema = {
     </header>
 
     <div class="article-body">
-      <Content />
+      <EditorialContent><Content /></EditorialContent>
     </div>
 
     <footer class="article-footer">

@@ -1,0 +1,8 @@
+---
+import { getFlaggedColoringPaths } from '../lib/coloriages';
+import { removeFlaggedColoringLinks } from '../lib/editorial-links';
+interface Props { html?: string }
+const html = Astro.props.html ?? await Astro.slots.render('default');
+const content = removeFlaggedColoringLinks(html, await getFlaggedColoringPaths());
+---
+<Fragment set:html={content} />

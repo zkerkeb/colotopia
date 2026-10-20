@@ -11,6 +11,7 @@ import { categories, getCategoryLabel, getCategorySlug, ti, type Category } from
 import { getPublishableColoriages } from '../../../lib/coloriages';
 import { getPillarContent, getRelatedCategories } from '../../../data/pillar-content';
 import CategoryHero from '../../../components/CategoryHero.astro';
+import EditorialContent from '../../../components/EditorialContent.astro';
 
 const locale = 'fr';
 
@@ -19,7 +20,7 @@ export async function getStaticPaths({ paginate }: { paginate: Function }) {
   const allColoriages = await getPublishableColoriages('fr');
   for (const cat of categories) {
     const coloriages = allColoriages.filter((c) => c.data.category === cat);
-    if (coloriages.length === 0) continue;
+    // Keep the category landing page and its empty state when moderation hides every drawing.
     const pages = paginate(coloriages, {
       params: { category: cat },
       props: { categoryKey: cat },
@@ -42,7 +43,7 @@ const canonical = Astro.url.href;
 const siteUrl = Astro.site?.href.replace(/\/$/, '') ?? 'https://colotopia.com';
 const enCatSlug = getCategorySlug(categoryKey, 'en');
 const translatedCount = (await getPublishableColoriages('en')).filter(c => c.data.category === categoryKey).length;
-const altUrl = page.currentPage > Math.ceil(translatedCount / 24) ? undefined : page.currentPage === 1
+const altUrl = page.currentPage > Math.max(1, Math.ceil(translatedCount / 24)) ? undefined : page.currentPage === 1
   ? `${siteUrl}/en/${enCatSlug}/`
   : `${siteUrl}/en/${enCatSlug}/${page.currentPage}/`;
 const firstImage = page.data[0]?.data.image;
@@ -169,7 +170,7 @@ const structuredData = {
   )}
 
   {page.currentPage === 1 && hasSeoText && !pillar && (
-    <div class="seo-content" set:html={seoText} />
+    <div class="seo-content"><EditorialContent html={seoText} /></div>
   )}
   </div>
 </BaseLayout>

@@ -36,6 +36,16 @@ export interface ColoringEntry {
  * Drop-in replacement for the old YAML-based version.
  */
 const cache = new Map<string, Promise<ColoringEntry[]>>();
+let flaggedPaths: Promise<Set<string>> | undefined;
+export function getFlaggedColoringPaths(): Promise<Set<string>> {
+  return flaggedPaths ??= (async () => {
+    const snapshot = process.env.COLORING_SNAPSHOT;
+    const rows: { locale: string; slug: string }[] = snapshot
+      ? JSON.parse(await readFile(snapshot, 'utf8')).colorings.filter((row: { flagged: boolean }) => row.flagged)
+      : await db.select({ locale: colorings.locale, slug: colorings.slug }).from(colorings).where(eq(colorings.flagged, true));
+    return new Set(rows.map(row => `/${row.locale}/${row.locale === 'fr' ? 'coloriage' : 'coloring'}/${row.slug}/`));
+  })().catch(error => { flaggedPaths = undefined; throw error; });
+}
 export function getPublishableColoriages(locale: 'fr' | 'en', preserveCategoryAliases = false): Promise<ColoringEntry[]> {
   if (!cache.has(locale)) cache.set(locale, loadColoriages(locale).catch(error => { cache.delete(locale); throw error; }));
   const result = cache.get(locale)!;
