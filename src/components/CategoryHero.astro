@@ -1,5 +1,5 @@
 ---
-import { categoryArtwork } from '../lib/category-artwork';
+import { categoryArtwork, categoryArtworkPreview } from '../lib/category-artwork';
 import { categoryColors, type Category } from '../lib/i18n';
 
 interface Props {
@@ -9,11 +9,12 @@ interface Props {
 
 const { category, title } = Astro.props;
 const colors = categoryColors[category];
+const preview = await categoryArtworkPreview(categoryArtwork(category));
 ---
 
 <div class="category-hero" style={`--hero-background: ${colors.light}; --hero-text: ${colors.text}`}>
   <h1>{title}</h1>
-  <img src={categoryArtwork(category)} alt="" width="600" height="600" loading="eager" decoding="async" />
+  <img src={preview.src} srcset={preview.srcSet.attribute} sizes="(max-width: 600px) 26vw, 240px" alt="" width="600" height="600" loading="eager" decoding="async" />
 </div>
 
 <style>

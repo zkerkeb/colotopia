@@ -34,7 +34,7 @@ Un dessin trop détaillé décourage un enfant de 2 ou 3 ans. Nos coloriages pou
 
 ### Coloriages pour les 2 ans
 
-A deux ans, l'enfant est dans la phase du gribouillage contrôlé. Il commence à comprendre qu'il peut laisser une trace sur le papier et expérimente avec enthousiasme. Les meilleurs coloriages à cet âge sont extrêmement simples : une [Fruits gros traits](/fr/coloriage/bold-et-facile-fruits/), un ballon, un soleil, une étoile. Ces formes basiques permettent à l'enfant de s'exercer sans se sentir dépassé.
+A deux ans, l'enfant est dans la phase du gribouillage contrôlé. Il commence à comprendre qu'il peut laisser une trace sur le papier et expérimente avec enthousiasme. Les meilleurs coloriages à cet âge sont extrêmement simples : des [fruits aux gros traits](/fr/coloriage/bold-et-facile-fruits/), un ballon, un soleil, une étoile. Ces formes basiques permettent à l'enfant de s'exercer sans se sentir dépassé.
 
 Les crayons de cire épais ou les gros feutres lavables sont les outils les plus adaptés à cet âge. L'enfant les tient à pleine main et peut produire des couleurs vives même avec une pression légère. Ne vous attendez pas à ce qu'il reste dans les contours : à deux ans, l'objectif est le plaisir du geste.
 

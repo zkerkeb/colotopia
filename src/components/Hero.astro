@@ -1,7 +1,7 @@
 ---
 import type { Locale } from '../lib/i18n';
 import { t, getLocalePath, getColoringBasePath } from '../lib/i18n';
-import { toThumb } from '../lib/cdn';
+import { coloringPreview } from '../lib/preview-images';
 import SearchBar from './SearchBar.astro';
 
 interface PreviewItem {
@@ -16,6 +16,7 @@ interface Props {
 }
 
 const { locale, previews = [] } = Astro.props;
+const optimized = await Promise.all(previews.slice(0, 4).map(p => coloringPreview(p.image, 'hero')));
 const title = locale === 'fr'
   ? 'Des coloriages magiques à imprimer !'
   : 'Magical coloring pages to print!';
@@ -59,12 +60,14 @@ const subtitle = locale === 'fr'
     {previews.length > 0 && (
       <div class="hero-previews" aria-label={locale === 'fr' ? 'Aperçu des coloriages' : 'Coloring pages preview'}>
         {previews.slice(0, 4).map((p, i) => {
-          const thumbWebp = toThumb(p.image);
+          const preview = optimized[i];
           const href = `${getLocalePath(locale, `/${getColoringBasePath(locale)}/${p.slug}`)}/`;
           return (
             <a href={href} class="hero-preview-thumb" style={`--rotate: ${[-2, 1.5, -1, 2][i] ?? 0}deg`}>
               <img
-                src={thumbWebp}
+                src={preview.src}
+                srcset={preview.srcset}
+                sizes="120px"
                 alt={p.alt}
                 width="90"
                 height="120"

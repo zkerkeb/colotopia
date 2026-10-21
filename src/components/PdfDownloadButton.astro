@@ -42,6 +42,7 @@ const fr = locale === 'fr';
         // The browser accepted the file; this does not prove it was saved or printed.
         track('pdf_download', { file_name: filename, coloring_slug: location.pathname.split('/').filter(Boolean).pop() });
       } catch {
+        track('pdf_error', { coloring_slug: location.pathname.split('/').filter(Boolean).pop() });
         status.textContent = fr ? 'Le PDF n’a pas pu être préparé. Réessayez ou ouvrez l’image PNG ci-dessous.' : 'The PDF could not be prepared. Try again or open the PNG image below.';
       } finally {
         if (objectUrl) URL.revokeObjectURL(objectUrl);

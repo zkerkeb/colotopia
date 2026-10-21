@@ -10,7 +10,7 @@ import AffiliateWidget from './AffiliateWidget.astro';
 import type { Locale } from '../lib/i18n';
 import type { Category } from '../lib/i18n';
 import { t, adultCategories, getLocalePath, getColoringBasePath, categoryColors, categoryIcons, getCategoryLabel, getCategorySlug } from '../lib/i18n';
-import { toWebp } from '../lib/cdn';
+import { coloringPreview } from '../lib/preview-images';
 
 interface RelatedItem {
   title: string;
@@ -55,10 +55,7 @@ const exploreCataLabel = locale === 'fr'
   : `More ${catLabel} coloring pages`;
 
 // Derive WebP from PNG URL (works with CDN URLs)
-const imageWebp = toWebp(image);
-
-// CDN has proper CORS headers — use image URL directly (no proxy needed)
-const imageProxy = image;
+const preview = await coloringPreview(image, 'page');
 
 // Social sharing URLs
 const siteUrl = 'https://colotopia.com';
@@ -109,7 +106,7 @@ const tipsList = locale === 'fr'
 
 
 
-<article class="coloring-page" data-coloring-title={title} data-coloring-category={category} data-coloring-slug={slug} data-locale={locale}>
+<article class="coloring-page" data-coloring-title={title} data-coloring-category={category} data-coloring-slug={slug} data-locale={locale} data-print-image={image}>
   <Breadcrumb locale={locale} category={category} currentPage={title} />
 
   <h1 class="page-title">{title}</h1>
@@ -121,12 +118,13 @@ const tipsList = locale === 'fr'
       <div class="coloring-image-frame" style={`--category-color: ${catColor.bg}`}>
         <div class="coloring-image">
           <picture>
-            <source type="image/webp" srcset={imageWebp} />
+            <source media="print" type="image/png" srcset={image} />
+            <source type="image/webp" srcset={preview.srcset} sizes="(max-width: 767px) calc(100vw - 64px), (max-width: 1023px) 60vw, 600px" />
             <img
-              src={image}
+              src={preview.src}
               alt={alt}
-              width="800"
-              height="1100"
+              width={preview.width}
+              height={preview.height}
               loading="eager"
               decoding="async"
               fetchpriority="high"
@@ -161,7 +159,11 @@ const tipsList = locale === 'fr'
           const status = document.querySelector<HTMLElement>('#print-status')!;
           printBtn.disabled = true; status.textContent = '';
           try {
-            await document.querySelector<HTMLImageElement>('.coloring-image img')!.decode();
+            // Load the print master only on request; the print media source above
+            // also serves browser-menu printing without reducing its resolution.
+            const master = new Image();
+            master.src = article.dataset.printImage!;
+            await master.decode();
             track('print_intent', { coloring_slug: article.dataset.coloringSlug });
             window.print();
           } catch {

@@ -152,7 +152,7 @@ const privacyHref = getPrivacyPath(locale);
       });
 
       // Charger AdSense seulement après consentement
-      if (prefs.ads && adsenseId && !document.querySelector('script[data-adsense-loaded]')) {
+      if (!window.colotopiaInternalTraffic && prefs.ads && adsenseId && !document.querySelector('script[data-adsense-loaded]')) {
         var s = document.createElement('script');
         s.async = true;
         s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + adsenseId;
@@ -162,7 +162,7 @@ const privacyHref = getPrivacyPath(locale);
       }
 
       // Charger Analytics seulement après consentement
-      if (prefs.analytics && gaId && !document.querySelector('script[data-ga-loaded]')) {
+      if (!window.colotopiaInternalTraffic && prefs.analytics && gaId && !document.querySelector('script[data-ga-loaded]')) {
         var g = document.createElement('script');
         g.async = true;
         g.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
@@ -171,7 +171,7 @@ const privacyHref = getPrivacyPath(locale);
         window.gtag('js', new Date());
         window.gtag('config', gaId);
       }
-      window.colotopiaAnalyticsReady = !!(prefs.analytics && gaId);
+      window.colotopiaAnalyticsReady = !!(!window.colotopiaInternalTraffic && prefs.analytics && gaId);
       window.dispatchEvent(new Event('colotopia:consent'));
       // Reload after withdrawal so previously executed third-party tags stop too.
       if (withdrawLoadedTags) window.location.reload();

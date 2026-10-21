@@ -119,6 +119,15 @@ const defaultUrl = locale === 'fr' ? (canonical ?? Astro.url.href) : altUrl;
     {/* Google Consent Mode v2 — default "denied" BEFORE any Google tag loads. */}
     {/* AdSense / Analytics scripts are loaded by CookieConsent.astro only after user opt-in. */}
     <script is:inline>
+      // Owner QA visits stay out of production analytics across navigation.
+      // Add ?colotopia_test=1 to enter; ?colotopia_test=0 leaves the session.
+      var testMode = new URLSearchParams(location.search).get('colotopia_test');
+      window.colotopiaInternalTraffic = testMode === '1' || ['localhost', '127.0.0.1'].includes(location.hostname);
+      try {
+        if (testMode === '1') sessionStorage.setItem('colotopia:test', '1');
+        if (testMode === '0') sessionStorage.removeItem('colotopia:test');
+        window.colotopiaInternalTraffic = window.colotopiaInternalTraffic || sessionStorage.getItem('colotopia:test') === '1';
+      } catch (_) {}
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       window.gtag = gtag;

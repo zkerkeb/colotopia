@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import logo from '../assets/colotopia-logo.png';
 import type { Locale } from '../lib/i18n';
 import { t, getLocalePath, getCategoriesPath, getBlogPath, kidsCategories, adultCategories, getCategoryLabel, getCategorySlug, categoryIcons } from '../lib/i18n';
 import CategoryNav from './CategoryNav.astro';
@@ -22,7 +24,7 @@ const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
   <div class="header-inner">
     <!-- Logo -->
     <a href={getLocalePath(locale)} class="header-logo-link" aria-label={locale === 'fr' ? 'Colotopia — Accueil' : 'Colotopia — Home'}>
-      <img src="/images/colotopia-logo.png" alt="Colotopia" class="header-logo" width="499" height="391" />
+      <Image src={logo} alt="Colotopia" class="header-logo" width={134} widths={[67, 134, 201]} sizes="67px" format="webp" quality={90} />
     </a>
 
     <!-- Desktop SearchBar -->

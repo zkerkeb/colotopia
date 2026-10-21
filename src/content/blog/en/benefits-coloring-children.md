@@ -48,9 +48,7 @@ Tips to encourage creative expression:
 
 ## Emotional Regulation and Confidence
 
-Coloring is a remarkably effective calming activity. The repetitive, rhythmic motion of filling in shapes has been shown to lower cortisol levels in children, making it a practical tool for moments of anxiety, overstimulation, or frustration.
-
-Many child psychologists use coloring as part of therapeutic interventions. When a child is too upset to talk about their feelings, handing them a simple coloring page can help them self-regulate and return to a calmer state. The activity requires just enough concentration to redirect attention away from distressing thoughts without being mentally taxing.
+Offer coloring as an optional activity. If a child is not interested or gets tired of it, let them choose another game. There is no duration or finished result to insist on, and these pages are not a form of treatment.
 
 Beyond emotional regulation, completing a coloring page gives children a tangible sense of accomplishment. Holding up a finished page and seeing a parent smile builds self-esteem in a gentle, sustainable way. Over time, that confidence extends beyond art into schoolwork, social interactions, and new challenges.
 

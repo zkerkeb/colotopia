@@ -52,7 +52,7 @@ Les reptiles marins comme le Plésiosaure et le Mosasaure complètent notre coll
 
 C'est la grande question que tous les enfants posent, et la bonne nouvelle, c'est qu'il n'y a pas de mauvaise réponse. Pendant longtemps, les scientifiques imaginaient les dinosaures dans des tons ternes de gris, vert et brun. Mais les découvertes récentes en paléontologie montrent que certains dinosaures étaient probablement très colorés.
 
-Des analyses de fossiles ont révélé que le Sinosauropteryx avait des rayures orange et blanches sur la queue. D'autres études suggèrent que certains dinosaures à plumes arboraient des couleurs iridescentes, comme les colibris actuels. Encouragez donc vos enfants à être audacieux dans leurs choix de couleurs : un dinosaure violet ou arc-en-ciel est tout à fait plausible du point de vue scientifique.
+Des analyses de fossiles ont révélé que le Sinosauropteryx avait des rayures orange et blanches sur la queue. D'autres études suggèrent que certains dinosaures à plumes arboraient des couleurs iridescentes, comme les colibris actuels. Pour un coloriage imaginaire, les enfants peuvent aussi inventer un dinosaure violet ou arc-en-ciel : ces choix créatifs ne constituent pas une reconstitution scientifique.
 
 ## Créer un paysage préhistorique complet
 

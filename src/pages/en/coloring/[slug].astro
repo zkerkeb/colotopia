@@ -1,4 +1,5 @@
 ---
+import { coloringMetadata } from '../../../lib/seo';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import ColoringPage from '../../../components/ColoringPage.astro';
 import { getPublishableColoriages, buildSlugMap } from '../../../lib/coloriages';
@@ -22,10 +23,7 @@ const siteUrl = Astro.site?.href.replace(/\/$/, '') ?? 'https://colotopia.com';
 const canonicalUrl = `${siteUrl}/en/coloring/${slug}/`;
 const altUrl = frSlug ? `${siteUrl}/fr/coloriage/${frSlug}/` : undefined;
 
-const pageTitle = seoTitle ?? `Free ${title} Coloring Page to Print | Coloring Pages`;
-const pageDescription =
-  seoDescription ??
-  `Download and print this free ${title} coloring page. A4 format, high quality, perfect for kids.`;
+const { title: pageTitle, description: pageDescription } = coloringMetadata(locale, title, seoTitle, seoDescription);
 
 const allEn = await getPublishableColoriages('en');
 const related = allEn
@@ -46,8 +44,6 @@ const structuredData = {
       contentUrl: imageWebp,
       thumbnailUrl: thumbWebp,
       encodingFormat: 'image/webp',
-      width: 800,
-      height: 1100,
       author: { '@type': 'Organization', name: 'Colotopia', url: siteUrl },
       copyrightHolder: { '@type': 'Organization', name: 'Colotopia' },
       license: `${siteUrl}/en/terms/`,
@@ -74,8 +70,6 @@ const structuredData = {
   canonical={canonicalUrl}
   altUrl={altUrl}
   ogImage={image}
-  ogImageWidth={800}
-  ogImageHeight={1100}
   ogType="article"
   articlePublishedTime={createdAt}
   structuredData={structuredData}

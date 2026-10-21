@@ -2,7 +2,7 @@
 import type { Locale } from '../lib/i18n';
 import type { Category } from '../lib/i18n';
 import { getLocalePath, getColoringBasePath, categoryIcons } from '../lib/i18n';
-import { toThumb } from '../lib/cdn';
+import { coloringPreview } from '../lib/preview-images';
 
 interface Props {
   title: string;
@@ -22,7 +22,7 @@ const icon = category ? categoryIcons[category] : undefined;
 const newLabel = locale === 'fr' ? 'Nouveau' : 'New';
 
 // Derive WebP thumbnail from PNG URL (works with both CDN and legacy paths)
-const thumbWebp = toThumb(image);
+const preview = await coloringPreview(image);
 ---
 
 <a href={href} class="coloring-card" data-audience={audience} data-fade-in>
@@ -31,11 +31,11 @@ const thumbWebp = toThumb(image);
     <picture>
       <source
         type="image/webp"
-        srcset={thumbWebp}
+        srcset={preview.srcset}
         sizes="(max-width: 639px) 50vw, (max-width: 1023px) 33vw, 25vw"
       />
       <img
-        src={image}
+        src={preview.src}
         alt={alt}
         width="300"
         height="424"

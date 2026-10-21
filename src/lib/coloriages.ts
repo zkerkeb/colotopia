@@ -4,6 +4,9 @@ import { and, eq, desc } from 'drizzle-orm';
 import { cdnPng } from './cdn';
 import { normalizeTags, canonicalCategory, pairTranslations } from './catalog';
 import { readFile } from 'node:fs/promises';
+import aliases from '../data/coloring-aliases.json';
+import stablePairs from '../data/translation-pairs.json';
+import { optionalText } from './seo';
 
 /**
  * Shape expected by every page and component.
@@ -24,6 +27,7 @@ export interface ColoringData {
   seoDescription?: string;
   printable: boolean;
   createdAt?: string;
+  updatedAt?: string;
 }
 
 export interface ColoringEntry {
@@ -67,7 +71,16 @@ async function loadColoriages(locale: 'fr' | 'en'): Promise<ColoringEntry[]> {
     .where(and(eq(colorings.locale, locale), eq(colorings.flagged, false)))
     .orderBy(desc(colorings.createdAt));
 
-  return rows.map((row) => ({
+  // Keep the database and moderation history intact. Consolidation is a web
+  // publication decision with explicit permanent redirects for the old URLs.
+  const canonicalRows = rows.filter(row => locale !== 'en' || !Object.hasOwn(aliases, row.slug));
+  for (const row of rows) {
+    const targetSlug = locale === 'en' ? (aliases as Record<string, string>)[row.slug] : undefined;
+    if (!targetSlug) continue;
+    const target = canonicalRows.find(item => item.slug === targetSlug);
+    if (!target || cdnPng(target.imagePath) !== cdnPng(row.imagePath)) throw new Error(`Review coloring alias before publication: ${row.slug} -> ${targetSlug}`);
+  }
+  return canonicalRows.map((row) => ({
     id: `${row.locale}/${row.slug}`,
     data: {
       title: row.title,
@@ -79,10 +92,11 @@ async function loadColoriages(locale: 'fr' | 'en'): Promise<ColoringEntry[]> {
       image: cdnPng(row.imagePath),
       alt: row.alt?.trim() || row.title,
       locale: row.locale,
-      seoTitle: row.seoTitle ?? undefined,
-      seoDescription: row.seoDescription ?? undefined,
+      seoTitle: optionalText(row.seoTitle),
+      seoDescription: optionalText(row.seoDescription),
       printable: row.printable,
       createdAt: row.createdAt ? new Date(row.createdAt).toISOString().split('T')[0] : undefined,
+      updatedAt: row.updatedAt ? new Date(row.updatedAt).toISOString() : undefined,
     },
   }));
 }
@@ -97,5 +111,5 @@ export async function buildSlugMap(): Promise<{
   const frPages = await getPublishableColoriages('fr');
   const enPages = await getPublishableColoriages('en');
 
-  return pairTranslations(frPages.map(c => c.data), enPages.map(c => c.data));
+  return pairTranslations(frPages.map(c => c.data), enPages.map(c => c.data), stablePairs);
 }

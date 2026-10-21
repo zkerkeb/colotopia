@@ -1,5 +1,6 @@
 /// <reference types="astro/client" />
 interface Window {
+  colotopiaInternalTraffic?: boolean;
   gtag?: (...args: any[]) => void;
   dataLayer?: unknown[];
   colotopiaAnalyticsReady?: boolean;

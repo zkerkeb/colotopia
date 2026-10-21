@@ -4,6 +4,7 @@ import { resolve, relative, extname } from 'node:path';
 import { parse } from 'parse5';
 
 const root = resolve('dist'), site = 'https://colotopia.com';
+const pageRedirects = JSON.parse(await readFile('src/data/page-redirects.json', 'utf8'));
 const files = [];
 async function scan(dir) { for (const item of await readdir(dir, { withFileTypes: true })) { const path = resolve(dir, item.name); if (item.isDirectory()) await scan(path); else files.push(path); } }
 await scan(root);
@@ -48,6 +49,7 @@ for (const page of pages.values()) {
   if (!page.redirect) {
     if (page.h1 !== 1) errors.add(`${page.path}: ${page.h1} H1 headings`);
     if (!page.title || !page.description) errors.add(`${page.path}: missing title/description`);
+    if (/^\/(fr\/coloriage|en\/coloring)\//.test(page.path) && (/^Colotopia\s*[—–-]/.test(page.title) || page.title === 'Colotopia')) errors.add(`${page.path}: generic drawing title`);
     if (!page.noindex && !page.canonical) errors.add(`${page.path}: missing canonical`);
     if (page.canonical && normalized(new URL(page.canonical).pathname) !== normalized(page.path)) errors.add(`${page.path}: canonical points elsewhere: ${page.canonical}`);
   }
@@ -74,6 +76,7 @@ for (const file of files.filter(file => /sitemap-\d+\.xml$/.test(file))) {
     sitemapUrls++;
     const page = pages.get(locate(new URL(match[1]).pathname));
     if (!page || page.noindex || page.redirect) errors.add(`sitemap: invalid page ${match[1]}`);
+    if (Object.hasOwn(pageRedirects, new URL(match[1]).pathname)) errors.add(`sitemap: retired page ${match[1]}`);
   }
   for (const match of xml.matchAll(/<xhtml:link[^>]*href="([^"]+)"/g)) if (!locate(new URL(match[1]).pathname)) errors.add(`sitemap: absent alternate ${match[1]}`);
 }
@@ -83,11 +86,30 @@ for (const locale of ['fr', 'en']) {
   for (const item of index) {
     if (seen.has(item.slug)) errors.add(`search ${locale}: duplicate ${item.slug}`); seen.add(item.slug);
     if (!Array.isArray(item.tags) || item.tags.some(t => typeof t !== 'string')) errors.add(`search ${locale}: invalid tags ${item.slug}`);
-    if (!locate(new URL(item.url, site).pathname)) errors.add(`search ${locale}: absent page ${item.slug}`);
+    const target = pages.get(locate(new URL(item.url, site).pathname));
+    if (!target || target.redirect) errors.add(`search ${locale}: absent or redirected page ${item.slug}`);
     if (item.thumbnail) remote.add(item.thumbnail);
   }
 }
-const report = { pages: pages.size, checkedLinks, alternateCount, sitemapUrls, remoteImages: remote.size, errors: [...errors] };
+const imageXml = await readFile(resolve(root, 'sitemap-images.xml'), 'utf8');
+const imagePages = new Set();
+for (const match of imageXml.matchAll(/<url>([\s\S]*?)<\/url>/g)) {
+  const entry = match[1], url = entry.match(/<loc>(.*?)<\/loc>/)?.[1];
+  const page = url && pages.get(locate(new URL(url).pathname));
+  if (!page || page.noindex || page.redirect || !/^\/(fr\/coloriage|en\/coloring)\//.test(page.path)) errors.add(`image sitemap: invalid page ${url}`);
+  if (imagePages.has(url)) errors.add(`image sitemap: duplicate page ${url}`);
+  imagePages.add(url);
+  const imageUrl = entry.match(/<image:loc>(.*?)<\/image:loc>/)?.[1];
+  if (!imageUrl || !/^https:\/\/cdn\.colotopia\.com\/coloriages\/.+\.webp$/.test(imageUrl)) errors.add(`image sitemap: invalid image ${imageUrl}`);
+  const modified = entry.match(/<lastmod>(.*?)<\/lastmod>/)?.[1];
+  if (!modified || !Number.isFinite(Date.parse(modified))) errors.add(`image sitemap: invalid lastmod for ${url}`);
+}
+for (const page of pages.values()) if (!page.redirect && /^\/(fr\/coloriage|en\/coloring)\//.test(page.path) && !imagePages.has(site + page.path)) errors.add(`image sitemap: missing ${page.path}`);
+const sitemapIndex = await readFile(resolve(root, 'sitemap-index.xml'), 'utf8');
+if (!sitemapIndex.includes(`${site}/sitemap-images.xml`)) errors.add('image sitemap: absent from sitemap index');
+const redirectMap = await readFile(resolve(root, '_redirects.nginx'), 'utf8');
+for (const [from, to] of Object.entries(pageRedirects)) if (!redirectMap.includes(`${JSON.stringify(from)} ${JSON.stringify(to)};`)) errors.add(`nginx map: missing redirect ${from}`);
+const report = { pages: pages.size, checkedLinks, alternateCount, sitemapUrls, imageSitemapUrls: imagePages.size, pageRedirects: Object.keys(pageRedirects).length, remoteImages: remote.size, errors: [...errors] };
 await writeFile('/tmp/colotopia-site-verification.json', JSON.stringify(report, null, 2));
 await writeFile('/tmp/colotopia-remote-images.json', JSON.stringify([...remote]));
 console.log(JSON.stringify({ ...report, errors: report.errors.slice(0, 35), totalErrors: errors.size }, null, 2));

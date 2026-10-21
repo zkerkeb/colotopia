@@ -1,4 +1,5 @@
 ---
+import { categoryArtworkPreview } from '../lib/category-artwork';
 interface Props {
   name: string;
   slug?: string;
@@ -16,6 +17,7 @@ const countLabel = locale === 'fr'
   ? `${count} coloriage${count === 1 ? '' : 's'}`
   : `${count} coloring page${count === 1 ? '' : 's'}`;
 const Label = heading ? 'h2' : 'span';
+const preview = image ? await categoryArtworkPreview(image) : undefined;
 ---
 
 <a
@@ -27,7 +29,7 @@ const Label = heading ? 'h2' : 'span';
 >
   {image
     ? <>
-        <img class="category-cover" src={image} alt="" loading="lazy" decoding="async" width="600" height="600" />
+        <img class="category-cover" src={preview!.src} srcset={preview!.srcSet.attribute} sizes="(max-width: 639px) calc(50vw - 32px), (max-width: 1023px) 30vw, 250px" alt="" loading="lazy" decoding="async" width="600" height="600" />
         <div class="category-image-label">
           <Label class="category-name">{name}</Label>
           <span class="category-count">{countLabel}</span>

@@ -51,7 +51,7 @@ Le mécanisme est à la fois simple et puissant. Le geste répétitif du coloria
 
 Les [coloriages bold et facile](/fr/bold-et-facile/) sont particulièrement recommandés dans ce contexte. Leurs formes simples et rassurantes permettent à l'enfant de se concentrer sur l'acte de colorier sans la frustration que pourraient engendrer des dessins trop complexes.
 
-Des études cliniques montrent que le coloriage réduit les niveaux de cortisol — l'hormone du stress — de près de 20 % chez les enfants de 5 à 10 ans. C'est pourquoi de nombreuses salles d'attente pédiatriques et cabinets de psychologues proposent systématiquement des coloriages.
+Proposez le coloriage comme une activité facultative. Si l'enfant n'en a pas envie ou se lasse, laissez-le choisir un autre jeu : il n'y a pas de durée ni de résultat à imposer.
 
 ## Comment tirer le meilleur parti du coloriage pour votre enfant
 
