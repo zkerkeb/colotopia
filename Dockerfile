@@ -9,7 +9,9 @@ ARG DATABASE_URL
 ENV PUBLIC_GA_MEASUREMENT_ID=$PUBLIC_GA_MEASUREMENT_ID
 ENV PUBLIC_ADSENSE_PUBLISHER_ID=$PUBLIC_ADSENSE_PUBLISHER_ID
 ENV DATABASE_URL=$DATABASE_URL
-RUN npm run verify
+# Keep only fingerprinted image artifacts between builds. Tests and catalog
+# publication still run against the current commit and database on every deploy.
+RUN --mount=type=cache,id=colotopia-astro-assets-v1,target=/app/node_modules/.astro/assets,sharing=locked npm run verify
 
 FROM nginx:alpine
 COPY --from=build /app/dist /usr/share/nginx/html
