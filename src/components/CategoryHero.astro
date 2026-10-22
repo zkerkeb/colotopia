@@ -14,21 +14,20 @@ const preview = await categoryArtworkPreview(categoryArtwork(category));
 
 <div class="category-hero" style={`--hero-background: ${colors.light}; --hero-text: ${colors.text}`}>
   <h1>{title}</h1>
-  <img src={preview.src} srcset={preview.srcSet.attribute} sizes="(max-width: 600px) 26vw, 240px" alt="" width="600" height="600" loading="eager" decoding="async" />
+  <img src={preview.src} srcset={preview.srcSet.attribute} sizes="(max-width: 600px) 20vw, 140px" alt="" width="600" height="600" loading="eager" decoding="async" />
 </div>
 
 <style>
   .category-hero {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) clamp(110px, 26vw, 240px);
+    grid-template-columns: minmax(0, 1fr) clamp(80px, 20vw, 140px);
     align-items: center;
     gap: clamp(1rem, 3vw, 2.5rem);
     padding: clamp(1rem, 3vw, 2.5rem);
-    min-height: 190px;
+    min-height: 140px;
+    border-radius:20px;
     background: var(--hero-background);
-    margin-top: calc(-1 * var(--space-8));
-    margin-left: calc(-1 * var(--space-4));
-    margin-right: calc(-1 * var(--space-4));
+    margin-bottom:1rem;
   }
 
   h1 {

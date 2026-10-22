@@ -1,0 +1,131 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CategoryCard from "./CategoryCard.astro";
+import { getPublishableColoriages } from "../lib/coloriages";
+import { categoryArtwork } from "../lib/category-artwork";
+import {
+  kidsCategories,
+  adultCategories,
+  getCategoryLabel,
+  getCategorySlug,
+  categoryIcons,
+  categoryColors,
+  type Category,
+  type Locale,
+} from "../lib/i18n";
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const fr = locale === "fr";
+const all = await getPublishableColoriages(locale);
+const groups = [
+  {
+    id: "kids",
+    title: fr ? "Pour les enfants" : "For kids",
+    items: kidsCategories,
+  },
+  {
+    id: "adults",
+    title: fr ? "Pour les adultes" : "For adults",
+    items: adultCategories,
+  },
+];
+const title = fr ? "Tous les thèmes de coloriage" : "All coloring themes";
+const description = fr
+  ? "Animaux, dinosaures, licornes, mandalas : trouvez votre thème et choisissez un coloriage gratuit à télécharger en PDF A4 et à imprimer."
+  : "Animals, dinosaurs, unicorns and mandalas: find your theme and choose a free coloring page to download as an A4 PDF and print.";
+---
+
+<BaseLayout
+  locale={locale}
+  title={title}
+  description={description}
+  canonical={`https://colotopia.com/${locale}/categories/`}
+  altUrl={`https://colotopia.com/${fr ? "en" : "fr"}/categories/`}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: title,
+    description,
+    url: `https://colotopia.com/${locale}/categories/`,
+  }}
+>
+  <header>
+    <h1>{title}</h1>
+    <p>{description}</p>
+    <nav aria-label={fr ? "Choisir une sélection" : "Choose a selection"}>
+      <a href="#kids">{fr ? "Pour les enfants" : "For kids"}</a>
+      <a href="#adults">{fr ? "Pour les adultes" : "For adults"}</a>
+      <a href={`/${locale}/collections/`}>Collections PDF →</a>
+    </nav>
+  </header>
+  {groups.map((group) => (
+    <section id={group.id}>
+      <h2>{group.title}</h2>
+      <div class="category-grid">
+        {group.items.map((key) => {
+          const cat = key as Category;
+          return (
+            <CategoryCard
+              name={getCategoryLabel(cat, locale)}
+              emoji={categoryIcons[cat]}
+              count={all.filter((c) => c.data.category === cat).length}
+              color={categoryColors[cat].light}
+              href={`/${locale}/${getCategorySlug(cat, locale)}/`}
+              locale={locale}
+              image={categoryArtwork(cat)}
+              heading
+            />
+          );
+        })}
+      </div>
+    </section>
+  ))}
+</BaseLayout>
+<style>
+  header {
+    margin-bottom: 2rem;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  header p {
+    max-width: 46rem;
+    color: #625e71;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+  nav a {
+    padding: 0.65rem 1rem;
+    background: #eee8fc;
+    border-radius: 30px;
+    font-weight: 800;
+  }
+  section {
+    margin-bottom: 2.5rem;
+    scroll-margin-top: 1rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  @media (max-width: 768px) {
+    .category-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+  }
+</style>

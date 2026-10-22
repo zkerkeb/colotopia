@@ -1,0 +1,13 @@
+---
+import CollectionPage from "../../../components/CollectionPage.astro";
+import { collectionDefinitions } from "../../../lib/collections";
+export function getStaticPaths() {
+  return collectionDefinitions.map((c) => ({
+    params: { slug: c.fr.slug },
+    props: { id: c.id },
+  }));
+}
+const { id } = Astro.props;
+---
+
+<CollectionPage locale="fr" id={id} />

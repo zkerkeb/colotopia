@@ -1,695 +1,224 @@
 ---
-import { Image } from 'astro:assets';
-import logo from '../assets/colotopia-logo.png';
-import type { Locale } from '../lib/i18n';
-import { t, getLocalePath, getCategoriesPath, getBlogPath, kidsCategories, adultCategories, getCategoryLabel, getCategorySlug, categoryIcons } from '../lib/i18n';
-import CategoryNav from './CategoryNav.astro';
-import SearchBar from './SearchBar.astro';
-
+import Brand from "./Brand.astro";
+import SearchBar from "./SearchBar.astro";
+import type { Locale } from "../lib/i18n";
 interface Props {
   locale: Locale;
   altUrl?: string;
 }
-
 const { locale, altUrl } = Astro.props;
-const altLocale = locale === 'fr' ? 'en' : 'fr';
-const altLabel = locale === 'fr' ? 'EN' : 'FR';
-const categoriesLabel = locale === 'fr' ? 'Catégories' : 'Categories';
-const kidsLabel = locale === 'fr' ? 'Enfants' : 'Kids';
-const adultsLabel = locale === 'fr' ? 'Adultes' : 'Adults';
-const closeLabel = locale === 'fr' ? 'Fermer le menu' : 'Close menu';
+const fr = locale === "fr";
+const links = [
+  {
+    href: `/${locale}/categories/`,
+    label: fr ? "Coloriages" : "Coloring pages",
+  },
+  { href: `/${locale}/collections/`, label: "Collections" },
+  {
+    href: `/${locale}/categories/#adults`,
+    label: fr ? "Pour les adultes" : "For adults",
+  },
+];
+const other = altUrl ? new URL(altUrl).pathname : fr ? "/en/" : "/fr/";
 ---
 
 <header class="site-header" id="site-header">
   <div class="header-inner">
-    <!-- Logo -->
-    <a href={getLocalePath(locale)} class="header-logo-link" aria-label={locale === 'fr' ? 'Colotopia — Accueil' : 'Colotopia — Home'}>
-      <Image src={logo} alt="Colotopia" class="header-logo" width={134} widths={[67, 134, 201]} sizes="67px" format="webp" quality={90} />
-    </a>
-
-    <!-- Desktop SearchBar -->
-    <div class="header-search">
-      <SearchBar locale={locale} />
-    </div>
-
-    <!-- Desktop nav -->
-    <nav class="header-nav" aria-label={locale === 'fr' ? 'Navigation principale' : 'Main navigation'}>
-      <!-- Categories mega menu trigger -->
-      <div class="nav-item nav-item--dropdown">
-        <button class="nav-link nav-link--dropdown" aria-expanded="false" aria-haspopup="true" id="mega-menu-btn">
-          {categoriesLabel} <span class="nav-chevron" aria-hidden="true">▾</span>
-        </button>
-        <div class="mega-menu" id="mega-menu" role="region" aria-label={categoriesLabel} hidden>
-          <div class="mega-menu-inner">
-            <div class="mega-menu-section">
-              <h4 class="mega-menu-title">{kidsLabel}</h4>
-              <ul class="mega-menu-list">
-                {kidsCategories.map((cat) => (
-                  <li>
-                    <a href={getLocalePath(locale, `/${getCategorySlug(cat, locale)}`)} class="mega-menu-link">
-                      <span class="mega-menu-emoji" aria-hidden="true">{categoryIcons[cat]}</span>
-                      {getCategoryLabel(cat, locale)}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div class="mega-menu-section">
-              <h4 class="mega-menu-title">{adultsLabel}</h4>
-              <ul class="mega-menu-list">
-                {adultCategories.map((cat) => (
-                  <li>
-                    <a href={getLocalePath(locale, `/${getCategorySlug(cat, locale)}`)} class="mega-menu-link">
-                      <span class="mega-menu-emoji" aria-hidden="true">{categoryIcons[cat]}</span>
-                      {getCategoryLabel(cat, locale)}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Blog link -->
-      <a href={getBlogPath(locale)} class="nav-link">Blog</a>
-
-      <!-- Lang switch -->
+    <Brand locale={locale} />
+    <nav
+      class="desktop-nav"
+      aria-label={fr ? "Navigation principale" : "Main navigation"}
+    >
+      {links.map((link) => (
+        <a href={link.href}>{link.label}</a>
+      ))}
       <a
-        href={altUrl ? new URL(altUrl, Astro.site).pathname : `/${altLocale}/`}
-        class="nav-link nav-link--lang"
-        aria-label={`Switch to ${altLabel}`}
+        class="language"
+        href={other}
+        lang={fr ? "en" : "fr"}
+        aria-label={fr ? "View in English" : "Voir en français"}
       >
-        {altLabel}
+        {fr ? "EN" : "FR"} <span aria-hidden="true">↗</span>
       </a>
     </nav>
-
-    <!-- Mobile: hamburger -->
-    <button class="hamburger" id="hamburger-btn" aria-label={t('nav.menu', locale)} aria-expanded="false" aria-controls="mobile-drawer">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-        <line x1="3" y1="6" x2="21" y2="6"/>
-        <line x1="3" y1="12" x2="21" y2="12"/>
-        <line x1="3" y1="18" x2="21" y2="18"/>
+    <button
+      id="hamburger-btn"
+      class="menu-button"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-drawer"
+      aria-label={fr ? "Ouvrir le menu" : "Open menu"}
+    >
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        aria-hidden="true"
+      >
+        <path d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
   </div>
-
-  <!-- Mobile drawer overlay -->
-  <div class="drawer-overlay" id="drawer-overlay" aria-hidden="true" hidden></div>
-
-  <!-- Mobile drawer -->
-  <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label={t('nav.menu', locale)} hidden>
-    <div class="drawer-header">
-      <a href={getLocalePath(locale)} class="drawer-logo-link" aria-label="Colotopia">
-        <span class="drawer-logo-text">Colotopia</span>
-      </a>
-      <button class="drawer-close" id="drawer-close-btn" aria-label={closeLabel}>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-          <line x1="18" y1="6" x2="6" y2="18"/>
-          <line x1="6" y1="6" x2="18" y2="18"/>
-        </svg>
+  <dialog id="mobile-drawer" aria-label={fr ? "Menu principal" : "Main menu"}>
+    <div class="drawer-top">
+      <strong>Colotopia</strong>
+      <button
+        class="close-button"
+        type="button"
+        aria-label={fr ? "Fermer le menu" : "Close menu"}
+      >
+        ×
       </button>
     </div>
-
-    <div class="drawer-inner">
-      <!-- Mobile search -->
-      <form class="drawer-search" action={locale === 'fr' ? '/fr/recherche/' : '/en/search/'} method="get" role="search">
-        <div class="drawer-search-wrapper">
-          <svg class="drawer-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
-          </svg>
-          <input
-            type="search"
-            name="q"
-            class="drawer-search-input"
-            placeholder={locale === 'fr' ? 'Chercher un coloriage…' : 'Search for a coloring…'}
-            aria-label={locale === 'fr' ? 'Rechercher un coloriage' : 'Search for a coloring page'}
-            autocomplete="off"
-          />
-        </div>
-      </form>
-
-      <nav class="drawer-nav">
-        <a href={getLocalePath(locale)} class="drawer-link">{t('nav.home', locale)}</a>
-        <a href={getCategoriesPath(locale)} class="drawer-link">{t('nav.categories', locale)}</a>
-        <a href={getBlogPath(locale)} class="drawer-link">Blog</a>
-      </nav>
-
-      <div class="drawer-section">
-        <h4 class="drawer-section-title">{kidsLabel}</h4>
-        <div class="drawer-categories">
-          {kidsCategories.map((cat) => (
-            <a href={getLocalePath(locale, `/${getCategorySlug(cat, locale)}`)} class="drawer-cat">
-              <span class="drawer-cat-icon" aria-hidden="true">{categoryIcons[cat]}</span>
-              {getCategoryLabel(cat, locale)}
-            </a>
-          ))}
-        </div>
-      </div>
-
-      <div class="drawer-section">
-        <h4 class="drawer-section-title">{adultsLabel}</h4>
-        <div class="drawer-categories">
-          {adultCategories.map((cat) => (
-            <a href={getLocalePath(locale, `/${getCategorySlug(cat, locale)}`)} class="drawer-cat">
-              <span class="drawer-cat-icon" aria-hidden="true">{categoryIcons[cat]}</span>
-              {getCategoryLabel(cat, locale)}
-            </a>
-          ))}
-        </div>
-      </div>
-
-      <div class="drawer-footer">
-        <a
-          href={altUrl ? new URL(altUrl, Astro.site).pathname : `/${altLocale}/`}
-          class="drawer-lang-switch"
-          aria-label={locale === 'fr' ? `Passer en anglais (${altLabel})` : `Switch to French (${altLabel})`}
-        >
-          🌐 {altLabel}
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <CategoryNav locale={locale} />
+    <SearchBar locale={locale} showSubmit />
+    <nav aria-label={fr ? "Navigation mobile" : "Mobile navigation"}>
+      <a href={`/${locale}/`}>{fr ? "Accueil" : "Home"}</a>
+      {links.map((link) => (
+        <a href={link.href}>{link.label}</a>
+      ))}
+      <a href={`/${locale}/blog/`}>
+        {fr ? "Idées et conseils" : "Ideas and tips"}
+      </a>
+      <a href={other} lang={fr ? "en" : "fr"}>
+        {fr ? "English" : "Français"}
+      </a>
+    </nav>
+  </dialog>
 </header>
-
 <script>
-  import { track as trackEvent } from '../lib/analytics';
-  // Scroll effect
-  const header = document.getElementById('site-header');
-  if (header) {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        header.classList.toggle('site-header--scrolled', !entry.isIntersecting);
-      },
-      { threshold: 0, rootMargin: '-1px 0px 0px 0px' }
-    );
-    const sentinel = document.createElement('div');
-    sentinel.style.cssText = 'position:absolute;top:0;height:1px;width:1px;pointer-events:none';
-    document.body.prepend(sentinel);
-    observer.observe(sentinel);
-  }
-
-  // Mega menu (desktop hover + keyboard)
-  const megaBtn = document.getElementById('mega-menu-btn');
-  const megaMenu = document.getElementById('mega-menu');
-  if (megaBtn && megaMenu) {
-    const parent = megaBtn.closest('.nav-item--dropdown');
-    let hoverTimeout: ReturnType<typeof setTimeout>;
-
-    function openMenu() {
-      clearTimeout(hoverTimeout);
-      megaMenu!.hidden = false;
-      megaBtn!.setAttribute('aria-expanded', 'true');
-    }
-
-    function closeMenu() {
-      hoverTimeout = setTimeout(() => {
-        megaMenu!.hidden = true;
-        megaBtn!.setAttribute('aria-expanded', 'false');
-      }, 150);
-    }
-
-    parent?.addEventListener('mouseenter', openMenu);
-    parent?.addEventListener('mouseleave', closeMenu);
-    megaBtn.addEventListener('click', () => {
-      const isOpen = !megaMenu.hidden;
-      if (isOpen) closeMenu(); else openMenu();
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !megaMenu.hidden) closeMenu();
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!parent?.contains(e.target as Node)) closeMenu();
-    });
-  }
-
-  // Mobile drawer
-  const hamburgerBtn = document.getElementById('hamburger-btn');
-  const drawerCloseBtn = document.getElementById('drawer-close-btn');
-  const mobileDrawer = document.getElementById('mobile-drawer');
-  const drawerOverlay = document.getElementById('drawer-overlay');
-
-  function openDrawer() {
-    if (!mobileDrawer || !hamburgerBtn) return;
-    mobileDrawer.hidden = false;
-    if (drawerOverlay) drawerOverlay.hidden = false;
-    hamburgerBtn.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
-    drawerCloseBtn?.focus();
-  }
-
-  function closeDrawer() {
-    if (!mobileDrawer || !hamburgerBtn) return;
-    mobileDrawer.hidden = true;
-    if (drawerOverlay) drawerOverlay.hidden = true;
-    hamburgerBtn.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-    hamburgerBtn.focus();
-  }
-
-  mobileDrawer?.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') { closeDrawer(); return; }
-    if (event.key !== 'Tab') return;
-    const elements = [...mobileDrawer.querySelectorAll<HTMLElement>('a[href], button, input')];
-    const first = elements[0], last = elements[elements.length - 1];
-    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
-    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+  const trigger = document.querySelector<HTMLButtonElement>("#hamburger-btn")!;
+  const drawer = document.querySelector<HTMLDialogElement>("#mobile-drawer")!;
+  trigger.addEventListener("click", () => {
+    drawer.showModal();
+    trigger.setAttribute("aria-expanded", "true");
+    document.documentElement.style.overflow = "hidden";
   });
-  hamburgerBtn?.addEventListener('click', openDrawer);
-  drawerCloseBtn?.addEventListener('click', closeDrawer);
-  drawerOverlay?.addEventListener('click', closeDrawer);
-
-  mobileDrawer?.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', closeDrawer);
+  drawer
+    .querySelector(".close-button")!
+    .addEventListener("click", () => drawer.close());
+  drawer.addEventListener("click", (event) => {
+    if (event.target === drawer) {
+      const r = drawer.getBoundingClientRect();
+      if (
+        event.clientX < r.left ||
+        event.clientX > r.right ||
+        event.clientY < r.top ||
+        event.clientY > r.bottom
+      )
+        drawer.close();
+    }
   });
-
-  // GA4: track category clicks in mega menu and mobile drawer
-  document.querySelectorAll('.mega-menu-link, .drawer-cat').forEach((link) => {
-    link.addEventListener('click', () => {
-      if (true) {
-        const isMobile = link.classList.contains('drawer-cat');
-        trackEvent('category_click', {
-          category_name: (link as HTMLAnchorElement).textContent?.trim(),
-          link_url: (link as HTMLAnchorElement).href,
-          navigation_type: isMobile ? 'mobile_drawer' : 'mega_menu',
-        });
-      }
-    });
+  drawer
+    .querySelectorAll("a")
+    .forEach((a) => a.addEventListener("click", () => drawer.close()));
+  drawer.addEventListener("close", () => {
+    trigger.setAttribute("aria-expanded", "false");
+    document.documentElement.style.overflow = "";
+    trigger.focus();
+  });
+  matchMedia("(min-width: 769px)").addEventListener("change", (e) => {
+    if (e.matches && drawer.open) drawer.close();
   });
 </script>
-
 <style>
   .site-header {
-    background: var(--color-primary);
-    position: sticky;
-    top: 0;
-    z-index: var(--z-sticky);
-    transition: background var(--transition-normal);
+    background: #fff;
+    border-bottom: 1px solid #eee9f2;
   }
-
-  .site-header--scrolled {
-    background: var(--color-primary);
-  }
-
   .header-inner {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 var(--content-padding);
-    height: var(--header-height);
+    max-width: 1200px;
+    height: 76px;
+    padding: 0 1rem;
+    margin: auto;
     display: flex;
     align-items: center;
-    gap: var(--space-6);
+    justify-content: space-between;
+    gap: 1rem;
   }
-
-  /* Logo */
-  .header-logo-link {
+  .desktop-nav {
     display: flex;
     align-items: center;
-    flex-shrink: 0;
-    text-decoration: none;
+    gap: 1.7rem;
   }
-
-  .header-logo {
-    height: 36px;
-    width: auto;
-  }
-
-  /* Desktop search */
-  .header-search {
-    flex: 1;
-    max-width: 420px;
-  }
-
-  /* Desktop nav */
-  .header-nav {
-    display: flex;
-    align-items: center;
-    gap: var(--space-4);
-    margin-left: auto;
-    flex-shrink: 0;
-  }
-
-  .nav-item {
-    position: relative;
-  }
-
-  .nav-link {
-    background: none;
-    border: none;
-    color: rgba(255, 255, 255, 0.9);
-    font-family: var(--font-body);
-    font-weight: var(--font-weight-semibold);
-    font-size: var(--font-size-sm);
-    text-decoration: none;
-    cursor: pointer;
-    padding: var(--space-2) var(--space-3);
-    border-radius: var(--radius-sm);
-    transition: color var(--transition-fast), background var(--transition-fast);
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-1);
-  }
-
-  .nav-link:hover {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.12);
-    text-decoration: none;
-  }
-
-  .nav-link--lang {
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: var(--radius-pill);
-    padding: 4px 14px;
-    font-size: var(--font-size-xs);
-    font-weight: var(--font-weight-bold);
-  }
-
-  .nav-chevron {
-    font-size: 0.75em;
-    opacity: 0.8;
-  }
-
-  /* Mega menu */
-  .mega-menu {
-    position: absolute;
-    top: calc(100% + var(--space-2));
-    right: 0;
-    min-width: 460px;
-    background: #ffffff;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-xl);
-    padding: var(--space-6);
-    z-index: var(--z-dropdown);
-  }
-
-  .mega-menu[hidden] {
-    display: none;
-  }
-
-  .mega-menu-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-6);
-  }
-
-  .mega-menu-title {
-    font-size: var(--font-size-xs);
-    font-weight: var(--font-weight-bold);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-3);
-  }
-
-  .mega-menu-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-1);
-  }
-
-  .mega-menu-link {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-    padding: var(--space-2) var(--space-3);
-    border-radius: var(--radius-sm);
+  nav a {
     color: var(--color-text);
-    text-decoration: none;
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-medium);
-    transition: background var(--transition-fast), color var(--transition-fast);
+    font-weight: 700;
+    padding: 0.7rem 0;
   }
-
-  .mega-menu-link:hover {
-    background: var(--color-primary-light);
-    color: var(--color-primary);
-    text-decoration: none;
+  .language {
+    background: #f6f4fa;
+    padding: 0.6rem 1rem;
+    border-radius: 30px;
   }
-
-  .mega-menu-emoji {
-    font-size: 1rem;
-    width: 1.5rem;
-    text-align: center;
-  }
-
-  /* Hamburger: hidden on desktop */
-  .hamburger {
-    display: none;
-    background: rgba(255, 255, 255, 0.12);
-    border: none;
+  .menu-button,
+  .close-button {
+    background: #f6f4fa;
+    color: var(--color-text);
+    border: 0;
+    border-radius: 12px;
+    width: 44px;
+    height: 44px;
     cursor: pointer;
-    padding: var(--space-2);
-    color: #ffffff;
-    border-radius: var(--radius-sm);
-    transition: background var(--transition-fast);
+  }
+  .menu-button {
+    display: none;
     align-items: center;
     justify-content: center;
   }
-
-  .hamburger:hover {
-    background: rgba(255, 255, 255, 0.2);
-  }
-
-  /* Mobile drawer overlay */
-  .drawer-overlay {
-    display: none;
+  dialog {
     position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: calc(var(--z-sticky) + 1);
-    /* backdrop-filter removed: causes GPU compositing artifacts on mobile Safari */
+    inset: 0 0 0 auto;
+    margin: 0;
+    padding: 1.25rem;
+    width: min(380px, 94vw);
+    max-width: 94vw;
+    height: 100dvh;
+    max-height: 100dvh;
+    border: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
   }
-
-  /* Mobile drawer */
-  .mobile-drawer {
-    display: none;
+  dialog::backdrop {
+    background: #1e193c70;
   }
-
+  .drawer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+  }
+  .close-button {
+    font-size: 2rem;
+  }
+  dialog nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-top: 1.25rem;
+  }
+  dialog nav a {
+    padding: 0.8rem;
+    border-radius: 12px;
+  }
+  dialog nav a:hover {
+    background: #ede9ff;
+  }
   @media (max-width: 768px) {
-    .header-search,
-    .header-nav {
+    .header-inner {
+      height: 64px;
+    }
+    .desktop-nav {
       display: none;
     }
-
-    .hamburger {
+    .menu-button {
       display: flex;
-      margin-left: auto;
-    }
-
-    .header-logo {
-      height: 30px;
-    }
-
-    /* Overlay active */
-    .drawer-overlay:not([hidden]) {
-      display: block;
-    }
-
-    .mobile-drawer:not([hidden]) {
-      display: flex;
-      flex-direction: column;
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      width: min(320px, 90vw);
-      background: var(--color-bg);
-      z-index: calc(var(--z-sticky) + 2);
-      overflow-y: auto;
-      animation: drawer-slide-from-right 0.25s ease-out;
-    }
-
-    @keyframes drawer-slide-from-right {
-      from { transform: translateX(100%); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .mobile-drawer:not([hidden]) {
-        animation: none;
-      }
-    }
-
-    .drawer-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: var(--space-4) var(--space-5);
-      background: var(--color-primary);
-      flex-shrink: 0;
-    }
-
-    .drawer-logo-link {
-      text-decoration: none;
-    }
-
-    .drawer-logo-text {
-      font-family: var(--font-body);
-      font-weight: var(--font-weight-extrabold);
-      font-size: var(--font-size-xl);
-      color: #ffffff;
-    }
-
-    .drawer-close {
-      background: rgba(255, 255, 255, 0.15);
-      border: none;
-      cursor: pointer;
-      color: #ffffff;
-      border-radius: var(--radius-sm);
-      padding: var(--space-2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background var(--transition-fast);
-    }
-
-    .drawer-close:hover {
-      background: rgba(255, 255, 255, 0.25);
-    }
-
-    .drawer-inner {
-      padding: var(--space-5);
-      flex: 1;
-    }
-
-    /* Drawer search */
-    .drawer-search {
-      margin-bottom: var(--space-4);
-    }
-
-    .drawer-search-wrapper {
-      position: relative;
-    }
-
-    .drawer-search-icon {
-      position: absolute;
-      left: var(--space-3);
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--color-text-muted);
-      pointer-events: none;
-    }
-
-    .drawer-search-input {
-      width: 100%;
-      padding: 0.75rem var(--space-4) 0.75rem 2.5rem;
-      font-family: var(--font-body);
-      font-size: var(--font-size-base);
-      border: 2px solid var(--color-border);
-      border-radius: var(--radius-lg);
-      background: var(--color-bg-card);
-      color: var(--color-text);
-      outline: none;
-      transition: border-color var(--transition-fast);
-    }
-
-    .drawer-search-input:focus {
-      border-color: var(--color-primary);
-    }
-
-    .drawer-nav {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-1);
-      margin-bottom: var(--space-5);
-      padding-bottom: var(--space-4);
-      border-bottom: 1px solid var(--color-border);
-    }
-
-    .drawer-link {
-      padding: var(--space-3) var(--space-4);
-      border-radius: var(--radius-md);
-      text-decoration: none;
-      font-weight: var(--font-weight-semibold);
-      color: var(--color-text);
-      font-size: var(--font-size-base);
-      transition: background var(--transition-fast);
-    }
-
-    .drawer-link:hover {
-      background: var(--color-primary-light);
-      color: var(--color-primary);
-      text-decoration: none;
-    }
-
-    .drawer-section {
-      margin-bottom: var(--space-5);
-    }
-
-    .drawer-section-title {
-      font-size: var(--font-size-xs);
-      font-weight: var(--font-weight-bold);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--color-text-muted);
-      padding: 0 var(--space-2);
-      margin-bottom: var(--space-3);
-    }
-
-    .drawer-categories {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-1);
-    }
-
-    .drawer-cat {
-      display: flex;
-      align-items: center;
-      gap: var(--space-2);
-      padding: var(--space-2) var(--space-3);
-      border-radius: var(--radius-sm);
-      text-decoration: none;
-      color: var(--color-text);
-      font-size: var(--font-size-sm);
-      font-weight: var(--font-weight-medium);
-      transition: background var(--transition-fast);
-    }
-
-    .drawer-cat:hover {
-      background: var(--color-primary-light);
-      color: var(--color-primary);
-      text-decoration: none;
-    }
-
-    .drawer-cat-icon {
-      font-size: 1.1rem;
-    }
-
-    .drawer-footer {
-      margin-top: var(--space-4);
-      padding-top: var(--space-4);
-      border-top: 1px solid var(--color-border);
-      text-align: center;
-    }
-
-    .drawer-lang-switch {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-2);
-      padding: var(--space-2) var(--space-5);
-      background: var(--color-primary-light);
-      border-radius: var(--radius-pill);
-      font-weight: var(--font-weight-semibold);
-      font-size: var(--font-size-sm);
-      color: var(--color-primary);
-      text-decoration: none;
-      transition: background var(--transition-fast);
-    }
-
-    .drawer-lang-switch:hover {
-      background: var(--color-primary);
-      color: #ffffff;
-      text-decoration: none;
     }
   }
-
   @media print {
     .site-header {
       display: none;

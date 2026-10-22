@@ -1,0 +1,172 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "./Hero.astro";
+import ThemeChips from "./ThemeChips.astro";
+import ColoringCard from "./ColoringCard.astro";
+import CollectionShelf from "./CollectionShelf.astro";
+import Pagination from "./Pagination.astro";
+import { getPublishableColoriages, buildSlugMap } from "../lib/coloriages";
+import type { Locale, Category } from "../lib/i18n";
+interface Props {
+  locale: Locale;
+  page: any;
+}
+const { locale, page } = Astro.props;
+const fr = locale === "fr";
+const first = page.currentPage === 1;
+const all = await getPublishableColoriages(locale);
+const other = await getPublishableColoriages(fr ? "en" : "fr");
+const pairs = await buildSlugMap();
+const chosen = [
+  "bold-et-facile-dinosaure",
+  "animaux-chat",
+  "bold-et-facile-licorne",
+  "noel-pere-noel",
+].map((s) => (fr ? s : pairs.frToEn[s]));
+const featured = chosen
+  .map((s) => all.find((c) => c.data.slug === s))
+  .filter((c): c is (typeof all)[number] => !!c);
+const altUrl =
+  page.currentPage <= Math.ceil(other.length / 24)
+    ? `https://colotopia.com/${fr ? "en" : "fr"}/${first ? "" : page.currentPage + "/"} `.trim()
+    : undefined;
+const title = first
+  ? fr
+    ? "Coloriages gratuits à imprimer en PDF A4"
+    : "Free printable coloring pages in A4 PDF"
+  : fr
+    ? `Coloriages à imprimer — Page ${page.currentPage}`
+    : `Printable coloring pages — Page ${page.currentPage}`;
+const description = fr
+  ? "Choisissez un coloriage gratuit, téléchargez son PDF A4 et imprimez-le sans inscription. Animaux, dinosaures, licornes et collections de plusieurs dessins."
+  : "Choose a free coloring page, download the A4 PDF and print without signing up. Animals, dinosaurs, unicorns and themed coloring collections.";
+---
+
+<BaseLayout
+  locale={locale}
+  title={title}
+  description={description}
+  canonical={Astro.url.href}
+  altUrl={altUrl}
+  ogImage={featured[0]?.data.image}
+  prevUrl={page.url.prev}
+  nextUrl={page.url.next}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: title,
+    description,
+    url: Astro.url.href,
+  }}
+>
+  {first ? (
+    <>
+      <Hero locale={locale} previews={featured.map((c) => c.data)} />
+      <ThemeChips locale={locale} />
+      <section aria-labelledby="featured-heading">
+        <h2 id="featured-heading">
+          {fr ? "À toi de choisir" : "Make it yours"}
+        </h2>
+        <div class="coloring-grid featured-grid" id="main-grid">
+          {featured.map((c, i) => (
+            <ColoringCard
+              {...c.data}
+              category={c.data.category as Category}
+              locale={locale}
+              isLCP={i === 0}
+            />
+          ))}
+        </div>
+      </section>
+      <CollectionShelf
+        locale={locale}
+        heading={fr ? "Des idées pour aujourd’hui" : "Ideas for today"}
+      />
+    </>
+  ) : (
+    <h1>{title}</h1>
+  )}
+  <section class="catalogue" aria-labelledby="catalogue-heading">
+    <div class="section-heading">
+      <h2 id="catalogue-heading">
+        {fr ? "Explore le catalogue" : "Explore the catalog"}
+      </h2>
+      <a href={`/${locale}/categories/`}>
+        {fr ? "Choisir un thème" : "Choose a theme"} →
+      </a>
+    </div>
+    {first && (
+      <p class="catalogue-intro">
+        {fr
+          ? "Envie d’autre chose ? Parcours les dessins ou choisis un thème pour trouver ta prochaine feuille à colorier."
+          : "Looking for something else? Browse the pages or pick a theme to find your next coloring sheet."}
+      </p>
+    )}
+    <div class="coloring-grid">
+      {page.data.map((c: any, i: number) => (
+        <ColoringCard
+          {...c.data}
+          category={c.data.category as Category}
+          locale={locale}
+          isLCP={!first && i === 0}
+        />
+      ))}
+    </div>
+    <Pagination
+      prevUrl={page.url.prev}
+      nextUrl={page.url.next}
+      currentPage={page.currentPage}
+      lastPage={page.lastPage}
+      locale={locale}
+    />
+  </section>
+</BaseLayout>
+<style>
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  .coloring-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  .featured-grid :global(.card-image-wrapper) {
+    aspect-ratio: 1.15;
+  }
+  .catalogue {
+    margin-top: 2.5rem;
+  }
+  .section-heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+  .section-heading a {
+    font-weight: 800;
+  }
+  .catalogue-intro {
+    max-width: 44rem;
+    color: #625e71;
+    margin: 0 0 1.5rem;
+  }
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+    .coloring-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+    .catalogue {
+      margin-top: 2rem;
+    }
+  }
+</style>

@@ -1,0 +1,82 @@
+---
+import {
+  getCategorySlug,
+  getCategoryLabel,
+  categoryIcons,
+  type Locale,
+  type Category,
+} from "../lib/i18n";
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const themes: Category[] = [
+  "animaux",
+  "dinosaures",
+  "licorne",
+  "noel",
+  "bold-et-facile",
+];
+---
+
+<nav
+  class="themes"
+  aria-label={locale === "fr" ? "Choisir un thème" : "Choose a theme"}
+>
+  {themes.map((cat, i) => (
+    <a
+      href={`/${locale}/${getCategorySlug(cat, locale)}/`}
+      style={`--chip:${["#e0f7eb", "#ece4fc", "#ffe8f0", "#fff1cd", "#e1f0fe"][i]}`}
+    >
+      <span aria-hidden="true">{categoryIcons[cat]}</span>
+      {cat === "bold-et-facile"
+        ? locale === "fr"
+          ? "Gros traits"
+          : "Bold & easy"
+        : getCategoryLabel(cat, locale)}
+    </a>
+  ))}
+  <a href={`/${locale}/categories/`} style="--chip:#f0eef5">
+    {locale === "fr" ? "Tous les thèmes" : "All themes"}{" "}
+    <span aria-hidden="true">→</span>
+  </a>
+</nav>
+<style>
+  .themes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-bottom: 1.5rem;
+  }
+  a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    background: var(--chip);
+    color: #29253c;
+    border-radius: 16px;
+    padding: 0.7rem 1rem;
+    font-weight: 800;
+    font-size: 0.95rem;
+  }
+  a:hover {
+    box-shadow: inset 0 0 0 2px #6c5ce740;
+    text-decoration: none;
+  }
+  @media (max-width: 768px) {
+    .themes {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.5rem;
+    }
+    a {
+      font-size: 0.77rem;
+      padding: 0.65rem 0.2rem;
+      border-radius: 12px;
+      gap: 0.25rem;
+    }
+  }
+</style>

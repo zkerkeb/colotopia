@@ -1,0 +1,145 @@
+---
+import { getCollections } from "../lib/collections";
+import { coloringPreview } from "../lib/preview-images";
+import type { Locale } from "../lib/i18n";
+interface Props {
+  locale: Locale;
+  heading?: string;
+}
+const { locale, heading } = Astro.props;
+const collections = await getCollections(locale);
+const previews = await Promise.all(
+  collections.map((c) =>
+    Promise.all(
+      c.items.slice(0, 2).map((i) => coloringPreview(i.data.image, "hero")),
+    ),
+  ),
+);
+---
+
+<section class="collection-shelf">
+  {heading && <h2>{heading}</h2>}
+  <div class="collections-grid">
+    {collections.map((c, i) => (
+      <a class="collection-card" href={c.href} style={`--surface:${c.color}`}>
+        <div class="copy">
+          <h3>{c.short}</h3>
+          <p>
+            {c.items.length}{" "}
+            {locale === "fr" ? "dessins · PDF gratuit" : "pages · Free PDF"}
+          </p>
+          <span>{locale === "fr" ? "Découvrir" : "Explore"} →</span>
+        </div>
+        <div class="collection-art" aria-hidden="true">
+          {previews[i].map((p) => (
+            <img
+              src={p.src}
+              srcset={p.srcset}
+              sizes="100px"
+              alt=""
+              width="100"
+              height="140"
+              loading="lazy"
+            />
+          ))}
+        </div>
+      </a>
+    ))}
+  </div>
+</section>
+<style>
+  .collection-shelf {
+    margin: 2rem 0;
+  }
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  .collections-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .collection-card {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 1.25rem;
+    min-height: 170px;
+    background: var(--surface);
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  .copy {
+    position: relative;
+    z-index: 1;
+    width: 65%;
+  }
+  h3 {
+    font-size: 1.15rem;
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-size: 0.85rem;
+    color: #5e586f;
+    max-width: 10rem;
+    margin-bottom: 0.75rem;
+  }
+  span {
+    color: var(--color-primary);
+    font-weight: 800;
+    font-size: 0.9rem;
+  }
+  .collection-art {
+    position: absolute;
+    right: -8px;
+    bottom: -10px;
+    width: 38%;
+    height: 140px;
+  }
+  .collection-art img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 115px;
+    background: white;
+    object-fit: contain;
+    padding: 5px;
+    transform: rotate(-10deg);
+    box-shadow: 0 4px 16px #352d4b15;
+  }
+  .collection-art img + img {
+    left: 45px;
+    top: 18px;
+    transform: rotate(12deg);
+  }
+  .collection-card:hover {
+    box-shadow: inset 0 0 0 2px #6c5ce750;
+  }
+  @media (max-width: 768px) {
+    .collections-grid {
+      grid-template-columns: 1fr;
+    }
+    .collection-card {
+      min-height: 145px;
+    }
+    .collection-art {
+      width: 135px;
+      height: 125px;
+      right: 10px;
+    }
+    .collection-art img {
+      width: 90px;
+      height: 125px;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+</style>

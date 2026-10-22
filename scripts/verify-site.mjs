@@ -15,11 +15,12 @@ const walk = (node, visit) => { visit(node); for (const child of node.childNodes
 const content = node => node.nodeName === '#text' ? node.value : (node.childNodes ?? []).map(content).join('');
 for (const file of files.filter(file => extname(file) === '.html')) {
   const path = '/' + relative(root, file).replace(/index\.html$/, '');
-  const page = { file, path, refs: [], alternates: [], ids: new Set(), canonical: null, noindex: false, redirect: false, h1: 0, title: '', description: '' };
+  const page = { file, path, refs: [], anchors: [], alternates: [], ids: new Set(), canonical: null, noindex: false, redirect: false, h1: 0, title: '', description: '' };
   const document = parse(await readFile(file, 'utf8'));
   walk(document, node => {
     const a = Object.fromEntries((node.attrs ?? []).map(a => [a.name, a.value]));
     if (a.id) { if (page.ids.has(a.id)) errors.add(`${path}: duplicate id ${a.id}`); page.ids.add(a.id); }
+    if (node.tagName === 'a' && a.href) page.anchors.push(a.href);
     if (node.tagName === 'h1') page.h1++;
     if (node.tagName === 'title') page.title = content(node).trim();
     if (a.name === 'description') page.description = a.content;
@@ -69,6 +70,19 @@ for (const page of pages.values()) {
     else if (!target.alternates.some(a => normalized(new URL(a.href).pathname) === normalized(page.path))) errors.add(`${page.path}: nonreciprocal alternate ${alternate.href}`);
   }
 }
+// Navigation must expose every published HTML page even when home/footer are shorter.
+const reached = new Set(), pending = [locate('/fr/'), locate('/en/')];
+while (pending.length) {
+  const file = pending.shift();
+  if (!file || reached.has(file)) continue;
+  reached.add(file);
+  const page = pages.get(file);
+  for (const ref of page?.anchors ?? []) {
+    const url = new URL(ref, site + page.path);
+    if (url.origin === site) { const target = locate(url.pathname); if (pages.has(target) && !reached.has(target)) pending.push(target); }
+  }
+}
+for (const page of pages.values()) if (!page.noindex && !page.redirect && !reached.has(page.file)) errors.add(`${page.path}: orphan page, unreachable through navigation`);
 let sitemapUrls = 0;
 for (const file of files.filter(file => /sitemap-\d+\.xml$/.test(file))) {
   const xml = await readFile(file, 'utf8');

@@ -1,0 +1,240 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ColoringCard from "./ColoringCard.astro";
+import CollectionShelf from "./CollectionShelf.astro";
+import { getCollections } from "../lib/collections";
+import { getCategorySlug, type Category, type Locale } from "../lib/i18n";
+interface Props {
+  locale: Locale;
+  id: string;
+}
+const { locale, id } = Astro.props;
+const fr = locale === "fr";
+const c = (await getCollections(locale)).find((c) => c.id === id)!;
+const alternate = (await getCollections(fr ? "en" : "fr")).find(
+  (other) => other.id === id,
+)!;
+const url = `https://colotopia.com${c.href}`;
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": url,
+      url,
+      name: c.title,
+      description: c.description,
+      inLanguage: locale,
+      mainEntity: {
+        "@type": "ItemList",
+        numberOfItems: c.items.length,
+        itemListElement: c.items.map((item, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: item.data.title,
+          url: `https://colotopia.com/${locale}/${fr ? "coloriage" : "coloring"}/${item.data.slug}/`,
+        })),
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: fr ? "Accueil" : "Home",
+          item: `https://colotopia.com/${locale}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Collections",
+          item: `https://colotopia.com/${locale}/collections/`,
+        },
+        { "@type": "ListItem", position: 3, name: c.title, item: url },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  locale={locale}
+  title={c.title}
+  description={c.description}
+  canonical={url}
+  altUrl={`https://colotopia.com${alternate.href}`}
+  structuredData={structuredData}
+  ogImage={c.items[0]?.data.image}
+>
+  <nav class="breadcrumbs" aria-label={fr ? "Fil d’Ariane" : "Breadcrumb"}>
+    <a href={`/${locale}/`}>{fr ? "Accueil" : "Home"}</a> /{" "}
+    <a href={`/${locale}/collections/`}>Collections</a> / <span>{c.short}</span>
+  </nav>
+  <header class="collection-hero" style={`--surface:${c.color}`}>
+    <p class="eyebrow">
+      {fr ? "Un petit cahier à imprimer" : "A little booklet to print"}
+    </p>
+    <h1>{c.title}</h1>
+    <p>{c.description}</p>
+    {c.items.length > 0 ? (
+      <>
+        <a
+          class="btn-primary pack-download"
+          href={c.pdf}
+          download
+          data-collection={c.id}
+        >
+          {fr
+            ? `Télécharger les ${c.items.length} dessins en PDF`
+            : `Download all ${c.items.length} pages as PDF`}
+        </a>
+        <small>
+          {fr
+            ? "Gratuit · Une page A4 par dessin · Sans inscription"
+            : "Free · One A4 sheet per drawing · No sign-up"}
+        </small>
+      </>
+    ) : (
+      <p>
+        {fr
+          ? "Cette sélection est en cours de vérification. Retrouvez les autres collections ci-dessous."
+          : "This selection is being reviewed. Explore our other collections below."}
+      </p>
+    )}
+  </header>
+  <section>
+    <h2>{fr ? "Les dessins du cahier" : "Inside the booklet"}</h2>
+    <p class="intro">
+      {fr
+        ? "Tu peux aussi ouvrir un dessin pour le télécharger seul."
+        : "You can also open any drawing to download it separately."}
+    </p>
+    <div class="collection-drawings">
+      {c.items.map((item, i) => (
+        <ColoringCard
+          {...item.data}
+          category={item.data.category as Category}
+          locale={locale}
+          isLCP={i === 0}
+        />
+      ))}
+    </div>
+  </section>
+  <section class="activity">
+    <h2>{fr ? "Une idée pour cette activité" : "An idea for this activity"}</h2>
+    <ol>
+      {c.tips.map((tip) => (
+        <li>{tip}</li>
+      ))}
+    </ol>
+    <p>
+      {fr
+        ? "Pour imprimer le cahier, choisis le format A4, le mode portrait et l’impression recto. Vérifie l’aperçu avant de lancer toutes les pages."
+        : "To print the booklet, choose A4 paper, portrait orientation and single-sided printing. Check the preview before printing all pages."}
+    </p>
+    <a href={`/${locale}/${getCategorySlug(c.category as Category, locale)}/`}>
+      {fr
+        ? "Explorer tous les dessins de ce thème"
+        : "Explore all drawings in this theme"}{" "}
+      →
+    </a>
+  </section>
+  <CollectionShelf
+    locale={locale}
+    heading={fr ? "D’autres idées à imprimer" : "More ideas to print"}
+  />
+</BaseLayout>
+<script>
+  import { track } from "../lib/analytics";
+  document
+    .querySelectorAll<HTMLAnchorElement>(".pack-download")
+    .forEach((a) =>
+      a.addEventListener("click", () =>
+        track("pack_download_intent", {
+          collection: a.dataset.collection,
+          file_name: a.pathname.split("/").pop(),
+        }),
+      ),
+    );
+</script>
+<style>
+  .breadcrumbs {
+    font-size: 0.85rem;
+    color: #625e71;
+    margin-bottom: 1rem;
+  }
+  .collection-hero {
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: 24px;
+    margin-bottom: 2rem;
+  }
+  .eyebrow {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+    margin-bottom: 1rem;
+  }
+  .collection-hero > p:not(.eyebrow) {
+    max-width: 48rem;
+    color: #514b60;
+    margin-bottom: 1.5rem;
+  }
+  .pack-download {
+    line-height: 1.35;
+    text-align: center;
+  }
+  small {
+    display: block;
+    margin-top: 0.8rem;
+    color: #514b60;
+  }
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+  }
+  .intro {
+    margin-bottom: 1rem;
+    color: #625e71;
+  }
+  .collection-drawings {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  .activity {
+    max-width: 48rem;
+    margin: 2.5rem 0;
+  }
+  .activity ol {
+    padding-left: 1.25rem;
+  }
+  .activity li {
+    margin-bottom: 0.75rem;
+  }
+  .activity p {
+    margin: 1rem 0;
+  }
+  .activity a {
+    font-weight: 800;
+  }
+  @media (max-width: 768px) {
+    .collection-hero {
+      padding: 1.25rem;
+    }
+    .collection-drawings {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+  }
+</style>

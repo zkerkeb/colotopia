@@ -1,7 +1,7 @@
 ---
 import type { Locale } from '../lib/i18n';
-interface Props { image: string; title: string; locale: Locale }
-const { image, title, locale } = Astro.props;
+interface Props { image: string; title: string; locale: Locale; showImageLink?: boolean }
+const { image, title, locale, showImageLink = true } = Astro.props;
 const fr = locale === 'fr';
 ---
 <div class="pdf-action">
@@ -9,7 +9,7 @@ const fr = locale === 'fr';
     <span>{fr ? 'Télécharger le PDF' : 'Download PDF'}</span>
   </button>
   <p id="pdf-status" role="status" aria-live="polite"></p>
-  <a href={image} target="_blank" rel="noopener noreferrer">{fr ? 'Ouvrir l’image PNG' : 'Open PNG image'}</a>
+  {showImageLink && <a href={image} target="_blank" rel="noopener noreferrer">{fr ? 'Ouvrir l’image PNG' : 'Open PNG image'}</a>}
 </div>
 <script>
   import { fitA4, pdfFilename } from '../lib/pdf';

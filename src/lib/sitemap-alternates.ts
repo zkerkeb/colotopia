@@ -4,6 +4,7 @@
  * for translated paths (coloriage/coloring, animaux/animals, slug differences).
  */
 
+import { collectionDefinitions } from './collections';
 import { buildSlugMap } from './coloriages';
 import { getTranslatedBlogSlug } from './blog-alternates';
 import { categories, getCategorySlug } from './i18n';
@@ -22,6 +23,9 @@ const enCategorySet = new Set(Object.values(frToEnCategories));
 const SITE = 'https://colotopia.com';
 
 const staticAlternates: Record<string, string> = {
+  '/fr/collections/': '/en/collections/',
+  '/en/collections/': '/fr/collections/',
+  ...Object.fromEntries(collectionDefinitions.flatMap(c => [[`/fr/collections/${c.fr.slug}/`, `/en/collections/${c.en.slug}/`], [`/en/collections/${c.en.slug}/`, `/fr/collections/${c.fr.slug}/`]])),
   '/fr/a-propos/': '/en/about/',
   '/en/about/': '/fr/a-propos/',
   '/fr/categories/': '/en/categories/',

@@ -18,7 +18,7 @@ export default defineConfig({
       customSitemaps: ['https://colotopia.com/sitemap-images.xml'],
       filter: (page) => {
         const pathname = new URL(page).pathname;
-        if (Object.hasOwn(pageRedirects, `${pathname.replace(/\/$/, '')}/`) || pathname.endsWith('.xml')) return false;
+        if (Object.hasOwn(pageRedirects, `${pathname.replace(/\/$/, '')}/`) || /\.(xml|pdf)$/.test(pathname)) return false;
         // Exclude root redirect, 404, and pagination pages (low crawl-budget value)
         if (page === 'https://colotopia.com/') return false;
         if (page.includes('/404') || /\/(recherche|search|licornes|fees|unicorns-2|fairies-2)\/?$/.test(page)) return false;

@@ -79,21 +79,14 @@ const placeholders = JSON.stringify(locale === 'fr' ? placeholdersFr : placehold
   }
 
   @media (max-width: 480px) {
-    .search-bar--hero {
-      flex-direction: column;
-    }
-    .search-bar--hero .search-input-wrapper {
-      width: 100%;
-    }
-    .search-bar--hero .search-submit {
-      width: 100%;
-      justify-content: center;
-    }
+    .search-bar { gap: .5rem; }
+    .search-submit { padding: 14px 16px; font-size: .9rem; }
   }
 
   .search-input-wrapper {
     position: relative;
     flex: 1;
+    min-width: 0;
   }
 
   .search-icon {

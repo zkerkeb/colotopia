@@ -1,0 +1,91 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CollectionShelf from "./CollectionShelf.astro";
+import type { Locale } from "../lib/i18n";
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const fr = locale === "fr";
+const title = fr
+  ? "Collections de coloriages en PDF"
+  : "Coloring page collections in PDF";
+const description = fr
+  ? "Des sélections de coloriages gratuits réunis en petits cahiers PDF A4 : gros traits pour débuter, dinosaures et Noël. Téléchargez sans inscription."
+  : "Free coloring selections in little A4 PDF booklets: bold and easy pages, dinosaurs and Christmas. Download without signing up.";
+---
+
+<BaseLayout
+  locale={locale}
+  title={title}
+  description={description}
+  canonical={`https://colotopia.com/${locale}/collections/`}
+  altUrl={`https://colotopia.com/${fr ? "en" : "fr"}/collections/`}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: title,
+    description,
+    url: `https://colotopia.com/${locale}/collections/`,
+  }}
+>
+  <header>
+    <p>
+      {fr ? "À imprimer, à partager, à colorier" : "Print, share and color"}
+    </p>
+    <h1>{title}</h1>
+    <p>{description}</p>
+  </header>
+  <CollectionShelf locale={locale} />
+  <section>
+    <h2>
+      {fr ? "Un cahier ou une seule feuille ?" : "A booklet or just one page?"}
+    </h2>
+    <p>
+      {fr
+        ? "Chaque collection rassemble une sélection de dessins autour d’une activité. Le bouton PDF télécharge tout le cahier, avec une feuille A4 par dessin. Si tu préfères une seule image, ouvre sa fiche pour télécharger ou imprimer cette page."
+        : "Each collection brings together drawings for an activity. The PDF button downloads the whole booklet, with one A4 sheet per drawing. If you prefer just one image, open its page to download or print it separately."}
+    </p>
+    <a href={`/${locale}/categories/`}>
+      {fr ? "Voir tous les thèmes de coloriage" : "Browse all coloring themes"}{" "}
+      →
+    </a>
+  </section>
+</BaseLayout>
+<style>
+  header {
+    padding: 2rem 0;
+  }
+  header > p:first-child {
+    color: var(--color-primary);
+    font-weight: 800;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 0.75rem 0;
+  }
+  p {
+    max-width: 48rem;
+    color: #625e71;
+  }
+  section {
+    max-width: 48rem;
+    margin: 2rem 0;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  section a {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 800;
+  }
+  @media (max-width: 768px) {
+    header {
+      padding: 0.5rem 0;
+    }
+  }
+</style>
