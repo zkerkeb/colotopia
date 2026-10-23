@@ -1,166 +1,65 @@
 ---
-import type { Locale } from '../lib/i18n';
-
-interface Props {
-  locale: Locale;
-}
-
-const { locale } = Astro.props;
-
-const title = locale === 'fr' ? 'Fournitures recommandées' : 'Recommended Supplies';
-const subtitle = locale === 'fr' ? 'Pour de beaux coloriages !' : 'For beautiful coloring!';
-const cta = locale === 'fr' ? 'Voir sur Amazon' : 'View on Amazon';
-
-const tag = locale === 'fr' ? 'colotopia-21' : 'colotopiaus-20';
-const base = locale === 'fr' ? 'https://www.amazon.fr/s' : 'https://www.amazon.com/s';
-
+import { adultCategories, type Category, type Locale } from '../lib/i18n';
+interface Props { locale: Locale; category: Category; }
+const { locale, category } = Astro.props;
+const fr = locale === 'fr';
+const adult = (adultCategories as readonly string[]).includes(category);
+const tag = fr ? 'colotopia-21' : 'colotopiaus-20';
+const base = fr ? 'https://www.amazon.fr/s' : 'https://www.amazon.com/s';
 const products = [
-  {
-    name: locale === 'fr' ? 'Crayons de couleur (24 pcs)' : 'Colored Pencils (24 pcs)',
-    icon: '🖍️',
-    link: `${base}?k=${encodeURIComponent(locale === 'fr' ? 'crayons de couleur 24 enfant' : 'colored pencils 24 kids')}&tag=${tag}`,
-  },
-  {
-    name: locale === 'fr' ? 'Feutres lavables' : 'Washable Markers',
-    icon: '🖊️',
-    link: `${base}?k=${encodeURIComponent(locale === 'fr' ? 'feutres lavables enfant' : 'washable markers kids')}&tag=${tag}`,
-  },
-  {
-    name: locale === 'fr' ? 'Cahier de coloriage' : 'Coloring Book',
-    icon: '📖',
-    link: `${base}?k=${encodeURIComponent(locale === 'fr' ? 'cahier coloriage enfant' : 'kids coloring book')}&tag=${tag}`,
-  },
-  {
-    name: locale === 'fr' ? 'Papier dessin épais' : 'Thick Drawing Paper',
-    icon: '📄',
-    link: `${base}?k=${encodeURIComponent(locale === 'fr' ? 'papier dessin épais enfant' : 'thick drawing paper kids')}&tag=${tag}`,
-  },
-];
-
+  { id: 'pencils', name: fr ? 'Crayons de couleur' : 'Colored pencils', query: fr ? `crayons de couleur ${adult ? 'adultes' : 'enfant'}` : `colored pencils ${adult ? 'adults' : 'kids'}` },
+  { id: 'markers', name: fr ? (adult ? 'Feutres à pointe fine' : 'Feutres lavables') : (adult ? 'Fine-tip markers' : 'Washable markers'), query: fr ? (adult ? 'feutres pointe fine coloriage' : 'feutres lavables enfant') : (adult ? 'fine tip coloring markers' : 'washable markers kids') },
+  { id: 'paper', name: fr ? 'Papier pour imprimante' : 'Printer paper', query: fr ? 'papier imprimante A4' : 'printer paper' },
+].map(p => ({ ...p, href: `${base}?k=${encodeURIComponent(p.query)}&tag=${tag}` }));
+const [featured, ...others] = products;
+const label = fr ? 'Voir sur Amazon' : 'View on Amazon';
 ---
-
-<aside class="supply-widget">
-  <div class="supply-header">
-    <span class="supply-icon">🎨</span>
-    <div>
-      <h3>{title}</h3>
-      <p class="supply-subtitle">{subtitle}</p>
+<section class="supply-widget" aria-label={fr ? 'Matériel de coloriage' : 'Coloring supplies'}>
+  <a class="affiliate-label" href="#amazon-disclosure">{fr ? 'Lien rémunéré' : 'Paid link'}</a>
+  <div class="featured-supply">
+    <svg class="pencils" width="38" height="44" viewBox="0 0 38 44" aria-hidden="true">
+      <rect width="38" height="44" rx="10" fill="#f7f0e3" />
+      <g transform="rotate(-13 15 24)"><path d="M10 13h6v23h-6z" fill="#d59a60"/><path d="m10 13 3-8 3 8" fill="#e9cfad"/><path d="m11.5 9 1.5-4 1.5 4" fill="#5c4d45"/></g>
+      <g transform="rotate(13 25 24)"><path d="M22 12h6v24h-6z" fill="#9381c0"/><path d="m22 12 3-8 3 8" fill="#e9cfad"/><path d="m23.5 8 1.5-4 1.5 4" fill="#5c4d45"/></g>
+    </svg>
+    <div class="featured-copy">
+      <h2>{featured.name}</h2>
+      <a class="supply-link" href={featured.href} target="_blank" rel="noopener noreferrer sponsored nofollow" data-product={featured.id} data-category={category}>
+        {label} <span aria-hidden="true">↗</span>
+      </a>
     </div>
   </div>
-  <ul>
-    {products.map((product) => (
-      <li>
-        <a href={product.link} target="_blank" rel="noopener noreferrer sponsored nofollow" class="supply-link" data-product={product.name}>
-          <span class="item-icon">{product.icon}</span>
-          <span class="item-name">{product.name}</span>
-          <span class="item-cta">{cta} <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
-        </a>
-      </li>
-    ))}
-  </ul>
-  <p class="supply-subtitle">{locale === 'fr' ? 'Liens affiliés : nous pouvons recevoir une commission, sans surcoût pour vous.' : 'Affiliate links: we may earn a commission at no extra cost to you.'}</p>
-</aside>
-
+  <details>
+    <summary>{fr ? 'Autres fournitures' : 'More supplies'}<span aria-hidden="true">+</span></summary>
+    <ul>{others.map(p => <li><span>{p.name}</span><a class="supply-link" href={p.href} target="_blank" rel="noopener noreferrer sponsored nofollow" data-product={p.id} data-category={category} aria-label={`${label} — ${p.name}`}>Amazon <span aria-hidden="true">↗</span></a></li>)}</ul>
+  </details>
+</section>
 <script>
-  import { track as trackEvent } from '../lib/analytics';
-  document.querySelectorAll('.supply-link').forEach((link) => {
-    const anchor = link as HTMLAnchorElement;
-    anchor.addEventListener('click', () => {
-      if (true) {
-        trackEvent('supply_click', {
-          product_name: anchor.dataset.product,
-          link_url: anchor.href,
-        });
-      }
-    });
+  import { track } from '../lib/analytics';
+  document.querySelectorAll<HTMLAnchorElement>('.supply-link').forEach(link => {
+    link.addEventListener('click', () => track('supply_click', {
+      product_name: link.dataset.product,
+      coloring_category: link.dataset.category,
+      placement: 'below_download',
+      link_url: link.href,
+    }));
   });
 </script>
-
 <style>
-  .supply-widget {
-    background: linear-gradient(135deg, #fdf2f8 0%, #fef3c7 100%);
-    border: 2px solid #f9a8d4;
-    border-radius: 16px;
-    padding: 1.25rem;
-    margin: 2rem 0;
-  }
-
-  .supply-header {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
-  }
-
-  .supply-icon {
-    font-size: 1.75rem;
-    line-height: 1;
-  }
-
-  h3 {
-    font-size: 0.9rem;
-    font-weight: 800;
-    color: #1a1a1a;
-    margin: 0;
-  }
-
-  .supply-subtitle {
-    font-size: 0.75rem;
-    color: #9ca3af;
-    margin: 0;
-  }
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.375rem;
-  }
-
-  li a {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 0.625rem;
-    border-radius: 10px;
-    text-decoration: none;
-    background: rgba(255, 255, 255, 0.6);
-    transition: background 0.15s, transform 0.15s;
-  }
-
-  li a:hover {
-    background: white;
-    transform: translateX(2px);
-    text-decoration: none;
-  }
-
-  .item-icon {
-    font-size: 1rem;
-    flex-shrink: 0;
-  }
-
-  .item-name {
-    flex: 1;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #374151;
-  }
-
-  .item-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-    font-size: 0.7rem;
-    font-weight: 700;
-    color: #e8437f;
-    white-space: nowrap;
-  }
-
-  @media print {
-    .supply-widget {
-      display: none;
-    }
-  }
+  .supply-widget { margin-top: 1rem; padding: 0.85rem 1rem 0; background: #fff; border: 1px solid #ded8e8; border-radius: 14px; }
+  .affiliate-label { display: block; width: fit-content; margin-left: auto; margin-bottom: 0.15rem; font-size: 0.75rem; color: #61586d; text-decoration: underline; text-underline-offset: 3px; }
+  .featured-supply { display: flex; gap: 0.75rem; align-items: center; }
+  .pencils { flex-shrink: 0; }
+  .featured-copy { min-width: 0; }
+  h2 { font: inherit; font-size: 0.95rem; font-weight: 800; color: #302b43; margin: 0; }
+  .supply-link { display: inline-flex; align-items: center; gap: 0.3rem; min-height: 44px; font-size: 0.85rem; color: #5944b2; font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
+  details { margin-top: 0.4rem; border-top: 1px solid #ede8f1; }
+  summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 44px; cursor: pointer; font-size: 0.8rem; font-weight: 700; color: #5c5567; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary span { font-size: 1.2rem; }
+  details[open] summary span { transform: rotate(45deg); }
+  ul { list-style: none; padding: 0; margin: 0; }
+  li { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; border-top: 1px solid #ede8f1; font-size: 0.85rem; }
+  a:focus-visible, summary:focus-visible { outline: 3px solid #a897ee; outline-offset: 3px; border-radius: 4px; }
+  @media print { .supply-widget { display: none; } }
 </style>

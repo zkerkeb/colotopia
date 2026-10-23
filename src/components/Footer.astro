@@ -16,14 +16,15 @@ const fr = locale === "fr";
 ---
 
 <footer class="site-footer">
+  <p class="amazon-disclosure" id="amazon-disclosure">
+    {fr
+      ? "En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises."
+      : "As an Amazon Associate I earn from qualifying purchases."}
+  </p>
   <div class="footer-inner">
     <div>
       <Brand locale={locale} />
-      <p>
-        {fr
-          ? "Une feuille, des couleurs, un moment à soi."
-          : "A page, some colors, a moment for yourself."}
-      </p>
+
     </div>
     <nav aria-label={fr ? "Explorer le site" : "Explore the site"}>
       <a href={`/${locale}/categories/`}>
@@ -76,11 +77,13 @@ const fr = locale === "fr";
     grid-template-columns: 1.5fr 1fr 1fr;
     gap: 2rem;
   }
-  p {
-    max-width: 21rem;
-    margin-top: 0.75rem;
-    color: #625e71;
-    font-size: 0.95rem;
+  .amazon-disclosure {
+    max-width: 1168px;
+    margin: 0 auto 1.5rem;
+    color: #494356;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    scroll-margin-top: 6rem;
   }
   nav {
     display: flex;

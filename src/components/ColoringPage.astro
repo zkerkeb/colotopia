@@ -109,26 +109,7 @@ const share = [
         </div>
         <p id="print-status" role="status" aria-live="polite"></p>
       </div>
-      <div class="download-help">
-        <h2>{fr ? "À tes crayons !" : "Ready for your colors"}</h2>
-        <p>
-          {fr
-            ? "Le PDF contient ce dessin sur une page A4. Télécharge-le, puis imprime-le chez toi."
-            : "The PDF contains this drawing on one A4 page. Download it, then print it at home."}
-        </p>
-        <ol>
-          <li>
-            {fr
-              ? "Choisis du papier A4 et le mode portrait."
-              : "Choose A4 paper and portrait orientation."}
-          </li>
-          <li>
-            {fr
-              ? "Vérifie l’aperçu et sélectionne « Ajuster à la page » si nécessaire."
-              : "Check the preview and select “Fit to page” if needed."}
-          </li>
-        </ol>
-      </div>
+      <AffiliateWidget locale={locale} category={category} />
       <a class="category-link" href={catUrl}>
         {fr
           ? `Voir les coloriages ${catLabel.toLowerCase()}`
@@ -181,9 +162,6 @@ const share = [
       ))}
     </div>
   </section>
-  <div class="supplies">
-    <AffiliateWidget locale={locale} />
-  </div>
   <div class="sticky-download" id="sticky-download" hidden>
     <button type="button" class="btn-primary">
       {fr ? "Télécharger le PDF" : "Download PDF"}
@@ -284,11 +262,12 @@ const share = [
     height: 540px;
   }
   .download-panel {
+    min-width: 0;
+  }
+  .coloring-actions {
     padding: 1.5rem;
     background: #f0ebfc;
     border-radius: 20px;
-  }
-  .coloring-actions {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -320,21 +299,6 @@ const share = [
     min-height: 44px;
     cursor: pointer;
   }
-  .download-help {
-    margin: 1.5rem 0;
-    font-size: 0.95rem;
-  }
-  .download-help h2 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-  }
-  .download-help ol {
-    padding-left: 1.3rem;
-    margin-top: 0.75rem;
-  }
-  .download-help li + li {
-    margin-top: 0.5rem;
-  }
   .category-link,
   .collection-link {
     display: block;
@@ -362,10 +326,6 @@ const share = [
     gap: 1rem;
     margin-top: 1.5rem;
     font-size: 0.9rem;
-  }
-  .supplies {
-    max-width: 600px;
-    margin: 2rem auto;
   }
   .sticky-download {
     position: fixed;
@@ -402,14 +362,12 @@ const share = [
       padding: 0;
       background: none;
     }
-    .download-help {
-      margin: 1.25rem 0;
+    .coloring-actions {
+      padding: 0;
+      background: none;
     }
     .coloring-page {
       padding-bottom: 3rem;
-    }
-    .download-help h2 {
-      font-size: 1.1rem;
     }
   }
   @media print {
