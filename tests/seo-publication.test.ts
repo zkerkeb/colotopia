@@ -1,9 +1,17 @@
 import { describe, expect, it } from 'vitest';
-import { coloringMetadata } from '../src/lib/seo';
+import { coloringAlt, coloringMetadata } from '../src/lib/seo';
 import { pairTranslations } from '../src/lib/catalog';
 import { legacyRedirects, nginxRedirectMap } from '../src/lib/legacy-redirects';
 
 describe('specific drawing metadata', () => {
+  it('does not describe an adult illustration as a simple drawing for children', () => {
+    const stale = 'Coloriage fractale complexe a imprimer, dessin au trait simple pour enfants';
+    expect(coloringAlt('Fractale complexe', stale, 'adultes')).toBe('Fractale complexe');
+    expect(coloringAlt('Chat', stale, 'enfants')).toBe(stale);
+    expect(coloringAlt('Fractal', 'Printable fractal, simple line drawing for kids', 'adultes')).toBe('Fractal');
+    expect(coloringAlt('Garden', 'Children playing in a detailed garden', 'adultes')).toBe('Children playing in a detailed garden');
+    expect(coloringAlt('Fractal', '  ', 'adultes')).toBe('Fractal');
+  });
   it.each([undefined, '', '  \n '])('falls back for empty fields without homepage boilerplate: %s', value => {
     const result = coloringMetadata('fr', 'Dinosaure facile', value, value);
     expect(result.title).toBe('Coloriage Dinosaure facile à imprimer');

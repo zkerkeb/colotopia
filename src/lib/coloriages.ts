@@ -6,7 +6,7 @@ import { normalizeTags, canonicalCategory, pairTranslations } from './catalog';
 import { readFile } from 'node:fs/promises';
 import aliases from '../data/coloring-aliases.json';
 import stablePairs from '../data/translation-pairs.json';
-import { optionalText } from './seo';
+import { coloringAlt, optionalText } from './seo';
 
 /**
  * Shape expected by every page and component.
@@ -90,7 +90,7 @@ async function loadColoriages(locale: 'fr' | 'en'): Promise<ColoringEntry[]> {
       audience: row.audience,
       tags: normalizeTags(row.tagsJson),
       image: cdnPng(row.imagePath),
-      alt: row.alt?.trim() || row.title,
+      alt: coloringAlt(row.title, row.alt, row.audience),
       locale: row.locale,
       seoTitle: optionalText(row.seoTitle),
       seoDescription: optionalText(row.seoDescription),

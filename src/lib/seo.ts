@@ -8,6 +8,13 @@ export function optionalText(value: unknown): string | undefined {
   return typeof value === 'string' ? value.trim() || undefined : undefined;
 }
 
+/** Preserve descriptive alt text, except the retired seed's contradictory audience claim. */
+export function coloringAlt(title: string, alt: string | null | undefined, audience: string): string {
+  const value = optionalText(alt);
+  if (audience === 'adultes' && value && /(?:dessin au trait simple pour enfants|simple line(?: art)? drawing for (?:children|kids))/i.test(value)) return title;
+  return value ?? title;
+}
+
 export function coloringMetadata(locale: 'fr' | 'en', title: string, seoTitle?: string, seoDescription?: string, audience?: string) {
   const description = optionalText(seoDescription);
   // Retired seed descriptions called even intricate adult drawings suitable for toddlers.
