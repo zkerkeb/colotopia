@@ -16,14 +16,14 @@ export async function getStaticPaths() {
 }
 
 const { coloring, enSlug } = Astro.props;
-const { title, image, alt, category, tags, slug, seoTitle, seoDescription, createdAt } = coloring.data;
+const { title, image, alt, category, tags, slug, seoTitle, seoDescription, createdAt, audience } = coloring.data;
 
 const locale = 'fr' as const;
 const siteUrl = Astro.site?.href.replace(/\/$/, '') ?? 'https://colotopia.com';
 const canonicalUrl = `${siteUrl}/fr/coloriage/${slug}/`;
 const altUrl = enSlug ? `${siteUrl}/en/coloring/${enSlug}/` : undefined;
 
-const { title: pageTitle, description: pageDescription } = coloringMetadata(locale, title, seoTitle, seoDescription);
+const { title: pageTitle, description: pageDescription } = coloringMetadata(locale, title, seoTitle, seoDescription, audience);
 
 const allFr = await getPublishableColoriages('fr');
 const related = allFr
@@ -45,6 +45,8 @@ const structuredData = {
       thumbnailUrl: thumbWebp,
       encodingFormat: 'image/webp',
       author: { '@type': 'Organization', name: 'Colotopia', url: siteUrl },
+      creator: { '@type': 'Organization', name: 'Colotopia', url: siteUrl },
+      creditText: 'Colotopia',
       copyrightHolder: { '@type': 'Organization', name: 'Colotopia' },
       license: `${siteUrl}/fr/conditions/`,
     },

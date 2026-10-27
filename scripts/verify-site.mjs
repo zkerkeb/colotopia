@@ -122,7 +122,11 @@ for (const page of pages.values()) if (!page.redirect && /^\/(fr\/coloriage|en\/
 const sitemapIndex = await readFile(resolve(root, 'sitemap-index.xml'), 'utf8');
 if (!sitemapIndex.includes(`${site}/sitemap-images.xml`)) errors.add('image sitemap: absent from sitemap index');
 const redirectMap = await readFile(resolve(root, '_redirects.nginx'), 'utf8');
-for (const [from, to] of Object.entries(pageRedirects)) if (!redirectMap.includes(`${JSON.stringify(from)} ${JSON.stringify(to)};`)) errors.add(`nginx map: missing redirect ${from}`);
+for (const [from, to] of Object.entries(pageRedirects)) {
+  if (!redirectMap.includes(`${JSON.stringify(from)} ${JSON.stringify(to)};`)) errors.add(`nginx map: missing redirect ${from}`);
+  const target = pages.get(locate(to));
+  if (!target || target.redirect || target.noindex || Object.hasOwn(pageRedirects, to)) errors.add(`nginx map: invalid destination ${from} -> ${to}`);
+}
 const report = { pages: pages.size, checkedLinks, alternateCount, sitemapUrls, imageSitemapUrls: imagePages.size, pageRedirects: Object.keys(pageRedirects).length, remoteImages: remote.size, errors: [...errors] };
 await writeFile('/tmp/colotopia-site-verification.json', JSON.stringify(report, null, 2));
 await writeFile('/tmp/colotopia-remote-images.json', JSON.stringify([...remote]));

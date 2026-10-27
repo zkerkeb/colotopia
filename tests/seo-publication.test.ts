@@ -13,6 +13,13 @@ describe('specific drawing metadata', () => {
     expect(coloringMetadata('en', 'Cat', ' My cat page ', ' Custom description ')).toEqual({ title: 'My cat page', description: 'Custom description' });
     expect(coloringMetadata('en', 'Cat').title).toBe('Cat Coloring Page');
   });
+  it('replaces age claims from the old seed only when they contradict the audience', () => {
+    const stale = 'Coloriage fractale. Parfait pour les enfants de 3 a 8 ans.';
+    expect(coloringMetadata('fr', 'Fractale complexe', undefined, stale, 'adultes').description).not.toContain('3 a 8');
+    expect(coloringMetadata('fr', 'Chat', undefined, stale, 'enfants').description).toBe(stale);
+    expect(coloringMetadata('en', 'Fractal', undefined, 'Perfect for children aged 3 to 8.', 'adultes').description).not.toContain('3 to 8');
+    expect(coloringMetadata('fr', 'Fractale', undefined, 'Un motif détaillé pour adultes.', 'adultes').description).toBe('Un motif détaillé pour adultes.');
+  });
 });
 describe('stable translation identity', () => {
   it('keeps the same page after either image is regenerated', () => {
@@ -39,5 +46,10 @@ describe('exact legacy redirects', () => {
   });
   it('fails publication for a missing destination instead of creating a soft 404', () => {
     expect(() => legacyRedirects(rows, { '/old/': '/fr/coloriage/missing/' })).toThrow('no published target');
+  });
+  it('redirects a translated navigation path only after its destination was built', () => {
+    const aliases = { '/en/ete/': '/en/summer/' };
+    expect(() => legacyRedirects(rows, aliases, {})).toThrow('no published target');
+    expect(legacyRedirects(rows, aliases, {}, ['/en/summer/'])['/en/ete']).toBe('/en/summer/');
   });
 });

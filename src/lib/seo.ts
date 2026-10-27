@@ -8,10 +8,13 @@ export function optionalText(value: unknown): string | undefined {
   return typeof value === 'string' ? value.trim() || undefined : undefined;
 }
 
-export function coloringMetadata(locale: 'fr' | 'en', title: string, seoTitle?: string, seoDescription?: string) {
+export function coloringMetadata(locale: 'fr' | 'en', title: string, seoTitle?: string, seoDescription?: string, audience?: string) {
+  const description = optionalText(seoDescription);
+  // Retired seed descriptions called even intricate adult drawings suitable for toddlers.
+  const wrongAudience = audience === 'adultes' && description && /(?:enfants de 3 [aà] 8 ans|children (?:aged? )?3 (?:to|[-–]) 8|kids (?:aged? )?3 (?:to|[-–]) 8)/i.test(description);
   return {
     title: optionalText(seoTitle) ?? (locale === 'fr' ? `Coloriage ${title} à imprimer` : `${title} Coloring Page`),
-    description: optionalText(seoDescription) ?? (locale === 'fr'
+    description: (!wrongAudience && description) || (locale === 'fr'
       ? `Téléchargez gratuitement le coloriage « ${title} » en PDF A4 à imprimer. Choisissez vos couleurs et découvrez d’autres dessins sur Colotopia.`
       : `Download the ${title} coloring page as a free printable A4 PDF. Choose your colors and explore more coloring pages on Colotopia.`),
   };

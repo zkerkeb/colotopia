@@ -2,8 +2,8 @@ import pageRedirects from '../data/page-redirects.json';
 import imageAliases from '../data/legacy-image-aliases.json';
 
 type Drawing = { slug: string; locale: string; image: string };
-export function legacyRedirects(drawings: Drawing[], pageAliases: Record<string, string> = pageRedirects, legacyImages: Record<string, string> = imageAliases) {
-  const pages = new Set(drawings.map(item => `/${item.locale}/${item.locale === 'fr' ? 'coloriage' : 'coloring'}/${item.slug}/`));
+export function legacyRedirects(drawings: Drawing[], pageAliases: Record<string, string> = pageRedirects, legacyImages: Record<string, string> = imageAliases, publishedPaths: readonly string[] = []) {
+  const pages = new Set([...publishedPaths, ...drawings.map(item => `/${item.locale}/${item.locale === 'fr' ? 'coloriage' : 'coloring'}/${item.slug}/`)]);
   const result: Record<string, string> = {};
   for (const [from, to] of Object.entries(pageAliases)) {
     if (!pages.has(to)) throw new Error(`Redirect has no published target: ${from} -> ${to}`);

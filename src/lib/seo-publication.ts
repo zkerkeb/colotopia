@@ -1,4 +1,4 @@
-import { writeFile } from 'node:fs/promises';
+import { readdir, writeFile } from 'node:fs/promises';
 import { getPublishableColoriages } from './coloriages';
 import { legacyRedirects, nginxRedirectMap } from './legacy-redirects';
 
@@ -10,6 +10,8 @@ export async function initSeoPublication() {
 export function getLastModified(url: string) { return lastModified.get(url); }
 export async function writePublicationArtifacts(dir: URL) {
   const pages = (await Promise.all([getPublishableColoriages('fr'), getPublishableColoriages('en')])).flat();
-  const redirects = legacyRedirects(pages.map(page => page.data));
+  const files = await readdir(dir, { recursive: true });
+  const publishedPaths = files.filter(file => file.endsWith('/index.html')).map(file => `/${file.replace(/index\.html$/, '')}`);
+  const redirects = legacyRedirects(pages.map(page => page.data), undefined, undefined, publishedPaths);
   await writeFile(new URL('_redirects.nginx', dir), nginxRedirectMap(redirects));
 }
