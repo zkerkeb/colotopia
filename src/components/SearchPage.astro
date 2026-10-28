@@ -54,7 +54,8 @@ const title = fr ? 'Rechercher un coloriage' : 'Find a coloring page';
       const index = await loadSearchIndex(`/${locale}/search-index.json`);
       if (id !== revision) return;
       hits = searchCatalog(index, query.value, audience.value); shown = 0; results.replaceChildren(); appendResults();
-      status.textContent = hits.length ? `${hits.length} ${fr ? 'coloriages trouvés' : 'coloring pages found'}` : (fr ? 'Aucun résultat. Essayez un seul mot ou une autre collection.' : 'No results. Try one word or another collection.');
+      const resultLabel = fr ? (hits.length === 1 ? 'coloriage trouvé' : 'coloriages trouvés') : (hits.length === 1 ? 'coloring page found' : 'coloring pages found');
+      status.textContent = hits.length ? `${hits.length} ${resultLabel}` : (fr ? 'Aucun résultat. Essayez un seul mot ou une autre collection.' : 'No results. Try one word or another collection.');
       if (record) track('search', { search_term: query.value.trim(), result_count: hits.length });
     } catch {
       if (id !== revision) return;
