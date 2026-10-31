@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ShopTracking from './ShopTracking.astro';
+import { getBook, shopPath, type ShopBook } from '../lib/shop';
+interface Props { book: ShopBook; }
+const { book } = Astro.props;
+const { locale } = book;
+const fr = locale === 'fr';
+const other = getBook(book.id, fr ? 'en' : 'fr');
+---
+<BaseLayout locale={locale} title={`${book.title} — ${fr ? 'Cahier PDF à imprimer' : 'Printable PDF book'}`} description={book.description} canonical={`https://colotopia.com${book.href}`} altUrl={`https://colotopia.com${other.href}`} ogImage={`https://colotopia.com${book.image}`}>
+  <nav class="crumb" aria-label={fr ? 'Fil d’Ariane' : 'Breadcrumb'}><a href={`/${locale}/`}>{fr ? 'Accueil' : 'Home'}</a><span aria-hidden="true"> / </span><a href={shopPath(locale)}>{fr ? 'Cahiers' : 'Books'}</a><span aria-hidden="true"> / </span><span>{book.title}</span></nav>
+  <article data-product-view={book.listingId}>
+    <div class="product-layout">
+      <div class:list={['product-art', book.id]}><img src={book.image} alt={book.imageAlt} width="1200" height="1200" fetchpriority="high" decoding="async" /></div>
+      <div class="product-summary">
+        <h1>{book.title}</h1>
+        <p class="product-detail">{book.detail}</p>
+        <p class="price">{book.priceLabel}</p>
+        <p class="price-note">{fr ? 'Prix indicatif en euros. Montant final sur Etsy.' : 'Final price and applicable taxes shown on Etsy.'}</p>
+        <a class="btn-primary buy-button" href={book.etsyUrl} target="_blank" rel="noopener" data-shop-event="etsy_click" data-book-id={book.listingId} data-placement="product">{fr ? 'Acheter sur Etsy' : 'Buy on Etsy'} <span aria-hidden="true">↗</span></a>
+        <a class="sample-link" href={book.sample} download data-shop-event="book_sample_click" data-book-id={book.listingId} data-placement="product">{fr ? 'Télécharger l’extrait gratuit · 6 pages' : 'Download the free sample · 6 pages'} ↓</a>
+        <ul class="contents">
+          <li>{fr ? `2 PDF : A4 + US Letter, ${book.pages} pages par format` : `2 PDFs: A4 + US Letter, ${book.pages} pages per format`}</li>
+          <li>{book.language}{book.id === 'woodland' && <> · <a href={other.href} lang={fr ? 'en' : 'fr'}>{fr ? 'Version anglaise' : 'French edition'}</a></>}</li>
+          <li>{fr ? 'Téléchargement après achat · Aucun envoi postal' : 'Download after purchase · No physical delivery'}</li>
+        </ul>
+        <p class="description">{book.description}</p>
+      </div>
+    </div>
+    <section class="preview-section" aria-labelledby="preview-heading">
+      <h2 id="preview-heading">{fr ? 'Feuilletez le cahier' : 'Take a look inside'}</h2>
+      {book.id !== 'woodland' && <div class="page-previews">{[2,3,4].map(n => <img src={`/images/shop/${book.id}-page-${n}.webp`} alt={fr ? `Page ${n - 1} de l’extrait gratuit` : `Free sample page ${n - 1}`} width="600" height="847" loading="lazy" decoding="async" />)}</div>}
+      <img class="inside-preview" src={book.preview} alt={fr ? `Aperçu des pages du cahier ${book.title}` : `Sample pages from ${book.title}`} width="1400" height="1050" loading="lazy" decoding="async" />
+    </section>
+    <div class="purchase-details">
+      <section><h2>{fr ? 'Ce que vous recevez' : 'What you get'}</h2><p>{book.id === 'woodland' ? (fr ? '60 pages par fichier, dont 48 pages d’activités, une histoire et les solutions.' : '60 pages per file, including 48 pages of activities, a story and the answers.') : (fr ? '50 dessins à colorier et 2 pages d’introduction par fichier.' : '50 coloring pages and 2 introduction pages per file.')}{' '}{fr ? 'Les formats A4 et US Letter contiennent les mêmes pages.' : 'A4 and US Letter contain the same pages.'}</p></section>
+      <section><h2>{fr ? 'Imprimez à votre rythme' : 'Print at your own pace'}</h2><p>{fr ? 'Usage pour un foyer ou une classe. Vous pouvez réimprimer pour ce groupe ; le partage des fichiers et la revente ne sont pas autorisés.' : 'For one household or one classroom. Reprint for that group as needed; file redistribution and resale are not permitted.'}</p></section>
+    </div>
+    <a class="back-to-books" href={shopPath(locale)}>← {fr ? 'Tous les cahiers' : 'All books'}</a>
+  </article>
+</BaseLayout>
+<ShopTracking />
+<style>
+  .crumb { font-size: .875rem; color: #6a6074; margin-bottom: 1.6rem; }
+  .product-layout { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 3rem; align-items: start; }
+  .product-art { border: 1px solid #e7dfef; background: #f3edf9; border-radius: 24px; overflow: hidden; }
+  .product-art.gardens { background: #edf2e8; }
+  .product-art.woodland { background: #fbf2e6; }
+  .product-art img { width: 100%; height: auto; display: block; aspect-ratio: 1; object-fit: contain; }
+  h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.9rem,3vw,2.7rem); line-height: 1.15; color: #302443; }
+  .product-detail { margin: .8rem 0 1.2rem; font-weight: 800; color: #665080; }
+  .description { margin-top: 1.2rem; line-height: 1.65; color: #534b5f; }
+  .price { margin-top: 1.4rem; font-weight: 800; font-size: 2rem; color: #302443; line-height: 1.2; }
+  .price-note { font-size: .8rem; color: #625672; margin: .4rem 0 1rem; }
+  .buy-button { width: 100%; justify-content: center; border-radius: 14px; min-height: 54px; font-size: 1.1rem; font-weight: 800; }
+  .sample-link { display: block; text-align: center; font-weight: 800; padding: 1rem .25rem; text-underline-offset: 3px; }
+  .contents { list-style: none; display: grid; gap: .5rem; border-top: 1px solid #e8e0ed; padding-top: 1rem; font-size: .875rem; color: #534b5f; }
+  .contents li { padding-left: 1.15rem; position: relative; }
+  .contents li::before { content: '✓'; position: absolute; left: 0; color: #427554; font-weight: 800; }
+  .preview-section { margin-top: 3rem; }
+  h2 { color: #302443; font-size: 1.6rem; margin-bottom: 1rem; }
+  .page-previews { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+  .page-previews img { width: 100%; height: auto; border: 1px solid #e8e0ed; border-radius: 10px; }
+  .inside-preview { width: min(100%,900px); height: auto; display: block; margin: auto; border-radius: 18px; border: 1px solid #e8e0ed; }
+  .purchase-details { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding: 2rem 0; }
+  .purchase-details h2 { font-size: 1.15rem; margin-bottom: .5rem; }
+  .purchase-details p { color: #625672; font-size: .9rem; }
+  .back-to-books { font-weight: 800; }
+  @media (max-width: 768px) {
+    .product-layout { grid-template-columns: 1fr; gap: 1.4rem; }
+    .product-art { max-width: 450px; width: 100%; margin: auto; }
+    .product-art img { max-height: 380px; }
+    .product-summary { min-width: 0; }
+    .crumb { font-size: .8rem; margin-bottom: 1rem; }
+    h1 { font-size: 2rem; }
+    .price { margin-top: 1rem; }
+    .purchase-details { grid-template-columns: 1fr; gap: 1.4rem; }
+  }
+</style>

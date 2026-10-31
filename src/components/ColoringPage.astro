@@ -3,6 +3,8 @@ import PdfDownloadButton from "./PdfDownloadButton.astro";
 import Breadcrumb from "./Breadcrumb.astro";
 import RelatedColoriages from "./RelatedColoriages.astro";
 import AffiliateWidget from "./AffiliateWidget.astro";
+import BookRecommendation from "./BookRecommendation.astro";
+import { recommendedBook } from "../lib/shop";
 import {
   getLocalePath,
   getColoringBasePath,
@@ -109,7 +111,8 @@ const share = [
         </div>
         <p id="print-status" role="status" aria-live="polite"></p>
       </div>
-      <AffiliateWidget locale={locale} category={category} />
+      <BookRecommendation locale={locale} category={category} />
+      {!recommendedBook(category, locale) && <AffiliateWidget locale={locale} category={category} />}
       <a class="category-link" href={catUrl}>
         {fr
           ? `Voir les coloriages ${catLabel.toLowerCase()}`
@@ -130,6 +133,7 @@ const share = [
     currentSlug={slug}
     category={category}
   />
+  {recommendedBook(category, locale) && <details class="supplies"><summary>{fr ? 'Fournitures pour ce coloriage' : 'Coloring supplies'}</summary><AffiliateWidget locale={locale} category={category} placement="after_related" /></details>}
   <section class="about-coloring">
     <h2>{fr ? "À propos de ce coloriage" : "About this coloring page"}</h2>
     <p>
@@ -229,6 +233,8 @@ const share = [
     );
 </script>
 <style>
+  .supplies { margin-top: 2rem; max-width: 440px; }
+  .supplies summary { cursor: pointer; font-weight: 800; margin-bottom: .75rem; }
   h1 {
     font-family: var(--font-display);
     font-weight: 400;

@@ -1,5 +1,6 @@
 ---
 import Brand from "./Brand.astro";
+import { shopPath } from "../lib/shop";
 import {
   t,
   getPrivacyPath,
@@ -30,6 +31,7 @@ const fr = locale === "fr";
       <a href={`/${locale}/categories/`}>
         {fr ? "Tous les thèmes" : "All themes"}
       </a>
+      <a href={shopPath(locale)}>{fr ? "Cahiers à imprimer" : "Printable books"}</a>
       <a href={`/${locale}/collections/`}>Collections PDF</a>
       <a href={`/${locale}/categories/#adults`}>
         {fr ? "Coloriages adultes" : "Adult coloring pages"}

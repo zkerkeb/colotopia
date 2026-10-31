@@ -1,6 +1,7 @@
 ---
 import Brand from "./Brand.astro";
 import SearchBar from "./SearchBar.astro";
+import { shopPath } from "../lib/shop";
 import type { Locale } from "../lib/i18n";
 interface Props {
   locale: Locale;
@@ -13,6 +14,7 @@ const links = [
     href: `/${locale}/categories/`,
     label: fr ? "Coloriages" : "Coloring pages",
   },
+  { href: shopPath(locale), label: fr ? "Cahiers" : "Books" },
   { href: `/${locale}/collections/`, label: "Collections" },
   {
     href: `/${locale}/categories/#adults`,

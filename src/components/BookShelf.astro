@@ -1,0 +1,22 @@
+---
+import type { Locale } from '../lib/i18n';
+import { getBooks, shopPath } from '../lib/shop';
+import BookCard from './BookCard.astro';
+import ShopTracking from './ShopTracking.astro';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const fr = locale === 'fr';
+---
+<section class="book-shelf" aria-labelledby="books-heading">
+  <div class="shelf-heading"><h2 id="books-heading">{fr ? 'Nos cahiers à imprimer' : 'Our printable books'}</h2><a href={shopPath(locale)}>{fr ? 'Tous les cahiers' : 'All books'} →</a></div>
+  <div class="book-grid">{getBooks(locale).map(book => <BookCard book={book} placement="home" />)}</div>
+</section>
+<ShopTracking />
+<style>
+  .book-shelf { margin: 2.5rem 0; }
+  .shelf-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .75rem; margin-bottom: 1rem; }
+  h2 { font-family: var(--font-display); font-weight: 400; font-size: 1.8rem; color: #302443; }
+  .shelf-heading a { font-weight: 800; }
+  .book-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+  @media (max-width: 600px) { .book-grid { grid-template-columns: 1fr; gap: .75rem; } h2 { font-size: 1.5rem; } }
+</style>

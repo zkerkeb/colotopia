@@ -1,7 +1,7 @@
 ---
 import { adultCategories, type Category, type Locale } from '../lib/i18n';
-interface Props { locale: Locale; category: Category; }
-const { locale, category } = Astro.props;
+interface Props { locale: Locale; category: Category; placement?: string; }
+const { locale, category, placement = 'below_download' } = Astro.props;
 const fr = locale === 'fr';
 const adult = (adultCategories as readonly string[]).includes(category);
 const tag = fr ? 'colotopia-21' : 'colotopiaus-20';
@@ -24,14 +24,14 @@ const label = fr ? 'Voir sur Amazon' : 'View on Amazon';
     </svg>
     <div class="featured-copy">
       <h2>{featured.name}</h2>
-      <a class="supply-link" href={featured.href} target="_blank" rel="noopener noreferrer sponsored nofollow" data-product={featured.id} data-category={category}>
+      <a class="supply-link" href={featured.href} target="_blank" rel="noopener noreferrer sponsored nofollow" data-product={featured.id} data-category={category} data-placement={placement}>
         {label} <span aria-hidden="true">↗</span>
       </a>
     </div>
   </div>
   <details>
     <summary>{fr ? 'Autres fournitures' : 'More supplies'}<span aria-hidden="true">+</span></summary>
-    <ul>{others.map(p => <li><span>{p.name}</span><a class="supply-link" href={p.href} target="_blank" rel="noopener noreferrer sponsored nofollow" data-product={p.id} data-category={category} aria-label={`${label} — ${p.name}`}>Amazon <span aria-hidden="true">↗</span></a></li>)}</ul>
+    <ul>{others.map(p => <li><span>{p.name}</span><a class="supply-link" href={p.href} target="_blank" rel="noopener noreferrer sponsored nofollow" data-product={p.id} data-category={category} data-placement={placement} aria-label={`${label} — ${p.name}`}>Amazon <span aria-hidden="true">↗</span></a></li>)}</ul>
   </details>
 </section>
 <script>
@@ -40,7 +40,7 @@ const label = fr ? 'Voir sur Amazon' : 'View on Amazon';
     link.addEventListener('click', () => track('supply_click', {
       product_name: link.dataset.product,
       coloring_category: link.dataset.category,
-      placement: 'below_download',
+      placement: link.dataset.placement,
       link_url: link.href,
     }));
   });

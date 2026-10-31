@@ -5,6 +5,7 @@
  */
 
 import { collectionDefinitions } from './collections';
+import { bookIds, getBook, shopPath } from './shop';
 import { buildSlugMap } from './coloriages';
 import { getTranslatedBlogSlug } from './blog-alternates';
 import { categories, getCategorySlug } from './i18n';
@@ -23,6 +24,9 @@ const enCategorySet = new Set(Object.values(frToEnCategories));
 const SITE = 'https://colotopia.com';
 
 const staticAlternates: Record<string, string> = {
+  [shopPath('fr')]: shopPath('en'),
+  [shopPath('en')]: shopPath('fr'),
+  ...Object.fromEntries(bookIds.flatMap(id => [[getBook(id, 'fr').href, getBook(id, 'en').href], [getBook(id, 'en').href, getBook(id, 'fr').href]])),
   '/fr/collections/': '/en/collections/',
   '/en/collections/': '/fr/collections/',
   ...Object.fromEntries(collectionDefinitions.flatMap(c => [[`/fr/collections/${c.fr.slug}/`, `/en/collections/${c.en.slug}/`], [`/en/collections/${c.en.slug}/`, `/fr/collections/${c.fr.slug}/`]])),

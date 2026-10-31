@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "./Hero.astro";
+import BookShelf from "./BookShelf.astro";
 import ThemeChips from "./ThemeChips.astro";
 import ColoringCard from "./ColoringCard.astro";
 import CollectionShelf from "./CollectionShelf.astro";
@@ -63,9 +64,9 @@ const description = fr
     <>
       <Hero locale={locale} previews={featured.map((c) => c.data)} />
       <ThemeChips locale={locale} />
-      <section aria-labelledby="featured-heading">
+      <section class="free-featured" aria-labelledby="featured-heading">
         <h2 id="featured-heading">
-          {fr ? "À toi de choisir" : "Make it yours"}
+          {fr ? "À imprimer gratuitement" : "Print for free"}
         </h2>
         <div class="coloring-grid featured-grid" id="main-grid">
           {featured.map((c, i) => (
@@ -78,6 +79,7 @@ const description = fr
           ))}
         </div>
       </section>
+      <BookShelf locale={locale} />
       <CollectionShelf
         locale={locale}
         heading={fr ? "Des idées pour aujourd’hui" : "Ideas for today"}
@@ -136,9 +138,10 @@ const description = fr
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.25rem;
   }
-  .featured-grid :global(.card-image-wrapper) {
-    aspect-ratio: 1.15;
-  }
+  .free-featured { background: #f0eafa; border-radius: 20px; padding: 1.25rem; margin-top: .5rem; }
+  .featured-grid :global(.card-image-wrapper) { aspect-ratio: 1.45; }
+  .featured-grid :global(.card-title) { font-size: 1rem; }
+
   .catalogue {
     margin-top: 2.5rem;
   }

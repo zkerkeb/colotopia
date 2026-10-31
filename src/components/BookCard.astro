@@ -1,0 +1,32 @@
+---
+import type { ShopBook } from '../lib/shop';
+interface Props { book: ShopBook; placement?: string; }
+const { book, placement = 'shop' } = Astro.props;
+const fr = book.locale === 'fr';
+---
+<a class="book-card" href={book.href} data-shop-event="book_click" data-book-id={book.listingId} data-placement={placement}>
+  <div class:list={['book-art', book.id]}>
+    <img src={book.thumbnail} alt={book.imageAlt} width="600" height={book.id === 'woodland' ? 600 : 847} loading="lazy" decoding="async" />
+  </div>
+  <div class="book-copy">
+    <h3>{book.title}</h3>
+    <p>{book.detail}</p>
+    <div class="book-bottom"><strong>{book.priceLabel}</strong><span>{fr ? 'Découvrir' : 'Explore'} <span aria-hidden="true">→</span></span></div>
+  </div>
+</a>
+<style>
+  .book-card { display: grid; grid-template-columns: 42% minmax(0,1fr); min-width: 0; overflow: hidden; color: var(--color-text); background: white; border: 1px solid #e9e2ef; border-radius: 20px; transition: border-color .15s, box-shadow .15s; }
+  .book-card:hover { text-decoration: none; border-color: var(--color-primary); box-shadow: 0 6px 20px #39244b0c; }
+  .book-art { padding: .8rem; background: #f1ebfa; display: grid; place-items: center; min-width: 0; }
+  .book-art.gardens { background: #e9efe4; }
+  .book-art.woodland { background: #fbf2e6; }
+  img { width: 100%; height: 220px; object-fit: contain; display: block; }
+  .book-copy { padding: 1.1rem .9rem; display: flex; flex-direction: column; min-width: 0; }
+  h3 { font-size: 1.2rem; line-height: 1.25; color: #302443; }
+  p { margin: .65rem 0 1rem; font-size: .85rem; color: #625672; }
+  .book-bottom { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .65rem; }
+  strong { font-size: 1.15rem; white-space: nowrap; color: #302443; }
+  .book-bottom > span { background: #eee8fb; color: #5941a2; font-size: .9rem; font-weight: 800; border-radius: 10px; padding: .55rem .75rem; }
+  @media (min-width: 601px) and (max-width: 1000px) { .book-card { grid-template-columns: 1fr; } img { height: 180px; } }
+  @media (max-width: 600px) { img { height: 170px; } .book-copy { padding: 1rem; } h3 { font-size: 1.1rem; } }
+</style>

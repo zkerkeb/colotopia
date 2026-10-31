@@ -1,0 +1,19 @@
+<script>
+  import { track } from '../lib/analytics';
+  document.querySelectorAll<HTMLAnchorElement>('[data-shop-event]').forEach(link => {
+    link.addEventListener('click', () => track(link.dataset.shopEvent!, {
+      item_id: link.dataset.bookId, placement: link.dataset.placement,
+      language: document.documentElement.lang, link_url: link.href,
+      transport_type: 'beacon',
+    }));
+  });
+  const product = document.querySelector<HTMLElement>('[data-product-view]');
+  if (product) {
+    let sent = false;
+    const send = () => { if (!sent) sent = track('book_view', {
+      item_id: product.dataset.productView, language: document.documentElement.lang,
+    }); };
+    send();
+    window.addEventListener('colotopia:consent', send);
+  }
+</script>

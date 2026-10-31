@@ -1,0 +1,25 @@
+---
+import { recommendedBook } from '../lib/shop';
+import type { Locale } from '../lib/i18n';
+import ShopTracking from './ShopTracking.astro';
+interface Props { category: string; locale: Locale; }
+const { category, locale } = Astro.props;
+const book = recommendedBook(category, locale);
+const fr = locale === 'fr';
+---
+{book && <a class="book-recommendation" href={book.href} data-shop-event="book_click" data-book-id={book.listingId} data-placement="coloring">
+  <img src={book.thumbnail} width="120" height="120" alt={book.imageAlt} loading="lazy" decoding="async" />
+  <div><span class="book-kind">{fr ? 'Cahier à imprimer' : 'Printable book'}</span><h2>{book.title}</h2><p>{book.detail}</p><div class="offer"><strong>{book.priceLabel}</strong><span>{fr ? 'Voir le cahier' : 'View book'} →</span></div></div>
+</a>}
+<ShopTracking />
+<style>
+  .book-recommendation { margin-top: 1rem; display: grid; grid-template-columns: 110px minmax(0,1fr); gap: 1rem; align-items: center; padding: 1rem; border: 1px solid #dfd3ef; border-radius: 18px; background: #f1eafa; color: #302443; }
+  .book-recommendation:hover { text-decoration: none; border-color: var(--color-primary); }
+  img { width: 100%; height: auto; border-radius: 10px; }
+  .book-kind { font-size: .75rem; font-weight: 800; color: #695581; }
+  h2 { font-size: 1.1rem; margin: .2rem 0 .4rem; }
+  p { font-size: .8rem; color: #625672; }
+  .offer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .35rem; margin-top: .65rem; }
+  .offer span { font-weight: 800; font-size: .85rem; color: #5941a2; }
+  @media (max-width: 380px) { .book-recommendation { grid-template-columns: 82px minmax(0,1fr); gap: .75rem; padding: .85rem; } }
+</style>

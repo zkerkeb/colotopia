@@ -1,0 +1,3 @@
+
+# Keep approved PDF samples byte-for-byte intact.
+public/downloads/shop/*.pdf binary

@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BookCard from './BookCard.astro';
+import ShopTracking from './ShopTracking.astro';
+import { getBooks, shopPath } from '../lib/shop';
+import type { Locale } from '../lib/i18n';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const fr = locale === 'fr';
+const books = getBooks(locale);
+---
+<BaseLayout locale={locale} title={fr ? 'Cahiers de coloriages et activités à imprimer' : 'Printable coloring and activity books'} description={fr ? 'Découvrez les cahiers Colotopia : aventures pour les 6–9 ans, animaux rigolos et coloriages pour adultes. Aperçus gratuits et achat des PDF sur Etsy.' : 'Explore Colotopia activity books for ages 6–9, funny animals and adult coloring books. Free previews and PDF purchases on Etsy.'} canonical={`https://colotopia.com${shopPath(locale)}`} altUrl={`https://colotopia.com${shopPath(fr ? 'en' : 'fr')}`}>
+  <nav class="crumb" aria-label={fr ? 'Fil d’Ariane' : 'Breadcrumb'}><a href={`/${locale}/`}>{fr ? 'Accueil' : 'Home'}</a><span aria-hidden="true"> / </span><span>{fr ? 'Cahiers' : 'Books'}</span></nav>
+  <h1>{fr ? 'Les cahiers Colotopia' : 'Colotopia books'}</h1>
+  <p class="format">{fr ? 'PDF A4 + US Letter · Achat sur Etsy' : 'A4 + US Letter PDFs · Buy on Etsy'}</p>
+  <div class="shop-grid">{books.map(book => <BookCard book={book} />)}</div>
+  <p class="price-note">{fr ? 'Prix en euros indicatifs : Etsy affiche le montant final dans votre devise. Produits numériques, sans envoi postal.' : 'Etsy displays the final price, currency and applicable taxes. Digital products; nothing is shipped.'}</p>
+  <a class="free-link" href={`/${locale}/categories/`}>{fr ? 'Parcourir les coloriages gratuits' : 'Browse free coloring pages'} →</a>
+</BaseLayout>
+<ShopTracking />
+<style>
+  .crumb { font-size: .9rem; color: #6a6074; margin-bottom: 1.75rem; }
+  h1 { font-family: var(--font-display); font-weight: 400; color: #302443; }
+  .format { color: #625672; margin: .65rem 0 2rem; }
+  .shop-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.25rem; }
+  .price-note { margin: 1.5rem 0; max-width: 52rem; color: #625672; font-size: .9rem; }
+  .free-link { font-weight: 800; }
+  @media (max-width: 600px) { .shop-grid { grid-template-columns: 1fr; } h1 { font-size: 2rem; } }
+</style>
