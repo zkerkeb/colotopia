@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ColoringCard from './ColoringCard.astro';
+import SearchBar from './SearchBar.astro';
+import { getPublishableColoriages, buildSlugMap } from '../lib/coloriages';
+import { onlinePath, onlineFeatured } from '../lib/online-coloring';
+import { getCategoryLabel, getCategorySlug, type Locale, type Category } from '../lib/i18n';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const fr = locale === 'fr';
+const all = await getPublishableColoriages(locale);
+const pairs = await buildSlugMap();
+const selected = onlineFeatured.map(slug => all.find(c => c.data.slug === (fr ? slug : pairs.frToEn[slug]))).filter((c): c is typeof all[number] => !!c);
+// Published drawings only, including when one of the featured items is moderated.
+const drawings = [...selected, ...all.filter(c => !selected.includes(c))].slice(0, 12);
+const title = fr ? 'Coloriage en ligne gratuit, à la souris ou au doigt' : 'Free online coloring pages with pencils and brushes';
+const description = fr ? 'Colorie gratuitement les dessins Colotopia en ligne : crayons, feutres, pinceaux et gomme. Sur ordinateur, tablette ou téléphone, sans compte. Enregistre ton image.' : 'Color Colotopia drawings online for free with pencils, markers, brushes and an eraser. Use a mouse or finger, without an account, and save your finished picture.';
+const canonical = `https://colotopia.com${onlinePath(locale)}`;
+const themes: Category[] = ['animaux', 'dinosaures', 'licorne', 'kawaii', 'noel', 'mandalas'];
+const structuredData = {
+  '@context': 'https://schema.org', '@graph': [
+    { '@type':'CollectionPage', '@id':canonical, url:canonical, name:title, description, inLanguage:locale,
+      mainEntity: { '@type':'ItemList', itemListElement:drawings.map((c,i)=>({ '@type':'ListItem', position:i+1, name:c.data.title, url:`https://colotopia.com/${locale}/${fr ? 'coloriage' : 'coloring'}/${c.data.slug}/` })) } },
+    { '@type':'WebApplication', name:fr ? 'Atelier de coloriage Colotopia' : 'Colotopia coloring studio', url:canonical,
+      applicationCategory:'EntertainmentApplication', operatingSystem:'Any', browserRequirements:'Requires JavaScript and a modern browser', isAccessibleForFree:true, inLanguage:['fr','en'],
+      offers:{'@type':'Offer',price:'0',priceCurrency:'EUR'}, featureList:fr ? 'Crayon, feutre, pinceau, gomme, zoom, annulation, export PNG' : 'Pencil, marker, brush, eraser, zoom, undo, PNG export' },
+  ],
+};
+---
+<BaseLayout locale={locale} title={title} description={description} canonical={canonical} altUrl={`https://colotopia.com${onlinePath(fr ? 'en' : 'fr')}`} ogImage={drawings[0]?.data.image} structuredData={structuredData}>
+  <section class="online-intro">
+    <div><h1>{fr ? 'Coloriage en ligne gratuit' : 'Free online coloring'}</h1>
+      <p>{fr ? 'Choisis un dessin et colorie à la souris ou au doigt. Crayon, feutre, pinceau : à toi de jouer, sans inscription.' : 'Choose a drawing and color with your mouse or finger. Pencil, marker or brush: make it yours, without signing up.'}</p>
+    </div>
+    <div class="online-colors" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  </section>
+  <section aria-labelledby="choose-online"><h2 id="choose-online">{fr ? 'Quel dessin vas-tu colorier ?' : 'What will you color?'}</h2>
+    <div class="online-grid">{drawings.map((c,i) => <ColoringCard {...c.data} category={c.data.category as Category} locale={locale} online isLCP={i === 0} />)}</div>
+  </section>
+  <section class="online-explore" aria-labelledby="online-themes"><h2 id="online-themes">{fr ? 'Choisir un thème' : 'Choose a theme'}</h2>
+    <SearchBar locale={locale} showSubmit />
+    <nav aria-label={fr ? 'Thèmes de coloriage' : 'Coloring themes'}>{themes.map(c => <a href={`/${locale}/${getCategorySlug(c,locale)}/`}>{getCategoryLabel(c,locale)} →</a>)}</nav>
+  </section>
+  <section class="online-guide" aria-labelledby="online-how"><h2 id="online-how">{fr ? 'Comment colorier en ligne ?' : 'How does online coloring work?'}</h2>
+    <div><article><h3>{fr ? 'Dessine librement' : 'Color your way'}</h3><p>{fr ? 'Ouvre un dessin, puis « Colorier en ligne ». Choisis ta couleur, ton outil et la taille du trait. Les contours restent visibles ; la gomme efface tes couleurs. Agrandis le dessin et utilise la main pour te déplacer dans les détails.' : 'Open a drawing and select “Color online”. Pick a color, tool and stroke size. The outlines stay visible; the eraser removes your colors. Zoom in and use the hand tool to move around the details.'}</p></article>
+    <article><h3>{fr ? 'Reprends et enregistre' : 'Come back and save'}</h3><p>{fr ? 'Ton coloriage se sauvegarde dans ce navigateur quand le stockage est disponible. Retrouve-le sur le même appareil. Avec « Terminé », enregistre une image PNG que tu peux garder ou imprimer. Effacer les données du navigateur supprime les coloriages sauvegardés.' : 'Your coloring is saved in this browser when storage is available. Return on the same device to continue. Select “Done” to save a PNG picture you can keep or print. Clearing browser data removes saved colorings.'}</p></article></div>
+    <p>{fr ? 'Tu préfères le papier ? Chaque fiche propose toujours le dessin vierge en PDF A4 gratuit.' : 'Prefer paper? Every drawing page still offers the blank picture as a free A4 PDF.'} <a href={`/${locale}/categories/`}>{fr ? 'Voir les coloriages à imprimer' : 'Browse printable coloring pages'} →</a></p>
+    <noscript><p>{fr ? 'Active JavaScript pour utiliser les pinceaux. Les dessins à imprimer restent accessibles.' : 'Enable JavaScript to use the brushes. Printable coloring pages remain available.'}</p></noscript>
+  </section>
+</BaseLayout>
+<style>
+  .online-intro { background:#eee6f8; border-radius:24px; padding:clamp(22px,4vw,42px); margin:12px 0 32px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+  h1 { font:400 clamp(1.8rem,4vw,3rem)/1.15 var(--font-display); color:#513677; max-width:700px; }
+  .online-intro p { margin-top:16px; max-width:640px; font-size:1.1rem; color:#54485f; }
+  .online-colors { display:flex; gap:8px; transform:rotate(-12deg); flex-shrink:0; }
+  .online-colors i { width:22px; height:100px; border-radius:10px 10px 5px 5px; background:#ed7986; }
+  .online-colors i:nth-child(2) { background:#f2bd50; margin-top:12px; }.online-colors i:nth-child(3) { background:#8bc9a2; }.online-colors i:nth-child(4) { background:#75b3da; margin-top:12px; }.online-colors i:nth-child(5) { background:#ac8cd0; }
+  h2 { font:400 clamp(1.35rem,2.5vw,1.9rem) var(--font-display); margin-bottom:20px; }
+  .online-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:20px; }
+  .online-explore { margin:40px 0; padding:24px; background:#fff; border-radius:24px; }
+  .online-explore nav { display:flex; flex-wrap:wrap; gap:12px; margin-top:20px; }.online-explore nav a { background:#f2edf7; border-radius:24px; padding:10px 16px; font-weight:800; }
+  .online-guide { margin:40px 0; }.online-guide > div { display:grid; grid-template-columns:1fr 1fr; gap:32px; }.online-guide h3 { font-size:1.1rem; margin-bottom:10px; }.online-guide p { color:#645b6b; line-height:1.75; }.online-guide > p { margin-top:24px; }
+  @media(max-width:700px) { .online-colors { display:none; }.online-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }.online-guide > div { grid-template-columns:1fr; gap:20px; }.online-intro { padding:22px; }.online-intro p { font-size:1rem; } }
+</style>

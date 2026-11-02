@@ -1,4 +1,5 @@
 ---
+import { paintingHref } from '../lib/online-coloring';
 import type { Locale } from '../lib/i18n';
 import type { Category } from '../lib/i18n';
 import { getLocalePath, getColoringBasePath, categoryIcons } from '../lib/i18n';
@@ -14,10 +15,11 @@ interface Props {
   category?: Category;
   isNew?: boolean;
   isLCP?: boolean;
+  online?: boolean;
 }
 
-const { title, slug, image, alt, locale, audience, category, isNew, isLCP = false } = Astro.props;
-const href = getLocalePath(locale, `/${getColoringBasePath(locale)}/${slug}`);
+const { title, slug, image, alt, locale, audience, category, isNew, isLCP = false, online = false } = Astro.props;
+const href = online ? paintingHref(locale, slug) : getLocalePath(locale, `/${getColoringBasePath(locale)}/${slug}`);
 const icon = category ? categoryIcons[category] : undefined;
 const newLabel = locale === 'fr' ? 'Nouveau' : 'New';
 
@@ -56,7 +58,7 @@ const preview = await coloringPreview(image);
   </div>
   <div class="card-body">
     <p class="card-title">{icon && <span class="card-cat-icon">{icon}</span>}{title}</p>
-    <span class="card-cta">{locale === 'fr' ? 'Voir le coloriage' : 'View coloring page'} <span aria-hidden="true">→</span></span>
+    <span class="card-cta">{online ? (locale === 'fr' ? 'Colorier en ligne' : 'Color online') : (locale === 'fr' ? 'Voir le coloriage' : 'View coloring page')} <span aria-hidden="true">→</span></span>
   </div>
 </a>
 

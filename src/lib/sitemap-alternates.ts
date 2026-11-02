@@ -4,6 +4,7 @@
  * for translated paths (coloriage/coloring, animaux/animals, slug differences).
  */
 
+import { onlinePath } from './online-coloring';
 import { collectionDefinitions } from './collections';
 import { bookIds, getBook, shopPath } from './shop';
 import { buildSlugMap } from './coloriages';
@@ -24,6 +25,8 @@ const enCategorySet = new Set(Object.values(frToEnCategories));
 const SITE = 'https://colotopia.com';
 
 const staticAlternates: Record<string, string> = {
+  [onlinePath("fr")]: onlinePath("en"),
+  [onlinePath("en")]: onlinePath("fr"),
   [shopPath('fr')]: shopPath('en'),
   [shopPath('en')]: shopPath('fr'),
   ...Object.fromEntries(bookIds.flatMap(id => [[getBook(id, 'fr').href, getBook(id, 'en').href], [getBook(id, 'en').href, getBook(id, 'fr').href]])),

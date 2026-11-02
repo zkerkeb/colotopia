@@ -1,4 +1,5 @@
 ---
+import { onlinePath } from "../../../lib/online-coloring";
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import ColoringCard from '../../../components/ColoringCard.astro';
 import AdSlot from '../../../components/AdSlot.astro';
@@ -117,6 +118,7 @@ const structuredData = {
   </div>
   <div class="category-content">
     <Breadcrumb locale={locale} currentPage={`Coloriages ${label}`} />
+    <p class="online-category-link"><a href={onlinePath(locale)}>Colorier en ligne avec crayons et pinceaux →</a></p>
 
   {pillar && (
     <p class="pillar-anchor-link">

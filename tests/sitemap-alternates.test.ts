@@ -4,6 +4,10 @@ import { getAlternateUrl, initSlugMaps } from '../src/lib/sitemap-alternates';
 vi.mock('../src/lib/coloriages', () => ({ buildSlugMap: async () => ({ frToEn: { 'ferme-cochon': 'farm-pig' }, enToFr: { 'farm-pig': 'ferme-cochon' } }) }));
 beforeAll(initSlugMaps);
 const SITE = 'https://colotopia.com';
+it('pairs the indexable online coloring hubs in both directions', () => {
+  expect(getAlternateUrl(`${SITE}/fr/coloriage-en-ligne/`)?.altUrl).toBe(`${SITE}/en/online-coloring/`);
+  expect(getAlternateUrl(`${SITE}/en/online-coloring/`)?.altUrl).toBe(`${SITE}/fr/coloriage-en-ligne/`);
+});
 
 // getAlternateUrl loads slug maps from disk on first call — that's fine, the
 // content files exist in the repo so the mapping will be populated.

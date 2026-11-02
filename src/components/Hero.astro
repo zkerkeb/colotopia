@@ -1,4 +1,5 @@
 ---
+import { onlinePath } from "../lib/online-coloring";
 import type { Locale } from "../lib/i18n";
 import { coloringPreview } from "../lib/preview-images";
 import SearchBar from "./SearchBar.astro";
@@ -41,6 +42,7 @@ const images = await Promise.all(
       {fr ? "Gratuit · PDF A4 · Sans compte" : "Free · A4 PDF · No account"}
     </p>
     <SearchBar locale={locale} showSubmit />
+    <a class="online-home-link" href={onlinePath(locale)}>{fr ? "Colorier en ligne gratuitement" : "Color online for free"} →</a>
   </div>
   <div class="paper-stack" aria-hidden="true">
     {images.map((p, i) => (
@@ -58,6 +60,7 @@ const images = await Promise.all(
   </div>
 </section>
 <style>
+  .online-home-link { display:inline-flex; margin-top:16px; padding:12px 18px; border:1px solid #d9c9ee; background:#eee5fa; border-radius:14px; font-weight:800; }
   .hero {
     display: grid;
     grid-template-columns: 1.8fr 1fr;

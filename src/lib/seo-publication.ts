@@ -2,7 +2,10 @@ import { readdir, writeFile } from 'node:fs/promises';
 import { getPublishableColoriages } from './coloriages';
 import { legacyRedirects, nginxRedirectMap } from './legacy-redirects';
 
-const lastModified = new Map<string, string>();
+const lastModified = new Map<string, string>([
+  ["https://colotopia.com/fr/coloriage-en-ligne/", "2026-11-02"],
+  ["https://colotopia.com/en/online-coloring/", "2026-11-02"],
+]);
 export async function initSeoPublication() {
   const pages = (await Promise.all([getPublishableColoriages('fr'), getPublishableColoriages('en')])).flat();
   for (const { data } of pages) if (data.updatedAt) lastModified.set(`https://colotopia.com/${data.locale}/${data.locale === 'fr' ? 'coloriage' : 'coloring'}/${data.slug}/`, data.updatedAt);

@@ -1,4 +1,6 @@
 ---
+import PaintingStudio from "./PaintingStudio.astro";
+import { onlinePath } from "../lib/online-coloring";
 import PdfDownloadButton from "./PdfDownloadButton.astro";
 import Breadcrumb from "./Breadcrumb.astro";
 import RelatedColoriages from "./RelatedColoriages.astro";
@@ -95,6 +97,8 @@ const share = [
       aria-label={fr ? "Télécharger et imprimer" : "Download and print"}
     >
       <div class="coloring-actions">
+        <a id="colorier" href="#colorier" class="online-action" data-open-studio><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m4 16 12-12 4 4L8 20H4v-4Zm9-9 4 4" /></svg>{fr ? "Colorier en ligne" : "Color online"}</a>
+        <p id="online-status" role="status"></p>
         <PdfDownloadButton
           image={image}
           title={title}
@@ -138,9 +142,10 @@ const share = [
     <h2>{fr ? "À propos de ce coloriage" : "About this coloring page"}</h2>
     <p>
       {fr
-        ? `« ${title} » est disponible gratuitement en PDF A4 et en PNG dans le thème ${catLabel.toLowerCase()}. Choisis les couleurs qui te plaisent et imprime uniquement les feuilles dont tu as besoin.`
-        : `“${title}” is available as a free A4 PDF and PNG in our ${catLabel.toLowerCase()} theme. Choose the colors you like and print only the sheets you need.`}
+        ? `« ${title} » se colorie en ligne à la souris ou au doigt, avec crayons, feutres et pinceaux. Il est aussi disponible gratuitement en PDF A4 et en PNG dans le thème ${catLabel.toLowerCase()}. Choisis les couleurs qui te plaisent et imprime uniquement les feuilles dont tu as besoin.`
+        : `“${title}” can be colored online with a mouse or finger using pencils, markers and brushes. It is also available as a free A4 PDF and PNG in our ${catLabel.toLowerCase()} theme. Choose the colors you like and print only the sheets you need.`}
     </p>
+    <p><a href={onlinePath(locale)}>{fr ? "Découvrir le coloriage en ligne gratuit" : "Explore free online coloring"} →</a></p>
     <div class="coloring-tags">
       {tags.slice(0, 8).map((tag) => (
         <a
@@ -172,6 +177,7 @@ const share = [
     </button>
   </div>
 </article>
+<PaintingStudio {locale} {title} {slug} {image} />
 <script>
   import { track, trackColoringView } from "../lib/analytics";
   const article = document.querySelector<HTMLElement>(".coloring-page")!;
@@ -233,6 +239,9 @@ const share = [
     );
 </script>
 <style>
+  .online-action { display:flex; align-items:center; justify-content:center; gap:10px; padding:16px 20px; border-radius:16px; background:#eee4fa; color:#623f8b; font-weight:800; font-size:1.1rem; text-decoration:none; border:2px solid #dbc8ed; }
+  .online-action:hover { background:#e1d0f4; text-decoration:none; }
+  #online-status:empty { display:none; }
   .supplies { margin-top: 2rem; max-width: 440px; }
   .supplies summary { cursor: pointer; font-weight: 800; margin-bottom: .75rem; }
   h1 {

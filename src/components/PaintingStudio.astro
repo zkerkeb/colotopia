@@ -1,0 +1,152 @@
+---
+import { palette } from '../lib/painting';
+import { onlinePath } from '../lib/online-coloring';
+import type { Locale } from '../lib/i18n';
+interface Props { locale: Locale; title: string; slug: string; image: string }
+const { locale, title, slug, image } = Astro.props;
+const fr = locale === 'fr';
+const tools = [
+  { id: 'pencil', label: fr ? 'Crayon' : 'Pencil', path: 'm4 16 12-12 4 4L8 20H4v-4Zm9-9 4 4M4 16l4 4' },
+  { id: 'marker', label: fr ? 'Feutre' : 'Marker', path: 'm5 14 9-11 7 6-10 10-6-5Zm0 0-3 7 9-2M12 6l6 6' },
+  { id: 'brush', label: fr ? 'Pinceau' : 'Brush', path: 'M14 13c4-2 6-6 7-10-4 1-8 3-10 7l3 3ZM11 10l3 3M10 12c-5-2-3 7-8 8 7 3 13-1 8-8Z' },
+  { id: 'eraser', label: fr ? 'Gomme' : 'Eraser', path: 'm3 13 10-10a2 2 0 0 1 3 0l5 5a2 2 0 0 1 0 3L11 21H7l-4-5a2 2 0 0 1 0-3Zm4-4 9 8M11 21h10' },
+];
+---
+<dialog class="studio" id="painting-studio" aria-labelledby="studio-title" data-locale={locale} data-title={title} data-slug={slug} data-image={image}>
+  <div class="studio-shell">
+    <header class="studio-header">
+      <button type="button" class="studio-back" data-close aria-label={fr ? 'Revenir au dessin' : 'Back to coloring page'}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 5-7 7 7 7" /></svg><span>{fr ? 'Retour' : 'Back'}</span></button>
+      <h2 id="studio-title">{title}</h2>
+      <div class="studio-history">
+        <button type="button" data-undo disabled aria-label={fr ? 'Annuler le dernier trait' : 'Undo last stroke'} title={fr ? 'Annuler (Ctrl ou ⌘ Z)' : 'Undo (Ctrl or ⌘ Z)'}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4-5 5 5 5M4 9h9a7 7 0 0 1 0 14" transform="translate(0 -2)" /></svg></button>
+        <button type="button" data-redo disabled aria-label={fr ? 'Rétablir le trait' : 'Redo stroke'}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 4 5 5-5 5M20 9h-9a7 7 0 0 0 0 14" transform="translate(0 -2)" /></svg></button>
+      </div>
+      <button type="button" class="studio-done" data-done disabled>{fr ? 'Terminé' : 'Done'}</button>
+    </header>
+    <div class="studio-workspace">
+      <div class="studio-viewport" data-viewport>
+        <div class="studio-paper" data-paper hidden><canvas data-paint aria-label={fr ? `Colorier ${title} à la souris ou au doigt` : `Color ${title} with a mouse or finger`}></canvas><img data-lines alt="" draggable="false" /></div>
+      </div>
+      <div class="studio-load" data-load role="status"><span data-load-message>{fr ? 'Chargement du dessin…' : 'Loading drawing…'}</span><button type="button" data-retry hidden>{fr ? 'Réessayer' : 'Try again'}</button></div>
+      <div class="studio-zoom" aria-label={fr ? 'Zoom du dessin' : 'Drawing zoom'}>
+        <button type="button" data-pan aria-pressed="false" aria-label={fr ? 'Déplacer le dessin agrandi' : 'Move zoomed drawing'}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M2 12h20m-7-7-3-3-3 3m6 14-3 3-3-3M5 9l-3 3 3 3m14-6 3 3-3 3" /></svg></button>
+        <button type="button" data-zoom-out aria-label={fr ? 'Dézoomer' : 'Zoom out'}>−</button>
+        <button type="button" data-zoom-reset aria-label={fr ? 'Réinitialiser le zoom' : 'Reset zoom'}>100 %</button>
+        <button type="button" data-zoom-in aria-label={fr ? 'Zoomer' : 'Zoom in'}>+</button>
+      </div>
+    </div>
+    <div class="studio-tools" role="group" aria-label={fr ? 'Outils de coloriage' : 'Coloring tools'}>
+      <div class="studio-tool-options">{tools.map(t => <button type="button" data-tool={t.id} aria-pressed={t.id === 'pencil'}><svg viewBox="0 0 24 24" aria-hidden="true"><path d={t.path} /></svg><span>{t.label}</span></button>)}</div>
+      <div class="studio-sizes" role="group" aria-label={fr ? 'Taille du trait' : 'Stroke size'}>{[12, 30, 64].map((size, i) => <button type="button" data-size={size} aria-pressed={i === 1} aria-label={fr ? ['Trait fin', 'Trait moyen', 'Trait épais'][i] : ['Small stroke', 'Medium stroke', 'Large stroke'][i]}><span style={`width:${[6,12,20][i]}px;height:${[6,12,20][i]}px`}></span></button>)}</div>
+      <button type="button" class="studio-clear" data-clear>{fr ? 'Effacer' : 'Clear'}</button>
+    </div>
+    <div class="studio-palette" role="group" aria-label={fr ? 'Couleurs' : 'Colors'}>{palette.map(([color, french, english], i) => <button type="button" data-color={color} style={`--swatch:${color}`} aria-label={fr ? french : english} aria-pressed={i === 1}><span aria-hidden="true">✓</span></button>)}</div>
+    <p class="studio-save" data-save role="status" aria-live="polite"></p>
+  </div>
+  <dialog class="studio-result" data-result aria-labelledby="studio-result-title">
+    <h2 id="studio-result-title">{fr ? 'Ton coloriage' : 'Your coloring'}</h2>
+    <img data-result-image alt={fr ? `${title} colorié` : `Colored ${title}`} />
+    <a data-download class="studio-done" download>{fr ? 'Enregistrer l’image' : 'Save image'}</a>
+    <button type="button" data-continue>{fr ? 'Continuer à colorier' : 'Keep coloring'}</button>
+    <a href={onlinePath(locale)}>{fr ? 'Choisir un autre dessin' : 'Choose another drawing'}</a>
+  </dialog>
+  <dialog class="studio-confirm" data-confirm aria-labelledby="studio-confirm-title">
+    <h2 id="studio-confirm-title">{fr ? 'Effacer les couleurs ?' : 'Clear the colors?'}</h2>
+    <button type="button" data-cancel-clear>{fr ? 'Garder mon coloriage' : 'Keep my coloring'}</button>
+    <button type="button" data-confirm-clear>{fr ? 'Tout effacer' : 'Clear all'}</button>
+  </dialog>
+</dialog>
+<script>
+  const studio = document.querySelector<HTMLDialogElement>('#painting-studio')!;
+  let controller: Promise<{ open: () => Promise<void>; close: () => void }> | undefined;
+  const open = async () => {
+    try { controller ??= import('../lib/painting-studio').then(m => m.setupStudio(studio)); await (await controller).open(); }
+    catch { controller = undefined; const message = document.querySelector<HTMLElement>('#online-status'); if (message) message.textContent = studio.dataset.locale === 'fr' ? 'L’atelier ne se charge pas. Réessaie ou recharge cette page.' : 'The studio could not load. Try again or reload this page.'; }
+  };
+  document.querySelector<HTMLAnchorElement>('[data-open-studio]')?.addEventListener('click', event => { event.preventDefault(); if (location.hash !== '#colorier') history.pushState(null, '', '#colorier'); void open(); });
+  window.addEventListener('hashchange', () => { if (location.hash === '#colorier') void open(); else void controller?.then(c => c.close()); });
+  if (location.hash === '#colorier') void open();
+</script>
+<style is:global>
+  .studio { position:fixed; inset:0; width:100%; height:100%; height:100dvh; max-width:none; max-height:none; margin:0; padding:0; border:0; color:#30243f; background:#fcf8ef; overscroll-behavior:none; }
+  .studio [hidden] { display:none !important; }
+  .studio::backdrop { background:#fcf8ef; }
+  .studio button,.studio a { -webkit-tap-highlight-color:transparent; }
+  .studio button { cursor:pointer; font:800 15px var(--font-body); color:inherit; border:0; background:white; border-radius:14px; min-height:44px; }
+  .studio button:disabled { opacity:.35; cursor:default; }
+  .studio svg { width:24px; height:24px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+  .studio-shell { height:100%; max-width:1440px; margin:auto; padding:16px max(16px,env(safe-area-inset-right)) max(8px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left)); display:grid; grid-template-columns:104px minmax(0,1fr); grid-template-rows:64px minmax(0,1fr) 80px 20px; gap:12px; }
+  .studio-header { grid-column:1/-1; display:flex; align-items:center; gap:12px; }
+  .studio-back { display:flex; align-items:center; gap:8px; padding:12px; background:#efe5fa !important; }
+  .studio-header h2 { flex:1; min-width:0; font:400 clamp(1rem,2vw,1.5rem) var(--font-display); margin:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-align:center; }
+  .studio-history { display:flex; gap:6px; }
+  .studio-history button { width:46px; display:grid; place-items:center; border:1px solid #e9e1ed; }
+  .studio .studio-done { background:#8054b4; color:white; padding:14px 22px; text-decoration:none; border-radius:16px; font-weight:800; text-align:center; }
+  .studio-workspace { position:relative; min-height:0; grid-column:2; grid-row:2; border:1px solid #ece6df; border-radius:24px; background:#f0ede7; overflow:hidden; }
+  .studio-viewport { width:100%; height:100%; overflow:auto; overscroll-behavior:contain; }
+  .studio-paper { position:relative; margin:auto; background:#fff; flex-shrink:0; }
+  .studio-paper canvas { position:absolute; inset:0; width:100%; height:100%; touch-action:none; cursor:crosshair; }
+  .studio-paper img { position:absolute; inset:0; width:100%; height:100%; mix-blend-mode:multiply; pointer-events:none; user-select:none; }
+  .studio[data-pan="true"] canvas { cursor:grab; }
+  .studio-load { position:absolute; inset:0; display:flex; gap:16px; align-items:center; justify-content:center; flex-direction:column; background:#fff; }
+  .studio-load button { padding:8px 20px; background:#eee2fb; }
+  .studio-zoom { position:absolute; bottom:12px; right:12px; display:flex; align-items:center; gap:2px; padding:4px; border-radius:16px; background:#fffffff2; box-shadow:0 2px 12px #30243f12; }
+  .studio-zoom button { min-width:42px; padding:0 8px; background:transparent; }
+  .studio-zoom [data-zoom-in],.studio-zoom [data-zoom-out] { font-size:24px; }
+  .studio-zoom [aria-pressed="true"] { background:#eee2fb; }
+  .studio-tools { grid-column:1; grid-row:2/4; display:flex; flex-direction:column; padding:10px; background:white; border-radius:24px; gap:14px; overflow:auto; }
+  .studio-tool-options { display:flex; flex-direction:column; gap:6px; }
+  .studio-tool-options button { display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; padding:14px 4px; min-height:76px; }
+  .studio-tool-options svg { width:34px; height:34px; }
+  .studio-tool-options [aria-pressed="true"],.studio-sizes [aria-pressed="true"] { background:#efe4fb; color:#66389a; }
+  .studio-sizes { display:flex; flex-direction:column; align-items:center; border-top:1px solid #eee7f1; padding-top:10px; }
+  .studio-sizes button { display:grid; place-items:center; width:44px; border-radius:50%; }
+  .studio-sizes span { border-radius:50%; background:currentColor; }
+  .studio .studio-clear { font-size:13px; color:#746b7d; margin-top:auto; }
+  .studio-palette { grid-column:2; display:flex; justify-content:space-evenly; align-items:center; gap:10px; padding:12px 18px; border-radius:24px; background:white; }
+  .studio-palette button { position:relative; width:48px; height:48px; min-height:0; flex-shrink:0; border-radius:50%; background:var(--swatch); border:2px solid #30243f15; outline-offset:3px; }
+  .studio-palette button[aria-pressed="true"] { outline:3px solid #382344; }
+  .studio-palette span { visibility:hidden; color:#30243f; font-size:24px; text-shadow:0 0 2px white; }
+  .studio-palette [aria-pressed="true"] span { visibility:visible; }
+  .studio-save { grid-column:1/-1; font-size:12px; text-align:right; min-height:18px; color:#716577; margin:0; }
+  .studio-result,.studio-confirm { position:fixed; inset:0; margin:auto; width:min(420px,calc(100% - 32px)); max-height:90dvh; overflow:auto; padding:24px; border:0; border-radius:24px; background:#fffaf3; color:#30243f; text-align:center; }
+  .studio-result::backdrop,.studio-confirm::backdrop { background:#30243f85; }
+  .studio-result h2,.studio-confirm h2 { font-size:24px; margin:0 0 16px; }
+  .studio-result img { display:block; width:100%; max-height:45dvh; object-fit:contain; margin:0 auto 16px; background:#fff; border-radius:12px; }
+  .studio-result a,.studio-result button,.studio-confirm button { display:block; width:100%; margin-top:12px; padding:12px; }
+  .studio-confirm [data-confirm-clear] { background:#fbe4e4; color:#8d3030; }
+  @media(max-width:900px) { .studio-palette { gap:8px; padding:12px; } .studio-palette button { width:38px; height:38px; } }
+  @media(max-width:760px) {
+    .studio-shell { padding:8px 10px max(6px,env(safe-area-inset-bottom)); grid-template-columns:minmax(0,1fr); grid-template-rows:48px minmax(0,1fr) 96px 96px 16px; gap:8px; }
+    .studio-header { gap:6px; } .studio-back { padding:8px; } .studio-back span { display:none; }
+    .studio-header h2 { font-family:var(--font-body); font-size:14px; font-weight:800; text-align:left; }
+    .studio-history { gap:2px; } .studio-history button { width:36px; min-width:36px; background:transparent; border:0; }
+    .studio .studio-done { padding:12px; font-size:14px; border-radius:14px; }
+    .studio-workspace { grid-column:1; border-radius:18px; }
+    .studio-tools { grid-column:1; grid-row:3; display:grid; grid-template-columns:1fr auto; grid-template-rows:56px 32px; gap:0; padding:4px 6px; border-radius:18px 18px 0 0; overflow:visible; }
+    .studio-tool-options { grid-column:1/-1; flex-direction:row; justify-content:space-around; gap:4px; }
+    .studio-tool-options button { flex:1; min-height:0; padding:4px; gap:2px; font-size:12px; border-radius:12px; }
+    .studio-tool-options svg { width:27px; height:27px; }
+    .studio-sizes { flex-direction:row; justify-content:center; padding:0; border:0; }
+    .studio-sizes button { width:44px; min-height:32px; height:32px; }
+    .studio .studio-clear { margin:0; min-height:32px; padding:0 12px; }
+    .studio-palette { grid-column:1; grid-row:4; display:grid; grid-template-columns:repeat(6,1fr); justify-items:center; gap:8px; padding:4px 12px 8px; border-radius:0 0 18px 18px; margin-top:-8px; }
+    .studio-palette button { width:36px; height:36px; } .studio-save { font-size:10px; line-height:16px; }
+    .studio-zoom { bottom:6px; right:6px; padding:2px; border-radius:12px; } .studio-zoom button { min-height:32px; min-width:32px; padding:0 5px; font-size:12px; } .studio-zoom svg { width:18px; height:18px; }
+  }
+  @media(max-height:500px) and (orientation:landscape) {
+    .studio-shell { grid-template-columns:104px minmax(0,1fr); grid-template-rows:44px minmax(0,1fr) 52px 16px; gap:6px; padding:6px; }
+    .studio-workspace { grid-column:2; grid-row:2; }
+    .studio-tools { grid-column:1; grid-row:2/4; display:flex; flex-direction:column; padding:4px; gap:4px; overflow:auto; border-radius:18px; }
+    .studio-tool-options { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:4px; }
+    .studio-tool-options button { min-width:0; min-height:52px; padding:4px 2px; gap:2px; font-size:11px; }
+    .studio-tool-options svg { width:24px; height:24px; }
+    .studio-sizes { flex-direction:row; padding:0; border:0; }
+    .studio-sizes button { width:30px; min-height:32px; }
+    .studio .studio-clear { min-height:32px; margin-top:auto; }
+    .studio-palette { grid-column:2; grid-row:3; display:flex; flex-wrap:nowrap; gap:4px; padding:8px; margin:0; border-radius:18px; }
+    .studio-palette button { width:32px; height:32px; }
+    .studio-save { grid-column:1/-1; grid-row:4; font-size:10px; }
+  }
+  @media print { .studio { display:none !important; } }
+</style>
