@@ -11,7 +11,8 @@ ENV PUBLIC_ADSENSE_PUBLISHER_ID=$PUBLIC_ADSENSE_PUBLISHER_ID
 ENV DATABASE_URL=$DATABASE_URL
 # Keep only fingerprinted image artifacts between builds. Tests and catalog
 # publication still run against the current commit and database on every deploy.
-RUN --mount=type=cache,id=colotopia-astro-assets-v1,target=/app/node_modules/.astro/assets,sharing=locked npm run verify
+RUN --mount=type=cache,id=colotopia-astro-assets-v1,target=/app/node_modules/.astro/assets,sharing=locked \
+    node scripts/quarantine-invalid-astro-cache.mjs /app/node_modules/.astro/assets && npm run verify
 
 FROM nginx:alpine
 COPY --from=build /app/dist /usr/share/nginx/html
