@@ -6,11 +6,12 @@ const fr = book.locale === 'fr';
 ---
 <a class="book-card" href={book.href} data-shop-event="book_click" data-book-id={book.listingId} data-placement={placement}>
   <div class:list={['book-art', book.id]}>
-    <img src={book.thumbnail} alt={book.imageAlt} width="600" height={book.id === 'woodland' ? 600 : 847} loading="lazy" decoding="async" />
+    <img src={book.thumbnail} alt={book.imageAlt} width={book.thumbnailWidth} height={book.thumbnailHeight} loading="lazy" decoding="async" />
   </div>
   <div class="book-copy">
     <h3>{book.title}</h3>
     <p>{book.detail}</p>
+    {!fr && book.frenchOnly && <p class="book-language">French-language PDF</p>}
     <div class="book-bottom"><strong>{book.priceLabel}</strong><span>{fr ? 'Découvrir' : 'Explore'} <span aria-hidden="true">→</span></span></div>
   </div>
 </a>
@@ -24,6 +25,7 @@ const fr = book.locale === 'fr';
   .book-copy { padding: 1.1rem .9rem; display: flex; flex-direction: column; min-width: 0; }
   h3 { font-size: 1.2rem; line-height: 1.25; color: #302443; }
   p { margin: .65rem 0 1rem; font-size: .85rem; color: #625672; }
+  .book-language { margin: -.45rem 0 1rem; font-size: .78rem; font-weight: 700; }
   .book-bottom { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .65rem; }
   strong { font-size: 1.15rem; white-space: nowrap; color: #302443; }
   .book-bottom > span { background: #eee8fb; color: #5941a2; font-size: .9rem; font-weight: 800; border-radius: 10px; padding: .55rem .75rem; }

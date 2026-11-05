@@ -1,0 +1,428 @@
+[
+  {
+    "title": {
+      "fr": "Panique chez les lutins !",
+      "en": "Elf Workshop Panic!"
+    },
+    "slugs": {
+      "fr": "panique-chez-les-lutins",
+      "en": "elf-workshop-panic-french"
+    },
+    "description": {
+      "fr": "24 missions de Noël pour les 6–9 ans : énigmes, dessins, coloriages et défis créatifs, avec les réponses. À imprimer pour composer un calendrier de l’Avent.",
+      "en": "24 Christmas missions for ages 6–9: puzzles, drawing, coloring and creative challenges, with answers. A French-language printable Advent activity book."
+    },
+    "audience": {
+      "fr": "6–9 ans",
+      "en": "Ages 6–9"
+    },
+    "detail": {
+      "fr": "24 missions · 6–9 ans",
+      "en": "24 missions · Ages 6–9"
+    },
+    "contents": {
+      "fr": "32 pages : 24 missions, dont 4 pages de coloriage illustré, puis accueil, suivi, diplôme, blagues et 3 pages de réponses.",
+      "en": "32 pages: 24 missions including 4 illustrated coloring pages, plus introduction, tracker, certificate, jokes and 3 answer pages."
+    },
+    "group": "children",
+    "id": "noel",
+    "listingId": "4610280214",
+    "priceUsd": 3.5,
+    "priceEur": 3.9,
+    "pages": 32,
+    "fileCount": 2,
+    "license": {
+      "fr": "Impressions pour un foyer ou une classe, avec réimpressions pour ce groupe. Pas de partage des PDF, de mise en ligne ni de revente.",
+      "en": "Print for one household or one classroom, including repeat copies for that group. No file sharing, public uploads or resale."
+    },
+    "samplePages": 5,
+    "sample": "/downloads/shop/noel-sample.pdf",
+    "image": "/images/shop/noel.webp",
+    "preview": "/images/shop/noel-preview.webp",
+    "previewWidth": 1400,
+    "previewHeight": 1400,
+    "pagePreviews": [
+      {
+        "src": "/images/shop/noel-sample-2.webp",
+        "width": 700,
+        "height": 989
+      },
+      {
+        "src": "/images/shop/noel-sample-3.webp",
+        "width": 700,
+        "height": 989
+      },
+      {
+        "src": "/images/shop/noel-sample-4.webp",
+        "width": 700,
+        "height": 989
+      }
+    ],
+    "thumbnail": "/images/shop/noel-sample-3.webp",
+    "thumbnailWidth": 700,
+    "thumbnailHeight": 989
+  },
+  {
+    "title": {
+      "fr": "Au resto, les crayons !",
+      "en": "Restaurant Crayon Time!"
+    },
+    "slugs": {
+      "fr": "au-resto-les-crayons",
+      "en": "restaurant-activity-placemats-french"
+    },
+    "description": {
+      "fr": "20 sets de table différents pour les 5–8 ans. Sur chaque feuille : un dessin à colorier et compléter, un défi d’observation et un jeu à deux.",
+      "en": "20 activity placemats for ages 5–8. Every sheet includes a drawing to color and complete, an observation challenge and a two-player game. French-language PDF."
+    },
+    "audience": {
+      "fr": "5–8 ans",
+      "en": "Ages 5–8"
+    },
+    "detail": {
+      "fr": "20 sets de table · 5–8 ans",
+      "en": "20 placemats · Ages 5–8"
+    },
+    "contents": {
+      "fr": "25 pages : 20 sets d’activités, 2 pages d’accueil, 2 pages de réponses et 1 page de licence. Les cinq jeux à deux reviennent dans des univers différents. Formats paysage.",
+      "en": "25 pages: 20 activity placemats, 2 introduction pages, 2 answer pages and 1 license page. Five two-player game types repeat across different themes. Landscape format."
+    },
+    "group": "children",
+    "id": "restaurant",
+    "listingId": "4610258229",
+    "priceUsd": 2.6,
+    "priceEur": 2.9,
+    "pages": 25,
+    "fileCount": 2,
+    "license": {
+      "fr": "Impressions pour un foyer ou une classe, avec réimpressions pour ce groupe. Pas de partage des PDF, de mise en ligne ni de revente.",
+      "en": "Print for one household or one classroom, including repeat copies for that group. No file sharing, public uploads or resale."
+    },
+    "samplePages": 4,
+    "sample": "/downloads/shop/restaurant-sample.pdf",
+    "image": "/images/shop/restaurant.webp",
+    "preview": "/images/shop/restaurant-preview.webp",
+    "previewWidth": 1400,
+    "previewHeight": 1400,
+    "pagePreviews": [
+      {
+        "src": "/images/shop/restaurant-sample-3.webp",
+        "width": 700,
+        "height": 496
+      },
+      {
+        "src": "/images/shop/restaurant-sample-4.webp",
+        "width": 700,
+        "height": 496
+      }
+    ],
+    "thumbnail": "/images/shop/restaurant-sample-3.webp",
+    "thumbnailWidth": 700,
+    "thumbnailHeight": 496
+  },
+  {
+    "title": {
+      "fr": "L’anniversaire des petits détectives",
+      "en": "The Little Detectives’ Birthday"
+    },
+    "slugs": {
+      "fr": "anniversaire-petits-detectives",
+      "en": "little-detectives-birthday-french"
+    },
+    "description": {
+      "fr": "Une enquête d’anniversaire pour les 6–9 ans avec 8 énigmes, un guide pour l’adulte, des invitations et des activités pour prolonger la fête.",
+      "en": "A birthday mystery for ages 6–9 with 8 clue puzzles, an adult host guide, invitations and extra party activities. All instructions and clues are in French."
+    },
+    "audience": {
+      "fr": "6–9 ans",
+      "en": "Ages 6–9"
+    },
+    "detail": {
+      "fr": "8 énigmes · 6–9 ans",
+      "en": "8 clue puzzles · Ages 6–9"
+    },
+    "contents": {
+      "fr": "32 pages : enquête de 8 énigmes, préparation de la fête, indices, invitations, rôles, diplôme, activités bonus, 12 cartes de memory et 3 pages de réponses.",
+      "en": "32 pages: an 8-puzzle mystery, party preparation, hints, invitations, roles, certificate, bonus activities, 12 memory cards and 3 answer pages."
+    },
+    "group": "children",
+    "id": "detectives",
+    "listingId": "4610282866",
+    "priceUsd": 4.39,
+    "priceEur": 4.9,
+    "pages": 32,
+    "fileCount": 2,
+    "license": {
+      "fr": "Impressions pour un foyer ou une classe, avec réimpressions pour ce groupe. Pas de partage des PDF, de mise en ligne ni de revente.",
+      "en": "Print for one household or one classroom, including repeat copies for that group. No file sharing, public uploads or resale."
+    },
+    "samplePages": 5,
+    "sample": "/downloads/shop/detectives-sample.pdf",
+    "image": "/images/shop/detectives.webp",
+    "preview": "/images/shop/detectives-preview.webp",
+    "previewWidth": 1400,
+    "previewHeight": 1400,
+    "pagePreviews": [
+      {
+        "src": "/images/shop/detectives-sample-2.webp",
+        "width": 700,
+        "height": 989
+      },
+      {
+        "src": "/images/shop/detectives-sample-3.webp",
+        "width": 700,
+        "height": 989
+      },
+      {
+        "src": "/images/shop/detectives-sample-4.webp",
+        "width": 700,
+        "height": 989
+      }
+    ],
+    "thumbnail": "/images/shop/detectives-sample-3.webp",
+    "thumbnailWidth": 700,
+    "thumbnailHeight": 989
+  },
+  {
+    "title": {
+      "fr": "La fabrique à monstres zinzins",
+      "en": "The Silly Monster Factory"
+    },
+    "slugs": {
+      "fr": "fabrique-monstres-zinzins",
+      "en": "silly-monster-factory-french"
+    },
+    "description": {
+      "fr": "Des monstres à inventer, des défis de dessin et des histoires à imaginer. Un carnet créatif pour jouer et recommencer, seul ou à plusieurs.",
+      "en": "Invent monsters, try drawing challenges and create their stories. A French-language creative activity book to enjoy alone or together."
+    },
+    "audience": {
+      "fr": "6–9 ans",
+      "en": "Ages 6–9"
+    },
+    "detail": {
+      "fr": "Dessin et jeux créatifs · 6–9 ans",
+      "en": "Drawing and creative games · Ages 6–9"
+    },
+    "contents": {
+      "fr": "36 pages : 6 tables de tirage, 6 coloriages à compléter, 6 défis de dessin, 24 cartes d’histoires sur 4 pages, 4 planches de BD, un exemple illustré et des ateliers créatifs. Couverture et consignes incluses.",
+      "en": "36 pages: 6 roll-and-draw tables, 6 coloring scenes, 6 drawing challenges, 24 story cards on 4 pages, 4 comic templates, an illustrated example and creative activities. Cover and instructions included."
+    },
+    "group": "children",
+    "id": "monstres",
+    "listingId": "4610263423",
+    "priceUsd": 3.5,
+    "priceEur": 3.9,
+    "pages": 36,
+    "fileCount": 2,
+    "license": {
+      "fr": "Impressions pour un foyer ou une classe, avec réimpressions pour ce groupe. Pas de partage des PDF, de mise en ligne ni de revente.",
+      "en": "Print for one household or one classroom, including repeat copies for that group. No file sharing, public uploads or resale."
+    },
+    "samplePages": 4,
+    "sample": "/downloads/shop/monstres-sample.pdf",
+    "image": "/images/shop/monstres.webp",
+    "preview": "/images/shop/monstres-preview.webp",
+    "previewWidth": 1400,
+    "previewHeight": 1400,
+    "pagePreviews": [
+      {
+        "src": "/images/shop/monstres-sample-2.webp",
+        "width": 700,
+        "height": 989
+      },
+      {
+        "src": "/images/shop/monstres-sample-3.webp",
+        "width": 700,
+        "height": 989
+      },
+      {
+        "src": "/images/shop/monstres-sample-4.webp",
+        "width": 700,
+        "height": 989
+      }
+    ],
+    "thumbnail": "/images/shop/monstres-sample-3.webp",
+    "thumbnailWidth": 700,
+    "thumbnailHeight": 989
+  },
+  {
+    "title": {
+      "fr": "Mission trajet sans écran",
+      "en": "Screen-Free Travel Mission"
+    },
+    "slugs": {
+      "fr": "mission-trajet-sans-ecran",
+      "en": "screen-free-travel-mission-french"
+    },
+    "description": {
+      "fr": "28 activités pour les passagers de 6–9 ans : bingo, jeux d’observation, énigmes, dessins et jeux à deux. À emporter en voyage ou à utiliser pendant une pause.",
+      "en": "28 activities for passengers ages 6–9: bingo, observation, puzzles, drawing and two-player games. A French-language printable pack for journeys and breaks."
+    },
+    "audience": {
+      "fr": "6–9 ans",
+      "en": "Ages 6–9"
+    },
+    "detail": {
+      "fr": "28 activités · 6–9 ans",
+      "en": "28 activities · Ages 6–9"
+    },
+    "contents": {
+      "fr": "34 pages : 6 jeux d’observation, 6 énigmes, 6 créations, 6 jeux à deux et 4 pages de carnet créatif, plus 2 pages d’accueil et 4 pages de réponses. Pour les passagers assis.",
+      "en": "34 pages: 6 observation activities, 6 puzzles, 6 drawing activities, 6 two-player games and 4 creative journal pages, plus 2 introduction and 4 answer pages. For seated passengers."
+    },
+    "group": "children",
+    "id": "trajet",
+    "listingId": "4610261057",
+    "priceUsd": 2.6,
+    "priceEur": 2.9,
+    "pages": 34,
+    "fileCount": 2,
+    "license": {
+      "fr": "Impressions pour un foyer ou une classe, avec réimpressions pour ce groupe. Pas de partage des PDF, de mise en ligne ni de revente.",
+      "en": "Print for one household or one classroom, including repeat copies for that group. No file sharing, public uploads or resale."
+    },
+    "samplePages": 4,
+    "sample": "/downloads/shop/trajet-sample.pdf",
+    "image": "/images/shop/trajet.webp",
+    "preview": "/images/shop/trajet-preview.webp",
+    "previewWidth": 1400,
+    "previewHeight": 1400,
+    "pagePreviews": [
+      {
+        "src": "/images/shop/trajet-sample-3.webp",
+        "width": 700,
+        "height": 989
+      },
+      {
+        "src": "/images/shop/trajet-sample-4.webp",
+        "width": 700,
+        "height": 989
+      }
+    ],
+    "thumbnail": "/images/shop/trajet-sample-3.webp",
+    "thumbnailWidth": 700,
+    "thumbnailHeight": 989
+  },
+  {
+    "title": {
+      "fr": "Le village aux petits mystères",
+      "en": "The Village of Little Mysteries"
+    },
+    "slugs": {
+      "fr": "village-aux-petits-mysteres",
+      "en": "village-little-mysteries-french"
+    },
+    "description": {
+      "fr": "Des maisons et jardins à colorier, avec des objets à chercher et des petits mystères à résoudre au fil du village.",
+      "en": "Color houses and gardens, look for hidden objects and solve little village mysteries. Puzzle instructions and story text are in French."
+    },
+    "audience": {
+      "fr": "Ados et adultes",
+      "en": "Teens and adults"
+    },
+    "detail": {
+      "fr": "Coloriage et énigmes · Ados et adultes",
+      "en": "Coloring and puzzles · Teens and adults"
+    },
+    "contents": {
+      "fr": "32 pages avec 12 scènes originales à colorier, 12 énigmes reliées par un message final et 12 détails d’observation. Carnet de piste, ateliers, indices, réponses et histoire inclus. Les énigmes nécessitent de lire le français.",
+      "en": "32 pages with 12 original coloring scenes, 12 linked puzzles and 12 observation details. Clue journal, activities, hints, answers and story included. French reading is required for the mystery."
+    },
+    "group": "adults",
+    "id": "village",
+    "listingId": "4610265715",
+    "priceUsd": 3.5,
+    "priceEur": 3.9,
+    "pages": 32,
+    "fileCount": 2,
+    "license": {
+      "fr": "Impressions pour un foyer ou une classe, avec réimpressions pour ce groupe. Pas de partage des PDF, de mise en ligne ni de revente.",
+      "en": "Print for one household or one classroom, including repeat copies for that group. No file sharing, public uploads or resale."
+    },
+    "samplePages": 4,
+    "sample": "/downloads/shop/village-sample.pdf",
+    "image": "/images/shop/village.webp",
+    "preview": "/images/shop/village-preview.webp",
+    "previewWidth": 1400,
+    "previewHeight": 1400,
+    "pagePreviews": [
+      {
+        "src": "/images/shop/village-sample-2.webp",
+        "width": 700,
+        "height": 989
+      },
+      {
+        "src": "/images/shop/village-sample-3.webp",
+        "width": 700,
+        "height": 989
+      },
+      {
+        "src": "/images/shop/village-sample-4.webp",
+        "width": 700,
+        "height": 989
+      }
+    ],
+    "thumbnail": "/images/shop/village-sample-2.webp",
+    "thumbnailWidth": 700,
+    "thumbnailHeight": 989
+  },
+  {
+    "title": {
+      "fr": "Au resto, les crayons ! — Établissement",
+      "en": "Restaurant Crayon Time! — Venue License"
+    },
+    "slugs": {
+      "fr": "sets-table-licence-professionnelle",
+      "en": "restaurant-placemats-commercial-license-french"
+    },
+    "description": {
+      "fr": "Les mêmes 20 sets de table pour les 5–8 ans, avec une licence permettant à un restaurant, café, gîte ou autre établissement d’en imprimer pour ses visiteurs.",
+      "en": "The same 20 French-language placemats for ages 5–8, with a license for one restaurant, café, guesthouse or other venue to print copies for its visitors."
+    },
+    "audience": {
+      "fr": "1 établissement · Enfants 5–8 ans",
+      "en": "1 venue · Children ages 5–8"
+    },
+    "detail": {
+      "fr": "20 sets · Licence 1 établissement",
+      "en": "20 placemats · One-venue license"
+    },
+    "contents": {
+      "fr": "Deux carnets de 25 pages (A4 et US Letter paysage) avec les mêmes 20 sets, les consignes et réponses, plus un PDF de licence séparé. L’extrait gratuit montre les jeux de l’édition Famille.",
+      "en": "Two 25-page landscape books (A4 and US Letter) with the same 20 placemats, instructions and answers, plus a separate license PDF. The free sample shows the games from the Family edition."
+    },
+    "group": "professional",
+    "id": "restaurant-pro",
+    "listingId": "4610281358",
+    "priceUsd": 17.04,
+    "priceEur": 19.0,
+    "pages": 25,
+    "fileCount": 3,
+    "license": {
+      "fr": "Un seul établissement physique peut imprimer autant de copies papier que nécessaire pour ses visiteurs, sans abonnement. Les visiteurs peuvent emporter leur feuille. Pas de revente des fichiers ou impressions comme produits autonomes, de diffusion des PDF ni de partage avec d’autres établissements.",
+      "en": "One physical venue may print unlimited paper copies for its visitors, with no subscription. Visitors may take their sheet home. No resale of files or standalone printed products, public PDF distribution or sharing with other venues."
+    },
+    "samplePages": 4,
+    "sample": "/downloads/shop/restaurant-sample.pdf",
+    "image": "/images/shop/restaurant-pro.webp",
+    "preview": "/images/shop/restaurant-pro-preview.webp",
+    "previewWidth": 1400,
+    "previewHeight": 1400,
+    "pagePreviews": [
+      {
+        "src": "/images/shop/restaurant-sample-3.webp",
+        "width": 700,
+        "height": 496
+      },
+      {
+        "src": "/images/shop/restaurant-sample-4.webp",
+        "width": 700,
+        "height": 496
+      }
+    ],
+    "thumbnail": "/images/shop/restaurant-sample-3.webp",
+    "thumbnailWidth": 700,
+    "thumbnailHeight": 496
+  }
+]

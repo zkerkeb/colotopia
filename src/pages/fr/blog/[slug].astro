@@ -5,6 +5,7 @@ import Breadcrumb from '../../../components/Breadcrumb.astro';
 import { t, getBlogPath } from '../../../lib/i18n';
 import { getTranslatedBlogSlug } from '../../../lib/blog-alternates';
 import EditorialContent from '../../../components/EditorialContent.astro';
+import ShopTracking from '../../../components/ShopTracking.astro';
 
 const locale = 'fr';
 
@@ -98,6 +99,7 @@ const articleSchema = {
     </section>
   )}
 </BaseLayout>
+<ShopTracking />
 
 <style>
   .blog-article {

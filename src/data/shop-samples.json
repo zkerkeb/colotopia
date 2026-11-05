@@ -1,0 +1,52 @@
+[
+  {
+    "path": "/downloads/shop/animals-sample.pdf",
+    "pages": 6,
+    "sha256": "0a616c58801fc7f710da2e023df2228a9f8f93e60b76ee5a1a2fe3ad5a1fdd61"
+  },
+  {
+    "path": "/downloads/shop/detectives-sample.pdf",
+    "pages": 5,
+    "sha256": "4f798a2fa0923d0e64d983946a2ce20c01235f94d85dca64704713e369730690"
+  },
+  {
+    "path": "/downloads/shop/gardens-sample.pdf",
+    "pages": 6,
+    "sha256": "f6bd6c720a895a16862a9b981935fc096720e82fa93eec297f6d8b7d039805be"
+  },
+  {
+    "path": "/downloads/shop/monstres-sample.pdf",
+    "pages": 4,
+    "sha256": "cc1d352508caf209c5c6e04ccffb529070562c7a158d763f29018703c2e0c1cb"
+  },
+  {
+    "path": "/downloads/shop/noel-sample.pdf",
+    "pages": 5,
+    "sha256": "3ba9d87e9ab0b136b80d6cd20f99a60e89052aafe441ad2b974ac58b6e44be94"
+  },
+  {
+    "path": "/downloads/shop/restaurant-sample.pdf",
+    "pages": 4,
+    "sha256": "216c334bf6f7a217ed2824828aa15ec918aab5315ae4769188ea92310a629f04"
+  },
+  {
+    "path": "/downloads/shop/trajet-sample.pdf",
+    "pages": 4,
+    "sha256": "3217c9a4107ed5fd935af2e5ff0720cdf77f2fc60348ff05089fe6bda6149700"
+  },
+  {
+    "path": "/downloads/shop/village-sample.pdf",
+    "pages": 4,
+    "sha256": "13c86224035ab35e74667b969f68ef2e13e665bf13ba54ea2906a52e49f4008c"
+  },
+  {
+    "path": "/downloads/shop/woodland-en-sample.pdf",
+    "pages": 6,
+    "sha256": "ef912f00e39ec9a7bf66ae560e520571c9899d393ed300ef08746bc428c10ac8"
+  },
+  {
+    "path": "/downloads/shop/woodland-fr-sample.pdf",
+    "pages": 6,
+    "sha256": "8c792be4f6fda8bbfc8b45c62d39587e1d868da387465f2615caf4fb92d08b9f"
+  }
+]

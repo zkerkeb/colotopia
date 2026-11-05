@@ -1,6 +1,6 @@
 ---
 import type { Locale } from '../lib/i18n';
-import { getBooks, shopPath } from '../lib/shop';
+import { getFeaturedBooks, shopPath } from '../lib/shop';
 import BookCard from './BookCard.astro';
 import ShopTracking from './ShopTracking.astro';
 interface Props { locale: Locale; }
@@ -9,7 +9,7 @@ const fr = locale === 'fr';
 ---
 <section class="book-shelf" aria-labelledby="books-heading">
   <div class="shelf-heading"><h2 id="books-heading">{fr ? 'Nos cahiers à imprimer' : 'Our printable books'}</h2><a href={shopPath(locale)}>{fr ? 'Tous les cahiers' : 'All books'} →</a></div>
-  <div class="book-grid">{getBooks(locale).map(book => <BookCard book={book} placement="home" />)}</div>
+  <div class="book-grid">{getFeaturedBooks(locale).map(book => <BookCard book={book} placement="home" />)}</div>
 </section>
 <ShopTracking />
 <style>

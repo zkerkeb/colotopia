@@ -1,13 +1,29 @@
 import { adultCategories, type Locale } from './i18n';
+import newCollection from '../data/shop-collection-2026-11.json';
 
-export type BookId = 'woodland' | 'animals' | 'gardens';
+export type BookId = 'woodland' | 'animals' | 'gardens' | 'noel' | 'restaurant' | 'detectives' | 'monstres' | 'trajet' | 'village' | 'restaurant-pro';
+export interface BookPreview { src: string; width: number; height: number; }
 export interface ShopBook {
   id: BookId; locale: Locale; slug: string; title: string; description: string;
   detail: string; audience: string; pages: number; language: string;
   image: string; thumbnail: string; imageAlt: string; preview: string; sample: string;
   listingId: string; etsyUrl: string; href: string; priceLabel: string;
+  samplePages: number; fileCount: number; contents: string; license: string;
+  group: 'children' | 'adults' | 'professional'; frenchOnly: boolean;
+  thumbnailWidth: number; thumbnailHeight: number; previewWidth: number; previewHeight: number;
+  pagePreviews: BookPreview[];
 }
-export const bookIds: BookId[] = ['woodland', 'animals', 'gardens'];
+interface CollectionBook {
+  id: BookId; slugs: Record<Locale, string>; title: Record<Locale, string>;
+  description: Record<Locale, string>; detail: Record<Locale, string>; audience: Record<Locale, string>;
+  contents: Record<Locale, string>; license: Record<Locale, string>;
+  group: ShopBook['group']; pages: number; samplePages: number; fileCount: number;
+  listingId: string; priceUsd: number; priceEur: number;
+  image: string; thumbnail: string; thumbnailWidth: number; thumbnailHeight: number;
+  preview: string; previewWidth: number; previewHeight: number; sample: string; pagePreviews: BookPreview[];
+}
+const collection = newCollection as CollectionBook[];
+export const bookIds: BookId[] = ['woodland', 'animals', 'gardens', ...collection.map(book => book.id)];
 export const shopPath = (locale: Locale) => locale === 'fr' ? '/fr/boutique/' : '/en/shop/';
 const slugs = {
   woodland: { fr: 'le-tresor-de-la-foret', en: 'the-woodland-treasure' },
@@ -19,6 +35,22 @@ const slugs = {
  */
 export function getBook(id: BookId, locale: Locale): ShopBook {
   const fr = locale === 'fr';
+  const added = collection.find(book => book.id === id);
+  if (added) return {
+    id, locale, slug: added.slugs[locale], title: added.title[locale], description: added.description[locale],
+    detail: added.detail[locale], audience: added.audience[locale], pages: added.pages,
+    language: fr ? 'PDF en français' : 'French-language PDF', frenchOnly: true,
+    image: added.image, thumbnail: added.thumbnail, thumbnailWidth: added.thumbnailWidth, thumbnailHeight: added.thumbnailHeight,
+    imageAlt: fr ? `Aperçu de ${added.title.fr}` : `Preview of ${added.title.en} (French PDF)`,
+    preview: added.preview, previewWidth: added.previewWidth, previewHeight: added.previewHeight,
+    sample: added.sample, samplePages: added.samplePages, fileCount: added.fileCount,
+    contents: added.contents[locale], license: added.license[locale], group: added.group,
+    pagePreviews: added.pagePreviews,
+    listingId: added.listingId, etsyUrl: `https://www.etsy.com/${fr ? 'fr/' : ''}listing/${added.listingId}/`,
+    href: `${shopPath(locale)}${added.slugs[locale]}/`,
+    priceLabel: fr ? `≈ ${added.priceEur.toFixed(2).replace('.', ',')} €` : `US$${added.priceUsd.toFixed(2)}`,
+  };
+  if (id !== 'woodland' && id !== 'animals' && id !== 'gardens') throw new Error(`Book not published: ${id}`);
   const asset = id === 'woodland' ? `woodland-${locale}` : id;
   const listingId = id === 'woodland' ? (fr ? '4605054791' : '4605081534') : id === 'animals' ? '4607014948' : '4606995589';
   const titles = {
@@ -42,11 +74,25 @@ export function getBook(id: BookId, locale: Locale): ShopBook {
     preview: `/images/shop/${asset}-preview.webp`, sample: `/downloads/shop/${asset}-sample.pdf`,
     listingId, etsyUrl: `https://www.etsy.com/${fr ? 'fr/' : ''}listing/${listingId}/`,
     href: `${shopPath(locale)}${slugs[id][locale]}/`, priceLabel: fr ? '≈ 3,90 €' : 'US$3.48',
+    samplePages: 6, fileCount: 2, frenchOnly: id !== 'woodland', group: id === 'gardens' ? 'adults' : 'children',
+    contents: id === 'woodland'
+      ? (fr ? '60 pages, dont 48 pages d’activités, une histoire et les solutions.' : '60 pages, including 48 activity pages, a story and the answers.')
+      : (fr ? '50 dessins à colorier et 2 pages d’introduction.' : '50 coloring pages and 2 introduction pages.'),
+    license: fr ? 'Usage pour un foyer ou une classe. Vous pouvez réimprimer pour ce groupe ; le partage des fichiers et la revente ne sont pas autorisés.' : 'For one household or one classroom. Reprint for that group as needed; file redistribution and resale are not permitted.',
+    thumbnailWidth: 600, thumbnailHeight: id === 'woodland' ? 600 : 847,
+    previewWidth: 1400, previewHeight: 1050,
+    pagePreviews: id === 'woodland' ? [] : [2,3,4].map(n => ({src: `/images/shop/${id}-page-${n}.webp`, width: 600, height: 847})),
   };
 }
 export const getBooks = (locale: Locale) => bookIds.map(id => getBook(id, locale));
+export const getFeaturedBooks = (locale: Locale) => {
+  const preferred: BookId[] = ['noel', 'restaurant', 'village', 'woodland', 'animals', 'gardens'];
+  return preferred.filter(id => bookIds.includes(id)).slice(0, 3).map(id => getBook(id, locale));
+};
 /** Adult categories always get the adult book; no unrelated offer on every page. */
 export function recommendedBook(category: string, locale: Locale): ShopBook | undefined {
+  if (category === 'noel' && bookIds.includes('noel')) return getBook('noel', locale);
+  if (['vehicules', 'voitures', 'trains'].includes(category) && bookIds.includes('trajet')) return getBook('trajet', locale);
   if ((adultCategories as readonly string[]).includes(category)) return getBook('gardens', locale);
   if (['animaux', 'animaux-marins', 'ferme', 'chats', 'drole', 'insectes', 'papillons'].includes(category)) return getBook('animals', locale);
   if (['nature', 'contes', 'fee', 'fees', 'magie', 'champignons', 'pirates'].includes(category)) return getBook('woodland', locale);
