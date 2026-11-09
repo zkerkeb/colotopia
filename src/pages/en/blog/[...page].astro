@@ -28,7 +28,11 @@ const breadcrumbs = [
 ];
 
 const canonical = currentPage === 1 ? 'https://colotopia.com/en/blog/' : `https://colotopia.com/en/blog/${currentPage}/`;
-const altUrl = currentPage === 1 ? 'https://colotopia.com/fr/blog/' : `https://colotopia.com/fr/blog/${currentPage}/`;
+const translatedPosts = await getCollection('blog', ({ data }) => data.locale === 'fr');
+const hasTranslatedPage = currentPage <= Math.ceil(translatedPosts.length / 12);
+const altUrl = hasTranslatedPage
+  ? (currentPage === 1 ? 'https://colotopia.com/fr/blog/' : `https://colotopia.com/fr/blog/${currentPage}/`)
+  : undefined;
 ---
 
 <BaseLayout
